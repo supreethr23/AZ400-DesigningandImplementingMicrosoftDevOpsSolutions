@@ -45,6 +45,25 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/m1-2.png)
 
+
+5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
+
+    ![Azure DevOps](images/agent1.png)
+
+6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
+
+    ![Azure DevOps](images/agent3.png)
+    ![Azure DevOps](images/agent4.png)    
+
+7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+
+    ![Azure DevOps](images/agent2.png)    
+
+8. In the **Organization Setting** window on the left menu click on **Policies** and enable **Third-party application access via OAuth** then click on save.
+
+    ![Azure DevOps](images/policies-enable-3rd.png)    
+
+
 ### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [Parts Unlimited MRP GitHub repository](https://www.github.com/microsoft/partsunlimitedmrp).
@@ -57,20 +76,20 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
     > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
 
-1.  Click **Sign in** and sign in using the logins provided in environment details tab
+2.  Click **Sign in** and sign in using the logins provided in environment details tab
 
     ![Azure DevOps Generator website. Clik on "Sign In" option](images/m1/demo_signin_v1.png)
-1.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
-1.  On the **Create New Project** page, in the **New Project Name** textbox, type **WhiteSource Bolt**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
-1.  In the list of templates, in the toolbar, click **DevOps Labs**, select the **WhiteSource Bolt** template and click **Select Template**.
+3.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
+4.  On the **Create New Project** page, in the **New Project Name** textbox, type **WhiteSource Bolt**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
+5.  In the list of templates, in the toolbar, click **DevOps Labs**, select the **WhiteSource Bolt** template and click **Select Template**.
  
      ![Azure DevOps](images/mod19_1.png)
-3.  Back on the **Create New Project** page, if prompted to install a missing extension, select the checkbox below the **WhiteSource Bolt** and click **Create Project**.
+6.  Back on the **Create New Project** page, if prompted to install a missing extension, select the checkbox below the **WhiteSource Bolt** and click **Create Project**.
 
     ![Azure DevOps](images/mod19_6.png)
     > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your DevOps organization, delete the project, and try again.
 
-1.  On the **Create New Project** page, click **Navigate to project**.
+7.  On the **Create New Project** page, click **Navigate to project**.
 
 ### Exercise 1: Implement Security and Compliance in an Azure DevOps pipeline by using WhiteSource Bolt
 
@@ -83,7 +102,7 @@ In this task, you will activate WhiteSource Bolt in the newly generated Azure De
 1.  On your lab computer, in the web browser window displaying the Azure DevOps portal with the **WhiteSource Bolt** project open, **in the vertical menu bar** at the far left of the Azure DevOps portal, click **Pipelines**  section and  **WhiteSource Bolt** option (in the vertical menu bar under "Deployment Groups" option).
 1.  On the **You're almost there** pane, provide your **Work Email** and **Company Name**, in the **Country** dropdown list, select the entry representing your country, and click *Get Started* button to start using the *Free* version of WhiteSource Bolt. This will automatically open a new browser tab displaying the **Get Started With Bolt** page.
 
-![Azure DevOps](images/mod19_2.png)
+    ![Azure DevOps](images/whitebolt-get-started.png)
 1.  Switch back to the web browser tab displaying the Azure DevOps portal and verify that the **You are using a FREE version of WhiteSource Bolt** is displayed.
 
 #### Task 2: Trigger a build
@@ -92,7 +111,7 @@ In this task, you will trigger a build within your Java code-based Azure DevOps 
 
 1.  On your lab computer, in the vertical menu bar on the left side, navigate to the **Pipelines** section, click **WhileSourceBolt**, click **Run pipeline** and then, on the **Run pipeline** pane, click **Run**.
 
-![Azure DevOps](images/mod19_3.png)
+    ![Azure DevOps](images/mod19_3.png)
 1.  On the **Summary** tab of the build pane, in the **Jobs** section, click **Phase 1** and monitor the progress of the build process.
 
     > **Note**: The build may take a few minutes to complete. The build definition consists of the following tasks:
