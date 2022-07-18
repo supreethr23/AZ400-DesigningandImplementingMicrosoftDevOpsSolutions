@@ -23,10 +23,6 @@ After you complete this lab, you will be able to:
 - Activate WhiteSource Bolt
 - Run a build pipeline and review WhiteSource security and compliance report
 
-## Lab duration
-
--   Estimated time: **45 minutes**
-
 ## Instructions
 
 #### Set up an Azure DevOps organization. 
