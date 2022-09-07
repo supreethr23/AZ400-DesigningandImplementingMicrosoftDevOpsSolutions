@@ -98,7 +98,7 @@ In this exercise, you use Visual Studio Code to clone the Git repository you pro
 
 In this task, you will step through the process of cloning a Git repository by using Visual Studio Code.
 
-1.  Switch to the the web browser displaying your Azure DevOps organization with the **Version Controlling with Git in Azure Repos** project you generated in the previous exercise. 
+1.  Switch to the web browser displaying your Azure DevOps organization with the **Version Controlling with Git in Azure Repos** project you generated in the previous exercise. 
 
     > **Note**: Alternatively, you can access the project page directly by navigating to the [https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Version%20Controlling%20with%20Git%20in%20Azure%20Repos](https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Version%20Controlling%20with%20Git%20in%20Azure%20Repos) URL, where the `<your-Azure-DevOps-account-name>` placeholder, represents your account name. 
 
@@ -176,7 +176,7 @@ In this task, you will use Visual Studio Code to commit changes.
 In this task, you will use the Azure DevOps portal to review commits.
 
 1.  Switch to the web browser window displaying the Azure DevOps interface. 
-1.  In the vertical navigational pane of the of the Azure DevOps portal, in the **Repos** section, select **Commits**.
+1.  In the vertical navigational pane of the Azure DevOps portal, in the **Repos** section, select **Commits**.
 1.  Verify that your commit appears at the top of list.
 
 #### Task 3: Stage changes
