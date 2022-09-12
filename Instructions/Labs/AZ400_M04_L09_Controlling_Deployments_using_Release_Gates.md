@@ -62,7 +62,6 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/agent2.png)
 
-
 ### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template and two Azure web apps representing the **Canary** and **Production** environments, into which you'll deploy the application via Azure Pipelines.
@@ -157,20 +156,21 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
     > **Note**: You will create monitor alerts here, which you will use in later part of this lab. 
 
-1.  On the Application Insights resource blade, in the **Monitoring** section, click **Alerts** and then click **+ New alert rule**.
-1.  On the **Create alert rule** blade, in the **Condition** section, click the **Add condition** link. 
-1.  On the **Configure signal logic** blade, in the **Search by signal name** textbox, type **Failed Requests** and select it. 
+1.  On the Application Insights resource blade, in the **Monitoring** section, click **Alerts** and then click on the **+ Create** dropdown and select Alert rule.
+1.  On the **select a signal** blade, in the **Search by signal name** textbox, type **Failed Requests** and select it. 
 1.  On the **Configure signal logic** blade, in the **Alert logic** section, leave the **Threshold** set to **Static**, in the **Threshold value** textbox, type **0**, and click on **Done**.
 
     > **Note**: The rule will generate an alert whenever the number of failed requests is greater than 0 within the last 5 minutes. 
 
-1.  Back on the **Create alert rule** pane, in the **Alert rule details** specify the following settings and click **Create alert rule** (leave others with their default values):
+1.  Back on the **Create alert rule** pane, in the **Details** session, specify the following settings and click **Review + Create** and review the configurations made and click on **Create** (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Alert rule name | **PartsUnlimited_FailedRequests** |
     | Severity | **Sev 2** |
     | Automatically resolve alerts | cleared |
+
+    > **Note**: Automatically resolve alerts are present under the advanced option.
 
     > **Note**: Metric alert rules might take up to 10 minutes to activate.
 
