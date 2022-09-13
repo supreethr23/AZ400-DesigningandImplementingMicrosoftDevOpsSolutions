@@ -257,14 +257,16 @@ In this task, you will create a pipeline by using the YAML editor.
     > **Note**: The YAML pipeline needs to be modified by following the remaining steps in this task. 
 
 1.  In the NuGetCommand@2 task, replace restoreSolution: 'SomeConsoleApplication.sln' with restoreSolution: '**\SomeConsoleApplication.sln' to account for the fact that our solution is not located in the root of the repo.
+
 1.  In the **SonarCloudPrepare@1** task, click **Settings** option to open visual helper, choose the created sonarSC service connection from the dropdown and replace the value of the fields as proposed on the **Sonarcloud website > Configure Azure Pipeline section**. Click Add to include the changes to pipeline.
-1.  In the **VSBuild@1** task, replace solution: 'SomeConsoleApplication.sln' with solution: '**\SomeConsoleApplication.sln' to** account for the fact that our solution is not located in the root of the repo.
+
+1.  In the **VSBuild@1** task, replace solution: 'SomeConsoleApplication.sln' with solution: '**\SomeConsoleApplication.sln' to account for the fact that our solution is not located in the root of the repo.
+
 1.  On the **Review your pipeline YAML** pane, click **Save and Run** and, on the **Save and run** pane, click **Save and run**.
 
     > **Note**: Skip the next task if you completed this task in YAML editor.
 
 1. Go to Azure Pipelines > Pipelines and click in **Sonarexample** pipeline, wait for the pipeline to finish.
-
 
 #### Task 3: Check pipeline results
 
