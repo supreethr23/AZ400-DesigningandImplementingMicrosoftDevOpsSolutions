@@ -55,7 +55,7 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/agent2.png)    
 
-8. In the **Organization Setting** window on the left menu click on **Policies** and enable **Third-party application access via OAuth** then click on save.
+8. In the **Organization Setting** window on the left menu click on **Policies** and enable **Third-party application access via OAuth**.
 
     ![Azure DevOps](images/policies-enable-3rd.png)    
 
