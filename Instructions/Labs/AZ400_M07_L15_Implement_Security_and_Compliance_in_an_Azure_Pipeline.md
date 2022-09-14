@@ -126,7 +126,7 @@ In this task, you will trigger a build within your Java code-based Azure DevOps 
 
    ![build-def](images/m07/phase(b).png)
    
-   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **WhiteSourceBolt-YAML** and click **Edit** to view the YAML pipeline." %}
+   > **Note** : We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **WhiteSourceBolt-YAML** and click **Edit** to view the YAML pipeline.
 
 1. To view the build in progress status, click on job named **Phase 1**.
 
