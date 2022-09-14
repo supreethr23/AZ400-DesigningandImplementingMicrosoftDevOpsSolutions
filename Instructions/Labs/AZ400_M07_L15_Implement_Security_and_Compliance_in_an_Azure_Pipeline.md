@@ -41,7 +41,6 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/m1-2.png)
 
-
 5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
     ![Azure DevOps](images/agent1.png)
@@ -49,6 +48,7 @@ After you complete this lab, you will be able to:
 6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
 
     ![Azure DevOps](images/agent3.png)
+    
     ![Azure DevOps](images/agent4.png)    
 
 7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
@@ -58,7 +58,6 @@ After you complete this lab, you will be able to:
 8. In the **Organization Setting** window on the left menu click on **Policies** and enable **Third-party application access via OAuth**.
 
     ![Azure DevOps](images/policies-enable-3rd.png)    
-
 
 ### Exercise 0: Configure the lab prerequisites
 
@@ -75,14 +74,19 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 2.  Click **Sign in** and sign in using the logins provided in environment details tab
 
     ![Azure DevOps Generator website. Clik on "Sign In" option](images/m1/demo_signin_v1.png)
+
 3.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
+
 4.  On the **Create New Project** page, in the **New Project Name** textbox, type **WhiteSource Bolt**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
+
 5.  In the list of templates, in the toolbar, click **DevOps Labs**, select the **WhiteSource Bolt** template and click **Select Template**.
  
      ![Azure DevOps](images/mod19_1.png)
+     
 6.  Back on the **Create New Project** page, if prompted to install a missing extension, select the checkbox below the **WhiteSource Bolt** and click **Create Project**.
 
     ![Azure DevOps](images/mod19_6.png)
+    
     > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your DevOps organization, delete the project, and try again.
 
 7.  On the **Create New Project** page, click **Navigate to project**.
@@ -91,53 +95,80 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 In this exercise, leverage WhiteSource Bolt to scan the project code for security vulnerabilities and licensing compliance issues, and view the resulting report.
 
-#### Task 1: Activate WhiteSource Bolt
+#### Task 1: Activate WhiteSource Bolt\Mend Bolt
 
 In this task, you will activate WhiteSource Bolt in the newly generated Azure Devops project.
 
-1.  On your lab computer, in the web browser window displaying the Azure DevOps portal with the **WhiteSource Bolt** project open, **in the vertical menu bar** at the far left of the Azure DevOps portal, click **Pipelines**  section and  **WhiteSource Bolt** option (in the vertical menu bar under "Deployment Groups" option).
-1.  On the **You're almost there** pane, provide your **Work Email** and **Company Name**, in the **Country** dropdown list, select the entry representing your country, and click *Get Started* button to start using the *Free* version of WhiteSource Bolt. This will automatically open a new browser tab displaying the **Get Started With Bolt** page.
+### Prerequisites to integrate Azure DevOps with Mend
 
-    ![Azure DevOps](images/whitebolt-get-started.png)
-1.  Switch back to the web browser tab displaying the Azure DevOps portal and verify that the **You are using a FREE version of WhiteSource Bolt** is displayed.
+Ensure the following:
+1. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
+
+    ![Azure DevOps](images/agent1.png)
+ 
+1. Your Azure DevOps organization is connected to an Azure AD via **Organization Settings > Azure Active Directory**.
+    
+      ![ADO-ADConnect](images/m07/ADO-ADConnect.png)
+      
+1. In your Azure DevOps navigate to **Organization Settings** and select **Mend** under Extensions. Provide your Work Email, Company Name and other details and click **Create Account** button to start using the Free version.
+
+   ![Mendboltactivation](images/m07/Mendboltactivation.png)
 
 #### Task 2: Trigger a build
 
 In this task, you will trigger a build within your Java code-based Azure DevOps project. You will use **WhiteSource Bolt** extension to identify vulnerable components present in this code.
 
-1.  On your lab computer, in the vertical menu bar on the left side, navigate to the **Pipelines** section, click **WhileSourceBolt**, click **Run pipeline** and then, on the **Run pipeline** pane, click **Run**.
+1.  On your lab computer, in the web browser window displaying the Azure DevOps portal open **WhiteSource Bolt** project. 
 
-    ![Azure DevOps](images/mod19_3.png)
-1.  On the **Summary** tab of the build pane, in the **Jobs** section, click **Phase 1** and monitor the progress of the build process.
+1. Go to **Pipelines** section under **Pipelines** tab, select the build definition **WhiteSourceBolt** and click on **Run pipeline** to trigger a build. Click **Run** (leave defaults).
 
-    > **Note**: The build may take a few minutes to complete. The build definition consists of the following tasks:
+   ![build-def](images/m07/phase(a).png)
 
-    | Tasks | Usage |
-    | ---- | ------ |
-    | ![npm](images/m19/npm.png) **npm** |  Installs and publishes npm packages required for the build |
-    | ![maven](images/m19/maven.png) **Maven** |  builds Java code with the provided pom xml file |
-    | ![whitesourcebolt](images/m19/whitesourcebolt.png) **WhiteSource Bolt** |  scans the code in the provided working directory/root directory to detect security vulnerabilities, problematic open source licenses |
-    | ![copy-files](images/m19/copy-files.png) **Copy Files** |  copies the resulting JAR files from the source to the destination folder using match patterns |
-    | ![publish-build-artifacts](images/m19/publish-build-artifacts.png) **Publish Build Artifacts** |  publishes the artifacts produced by the build |
+   ![build-def](images/m07/phase(b).png)
+   
+   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **WhiteSourceBolt-YAML** and click **Edit** to view the YAML pipeline." %}
+
+1. To view the build in progress status, click on job named **Phase 1**.
+
+   ![inprogress_build](images/m07/phase.png)
+
+   ![queue-build](images/m07/progress.png)
+
+1. While the build is in progress, let's explore the build definition. The tasks that are used in the build definition are listed in the table below.
+
+    |Tasks|Usage|
+    |----|------|
+    |![npm](images/m07/npm.png) **npm**| Installs and publishes npm packages required for the build|
+    |![maven](images/m07/maven.png) **Maven**| builds Java code with the provided pom xml file|
+    |![whitesourcebolt](images/m07/whitesourcebolt.png)**Mend Bolt**| scans the code in the provided working directory/root directory to detect security vulnerabilities, problematic open source licenses|
+    |![copy-files](images/m07/copy-files.png) **Copy Files**| copies the resulting JAR files from the source to the destination folder using match patterns|
+    |![publish-build-artifacts](images/m07/publish-build-artifacts.png) **Publish Build Artifacts**| publishes the artifacts produced by the build
     
-1.  Once the build completes, navigate back to the **Summary** tab and review **Tests and coverage** section. 
+1. Once the build is completed, click back navigation to  see the summary which shows **Test results, Build artifacts** etc. as shown below. 
+
+   ![go back](images/m07/back.png)
+   
+   ![build_summary](images/m07/build_summarynew.png)
+
+1. Navigate to **Mend Bolt** tab  and wait for the report generation of the completed build to see the vulnerability report.
+   
+   ![report](images/m07/mendboltreport.png)
 
 #### Task 3: Analyze Reports
 
 In this task, you will review the WhiteSource Bolt build report. 
 
-1.  On the build pane, click the **WhiteSource Bolt Build Report** tab header and wait for the report to fully render. 
-1.  While on the **WhiteSource Bolt Build Report** tab, verify that WhiteSource Bolt automatically detected Open Source components in the software including transitive dependencies and their respective licenses.
-1.  While on the **WhiteSource Bolt Build Report** tab, review the Security dashboard, displaying the vulnerabilities discovered during the build.
+##### Security Dashboard
 
-    > **Note**: The report displays the list of all vulnerable open source components, including **Vulnerability Score**, **Vulnerable Libraries**, and **Severity Distribution**. You can identify the opensource license distribution by leveraging a detailed view of all components and links to their metadata and licensed references.
-    ![Azure DevOps](images/mod19_4.png)
+The security dashboard shows the vulnerability of the build.
+This report shows the list of all vulnerable open source components with **Vulnerability Score, Vulnerable Libraries, Severity Distribution**.
 
-1.  While on the **WhiteSource Bolt Build Report** tab, scroll down to the **Outdated Libraries** section and review its content.
+![Security](images/m07/mendsecuritytab.png)
 
-    ![Azure DevOps](images/mod19_5.png)
+##### License risks
+You can see the opensource license distribution and a detailed view of all components and links to their metadata and licensed references.
 
-    > **Note**: WhiteSource Bolt tracks outdated libraries in the project, providing library details, links to newer versions, and remediation recommendations.
+ ![LicenceRisks](images/m07/mendlicencerisks.png)
 
 ## Review
 
