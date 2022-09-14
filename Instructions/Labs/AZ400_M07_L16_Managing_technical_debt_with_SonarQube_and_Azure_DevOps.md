@@ -196,7 +196,7 @@ In this task, you will create a pipeline by using the YAML editor.
 
     > **Note**: This will automatically display the YAML editor with the template YAML file open. In order to configure it correctly you will need to adjust it (or replace it) so that matches the following file:
 
-    ```yaml
+    ```
     trigger:
     - master
 
