@@ -185,14 +185,14 @@ In this task, you will create a pipeline by using the YAML editor.
 > **Note**: Before you continue with configuration of the YAML pipeline, you will first create a service connection for SonarCloud.
 
 1.  Open another browser tab, navigate to the home page of the **SonarExamples** in the Azure DevOps portal.
-1.  In the web browser window displaying the **SonarExamples** pane in the Azure DevOps portal and, in the lower left corner, click **Project settings**.
-1.  On the **Project settings** pane, in the vertical menu bar, in the **Pipelines** section, click **Service connections** and click **Create service connection**.
-1.  On the **New service connection** pane, select the **SonarCloud** option and click **Next**.
-1.  On the **New SonarCloud service connection** pane, in the **SonarCloud Token** textbox, paste the value of the token you recorded in the previous task, in the **Service connection name** textbox, type **SC** and click **Verify and save**. 
-1.  Switch back to the web browser tab displaying the **Where is your code?** pane. If you have closed this tab, return to the **SonarExamples** pane in the Azure DevOps portal, in the vertical menu bar at the far left of the Azure DevOps portal, click **Pipelines** and then click **Create Pipeline**.
-1.  On the **Where is your code?** pane, click **Azure Repos Git**.
-1.  On the **Select a repository** pane, click **SonarExamples**. 
-1.  On the **Configure your pipeline** pane, click **.NET Desktop** YAML template.
+2.  In the web browser window displaying the **SonarExamples** pane in the Azure DevOps portal and, in the lower left corner, click **Project settings**.
+3.  On the **Project settings** pane, in the vertical menu bar, in the **Pipelines** section, click **Service connections** and click **Create service connection**.
+4.  On the **New service connection** pane, select the **SonarCloud** option and click **Next**.
+5.  On the **New SonarCloud service connection** pane, in the **SonarCloud Token** textbox, paste the value of the token you recorded in the previous task, in the **Service connection name** textbox, type **SC** and click **Verify and save**. 
+6.  Switch back to the web browser tab displaying the **Where is your code?** pane. If you have closed this tab, return to the **SonarExamples** pane in the Azure DevOps portal, in the vertical menu bar at the far left of the Azure DevOps portal, click **Pipelines** and then click **Create Pipeline**.
+7.  On the **Where is your code?** pane, click **Azure Repos Git**.
+8.  On the **Select a repository** pane, click **SonarExamples**. 
+9.  On the **Configure your pipeline** pane, click **.NET Desktop** YAML template.
 
 > **Note**: This will automatically display the YAML editor with the template YAML file open. In order to configure it correctly you will need to adjust it (or replace it) so that matches the following file:
 
@@ -256,14 +256,19 @@ In this task, you will create a pipeline by using the YAML editor.
 
 > **Note**: The YAML pipeline needs to be modified by following the remaining steps in this task. 
 
+10.  In the **SonarCloudPrepare@1** task, update the values as below:
+     - SonarCloud  - **SC**
+     - Organization - **odluser<inject key="DeploymentID" enableCopy="false"/>**
+     - projectKey - **odluser<inject key="DeploymentID" enableCopy="false"/>_SonarExamples**
+     - projectName - **SonarExamples**
 
-1.  In the **SonarCloudPrepare@1** task, click **Settings** option to open visual helper, choose the created sonarSC service connection from the dropdown and replace the value of the fields as proposed on the **Sonarcloud website > Configure Azure Pipeline section**. Click Add to include the changes to pipeline.
+11. Click **Add** to include the changes to pipeline.
 
-1.  On the **Review your pipeline YAML** pane, click **Save and Run** and, on the **Save and run** pane, click **Save and run**.
+12. On the **Review your pipeline YAML** pane, click **Save and Run** and, on the **Save and run** pane, click **Save and run**.
 
     > **Note**: Skip the next task if you completed this task in YAML editor.
 
-1. Go to Azure Pipelines > Pipelines and click in **Sonarexample** pipeline, wait for the pipeline to finish.
+13. Go to Azure Pipelines > Pipelines and click in **Sonarexample** pipeline, wait for the pipeline to finish.
 
 #### Task 3: Check pipeline results
 
