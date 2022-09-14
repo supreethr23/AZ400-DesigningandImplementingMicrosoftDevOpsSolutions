@@ -194,7 +194,7 @@ In this task, you will create a pipeline by using the YAML editor.
 1.  On the **Select a repository** pane, click **SonarExamples**. 
 1.  On the **Configure your pipeline** pane, click **.NET Desktop** YAML template.
 
-    > **Note**: This will automatically display the YAML editor with the template YAML file open. In order to configure it correctly you will need to adjust it (or replace it) so that matches the following file:
+> **Note**: This will automatically display the YAML editor with the template YAML file open. In order to configure it correctly you will need to adjust it (or replace it) so that matches the following file:
 
     ```
     trigger:
@@ -216,7 +216,7 @@ In this task, you will create a pipeline by using the YAML editor.
     - task: NuGetCommand@2
       displayName: 'NuGet restore'
       inputs:
-        restoreSolution: 'SomeConsoleApplication.sln'
+        restoreSolution: '**\SomeConsoleApplication.sln'
 
     - task: SonarCloudPrepare@1
       displayName: 'Prepare analysis configuration'
@@ -231,7 +231,7 @@ In this task, you will create a pipeline by using the YAML editor.
     - task: VSBuild@1
       displayName: 'Build solution **\*.sln'
       inputs:
-        solution: 'SomeConsoleApplication.sln'
+        solution: '**\SomeConsoleApplication.sln'
         platform: '$(BuildPlatform)'
         configuration: '$(BuildConfiguration)'
 
@@ -252,15 +252,12 @@ In this task, you will create a pipeline by using the YAML editor.
       displayName: 'Publish results on build summary'
     ```
 
-    > **Note**: You can download the file **net-desktop-sonarcloud.yml** from the [SonarSource GitHub repository](https://github.com/SonarSource/sonar-scanner-vsts/blob/master/yaml-pipeline-templates/net-desktop-sonarcloud.yml).
+> **Note**: You can download the file **net-desktop-sonarcloud.yml** from the [SonarSource GitHub repository](https://github.com/SonarSource/sonar-scanner-vsts/blob/master/yaml-pipeline-templates/net-desktop-sonarcloud.yml).
 
-    > **Note**: The YAML pipeline needs to be modified by following the remaining steps in this task. 
+> **Note**: The YAML pipeline needs to be modified by following the remaining steps in this task. 
 
-1.  In the NuGetCommand@2 task, replace restoreSolution: 'SomeConsoleApplication.sln' with restoreSolution: '**\SomeConsoleApplication.sln' to account for the fact that our solution is not located in the root of the repo.
 
 1.  In the **SonarCloudPrepare@1** task, click **Settings** option to open visual helper, choose the created sonarSC service connection from the dropdown and replace the value of the fields as proposed on the **Sonarcloud website > Configure Azure Pipeline section**. Click Add to include the changes to pipeline.
-
-1.  In the **VSBuild@1** task, replace solution: 'SomeConsoleApplication.sln' with solution: '**\SomeConsoleApplication.sln' to account for the fact that our solution is not located in the root of the repo.
 
 1.  On the **Review your pipeline YAML** pane, click **Save and Run** and, on the **Save and run** pane, click **Save and run**.
 
