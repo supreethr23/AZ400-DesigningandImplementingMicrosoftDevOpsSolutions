@@ -160,30 +160,30 @@ In this task, you will create an Azure web app and an Azure SQL database by usin
 
 10.  The web app needs to be able to access the SQL server, so we need to allow access to Azure resources in the SQL Server firewall rules.
 
-    ```bash
+   
     STARTIP="0.0.0.0"
     ENDIP="0.0.0.0"
     az sql server firewall-rule create --server $SERVERNAME --resource-group $RESOURCEGROUPNAME \
     --name AllowAzureResources --start-ip-address $STARTIP --end-ip-address $ENDIP
-    ```
+  
 
 11.  Now create a database within that server.
 
-    ```bash
+    
     az sql db create --server $SERVERNAME --resource-group $RESOURCEGROUPNAME --name PartsUnlimited \
     --service-objective S0
-    ```
+    
 
 12.  The web app you created needs the database connection string in its configuration, so run the following commands to prepare and add it to the app settings of the web app.
 
-    ```bash
+   
     CONNSTRING=$(az sql db show-connection-string --name PartsUnlimited --server $SERVERNAME \
     --client ado.net --output tsv)
     CONNSTRING=${CONNSTRING//<username>/$USERNAME}
     CONNSTRING=${CONNSTRING//<password>/$SQLSERVERPASSWORD}
     az webapp config connection-string set --name $WEBAPPNAME --resource-group $RESOURCEGROUPNAME \
     -t SQLAzure --settings "DefaultConnectionString=$CONNSTRING" 
-    ```
+    
 
 ### Exercise 1: Monitor an Azure App Service web app by using Azure Application Insights
 
