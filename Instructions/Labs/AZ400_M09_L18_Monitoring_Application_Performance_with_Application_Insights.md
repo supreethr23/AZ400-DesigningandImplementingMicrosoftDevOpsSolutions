@@ -120,6 +120,11 @@ In this task, you will create an Azure web app and an Azure SQL database by usin
     az extension remove --name appservice-kube
     az extension add --yes --source "https://aka.ms/appsvc/appservice_kube-latest-py2.py3-none-any.whl"
     ```
+ 5a.  **Imp**: Run the following command before running the step 6 creation of webapp.
+
+      az extension remove -n appservice-kube
+      az extension add -n appservice-kube
+      
 6.  Create a web app with a unique name.
 
     ```bash
