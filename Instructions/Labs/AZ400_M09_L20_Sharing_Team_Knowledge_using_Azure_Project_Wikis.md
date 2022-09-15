@@ -50,8 +50,8 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 1.  Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
 1.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
-1.  On the **Create New Project** page, in the **New Project Name** textbox, type **Sharing Team Knowledge using Azure Project Wikis**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
-1.  In the list of templates, select the **Tailwind Traders** template and click **Select Template**.
+1.  On the **Create New Project** page, click on **Choose Template** and select the **Tailwind Traders** template and click **Select Template**.
+1.  In the **New Project Name** textbox, type **Sharing Team Knowledge using Azure Project Wikis**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
 1.  Back on the **Create New Project** page, if prompted to install a missing extension, select the checkbox below the **ARM Outputs** and click **Create Project**.
 
     > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your Azure DevOps organization, delete the project, and try again.
