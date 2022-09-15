@@ -114,18 +114,14 @@ In this task, you will create an Azure web app and an Azure SQL database by usin
     az appservice plan create --resource-group $RESOURCEGROUPNAME \
         --name $SERVICEPLANNAME --sku B3 
     ```
-    > **Note**: If the `az appservice plan create` command fails with an error message starting with `ModuleNotFoundError: No module named 'vsts_cd_manager'`, then run the following commands and then re-run the failed command.
 
-    ```bash
-    az extension remove --name appservice-kube
-    az extension add --yes --source "https://aka.ms/appsvc/appservice_kube-latest-py2.py3-none-any.whl"
-    ```
- 5a.  **Imp**: Run the following command before running the step 6 creation of webapp.
+ 6.  Run the following command before running the step 7 creation of webapp.
+```
+az extension remove -n appservice-kube
+az extension add -n appservice-kube
+```    
 
-      az extension remove -n appservice-kube
-      az extension add -n appservice-kube
-      
-6.  Create a web app with a unique name.
+7.  Create a web app with a unique name.
 
     ```bash
     WEBAPPNAME=partsunlimited$RANDOM$RANDOM
@@ -134,7 +130,7 @@ In this task, you will create an Azure web app and an Azure SQL database by usin
 
     > **Note**: Record the name of the web app by navigating to **App Services**. You will need it later in this lab.
 
-7. Now is the time to create an Application Insights instance.
+8. Now is the time to create an Application Insights instance.
 
     ```bash
     az monitor app-insights component create --app $WEBAPPNAME \
@@ -145,25 +141,25 @@ In this task, you will create an Azure web app and an Azure SQL database by usin
 
     > **Note**: If you got prompted with 'The command requires the extension application-insights. Do you want to install it now?', type Y and press enter.
 
-8. Let us connect the Application Insights to our web application.
+9. Let us connect the Application Insights to our web application.
 
     ```bash
     az monitor app-insights component connect-webapp --app $WEBAPPNAME \
         --resource-group $RESOURCEGROUPNAME --web-app $WEBAPPNAME
     ```
 
-9.  Next, create an Azure SQL Server.
+10.  Next, create an Azure SQL Server.
 
-    ```bash
+    
     USERNAME="Student"
     SQLSERVERPASSWORD="Pa55w.rd1234"
     SERVERNAME="partsunlimitedserver$RANDOM"
     
     az sql server create --name $SERVERNAME --resource-group $RESOURCEGROUPNAME \
     --location $LOCATION --admin-user $USERNAME --admin-password $SQLSERVERPASSWORD
-    ```
+    
 
-10.  The web app needs to be able to access the SQL server, so we need to allow access to Azure resources in the SQL Server firewall rules.
+11.  The web app needs to be able to access the SQL server, so we need to allow access to Azure resources in the SQL Server firewall rules.
 
    
     STARTIP="0.0.0.0"
