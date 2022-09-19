@@ -123,7 +123,7 @@ In this task, you will step through the process of cloning a Git repository by u
 
 7.  In the **Provide repository URL or pick a repository source** text box, paste the repo clone URL you copied earlier in this task and press the **Enter** key.
 8.  Within the **Select Folder** dialog box, navigate to the C: drive, create a new folder named **Git**, select it, and then click **Select Repository Location**. 
-9.  When prompted, log in to your Azure DevOps account with creadentials provided in environment details tab.
+9.  When prompted, log in to your Azure DevOps account with the credentials provided in the environment details tab.
 10. After the cloning process completes, once prompted, in the Visual Studio Code, click **Open** to open the cloned repository. If **Do you trust the authors of the files in this folder?** warning prompted click on **Yes**.
 
     > **Note**: You can ignore warnings you might receive regarding problems with loading of the project. The solution may not be in the state suitable for a build, but we're going to focus on working with Git, so building the project is not required.
@@ -134,7 +134,7 @@ In this exercise, you will step through several scenarios that involve the use o
 
 When you make changes to your files, Git will record the changes in the local repository. You can select the changes that you want to commit by staging them. Commits are always made against your local Git repository, so you don't have to worry about the commit being perfect or ready to share with others. You can make more commits as you continue to work and push the changes to others when they are ready to be shared.
 
-Git commits consists of the following:
+Git commits consist of the following:
 
 - The file(s) changed in the commit. Git keeps the contents of all file changes in your repo in the commits. This keeps it fast and allows intelligent merging.
 - A reference to the parent commit(s). Git manages your code history using these references.
@@ -146,7 +146,7 @@ In this task, you will use Visual Studio Code to commit changes.
 
 1.  In the Visual Studio Code window, at the top of the vertical toolbar, select the **EXPLORER** tab, navigate to the **/PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Models/CartItem.cs** file and select it. This will automatically display its content in the details pane.
 
-    > **Note**: If prompted to install recommended extenisions for C# click on install
+    > **Note**: If prompted to install recommended extensions for C# click on install
 
     ![Azure DevOps](images/m2-1.png)
 
@@ -177,7 +177,7 @@ In this task, you will use the Azure DevOps portal to review commits.
 
 1.  Switch to the web browser window displaying the Azure DevOps interface. 
 1.  In the vertical navigational pane of the Azure DevOps portal, in the **Repos** section, select **Commits**.
-1.  Verify that your commit appears at the top of list.
+1.  Verify that your commit appears at the top of the list.
 
 #### Task 3: Stage changes
 
@@ -199,13 +199,13 @@ In this task, you will explore the use of staging changes by using Visual Studio
 
 1.  With the **SOURCE CONTROL** tab selected, at the top of the pane, in the textbox, type **Added comments** as the commit message.
 1.  At the top of the **SOURCE CONTROL** tab, click the ellipsis symbol, in the drop-down menu, select **Commit** and, in the cascading menu, select **Commit Staged**. 
-1.  In the lower left corner of the Visual Studio Code window, click the **Synchronize Changes** button to synchronize the committed changes with the server and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/master**. 
+1.  In the lower-left corner of the Visual Studio Code window, click the **Synchronize Changes** button to synchronize the committed changes with the server and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/master**. 
 
     > **Note**: Note that since only the staged change was committed, the other change is still pending to be synchronized.
 
 ### Exercise 3: Review history
 
-In this exercise, you will use the Azure DevOps portal to review history of commits.
+In this exercise, you will use the Azure DevOps portal to review the history of commits.
 
 Git uses the parent reference information stored in each commit to manage a full history of your development. You can easily review this commit history to find out when file changes were made and determine differences between versions of your code using the terminal or from one of the many available Visual Studio Code extensions. You can also review changes by using the Azure DevOps portal.
 
@@ -217,13 +217,13 @@ In this task, you will step through commit history by using the Azure DevOps por
 
 1.  With the **SOURCE CONTROL** tab of the Visual Studio Code window open, select **Category.cs** representing the non-staged version of the file.
 
-    > **Note**: A comparison view is opened to enable you to easily locate the changes you've made. In this case, it's just the one comment.
+    > **Note**: A comparison view is opened to enable you to easily locate the changes you've made. In this case, it's just one comment.
 
 1.  Switch to the web browser window displaying the **Commits** pane of the **Azure DevOps** portal to review the source branches and merges. These provide a convenient way to visualize when and how changes were made to the source.
 1.  Scroll down to the **Merged PR 27** entry and hover the mouse pointer over it to reveal the ellipsis symbol on the right side.
 1.  Click the ellipsis, in the dropdown menu, select **Browse Files**, and review the results.
 
-    > **Note**: This view represents the state of the source corresponding to the commit, allowing you to review and download each of source files.
+    > **Note**: This view represents the state of the source corresponding to the commit, allowing you to review and download each of the source files.
 
 ### Exercise 4: Work with branches
 
