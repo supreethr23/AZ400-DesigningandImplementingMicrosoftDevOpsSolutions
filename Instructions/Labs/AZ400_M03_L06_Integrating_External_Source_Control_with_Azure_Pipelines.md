@@ -23,9 +23,7 @@ After you complete this lab, you will be able to:
 
 1. If you already have a GitHub account that you can use for this lab, else follow the instructions to create an account.
 
-2. Navigate to the https://github.com/ Click on Signup.
-
-   ![Github](images/mod6_21.png)
+2. Navigate to the https://github.com/. Click on Signup.
    
 3. Provide the email address and click on continue.
 
