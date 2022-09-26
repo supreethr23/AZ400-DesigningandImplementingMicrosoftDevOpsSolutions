@@ -117,7 +117,7 @@ In this task, you will install and configure Azure Boards app in the newly creat
     feedback - Report a problem or suggest a feature
     To know more see documentation.
     ```
-1.  Open **New conversation** and type **@** and as you type Azure, click on **Azure Boards** icon in the chat menu it will popup **Azure boards** window, then click on sign in. Sign with the credentials provided in environmental details page. click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
+1.  Open a New conversation and type @ and as you type Azure, you will be prompted with results, select Azure Boards followed by signin. Sign with the credentials provided in environmental details page. click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
 1.  Copy the url of your Azure DevOps Tailwind Traders project. Example: https://dev.azure.com/myorg/myproject . Open New conversation in the Teams channel and type @ and as you type Azure, you will be prompted with results, select Azure Boards followed by link in the command panel. At this point, paste your project url that you had copied. Your post should look like, ´Azure Boards link https://dev.azure.com/myorg/myproject ´. Press Enter.
 
     ```
