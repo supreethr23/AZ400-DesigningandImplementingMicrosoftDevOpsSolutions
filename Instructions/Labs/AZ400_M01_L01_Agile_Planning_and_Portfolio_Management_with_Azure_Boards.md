@@ -44,7 +44,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 1.  In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. 
 
-    > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
+> **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
 
 1.  Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
 
@@ -78,7 +78,7 @@ Each new project is configured with a default team, which name matches the proje
 
 1.  Verify that the web browser displays your Azure DevOps organization with the **Agile Planning and Portfolio Management with Azure Boards** project you generated in the previous exercise. 
 
-    > **Note**: Alternatively, you can access the project page directly by navigating to the [https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Agile%20Planning%20and%20Portfolio%20Management%20with%20Azure%20Boards) URL, where the `<your-Azure-DevOps-account-name>` placeholder, represents your account name. 
+> **Note**: Alternatively, you can access the project page directly by navigating to the [https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Agile%20Planning%20and%20Portfolio%20Management%20with%20Azure%20Boards) URL, where the `<your-Azure-DevOps-account-name>` placeholder, represents your account name. 
 
 1.  Click the cogwheel icon labeled **Project settings** located in the lower left corner of the page to open the **Project settings** page.
 
@@ -94,7 +94,7 @@ Each new project is configured with a default team, which name matches the proje
 
 1.  In the list of **Teams**, select the newly created team to view its details.
 
-    > **Note**: By default, the new team has only you as its member. You can use this view to manage such functionality as team membership, notifications, and dashboards. 
+> **Note**: By default, the new team has only you as its member. You can use this view to manage such functionality as team membership, notifications, and dashboards. 
 
 1.  Click **Iterations and Area Paths** link at the top of the **PUL-Web** page to start defining the schedule and scope of the team.
 
@@ -129,7 +129,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 1.  In the vertical navigational pane of the Azure DevOps portal, select the **Boards** icon and, select **Work Items**.
  
-    > **Note**: There are many ways to create work items in Azure DevOps, and we'll explore a few of them. Sometimes it's as simple as firing one off from a dashboard. 
+> **Note**: There are many ways to create work items in Azure DevOps, and we'll explore a few of them. Sometimes it's as simple as firing one off from a dashboard. 
 
 2.  On the **Work Items** window, click on **+ New Work Item > Epic**.
 
@@ -195,7 +195,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 20.  Hover with the mouse pointer over the rectangle representing the work item you moved to the **Approved** stage. This will reveal the down facing caret symbol. 
 21.  Click the down facing caret symbol to expand the work item card, select the **Unassigned** entry, and in the list of user accounts, select your account to assign the moved PBI to yourself.
 22.  On the **Board** tab of the **PUL-Web** panel, drag the second work item named **As a customer, I want to see tutorials I recently viewed** from the **New** to the **Committed** stage.
-23.  On the **Board** tab of the **PUL-Web** panel, drag the third work item named **As a customer,  I want to request new tutorials** from the **New** to the **Done** stage.
+23. On the **Board** tab of the **PUL-Web** panel, drag the third work item named **As a customer,  I want to request new tutorials** from the **New** to the **Done** stage.
 
      ![WITs moved to the specified columns from previous steps](images/m1/board_pbis_v1.png)
 
@@ -203,7 +203,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 24.  On the **Board** tab of the **PUL-Web** pane, at the top of the pane, click **View as Backlog** to display the tabular form.
 
-    ![In the "PUL-Web" board, click "View as Backlog"](images/m1/view_backlog_v1.png)
+     ![In the "PUL-Web" board, click "View as Backlog"](images/m1/view_backlog_v1.png)
 
 > **Note**: You can use the plus sign directly under the **Backlog** tab label of the **PUL-Web** panel to view nested tasks under these work items. 
 
