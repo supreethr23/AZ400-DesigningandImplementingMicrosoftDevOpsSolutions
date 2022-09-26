@@ -131,97 +131,96 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
  
     > **Note**: There are many ways to create work items in Azure DevOps, and we'll explore a few of them. Sometimes it's as simple as firing one off from a dashboard. 
 
-1.  On the **Work Items** window, click on **+ New Work Item > Epic**.
+2.  On the **Work Items** window, click on **+ New Work Item > Epic**.
 
     ![In the "Boards">"Work Items" window, click on "New work item" >Epic](images/m1/create_epic_v1.png)
 
-1.  In the **Enter title** textbox, type **Product training**. 
-1.  In the upper left corner, select the **Unassigned** entry and, in the dropdown list, select your user account in order to assign the new work item to yourself. 
-1.  Next to the **Area** entry, select the **Agile Planning and Portfolio Management with Azure Boards** entry and, in the dropdown list, select **PUL-Web**. This will set the **Area** to **Agile Planning and Portfolio Management with Azure Boards\PUL-Web**. 
-1.  Next to the **Iteration** entry, select the **Agile Planning and Portfolio Management with Azure Boards** entry and, in the dropdown list, select **Sprint 2**. This will set the **Iteration** to **Agile Planning and Portfolio Management with Azure Boards\Sprint 2**. 
-1.  Click **Save** to finalize your changes. **Do not close it**.
+3.  In the **Enter title** textbox, type **Product training**. 
+4.  In the upper left corner, select the **Unassigned** entry and, in the dropdown list, select your user account in order to assign the new work item to yourself. 
+5.  Next to the **Area** entry, select the **Agile Planning and Portfolio Management with Azure Boards** entry and, in the dropdown list, select **PUL-Web**. This will set the **Area** to **Agile Planning and Portfolio Management with Azure Boards\PUL-Web**. 
+6.  Next to the **Iteration** entry, select the **Agile Planning and Portfolio Management with Azure Boards** entry and, in the dropdown list, select **Sprint 2**. This will set the **Iteration** to **Agile Planning and Portfolio Management with Azure Boards\Sprint 2**. 
+7.  Click **Save** to finalize your changes. **Do not close it**.
 
     ![Enter previously shown information and click "Save" in Epic window](images/m1/epic_details_v1.png)
 
+> **Note**: Ordinarily you would want to fill out as much information as possible, but this is sufficient for the purposes of this lab.
 
-    > **Note**: Ordinarily you would want to fill out as much information as possible, but this is sufficient for the purposes of this lab.
+> **Note**: The work item form includes all of the relevant work item settings. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. We will explore one of the ways to add a feature to this epic. 
 
-    > **Note**: The work item form includes all of the relevant work item settings. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. We will explore one of the ways to add a feature to this epic. 
+8. In the **Related work** section on the lower right-side, select the **Add link** entry and, in the dropdown list, select **New item**.
 
-1. In the **Related work** section on the lower right-side, select the **Add link** entry and, in the dropdown list, select **New item**.
-
-1.  On the **Add link** panel, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **OK**.
+9.  On the **Add link** panel, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **OK**.
 
     <!-- ![Training dashboard](images/m1/child_feature_v1.png) -->
     [<img src="images/m1/child_feature_v1.png" alt="Include Title 'Training Dashboard' and click 'OK' " width="500"/>](images/m1/child_feature_v1.png)
 
     > **Note**: On the **Training dashboard** panel, note that the assignment, **Area**, and **Iteration** are already set to the same values as the epic that the feature is based on. In addition, the feature is automatically linked to the parent item it was created from. 
 
-1.  On the **Training dashboard** panel, click **Save & Close**.
+10.  On the **Training dashboard** panel, click **Save & Close**.
 
     ![In the "Training dashboard" feature window, click "Save & Close"](images/m1/feature_v1.png)
 
-1.  In the vertical navigational pane of the Azure DevOps portal, in the list of the **Boards** items, select **Boards**.
-1.  On the **Boards** panel, select the **PUL-Web boards** entry. This will open the board for that particular team.
+11.  In the vertical navigational pane of the Azure DevOps portal, in the list of the **Boards** items, select **Boards**.
+12.  On the **Boards** panel, select the **PUL-Web boards** entry. This will open the board for that particular team.
 
     ![ In "Boards>Boards" window, select "PUL-Web boards"](images/m1/pulweb_boards_v1.png)
 
-1.  On the **Boards** panel, in the upper right corner, select the **Backlog items** entry and, in the dropdown list, select **Features**. 
+13.  On the **Boards** panel, in the upper right corner, select the **Backlog items** entry and, in the dropdown list, select **Features**. 
 
     > **Note**: This will make it easy to add tasks and other work items to the features.
 
-1.  Hover with the mouse pointer over the rectangle representing the **Training dashboard** feature. This will reveal the ellipsis  symbol in its upper right corner.
-1.  Click the ellipsis  icon and, in the dropdown list, select **Add Product Backlog Item**.
+14.  Hover with the mouse pointer over the rectangle representing the **Training dashboard** feature. This will reveal the ellipsis  symbol in its upper right corner.
+15.  Click the ellipsis  icon and, in the dropdown list, select **Add Product Backlog Item**.
 
     ![Click on the ellipis for "Training dashboard" feature and click "Add Product Backlog Item"](images/m1/add_pb_v1.png)
 
-1.  In the textbox of the new product backlog item, type **As a customer, I want to view new tutorials** and press the **Enter** key to save the entry. 
+16.  In the textbox of the new product backlog item, type **As a customer, I want to view new tutorials** and press the **Enter** key to save the entry. 
 
     > **Note**: This creates a new product backlog item (PBI) work item that is a child of the feature and shares its area and iteration.
 
-1.  Repeat the previous step to add two more PBIs designed to enable the customer to see their recently viewed tutorials and to request new tutorials named, respectively, **As a customer, I want to see tutorials I recently viewed** and **As a customer, I want to request new tutorials**.
+17.  Repeat the previous step to add two more PBIs designed to enable the customer to see their recently viewed tutorials and to request new tutorials named, respectively, **As a customer, I want to see tutorials I recently viewed** and **As a customer, I want to request new tutorials**.
 
     ![Repeat by clicking on "Add Product Backlog" ](images/m1/pbis_v1.png)
 
-1.  On the **Boards** panel, in the upper right corner, select the **Features** entry and, in the dropdown list, select **Backlog items**.
+18.  On the **Boards** panel, in the upper right corner, select the **Features** entry and, in the dropdown list, select **Backlog items**.
 
     > **Note**: Backlog items have a state that defines where they are relative to being completed. While you could open and edit the work item using the form, it's easier to just drag cards on the board. 
 
-1.  On the **Board** tab of the **PUL-Web** panel, drag the first work item named **As a customer, I want to view new tutorials** from the **New** to **Approved** stage.
+19.  On the **Board** tab of the **PUL-Web** panel, drag the first work item named **As a customer, I want to view new tutorials** from the **New** to **Approved** stage.
 
     ![Move the WIT from "New" state to "Approved"](images/m1/new2ap_v1.png)
 
     > **Note**: You can also expand work item cards to get to conveniently editable details.
 
-1.  Hover with the mouse pointer over the rectangle representing the work item you moved to the **Approved** stage. This will reveal the down facing caret symbol. 
-1.  Click the down facing caret symbol to expand the work item card, select the **Unassigned** entry, and in the list of user accounts, select your account to assign the moved PBI to yourself.
-1.  On the **Board** tab of the **PUL-Web** panel, drag the second work item named **As a customer, I want to see tutorials I recently viewed** from the **New** to the **Committed** stage.
-1.  On the **Board** tab of the **PUL-Web** panel, drag the third work item named **As a customer,  I want to request new tutorials** from the **New** to the **Done** stage.
+20.  Hover with the mouse pointer over the rectangle representing the work item you moved to the **Approved** stage. This will reveal the down facing caret symbol. 
+21.  Click the down facing caret symbol to expand the work item card, select the **Unassigned** entry, and in the list of user accounts, select your account to assign the moved PBI to yourself.
+22.  On the **Board** tab of the **PUL-Web** panel, drag the second work item named **As a customer, I want to see tutorials I recently viewed** from the **New** to the **Committed** stage.
+23.  On the **Board** tab of the **PUL-Web** panel, drag the third work item named **As a customer,  I want to request new tutorials** from the **New** to the **Done** stage.
 
     ![WITs moved to the specified columns from previous steps](images/m1/board_pbis_v1.png)
 
     > **Note**: The task board is one view into the backlog. You can also use the tabular view.
 
-1.  On the **Board** tab of the **PUL-Web** pane, at the top of the pane, click **View as Backlog** to display the tabular form.
+24.  On the **Board** tab of the **PUL-Web** pane, at the top of the pane, click **View as Backlog** to display the tabular form.
 
     ![In the "PUL-Web" board, click "View as Backlog"](images/m1/view_backlog_v1.png)
 
-    > **Note**: You can use the plus sign directly under the **Backlog** tab label of the **PUL-Web** panel to view nested tasks under these work items. 
+> **Note**: You can use the plus sign directly under the **Backlog** tab label of the **PUL-Web** panel to view nested tasks under these work items. 
 
-    > **Note**: You can use the second plus sign directly left to the first backlog item to add a new task to it.
+> **Note**: You can use the second plus sign directly left to the first backlog item to add a new task to it.
 
-1.  On the **Backlog** tab of the **PUL-Web** pane, in the upper left corner of the pane, click the second plus sign from the top, the one next to the first work item. This will display the **NEW TASK** panel.
+25.  On the **Backlog** tab of the **PUL-Web** pane, in the upper left corner of the pane, click the second plus sign from the top, the one next to the first work item. This will display the **NEW TASK** panel.
 
     ![Click on "+" to create Task](images/m1/new_task_v1.png)
 
-1.  At the top of the **NEW TASK** panel, in the **Enter title** textbox, type **Add page for most recent tutorials**. 
-1.  On the **NEW TASK** panel, in the **Remaining Work** textbox, type **5**.
-1.  On the **NEW TASK** panel, in the **Activity** dropdown list, select **Development**. 
-1.  On the **NEW TASK** panel, click **Save & Close**.
+26.  At the top of the **NEW TASK** panel, in the **Enter title** textbox, type **Add page for most recent tutorials**. 
+27.  On the **NEW TASK** panel, in the **Remaining Work** textbox, type **5**.
+28.  On the **NEW TASK** panel, in the **Activity** dropdown list, select **Development**. 
+29.  On the **NEW TASK** panel, click **Save & Close**.
 
     ![Fill in "New task" fields and click "Save and Close"](images/m1/save_task_v1.png)
 
-1.  Repeat the last five steps to add another task named **Optimize data query for most recent tutorials**. Set its **Remaining Work** to **3** and its **Activity** to **Design**. Click **Save & Close** once completed.
+30.  Repeat the last five steps to add another task named **Optimize data query for most recent tutorials**. Set its **Remaining Work** to **3** and its **Activity** to **Design**. Click **Save & Close** once completed.
 
 #### Task 3: Manage sprints and capacity
 
@@ -252,9 +251,9 @@ The sprint backlog should contain all the information the team needs to successf
 
 1.  On the **Capacity** tab of the **Sprints** view, directly under the **Activity** label, in the **Unassigned** dropdown list, select **Development** and, in the **Capacity per day** textbox, type **1**. 
 
-    > **Note**: This represents 1 hour of development work per day. Note that you can add additional activities per user in the case they do more than just development. 
+> **Note**: This represents 1 hour of development work per day. Note that you can add additional activities per user in the case they do more than just development. 
 
-    > **Note**: Let's assume you're going to take some vacation. 
+> **Note**: Let's assume you're going to take some vacation. 
 
 1.  On the **Capacity** tab of the **Sprints** view, directly next to the entry representing your user account, in the **Days off** column, click the **0 days** entry. This will display a panel where you can set your days off.
 1.  In the displayed panel, use the calendar view to set your vacation to span five work days during the current sprint (within the next three weeks) and, once completed, click **OK**.
@@ -274,9 +273,9 @@ The sprint backlog should contain all the information the team needs to successf
 
     ![Review the "Work details" section information, team´s assigned time is bigger than capacity.](images/m1/over_capacity_v1.png)
 
-    > **Note**: This automatically expands the **Development** and your personal capacities to their maximum. Since they're large enough to cover the assigned tasks, they stay green. However, the overall **Team** capacity is exceeded due to the additional 3 hours required by the **Optimize data query for most recent tutorials** task.
+> **Note**: This automatically expands the **Development** and your personal capacities to their maximum. Since they're large enough to cover the assigned tasks, they stay green. However, the overall **Team** capacity is exceeded due to the additional 3 hours required by the **Optimize data query for most recent tutorials** task.
 
-    > **Note**: One way to resolve this capacity issue would be to move the task to a future iteration. There are a few ways this could be done. You could, for example, open the task here and edit it within the panel providing access to the task details. Another approach would be to use the **Backlog** view, which provides an in-line menu option to move it. At this point though, don't move the task yet.
+> **Note**: One way to resolve this capacity issue would be to move the task to a future iteration. There are a few ways this could be done. You could, for example, open the task here and edit it within the panel providing access to the task details. Another approach would be to use the **Backlog** view, which provides an in-line menu option to move it. At this point though, don't move the task yet.
 
 1.  On the **Taskboard** tab of the **Sprints** view, in the toolbar, on the right hand side, select the **View options** symbol (directly to the left of the funnel icon) and, in the **View options** dropdown list, select the **People** entry.
 
@@ -295,23 +294,23 @@ The sprint backlog should contain all the information the team needs to successf
 
     !["Settings" window, make sure all fields have mentioned information](images/m1/styles_v1.png)
 
-    > **Note**: This will set all cards assigned to **Development** activities green.
+> **Note**: This will set all cards assigned to **Development** activities green.
 
 1.  On the **Settings** panel, select the **Backlogs** tab. 
 
-    > **Note**: Entries on this tab allow you to set the levels available for navigation. Epics are not included by default, but you could change that.
+> **Note**: Entries on this tab allow you to set the levels available for navigation. Epics are not included by default, but you could change that.
 
 1.  On the **Settings** panel, select the **Working days** tab. 
 
-    > **Note**: Entries on this tab allow you to specify the **Working days** the team follows. This applies to capacity and burndown calculations.
+> **Note**: Entries on this tab allow you to specify the **Working days** the team follows. This applies to capacity and burndown calculations.
 
 1.  On the **Settings** panel, select the **Working with bugs** tab. 
 
-    > **Note**: Entries on this tab allow you to specify how bugs are presented on the board.
+> **Note**: Entries on this tab allow you to specify how bugs are presented on the board.
 
 1.  On the **Settings** panel, click **Save and close** to save the styling rule.
 
-    > **Note**: The task associated with **Development** is now green and very easy to identify.
+> **Note**: The task associated with **Development** is now green and very easy to identify.
 
 #### Task 4: Customize Kanban boards
 
@@ -489,7 +488,7 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 1.  On the **Add Widget** panel, in the **Search** textbox, type **sprint** to find existing widgets that focus on sprints. In the list of results, select **Sprint Overview** and click **Add**.
 1.  In the rectangle representing the newly added widget, click the **Settings** cogwheel icon and review the **Configuration** pane.
 
-    > **Note**: The customization level will vary by widget. 
+> **Note**: The customization level will vary by widget. 
 
 1.  On the **Configuration** pane, click **Close** without making any changes.
 1.  Back on the **Add Widget** pane, in the **Search** textbox, type **sprint** again to find existing widgets that focus on sprints. In the list of results, select **Sprint Capacity** and click **Add**.
@@ -498,9 +497,9 @@ Dashboards allow teams to visualize status and monitor progress across the proje
     ![Review finished dashboard should include both widgets](images/m1/finished_dashboard_v1.png)
 
 
-    > **Note**: You can now review two important aspects of your current sprint on your custom dashboard.
+> **Note**: You can now review two important aspects of your current sprint on your custom dashboard.
 
-    > **Note**: Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard. 
+> **Note**: Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard. 
 
 1.  In the vertical navigational pane of the Azure DevOps portal, select the **Boards** icon and, in the list of the **Boards** items, select **Queries**.
 1.  On the **Queries** pane, click **+ New query**.
@@ -517,7 +516,7 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 
     ![On the "Configure Chart" panel, in the "Name" textbox, type "Web tasks - By assignment", in the "Group by" dropdown list, select "Assigned To", and click "OK" to save the changes](images/m1/chart_v1.png)
 
-    > **Note**: You can now add this chart to a dashboard.
+> **Note**: You can now add this chart to a dashboard.
 #### Review
 
 In this lab you used Azure Boards to perform a number of common agile planning and portfolio management tasks, including management of teams, areas, iterations, work items, sprints and capacity, customizing Kanban boards, defining dashboards, and customizing team processes.
