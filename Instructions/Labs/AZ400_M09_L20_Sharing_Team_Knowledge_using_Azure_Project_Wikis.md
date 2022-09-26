@@ -82,7 +82,7 @@ In this task, you will publish a branch of an Azure DevOps repo as wiki.
     
     >**Note**: You will use this image in the next exercise of this lab.
 
-1.  In the vertical menu on the left side, click **Overview**, in the **Overview** section, select **Wiki**, in the upper section of the pane, select the **Tailwind Traders** dropdown menu header, and, in the dropdown list, select **Publish code as wiki**. 
+1. In the vertical menu on the left side, click **Overview**, in the **Overview** section, select **Wiki**, select **Publish code as wiki**.
 1.  On the **Publish code as wiki** pane, specify the following settings and click **Publish**.
 
     | Setting | Value |
@@ -92,10 +92,9 @@ In this task, you will publish a branch of an Azure DevOps repo as wiki.
     | Folder | **/Documents** |
     | Wiki name | **Tailwind Traders (Documents)** |
 
-    >**Note**: This will automatically display the content of the **README** file.
+    >**Note**: This will automatically display the content of the **GitHubAction.md** file.
 
 1.  Review the content of  **GitHubActions** file and note the overall structure of the wiki, matching the structure of the underlying repo.
-1.  In the upper section of the pane, select the **Tailwind Traders (Documents)** dropdown menu header and note that you can easily switch between this and previously published wiki.
 
 #### Task 2: Manage content of a published wiki
 
@@ -201,7 +200,7 @@ In this task, you will manage the newly created project wiki.
 
 >**Note**: You will start by reverting the most recent change to the wiki page.
 
-1.  On you lab VM, in the Azure DevOps portal displaying the Wiki pane of the **Sharing Team Knowledge using Azure Project Wikis** project, with the content of the **Project Design** wiki selected, in the upper right corner, click the vertical ellipsis symbol and, in the dropdown menu, click **View revisions**.
+1.  On you lab VM, in the Azure DevOps portal displaying the **Wiki pane** of the **Sharing Team Knowledge using Azure Project Wikis** project, with the content of the **Project Design** wiki selected, in the upper right corner, click the vertical ellipsis symbol and, in the dropdown menu, click **View revisions**.
 
     ![Azure DevOps](images/view-revisions-01.png)
 
