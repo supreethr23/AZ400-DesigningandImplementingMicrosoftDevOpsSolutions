@@ -34,7 +34,7 @@ After you complete this lab, you will be able to:
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-    ![Azure DevOps](images/m1-2.png)
+   ![Azure DevOps](images/m1-2.png)
 
 ### Exercise 0: Configure the lab prerequisites
 
@@ -119,11 +119,7 @@ In this task, you will manage content of the wiki you published in the previous 
     >**Note**: The order of wiki content should match the sequence of files and folders listed in the **.order** file.
 
 1.  In the vertical menu on the left side, click **Repos**, ensure that the dropdown menu in the upper section of the **Files** pane displays the **TailwindTraders-Website** repo and **main** branch, in the listing of files, under **Documents**, select **GitHubActions.md**, and on the **GitHubActions.md** pane, click **Edit**. 
-1.  On the **GitHubActions.md** pane, directly below the `#GitHub Actions` header, add the following markdown element referencing one of the images within the **Documents** folder:
-
-    ```
-    ![Tailwind Traders Website](Images/Website.png)
-    ```    
+1.  On the **GitHubActions.md** pane, directly below the `#GitHub Actions` header, add the following markdown element referencing one of the images within the **Documents**.    
 
 1.  On the **GitHubActions.md** pane, click **Commit** and, on the **Commit** pane, click **Commit**.
 1.  On the **Preview** tab of the **GitHubActions.md** pane, verify that the image is being displayed.
