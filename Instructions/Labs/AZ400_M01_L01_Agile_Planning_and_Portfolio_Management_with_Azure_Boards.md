@@ -42,27 +42,27 @@ In this exercise, you will set up the prerequisite for the lab, which consists o
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Parts Unlimited** template.
 
-1.  In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. 
+1. In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. 
 
 > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
 
-1.  Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
+1. Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
 
     ![Azure DevOps Generator website. Clik on "Sign In" option](images/m1/demo_signin_v1.png)
 
-1.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
-1.  On the **Create New Project** page, in the **New Project Name** textbox, type **Agile Planning and Portfolio Management with Azure Boards**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
-1.  In the list of templates, locate the **PartsUnlimited** template and click **Select Template**.
+1. If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
+1. On the **Create New Project** page, in the **New Project Name** textbox, type **Agile Planning and Portfolio Management with Azure Boards**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
+1. In the list of templates, locate the **PartsUnlimited** template and click **Select Template**.
 
     ![Azure DevOps Generator website. On the choose template window, select "PartsUnlimited"](images/m1/pu_template_v1.png)
 
-1.  Back on the **Create New Project** page, click **Create Project**
+1. Back on the **Create New Project** page, click **Create Project**
 
     ![Azure DevOps Generator website. Clik on "Create project"](images/m1/create_project_v1.png)
 
-    > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your Azure DevOps organization, delete the project, and try again.
+> **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your Azure DevOps organization, delete the project, and try again.
 
-1.  On the **Create New Project** page, click **Navigate to project**.
+1. On the **Create New Project** page, click **Navigate to project**.
 
     ![Azure DevOps Generator website. Clik on "Navigate to Project"](images/m1/navigate_project_v1.png)
 
@@ -76,48 +76,48 @@ In this task, you will create a new team and configure its area and iterations.
 
 Each new project is configured with a default team, which name matches the project name. You have the option of creating additional teams. Each team can be granted access to a suite of Agile tools and team assets. The ability to create multiple teams gives you the flexibility to choose the proper balance between autonomy and collaboration across the enterprise. 
 
-1.  Verify that the web browser displays your Azure DevOps organization with the **Agile Planning and Portfolio Management with Azure Boards** project you generated in the previous exercise. 
+1. Verify that the web browser displays your Azure DevOps organization with the **Agile Planning and Portfolio Management with Azure Boards** project you generated in the previous exercise. 
 
 > **Note**: Alternatively, you can access the project page directly by navigating to the [https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Agile%20Planning%20and%20Portfolio%20Management%20with%20Azure%20Boards) URL, where the `<your-Azure-DevOps-account-name>` placeholder, represents your account name. 
 
-1.  Click the cogwheel icon labeled **Project settings** located in the lower left corner of the page to open the **Project settings** page.
+1. Click the cogwheel icon labeled **Project settings** located in the lower left corner of the page to open the **Project settings** page.
 
     ![Azure DevOps project window. Click on "Project settings" option](images/m1/project_settings_v1.png)
 
-1.  In the **General** section, select the **Teams** tab. There are already a few teams in this project, but you'll create a new one for this lab. Click **New Team**.
+1. In the **General** section, select the **Teams** tab. There are already a few teams in this project, but you'll create a new one for this lab. Click **New Team**.
 
     ![In project settings window, "Teams" tab, click on "New Team"](images/m1/new_team_v1.png)
 
-1.  On the **Create a new team** pane, in the **Team name** textbox, type **PUL-Web**, leave other settings with their default values, and click **Create**.
+1. On the **Create a new team** pane, in the **Team name** textbox, type **PUL-Web**, leave other settings with their default values, and click **Create**.
 
     ![In "create a new team" window, call your new team "PUL-Web" and click "Create"](images/m1/pulweb_v1.png)
 
-1.  In the list of **Teams**, select the newly created team to view its details.
+1. In the list of **Teams**, select the newly created team to view its details.
 
 > **Note**: By default, the new team has only you as its member. You can use this view to manage such functionality as team membership, notifications, and dashboards. 
 
-1.  Click **Iterations and Area Paths** link at the top of the **PUL-Web** page to start defining the schedule and scope of the team.
+1. Click **Iterations and Area Paths** link at the top of the **PUL-Web** page to start defining the schedule and scope of the team.
 
     ![In project settings window, "Teams" tab, "PUL-Web" team, click on "Iterations and Area Paths"](images/m1/iterationsareas_v1.png)
 
-1.  At the top of the **Boards** pane, select the **Iterations** tab and then click **+ Select iteration(s)**.
+1. At the top of the **Boards** pane, select the **Iterations** tab and then click **+ Select iteration(s)**.
 
     ![In the "interations" tab, click on "Select Iteration"](images/m1/select_iteration_v1.png)
 
-1.  Select **Agile Planning and Portfolio Management with Azure Boards\Sprint 1** and click **Save and close**. Note that this first sprint has already passed. This is because the demo data generator is designed to build out project history so that this sprint occurs in the past.
+1. Select **Agile Planning and Portfolio Management with Azure Boards\Sprint 1** and click **Save and close**. Note that this first sprint has already passed. This is because the demo data generator is designed to build out project history so that this sprint occurs in the past.
 
     > **Note**: The new team will use the same iteration schedule that's already in place for the other teams, but you could create a custom one if that is more suitable for your organization.
 
-1.  Repeat the previous step to add **Sprint 2** and **Sprint 3**. The second sprint is our current iteration, and the third is in the near future.
+1. Repeat the previous step to add **Sprint 2** and **Sprint 3**. The second sprint is our current iteration, and the third is in the near future.
 
     ![Do the same for Sprint 2 and 3, make sure they are created for "PUL-Web" team](images/m1/3sprints_v1.png)
 
-1.  Back on the **Boards** pane, at the top of the pane, select the **Areas** tab. You will find there an automatically generated area with the name matching the name of the team.
+1. Back on the **Boards** pane, at the top of the pane, select the **Areas** tab. You will find there an automatically generated area with the name matching the name of the team.
 1.  Click the ellipsis symbol next to the **default area** entry and, in the dropdown list, select **Include sub areas**. 
 
     ![In the "Areas" tab, clik on the ellipsis icon for "PUL-Web" area and select "Include sub areas"](images/m1/sub_areas_v1.png)
 
-    > **Note**: The default setting for all teams is to exclude sub-area paths. We will change it to include sub-areas so that the team gets visibility into all of the work items from all teams. Optionally, the management team could also choose to not include sub-areas, which automatically removes work items from their view as soon as they are assigned to one of the teams.
+> **Note**: The default setting for all teams is to exclude sub-area paths. We will change it to include sub-areas so that the team gets visibility into all of the work items from all teams. Optionally, the management team could also choose to not include sub-areas, which automatically removes work items from their view as soon as they are assigned to one of the teams.
 
 #### Task 2: Manage work items
 
@@ -127,17 +127,17 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 > **Note**: This task is designed to illustrate a variety of ways you can create different kinds of work items, as well as to demonstrate the breadth of features available on the platform. As a result, these steps should not be viewed as prescriptive guidance for project management. The features are intended to be flexible enough to fit your process needs, so explore and experiment as you go.
 
-1.  In the vertical navigational pane of the Azure DevOps portal, select the **Boards** icon and, select **Work Items**.
+1. In the vertical navigational pane of the Azure DevOps portal, select the **Boards** icon and, select **Work Items**.
  
 > **Note**: There are many ways to create work items in Azure DevOps, and we'll explore a few of them. Sometimes it's as simple as firing one off from a dashboard. 
 
-2.  On the **Work Items** window, click on **+ New Work Item > Epic**.
+2. On the **Work Items** window, click on **+ New Work Item > Epic**.
 
     ![In the "Boards">"Work Items" window, click on "New work item" >Epic](images/m1/create_epic_v1.png)
 
-3.  In the **Enter title** textbox, type **Product training**. 
-4.  In the upper left corner, select the **Unassigned** entry and, in the dropdown list, select your user account in order to assign the new work item to yourself. 
-5.  Next to the **Area** entry, select the **Agile Planning and Portfolio Management with Azure Boards** entry and, in the dropdown list, select **PUL-Web**. This will set the **Area** to **Agile Planning and Portfolio Management with Azure Boards\PUL-Web**. 
+3. In the **Enter title** textbox, type **Product training**. 
+4. In the upper left corner, select the **Unassigned** entry and, in the dropdown list, select your user account in order to assign the new work item to yourself. 
+5. Next to the **Area** entry, select the **Agile Planning and Portfolio Management with Azure Boards** entry and, in the dropdown list, select **PUL-Web**. This will set the **Area** to **Agile Planning and Portfolio Management with Azure Boards\PUL-Web**. 
 6.  Next to the **Iteration** entry, select the **Agile Planning and Portfolio Management with Azure Boards** entry and, in the dropdown list, select **Sprint 2**. This will set the **Iteration** to **Agile Planning and Portfolio Management with Azure Boards\Sprint 2**. 
 7.  Click **Save** to finalize your changes. **Do not close it**.
 
@@ -149,59 +149,59 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 8. In the **Related work** section on the lower right-side, select the **Add link** entry and, in the dropdown list, select **New item**.
 
-9.  On the **Add link** panel, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **OK**.
+9. On the **Add link** panel, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **OK**.
 
     <!-- ![Training dashboard](images/m1/child_feature_v1.png) -->
     [<img src="images/m1/child_feature_v1.png" alt="Include Title 'Training Dashboard' and click 'OK' " width="500"/>](images/m1/child_feature_v1.png)
 
     > **Note**: On the **Training dashboard** panel, note that the assignment, **Area**, and **Iteration** are already set to the same values as the epic that the feature is based on. In addition, the feature is automatically linked to the parent item it was created from. 
 
-10.  On the **Training dashboard** panel, click **Save & Close**.
+10. On the **Training dashboard** panel, click **Save & Close**.
 
      ![In the "Training dashboard" feature window, click "Save & Close"](images/m1/feature_v1.png)
 
-11.  In the vertical navigational pane of the Azure DevOps portal, in the list of the **Boards** items, select **Boards**.
-12.  On the **Boards** panel, select the **PUL-Web boards** entry. This will open the board for that particular team.
+11. In the vertical navigational pane of the Azure DevOps portal, in the list of the **Boards** items, select **Boards**.
+12. On the **Boards** panel, select the **PUL-Web boards** entry. This will open the board for that particular team.
 
      ![ In "Boards>Boards" window, select "PUL-Web boards"](images/m1/pulweb_boards_v1.png)
 
-13.  On the **Boards** panel, in the upper right corner, select the **Backlog items** entry and, in the dropdown list, select **Features**. 
+13. On the **Boards** panel, in the upper right corner, select the **Backlog items** entry and, in the dropdown list, select **Features**. 
 
 > **Note**: This will make it easy to add tasks and other work items to the features.
 
-14.  Hover with the mouse pointer over the rectangle representing the **Training dashboard** feature. This will reveal the ellipsis  symbol in its upper right corner.
-15.  Click the ellipsis  icon and, in the dropdown list, select **Add Product Backlog Item**.
+14. Hover with the mouse pointer over the rectangle representing the **Training dashboard** feature. This will reveal the ellipsis  symbol in its upper right corner.
+15. Click the ellipsis  icon and, in the dropdown list, select **Add Product Backlog Item**.
 
      ![Click on the ellipis for "Training dashboard" feature and click "Add Product Backlog Item"](images/m1/add_pb_v1.png)
 
-16.  In the textbox of the new product backlog item, type **As a customer, I want to view new tutorials** and press the **Enter** key to save the entry. 
+16. In the textbox of the new product backlog item, type **As a customer, I want to view new tutorials** and press the **Enter** key to save the entry. 
 
 > **Note**: This creates a new product backlog item (PBI) work item that is a child of the feature and shares its area and iteration.
 
-17.  Repeat the previous step to add two more PBIs designed to enable the customer to see their recently viewed tutorials and to request new tutorials named, respectively, **As a customer, I want to see tutorials I recently viewed** and **As a customer, I want to request new tutorials**.
+17. Repeat the previous step to add two more PBIs designed to enable the customer to see their recently viewed tutorials and to request new tutorials named, respectively, **As a customer, I want to see tutorials I recently viewed** and **As a customer, I want to request new tutorials**.
 
      ![Repeat by clicking on "Add Product Backlog" ](images/m1/pbis_v1.png)
 
-18.  On the **Boards** panel, in the upper right corner, select the **Features** entry and, in the dropdown list, select **Backlog items**.
+18. On the **Boards** panel, in the upper right corner, select the **Features** entry and, in the dropdown list, select **Backlog items**.
 
 > **Note**: Backlog items have a state that defines where they are relative to being completed. While you could open and edit the work item using the form, it's easier to just drag cards on the board. 
 
-19.  On the **Board** tab of the **PUL-Web** panel, drag the first work item named **As a customer, I want to view new tutorials** from the **New** to **Approved** stage.
+19. On the **Board** tab of the **PUL-Web** panel, drag the first work item named **As a customer, I want to view new tutorials** from the **New** to **Approved** stage.
 
      ![Move the WIT from "New" state to "Approved"](images/m1/new2ap_v1.png)
 
 > **Note**: You can also expand work item cards to get to conveniently editable details.
 
-20.  Hover with the mouse pointer over the rectangle representing the work item you moved to the **Approved** stage. This will reveal the down facing caret symbol. 
-21.  Click the down facing caret symbol to expand the work item card, select the **Unassigned** entry, and in the list of user accounts, select your account to assign the moved PBI to yourself.
-22.  On the **Board** tab of the **PUL-Web** panel, drag the second work item named **As a customer, I want to see tutorials I recently viewed** from the **New** to the **Committed** stage.
+20. Hover with the mouse pointer over the rectangle representing the work item you moved to the **Approved** stage. This will reveal the down facing caret symbol. 
+21. Click the down facing caret symbol to expand the work item card, select the **Unassigned** entry, and in the list of user accounts, select your account to assign the moved PBI to yourself.
+22. On the **Board** tab of the **PUL-Web** panel, drag the second work item named **As a customer, I want to see tutorials I recently viewed** from the **New** to the **Committed** stage.
 23. On the **Board** tab of the **PUL-Web** panel, drag the third work item named **As a customer,  I want to request new tutorials** from the **New** to the **Done** stage.
 
      ![WITs moved to the specified columns from previous steps](images/m1/board_pbis_v1.png)
 
 > **Note**: The task board is one view into the backlog. You can also use the tabular view.
 
-24.  On the **Board** tab of the **PUL-Web** pane, at the top of the pane, click **View as Backlog** to display the tabular form.
+24. On the **Board** tab of the **PUL-Web** pane, at the top of the pane, click **View as Backlog** to display the tabular form.
 
      ![In the "PUL-Web" board, click "View as Backlog"](images/m1/view_backlog_v1.png)
 
@@ -285,8 +285,8 @@ The sprint backlog should contain all the information the team needs to successf
 
 > **Note**: There is also a lot of customization available. 
 
-1.  Click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
-1.  On the **Settings** panel, select the **Styles** tab, click **+ Styling rule**, under the **Rule name** label, in the **Name** textbox, type **Development**, and, in the **Card color** dropdown list, select the green rectangle. 
+1. Click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
+1. On the **Settings** panel, select the **Styles** tab, click **+ Styling rule**, under the **Rule name** label, in the **Name** textbox, type **Development**, and, in the **Card color** dropdown list, select the green rectangle. 
 
 > **Note**: This will color all cards green if they meet the rule criteria set directly below, in the **Rule criteria** section.
 
@@ -308,7 +308,7 @@ The sprint backlog should contain all the information the team needs to successf
 
 > **Note**: Entries on this tab allow you to specify how bugs are presented on the board.
 
-1.  On the **Settings** panel, click **Save and close** to save the styling rule.
+1. On the **Settings** panel, click **Save and close** to save the styling rule.
 
 > **Note**: The task associated with **Development** is now green and very easy to identify.
 
@@ -318,14 +318,14 @@ In this task, you will step through the process of customizing Kanban boards.
 
 To maximize a team's ability to consistently deliver high quality software, Kanban emphasizes two main practices. The first, visualizing the flow of work, requires that you map your team's workflow stages and configure a Kanban board to match. The second, constraining the amount of work in progress, requires that you set work-in-progress (WIP) limits. You're then ready to track progress on your Kanban board and monitor key metrics to reduce lead or cycle time. Your Kanban board turns your backlog into an interactive signboard, providing a visual flow of work. As work progresses from idea to completion, you update the items on the board. Each column represents a work stage, and each card represents a user story (blue cards) or a bug (red cards) at that stage of work. However, every team develops its own process over time, so the ability to customize the Kanban board to match the way your team works is critical for the successful delivery.
 
-1.  In the vertical navigational pane of the Azure DevOps portal, in the list of the **Boards** items, select **Boards**.
-1.  On the **Boards** panel, click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
+1. In the vertical navigational pane of the Azure DevOps portal, in the list of the **Boards** items, select **Boards**.
+1. On the **Boards** panel, click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
 
 > **Note**: The team is emphasizing work done with data, so there is special attention paid to any task associated with accessing or storing data. 
 
 1. On the **Settings** panel, select the **Tag colors** tab, click **+ Tag color**, in the **Tag** textbox, type **data** and leave the default color in place.
 
-   !["Settings" window, "Tag colors", include "data" tag](images/m1/tag_color_v1.png)
+    !["Settings" window, "Tag colors", include "data" tag](images/m1/tag_color_v1.png)
 
 > **Note**: Whenever a backlog item or bug is tagged with **data**, that tag will be highlighted.
 
@@ -333,7 +333,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
 > **Note**: You can specify which **Annotations** you would like included on cards to make them easier to read and navigate. When an annotation is enabled, the child work items of that type are easily accessible by clicking the visualization on each card.
 
-1.  On the **Settings** panel, select the **Tests** tab.
+1. On the **Settings** panel, select the **Tests** tab.
 
 > **Note**: The **Tests** tab enables you to configure how tests appear and behave on the cards.
 
@@ -344,7 +344,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 1. Repeat the previous step to add the **ux** tag. 
 1. On the **As a customer, I want to view new tutorials** panel, click **Save & Close**.
 
-  ![On the ""As a customer, I want to view new tutorials" panel, click "Save & Close"](images/m1/tags_v1.png)
+   ![On the ""As a customer, I want to view new tutorials" panel, click "Save & Close"](images/m1/tags_v1.png)
 
 > **Note**: The two tags are now visible on the card, with the **data** tag highlighted in yellow as configured.
 
@@ -360,14 +360,14 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 1. On the **Settings** panel, on the **Columns** tab, drag and drop the newly created tab between **Committed** and **Done**.
 1. On the **Settings** panel, click **Save and close**.
 
-   ![On the "Settings" panel, clikc "Save & Close"](images/m1/qa_column_v1.png)
+    ![On the "Settings" panel, clikc "Save & Close"](images/m1/qa_column_v1.png)
 
 > **Note**: Verify that you now see the new stage in the workflow.
 
 1. Drag the **As a customer, I want to see tutorials I recently viewed** work item from the **Committed** stage into the **QA Approved** stage.
 1. Drag the **As a customer, I want to view new tutorials** work item from the **QA Approved** stage into the **Done** stage.
-
-  ![The stage now exceeds its **WIP** limit and is colored red as a warning next to "QA Approved" column](images/m1/wip_limit_v1.png)
+ 
+   ![The stage now exceeds its **WIP** limit and is colored red as a warning next to "QA Approved" column](images/m1/wip_limit_v1.png)
 
 > **Note**: The stage now exceeds its **WIP** limit and is colored red as a warning.
 
@@ -377,14 +377,14 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
 > **Note**: A lag often exists between when work gets moved into a column and when work starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns. When split, each column contains two sub-columns: **Doing** and **Done**. Split columns let your team implement a pull model. Without split columns, teams push work forward, to signal that they've completed their stage of work. However, pushing it to the next stage doesn't necessarily mean that a team member immediately starts work on that item. 
 
-1.  On the **QA Approved** tab, enable the **Split column into doing and done** checkbox to create two separate columns.
+1. On the **QA Approved** tab, enable the **Split column into doing and done** checkbox to create two separate columns.
 
 > **Note**: As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what **done** means. By specifying the **Definition of done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage. 
 
 1. On the **QA Approved** tab, at the bottom of the panel, in the **Definition of done** textbox, type **Passes \*\*all\*\* tests**. 
 1. On the **Settings** panel, click **Save and close**.
 
-  ![On the "Settings" panel, review information and click "Save and close"](images/m1/dd_v1.png)
+   ![On the "Settings" panel, review information and click "Save and close"](images/m1/dd_v1.png)
 
 > **Note**: The **QA Approved** stage now has **Doing** and **Done** columns. You can also click the informational symbol (with letter **i** in a circle) next to the column header to read the **Definition of done**.
 
@@ -396,7 +396,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 1. On the **Swimlanes** tab, click **+ Swimlane**, directly under the **Swimlane name** label, in the **Name** textbox, type **Expedite**. 
 1. On the **Settings** panel, click **Save and close**.
 
-![On the "Settings" panel, review information and click "Save and close"](images/m1/swimlane_v1.png)
+    ![On the "Settings" panel, review information and click "Save and close"](images/m1/swimlane_v1.png)
 
 1. Back on the **Board** tab of the **Boards** panel, drag and drop the **Committed** work item onto the **QA Approved \| Doing** stage of the **Expedite** swimlane so that it gets recognized as having priority when QA bandwidth becomes available.
 
@@ -482,7 +482,6 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 1. On the **Create a dashboard** pane, in the **Name** textbox, type **Product training**, in the **Team** dropdown list, select the **PUL-Web** team, and click **Create**.
 
     ![On the "Create a dashboard" pane, in the "Name" textbox, type "Product training", in the "Team" dropdown list, select the "PUL-Web" team, and click "Create"](images/m1/create_dash_v1.png)
-
 
 1. On the new dashboard pane, click **Add a widget**.
 1. On the **Add Widget** panel, in the **Search** textbox, type **sprint** to find existing widgets that focus on sprints. In the list of results, select **Sprint Overview** and click **Add**.
