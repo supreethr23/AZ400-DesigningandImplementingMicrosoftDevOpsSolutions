@@ -245,7 +245,7 @@ In this task, you will deploying a web app to Azure by using Azure DevOps pipeli
       > **Note**: This is the default setting added during the App Service web app deployment, which already contains the Application Insights ID. We need to add a new setting expected by our app, with a different name but the matching value. This is a specific requirement for our sample.
 
 23.  In the **Application settings** section, click **+ New application setting**.
-24.  On the **Add/Edit application setting** blade, in the **Name** textbox, type **Keys:ApplicationInsights:InstrumentationKey**, in the **Value** textbox, type the string of characters you copied into Clipboard and click **OK**.
+24.  On the **Add/Edit application setting** blade, in the **Name** textbox, type **Keys:ApplicationInsights:InstrumentationKey**, in the **Value** textbox, type the string of characters you copied into Clipboard and click **OK** and then **Save**.
 
       > **Note**: Changes to the application settings and connection strings trigger restart of the web app.
 
@@ -254,6 +254,9 @@ In this task, you will deploying a web app to Azure by using Azure DevOps pipeli
 27.  Switch to the web browser window displaying the Azure portal and, on the **App Service web app** blade, in the vertical menu bar on the left side, click **Overview**. 
 28.  On the right side, in the **Essentials** section, click the **URL** link. This will automatically open another web browser tab displaying the **Parts Unlimited** 
 web site.
+
+> **Note**: Please wait until the the requested URL is visible, it may take around 10 minutes to load the respective webpage.
+
 29.  Verify that the **Parts Unlimited** web site loads as expected. 
 
      ![Azure DevOps](images/mod17_img8.png)
