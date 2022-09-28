@@ -145,8 +145,7 @@ In this task, you will create an Azure web app and an Azure SQL database by usin
 9. Let us connect the Application Insights to our web application.
 
     ```bash
-    az monitor app-insights component connect-webapp --app $WEBAPPNAME \
-        --resource-group $RESOURCEGROUPNAME --web-app $WEBAPPNAME
+    az monitor app-insights component connect-webapp --app $WEBAPPNAME --resource-group $RESOURCEGROUPNAME --web-app $WEBAPPNAME
     ```
 
 10. Next, create an Azure SQL Server.
