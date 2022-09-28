@@ -141,16 +141,16 @@ For this lab scenario, we have an app that connects to a MySQL database. We inte
 
     > **Note**: Replace Deployment ID, it can be obtained from environment deatails page.
 
-1.  On the **Access policy** tab of the **Create key vault** blade, click **+ Add Access Policy** to setup a new policy.
+1.  On the **Access policy** tab of the **Create key vault** blade, select **Vault access policy** on the **Access configuration**.
+
+1.  Select **+ Create** on the **Access Policies**, now on the **Add access policy** blade, in the **Secret permissions** list, select checkboxes next to the **Get** and **List** permissions and then click **Next**. 
 
     > **Note**: You need to secure access to your key vaults by allowing only authorized applications and users. To access the data from the vault, you will need to provide read (Get) permissions to the service principal that you will be using for authentication in the pipeline. 
 
-1.  On the **Add access policy** blade, click the **None selected** link directly under the **Select principal** label. 
-1.  On the **Principal** blade, search for the security principal that you created in the previous exercise, select it, and then click **Select**. 
+1.  On the **Principal** blade, search for the security principal that you created in the previous exercise, select it, and then click **Select** and then select **Next** and **Create**. 
 
     > **Note**: You can search by name or ID of the principal.
-
-1.  Back on the **Add access policy** blade, in the **Secret permissions** drop down list, select checkboxes next to the **Get** and **List** permissions and then click **Add**. 
+    > 
 1.  Back on the **Access policy** tab of the **Create key vault** blade, click **Review + create** and, on the **Review + create** blade, click **Create**. 
 
     > **Note**: Wait for the Azure Key vault to be provisioned. This should take less than 1 minute.
