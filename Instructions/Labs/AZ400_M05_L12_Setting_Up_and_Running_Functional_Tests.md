@@ -156,7 +156,7 @@ In this task, you will configure a self-hosted agent by using the VM you deploye
     cd C:\AzAgent
     Config.cmd
     ```
-1.  In the **Administrator: Command Prompt** window, when prompted to **Enter server URL**, type **https://dev.azure.com/\<your-DevOps-organization-name\>**, where **\<your-DevOps-organization-name\>** represents the name of your Azure DevOps Organization, and press the **Enter** key.
+1.  In the **Administrator: Command Prompt** window, when prompted to **Enter server URL**, type **https://dev.azure.com/(your-DevOps-organization-name)/**, where **(your-DevOps-organization-name)** represents the name of your Azure DevOps Organization, and press the **Enter** key.
 
 1.  In the **Administrator: Command Prompt** window, when prompted **Enter Authentication type (press enter for PAT)**, press the **Enter key**.
 
