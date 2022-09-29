@@ -1,4 +1,4 @@
-# Lab 12: Setting Up and Running Functional Tests
+# Lab 11: Configuring Pipelines as Code with YAML
 # Student lab manual
 
 ## Lab overview
