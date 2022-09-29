@@ -1,4 +1,4 @@
-# Lab 12: Setting Up and Running Functional Tests
+# Lab 12: 
 # Student lab manual
 
 ## Lab overview
