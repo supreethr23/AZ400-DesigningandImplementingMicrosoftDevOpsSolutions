@@ -334,6 +334,23 @@ In this task, you will track the release process with the release gates enabled.
 
     > **Note**: Since there is an alert triggered by the exception, **Query Azure Monitor** gate will fail. This, in turn, will prevent deployment to the **Production** environment.
 
+### Exercise 4: Remove the Azure DevOps billing
+
+In this exercise, you will remove the Azure DevOps billing enabled in this lab to eliminate unexpected charges.
+
+#### Task 1: Remove the Azure DevOps billing
+
+In this task, you will remove pipeline billing to eliminate unnecessary charges.
+
+1. On the lab computer, switch to the browser window displaying Azure DevOps organization homepage and select **Organization Settings** at bottom left corner.
+
+1. Under **Organization Settings** select **Billing** and click on **Change billing** button to open Change billing pane.
+
+1. In the **Change billing** pane, select **Remove billing** setting and click on Save.
+
+#### Review
+
+In this lab, you integrated a GitHub project with Azure DevOps by using the new Azure Pipelines integration from the Marketplace.
 ## Review
 
 In this lab, you configured release pipelines and then configured and tested release gates. 
