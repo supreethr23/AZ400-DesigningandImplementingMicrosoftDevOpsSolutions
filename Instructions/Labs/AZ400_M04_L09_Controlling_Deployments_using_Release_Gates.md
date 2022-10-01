@@ -201,14 +201,15 @@ In this task, you will update release tasks.
     > **Note**: You might need to click the **Refresh** button.
 
 1.  In the **Resource Group and Application Insights** dropdown list, select the **az400m10l01-RG** entry.
-1.  In the **Application Insights resource name** dropdown list, select the name of the **Canary** Application Insights resource, which should match the name of the **Canary** web app. 
-1.  On the **All pipelines > PartsUnlimited-CD** pane, click the **Tasks** tab and, in the dropdown list, select **Production**.
-1.  With the **Production** stage selected, in the **Azure subscription** dropdown list, select the Azure subscription you used for the **Canary Environment** stage, shown under **Available Azure Service connections**, as we already created the service connection before when authorizing the subscription use.
-1. In the **App Service name** dropdown list, select the name of the **Prod** web app.
-1. On the **All pipelines > PartsUnlimited-CD** pane, click **Save** and, in the **Save** dialog box, click **OK**.
-1. In the browser window displaying the **Controlling Deployments using Release Gates** project, in the vertical navigational pane, in the **Pipelines** section, click **Pipelines**. 
-1. On the **Pipelines** pane, click the entry representing **PartsUnlimited-CI** build pipeline and then, on the **PartsUnlimited-CI** pane, click on **Run Pipeline**. 
-1. On the **Run pipeline** pane, accept the default settings and click **Run** to trigger the pipeline. **Wait for the build pipeline to finish**.
+1.  In the **Application Insights resource name** dropdown list, select the name of the **Canary** Application Insights resource, which should match the name of the **Canary** web app.
+    > **Note**: If not able to find the Insights, copy the insights name which you have created in the previous exercise.
+3.  On the **All pipelines > PartsUnlimited-CD** pane, click the **Tasks** tab and, in the dropdown list, select **Production**.
+4.  With the **Production** stage selected, in the **Azure subscription** dropdown list, select the Azure subscription you used for the **Canary Environment** stage, shown under **Available Azure Service connections**, as we already created the service connection before when authorizing the subscription use.
+5. In the **App Service name** dropdown list, select the name of the **Prod** web app.
+6. On the **All pipelines > PartsUnlimited-CD** pane, click **Save** and, in the **Save** dialog box, click **OK**.
+7. In the browser window displaying the **Controlling Deployments using Release Gates** project, in the vertical navigational pane, in the **Pipelines** section, click **Pipelines**. 
+8. On the **Pipelines** pane, click the entry representing **PartsUnlimited-CI** build pipeline and then, on the **PartsUnlimited-CI** pane, click on **Run Pipeline**. 
+9. On the **Run pipeline** pane, accept the default settings and click **Run** to trigger the pipeline. **Wait for the build pipeline to finish**.
 
     > **Note**: After the build succeeds, the release will be triggered automatically and the application will be deployed to both the environments.
 
