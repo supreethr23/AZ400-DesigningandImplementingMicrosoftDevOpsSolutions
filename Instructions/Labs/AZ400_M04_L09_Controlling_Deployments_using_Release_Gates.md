@@ -221,7 +221,7 @@ In this task, you will update release tasks.
 
     > **Note**: Now you have the application with CI/CD configured. In the next exercise we will set up Gates in the release pipeline.
 
-### Exercise 2: Configure release gates.
+### Exercise 2: Configure release gates
 
 In this exercise, you will set up Gates in the release pipeline.
 
