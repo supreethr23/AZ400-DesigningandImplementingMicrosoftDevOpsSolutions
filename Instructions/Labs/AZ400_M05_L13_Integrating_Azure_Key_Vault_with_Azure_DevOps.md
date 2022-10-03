@@ -133,7 +133,7 @@ For this lab scenario, we have an app that connects to a MySQL database. We inte
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select existing **ODL-AZ400M07-{DeploymentID}-02** |
+    | Resource group | create new **ODL-AZ400M07-{DeploymentID}-02** |
     | Key vault name | odl{DeploymentID} |
     | Pricing tier | **Standard** |
     | Days to retain deleted vaults | **7** |

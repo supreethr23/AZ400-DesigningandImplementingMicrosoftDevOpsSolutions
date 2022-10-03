@@ -242,6 +242,20 @@ In this exercise, you will trigger the build and release pipelines by using code
 
 1.  Verify that the target web app displays the HealthClinic.biz web site, including the change that you applied to trigger the CI/CD pipeline.
 
+### Exercise 3: Remove the Azure DevOps billing
+
+In this exercise, you will remove the Azure DevOps billing enabled in this lab to eliminate unexpected charges.
+
+#### Task 1: Remove the Azure DevOps billing
+
+In this task, you will remove pipeline billing to eliminate unnecessary charges.
+
+1. On the lab computer, switch to the browser window displaying Azure DevOps organization homepage and select **Organization Settings** at bottom left corner.
+
+1. Under **Organization Settings** select **Billing** and click on **Change billing** button to open Change billing pane.
+
+1. In the **Change billing** pane, select **Remove billing** setting and click on Save.
+
 ## Review
 
 In this lab, you used an Azure DevOps CI/CD pipeline to build a custom Docker image, pushed it to Azure Container Registry, and deployed it as a container to Azure App Service by using Azure DevOps.
