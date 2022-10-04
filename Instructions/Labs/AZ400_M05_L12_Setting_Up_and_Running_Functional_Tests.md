@@ -148,7 +148,10 @@ In this task, you will configure a self-hosted agent by using the VM you deploye
     ```cmd
     cd C:\AzAgent
     Config.cmd
+    .\run --diagnostics
+    .\run.cmd
     ```
+
 1.  In the **Administrator: Command Prompt** window, when prompted to **Enter server URL**, type **https://dev.azure.com/(your-DevOps-organization-name)/**, where **(your-DevOps-organization-name)** represents the name of your Azure DevOps Organization, and press the **Enter** key.
 
 1.  In the **Administrator: Command Prompt** window, when prompted **Enter Authentication type (press enter for PAT)**, press the **Enter key**.
@@ -245,7 +248,12 @@ In this task, we will trigger the **Build** to compile Selenium C# scripts along
 
 1.  Once the release completes, on the **Selenium > Release-1 > Dev** pane, click on the **Tests** tab to analyze the test results. Select the required filters from the dropdown in **Outcome** section to view the tests and their status.
 
-    **Note :** if you get partially succeeded results, ignore it.
+**Note :** if you get partially succeeded results, please run the below and perfrom Task 3.
+
+    ```cmd
+    .\run --diagnostics
+    .\run.cmd
+    ```
 
 ### Exercise 2: Remove the Azure DevOps billing
 
