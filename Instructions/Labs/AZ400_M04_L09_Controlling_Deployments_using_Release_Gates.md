@@ -130,7 +130,7 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
 1.  Wait for the provisioning process to complete and close the **Cloud Shell** pane. 
 
-#### Task 3: Configure an Application Insights resource
+#### Task 3: Create an alert rule
 
 1.  In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **Application Insights** and, in the list of results, select **Application Insights**.
 1.  On the **Application Insights** blade, select **+ Create**. 
