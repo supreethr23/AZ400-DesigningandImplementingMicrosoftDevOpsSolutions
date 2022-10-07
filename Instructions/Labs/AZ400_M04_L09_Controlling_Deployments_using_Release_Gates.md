@@ -158,7 +158,7 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
 1.  On the Application Insights resource blade, in the **Monitoring** section, click **Alerts** and then click on the **+ Create** dropdown and select Alert rule.
 1.  On the **select a signal** blade, in the **Search by signal name** textbox, type **Failed Requests** and select it. 
-1.  On the **Configure signal logic** blade, in the **Alert logic** section, leave the **Threshold** set to **Static**, in the **Threshold value** textbox, type **0**, and click on **Done**.
+1.  On the **Create alert rule** blade, in the **Alert logic** section, leave the **Threshold** set to **Static**, in the **Threshold value** textbox, type **0**, and click on **Done**.
 
     > **Note**: The rule will generate an alert whenever the number of failed requests is greater than 0 within the last 5 minutes. 
 
