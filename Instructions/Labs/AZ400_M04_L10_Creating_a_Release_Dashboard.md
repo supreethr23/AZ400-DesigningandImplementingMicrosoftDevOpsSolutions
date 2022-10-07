@@ -36,7 +36,7 @@ In this task, you will create an Azure DevOps Starter resource in your Azure sub
     | Project name | **Creating a Release Dashboard** |
     | Azure DevOps Organization | the name of the Azure DevOps organization you intend to use in this lab |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Web app name | az400m10l02-<inject key="AzureAdUserDeploymentID "></inject> |
+    | Web app name | az400m10l02-<inject key="DeploymentID" enableCopy="false"/> |
     | Location | the name of Azure region into which you intend to deploy an Azure web app and an Azure SQL database |
     
 1.  On the **DevOps Starter** blade, on the **Almost there** pane, click **Additional settings**.
