@@ -36,9 +36,11 @@ In this task, you will create an Azure DevOps Starter resource in your Azure sub
     | Project name | **Creating a Release Dashboard** |
     | Azure DevOps Organization | the name of the Azure DevOps organization you intend to use in this lab |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Web app name | any globally unique string between 2 and 60 characters consisting of letters, digits, and hyphens, starting and ending with either a letter or a digit |
+    | Web app name | az400m10l02-DeploymentID |
     | Location | the name of Azure region into which you intend to deploy an Azure web app and an Azure SQL database |
 
+      > **Note**: Replace the DeploymentID, you will get DeploymentID from lab enviroment tab.
+    
 1.  On the **DevOps Starter** blade, on the **Almost there** pane, click **Additional settings**.
 1.  On the **Additional settings** pane, specify the following settings and click **OK**.
 
@@ -52,7 +54,7 @@ In this task, you will create an Azure DevOps Starter resource in your Azure sub
     | Location | the name of the same Azure region that you chose for the location of the Azure web app |
     | Database Name | **az400m10l02-db** |
 
-1.  Back on the **DevOps Starter** blade, on the **Almost there** pane, click **Done** and then **Review + Create**.
+1.  Back on the **DevOps Starter** blade, on the **Almost there** pane, click on **Review + Create**.
 
     > **Note**: Wait for the deployment to complete. The provisioning of the **DevOps Starter** resource should take about 2 minutes.
 
@@ -74,16 +76,16 @@ In this task, you will create several Azure DevOps releases, including one that 
 1.  In the Azure DevOps portal, in the vertical navigational pane on the left side, click **Pipelines**.
 1.  On the **Recent** tab of the **Pipelines** pane, click the **az400m10l02-CI** entry, on the **Runs** tab of the **az400m10l02-CI** pane, select the most recent run, on the **Summary** tab of the run, in the **Jobs** section, click **Build** and monitor the job until its successful completion. 
 1.  Once the job completes, in the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Releases**.
-1.  On the **az400m10l02 - CD** pane, on the **Releases** tab, click the **Release-2** entry, on the **Pipeline** tab of the **Release-2** pane click the **dev** stage, on the **dev** pane, click **View logs**, and monitor progress of the deployment until its successful completion. 
+1.  On the **az400m10l02-DeploymentID - CD** pane, on the **Releases** tab, click the **Release-2** entry, on the **Pipeline** tab of the **Release-2** pane click the **dev** stage, on the **dev** pane, click **View logs**, and monitor progress of the deployment until its successful completion. 
 
     > **Note**: Now, you will create a new release which deployment will fail. The failure will be caused by built-in assemblies test, which consider the change associated with the new release to be invalid.
 
 1.  In the Azure DevOps portal, in the vertical menu on the left side, click **Repos**, in the list of folders in the repository, navigate to the **Applications\\aspnet-core-dotnet-core\\Pages** folder and click the **Index.cshtml** entry. 
 1.  On the **Index.cshtml** pane, click **Edit**, in line **4**, replace `    ViewData["Title"] = "Home Page - ASP.NET Core";` with `    ViewData["Title"] = "Home Page v1.2 - ASP.NET Core";` click **Commit**, and, on the **Commit** pane, click **Commit** again. This will automatically trigger the build pipeline. 
 1.  In the Azure DevOps portal, in the vertical navigational pane on the left side, click **Pipelines**.
-1.  On the **Recent** tab of the **Pipelines** pane, click the **az400m10l02-CI** entry, on the **Runs** tab of the **az400m10l02-CI** pane, select the most recent run, on the **Summary** tab of the run, in the **Jobs** section, click **Build** and monitor the job until its successful completion. 
+1.  On the **Recent** tab of the **Pipelines** pane, click the **az400m10l02-DeploymentID-CI** entry, on the **Runs** tab of the **az400m10l02-DeploymentID-CI** pane, select the most recent run, on the **Summary** tab of the run, in the **Jobs** section, click **Build** and monitor the job until its successful completion. 
 1.  Once the job completes, in the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Releases**.
-1.  On the **az400m10l02 - CD** pane, on the **Releases** tab, click the **Release-3** entry, on the **Pipeline** tab of the **Release-2** pane click the **dev** stage, on the **dev** pane, click **View logs**, and monitor progress of the deployment until its failure during the **Test Assemblies** stage. 
+1.  On the **az400m10l02-DeploymentID - CD** pane, on the **Releases** tab, click the **Release-3** entry, on the **Pipeline** tab of the **Release-3** pane click the **dev** stage, on the **dev** pane, click **View logs**, and monitor progress of the deployment until its failure during the **Test Assemblies** stage. 
 
 #### Task 3: Create an Azure DevOps release dashboard
 
@@ -97,15 +99,15 @@ In this task, you will create a dashboard and add to it release-related widgets.
 
     | Setting | Value |
     | ------- | ----- |
-    | Build pipeline | **az400m10l02 - CI** |
-    | Linked release pipelines | **az400m10l02 - CD; az400m10l02 - CD\dev** |
+    | Build pipeline | **az400m10l02-DeploymentID - CI** |
+    | Linked release pipelines | **az400m10l02-DeploymentID - CD; az400m10l02-DeploymentID - CD\dev** |
 
 1.  Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Pipeline Overview** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
 1.  On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
 
     | Setting | Value |
     | ------- | ----- |
-    | Definition | **az400m10l02 - CD** |
+    | Release pipeline | **az400m10l02-DeploymentID - CD** |
 
 1.  Back on the dashboard pane, click **Refresh** to update the content displayed by the widgets.
 
