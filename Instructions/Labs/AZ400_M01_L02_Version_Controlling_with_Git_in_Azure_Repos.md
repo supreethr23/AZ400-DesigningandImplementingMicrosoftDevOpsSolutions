@@ -117,7 +117,9 @@ In this task, you will step through the process of cloning a Git repository by u
 
     > **Note**: The Command Palette provides an easy and convenient way to access a wide variety of tasks, including those implemented as 3rd party extensions. You can use the keyboard shortcut **Ctrl+Shift+P** or **F1** to open it.
 
-6.  At the Command Palette prompt, run the **Git: Clone** command. 
+6.  At the Command Palette prompt, run the **Git: Clone** command.
+
+    ![VS Code command palette](images/ss2.png)
 
     > **Note**: To see all relevant commands, you can start by typing **Git**.
 
