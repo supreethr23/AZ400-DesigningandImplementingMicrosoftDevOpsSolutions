@@ -99,13 +99,12 @@ In this exercise, you use Visual Studio Code to clone the Git repository you pro
 
 In this task, you will step through the process of cloning a Git repository by using Visual Studio Code.
 
-1.  Switch to the web browser displaying your Azure DevOps organization with the **Version Controlling with Git in Azure Repos** project you generated in the previous exercise. 
-
-    > **Note**: Alternatively, you can access the project page directly by navigating to the [https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Version%20Controlling%20with%20Git%20in%20Azure%20Repos](https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Version%20Controlling%20with%20Git%20in%20Azure%20Repos) URL, where the `<your-Azure-DevOps-account-name>` placeholder, represents your account name. 
-
+1.  Switch to the web browser displaying your Azure DevOps organization with the **eShopOnWeb** project you generated in the previous exercise. 
 1.  In the vertical navigational pane of the Azure DevOps portal, select the **Repos** icon.
-1.  In the upper right corner of the **PartsUnlimited** pane, click **Clone**.
+1.  In the upper right corner of the **eShopOnWeb** pane, click **Clone**.
 
+    ![Clone Git Repository](images/ss1.png)
+    
     > **Note**: Getting a local copy of a Git repo is called *cloning*. Every mainstream development tool supports this and will be able to connect to Azure Repos to pull down the latest source to work with.
 
 2.  On the **Clone Repository** panel, with the **HTTPS** Command line option selected, click the **Copy to clipboard** button next to the repo clone URL. 
