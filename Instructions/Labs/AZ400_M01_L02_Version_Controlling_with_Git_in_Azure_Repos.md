@@ -183,23 +183,30 @@ In this task, you will use the Azure DevOps portal to review commits.
 
 In this task, you will explore the use of staging changes by using Visual Studio Code. Staging changes allows you to selectively add certain files to a commit while passing over the changes made in other files.
 
-1.  Switch back to the **Visual Studio Code** window.
-1.  Update the open **CartItem.cs** class by changing the first comment to `//My second change` and saving the file.
-1.  In the Visual Studio Code window, switch back the **EXPLORER** tab, navigate to the **/PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Models/Category.cs** file and select it. This will automatically display its content in the details pane.
-1.  Add to the **Category.cs** file right above the `public int CategoryId { get; set; }` entry an extra line containing the following comment and save the file.
+1. Switch back to the **Visual Studio Code** window.
+1. Update the open **Program.cs** class by changing the first comment with the following, and saving the file.
+
+```csharp
+    //My second change
+```
+
+1. In the Visual Studio Code window, switch back the **EXPLORER** tab, navigate to the **/eShopOnWeb/src/Web/Constants.cs** file and select it. This will automatically display its content in the details pane.
+1. Add to the **Constants.cs** file a comment on the first line and save the file.
 
     ```csharp
     // My third change
     ```
 
-1.  In the Visual Studio Code window, switch to the **SOURCE CONTROL** tab, hover the mouse pointer over the **CartItem.cs** entry, and click the plus sign on the right side of that entry. 
+1. In the Visual Studio Code window, switch to the **SOURCE CONTROL** tab, hover the mouse pointer over the **Program.cs** entry, and click the plus sign on the right side of that entry.
 
-    > **Note**: This stages the change to the **CartItem.cs** file only, preparing it for commit without **Category.cs**.
-    > **Note**: Ignore the failed pipelines and it will not impact the remaining tasks.
+    > **Note**: This stages the change to the **Program.cs** file only, preparing it for commit without **Constants.cs**.
 
-1.  With the **SOURCE CONTROL** tab selected, at the top of the pane, in the textbox, type **Added comments** as the commit message.
-1.  At the top of the **SOURCE CONTROL** tab, click the ellipsis symbol, in the drop-down menu, select **Commit** and, in the cascading menu, select **Commit Staged**. 
-1.  In the lower-left corner of the Visual Studio Code window, click the **Synchronize Changes** button to synchronize the committed changes with the server and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/master**. 
+1. With the **SOURCE CONTROL** tab selected, at the top of the pane, in the textbox, type **Added comments** as the commit message.
+
+    ![Staged changes](images/staged-changes.png)
+
+1. At the top of the **SOURCE CONTROL** tab, click the ellipsis symbol, in the drop-down menu, select **Commit** and, in the cascading menu, select **Commit Staged**.
+1. In the lower left corner of the Visual Studio Code window, click the **Synchronize Changes** button to synchronize the committed changes with the server and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/main**.
 
     > **Note**: Note that since only the staged change was committed, the other change is still pending to be synchronized.
 
