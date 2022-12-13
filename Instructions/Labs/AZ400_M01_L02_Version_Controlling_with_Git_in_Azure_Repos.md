@@ -50,7 +50,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
 
-    ![Create Project](images/create-project.png)
+    ![Create Project](images/ss123.png)
 
 #### Task 2: (skip if done) Import eShopOnWeb Git Repository
 
@@ -58,7 +58,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
 
-    ![Import Repository](images/import-repo.png)
+    ![Import Repository](images/ss1234.png)
 
 1.  The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines
