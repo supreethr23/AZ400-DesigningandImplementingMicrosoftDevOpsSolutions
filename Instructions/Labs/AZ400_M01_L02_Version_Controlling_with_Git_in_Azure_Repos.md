@@ -177,6 +177,8 @@ In this task, you will use the Azure DevOps portal to review commits.
 1.  In the vertical navigational pane of the Azure DevOps portal, in the **Repos** section, select **Commits**.
 1.  Verify that your commit appears at the top of the list.
 
+     ![ADO Repo Commits](images/ss3.png)
+
 #### Task 3: Stage changes
 
 In this task, you will explore the use of staging changes by using Visual Studio Code. Staging changes allows you to selectively add certain files to a commit while passing over the changes made in other files.
