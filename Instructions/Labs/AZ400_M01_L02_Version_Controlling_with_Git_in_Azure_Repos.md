@@ -223,12 +223,16 @@ Git's use of the **Branches and Merges** feature works through pull requests, so
 In this task, you will step through commit history by using the Azure DevOps portal.
 
 1.  With the **SOURCE CONTROL** tab of the Visual Studio Code window open, select **Category.cs** representing the non-staged version of the file.
-
+    
+    ![File comparison](images/file-comparison.png)
+    
     > **Note**: A comparison view is opened to enable you to easily locate the changes you've made. In this case, it's just one comment.
 
 1.  Switch to the web browser window displaying the **Commits** pane of the **Azure DevOps** portal to review the source branches and merges. These provide a convenient way to visualize when and how changes were made to the source.
-1.  Scroll down to the **Merged PR 27** entry and hover the mouse pointer over it to reveal the ellipsis symbol on the right side.
+1.  Scroll down to the **My commit** entry and hover the mouse pointer over it to reveal the ellipsis symbol on the right side.
 1.  Click the ellipsis, in the dropdown menu, select **Browse Files**, and review the results.
+
+    ![Commit browse](images/commit-browse.png)
 
     > **Note**: This view represents the state of the source corresponding to the commit, allowing you to review and download each of the source files.
 
