@@ -249,14 +249,17 @@ Committing changes to a branch will not affect other branches and you can share 
 In this task, you will create a branch by using Visual Studio Code.
 
 1.  Switch to **Visual Studio Code** running on your lab computer. 
-1.  With the **SOURCE CONTROL** tab selected, in the lower left corner of the Visual Studio Code window, click **master**.
+1.  With the **SOURCE CONTROL** tab selected, in the lower left corner of the Visual Studio Code window, click **main**.
 1.  In the pop-up window, select **+ Create new branch from...**.
+
+    ![Create branch](images/create-branch.png)
+
 1.  In the **Branch name** textbox, type **dev** to specify the new branch and press **Enter**.
-1.  In the **Select a ref to create the 'dev' branch from** textbox, select **master** as the reference branch.
+1.  In the **Select a ref to create the 'dev' branch from** textbox, select **main** as the reference branch.
 
     > **Note**: At this point, you are automatically switched to the **dev** branch.
 
-#### Task 2: Work with branches
+#### Task 2: Delete a branch
 
 In this task, you will use the Visual Studio Code to work with a branch created in the previous task.
 
@@ -271,6 +274,8 @@ Git keeps track of which branch you are working on and makes sure that, when you
 1.  Hover the mouse pointer over the **dev** branch entry to reveal the ellipsis symbol on the right side.
 
 1.  Click the ellipsis, in the pop-up menu, select **Delete branch**, and, when prompted for confirmation, click **Delete**.
+
+    ![Delete branch](images/delete-branch.png)
 
 1.  Switch back to the **Visual Studio Code** window and, with the **SOURCE CONTROL** tab selected, in the lower left corner of the Visual Studio Code window, click the **dev** entry. This will display the existing branches in the upper portion of the Visual Studio Code window.
 
@@ -301,6 +306,102 @@ Git keeps track of which branch you are working on and makes sure that, when you
 1.  In the lower left corner of the Visual Studio Code window, click the **master** entry again.
 
 1.  Verify that the **origin/dev** branch no longer appears in the list of branches.
+
+#### Task 3: Restore a branch
+
+In this task, you will use the Azure DevOps portal restore the branch you deleted in the previous task.
+
+1. Go to the web browser displaying the **Mine** tab of the **Branches** pane in the Azure DevOps portal.
+1. On the **Mine** tab of the **Branches** pane, select the **All** tab.
+1. On the **All** tab of the **Branches** pane, in the **Search branch name** text box, type **dev**.
+1. Review the **Deleted branches** section containing the entry representing the newly deleted branch.
+1. In the **Deleted branches** section, hover the mouse pointer over the **dev** branch entry to reveal the ellipsis symbol on the right side.
+1. Click the ellipsis, in the pop-up menu and select **Restore branch**.
+
+    ![restore branch](images/restore-branch.png)
+
+    > **Note**: You can use this functionality to restore a deleted branch as long as you know its exact name.
+
+#### Task 4: Branch Policies
+
+
+In this task, you will use the Azure DevOps portal to add policies to the main branch and only allow changes using Pull Requests that comply with the defined policies. You want to ensure that changes in a branch are reviewed before they are merged.
+
+For simplicity we will work directly on the web browser repo editor (working directly in origin), instead of using the local clone in VS code (recommended for real scenarios).
+
+1. Switch to the web browser displaying the **Mine** tab of the **Branches** pane in the Azure DevOps portal.
+1. On the **Mine** tab of the **Branches** pane, hover the mouse pointer over the **main** branch entry to reveal the ellipsis symbol on the right side.
+1. Click the ellipsis and, in the pop-up menu, select **Branch Policies**.
+
+    ![Branch Policies](images/branch-policies.png)
+
+1. On the **main** tab of the repository settings, enable the option for **Require minimum number of reviewers**. Add **1** reviewer and check the box **Allow requestors to approve their own changes**(as you are the only user in your project for the lab)
+1. 1. On the **main** tab of the repository settings, enable the option for **Check for linked work items** and leave it with **Required** option.
+
+    ![Policy Settings](images/policy-settings.png)
+
+#### Task 5: Testing branch policy
+
+In this task, you will use the Azure DevOps portal to test the policy and create your first Pull Request.
+
+1. In the vertical navigational pane of the of the Azure DevOps portal, in the **Repos>Files**, make sure the **main** branch is selected (dropdown above shown content).
+1. To make sure policies are working, try making a change and committing it on the **main** branch, navigate to the **/eShopOnWeb/src/Web/Program.cs** file and select it. This will automatically display its content in the details pane.
+1. On the first line add the following comment:
+
+    ```csharp
+    // Testing main branch policy
+    ```
+
+1. Click on **Commit > Commit**. You will see a warning: changes to the main branch can only be done using a Pull Request.
+
+    ![Policy denied commit](images/policy-denied.png)
+
+1. Click on **Cancel** to skip the commit.
+
+#### Task 6: Working with Pull Requests
+
+In this task, you will use the Azure DevOps portal to create a Pull Request, using the **dev** branch to merge a change into the protected **main** branch. An Azure DevOps work item with be linked to the changes to be able to trace pending work with code activity.
+
+1. In the vertical navigational pane of the of the Azure DevOps portal, in the **Boards** section, select **Work Items**.
+1. Click on **+ New Work Item > Product Backlog Item**. In title field, write **Testing my first PR** and click on **Save**.
+1. Now go back to the vertical navigational pane of the of the Azure DevOps portal, in the **Repos>Files**, make sure the **dev** branch is selected.
+1. Navigate to the **/eShopOnWeb/src/Web/Program.cs** file and make the following change on the first line:
+
+    ```csharp
+    // Testing my first PR
+    ```
+1. Click on **Commit > Commit** (leave default commit message). This time the commit works, **dev** branch has no policies.
+1. A message will pop-up, proposing to create a Pull Request (as you **dev** branch is now ahead in changes, compared to **main**). Click on **Create a Pull Request**.
+
+    ![Create a Pull Request](images/create-pr.png)
+
+1. In the **New pull request** tab, leave defaults and click on **Create**.
+1. The Pull Request will show some failed/pending requirements, based on the policies applied to our target **main** branch.
+    - Proposed changes should have a work item linked
+    - At least 1 user should review and approve the changes.
+
+1. On the right side options, click on the **+** button next to **Work Items**. Link the previously created work item to the Pull Request by clicking on it. You will see one of the requirements changes  status.
+
+    ![Link work item](images/link-wit.png)
+
+1. Next,  open the **Files** tab to review the proposed changes. In a more complete Pull Request,  you would be able to review files one by one (marked as reviewed) and open comments for lines that may not be clear (hovering the mouse over the line number gives you an option to post a comment).
+1. Go back to the **Overview** tab, and on the top-right click on **Approve**. All the requirements will change to green. Now you can click on **Complete**.
+1. On the **Complete Pull Request** tab, multiple options will be given before completing the merge:
+    - **Merge Type**: 4 merge types are offered, you can review them [here](https://learn.microsoft.com/azure/devops/repos/git/complete-pull-requests?view=azure-devops&tabs=browser#complete-a-pull-request) or observing the given animations. Choose **Merge (no fast forward)**.
+    - **Post-complete options**:
+        - Check **Complete associated work item...**. It will move associated PBI to **Done** state.
+    
+2. Click on **Complete Merge**
+        
+#### Task 7: Applying tags
+
+The product team has decided that the current version of the site should be released as v1.1.0-beta.
+
+1. In the vertical navigational pane of the of the Azure DevOps portal, in the **Repos** section, select **Tags**.
+1. In the **Tags** pane, click **New tag**.
+1. In the **Create a tag** panel, in the **Name** text box, type **v1.1.0-beta**, in the **Based on** drop-down list leave the **main** entry selected, in the **Description** text box, type **Beta release v1.1.0** and click **Create**.
+
+    > **Note**: You have now tagged the repository at this release (the latest commit gets linked to the tag). You could tag commits for a variety of reasons and Azure DevOps offers the flexibility to edit and delete them, as well as manage their permissions.
 
 #### Review
 
