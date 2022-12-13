@@ -283,7 +283,7 @@ Git keeps track of which branch you are working on and makes sure that, when you
 
     > **Note**: The local (**dev**) branch is listed because it's existence is not affected by the deletion of the branch in the remote repository. The server (**origin/dev**) is listed because it hasn't been pruned. 
 
-1.  In the list of branches select the **master** branch to check it out.
+1.  In the list of branches select the **main** branch to check it out.
 
 1.  Press **Ctrl+Shift+P** to open the **Command Palette**.
 
