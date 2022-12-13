@@ -146,13 +146,9 @@ Git commits consist of the following:
 
 In this task, you will use Visual Studio Code to commit changes.
 
-1.  In the Visual Studio Code window, at the top of the vertical toolbar, select the **EXPLORER** tab, navigate to the **/PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Models/CartItem.cs** file and select it. This will automatically display its content in the details pane.
+1.  In the Visual Studio Code window, at the top of the vertical toolbar, select the **EXPLORER** tab, navigate to the **/eShopOnWeb/src/Web/Program.cs** file and select it. This will automatically display its content in the details pane.
 
-    > **Note**: If prompted to install recommended extensions for C# click on install
-
-    ![Azure DevOps](images/m2-1.png)
-
-1.  Switch back to the **CartItem.cs** file and add right above the `[key]` entry an extra line containing the following comment: 
+1.  On the first line add the following comment: 
 
     ```csharp
     // My first change
