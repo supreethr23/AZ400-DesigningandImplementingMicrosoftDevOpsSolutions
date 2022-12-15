@@ -1,4 +1,4 @@
-# Lab 16: Managing technical debt with SonarCloud and Azure DevOps
+# Lab 17: Managing technical debt with SonarCloud and Azure DevOps
 # Student lab manual
 
 ## Lab overview
