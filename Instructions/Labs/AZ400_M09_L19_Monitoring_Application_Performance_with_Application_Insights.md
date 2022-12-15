@@ -1,4 +1,4 @@
-# Lab 18: Monitoring Application Performance with Application Insights
+# Lab 19: Monitoring Application Performance with Application Insights
 # Student lab manual
 
 ## Lab overview
