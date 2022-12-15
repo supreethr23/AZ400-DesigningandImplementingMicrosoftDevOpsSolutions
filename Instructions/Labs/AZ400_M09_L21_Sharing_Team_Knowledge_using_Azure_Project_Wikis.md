@@ -1,4 +1,4 @@
-# Lab 20: Sharing Team Knowledge using Azure Project Wikis
+# Lab 21: Sharing Team Knowledge using Azure Project Wikis
 
 # Student lab manual
 
