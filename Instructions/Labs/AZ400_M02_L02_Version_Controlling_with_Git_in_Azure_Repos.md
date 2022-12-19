@@ -44,7 +44,7 @@ After you complete this lab, you will be able to:
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb   
     
-#### Task 1: (skip if done) Create and configure the team project
+#### Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -52,7 +52,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Create Project](images/ss123.png)
 
-#### Task 2: (skip if done) Import eShopOnWeb Git Repository
+#### Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -162,6 +162,9 @@ In this task, you will use Visual Studio Code to commit changes.
     ![Azure DevOps](images/m2-2.png)
 
 1.  With the **SOURCE CONTROL** tab selected, at the top of the pane, in the textbox, type **My commit** as the commit message and press **Ctrl+Enter** to commit it locally.
+
+     ![Azure DevOps](images/m12.png)
+
 1.  If prompted whether you would like to automatically stage your changes and commit them directly, click **Always**. 
 
     > **Note**: We will discuss **staging** later in the lab.
