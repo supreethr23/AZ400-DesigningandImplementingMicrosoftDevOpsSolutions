@@ -225,7 +225,7 @@ Git's use of the **Branches and Merges** feature works through pull requests, so
 
 In this task, you will step through commit history by using the Azure DevOps portal.
 
-1.  With the **SOURCE CONTROL** tab of the Visual Studio Code window open, select **Category.cs** representing the non-staged version of the file.
+1.  With the **SOURCE CONTROL** tab of the Visual Studio Code window open, select **Constants.cs** representing the non-staged version of the file.
     
     ![File comparison](images/file-comparison.png)
     
