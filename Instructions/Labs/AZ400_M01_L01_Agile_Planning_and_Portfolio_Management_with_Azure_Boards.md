@@ -156,6 +156,8 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 8. In the **Related work** section on the lower right-side, select the **Add link** entry and, in the dropdown list, select **New item**.
 
+   ![Azure DevOps](images/m11.png)
+
 9. On the **Add link** panel, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **OK**.
 
     <!-- ![Training dashboard](images/m1/child_feature_v1.png) -->
@@ -248,7 +250,7 @@ The sprint backlog should contain all the information the team needs to successf
 
 1. In the rectangle representing the **Add page for most recent tutorial**, click the **Unassigned** entry and, in the list of user accounts, select your account to assign the task to yourself.
 
-1. In the rectangle representing the **Add page for most recent tutorial**, click the **Unassigned** entry and, in the list of user accounts, select your account to assign the task to yourself.
+1. Assign the **Add page for most recent tutorial** task to yourself.
 
     > **Note**: This automatically updates the **Work By: Assigned To** section of the **Work details** pane.
 
