@@ -78,7 +78,7 @@ Each new project is configured with a default team, which name matches the proje
 
 1. Verify that the web browser displays your Azure DevOps organization with the **Agile Planning and Portfolio Management with Azure Boards** project you generated in the previous exercise. 
 
-    > **Note**: Alternatively, you can access the project page directly by navigating to the [https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Agile%20Planning%20and%20Portfolio%20Management%20with%20Azure%20Boards) URL, where the `<your-Azure-DevOps-account-name>` placeholder, represents your account name. 
+   > **Note**: Alternatively, you can access the project page directly by navigating to the [https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Agile%20Planning%20and%20Portfolio%20Management%20with%20Azure%20Boards) URL, where the `<your-Azure-DevOps-account-name>` placeholder, represents your account name. 
 
 1. Click the cogwheel icon labeled **Project settings** located in the lower left corner of the page to open the **Project settings** page.
 
