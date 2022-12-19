@@ -306,7 +306,7 @@ Git keeps track of which branch you are working on and makes sure that, when you
 
     > **Note**: You can check in on exactly what these tasks are doing by selecting the **Output** window in the lower right part bottom of the Visual Studio Code window. If you don't see the Git logs in the output console, make sure to select **Git** as the source.
 
-1.  In the lower left corner of the Visual Studio Code window, click the **master** entry again.
+1.  In the lower left corner of the Visual Studio Code window, click the **main** entry again.
 
 1.  Verify that the **origin/dev** branch no longer appears in the list of branches.
 
