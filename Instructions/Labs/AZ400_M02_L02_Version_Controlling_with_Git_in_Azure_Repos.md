@@ -368,7 +368,7 @@ In this task, you will use the Azure DevOps portal to create a Pull Request, usi
 1. In the vertical navigational pane of the of the Azure DevOps portal, in the **Boards** section, select **Work Items**.
 1. Click on **+ New Work Item > Product Backlog Item**. In title field, write **Testing my first PR** and click on **Save**.
 1. Now go back to the vertical navigational pane of the of the Azure DevOps portal, in the **Repos>Files**, make sure the **dev** branch is selected.
-1. Navigate to the **/eShopOnWeb/src/Web/Program.cs** file and make the following change on the first line:
+1. Navigate to the **/eShopOnWeb/src/Web/Program.cs** file, click on **Edit** and make the following change on the first line:
 
     ```csharp
     // Testing my first PR
