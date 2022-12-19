@@ -348,7 +348,7 @@ For simplicity we will work directly on the web browser repo editor (working dir
 In this task, you will use the Azure DevOps portal to test the policy and create your first Pull Request.
 
 1. In the vertical navigational pane of the of the Azure DevOps portal, in the **Repos>Files**, make sure the **main** branch is selected (dropdown above shown content).
-1. To make sure policies are working, try making a change and committing it on the **main** branch, navigate to the **/eShopOnWeb/src/Web/Program.cs** file and select it. This will automatically display its content in the details pane.
+1. To make sure policies are working, try making a change and committing it on the **main** branch, navigate to the **/eShopOnWeb/src/Web/Program.cs** file and select it and click on **Edit**. This will automatically display its content in the details pane.
 1. On the first line add the following comment:
 
     ```csharp
