@@ -175,7 +175,7 @@ In this task, you will propose an invalid change and review the results of a bui
 10.  In the list of job tasks, click the **npm install, build, and test** task to view its output.
 11.  Locate the section that lists out failing tests. 
 
-    > **Note**: It might not be immediately clear why the tests failed, but all of the history we've accrued in the pipeline makes it easy to identify that something from this new pull request is the cause. The next step will be to figure out why "21 + 21" produced "2121" instead of the expected "42".
+     > **Note**: It might not be immediately clear why the tests failed, but all of the history we've accrued in the pipeline makes it easy to identify that something from this new pull request is the cause. The next step will be to figure out why "21 + 21" produced "2121" instead of the expected "42".
 
 12.  Close the tab displaying the failed run of the job in the Azure DevOps portal.
 
