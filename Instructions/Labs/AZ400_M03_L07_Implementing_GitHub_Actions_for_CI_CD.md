@@ -85,7 +85,7 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
 1. On the **Create a resource group** tab, give the following name to your Resource Group: **rg-az400-eshopeonweb-NAME** (replace NAME for some unique alias). Click on **Review+Create > Create**.
 1. In the Azure Portal, open the **Cloud Shell** (next to the search bar).
 
-    > NOTE: if this is the first time you open the Cloud Shell, you need to configure the [persistent storage](https://learn.microsoft.com/en-us/azure/cloud-shell/persisting-shell-storage#create-new-storage)
+1. Once the window is pop up click on **Bash**, on **You have no storage mounted** page click on advance 
 
 1. Make sure the terminal is running in **Bash** mode and execute the following command, replacing **SUBSCRIPTION-ID** and **RESOURCE-GROUP** with your own identifiers (both can be found on the **Overview** page of the Resorce Group):
 
