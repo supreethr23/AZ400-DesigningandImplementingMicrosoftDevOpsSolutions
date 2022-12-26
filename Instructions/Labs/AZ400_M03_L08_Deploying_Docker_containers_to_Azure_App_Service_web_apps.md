@@ -71,7 +71,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 
 In this exercise, you will configure the service connection with your Azure Subscription then import and run the CI pipeline.
 
-#### Task 1: (skip if done) Manage the service connection
+#### Task 1: Manage the service connection
 
 You can create a connection from Azure Pipelines to external and remote services for executing tasks in a job.
 
