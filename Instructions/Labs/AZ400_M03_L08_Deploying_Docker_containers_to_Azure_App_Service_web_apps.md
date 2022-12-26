@@ -148,7 +148,7 @@ In this exercise, you will import and run the CI pipeline.
 
 1. Click on **Save and Run** and wait for the pipeline to execute succesfully.
 
-    > **Note**: The deployment may take a few minutes to complete.
+    > **Note**: The deployment may take a few minutes to complete if it is ask for permission click on permit.
 
     The CI definition consists of the following tasks:
     - **Resources**: It downloads the repository filest will be used in the followinf tasks.
@@ -212,7 +212,7 @@ In this task, you will import and run the CI pipeline.
 
 1. Click on **Save and Run** and wait for the pipeline to execute succesfully.
 
-    > **Note**: The deployment may take a few minutes to complete.
+    > **Note**: The deployment may take a few minutes to complete and if its asks for permission click on Permit.
 
     The CI definition consists of the following tasks:
     - **Resources**: It downloads the repository filest will be used in the followinf tasks.
