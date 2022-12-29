@@ -150,7 +150,7 @@ A service principal is automatically created by Azure Pipeline when you connect 
 
 1. Select **Existing Azure Pipelines YAML File**
 
-1. Select the **/.ado/eshoponweb-ci.yml** file then click on **Continue**
+1. Select the **.ado/eshoponweb-cd-webapp-code.yml** file then click on **Continue**
 
 1. In the YAML pipeline definition, customize:
 - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
