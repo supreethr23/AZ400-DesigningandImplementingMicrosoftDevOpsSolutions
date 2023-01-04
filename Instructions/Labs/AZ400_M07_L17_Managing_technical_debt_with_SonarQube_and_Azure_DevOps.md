@@ -29,13 +29,6 @@ After you complete this lab, you will be able to:
 
 ### Before you start
 
-#### Sign in to the lab virtual machine
-
-Ensure that you're signed in to your Windows 10 computer by using the following credentials:
-    
--   Username: **Student**
--   Password: **Pa55w.rd**
-
 #### Review applications required for this lab
 
 Identify the applications that you'll use in this lab:
@@ -56,31 +49,36 @@ In this task, you will create a new Azure DevOps project based on the [Sonar Sca
 
 1.  On your lab computer, start a web browser, navigate to the [**Azure DevOps portal**](https://dev.azure.com) and sign in to your Azure DevOps organization.
 
-1. In the **Azure DevOps portal**, in the upper right corner, click **+ New project**.
-
-1. On the **Create new project** pane, in the **Project name** textbox, type **SonarExamples**, in the **Visibility** section, click **Public**, and then click **Create**.
-  
-    > **Note**: Unless you intend to sign up for a paid plan with SonarCloud, make sure that you set your Azure DevOps project to be public. If you *do* intend to sign up for a paid plan, then you can create a private project.
-
-1.  On the **SonarExamples** pane, in the vertical menu bar at the far left of the Azure DevOps portal, click **Repos**, on the **SonarExamples is empty. Add some code!** pane, and, in the **Import a repository** section, click **Import**.
-
-1.  On the **Import a Git repository** pane, ensure that **Git** appears in the **Repository type** dropdown list, in the **Clone URL**, type **https://github.com/SonarSource/sonar-scanning-examples.git**, and click **Import**. 
-
-    > **Note**: The scanning examples repository contains sample projects for a number of build systems and languages including C# with MSBuild, and Maven and Gradle with Java.
-
-5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
+2. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
     ![Azure DevOps](images/agent1.png)
 
-6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
+3. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
 
     ![Azure DevOps](images/agent3.png)
     ![Azure DevOps](images/agent4.png)    
 
-7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+4. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
 
     ![Azure DevOps](images/agent2.png)
+    
+5. From the left menu click on **Policies** under security section and toggle the **Allow Public Projects** to **On**
 
+    ![Azure DevOps](images/publicprojects.png)
+    
+6. Click on **Azure DevOps** logo on top left to go to home page of organization.
+
+7. In the **Azure DevOps portal**, in the upper right corner, click **+ New project**.
+
+8. On the **Create new project** pane, in the **Project name** textbox, type **SonarExamples**, in the **Visibility** section, click **Public**, and then click **Create**.
+  
+    > **Note**: Unless you intend to sign up for a paid plan with SonarCloud, make sure that you set your Azure DevOps project to be public. If you *do* intend to sign up for a paid plan, then you can create a private project.
+
+9.  On the **SonarExamples** pane, in the vertical menu bar at the far left of the Azure DevOps portal, click **Repos**, on the **SonarExamples is empty. Add some code!** pane, and, in the **Import a repository** section, click **Import**.
+
+10.  On the **Import a Git repository** pane, ensure that **Git** appears in the **Repository type** dropdown list, in the **Clone URL**, type **https://github.com/SonarSource/sonar-scanning-examples.git**, and click **Import**. 
+
+    > **Note**: The scanning examples repository contains sample projects for a number of build systems and languages including C# with MSBuild, and Maven and Gradle with Java.
 
 #### Task 2: Generate an Azure DevOps personal access token
 
@@ -186,8 +184,7 @@ In this task, you will create a pipeline by using the YAML editor.
 
 > **Note**: This will automatically display the YAML editor with the template YAML file open. In order to configure it correctly you will need to adjust it (or replace it) so that matches the following file:
 
-    ```yaml
-    ```
+    
     trigger:
     - master
 
@@ -241,7 +238,7 @@ In this task, you will create a pipeline by using the YAML editor.
 
     - task: SonarCloudPublish@1
       displayName: 'Publish results on build summary'
-    ```
+    
 
 > **Note**: You can download the file **net-desktop-sonarcloud.yml** from the [SonarSource GitHub repository](https://github.com/SonarSource/sonar-scanner-vsts/blob/master/yaml-pipeline-templates/net-desktop-sonarcloud.yml).
 
