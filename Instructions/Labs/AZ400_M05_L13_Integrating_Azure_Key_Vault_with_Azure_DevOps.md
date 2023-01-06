@@ -168,6 +168,7 @@ In this task, you will import an existing CI YAML pipeline definition, modify an
     ![Container Images in ACR](images/azure-container-registry.png)
 
 1. Click on **Access Keys** and copy the **password** value, it will be used in the following task, as we will keep it as a secret  in Azure Key Vault.
+    > **Note**: If you do not see password field, please toggle the "Admin user" to Enabled.
 
     ![ACR password](images/acr-password.png)
 
