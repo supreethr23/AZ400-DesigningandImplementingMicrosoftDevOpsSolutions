@@ -75,7 +75,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 1.  Click **Sign in** and sign in using the Microsoft account associated with your Azure DevOps subscription.
 1.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
-1.  On the **Create New Project** page, in the **New Project Name** textbox, type **Setting-Up-and-Running-Functional-Tests** or **Setting**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
+1.  On the **Create New Project** page, in the **New Project Name** textbox, type **Setting**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
 1.  In the list of templates, in the toolbar, click **DevOps Labs**, select the **Selenium** template and click **Select Template**.
 1.  Back on the **Create New Project** page, click **Create Project**
 
@@ -162,9 +162,7 @@ In this task, you will configure a self-hosted agent by using the VM you deploye
 
     | Setting | Value |
     | --- | --- |
-    | Name | **Setting Up and Running Functional Tests lab** or **Setting** |
-    | Scopes | **Custom Defined** |
-    | Scopes | Click **Show all scopes** (at the bottom of the window) |
+    | Name | **Setting** |
     | Scopes | Click radio button for **Full access** |
 
 1.  On the **Success** pane, copy the value of the personal access token to Clipboard.
@@ -202,9 +200,9 @@ In this task, you will configure the release pipeline.
 
 1.  Within the Remote Desktop session to **az40011bvm**, in the browser window displaying the **Azure DevOps** portal, click the **Azure DevOps** symbol in the upper left corner.
 
-1.  On the pane displaying your organization projects, click the tile representing the **Setting Up and Running Functional Tests** project.
+1.  On the pane displaying your organization projects, click the tile representing the **Setting** project.
 
-1.  On the **Setting Up and Running Functional Tests** pane, in the vertical navigational pane, select **Pipelines**, within the **Pipelines** section, click **Releases** and then, on the **Selenium** pane, click **Edit**.
+1.  On the **Setting** pane, in the vertical navigational pane, select **Pipelines**, within the **Pipelines** section, click **Releases** and then, on the **Selenium** pane, click **Edit**.
 
 1.  On the **All pipelines > Selenium** pane, click the **Tasks** tab header and, in the dropdown menu, click **Dev**.
 

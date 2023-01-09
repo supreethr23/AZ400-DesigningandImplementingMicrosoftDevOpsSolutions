@@ -1,4 +1,4 @@
-# Lab 14: Azure deployments using Azure Resource Manager templates
+# Lab 15: Azure deployments using Azure Resource Manager templates
 # Student lab manual
 
 ## Lab overview

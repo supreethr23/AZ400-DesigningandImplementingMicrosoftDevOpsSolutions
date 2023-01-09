@@ -122,7 +122,11 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 1.  Start Windows PowerShell as administrator and in the **Administrator: Windows PowerShell** console run the following lines to create the **C:\\agent** directory and extract the content of the downloaded archive into it. 
 
     ```powershell
-    cd C:\agent
+    cd \
+    mkdir agent ; cd agent
+    $TARGET = Get-ChildItem "$Home\Downloads\vsts-agent-win-x64-*.zip"
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    [System.IO.Compression.ZipFile]::ExtractToDirectory($TARGET, "$PWD")
     
     ```
 
@@ -144,6 +148,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     | Enter work folder (press enter for _work) | **Enter** |
     | Enter Perform an unzip for tasks for each step. (press enter for N) | **Enter** |
     | Enter run agent as service? (Y/N) (press enter for N) | **Y** |
+    | enter enable SERVICE_SID_TYPE_UNRESTRICTED (Y/N) (press enter for N) | **Y** |
     | Enter User account to use for the service (press enter for NT AUTHORITY\NETWORK SERVICE) | **Enter** |
     | Enter whether to prevent service starting immediately after configuration is finished? (Y/N) (press enter for N) | **Enter** |
 

@@ -89,25 +89,41 @@ In this task, you will create several Azure DevOps releases, including one that 
 
 In this task, you will create a dashboard and add to it release-related widgets.
 
-1.  In the Azure DevOps portal, in the vertical menu on the left side, click **Overview**, in the **Overview** section, click **Dashboards**, and click **Add a widget**.
-1.  On the **Add Widget** pane, scroll down through the list of widgets, select the **Deployment status** entry and click **Add**.
-1.  Use the procedure described in the previous step to add the **Release Pipeline Overview** widget. click **Done Editing**.
-1.  Back on the dashboard pane, in the rectangle representing the **Deployment status** widget, click **Configure widget**. 
-1.  On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
+1. In the Azure DevOps portal, in the vertical menu on the left side, click **Overview**, in the **Overview** section, click **Dashboards**, and click **Add a widget**.
+1. On the **Add Widget** pane, scroll down through the list of widgets, select the **Deployment status** entry and click **Add**.
+1. Use the procedure described in the previous step to add the **Release Health Details**, **Release Health Overview**, and **Release Pipeline Overview** widgets.
+    > **Note**: Install **Release Health Details** and **Release Health Overview** from the marketplace [Team Project Health](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.TeamProjectHealth)
+1. Use the mouse to drag the **Release Pipeline Overview** to the right of the **Deployment status** widget to avoid the need for scrolling vertically through the dashboard and click **Done Editing**.
+1. Back on the dashboard pane, in the rectangle representing the **Deployment status** widget, click **Configure widget**.
+1. On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
 
     | Setting | Value |
     | ------- | ----- |
-    | Build pipeline | **az400m10l02-<inject key="DeploymentID" enableCopy="false"/>-CI** |
-    | Linked release pipelines | **az400m10l02-<inject key="DeploymentID" enableCopy="false"/>-CD; az400m10l02-<inject key="DeploymentID" enableCopy="false"/>- CD\dev** |
+    | Build pipeline | **az400m10l02 - CI** |
+    | Linked release pipelines | **az400m10l02 - CD; az400m10l02 - CD\dev** |
 
-1.  Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Pipeline Overview** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
-1.  On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
+1. Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Health Overview** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
+1. On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
 
     | Setting | Value |
     | ------- | ----- |
-    | Release pipeline | **az400m10l02-<inject key="DeploymentID" enableCopy="false"/>-CD** |
+    | Select release definition(s) | **az400m10l02 - CD** |
 
-1.  Back on the dashboard pane, click **Refresh** to update the content displayed by the widgets.
+1. Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Health Details** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
+1. On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
+
+    | Setting | Value |
+    | ------- | ----- |
+    | Definition | **az400m10l02 - CD** |
+
+1. Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Pipeline Overview** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
+1. On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
+
+    | Setting | Value |
+    | ------- | ----- |
+    | Release pipeline | **az400m10l02 - CD** |
+
+1. Back on the dashboard pane, click **Refresh** to update the content displayed by the widgets.
 
     > **Note**: The links on widgets allow you to navigate directly to the corresponding panes in the Azure DevOps portal.
 
@@ -170,7 +186,7 @@ In this task, you will query release information via REST API by using Postman
     ```
 
 1.  Review the output listed on the **Body** tab in the lower right section of the app window and verify that it includes only the failed deployment you initiated in the previous exercise of this lab.
-
+    
 ### Exercise 3: Remove the Azure DevOps billing
 
 In this exercise, you will remove the Azure DevOps billing enabled in this lab to eliminate unexpected charges.
