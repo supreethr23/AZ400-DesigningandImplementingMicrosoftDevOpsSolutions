@@ -215,7 +215,7 @@ In this task, you will import and run the CI pipeline.
     > **Note**: The deployment may take a few minutes to complete and if its asks for permission click on Permit.
 
     The CI definition consists of the following tasks:
-    - **Resources**: It downloads the repository filest will be used in the followinf tasks.
+    - **Resources**: It downloads the repository filest will be used in the following tasks.
     - **AzureResourceManagerTemplateDeployment**: Deploys the Azure App Service using bicep template.
     - **AzureResourceManagerTemplateDeployment**: Add role assignment using Bicep
 
