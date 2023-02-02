@@ -106,7 +106,7 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
     ```
 
 1. In a browser window, go back to your **eShopOnWeb** GitHub repository.
-1. On the repository page, go to **Settings**, click on **Secrets > Actions**. Click on **New repository secret**
+1. On the repository page, go to **Settings**, click on **Secrets and variables > Actions**. Click on **New repository secret**
     - Name : **AZURE_CREDENTIALS**
     - Secret: **paste the previously copied  JSON object** (GitHub is able to keep multiple secrets under same name, used by  [azure/login](https://github.com/Azure/login) action )
 
