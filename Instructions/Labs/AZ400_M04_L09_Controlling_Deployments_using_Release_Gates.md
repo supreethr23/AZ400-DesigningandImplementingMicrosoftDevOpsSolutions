@@ -70,7 +70,7 @@ In this task, you will create an **eShopOnWeb_ReleaseGates** Azure DevOps projec
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb_ReleaseGates** and leave the other fields with defaults. Click on **Create**.
 
-    ![Create Project](images/create-project1.png)
+    ![Create Project](images/create-project.png)
 
 #### Task 2:  (skip if done) Import eShopOnWeb Git Repository
 
