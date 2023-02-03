@@ -28,9 +28,7 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/400-3.png)
 
-4. On the **Get started with Azure DevOps** page click on **Continue**.
-
-5. On the **Almost Done...** page fill the captcha and click on continue. 
+4. On the **Almost Done...** page fill the captcha and click on continue. 
 
     ![Azure DevOps](images/m1-2.png)
 
