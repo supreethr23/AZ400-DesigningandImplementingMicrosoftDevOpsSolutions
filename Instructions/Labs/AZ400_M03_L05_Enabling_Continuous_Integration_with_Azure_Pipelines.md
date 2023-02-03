@@ -17,14 +17,13 @@ After you complete this lab, you will be able to:
 
 #### Set up an Azure DevOps organization. 
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://dev.azure.com Then click on **Sign in to Azure DevOps** and login with the credentials provided in environment details tab.
+1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
-    ![Azure DevOps](images/devops.png)
-2. On the next page accept defaults and click on continue.
+2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
-    ![Azure DevOps](images/m1-1.png)
+3. On the next page accept defaults and click on continue.
 
-3. On the **Get started with Azure DevOps** page click on **Continue**.
+    ![Azure DevOps](images/400-3.png)
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
