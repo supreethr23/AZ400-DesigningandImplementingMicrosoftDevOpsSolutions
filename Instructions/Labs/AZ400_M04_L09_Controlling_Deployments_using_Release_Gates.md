@@ -70,7 +70,7 @@ In this task, you will create an **eShopOnWeb_ReleaseGates** Azure DevOps projec
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb_ReleaseGates** and leave the other fields with defaults. Click on **Create**.
 
-    ![Create Project](images/create-project.png)
+    ![Create Project](images/AZ400mod41.png)
 
 #### Task 2:  (skip if done) Import eShopOnWeb Git Repository
 
@@ -78,7 +78,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb_ReleaseGates** project. Click on **Repos>Files** , **Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click **Import**:
 
-    ![Import Repository](images/import-repo.png)
+    ![Import Repository](images/Az400mod42.png)
 
 1.  The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines
