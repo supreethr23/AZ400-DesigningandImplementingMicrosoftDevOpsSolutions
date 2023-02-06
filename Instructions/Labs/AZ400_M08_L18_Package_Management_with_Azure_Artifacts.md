@@ -18,7 +18,7 @@ After you complete this lab, you will be able to:
 ## Instructions
 
 #### Set up an Azure DevOps organization
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137, and if prompted sign with the credentials provided in environment details tab.
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
