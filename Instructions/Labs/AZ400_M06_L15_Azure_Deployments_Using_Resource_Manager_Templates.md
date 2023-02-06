@@ -222,22 +222,22 @@ In this task, you will upload the linked template you created in the previous ta
 
 1.  On the lab computer, start a web browser and navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has at least the Contributor role in the Azure subscription you will be using in this lab. 
 
-1.  In the Azure portal, in the toolbar, click the **Cloud Shell** icon located directly to the right of the search text box. 
+2.  In the Azure portal, in the toolbar, click the **Cloud Shell** icon located directly to the right of the search text box. 
 
     > **Note**: Alternatively, you can navigate to [Azure Cloud Shell](http://shell.azure.com) directly.
 
-1.  If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+3.  If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-1.  When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
+4.  When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
 
-1.  From a **PowerShell** session in the Cloud Shell pane, run the following to create a blob storage container, upload the template file you created in the previous task, and generate a SAS token that you will reference in the main template to access the linked template.
-1.  First, copy and paste the following lines of code to set a value for the Azure region you want to deploy to. The command will wait for your input as shown in the prompt.
+5.  From a **PowerShell** session in the Cloud Shell pane, run the following to create a blob storage container, upload the template file you created in the previous task, and generate a SAS token that you will reference in the main template to access the linked template.
+6.  First, copy and paste the following lines of code to set a value for the Azure region you want to deploy to. The command will wait for your input as shown in the prompt.
 
     ```powershell
     # Provide the name of the closest Azure region in which you can provision Azure VMs
     $location = Read-Host -Prompt 'Enter the name of Azure region (i.e. centralus)'
     ```
-1. Second, copy and paste the following code into the same Cloud Shell session to create a blob storage container:
+7. Second, copy and paste the following code into the same Cloud Shell session to create a blob storage container:
 
     ```powershell
     # This is a random string used to assign the name to the Azure storage account
@@ -266,7 +266,9 @@ In this task, you will upload the linked template you created in the previous ta
     # Create a container
     New-AzureStorageContainer -Name $containerName -Context $context
     ```
-  1. In the Cloud Shell pane, click the **Upload/download files** icon and, in the dropdown menu, click **Upload**. In the **Open** dialog box, navigate to and select **C:\\templates\\storage\\storage.json** and click **Open**.
+  8. In the Cloud Shell pane, click the **Upload/download files** icon and, in the dropdown menu, click **Upload**. In the **Open** dialog box, navigate to and select **C:\\templates\\storage\\storage.json** and click **Open**.
+  
+  9. Copy and paste the following code into the same Cloud Shell session to generate SAS token:
 
       ```powershell
       # Upload the linked template
@@ -300,7 +302,7 @@ In this task, you will upload the linked template you created in the previous ta
 
   >**Note**: For scenarios requiring increased level of security, you could generate a SAS token dynamically during main template deployment and assign the SAS token a shorter validity period.
 
-1.  Close the Cloud Shell pane.
+10.  Close the Cloud Shell pane.
 
 #### Task 4: Modify the main template to call the linked template
 
