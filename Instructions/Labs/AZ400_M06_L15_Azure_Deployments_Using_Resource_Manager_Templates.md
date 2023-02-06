@@ -41,17 +41,17 @@ In this task, you will use Visual Studio Code to create a Resource Manager templ
   ![visual studio"](images/mod13_1.png)
   ![visual studio"](images/mod13_2.png)
 
-1.  In a web browser, connect to **https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows/azuredeploy.json**. Click on **Raw** option for the file. Copy the contents of the code window and paste it into Visual Studio Code editor.
+2.  In a web browser, connect to **https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows/azuredeploy.json**. Click on **Raw** option for the file. Copy the contents of the code window and paste it into Visual Studio Code editor.
 
     > **Note**: Rather than creating a template from scratch we will use one of the [Azure Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/) named **Deploy a simple Windows template VM**. The templates are downloadable the templates from GitHub - [vm-simple-windows](https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows).
 
-1.  On your lab computer, open File Explorer and create the following local folders that will serve to store templates:
+3.  On your lab computer, open File Explorer and create the following local folders that will serve to store templates:
 
     - **C:\\templates** 
     - **C:\\templates\\storage** 
 
-1.  Switch back to Visual Studio Code window with our azuredeploy.json template, click the **File** top level menu, in the dropdown menu, click **Save as**, and save the template as **azuredeploy.json** in the newly created local folder **C:\\templates**.
-1.  Review the template to get a better understanding of its structure. There are five resource types included in the template:
+4.  Switch back to Visual Studio Code window with our azuredeploy.json template, click the **File** top level menu, in the dropdown menu, click **Save as**, and save the template as **azuredeploy.json** in the newly created local folder **C:\\templates**.
+5.  Review the template to get a better understanding of its structure. There are five resource types included in the template:
 
     - Microsoft.Storage/storageAccounts
     - Microsoft.Network/publicIPAddresses
@@ -59,7 +59,7 @@ In this task, you will use Visual Studio Code to create a Resource Manager templ
     - Microsoft.Network/networkInterfaces
     - Microsoft.Compute/virtualMachines
 
-1.  In Visual Studio Code, save the file again, but this time choose **C:\\templates\\storage** as the destination and **storage.json** as the file name.
+6.  In Visual Studio Code, save the file again, but this time choose **C:\\templates\\storage** as the destination and **storage.json** as the file name.
 
     > **Note**: We now have two identical JSON files: **C:\\templates\\azuredeploy.json** and **C:\\templates\\storage\\storage.json**.
 
