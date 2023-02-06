@@ -78,15 +78,13 @@ In this task, you will create a new Azure DevOps project based on the [Sonar Sca
     
 9. Click on **Azure DevOps** logo on top left to go to home page of organization.
 
-10. In the **Azure DevOps portal**, in the upper right corner, click **+ New project**.
-
-11. On the **Create new project** pane, in the **Project name** textbox, type **SonarExamples**, in the **Visibility** section, click **Public**, and then click **Create**.
+10. On the **Create new project** pane, in the **Project name** textbox, type **SonarExamples**, in the **Visibility** section, click **Public**, and then click **Create**.
   
     > **Note**: Unless you intend to sign up for a paid plan with SonarCloud, make sure that you set your Azure DevOps project to be public. If you *do* intend to sign up for a paid plan, then you can create a private project.
 
-12.  On the **SonarExamples** pane, in the vertical menu bar at the far left of the Azure DevOps portal, click **Repos**, on the **SonarExamples is empty. Add some code!** pane, and, in the **Import a repository** section, click **Import**.
+11.  On the **SonarExamples** pane, in the vertical menu bar at the far left of the Azure DevOps portal, click **Repos**, on the **SonarExamples is empty. Add some code!** pane, and, in the **Import a repository** section, click **Import**.
 
-13.  On the **Import a Git repository** pane, ensure that **Git** appears in the **Repository type** dropdown list, in the **Clone URL**, type **https://github.com/SonarSource/sonar-scanning-examples.git**, and click **Import**. 
+12.  On the **Import a Git repository** pane, ensure that **Git** appears in the **Repository type** dropdown list, in the **Clone URL**, type **https://github.com/SonarSource/sonar-scanning-examples.git**, and click **Import**. 
 
     > **Note**: The scanning examples repository contains sample projects for a number of build systems and languages including C# with MSBuild, and Maven and Gradle with Java.
 
