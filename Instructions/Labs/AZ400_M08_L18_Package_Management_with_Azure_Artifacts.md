@@ -61,7 +61,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
     > **Note**: You can access the project page directly by navigating to the [https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Package%20Management%20with%20Azure%20Artifacts](https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Package%20Management%20with%20Azure%20Artifacts) URL, where the `<your-Azure-DevOps-account-name>` placeholder, represents your account name. 
 
 1.  In the vertical menu on the left side of the **Package Management with Azure Artifacts** pane, click **Repos**.
-1.  On the **Files** pane, click **Clone**, click **Clone in VS Code**, and, in the dropdown menu, select **Visual Studio**.
+1.  On the **Files** pane, click **Clone**, select the drop-down arrow next to **Clone in VS Code**, and, in the dropdown menu, select **Visual Studio**.
 1.  If prompted whether to proceed, click **Open**. 
 1.  If prompted, sign in with the user account you used to set up your Azure DevOps organization. Username and password can be obtained from the environmental details page.
 1.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
