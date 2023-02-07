@@ -26,9 +26,9 @@ After you complete this lab, you will be able to:
 
 #### Set up an Azure DevOps organization
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137, and if prompted sign with the credentials provided in environment details tab.
 
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+2. If the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
 3. On the next page accept defaults and click on continue.
 
@@ -168,7 +168,7 @@ In this task, you will use Visual Studio Code to commit changes.
     > **Note**: We will discuss **staging** later in the lab.
     > **Note**: Ignore the failed pipelines and it will not impact the remaining tasks.
 
-1.  In the lower left corner of the Visual Studio Code window, to the right of the **master** label, note the **Synchronize Changes** icon of a circle with two vertical arrows pointing in the opposite directions and the number **1** next to the arrow pointing up. Click the icon and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/main**. 
+1.  In the lower left corner of the Visual Studio Code window, to the right of the **main** label, note the **Synchronize Changes** icon of a circle with two vertical arrows pointing in the opposite directions and the number **1** next to the arrow pointing up. Click the icon and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/main**. 
 
 #### Task 2: Review commits
 
@@ -217,7 +217,7 @@ In this exercise, you will use the Azure DevOps portal to review the history of 
 
 Git uses the parent reference information stored in each commit to manage a full history of your development. You can easily review this commit history to find out when file changes were made and determine differences between versions of your code using the terminal or from one of the many available Visual Studio Code extensions. You can also review changes by using the Azure DevOps portal.
 
-Git's use of the **Branches and Merges** feature works through pull requests, so the commit history of your development doesn't necessarily form a straight, chronological line. When you use history to compare versions, think in terms of file changes between two commits instead of file changes between two points in time. A recent change to a file in the master branch may have come from a commit created two weeks ago in a feature branch that was merged yesterday.
+Git's use of the **Branches and Merges** feature works through pull requests, so the commit history of your development doesn't necessarily form a straight, chronological line. When you use history to compare versions, think in terms of file changes between two commits instead of file changes between two points in time. A recent change to a file in the main branch may have come from a commit created two weeks ago in a feature branch that was merged yesterday.
 
 #### Task 1: Compare files
 
@@ -243,7 +243,7 @@ In this exercise, you will step through scenarios that involve branch management
 
 You can manage in your Azure DevOps Git repo from the **Branches** view of **Azure Repos** in the Azure DevOps portal. You can also customize the view to track the branches you care most about so you can stay on top of changes made by your team.
 
-Committing changes to a branch will not affect other branches and you can share branches with others without having to merge the changes into the main project. You can also create new branches to isolate changes for a feature or a bug fix from your master branch and other work. Since the branches are lightweight, switching between branches is quick and easy. Git does not create multiple copies of your source when working with branches, but rather uses the history information stored in commits to recreate the files on a branch when you start working on it. Your Git workflow should create and use branches for managing features and bugfixes. The rest of the Git workflow, such as sharing code and reviewing code with pull requests, all work through branches. Isolating work in branches makes it very simple to change what you are working on by simply changing your current branch.
+Committing changes to a branch will not affect other branches and you can share branches with others without having to merge the changes into the main project. You can also create new branches to isolate changes for a feature or a bug fix from your main branch and other work. Since the branches are lightweight, switching between branches is quick and easy. Git does not create multiple copies of your source when working with branches, but rather uses the history information stored in commits to recreate the files on a branch when you start working on it. Your Git workflow should create and use branches for managing features and bugfixes. The rest of the Git workflow, such as sharing code and reviewing code with pull requests, all work through branches. Isolating work in branches makes it very simple to change what you are working on by simply changing your current branch.
 
 #### Task 1: Create a new branch in your local repository
 
@@ -292,7 +292,7 @@ Git keeps track of which branch you are working on and makes sure that, when you
 
 1.  Select the **dev** entry in the list of branches to delete.
 
-1.  In the lower left corner of the Visual Studio Code window, click the **master** entry again. This will display the existing branches in the upper portion of the Visual Studio Code window.
+1.  In the lower left corner of the Visual Studio Code window, click the **main** entry again. This will display the existing branches in the upper portion of the Visual Studio Code window.
 
 1.  Verify that the local **dev** branch no longer appears in the list, but the remote **origin/dev** is still there.
 
