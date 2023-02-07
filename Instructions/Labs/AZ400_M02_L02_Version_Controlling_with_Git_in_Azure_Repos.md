@@ -168,7 +168,7 @@ In this task, you will use Visual Studio Code to commit changes.
     > **Note**: We will discuss **staging** later in the lab.
     > **Note**: Ignore the failed pipelines and it will not impact the remaining tasks.
 
-1.  In the lower left corner of the Visual Studio Code window, to the right of the **master** label, note the **Synchronize Changes** icon of a circle with two vertical arrows pointing in the opposite directions and the number **1** next to the arrow pointing up. Click the icon and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/master**. 
+1.  In the lower left corner of the Visual Studio Code window, to the right of the **master** label, note the **Synchronize Changes** icon of a circle with two vertical arrows pointing in the opposite directions and the number **1** next to the arrow pointing up. Click the icon and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/main**. 
 
 #### Task 2: Review commits
 
