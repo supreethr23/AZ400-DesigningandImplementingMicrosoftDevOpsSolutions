@@ -149,7 +149,7 @@ In this task, you will import an existing CI YAML pipeline definition, modify an
 
     ![Select Pipeline](images/select-ci-container-compose.png)
 
-1. In the YAML pipeline definition, customize your Resource Group name by replacing **NAME** on **AZ400-EWebShop-NAME** and replace **YOUR-SUBSCRIPTION-ID** with the your own Azure subscriptionId.
+1. In the YAML pipeline definition, customize your Resource Group name by replacing **NAME** in **AZ400-EWebShop-NAME** with the **Deployment ID** which can be found in the environment details page and replace **YOUR-SUBSCRIPTION-ID** with the your own Azure subscriptionId.
 
 1. Click on **Save and Run** and wait for the pipeline to execute successfully.
 
@@ -185,7 +185,7 @@ For this lab scenario, we will have a Azure Container Instance (ACI) that pull a
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **AZ400-EWebShop-NAME** |
-    | Key vault name | any unique valid name, like **ewebshop-kv-NAME** (replace NAME) |
+    | Key vault name | any unique valid name, like **ewebshop-kv-NAME** (replace NAME with the **Deployment ID** which can be found in the environment details page) |
     | Region | an Azure region close to the location of your lab environment |
     | Pricing tier | **Standard** |
     | Days to retain deleted vaults | **7** |
