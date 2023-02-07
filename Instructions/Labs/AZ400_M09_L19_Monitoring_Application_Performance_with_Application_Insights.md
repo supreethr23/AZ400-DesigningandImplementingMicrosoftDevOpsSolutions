@@ -439,7 +439,7 @@ In this task, you will use Application Insights to investigate performance of th
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az400m17l01b-RG** |
+    | Resource group | the name of a existing resource group **az400m17l01a-RG** |
     | Action group name | **az400m17-action-group** |
     | Display name | **az400m17-ag** |
 
