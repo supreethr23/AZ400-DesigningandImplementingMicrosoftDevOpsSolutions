@@ -59,6 +59,7 @@ In this task, you will fork a GitHub repo and install Azure Pipelines in your Gi
    ![Azure DevOps](images/mod6_14.png)
    
    > **Note**: The **GitHub Marketplace** provides a variety of tools from Microsoft and 3rd parties that help you extend your project workflows. 
+
 4.  In the **Search for apps and actions**, type **Azure Pipelines**, press the **Enter** key, and, in the list of results, click **Azure Pipelines**.
 
   ![Azure DevOps](images/mod6_15.png)
@@ -92,7 +93,7 @@ In this task, you will configure the Azure Pipelines project based on the fork o
 
 1. In the Azure DevOps portal, click on **Pipelines** in the navigation panel on the left.
 
-2. Click on the **New pipeline** button at top right then select **Git Hub** in the **Connect** page. If prompted for authorize completed the process.
+2. Click on the **Create pipeline** button then select **Git Hub** in the **Connect** page. If prompted for authorize completed the process.
 
 3.  On the **Select a repository** pane of the **Pipelines** view in the Azure DevOps portal, select the fork of the GitHub calculator repository you created in the previous task.
 
