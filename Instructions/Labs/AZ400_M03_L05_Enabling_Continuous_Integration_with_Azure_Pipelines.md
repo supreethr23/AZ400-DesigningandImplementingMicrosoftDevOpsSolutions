@@ -191,20 +191,6 @@ In this task, you will trigger a continuous integration build.
 7.  On the **Pipelines** pane, verify that it contains the entry representing a new build (note that its number contains the trailing **.2**) which was triggered by your change. 
 8.  Click the build entry to display its details and verify that it completed successfully. 
 
-### Exercise 2: Remove the Azure DevOps billing
-
-In this exercise, you will remove the Azure DevOps billing enabled in this lab to eliminate unexpected charges.
-
-#### Task 1: Remove the Azure DevOps billing
-
-In this task, you will remove pipeline billing to eliminate unnecessary charges.
-
-1. On the lab computer, switch to the browser window displaying Azure DevOps organization homepage and select **Organization Settings** at bottom left corner.
-
-1. Under **Organization Settings** select **Billing** and click on **Change billing** button to open Change billing pane.
-
-1. In the **Change billing** pane, select **Remove billing** setting and click on Save.
-
 #### Review
 
 In this lab, you used the Azure DevOps portal to create a basic build pipeline from a template, to track and review a build, and to invoke a continuous integration build.
