@@ -21,13 +21,13 @@ After you complete this lab, you will be able to:
 
 #### Set up a GitHub account
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+1. If you already have a GitHub account that you can use for this lab, else follow the instructions to create an account.
 
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+3. Navigate to the https://github.com/. Click on Signup.
+   
+3. Provide the email address and click on continue.
 
-3. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/400-3.png)
+   ![Github](images/mod6_22.png)
  
 4. Provide the password and enter the valid username and click on continue.
 
