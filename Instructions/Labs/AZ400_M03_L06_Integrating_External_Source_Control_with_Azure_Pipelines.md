@@ -31,11 +31,11 @@ After you complete this lab, you will be able to:
  
 4. Provide the password and enter the valid username and click on continue.
 
-  ![Github](images/mod6_26.png)
+   ![Github](images/mod6_26.png)
 
-5. Provide the confirmation and verify your account and click on create account. This would take 2 minutes to create.
+5. Provide the confirmation and verify your account and also provide the confirmation code you recieve to your gamil account then click on create account. This would take 2 minutes to create.
 
- ![Github](images/mod6_25.png)
+   ![Github](images/mod6_25.png)
 
 ### Exercise 1: Getting started with Azure Pipelines
 
@@ -50,19 +50,19 @@ In this task, you will fork a GitHub repo and install Azure Pipelines in your Gi
 
     > **Note**: This is the baseline project we will fork and use for this lab.
 
-2.  On the **actionsdemos/calculator site** page, click **Fork**, to fork the repository to your own GitHub account. If prompted, select the account to fork the repository into.
+2.  On the **actionsdemos/calculator site** page, click **Fork** then click on create fork at the bottom of the page to fork the repository to your own GitHub account. If prompted, select the account to fork the repository into.
     
     ![Azure DevOps](images/mod6_13.png)
 
 3.  On the page displaying the forked repo, at the top menu, click **Marketplace**.
 
-   ![Azure DevOps](images/mod6_14.png)
+    ![Azure DevOps](images/mod6_14.png)
    
    > **Note**: The **GitHub Marketplace** provides a variety of tools from Microsoft and 3rd parties that help you extend your project workflows. 
 
 4.  In the **Search for apps and actions**, type **Azure Pipelines**, press the **Enter** key, and, in the list of results, click **Azure Pipelines**.
 
-  ![Azure DevOps](images/mod6_15.png)
+    ![Azure DevOps](images/mod6_15.png)
 
 5.  On the **Azure Pipelines** page, click **Read more** and read through the benefits of Azure Pipelines.
 
@@ -70,19 +70,22 @@ In this task, you will fork a GitHub repo and install Azure Pipelines in your Gi
 
 6.  On the **Azure Pipelines** page, click **Install it for free**. If you have multiple **GitHub** accounts, select the one you forked the calculator to from the **Switch billing account** dropdown.
 
-  ![Azure DevOps](images/mod6_16.png)
-7.  On the **Review your order** page, click **Complete order and begin installation**.
+    ![Azure DevOps](images/mod6_16.png)
+7.  On the **Review your order** page, provide th basic information which is neccesary and click **Complete order and begin installation**.
 
-   ![Azure DevOps](images/mod6_17.png)
+    ![Azure DevOps](images/mod6_17.png)
 8.  On the **Install Azure Pipelines** page, use the default option **All repositories** and click **Install**.
 
-   ![Azure DevOps](images/mod6_18.png)
+    ![Azure DevOps](images/mod6_18.png)
 
    > **Note**: You have the option to specify repositories to include, but for the purposes of this lab, just include all of them. Note that Azure DevOps requires the listed set of permissions to fulfill its services. 
 
 9.  If prompted, authenticate with your GitHub password to continue.
+
 10.  When prompted, on the **Setup your Azure Pipelines project** page, in the **Select your Azure DevOps organization** dropdown list, select your Azure DevOps account and click **Create a new project**.
+
 11.  When prompted, on the **Setup your Azure Pipelines project** page, in the **Project name** textbox, type **Integrating External Source Control with Azure Pipelines**, leave the **Project visibility** set to **Private**, and click **Continue**.
+
 12. On the **Azure Pipelines by Microsoft would like permission to** page, click **Authorize Azure Pipelines**.
 
 ### Task 2: Configuring your Azure Pipelines project
