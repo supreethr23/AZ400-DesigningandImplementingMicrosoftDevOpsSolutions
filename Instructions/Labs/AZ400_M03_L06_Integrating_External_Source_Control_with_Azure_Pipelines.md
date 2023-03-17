@@ -17,6 +17,10 @@ After you complete this lab, you will be able to:
 -   Integrate a GitHub project with an Azure DevOps pipeline.
 -   Track pull requests through the pipeline.
 
+## Lab requirements
+
+- If you don't already have a GitHub account that you can use for this lab, follow instructions available at [Signing up for a new GitHub account](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
+
 ## Instructions
 
 #### Set up a GitHub account
