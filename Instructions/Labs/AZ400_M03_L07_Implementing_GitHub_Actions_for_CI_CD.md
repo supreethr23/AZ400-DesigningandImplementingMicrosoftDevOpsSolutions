@@ -12,6 +12,10 @@ After you complete this lab, you will be able to:
 - Implement a GitHub Action workflow by using DevOps Starter
 - Explain the basic characteristics of GitHub Action workflows
 
+## Lab requirements
+
+- If you don't already have a GitHub account that you can use for this lab, follow instructions available at [Signing up for a new GitHub account](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
+
 ## Instructions
 
 #### Prepare a GitHub account
