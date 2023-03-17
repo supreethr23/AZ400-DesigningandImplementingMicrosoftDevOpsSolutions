@@ -19,6 +19,10 @@ After you complete this lab, you will be able to:
 - Install the Azure Pipelines app in Microsoft Teams
 - Subscribe for Azure Pipelines notifications
 
+## Lab requirements
+
+- Set up a Microsoft 365 subscription. Create a free trial subscription from [Microsoft Teams sign-up page](https://teams.microsoft.com/start).
+
 ## Instructions
 
 #### Set up an Azure DevOps organization. 
