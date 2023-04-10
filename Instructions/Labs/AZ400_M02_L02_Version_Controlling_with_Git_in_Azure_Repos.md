@@ -46,7 +46,7 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
+1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and under the **Advanced** section, choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
 
     ![Create Project](images/ss123.png)
 
@@ -54,7 +54,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Navigate to **Repos>Files** and then click on **Import** within the **Import a repository** card. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
 
     ![Import Repository](images/ss1234.png)
 
@@ -73,7 +73,7 @@ In this task, you will configure Git and Visual Studio Code, including configuri
 
 1.  In the Visual Studio Code interface, from the main menu, select **Terminal \| New Terminal** to open the **TERMINAL** pane.
 
-1.  Make sure that the current Terminal is running **PowerShell** by checking if the drop-down list at the top right corner of the **TERMINAL** pane shows **1: powershell**
+1.  Make sure that the current Terminal is running **PowerShell** by checking if the drop-down list at the top right corner of the **TERMINAL** pane shows **powershell**.
 
     > **Note**: To change the current Terminal shell to **PowerShell** click the drop-down list at the top right corner of the **TERMINAL** pane and click **Select Default Shell**. At the top of the Visual Studio Code window select your preferred terminal shell **Windows PowerShell** and click the plus sign on the right-hand side of the drop-down list to open a new terminal with the selected default shell.
 
@@ -82,7 +82,7 @@ In this task, you will configure Git and Visual Studio Code, including configuri
     ```git
     git config --global credential.helper wincred
     ```
-1.  In the **TERMINAL** pane, run the following commands to configure a user name and email for Git commits (replace the placeholders in braces with user name: **ODL_USER_DeploymentID** where Deploymentid and email provided in the environment details tab):
+1.  In the **TERMINAL** pane, run the following commands to configure a user name and email for Git commits (replace the placeholders in braces with user name: **ODL_USER_<inject key="DeploymentID" enableCopy="false" />** and user email: **<inject key="AzureAdUserEmail"></inject>** ):
 
     ```git
     git config --global user.name "<John Doe>"
@@ -122,7 +122,7 @@ In this task, you will step through the process of cloning a Git repository by u
     > **Note**: To see all relevant commands, you can start by typing **Git**.
 
 7.  In the **Provide repository URL or pick a repository source** text box, paste the repo clone URL you copied earlier in this task and press the **Enter** key.
-8.  Within the **Select Folder** dialog box, navigate to the C: drive, create a new folder named **Git**, select it, and then click **Select Repository Location**. 
+8.  Within the **Select Folder** dialog box, navigate to the C: drive, create a new folder named **Git**, select it, and then click **Select Repository Destination**. 
 9.  When prompted, log in to your Azure DevOps account with the credentials provided in the environment details tab.
 10. After the cloning process completes, once prompted, in the Visual Studio Code, click **Open** to open the cloned repository. If **Do you trust the authors of the files in this folder?** warning prompted click on **Yes**.
 
@@ -255,8 +255,8 @@ In this task, you will create a branch by using Visual Studio Code.
 
     ![Create branch](images/create-branch.png)
 
+1.  In the **Select a ref to create the branch from** textbox, select **main** as the reference branch.
 1.  In the **Branch name** textbox, type **dev** to specify the new branch and press **Enter**.
-1.  In the **Select a ref to create the 'dev' branch from** textbox, select **main** as the reference branch.
 
     > **Note**: At this point, you are automatically switched to the **dev** branch.
 
@@ -337,7 +337,7 @@ For simplicity we will work directly on the web browser repo editor (working dir
     ![Branch Policies](images/branch-policies.png)
 
 1. On the **main** tab of the repository settings, enable the option for **Require minimum number of reviewers**. Add **1** reviewer and check the box **Allow requestors to approve their own changes**(as you are the only user in your project for the lab)
-1. 1. On the **main** tab of the repository settings, enable the option for **Check for linked work items** and leave it with **Required** option.
+1. On the **main** tab of the repository settings, enable the option for **Check for linked work items** and leave it with **Required** option.
 
     ![Policy Settings](images/policy-settings.png)
 
