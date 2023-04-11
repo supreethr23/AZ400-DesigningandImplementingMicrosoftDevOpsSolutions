@@ -354,19 +354,19 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
 1. Navigate to the start of the **Deploy job** (-job: Deploy on Line 60)
 1. Add a new empty line right below, and add the following snippet:
 
-```yaml
-  environment: approvals
-```
+    ```yaml
+      environment: approvals
+    ```
 
-the resulting snippet of code should look like this:
+    The resulting snippet of code should look like this:
 
-```yaml
- jobs:
-  - job: Deploy
-    environment: approvals
-    pool:
-      vmImage: 'windows-2019'
-```
+    ```yaml
+     jobs:
+      - job: Deploy
+        environment: approvals
+        pool:
+          vmImage: 'windows-2019'
+    ```
 1. As the environment is a specific setting of a deployment stage, it cannot be used by "jobs". Therefore, we have to make some additional changes to the current job definition.
 1. On Line **60**, rename "- job: Deploy" to **- deployment: Deploy**
 1. Next, under Line **63** (vmImage: Windows-2019), add a new empty line.
@@ -416,8 +416,8 @@ the resulting YAML snippet should look like this now, reflecting the **Deploy St
 1. Next, since we have the *environment:approvals* configured for the Deploy Stage, it will ask for an approval confirmation before it kicks off.
 1. This is visible from the Pipeline view, where it says **Waiting (0/1 checks passed)**. A notification message is also displayed saying **approval needs review before this run can continue to Deploy to an Azure Web App**.
 1. Click the **View** button next to this message.
-1. From the appearing pane **Checks and manual validations for Deploy to Azure Web App**, click the **Approval Waiting** message.
-1. Click **Approve**.
+1. From the appearing pane **Checks and manual validations for Deploy to Azure Web App**, click the **Permit** button.
+1. Click **Permit** again in the following pop-up.
 1. This allows the Deploy Stage to kick off and successfully deploying the Azure Web App source code.
 
     > **Note:** While this example only used the approvals, know the other checks such as Azure Monitor, REST API, etc... can be used in a similar way
