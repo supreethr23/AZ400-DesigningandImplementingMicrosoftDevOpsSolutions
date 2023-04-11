@@ -51,6 +51,8 @@ In this task, you will create a new Azure DevOps project based on the [Sonar Sca
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
+3. In the pop-up for *More information required*, select **Ask later**.
+
 3. On the next page accept defaults and click on continue.
 
     ![Azure DevOps](images/400-3.png)
@@ -58,6 +60,8 @@ In this task, you will create a new Azure DevOps project based on the [Sonar Sca
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
     ![Azure DevOps](images/m1-2.png)
+    
+3. In the pop-up for *More information required*, select **Ask later**.    
 
 5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
@@ -72,13 +76,13 @@ In this task, you will create a new Azure DevOps project based on the [Sonar Sca
 
     ![Azure DevOps](images/agent2.png)
     
-8. From the left menu click on **Policies** under security section and toggle the **Allow Public Projects** to **On**
+8. From the left menu click on **Policies** under security section and toggle the **Allow Public Projects** to **On** and click on **Save** on *change policy setting* pop-up.
 
     ![Azure DevOps](images/publicprojects.png)
     
 9. Click on **Azure DevOps** logo on top left to go to home page of organization.
 
-10. On the **Create new project** pane, in the **Project name** textbox, type **SonarExamples**, in the **Visibility** section, click **Public**, and then click **Create**.
+10. On the **Create a project to get started** pane, in the **Project name** textbox, type **SonarExamples**, in the **Visibility** section, click **Public**, and then click **Create project**.
   
     > **Note**: Unless you intend to sign up for a paid plan with SonarCloud, make sure that you set your Azure DevOps project to be public. If you *do* intend to sign up for a paid plan, then you can create a private project.
 
@@ -125,17 +129,17 @@ In this task, you will install and configure the SonarCloud Azure DevOps extensi
 
 1.   On the **Log in or Sign up to SonarCloud**, click **With Azure DevOps**.
 
-1.  When prompted whether to **Let this app access your info?**, click **Yes**. If prompted, select **Consent of behalf of your organization** and **Accept**.
+1. In the pop-up for *More information required*, select **Ask later**.(If Prompted)
+
+1.  When prompted to **Permissions requested**, click **Accept**.
 
     > **Note**: In SonarCloud, you will create an organization and, within it, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
 
 1.  On the **Welcome to SonarCloud** page, click **Import an organization from Azure**.
 
-1.  On the **Create an organization** page, in the **Azure DevOps organization name** textbox, type the name of your Azure DevOps organization, in the **Personal Access Token** textbox, paste the value of the token you recorded in the previous exercise, and click **Continue**. 
+1.  On the **Create an organization** page, in the **Azure DevOps organization name** textbox, type the name of your Azure DevOps organization(i.e.,**odluser<inject key="DeploymentID" enableCopy="false"/>**), in the **Personal Access Token** textbox, paste the value of the token you recorded in the previous exercise, and click **Continue**. 
 
-1.  In the **Import organization details** section, in the **Key** textbox, type a string of characters that will designate your organization and click **Continue**.
-
-    > **Note**: The key must be unique within the SonarCloud system. Make sure that the green checkmark appears to the right of the **Key** textbox. This indicates that the key satisfies the uniqueness prerequisite.
+1.  In the **Import organization details** section, leave with the default values.
 
 1.  In the **Choose a plan** section, select the plan that you intend to use for this lab (free suggested) and click **Create Organization**.
 
