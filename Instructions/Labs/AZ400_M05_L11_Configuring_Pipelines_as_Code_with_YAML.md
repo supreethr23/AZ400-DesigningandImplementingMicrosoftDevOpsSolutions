@@ -183,15 +183,15 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 
 1. The snippet of code added to the editor should look similar to below, reflecting your name for the azureSubscription and WebappName parameters:
 
-```yaml
-    - task: AzureRmWebAppDeployment@4
-      inputs:
-        ConnectionType: 'AzureRM'
-        azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
-        appType: 'webApp'
-        WebAppName: 'eshoponWebYAML369825031'
-        packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
-```
+    ```yaml
+        - task: AzureRmWebAppDeployment@4
+          inputs:
+            ConnectionType: 'AzureRM'
+            azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
+            appType: 'webApp'
+            WebAppName: 'eshoponWebYAML369825031'
+            packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
+    ```
 
 1. Validate the task is listed as a child of the **steps** task. If not, select all lines from the added task, press the **Tab** key twice to indent it four spaces, so that it listed as a child of the **steps** task.
 
@@ -202,21 +202,21 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 1. Place the cursor on the first line under the **steps** node of the **deploy** stage, and hit Enter/Return to add a new empty line (Line 64).
 1. On the **Tasks** pane, search for and select the **Download build artifacts** task.
 1. Specify the following parameters for this task:
-- Download Artifacts produced by: **Current Build**
-- Download Type: **Specific Artifact**
-- Artifact Name: **select "Website" from the list**
-- Destination Directory: **$(Build.ArtifactStagingDirectory)**
+    - Download Artifacts produced by: **Current Build**
+    - Download Type: **Specific Artifact**
+    - Artifact Name: **select "Website" from the list**
+    - Destination Directory: **$(Build.ArtifactStagingDirectory)**
 1. Click **Add**.
 1. The snippet of added code should look similar to below:
 
-```yaml
-    - task: DownloadBuildArtifacts@0
-      inputs:
-        buildType: 'current'
-        downloadType: 'single'
-        artifactName: 'Website'
-        downloadPath: '$(Build.ArtifactStagingDirectory)'
-```
+    ```yaml
+        - task: DownloadBuildArtifacts@0
+          inputs:
+            buildType: 'current'
+            downloadType: 'single'
+            artifactName: 'Website'
+            downloadPath: '$(Build.ArtifactStagingDirectory)'
+    ```
 1. If the YAML indentation is off, With the added task still selected in the editor, press the **Tab** key twice to indent it four spaces.
 
     > **Note**: Here as well you may also want to add an empty line before and after to make it easier to read.
@@ -231,9 +231,9 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 1. Notice the 2 different Stages, **Build .Net Core Solution** and **Deploy to Azure Web App** appearing.
 1. Wait for the pipeline to kick off and wait until it completes the Build Stage successfully.
 1. Once the Deploy Stage wants to start, you are prompted with **Permissions Needed**, as well as an orange bar saying 
-```
-This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
-```
+    ```
+    This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
+    ```
 1. Click on **View**
 1. From the **Waiting for Review** pane, click **Permit**.
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
@@ -241,85 +241,85 @@ This pipeline needs permission to access a resource before this run can continue
 
      > **Note**: If the deployment should fail, because of an issue with the YAML Pipeline syntax, use this as a reference:
 
- ```yaml
-#NAME THE PIPELINE SAME AS FILE (WITHOUT ".yml")
-# trigger:
-# - main
+     ```yaml
+    #NAME THE PIPELINE SAME AS FILE (WITHOUT ".yml")
+    # trigger:
+    # - main
 
-resources:
-  repositories:
-    - repository: self
-      trigger: none
+    resources:
+      repositories:
+        - repository: self
+          trigger: none
 
-stages:
-- stage: Build
-  displayName: Build .Net Core Solution
-  jobs:
-  - job: Build
-    pool:
-      vmImage: ubuntu-latest
-    steps:
-    - task: DotNetCoreCLI@2
-      displayName: Restore
-      inputs:
-        command: 'restore'
-        projects: '**/*.sln'
-        feedsToUse: 'select'
+    stages:
+    - stage: Build
+      displayName: Build .Net Core Solution
+      jobs:
+      - job: Build
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+        - task: DotNetCoreCLI@2
+          displayName: Restore
+          inputs:
+            command: 'restore'
+            projects: '**/*.sln'
+            feedsToUse: 'select'
 
-    - task: DotNetCoreCLI@2
-      displayName: Build
-      inputs:
-        command: 'build'
-        projects: '**/*.sln'
-    
-    - task: DotNetCoreCLI@2
-      displayName: Test
-      inputs:
-        command: 'test'
-        projects: 'tests/UnitTests/*.csproj'
-    
-    - task: DotNetCoreCLI@2
-      displayName: Publish
-      inputs:
-        command: 'publish'
-        publishWebProjects: true
-        arguments: '-o $(Build.ArtifactStagingDirectory)'
-    
-    - task: PublishBuildArtifacts@1
-      displayName: Publish Artifacts ADO - Website
-      inputs:
-        pathToPublish: '$(Build.ArtifactStagingDirectory)'
-        artifactName: Website
-    
-    - task: PublishBuildArtifacts@1
-      displayName: Publish Artifacts ADO - Bicep
-      inputs:
-        PathtoPublish: '$(Build.SourcesDirectory)/.azure/bicep/webapp.bicep'
-        ArtifactName: 'Bicep'
-        publishLocation: 'Container'
+        - task: DotNetCoreCLI@2
+          displayName: Build
+          inputs:
+            command: 'build'
+            projects: '**/*.sln'
 
-- stage: Deploy
-  displayName: Deploy to an Azure Web App
-  jobs:
-  - job: Deploy
-    pool:
-      vmImage: 'windows-2019'
-    steps:
-    - task: DownloadBuildArtifacts@0
-      inputs:
-        buildType: 'current'
-        downloadType: 'single'
-        artifactName: 'Website'
-        downloadPath: '$(Build.ArtifactStagingDirectory)'
-    - task: AzureRmWebAppDeployment@4
-      inputs:
-        ConnectionType: 'AzureRM'
-        azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
-        appType: 'webApp'
-        WebAppName: 'eshoponWebYAML369825031'
-        packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
+        - task: DotNetCoreCLI@2
+          displayName: Test
+          inputs:
+            command: 'test'
+            projects: 'tests/UnitTests/*.csproj'
 
-```
+        - task: DotNetCoreCLI@2
+          displayName: Publish
+          inputs:
+            command: 'publish'
+            publishWebProjects: true
+            arguments: '-o $(Build.ArtifactStagingDirectory)'
+
+        - task: PublishBuildArtifacts@1
+          displayName: Publish Artifacts ADO - Website
+          inputs:
+            pathToPublish: '$(Build.ArtifactStagingDirectory)'
+            artifactName: Website
+
+        - task: PublishBuildArtifacts@1
+          displayName: Publish Artifacts ADO - Bicep
+          inputs:
+            PathtoPublish: '$(Build.SourcesDirectory)/.azure/bicep/webapp.bicep'
+            ArtifactName: 'Bicep'
+            publishLocation: 'Container'
+
+    - stage: Deploy
+      displayName: Deploy to an Azure Web App
+      jobs:
+      - job: Deploy
+        pool:
+          vmImage: 'windows-2019'
+        steps:
+        - task: DownloadBuildArtifacts@0
+          inputs:
+            buildType: 'current'
+            downloadType: 'single'
+            artifactName: 'Website'
+            downloadPath: '$(Build.ArtifactStagingDirectory)'
+        - task: AzureRmWebAppDeployment@4
+          inputs:
+            ConnectionType: 'AzureRM'
+            azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
+            appType: 'webApp'
+            WebAppName: 'eshoponWebYAML369825031'
+            packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
+
+    ```
 
 #### Task 4: Review the deployed site
 
