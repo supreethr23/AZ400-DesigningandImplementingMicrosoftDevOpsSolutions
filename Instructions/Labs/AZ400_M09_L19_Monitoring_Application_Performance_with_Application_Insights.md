@@ -249,7 +249,7 @@ In this task, you will deploying a web app to Azure by using Azure DevOps pipeli
 25.  Switch back to the web browser window displaying the Azure DevOps portal, in the vertical navigational pane, select the **Pipelines**, and, in the **Pipelines** section, click the entry representing your most recently run build pipeline.
 26.  If the build has not yet completed, track it through until it does, then, in the vertical navigational pane, in the **Pipelines** section, click **Releases**, on the **PartsUnlimiteE2E** pane, click **Release-1** and follow the release pipeline to its completion.
 27.  Switch to the web browser window displaying the Azure portal and, on the **App Service web app** blade, in the vertical menu bar on the left side, click **Overview**. 
-28.  On the right side, in the **Essentials** section, click the **URL** link. This will automatically open another web browser tab displaying the **Parts Unlimited** 
+28.  On the right side, in the **Essentials** section, click the **Default domain** link. This will automatically open another web browser tab displaying the **Parts Unlimited** 
 web site.
 
 > **Note**: Please wait until the the requested URL is visible, it may take around 10 minutes to load the respective webpage.
