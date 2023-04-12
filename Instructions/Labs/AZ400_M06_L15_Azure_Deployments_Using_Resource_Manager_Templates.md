@@ -40,7 +40,7 @@ In this task, you will use Visual Studio Code to create a Resource Manager templ
 1. From your lab computer, start Visual Studio Code, in Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Preferences**, in the cascading menu, select **Extensions**, in the **Search Extensions** textbox, type **Bicep**, select the one published by Microsoft, and click **Install** to install the Azure Bicep language support.
 
   ![visual studio"](images/mod13_1.png)
-  ![visual studio"](images/mod13_2.png)
+  ![visual studio"](images/AZ-400-M6.png)
 
 2.  In a web browser, connect to **<https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows/main.bicep>**. Click on **Raw** option for the file. Copy the contents of the code window and paste it into Visual Studio Code editor.
 
