@@ -421,7 +421,7 @@ In this task, you will use Application Insights to investigate performance of th
 
     > **Note**: Alerts enable you to set triggers that perform actions when Application Insights measurements reach specified conditions.
 
-2. On the **Alerts** blade, in the toolbar, click **+ New alert rule**.
+2. On the **Alerts** blade, in the toolbar, click **+ Create** in dropdown select **Alert rule**.
 3. On the **Create alert rule** blade, note that, in the **Scope** section, the current Application Insights resource will be selected by default. 
 4. On the **Create alert rule** blade, in the **Condition** section, click **Select condition**.
 5. On the **Configure signal logic** blade, search for and select the **Failed requests** metric.
