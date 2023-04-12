@@ -196,7 +196,7 @@ In this task, you will deploying a web app to Azure by using Azure DevOps pipeli
 4. Back on the **All pipelines > PartsUnlimitedE2E** pane, click the rectangle representing the **QA** stage, on the **QA** pane, click **Delete**, and, in the **Delete stage** dialog box, click **Confirm**.
 6. Back on the **All pipelines > PartsUnlimitedE2E** pane, in the rectangle representing the **Production** stage, click the **1 job, 1 task** link.
 7. On the pane displaying the list of tasks of the **Production*** stage, click the entry representing the **Azure App Service Deploy** task.
-8. On the **Azure App Service deploy** pane, in the **Azure subscription** dropdown list, select the entry representing the Azure subscription you are using in this lab, and click **Authorize** to create the corresponding service connection. When prompted, sign in using the account with the Owner role in the Azure subscription and the Global Administrator role in the Azure AD tenant associated with the Azure subscription.
+8. On the **Azure App Service deploy** pane, in the **Azure subscription** dropdown list, select the entry representing the Azure subscription you are using in this lab, and click **Authorize** to create the corresponding service connection, and in the **Azure service name** dropdown list select your app service name. When prompted, sign in using the account with the Owner role in the Azure subscription and the Global Administrator role in the Azure AD tenant associated with the Azure subscription.
 9. With the **Tasks** tab of the **All pipelines > PartsUnlimitedE2E** pane active, click the **Pipeline** tab header to return to the diagram of the pipeline. 
 10. In the diagram, click the **Pre-deployment condition** oval symbol on the left side of the rectangle representing the **Production** stage.
 11. On the **Pre-deployment condition** pane, in the **Select trigger** section, select **After release**.
@@ -249,7 +249,7 @@ In this task, you will deploying a web app to Azure by using Azure DevOps pipeli
 25.  Switch back to the web browser window displaying the Azure DevOps portal, in the vertical navigational pane, select the **Pipelines**, and, in the **Pipelines** section, click the entry representing your most recently run build pipeline.
 26.  If the build has not yet completed, track it through until it does, then, in the vertical navigational pane, in the **Pipelines** section, click **Releases**, on the **PartsUnlimiteE2E** pane, click **Release-1** and follow the release pipeline to its completion.
 27.  Switch to the web browser window displaying the Azure portal and, on the **App Service web app** blade, in the vertical menu bar on the left side, click **Overview**. 
-28.  On the right side, in the **Essentials** section, click the **URL** link. This will automatically open another web browser tab displaying the **Parts Unlimited** 
+28.  On the right side, in the **Essentials** section, click the **Default domain** link. This will automatically open another web browser tab displaying the **Parts Unlimited** 
 web site.
 
 > **Note**: Please wait until the the requested URL is visible, it may take around 10 minutes to load the respective webpage.
@@ -421,10 +421,10 @@ In this task, you will use Application Insights to investigate performance of th
 
     > **Note**: Alerts enable you to set triggers that perform actions when Application Insights measurements reach specified conditions.
 
-2. On the **Alerts** blade, in the toolbar, click **+ New alert rule**.
+2. On the **Alerts** blade, in the toolbar, click **+ Create** in dropdown select **Alert rule**.
 3. On the **Create alert rule** blade, note that, in the **Scope** section, the current Application Insights resource will be selected by default. 
-4. On the **Create alert rule** blade, in the **Condition** section, click **Select condition**.
-5. On the **Configure signal logic** blade, search for and select the **Failed requests** metric.
+4. On the **Create alert rule** blade, in the **Condition** section, in select a signal dropdown click on **See all signals**.
+5. On the **Select a signal** blade, search for and select the **Failed requests** metric.
 6. On the **Configure signal logic** blade, scroll down to the **Alert logic** section, ensure that **Threshold** is set to **Static** and set the **Threshold value** to **1**. 
 
     > **Note**: This will trigger the alert once a second failed request is reported. By default, the conditions will be evaluated every minute and based on the aggregation of measurements over the past 5 minutes. 
