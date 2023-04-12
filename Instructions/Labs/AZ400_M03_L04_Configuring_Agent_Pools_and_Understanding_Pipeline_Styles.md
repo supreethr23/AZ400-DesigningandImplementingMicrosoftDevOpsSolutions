@@ -7,7 +7,7 @@ YAML-based pipelines allow you to fully implement CI/CD as code, in which pipeli
 
 Regardless of the choice of the pipeline style, to build your code or deploy your solution by using Azure Pipelines, you need an agent. An agent hosts compute resources that runs one job at a time. Jobs can be run directly on the host machine of the agent or in a container. You have an option to run your jobs using Microsoft-hosted agents, which are managed for you, or implementing a self-hosted agent that you set up and manage on your own. 
 
-In this lab, you will step through the process of converting a classic pipeline into a YAML-based one and running it first by using a Microsoft-hosted agent and then performing the equivalent task by using a self-hosted agent.
+In this lab, you will learn how to implement and use self-hosted agents with YAML pipelines.
 
 ## Objectives
 
@@ -23,6 +23,8 @@ After you complete this lab, you will be able to:
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+
+2. In the pop-up for *Action Required*, select **Ask later**. 
 
 3. On the next page accept defaults and click on continue.
 
@@ -57,14 +59,18 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
     > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
 
-2.  Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
-3.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
-4.  On the **Create New Project** page, in the **New Project Name** textbox, type **Configuring Agent Pools and Understanding Pipeline Styles**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
-    
-    ![Azure DevOps](images/AZ-4001.png)
+1.  Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
 
-5.  On the **Choose a template** page, click the **PartsUnlimited** template, and then click **Select Template**.
-6.  Click **Create Project**
+
+1.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
+
+1.  On the **Create New Project** page, in the **New Project Name** textbox, type **Configuring Agent Pools and Understanding Pipeline Styles**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
+    
+    ![Azure DevOps](images/lab4-1.png)
+
+1.  On the **Choose a template** page, click the **PartsUnlimited** template, and then click **Select Template**.
+
+1.  Click **Create Project**
 
     > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your DevOps organization, delete the project, and try again.
 
@@ -100,6 +106,8 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     | Name | **Configuring Agent Pools and Understanding Pipeline Styles lab** |
     | Scope (custom defined) | **Agent Pools** (show more scopes option below if needed)|
     | Permissions | **Read and manage** |
+    
+    ![Azure DevOps](images/lab4-2.png)    
 
 1.  On the **Success** pane, copy the value of the personal access token to Clipboard.
 
@@ -144,7 +152,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     | Enter agent pool (press enter for default) | **az400m05l05a-pool** |
     | Enter agent name | **az400m05-vm0** |
     | Enter work folder (press enter for _work) | **Enter** |
-    | Enter Perform an unzip for tasks for each step. (press enter for N) | **Enter** |
+    | **(Only if shown)** Enter Perform an unzip for tasks for each step. (press enter for N) | **WARNING**: only press **Enter** if the message is shown|
     | Enter run agent as service? (Y/N) (press enter for N) | **Y** |
     | enter enable SERVICE_SID_TYPE_UNRESTRICTED (Y/N) (press enter for N) | **Y** |
     | Enter User account to use for the service (press enter for NT AUTHORITY\NETWORK SERVICE) | **Enter** |
@@ -169,10 +177,16 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     demands:
     - agent.name -equals az400m05-vm0
     ```
+   > **WARNING**: Be careful with copy/paste, make sure you have same indentation shown above.
+       
 1. For `Task: NugetInstaller@0`, click on **Settings (link that is displaying above the task in grey colour)**, modify **Version of NuGet.exe to install** > **4.0.0**  and click on **Add**. 
+
 1.  On the **PartsUnlimited** edit pane, in the upper right corner of the pane, click **Save** and, on the **Save** pane, click **Save** again. This will automatically trigger the build based on this pipeline. 
+
 1.  In the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**.
+
 1.  On the **Recent** tab of the **Pipelines** pane, click the **PartsUnlimited** entry, on the **Runs** tab of the **PartsUnlimited** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
+    > **Note**: If the Pipeline requires any permission to run, provide the permit.
 
 #### Review
 
