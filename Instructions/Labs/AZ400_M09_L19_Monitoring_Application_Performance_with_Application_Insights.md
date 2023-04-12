@@ -423,8 +423,8 @@ In this task, you will use Application Insights to investigate performance of th
 
 2. On the **Alerts** blade, in the toolbar, click **+ Create** in dropdown select **Alert rule**.
 3. On the **Create alert rule** blade, note that, in the **Scope** section, the current Application Insights resource will be selected by default. 
-4. On the **Create alert rule** blade, in the **Condition** section, click **Select condition**.
-5. On the **Configure signal logic** blade, search for and select the **Failed requests** metric.
+4. On the **Create alert rule** blade, in the **Condition** section, in select a signal dropdown click on **See all signals**.
+5. On the **Select a signal** blade, search for and select the **Failed requests** metric.
 6. On the **Configure signal logic** blade, scroll down to the **Alert logic** section, ensure that **Threshold** is set to **Static** and set the **Threshold value** to **1**. 
 
     > **Note**: This will trigger the alert once a second failed request is reported. By default, the conditions will be evaluated every minute and based on the aggregation of measurements over the past 5 minutes. 
