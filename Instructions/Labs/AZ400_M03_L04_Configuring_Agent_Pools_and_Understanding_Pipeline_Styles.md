@@ -46,6 +46,16 @@ After you complete this lab, you will be able to:
 7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
 
     ![Azure DevOps](images/agent2.png)
+    
+8. In **Organization Settings**, go to section **Security** and click **Policies**.
+
+9. Toggle the switch to **On** for **Third-party application access via OAuth**
+    > Note: The OAuth setting helps enable tools such as the DemoDevOpsGenerator to register extensions. Without this, several labs may fail due to a lack of the required extensions.
+    
+10. Toggle the switch to **On** for **Allow public projects** and click on **Save** on *change policy* setting pop-up.
+    > Note: Extensions used in some labs might require a public project to allow using the free version.   
+
+    ![Azure DevOps](images/lab-4-4.png)
 
 ### Exercise 0: Configure the lab prerequisites
 
@@ -128,7 +138,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 
 1.  On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name** text box, type **az400m05l05a-pool** and then click **Create**.
 
-    ![Azure DevOps](images/lab4-3.png)    
+    ![Azure DevOps](images/lab-4-5.png)    
     
 1.  Back on the **Agent pools** pane, click the entry representing the newly created **az400m05l05a-pool**. 
 
