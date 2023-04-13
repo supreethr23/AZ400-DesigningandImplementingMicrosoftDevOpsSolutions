@@ -21,7 +21,7 @@ After you complete this lab, you will be able to:
 
 #### Set up an Azure DevOps organization. 
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+1. On your lab VM open **Edge Browser** on desktop and navigate to [**Azure Devops**](https://go.microsoft.com/fwlink/?LinkId=307137)
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
@@ -258,6 +258,12 @@ web site.
 
      ![Azure DevOps](images/mod17_img8.png)
 
+30. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 #### Task 2: Generate and review application traffic
 
@@ -281,6 +287,13 @@ In this task, you will generate traffic targeting the App Service web app you de
 
 6.  On the **Application Insights** configuration blade, click the **View Application Insights data** link.
 7.  Review the resulting **Application Insights** blade displaying charts presenting different characteristics of the collected data, including the traffic you generated and failed requests you triggered earlier in this task.
+
+8. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 #### Task 3: Investigate application performance
 
@@ -414,7 +427,6 @@ In this task, you will use Application Insights to investigate performance of th
     > **Note**: A cohort is a set of users, sessions, events, or operations that have something in common. In Application Insights, cohorts are defined by an analytics query. In cases where you have to analyze a specific set of users or events repeatedly, cohorts can give you more flexibility to express exactly the set you're interested in. Cohorts are used in ways similar to filters, but cohort definitions are built from custom analytics queries, so they're much more adaptable and complex. Unlike filters, you can save cohorts so other members of your team can reuse them.
 
 
-
 #### Task 5: Configure web app alerts
 
 1. While on the **More \| Gallery** blade, in the vertical menu on the left side, in the **Monitoring** section, click **Alerts**. 
@@ -455,6 +467,13 @@ In this task, you will use Application Insights to investigate performance of th
     > **Note**: This will trigger a server error since that category does not exist. Refresh the page a few times to generate more errors.
 
 18.  After about five minutes, check your email account to verify that you have received an email indicating that the alert you defined was triggered.
+
+19. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 ### Exercise 2: Remove the Azure lab resources
 
