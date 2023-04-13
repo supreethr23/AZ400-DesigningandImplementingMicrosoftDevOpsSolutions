@@ -46,6 +46,16 @@ After you complete this lab, you will be able to:
 7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
 
     ![Azure DevOps](images/agent2.png)
+    
+8. In **Organization Settings**, go to section **Security** and click **Policies**.
+
+9. Toggle the switch to **On** for **Third-party application access via OAuth**
+    > Note: The OAuth setting helps enable tools such as the DemoDevOpsGenerator to register extensions. Without this, several labs may fail due to a lack of the required extensions.
+    
+10. Toggle the switch to **On** for **Allow public projects** and click on **Save** on *change policy* setting pop-up.
+    > Note: Extensions used in some labs might require a public project to allow using the free version.   
+
+    ![Azure DevOps](images/lab-4-4.png)
 
 ### Exercise 0: Configure the lab prerequisites
 
@@ -85,9 +95,13 @@ In this exercise, you will convert a classic Azure DevOps pipeline into a YAML-b
 In this task, you will create a template-based Azure DevOps YAML pipeline.
 
 1.  From the web browser displaying the Azure DevOps portal with the **Configuring Agent Pools and Understanding Pipeline Styles** project open, in the vertical navigational pane on the left side, click **Pipelines**. 
+
 1.  On the **Recent** tab of the **Pipelines** pane, click **New pipeline**.
+
 1.  On the **Where is your code?** pane, click **Azure Repos Git**. 
+
 1.  On the **Select a repository** pane, click **PartsUnlimited**.
+
 1.  On the **Review your pipeline YAML** pane, review the sample pipeline, click the down-facing caret symbol next to the **Run** button, click **Save**.
 
 ### Exercise 2: Manage Azure DevOps agent pools
@@ -99,6 +113,7 @@ In this exercise, you will implement self-hosted Azure DevOps agent.
 In this task, you will configure the LOD VM as an Azure DevOps self-hosting agent and use it to run a build pipeline.
 
 1.  In the Azure DevOps portal, in the upper right corner of the Azure DevOps page, click the **User settings** icon, in the dropdown menu, click **Personal access tokens**, on the **Personal Access Tokens** pane, and click **+ New Token**.
+
 1.  On the **Create a new personal access token** pane, click the **Show all scopes** link and, specify the following settings and click **Create** (leave all others with their default values):
 
     | Setting | Value |
@@ -114,26 +129,26 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     > **Note**: Make sure you copy the token. You will not be able to retrieve it once you close this pane. 
 
 1.  On the **Success** pane, click **Close**.
+
 1.  On the **Personal Access Token** pane of the Azure DevOps portal, click **Azure DevOps** symbol in the upper left corner and then click **Organization settings** label in the lower left corner.
+
 1.  To the left side of the **Overview** pane, in the vertical menu, in the **Pipelines** section, click **Agent pools**.
+
 1.  On the **Agent pools** pane, in the upper right corner, click **Add pool**. 
+
 1.  On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name** text box, type **az400m05l05a-pool** and then click **Create**.
+
+    ![Azure DevOps](images/lab-4-5.png)    
+    
 1.  Back on the **Agent pools** pane, click the entry representing the newly created **az400m05l05a-pool**. 
+
 1.  On the **Jobs** tab of the **az400m05l05a-pool** pane, click the **Agents** header.
-1.  On the **Agents** tab of the **az400m05l05a-pool** pane, click the **New agent** button.
-1.  On the **Get the agent** pane, ensure that the **Windows** and **x64** tabs are selected, and click **Download** to download the zip archive containing the agent binaries to download it into the local **Downloads** folder within your user profile.
 
-    > **Note**: If you receive an error message at this point indicating that the current system settings prevent you from downloading the file, in the Internet Explorer window, in the upper right corner, click the gearwheel symbol designating the **Settings** menu header, in the dropdown menu, select **Internet Options**, in the **Internet Options** dialog box, click **Advanced**, on the **Advanced** tab, click **Reset**, in the **Reset Internet Explorer Settings** dialog box, click **Reset** again, click **Close**, and try the download again. 
-
-1.  Start Windows PowerShell as administrator and in the **Administrator: Windows PowerShell** console run the following lines to create the **C:\\agent** directory and extract the content of the downloaded archive into it. 
+1.  Start Windows PowerShell as administrator and in the **Administrator: Windows PowerShell** console run the following lines to locate the **C:\\agent** directory and to run the pre-installed agent inside the directory. 
 
     ```powershell
     cd \
-    mkdir agent ; cd agent
-    $TARGET = Get-ChildItem "$Home\Downloads\vsts-agent-win-x64-*.zip"
-    Add-Type -AssemblyName System.IO.Compression.FileSystem
-    [System.IO.Compression.ZipFile]::ExtractToDirectory($TARGET, "$PWD")
-    
+    cd agent
     ```
 
 1.  In the same **Administrator: Windows PowerShell** console, run the following to configure the agent:
@@ -165,11 +180,17 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
       ![Azure DevOps](images/AZ-400-3.png)
 
 1.  Switch to the browser window displaying the Azure DevOps portal and close the **Get the agent** pane.
+
 1.  Back on the **Agents** tab of the **az400m05l05a-pool** pane, note that the newly configured agent is listed with the **Online** status.
+
 1.  In the web browser window displaying the Azure DevOps portal, in the upper left corner, click the **Azure DevOps** label.
-1.  In the browser window displaying the list of projects, click the tile representing your **Configuring Agent Pools and Understanding Pipeline Styles** project. 
+
+1.  In the browser window displaying the list of projects, click the tile representing your **Configuring Agent Pools and Understanding Pipeline Styles** project.
+ 
 1.  On the **Configuring Agent Pools and Understanding Pipeline Styles** pane, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**. 
+
 1.  On the **Recent** tab of the **Pipelines** pane, select **PartsUnlimited** and, on the **PartsUnlimited** pane, select **Edit**.
+
 1.  On the **PartsUnlimited** edit pane, in the existing YAML-based pipeline, replace line  `vmImage: windows-2019` designating the target agent pool the following content, designating the newly created self-hosted agent pool:
 
     ```yaml

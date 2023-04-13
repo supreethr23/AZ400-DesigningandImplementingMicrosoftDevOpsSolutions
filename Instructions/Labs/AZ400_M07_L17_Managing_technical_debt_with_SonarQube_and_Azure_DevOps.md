@@ -76,10 +76,16 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Azure DevOps](images/agent2.png)
     
-1. From the left menu click on **Policies** under security section and toggle the **Allow Public Projects** to **On** and click on **Save** on *change policy setting* pop-up.
+1. In **Organization Settings**, go to section **Security** and click **Policies**.
 
-    ![Azure DevOps](images/publicprojects.png)
+1. Toggle the switch to **On** for **Third-party application access via OAuth**
+    > Note: The OAuth setting helps enable tools such as the DemoDevOpsGenerator to register extensions. Without this, several labs may fail due to a lack of the required extensions.
     
+1. Toggle the switch to **On** for **Allow public projects** and click on **Save** on *change policy* setting pop-up.
+    > Note: Extensions used in some labs might require a public project to allow using the free version.   
+
+    ![Azure DevOps](images/lab-4-4.png)
+
 1. Click on **Azure DevOps** logo on top left to go to home page of organization.
 
 1. On the **Create a project to get started** pane, in the **Project name** textbox, type **eShopOnWeb**, in the **Visibility** section, click **Private**, and then click **Create project**.
