@@ -206,8 +206,8 @@ In this task, you will modify the main template to reference the template module
 > **Note**: Currently, Azure CLI does not support deploying remote Bicep files. You can build the bicep files to get the ARM Template JSON and then upload them to an storage account, then deploy them remotely.
 
 1. On the lab computer, in the web browser displaying the Azure Portal, click the **Cloud Shell** icon to open Cloud Shell.
-   > **Note**: If you have the PowerShell session from earlier in this exercise still active, switch to Bash (next step).
-1. In the Cloud Shell pane, click **PowerShell**, in the dropdown menu, click **Bash** and, when prompted, click **Confirm**.
+1. In the Cloud Shell pane, select **Bash**.
+   > **Note**: When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize.
 1. In the Cloud Shell pane, click the **Upload/download files** icon and, in the dropdown menu, click **Upload**.
 1. In the **Open** dialog box, navigate to and select **C:\\templates\\main.bicep** and click **Open**.
 1. Follow the same steps to upload the **C:\\templates\\storage.bicep** file too.
