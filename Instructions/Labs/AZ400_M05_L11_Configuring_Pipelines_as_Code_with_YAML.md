@@ -52,7 +52,7 @@ After you complete this lab, you will be able to:
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://dev.azure.com/unhueteb/_git/eshopweb-az400).
 
-#### Task 1:  (skip if done) Create and configure the team project
+#### Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps project to be used by several labs.
 
@@ -60,7 +60,7 @@ In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps proj
 
     ![Create Project](images/400-2.png)
 
-#### Task 2:  (skip if done) Import eShopOnWeb Git Repository
+#### Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -203,9 +203,9 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 1. On the **Tasks** pane, search for and select the **Download build artifacts** task.
 1. Specify the following parameters for this task:
     - Download Artifacts produced by: **Current Build**
-    - Download Type: **Specific Artifact**
-    - Artifact Name: **Enter "Website" in the text box**
-    - Destination Directory: **$(Build.ArtifactStagingDirectory)**
+    - Download Type: **Specific Artifact**
+    - Artifact Name: **Enter "Website" in the text box**
+    - Destination Directory: **$(Build.ArtifactStagingDirectory)**
 1. Click **Add**.
 1. The snippet of added code should look similar to below:
 
@@ -421,12 +421,6 @@ the resulting YAML snippet should look like this now, reflecting the **Deploy St
 1. This allows the Deploy Stage to kick off and successfully deploying the Azure Web App source code.
 
     > **Note:** While this example only used the approvals, know the other checks such as Azure Monitor, REST API, etc... can be used in a similar way
-
-### Exercise 3: Remove the Azure lab resources
-
-In this exercise, you will remove the Azure resources provisioned in this lab to eliminate unexpected charges.
-
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
 ## Review
 
