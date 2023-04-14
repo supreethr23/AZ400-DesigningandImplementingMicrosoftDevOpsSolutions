@@ -60,11 +60,11 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 2.  Click **Sign in** and sign in using the Microsoft account associated with your Azure DevOps subscription.
 
-    ![Azure DevOps](images/mod17_img1.png)
+    ![Azure DevOps](images/mod17_img1-1.png)
     
 3.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
 
-    ![Azure DevOps](images/mod17_img2.png)
+    ![Azure DevOps](images/mod17_img2-1.png)
     
 4.  On the **Create New Project** page, in the **New Project Name** textbox, type **Monitoring Application Performance**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
 5.  In the list of templates, select the **PartsUnlimited** template and click **Select Template**.
@@ -76,7 +76,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 7.  On the **Create New Project** page, click **Navigate to project**.
 
-    ![Azure DevOps](images/mod17_img4.png)
+    ![Azure DevOps](images/mod17_img4-1.png)
 
 #### Task 2: Create Azure resources
 
@@ -87,15 +87,15 @@ In this task, you will create an Azure web app and an Azure SQL database by usin
 1.  From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
 2. In the Azure portal, in the toolbar, click the **Cloud Shell** icon located directly to the right of the search text box.
 
-   ![Azure DevOps](images/mod17_img5.png)
+   ![Azure DevOps](images/mod17_img5-1.png)
 
 3. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
-   ![Azure DevOps](images/mod17_img6.png)
+   ![Azure DevOps](images/mod17_img6-1.png)
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
 
-   ![Azure DevOps](images/mod17_img7.png)
+   ![Azure DevOps](images/mod17_img7-1.png)
 
 4.  From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a resource group (replace the `<region>` placeholder with the name of the Azure region closest to you such as 'eastus').
 
@@ -256,7 +256,7 @@ web site.
 
 29.  Verify that the **Parts Unlimited** web site loads as expected. 
 
-     ![Azure DevOps](images/mod17_img8.png)
+     ![Azure DevOps](images/mod17_img8-1.png)
 
 
 #### Task 2: Generate and review application traffic
@@ -266,11 +266,11 @@ In this task, you will generate traffic targeting the App Service web app you de
 1.  In the web browser window displaying the **Parts Unlimited** web site, navigate through its pages to generate some traffic.
 2.  On the **Parts Unlimited** web site, click the **Brakes** menu item.
 
-    ![Azure DevOps](images/mod17_img9.png)
+    ![Azure DevOps](images/mod17_img9-1.png)
 
 4.  In the URL textbox at the top of the browser window, append **1** to the end of the URL string and press **Enter**, effectively setting the **CategoryId** parameter to **11**. 
 
-    ![Azure DevOps](images/mod17_img10.png)
+    ![Azure DevOps](images/mod17_img10-1.png)
 
     > **Note**: This will trigger a server error since that category does not exist. Refresh the page a few times to generate more errors.
 
@@ -393,7 +393,7 @@ In this task, you will use Application Insights to investigate performance of th
 
 11. On the **Workbooks** blade, in the vertical menu on the left side, in the **Monitoring** section, select **User Retention Analysis** under Usage.
 
-    ![Azure DevOps](images/mod17_img12.1.png)
+    ![Azure DevOps](images/mod17_img12.1-1.png)
 
     > **Note**: The retention feature in Application Insights helps you analyze how many users return to your app, and how often they perform particular tasks or achieve goals. For example, if you run a game site, you could compare the numbers of users who return to the site after losing a game with the number who return after winning. This knowledge can help you improve both your user experience and your business strategy.
 
@@ -402,7 +402,7 @@ In this task, you will use Application Insights to investigate performance of th
 12.  Now click on **Retention Analysis Workbook**, review the **Overall Retention** chart, and close the blade.
 13.  On the **Workbooks** blade, in the vertical menu on the left side, in the **Monitoring** section, select **User Impact Analysis** under Usage.
 
-     ![Azure DevOps](images/mod17_img11.png)
+     ![Azure DevOps](images/mod17_img11-1.png)
 
      > **Note**: Impact analyzes how web site properties, such as load times, influence conversion rates for various parts of your app. To put it more precisely, it discovers how any dimension of a page view, custom event, or request affects page views or custom events.
 
