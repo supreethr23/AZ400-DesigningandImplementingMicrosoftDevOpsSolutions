@@ -204,7 +204,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 1. Specify the following parameters for this task:
     - Download Artifacts produced by: **Current Build**
     - Download Type: **Specific Artifact**
-    - Artifact Name: **select "Website" from the list**
+    - Artifact Name: **Enter "Website" in the text box**
     - Destination Directory: **$(Build.ArtifactStagingDirectory)**
 1. Click **Add**.
 1. The snippet of added code should look similar to below:
