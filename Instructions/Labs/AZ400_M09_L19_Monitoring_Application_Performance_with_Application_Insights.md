@@ -27,24 +27,24 @@ After you complete this lab, you will be able to:
 
 3. On the next page accept defaults and click on continue.
 
-    ![Azure DevOps](images/400-3.png)
+    ![Azure DevOps](images/400-3-1.png)
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-    ![Azure DevOps](images/m1-2.png)
+    ![Azure DevOps](images/m1-2-1.png)
 
 5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
-    ![Azure DevOps](images/agent1.png)
+    ![Azure DevOps](images/agent1-1.png)
 
 6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
 
-    ![Azure DevOps](images/agent3.png)
-    ![Azure DevOps](images/agent4.png)    
+    ![Azure DevOps](images/agent3-1.png)
+    ![Azure DevOps](images/agent4-1.png)    
 
 7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
 
-    ![Azure DevOps](images/agent2.png)
+    ![Azure DevOps](images/agent2-1.png)
 
 ### Exercise 0: Configure the lab prerequisites
 
@@ -70,7 +70,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 5.  In the list of templates, select the **PartsUnlimited** template and click **Select Template**.
 6.  Back on the **Create New Project** page, click **Create Project**
 
-    ![Azure DevOps](images/mod17_img3.png)
+    ![Azure DevOps](images/mod17_img3-1.png)
 
     > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your DevOps organization, delete the project, and try again.
 
