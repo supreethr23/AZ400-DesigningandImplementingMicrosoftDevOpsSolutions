@@ -214,32 +214,22 @@ In this task, you will modify the main template to reference the template module
 1. From a **Bash** session in the Cloud Shell pane, run the following to perform a deployment by using a newly uploaded template:
 
    ```bash
-   az deployment group what-if --name az400m06l15[Deployment-ID] --resource-group az400m06l15-RG --template-file main.bicep
-   ```
-    > **Note**: Retrieve the [Deployment-ID] specified in the environment details page from the lab guide, and substitute it into the command mentioned above.
-
-1. When prompted to provide the value for 'adminUsername', type **Student** and press the **Enter** key.
-1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key. (Password typing will not be shown)
-1. Review the result of this command which validates your deployment and let's you know if there is any errors in your templates. This is very valuable especially when deploying templates with many resources and in business critical cloud environments.
-
-1. From a **Bash** session in the Cloud Shell pane, run the following to perform a deployment by using a newly uploaded template:
-
-   ```bash
    LOCATION='<region>'
    ```
-    > **Note**: replace the name of the region with a region close to your location example : "eastus". If you do not know what locations are available, run the `az account list-locations -o table` command.
+    > **Note**: replace the name of the region with a region close to your location example : **"eastus"**. If you do not know what locations are available, run the `az account list-locations -o table` command.
   
    ```bash
    az group create --name az400m06l15-RG --location $LOCATION
    ```
 
    ```bash   
-   az deployment group create --name az400m06l15deployment --resource-group az400m06l15-RG --template-file main.bicep
+   az deployment group create --name az400m06l15[Deployment-ID] --resource-group az400m06l15-RG --template-file main.bicep
    ```
     > **Note**: Retrieve the [Deployment-ID] specified in the environment details page from the lab guide, and substitute it into the command mentioned above.
 
 1. When prompted to provide the value for 'adminUsername', type **Student** and press the **Enter** key.
 1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key. (Password typing will not be shown)
+   > **Note**: It will take around 5 minutes to get output.
 
 1. If you receive errors when running the above command to deploy the template, try the following:
 
