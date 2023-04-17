@@ -38,25 +38,6 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/agent1.png)
 
-6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
-
-    ![Azure DevOps](images/agent3.png)
-    ![Azure DevOps](images/agent4.png)    
-
-7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
-
-    ![Azure DevOps](images/agent2.png)
-    
-8. In **Organization Settings**, go to section **Security** and click **Policies**.
-
-9. Toggle the switch to **On** for **Third-party application access via OAuth**
-    > Note: The OAuth setting helps enable tools such as the DemoDevOpsGenerator to register extensions. Without this, several labs may fail due to a lack of the required extensions.
-    
-10. Toggle the switch to **On** for **Allow public projects** and click on **Save** on *change policy* setting pop-up.
-    > Note: Extensions used in some labs might require a public project to allow using the free version.   
-
-    ![Azure DevOps](images/lab-4-4.png)
-
 ### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
@@ -165,7 +146,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     | Enter authentication type (press enter for PAT) | **Enter** |
     | Enter personal access token | The access token you recorded earlier in this task |
     | Enter agent pool (press enter for default) | **az400m05l05a-pool** |
-    | Enter agent name | **az400m05-vm0** |
+    | Enter agent name (press enter for labvm-<inject key="DeploymentID" enableCopy="false"/> | **Enter** |
     | Enter work folder (press enter for _work) | **Enter** |
     | **(Only if shown)** Enter Perform an unzip for tasks for each step. (press enter for N) | **WARNING**: only press **Enter** if the message is shown|
     | Enter run agent as service? (Y/N) (press enter for N) | **Y** |
@@ -196,18 +177,20 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     ```yaml
     name: az400m05l05a-pool
     demands:
-    - agent.name -equals az400m05-vm0
+    - agent.name -equals Agentname
     ```
+   > **Note**: Replace Agentname with **labvm-<inject key="DeploymentID" enableCopy="false"/>**
+    
    > **WARNING**: Be careful with copy/paste, make sure you have same indentation shown above.
        
-1. For `Task: NugetInstaller@0`, click on **Settings (link that is displaying above the task in grey colour)**, modify **Version of NuGet.exe to install** > **4.0.0**  and click on **Add**. 
+1. For `Task: NugetInstaller@0`, click on **Settings (link that is displaying above the task in grey colour)**, modify **Version of NuGet.exe to install** > **4.0.0**  and also **check** the *Always download the latest version checkbox* and  click on **Add**. 
 
 1.  On the **PartsUnlimited** edit pane, in the upper right corner of the pane, click **Save** and, on the **Save** pane, click **Save** again. This will automatically trigger the build based on this pipeline. 
 
 1.  In the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**.
 
 1.  On the **Recent** tab of the **Pipelines** pane, click the **PartsUnlimited** entry, on the **Runs** tab of the **PartsUnlimited** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
-    > **Note**: If the Pipeline requires any permission to run, provide the permit.
+    
 
 #### Review
 
