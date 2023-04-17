@@ -124,7 +124,7 @@ In this task, you will configure the Azure Pipelines project based on the fork o
 6.  click **Save and run** to save the pipeline and queue a new build.
 7.  On the **Save and run** pane, accept the default settings and click **Save and run**.
 
-  ![Azure DevOps](images/mod6_20.png)
+  ![Azure DevOps](images/az400-6-2.png)
 
    > **Note**: For the purposes of this lab, you can commit this new file directly to the master branch. 
 
