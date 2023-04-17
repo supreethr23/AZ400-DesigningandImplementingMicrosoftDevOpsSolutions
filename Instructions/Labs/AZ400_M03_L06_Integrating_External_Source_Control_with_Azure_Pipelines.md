@@ -111,8 +111,18 @@ In this task, you will configure the Azure Pipelines project based on the fork o
 
    > **Note**: The build pipeline is defined as **YAML**, a markup syntax well-suited to defining processes like this because it allows you to manage the configuration of the pipeline like any other file in the repo. It's a pretty simple template that identifies the pool to pull a VM from for building, the process to install Node.js for building, and the actual build itself. 
 
-5.  On the **Review your pipeline YAML**, click **Save and run** to save the pipeline and queue a new build.
-6.  On the **Save and run** pane, accept the default settings and click **Save and run**.
+5.  On the **Review your pipeline YAML**, replace line *vmImage: ubuntu-latest* designating the target agent pool the following content, designating the newly created self-hosted agent pool:
+  ```yaml
+    name: az400m05l05a-pool
+    demands:
+    - agent.name -equals Agentname
+   ```
+   > **Note**: Replace Agentname with **labvm-<inject key="DeploymentID" enableCopy="false"/>**
+   
+  ![Azure DevOps](images/az400-6-1.png)  
+  
+6.  click **Save and run** to save the pipeline and queue a new build.
+7.  On the **Save and run** pane, accept the default settings and click **Save and run**.
 
   ![Azure DevOps](images/mod6_20.png)
 
@@ -120,7 +130,7 @@ In this task, you will configure the Azure Pipelines project based on the fork o
 
    > **Note**: It will take a moment for the pipeline to complete. During this time it will configure the build agent, pull in the source from GitHub, and build it according to the pipeline definition.
 
-7.  On the **Summary** tab of the build job's pane, verify that the build completed successfully.
+8.  On the **Summary** tab of the build job's pane, verify that the build completed successfully.
 
 ### Task 3: Modifying a YAML build pipeline definition
 
