@@ -93,6 +93,10 @@ In this task, you will create and configure a build pipeline by using a predefin
 
   > **Note**: Note that there are many options that should cover all of our mainstream scenarios. For our purposes here, we'll just build the project using the baseline ASP.NET template. The process for this build pipeline is easy to follow. After getting the source, Azure DevOps will use NuGet to restore any dependent packages. Then, the project will be built and tested. The results will then be published to the configured target.
 
+10. On the **Tasks** tab, Click on **Pipelines** task , and select the Agent pool  **az400m05l05a-pool** from the drop down list.
+
+   ![Azure DevOps](images/az400-4-5png)
+
 10. On the **Tasks** tab, look for **test Assemblies** task , right-click and **disable selected task(s)**.
 
    ![Azure DevOps](images/mod6-7.1.png)
