@@ -190,7 +190,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 1.  In the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**.
 
 1.  On the **Recent** tab of the **Pipelines** pane, click the **PartsUnlimited** entry, on the **Runs** tab of the **PartsUnlimited** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
-    > **Note**: If the Pipeline requires any permission to run, provide the permit.
+    
 
 #### Review
 
