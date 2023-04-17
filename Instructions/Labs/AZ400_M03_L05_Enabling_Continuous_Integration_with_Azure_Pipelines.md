@@ -165,7 +165,7 @@ In this task, you will trigger a continuous integration build.
     > **Note**: This will automatically trigger a build. 
 
 6.  In the vertical navigational pane, select the **Pipelines** section and ensure that the **Pipelines** view is displayed.
-7.  On the **Pipelines** pane, verify that it contains the entry representing a new build (note that its number contains the trailing **.2**) which was triggered by your change. 
+7.  On the **Pipelines** pane, verify that it contains the entry representing a new build, which was triggered by your change. 
 8.  Click the build entry to display its details and verify that it completed successfully. 
 
 #### Review
