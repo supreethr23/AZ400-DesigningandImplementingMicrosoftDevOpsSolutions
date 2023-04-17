@@ -95,7 +95,7 @@ In this task, you will create and configure a build pipeline by using a predefin
 
 10. On the **Tasks** tab, Click on **Pipelines** task , and select the Agent pool  **az400m05l05a-pool** from the drop down list.
 
-   ![Azure DevOps](images/az400-4-5png)
+   ![Azure DevOps](images/az400-4-5.png)
 
 10. On the **Tasks** tab, look for **test Assemblies** task , right-click and **disable selected task(s)**.
 
