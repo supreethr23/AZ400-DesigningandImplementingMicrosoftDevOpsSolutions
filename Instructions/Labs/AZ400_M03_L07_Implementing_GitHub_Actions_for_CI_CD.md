@@ -83,7 +83,7 @@ In this exercise, you will create an Azure Service Principal to authorize GitHub
 
 In this task, you will create the Azure Service Principal used by GitHub to deploy the desired resources. As an alternative, you could also use [OpenID connect in Azure](https://docs.github.com/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure), as a secretless authentication mechanism.
 
-1. On your lab computer, in a browser window, open the Azure Portal (https://portal.azure.com/).
+1. On your lab computer, in a browser window, open the  [Azure Portal]([https://portal.azure.com/]).
 1. In the portal, look for **Resource Groups** and click on it.
 1. Click on **+ Create** to create a new Resource Group for the exercise.
 1. On the **Create a resource group** tab, give the following name to your Resource Group: **rg-az400-eshopeonweb-NAME** (replace NAME for some unique alias). Click on **Review+Create > Create**.
