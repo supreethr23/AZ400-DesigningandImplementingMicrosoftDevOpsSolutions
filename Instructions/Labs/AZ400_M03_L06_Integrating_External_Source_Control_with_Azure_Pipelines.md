@@ -23,11 +23,26 @@ After you complete this lab, you will be able to:
 
 ## Instructions
 
+#### Set up an Azure DevOps organization. 
+
+1. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
+
+    ![Azure DevOps](images/agent1-1.png)
+
+1. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
+
+    ![Azure DevOps](images/agent3-1.png)
+    ![Azure DevOps](images/agent4-1.png)    
+
+1. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+
+    ![Azure DevOps](images/agent2-1.png)
+
 #### Set up a GitHub account
 
 1. If you already have a GitHub account that you can use for this lab, else follow the instructions to create an account.
 
-3. Navigate to the https://github.com/. Click on Signup.
+2. Navigate to the https://github.com/. Click on Signup.
    
 3. Provide the email address and click on continue.
 
@@ -111,26 +126,16 @@ In this task, you will configure the Azure Pipelines project based on the fork o
 
    > **Note**: The build pipeline is defined as **YAML**, a markup syntax well-suited to defining processes like this because it allows you to manage the configuration of the pipeline like any other file in the repo. It's a pretty simple template that identifies the pool to pull a VM from for building, the process to install Node.js for building, and the actual build itself. 
 
-5.  On the **Review your pipeline YAML**, replace line *vmImage: ubuntu-latest* designating the target agent pool the following content, designating the newly created self-hosted agent pool:
-  ```yaml
-    name: az400m05l05a-pool
-    demands:
-    - agent.name -equals Agentname
-   ```
-   > **Note**: Replace Agentname with **labvm-<inject key="DeploymentID" enableCopy="false"/>**
-   
-  ![Azure DevOps](images/az400-6-1.png)  
-  
-6.  click **Save and run** to save the pipeline and queue a new build.
-7.  On the **Save and run** pane, accept the default settings and click **Save and run**.
+5. On the **Review your pipeline YAML**, click **Save and run** to save the pipeline and queue a new build.
+6. On the **Save and run** pane, accept the default settings and click **Save and run**.
+
+    > **Note**: For the purposes of this lab, you can commit this new file directly to the master branch.
+
+    > **Note**: It will take a moment for the pipeline to complete. During this time it will configure the build agent, pull in the source from GitHub, and build it according to the pipeline definition.
 
   ![Azure DevOps](images/az400-6-2.png)
 
-   > **Note**: For the purposes of this lab, you can commit this new file directly to the master branch. 
-
-   > **Note**: It will take a moment for the pipeline to complete. During this time it will configure the build agent, pull in the source from GitHub, and build it according to the pipeline definition.
-
-8.  On the **Summary** tab of the build job's pane, verify that the build completed successfully.
+7.  On the **Summary** tab of the build job's pane, verify that the build completed successfully.
 
 ### Task 3: Modifying a YAML build pipeline definition
 
@@ -235,9 +240,13 @@ In this task, you will add a build status badge to your GitHub repo.
 6.  In the list of repo files, click **README<nolink>.md** and, on the **master/calculator/README.md** page, in the upper right corner of the pane displaying the file content, click the **Edit this file** icon in the shape of a pencil. 
 7.  Add an extra line above line 6 and paste into it the content of Clipboard.
 8.  Scroll to the bottom of the page, replace the default commit message with **Add an Azure Pipelines status badge**, and click **Commit changes**. 
-
+   
     > **Note**: You now have a dynamic build status badge on your project's front page that allows everyone to know that you're effectively managing your project.
-
+   
+9.  Navigate to Azure Devops and verify the build got succeded and click on **Pipelines** from the left navigation pane and click on ellipses and select **Rename/move** and rename the existing pipeline to **calculator**.
+    
+       ![Azure DevOps](images/az400-6-6.png)
+   
 #### Review
 
 In this lab, you integrated a GitHub project with Azure DevOps by using the new Azure Pipelines integration from the Marketplace.
