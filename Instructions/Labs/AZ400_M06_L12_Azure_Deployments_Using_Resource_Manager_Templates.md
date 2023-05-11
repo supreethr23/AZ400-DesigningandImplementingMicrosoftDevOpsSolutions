@@ -1,4 +1,4 @@
-# Lab 15: Azure Deployments using Azure Bicep templates
+# Lab 12: Azure Deployments using Azure Bicep templates
 # Student lab manual
 
 ## Lab overview
