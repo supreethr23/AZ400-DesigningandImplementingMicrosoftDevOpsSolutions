@@ -1,4 +1,4 @@
-# Lab 11: Configuring Pipelines as Code with YAML
+# Lab 08: Configuring Pipelines as Code with YAML
 # Student lab manual
 
 ## Lab overview
