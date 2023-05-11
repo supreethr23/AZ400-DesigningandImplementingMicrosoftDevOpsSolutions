@@ -1,4 +1,4 @@
-# Lab 14: Enable Dynamic Configuration and Feature Flags
+# Lab 11: Enable Dynamic Configuration and Feature Flags
 # Student lab manual
 
 ## Lab requirements
