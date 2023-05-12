@@ -1,4 +1,4 @@
-# Lab 12: Setting Up and Running Functional Tests
+# Lab 09: Setting Up and Running Functional Tests
 # Student lab manual
 
 ## Lab overview

@@ -1,4 +1,4 @@
-# Lab 07: Implementing GitHub Actions by using DevOps Starter
+# Lab 05: Implementing GitHub Actions for CI/CD
 # Student lab manual
 
 ## Lab overview

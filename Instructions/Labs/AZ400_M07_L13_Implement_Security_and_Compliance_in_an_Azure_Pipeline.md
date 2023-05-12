@@ -1,4 +1,4 @@
-# Lab 16: Implement Security and Compliance in an Azure Pipeline
+# Lab 13: Implement Security and Compliance in an Azure Pipeline
 # Student lab manual
 
 ## Lab overview

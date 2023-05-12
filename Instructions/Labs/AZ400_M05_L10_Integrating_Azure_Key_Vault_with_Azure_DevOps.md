@@ -1,4 +1,4 @@
-# Lab 13: Integrating Azure Key Vault with Azure DevOps
+# Lab 10: Integrating Azure Key Vault with Azure DevOps
 # Student lab manual
 
 ## Lab overview
