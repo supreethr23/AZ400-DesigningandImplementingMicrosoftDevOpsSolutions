@@ -29,13 +29,13 @@ In this task, you will install Visual Studio Code. If you have already implement
 
 1. If you don't have Visual Studio Code installed yet, from your lab computer, start a web browser, navigate to the [Visual Studio Code download page](https://code.visualstudio.com/), download it, and install it.
 
-### Exercise 1: Author and deploy Azure Resource Manager templates
+### Exercise 1: Author and deploy Bicep templates
 
 In this lab, you will create an Azure Bicep template and a template module. You will then modify the main deployment template to use the template module and update the dependencies, and finally deploy the templates to Azure.
 
 #### Task 1: Create Azure Bicep template
 
-In this task, you will use Visual Studio Code to create a Resource Manager template
+In this task, you will use Visual Studio Code to create a Azure Bicep template
 
 1. From your lab computer, start Visual Studio Code, in Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Preferences**, in the cascading menu, select **Extensions**, in the **Search Extensions** textbox, type **Bicep**, select the one published by Microsoft, and click **Install** to install the Azure Bicep language support.
 
