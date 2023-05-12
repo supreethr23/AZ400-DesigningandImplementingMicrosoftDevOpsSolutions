@@ -36,11 +36,11 @@ After you complete this lab, you will be able to:
 
 ### Exercise 0: Configure the lab prerequisites
 
-In this exercise, you will set up the prerequisites for the lab, which consist of the preconfigured **Tailwind Traders** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
+In this exercise, you will set up the prerequisites for the lab, which consist of the preconfigured **EShopOnWeb** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
 
 #### Task 1: Configure the team project
 
-In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Tailwind Traders** template.
+In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **EShopOnWeb** template.
 
 1.  In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. 
 
@@ -48,7 +48,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 1.  Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
 1.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
-1.  On the **Create New Project** page, click on **Choose Template** and select the **Tailwind Traders** template and click **Select Template**.
+1.  On the **Create New Project** page, click on **Choose Template** and select the **EShopOnWeb** template and click **Select Template**.
 1.  In the **New Project Name** textbox, type **Sharing Team Knowledge using Azure Project Wikis**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
 1.  Back on the **Create New Project** page, if prompted to install a missing extension, select the checkbox below the **ARM Outputs** and click **Create Project**.
 
