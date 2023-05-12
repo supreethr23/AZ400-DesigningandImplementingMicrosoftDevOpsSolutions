@@ -112,7 +112,7 @@ Each new project is configured with a default team, which name matches the proje
 1. Select **EShopOnWeb\Sprint 1** and click **Save and close**. Note that this first sprint will show up in the list of iterations, but the Dates are not set yet. 
 1. Select **Sprint 1** and click the **ellipsis (...)**. From the context menu, select **Edit**.
 
- ![In the "interations" tab, click on "Edit"](images/m1/az-400_m01_14.png)
+    ![In the "interations" tab, click on "Edit"](images/m1/az-400_m01_14.png)
 
     > **Note**: Specify the Start Date as the first work day of last week, and count 3 full work weeks for each sprint. For example, if March 6 is the first work day of the sprint, it goes until March 24th. Sprint 2 starts on March 27, which is 3 weeks out from March 6
 
