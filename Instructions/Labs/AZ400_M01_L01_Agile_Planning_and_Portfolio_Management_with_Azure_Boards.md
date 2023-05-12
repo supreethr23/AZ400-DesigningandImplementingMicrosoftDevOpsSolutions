@@ -54,7 +54,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
  
 1. On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb** (1), in the **Select organization** (2) dropdown list, select your Azure DevOps organization, and then click **Choose template** (3).
 
-   ![Azure DevOps](images/az-400_m01_05.png)
+   ![Azure DevOps](images/m1/az-400_m01_05.png)
 
 1. In the list of templates, locate the **PartsUnlimited** (1) template and click **Select Template** (2).
 
@@ -62,7 +62,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 1. Back on the **Create New Project** page, click **Create Project**
 
-    ![Azure DevOps](images/az-400_m01_07.png)
+    ![Azure DevOps](images/m1/az-400_m01_07.png)
 
     > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your Azure DevOps organization, delete the project, and try again.
 
