@@ -447,8 +447,6 @@ All processes are shared within the same organization. That is, one or more team
 1. Return to the **All processes** root using the breadcrumb path at the top of the **All processes > Customized Scrum > Product Backlog Item** pane.
 1. On the **All processes** pane, select the **Scrum** entry.
 
-    ![On the "All processes" pane, select the "Scrum" entry.](images/m1/scrum_v1.png)
-
     > **Note**: Our current project uses **Scrum**.
 
 1. On the **All processes > Scrum** pane, select the **Projects** tab.
@@ -495,8 +493,6 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 1. On the **Configuration** pane, click **Close** without making any changes.
 1. Back on the **Add Widget** pane, in the **Search** textbox, type **sprint** again to find existing widgets that focus on sprints. In the list of results, select **Sprint Capacity** and click **Add**.
 1. In the **Dashboard** view, at the top of the pane, click **Done Editing**.
-
-    ![Review finished dashboard should include both widgets](images/m1/EShop-WEB-finished_dashboard_v1.png)
 
     > **Note**: You can now review two important aspects of your current sprint on your custom dashboard.
 
