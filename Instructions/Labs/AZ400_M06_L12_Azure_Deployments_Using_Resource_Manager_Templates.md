@@ -37,26 +37,24 @@ In this lab, you will create an Azure Bicep template and a template module. You 
 
 In this task, you will use Visual Studio Code to create a Azure Bicep template
 
-1. From your lab computer, start Visual Studio Code, in Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Preferences**, in the cascading menu, select **Extensions**, in the **Search Extensions** textbox, type **Bicep**, select the one published by Microsoft, and click **Install** to install the Azure Bicep language support.
+1. From the Jump VM, start Visual Studio Code.
 
-     ![visual studio"](images/extention.png)
-  
+     ![visual studio"](images/vs.png)
+   
+3. select **Extensions**, in the **Search Extensions** textbox, type **Bicep**, select the one published by Microsoft, and click **Install** to install the Azure Bicep language support.
+     
+     ![visual studio"](images/vsstudio.png)
+     
      ![visual studio"](images/AZ-400-M6.png)
   
-  
-1. In a web browser, connect to **<https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows/main.bicep>**. Click on **Raw** option for the file. Copy the contents of the code window and paste it into Visual Studio Code editor.
+1. In a web browser, connect to **<https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows/main.bicep>**. Click on **Raw** option for the file and Click on **ctrl + s** from your keybord to save the file in the **C:\\templates** folder.
 
       ![visual studio"](images/raw.png)
+      
+      ![visual studio"](images/savetemp.png)
 
     > **Note**: Rather than creating a template from scratch we will use one of the [Azure Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/) named **Deploy a simple Windows template VM**. The templates are downloadable the templates from GitHub - [vm-simple-windows](https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows).
-
-1. On your lab computer, open File Explorer and create the following local folder that will serve to store templates:
-
-   - **C:\\templates**
-   
-     ![visual studio"](images/newfolder.png)
-   
-1. Switch back to Visual Studio Code window with our main.bicep template, click the **File** top level menu, in the dropdown menu, click **Save as**, and save the template as **main.bicep** in the newly created local folder **C:\\templates**.
+    
 
 1. Review the template to get a better understanding of its structure. There are five resource types included in the template:
 
