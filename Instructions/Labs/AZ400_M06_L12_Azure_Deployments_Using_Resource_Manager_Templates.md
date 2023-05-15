@@ -41,7 +41,7 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
 
      ![visual studio"](images/vs.png)
    
-3. select **Extensions**, in the **Search Extensions** textbox, type **Bicep**, select the one published by Microsoft, and click **Install** to install the Azure Bicep language support.
+1. select **Extensions**, in the **Search Extensions** textbox, type **Bicep**, select the one published by Microsoft, and click **Install** to install the Azure Bicep language support.
      
      ![visual studio"](images/vsstudio.png)
      
