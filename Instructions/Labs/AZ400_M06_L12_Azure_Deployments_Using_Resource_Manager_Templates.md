@@ -47,7 +47,7 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
      
      ![visual studio"](images/AZ-400-M6.png)
   
-1. In a web browser, connect to **<https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows/main.bicep>**. Click on **Raw** option for the file and Click on **ctrl + s** from your keybord to save the file in the **C:\\templates** folder.
+1. In a web browser, connect to **<https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows/main.bicep>**. Click on **Raw** option for the file and Click on **ctrl + S** from your keybord and save the file in the **C:\\templates** folder.
 
       ![visual studio"](images/raw.png)
       
