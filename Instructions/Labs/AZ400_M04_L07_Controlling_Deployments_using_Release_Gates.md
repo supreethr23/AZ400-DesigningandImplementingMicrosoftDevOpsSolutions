@@ -234,14 +234,14 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
        ![portal](images/failedreupdated.png)
      
-7.  On the **Create an Alert Rule** blade, in the **Condition** section, leave the **Threshold** set to **Static**, validate the other default settings as follows:
-- Aggregation Type: Count
-- Operator: Greater Than
-- Unit: Count
+7.  On the **Create an Alert Rule** blade, in the **Condition** section, leave the **Threshold** set to **Static(1)**, validate the other default settings as follows:
+- Aggregation Type: Count(2)
+- Operator: Greater Than(3)
+- Unit: Count(4)
 
      ![portal](images/cond.png)
     
-8. In the **Threshold value** textbox, type **0**, and click on **Next:Actions**. Don't make any changes in the **Actions** settings blade, and define the following parameters under the **Details** section:
+8. In the **Threshold value(5)** textbox, type **0**, and click on **Next:Actions**. Don't make any changes in the **Actions** settings blade, and define the following parameters under the **Details** section:
 
     | Setting | Value |
     | --- | --- |
