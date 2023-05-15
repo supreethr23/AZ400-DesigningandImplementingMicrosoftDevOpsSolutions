@@ -28,7 +28,7 @@ After you complete this lab, you will be able to:
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/c434f3d6-73f0-4bd8-8fde-666e8c12aec8)
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/b9ef3324-1fd3-4d8d-8cb3-6e081b352620)
 
 ### Exercise 0: Configure the lab prerequisites
 
