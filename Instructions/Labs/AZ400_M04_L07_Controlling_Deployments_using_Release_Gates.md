@@ -37,9 +37,27 @@ After you complete this lab, you will be able to:
 
 #### Set up an Azure DevOps organization. 
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
 
-1. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+   ![Azure DevOps](images/azureportal-lab7.png)
+   
+1. If not Sign-in, then on the **Sign into Microsoft Azure** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+   
+1. Now enter the following **Password** and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
+   
+1. If you see the pop-up **Stay Signed in?**, click No
+
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+1. If **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+
+1. Now open a **New Tab** navigate to https://go.microsoft.com/fwlink/?LinkId=307137.
+
+  >**Note:** If not **login**, use previously used **Username and Password** to login.
+    
+1. On the.
 
 1. On the next page accept defaults and click on continue.
 
@@ -52,7 +70,8 @@ After you complete this lab, you will be able to:
 1. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
     ![Azure DevOps](images/agent1updated.png)
-1. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
+    
+1. In the **Organization Setting** window on the left menu click on **Billing(1)** and select **Setup Billing(2)**, It will automatically select your **azure subscription(3)** then click on **Save(4)**.
 
     ![Azure DevOps](images/billing.png)    
 
@@ -60,7 +79,7 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/billingsetup.png)
 
-### Exercise 0: Configure the lab prerequisites
+### Exercise 1: Configure the lab prerequisites
 
 > **Note**: If you already created this project during previous labs, this exercise can be skipped.
 
@@ -70,15 +89,15 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **+ Create Project**.
+1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb(1)** and leave the other fields with defaults. Click on **+ Create Project(3)**.
 
-    ![Create Project](images/createproject.png)
+    ![Create Project](images/createprojectupdated.png)
 
 #### Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos(1)>Files(2)** , **Import a Repository**. Select **Import(3)**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git (4) and click **Import(5)**:
 
     ![Import Repository](images/import-repoupdated.png)
 
@@ -113,7 +132,7 @@ In this task, you will add a YAML build definition to the existing project.
 1. In the **Selecting an existing YAML File** blade, specify the following parameters:
    
 - Branch: **main**
-- Path: **.ado/eshoponweb-ci.yml**
+- Path: Select **/.ado/eshoponweb-ci.yml** from the drop-down.
 
    ![Import Repository](images/newpip4.png)
   
@@ -134,7 +153,7 @@ In this task, you will add a YAML build definition to the existing project.
 
 In this task, you will create two Azure web apps representing the **Canary** and **Production** environments, into which you'll deploy the application via Azure Pipelines.
 
-1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
+1. Switch back to the Azure portal.
 1. In the Azure portal, click the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
 
       ![Clouldshell](images/cs.png)
@@ -147,12 +166,14 @@ In this task, you will create two Azure web apps representing the **Canary** and
     
      ![Clouldshell](images/bashstr.png)
 
-1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a resource group (replace the `<region>` variable placeholder with the name of the Azure region that will host the two Azure web apps, for example 'westeurope' or 'centralus' or any other available region of your choice):
+1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a resource group. 
 
-    > **Note**: possible locations can be found by running the following command, use the **Name** on `<region>` : `az account list-locations -o table`
+   >**Important:** Replace the `<region>` variable placeholder with the name of the Azure region that will host the two Azure web apps, for example **westeurope** or **centralus** or **any other available region** of your choice):
+
+    >**Note**: possible locations can be found by running the following command, use the **Name** on `<region>` : `az account list-locations -o table`
 
     ```bash
-    REGION='centralus'
+    REGION='westeurope'
     RESOURCEGROUPNAME='az400m04l09-RG'
     az group create -n $RESOURCEGROUPNAME -l $REGION
     ```
@@ -172,7 +193,9 @@ In this task, you will create two Azure web apps representing the **Canary** and
      az webapp create -g $RESOURCEGROUPNAME -p $SERVICEPLANNAME -n RGATES$SUFFIX-Prod
      ```
 
-    > **Note**: Record the name of the Canary web app. You will need it later in this lab.
+    > **Note:** Record the name of the Canary web app. You will need it later in this lab.
+    
+    > **Note:** To record the name of Canary web app, Nevigate to 
     
        ![Clouldshell](images/canaryaap.png)
 
@@ -246,7 +269,7 @@ In this task, you will create two Azure web apps representing the **Canary** and
     | --- | --- |
     | Severity | **2- Warning(1)** |
     | Alert rule name | **RGATESCanary_FailedRequests(2)** |
-    | Advanced Options: Automatically resolve alerts | **cleared(3)(4)** |
+    | Advanced Options: Automatically resolve alerts | **Unchecked (3)(4)** |
     
       ![portal](images/deatailsupdated.png)
 
@@ -272,11 +295,11 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 1. From the **Select a template** window, **choose** **Azure App Service Deployment** (Deploy your application to Azure App Service. Choose from Web App on Windows, Linux, containers, Function Apps, or WebJobs) under the **Featured** list of templates.    
 1. Click **Apply**.
 
-   ![Azure devops](images/tem.png)
+    ![Azure devops](images/tem.png)
    
 1. From the **Stage** window appearing, update the default "Stage 1" Stage Name to **Canary**. Close the popup window by using the **X** button. You are now in the graphical editor of the Release Pipeline, showing the Canary Stage.
 
-   ![Azure devops](images/Canary.png)
+    ![Azure devops](images/canary.png)
    
 1. Hover the mouse over the Canary Stage, and click the **Clone** button, to copy the Canary Stage to an additional Stage. Name this Stage **Production**.
 
