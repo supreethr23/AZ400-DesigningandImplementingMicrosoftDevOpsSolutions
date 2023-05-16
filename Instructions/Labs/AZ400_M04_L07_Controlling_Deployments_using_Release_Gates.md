@@ -193,11 +193,7 @@ In this task, you will create two Azure web apps representing the **Canary** and
      az webapp create -g $RESOURCEGROUPNAME -p $SERVICEPLANNAME -n RGATES$SUFFIX-Prod
      ```
 
-    > **Note:** Record the name of the Canary web app. You will need it later in this lab.
-    
-    > **Note:** To record the name of Canary web app, Nevigate to 
-    
-       ![Clouldshell](images/canaryaap.png)
+    > **Note:** Record the name of the Canary web app. You will need it later in this lab.    Canary web app should look like : **RGATES495017526-Canary**
 
 1. Wait for the Web App Services Resources provisioning process to complete and close the **Cloud Shell** pane.
 
@@ -230,14 +226,19 @@ In this task, you will create two Azure web apps representing the **Canary** and
 1. Wait for the provisioning process to complete.
 1. In the Azure portal, navigate to the resource group **az400m04l09-RG** you created in the previous task.
 1. In the list of resources, click the **Canary** web app.
-1. On the **Canary** web app page, in the vertical menu on the left, in the **Settings** section, click **Application Insights*     
-1. On the **Application Insights** blade, click **Turn on Application Insights**.
+
+     ![portal](images/canaryaap.png)
+  
+3. On the **Canary** web app page, in the vertical menu on the left, in the **Settings** section, click **Application Insights*     
+4. On the **Application Insights** blade, click **Turn on Application Insights**.
 
      ![portal](images/ainsetincananryupdatd.png)
    
-1. In the **Change your resource** section, click the **Select existing resource** option, in the list of existing resources, select the newly created Application Insight resource, click **Apply** and, when prompted for confirmation, click **Yes**.
+1. In the **Change your resource** section, scroll down and click on **Select existing resource(1)** option, in the list of existing resources, select the newly created **Application Insight resource(2)**, click **Apply(3)**.
 
     ![portal](images/ainsetincananry2.png)
+
+1. When prompted for confirmation, click on **Yes**.
   
     ![portal](images/ainsetincananry3.png)
 
@@ -252,18 +253,19 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
        ![portal](images/alert.png)
        
-1.  On the **Select a signal** blade, in the **Search by signal name** textbox, type **Requests**. From the list of results, select **Failed Requests**. 
+1. O n the **Create an alert rule** blade, in the **Select a name** textbox, Select  **Failed Requests(1)** from the drop-down. 
 
-       ![portal](images/failedreupdated.png)
+      ![portal](images/failedreupdated.png)
      
 1.  On the **Create an Alert Rule** blade, in the **Condition** section, leave the **Threshold** set to **Static(1)**, validate the other default settings as follows:
 - Aggregation Type: Count(2)
 - Operator: Greater Than(3)
 - Unit: Count(4)
+- Threshold value: type 0(5)
 
      ![portal](images/cond.png)
     
-1. In the **Threshold value(5)** textbox, type **0**, and click on **Next:Actions**. Don't make any changes in the **Actions** settings blade, and define the following parameters under the **Details** section:
+1. Click on **Next:Actions**. Don't make any changes in the **Actions** settings blade, and define the following parameters under the **Details** section:
 
     | Setting | Value |
     | --- | --- |
@@ -309,19 +311,22 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
      ![Azure devops](images/capro.png)
 
-1. On the **Pipeline** tab, select the **Add an Artifact** rectangle, and select the **eShopOnWeb** in the **Source (build pipeline)** field. Click **Add** to confirm the selection of the artifact.
+1. On the **Pipeline** tab, select the **Add an Artifact** rectangle.
 
-    ![Azure devops](images/artifact.png)
+     ![Azure devops](images/artifact.png)
+     
+1. Select the **eShopOnWeb** in the **Source (build pipeline)** field. Click **Add** to confirm the selection of the artifact.
     
-    ![Azure devops](images/artifactset.png)
+     ![Azure devops](images/artifactset.png)
    
 
-1. From the **Artifact** rectangle, notice the **Continuous Integration Trigger** (lightning bolt) appearing. Click it to open the **Continuous deployment trigger** settings. Click the continuous deployment trigger to toggle the switch to enable it. Leave all other settings at default and close the **Continuous deployment trigger** pane, by clicking the **x** mark in its upper right corner.
+1. From the **Artifact** rectangle, notice the **Continuous Integration Trigger** (lightning bolt) appearing. 
 
     ![Azure devops](images/contin.png)
     
-    ![Azure devops](images/contin1.png)
-    
+1. Click it to open the **Continuous deployment trigger** settings. Click the continuous deployment trigger to toggle the switch to enable it. Leave all other settings at default and close the **Continuous deployment trigger** pane, by clicking the **x** mark in its upper right corner.
+
+    ![Azure devops](images/contin1.png)  
    
 1. Within the **Canary Environments** stage, click the **1 job, 2 tasks** label and review the tasks within this stage.
      
@@ -334,7 +339,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
       ![Azure devops](images/auth.png)
 
 1. Confirm the App Type is set to "Web App on Windows". Next, in the **App Service name** dropdown list, select the name of the **Canary** web app.
-1. Select the Task **Deploy Azure App Service**. In the **Package or Folder** field, update the default value of "$(System.DefaultWorkingDirectory)/\*\*/\*.zip" to "$(System.DefaultWorkingDirectory)/\*\*/Web.zip"
+1. Select the Task **Deploy Azure App Service**. In the **Package or Folder** field, update the default value of "$(System.DefaultWorkingDirectory)/\*\*/\*.zip" to **"$(System.DefaultWorkingDirectory)/\*\*/Web.zip"**
 
     > notice an exclamation mark next to the Tasks tab. This is expected, as we need to configure the settings for the Production Stage.
     
@@ -342,7 +347,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
 1. On the **All pipelines > New Release Pipeline** pane, navigate to the **Pipeline** tab, and this time, within the **Production** Stage, click the **1 job, 2 tasks** label. Similar to the Canary stage earlier, complete the pipeline settings. Under the Tasks tab / Production Deployment process, in the **Azure subscription** dropdown list, select the Azure subscription you used for the **Canary Environment** stage, shown under **Available Azure Service connections**, as we already created the service connection before when authorizing the subscription use.
 1. In the **App Service name** dropdown list, select the name of the **Prod** web app.
-1. Select the Task **Deploy Azure App Service**. In the **Package or Folder** field, update the default value of "$(System.DefaultWorkingDirectory)/\*\*/\*.zip" to "$(System.DefaultWorkingDirectory)/\*\*/Web.zip" 
+1. Select the Task **Deploy Azure App Service**. In the **Package or Folder** field, update the default value of "$(System.DefaultWorkingDirectory)/\*\*/\*.zip" to **"$(System.DefaultWorkingDirectory)/\*\*/Web.zip"**
 
      ![Azure devops](images/proprealease.png)
 
@@ -366,15 +371,21 @@ You have now successfully configured the Release Pipeline.
 
    ![Azure devops](images/appsuss.png)
 
-1. Switch to the Azure portal interface, navigate to the resource group **az400m04l09-RG**, in the list of resources, click the **Canary** web app, on the web app blade, click **Browse**, and verify that the web page (E-commerce website) loads successfully in a new web browser tab.
+1. Switch back to the Azure portal interface, navigate to the resource group **az400m04l09-RG**, in the list of resources, click the **Canary** web app.
 
     ![portal](images/websitecan.png)
+
+1. On the web app blade, click **Browse**, and verify that the web page (E-commerce website) loads successfully in a new web browser tab.
     
     ![portal](images/websitecan1.png)
    
-1. Switch back to the Azure portal interface, this time navigating  to the resource group **az400m04l09-RG**, in the list of resources, click the **Production** web app, on the web app blade, click **Browse**, and verify that the web page loads successfully in a new web browser tab.
+1. Switch back to the Azure portal interface, this time navigating  to the resource group **az400m04l09-RG**, in the list of resources, click the **Production** web app. 
 
    ![portal](images/websiteprod.png)
+
+1. On the web app blade, click **Browse**, and verify that the web page loads successfully in a new web browser tab.
+
+   ![portal](images/websitecan1.png)
    
 1. Close the web browser tab displaying the **EShopOnWeb** web site.
 
@@ -398,15 +409,21 @@ In this task, you will configure pre-deployment gates.
     
 1. On **Pre-deployment conditions** pane, set the **Pre-deployment approvals** slider to **Enabled** and, in the **Approvers** text box, type and select your Azure DevOps account name.
 
-    > **Note**: In a real-life scenario, this should be a DevOps Team name alias instead of your own name.
-    
-    ![Azure devops](images/pre-deployset.png)
-    
-    ![Azure devops](images/crtreset.png)
+    > **Note**: In a real-life scenario, this should be a DevOps Team name alias instead of your own name.  
+1. Click on **x** mark in its upper right corner to **Save** the pre-approval settings and close the popup window.
 
-1. **Save** the pre-approval settings and close the popup window.
+   ![Azure devops](images/pre-deployset.png)
+
+1. Back on the **New Release Pipeline** pane, click **Save**, and in the **Save** dialog box, click **OK**.
+
+   ![Azure devops](images/saverea.png)
+
+
 1. Click **Create Release** and confirm by pressing the **Create** button from the popup window.
-1. Notice the green confirmation message, saying "Release-2" has been created. Click the link of "Release-2" to navigate to its details.
+
+     ![Azure devops](images/crtreset.png)
+     
+3. Notice the green confirmation message, saying "Release-2" has been created. Click the link of "Release-2" to navigate to its details.
 1. Notice the **Canary** Stage is in a **Pending Approval** state. Click the **Approve** button. This sets off the Canary Stage again.
 
    ![Azure devops](images/aprrove.png) 
@@ -415,8 +432,15 @@ In this task, you will configure pre-deployment gates.
 
 In this task, you will enable the post-deployment gate for the Canary Environment.
 
-1.  Back on the **All pipelines > New Release Pipeline** pane, on the right edge of the rectangle representing the **Canary Environment** stage, click the oval shape representing the **Post-deployment conditions**.
-1.  On **Post-deployment conditions** pane, set the **Gates** slider to **Enabled**, click **+ Add**, and, in the pop-up menu, click **Query Azure Monitor Alerts**.
+1. Again switch to the **New Release Pipeline** pane, click **Edit**.
+
+      ![Azure devops](images/editre.png)
+      
+1. on the right edge of the rectangle representing the **Canary Environment** stage, click the oval shape representing the **Post-deployment conditions**.
+
+   ![Azure devops](images/pre-deploy.png)
+
+3.  On **Post-deployment conditions** pane, set the **Gates** slider to **Enabled**, click **+ Add**, and, in the pop-up menu, click **Query Azure Monitor Alerts**.
 
       ![Azure devops](images/pre-deployset2.png) 
       
@@ -466,11 +490,10 @@ In this task, you will first generate some alerts for the Canary Web App, follow
 
     > ** Note:** If no Alert shows up yet, wait another few minutes. 
     
-   
     ![Azure devops](images/alertfailed.png) 
 
 1. Return back to the Azure DevOps Portal, open the **eShopOnWeb*** Project. Navigate to **Pipelines**, select **Releases** and select the **New Release Pipeline**.
-1. Click the **Create Release** button.
+1. Click the **Create Release** button. On **create a new realease** page  click on **Create**
 1. Wait for the Release pipeline to kick off, and **approve** the Canary Stage release action.
 1. Wait for the Canary release Stage to complete successfully. Notice how the **Post-deployment Gates** is switching to an **Evaluation Gates** status.  Click the **Evaluation Gates** icon.
 
