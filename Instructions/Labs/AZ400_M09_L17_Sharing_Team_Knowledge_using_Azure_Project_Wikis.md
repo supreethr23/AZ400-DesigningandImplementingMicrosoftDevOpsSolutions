@@ -75,7 +75,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7431551f-bebf-4505-8533-4434ee85a9c9)
 
-3.  Click on the **Files(2)** pane, we can see that **EShopOnWeb is empty. Add some code!**. So click **Initialize(3)** to initialize the repository for the first time.
+3.  Click on the **Files(1)** pane, we can see that **EShopOnWeb is empty. Add some code!**. So click **Initialize(2)** to initialize the repository for the first time.
 
     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/949b6133-75e2-42bf-a68d-b21d7d3b9511)
     
@@ -83,69 +83,80 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/dcd483fa-3e95-443f-b917-138bb6d73fca)
 
-6.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb** Repo title on top of the folder structure. Select the **elipsis (3 dots)**.
+5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb(1)** Repo title on top of the folder structure. Select the **elipsis (3 dots)(2)**.
 
     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/485daed9-9839-4873-937c-38c59a817e86)
 
-8.  Choose **New / Folder**, and provide **Documents** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME** as New File name.
+6.  Choose **New(1) / Folder(2)**, and provide **Documents(3)** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME(4)** as New File name. Click to **Create(5)** folder.
 
     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/bff5c51f-564f-447b-9b35-97c64afff0b6)
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7fe17a81-1af5-4661-8173-b0208daa45db)
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/63a3eef8-e4d1-46b1-bb4d-bed20641a4ca)
 
-10.  On you lab computer, in the Azure DevOps portal displaying the **Sharing Team Knowledge using Azure Project Wikis** project, in the vertical menu on the left side, in the **Overview** section, click **Wiki** and review the existing content. 
-11.  In the vertical menu on the left side, click **Repos**, in the upper section of the **Files** pane, make sure you have  the **TailwindTraders-Website** repo selected (choose it from the dropdown on the top with Git icon). In the branch dropdown list (on top of "Files" with the branch icon), select **main**, and review the content of the main branch.
+7.  The **READ.ME(1)** file will open in the built-in view mode. Since this is stored **'as code'(2)**, you need to **Commit** the changes by clicking the **Commit(3)** button.
 
-    ![Azure DevOps](images/tailwind-traders-website.png)
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a160d567-e9c0-4678-8386-c2ea332c90a9)
 
-1.  To the left of the **Files** pane, in the listing of the repo folder and file hierarchy, expand the **Documents** folder and its **Images** subfolder, in the **Images** subfolder, locate the **Website.png** entry, hover with the mouse pointer over its right end to reveal the vertical ellipsis (three dots) symbol representing the **More** menu, click **More**, and, in the dropdown menu, click **Download** to download the **Website.png** file to the local **Downloads** folder on your lab computer. 
-
-
-    ![Azure DevOps](images/tailwind-traders-website-1.png)
+8.  In the Azure DevOps vertical menu on the left side, click **Overview(1)**, in the Overview section, select **Wiki(2)**, select **Publish code as wiki(3)**.
     
-    >**Note**: You will use this image in the next exercise of this lab.
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f1c7908a-d510-4b5e-b792-b3fd13f94ed8)
 
-1. In the vertical menu on the left side, click **Overview**, in the **Overview** section, select **Wiki**, select **Publish code as wiki**.
-1.  On the **Publish code as wiki** pane, specify the following settings and click **Publish**.
-
-    | Setting | Value |
+9. On the **Publish code as wiki** pane, specify the following **settings** and click **Publish(5)**.
+   | Setting | Value |
     | ------- | ----- |
-    | Repository | **TailwindTraders-Website** |
-    | Branch | **main** |
-    | Folder | **/Documents** |
-    | Wiki name | **Tailwind Traders (Documents)** |
+    | Repository | **EShopOnWeb(1)** |
+    | Branch | **main(2)** |
+    | Folder | **/Documents(3)** |
+    | Wiki name | **EShopOnWeb (Documents)(4)** |
 
-    >**Note**: This will automatically display the content of the **GitHubAction.md** file.
+    > **Note**: This will automatically open the Wiki section, and publish the editor, where you can provide a Wiki page title, as well as adding the actual content. Notice you are encouraged to use MarkDown format, but make use of the ribbon to help you with some of the MarkDown layout syntax.
+    
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/00f548a7-fd25-40e3-949c-4dcb12c59fbc)
 
-1.  Review the content of  **GitHubActions** file and note the overall structure of the wiki, matching the structure of the underlying repo.
+10.  In the Wiki Page **Title** field, enter **Welcome to our Online Retail Store!**.
 
-#### Task 2: Manage content of a published wiki
+      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/fb653a0f-c238-42c0-b15c-b81a8232951b)
 
-In this task, you will manage content of the wiki you published in the previous task.
+11.  In the **body(1)** of the Wiki Page, paste in the following text and **Save(2)** it:
+    
+      ```
+      ##Welcome to Our Online Retail Store!
+      At our online retail store, we offer a **wide range of products** to meet the **needs of our customers**. Our selection includes everything       from *clothing and accessories to electronics, home decor, and more*.
 
-1.  In the vertical menu on the left side, click **Repos**, ensure that the dropdown menu in the upper section of the **Files** pane displays the **TailwindTraders-Website** repo and **main** branch, in the repo folder hierarchy, select the **Documents** folder, in the upper right corner, click **+ New** and, in the dropdown menu, click **File**. 
+      We pride ourselves on providing a seamless shopping experience for our customers. Our website offers the following benefits:
+      1. user-friendly,
+      2. and easy to navigate, 
+      3. allowing you to find what you're looking for,
+      4. quickly and easily. 
 
-    ![Azure DevOps](images/file-01.png)
+      We also offer a range of **_payment and shipping options_** to make your shopping experience as convenient as possible.
 
-1.  In the **New file** panel, in the **New file name**, after the **/Documents/** prefix, type **.order**, and click **Create**.
-1.  On the **Contents** tab of the **.order** pane, type the following and click **Commit**.
+      ### about the team
+      Our team is dedicated to providing exceptional customer service. If you have any questions or concerns, our knowledgeable and friendly           support team is always available to assist you. We also offer a hassle-free return policy, so if you're not completely satisfied with your       purchase, you can easily return it for a refund or exchange.
 
-    ```text
-    GitHubActions
-    Images
-    ```
+      ### Physical Stores
+      |Location|Area|Hours|
+      |--|--|--|
+      | New Orleans | Home and DIY  |07.30am-09.30pm  |
+      | Seattle | Gardening | 10.00am-08.30pm  |
+      | New York | Furniture Specialists  | 10.00am-09.00pm |
 
-1.  On the **Commit** pane, click **Commit**.
-1.  In the vertical menu on the left side, click **Overview**, in the **Overview** section, select **Wiki**, verify that **Tailwind Traders (Documents)** appears in the upper section of the pane, and review the ordering of wiki content. 
+      ## Our Store Qualities
+      - We're committed to providing high-quality products
+      - Our products are offered at affordable prices 
+      - We work with reputable suppliers and manufacturers 
+      - We ensure that our products meet our strict standards for quality and durability. 
+      - Plus, we regularly offer sales and discounts to help you save even more.
 
-    >**Note**: The order of wiki content should match the sequence of files and folders listed in the **.order** file.
-
-1.  In the vertical menu on the left side, click **Repos**, ensure that the dropdown menu in the upper section of the **Files** pane displays the **TailwindTraders-Website** repo and **main** branch, in the listing of files, under **Documents**, select **GitHubActions.md**, and on the **GitHubActions.md** pane, click **Edit**. 
-1.  On the **GitHubActions.md** pane, directly below the `#GitHub Actions` header, add the following markdown element referencing one of the images within the **Documents**.    
-
-1.  On the **GitHubActions.md** pane, click **Commit** and, on the **Commit** pane, click **Commit**.
-1.  On the **Preview** tab of the **GitHubActions.md** pane, verify that the image is being displayed.
-1.  In the vertical menu on the left side, click **Overview**, in the **Overview** section, select **Wiki**, verify that **Tailwind Traders (Documents)** appears in the upper section of the pane, and that the content of the **GitHubActions** pane includes the newly referenced image. 
+      #Summary
+      Thank you for choosing our online retail store for your shopping needs. We look forward to serving you!
+      ```
+      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/1e0e5a20-ffec-4abc-a38c-30b4c56d4f98)
+      
+12.  This sample text gives you an overview of several of the common MarkDown syntax features, ranging from Title and subtitles (##), bold            (**), italic (*), how to create tables, and more.
+13.  **Refresh** your browser, or select any other DevOps portal option and return to the **Overview(1)** and **Wiki(2)** section. Notice you are now presented with the **EshopOnWeb (Documents)** Wiki, as well as having the **Welcome to our Online Retail Store(3)** as **HomePage** of the Wiki.
+     
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a8788d9b-3bd9-4fd0-90fe-63f8c221da8f)
 
 ### Exercise 2: Create and manage a project wiki
 
@@ -157,20 +168,35 @@ In this exercise, you will step through creating and managing a project wiki.
 
 In this task, you will create a project wiki and add to it a Mermaid diagram and an image.
 
-1.  On your lab VM, in the Azure DevOps portal displaying the Wiki pane of the **Sharing Team Knowledge using Azure Project Wikis** project, with the content of the **Tailwind Traders (Documents)** wiki selected, at the top of the pane, click the **Tailwind Traders (Documents)** dropdown list header, and, in the drop down list, select **Create new project wiki**. 
+1.  On your lab VM, in the Azure DevOps portal displaying the **Overview(1)** and **Wiki(2)** pane of the **EShopOnweb** project, with the content of the **EShopOnWeb (Documents)(3)** wiki selected, at the top of the pane, click the **EShopOnWeb (Documents)** dropdown list header, and, in the drop down list, select **Create new project wiki(4)**. 
 
-    ![Azure DevOps](images/file-02.png)
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/89f9619f-beed-4f6f-a046-486b7520f1ce)
 
-1.  In the **Page title** text box, type **Project Design**.
-1.  Place the cursor in the body of the page, click the left-most icon in the toolbar representing the header setting and, in the dropdown list, click **Header 1**. This will automatically add the hash character (**#**) at the beginning of the line.
+2.  In the Page title text box, type **Project Design**.
 
-    ![Azure DevOps](images/file-03.png)
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/aac19ef9-9c47-4ab5-a17f-19b71a8f9dc1)
 
-1.  Directly after the newly added **#** character, type **Authentication and Authorization** and press the **Enter** key.
-1.  Click the left-most icon in the toolbar representing the header setting and, in the dropdown list, click **Header 2**. This will automatically add the hash character (**##**) at the beginning of the line.
-1.  Directly after the newly added **##** character, type **Azure DevOps OAuth 2.0 Authorization Flow** and press the **Enter** key.
+3.  Place the cursor in the body of the page, click the left-most icon in the toolbar representing the header setting and, in the dropdown list, click **Header 1**. This will automatically add the hash character (**#**) at the beginning of the line.
 
-1.  **Copy and paste** the following code to insert a mermaid diagram on your wiki.
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/63cc6507-b9e2-4bac-9dc2-7451e613af17)
+    
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f083d671-f86b-407a-871b-00db90970b2e)
+
+4.  Directly after the newly added **#** character, type **Authentication and Authorization** and press the **Enter** key.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a717b53c-7c86-442c-8ffe-edcbf5df4ca6)
+
+5.  Click the left-most icon in the toolbar representing the header setting and, in the dropdown list, click **Header 2**. This will automatically add the hash character (**##**) at the beginning of the line.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/90efc132-65ca-417a-bcd0-bd63d57b93ef)
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/e1d6419d-3dd6-4aa8-94e8-8de96ffe81a2)
+
+6.  Directly after the newly added **##** character, type **Azure DevOps OAuth 2.0 Authorization Flow** and press the **Enter** key.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f08324b5-bcd2-4072-9ac1-445f0e87e73f)
+
+7.  **Copy and paste** the following code to insert a mermaid diagram on your wiki.
 
     ```
     ::: mermaid
@@ -193,20 +219,36 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
 
     >**Note**: For details regarding the Mermaid syntax, refer to [About Mermaid](https://mermaid-js.github.io/mermaid/#/)
 
-1.  To the right of the editor pane, in the preview pane, click **Load diagram** and review the outcome. 
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a7d2219c-88ea-4a24-992e-9fd8f78a8ea2)
+
+
+8.  To the right of the editor pane, in the preview pane, click **Load diagram** and review the outcome. 
 
     >**Note**: The output should resemble the flowchart that illustrates how to [Authorize access to REST APIs with OAuth 2.0](https://docs.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/oauth?view=azure-devops)
 
-1.  In the upper right corner of the editor pane, click the down-facing caret next to the **Save** button and, in the dropdown menu, click **Save with revision message**. 
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/d94a4c66-766f-432a-9000-16c2545f2bb9)
 
-    ![Azure DevOps](images/file-04.png)
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/bf2d646f-0e33-499b-970d-51440016193f)
 
-1.  In the **Save page** dialog box, type **Authentication and authorization section with the OAuth 2.0 Mermaid diagram** and click **Save**.
-1.  On the **Project Design** editor pane, place the cursor at the end of the Mermaid element you added earlier in this task, press the **Enter** key to add an extra line, click the left-most icon in the toolbar representing the header setting and, in the dropdown list, click **Header 2**. This will automatically add the double hash character (**##**) at the beginning of the line.
-1.  Directly after the newly added **##** character, type **User Interface** and press the **Enter** key.
-1.  On the **Project Design** editor pane, in the toolbar, click the paper clip icon representing the **Insert a file** action, in the **Open** dialog box, navigate to the **Downloads** folder, select the **Website.png** file you downloaded in the previous exercise, and click **Open**.
-1.  Back on the **Project Design** editor pane, review the preview pane and verify that the image is properly displayed.
-1.  In the upper right corner of the editor pane, click the down-facing caret next to the **Save** button and, in the dropdown menu, click **Save with revision message**. 
+9.  In the upper right corner of the editor pane, click the down-facing caret next to the **Save** button and, in the dropdown menu, click **Save with revision message**. 
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/683085da-0d9d-4858-b0c0-1df8716789dd)
+
+10.  In the **Save page** dialog box, type **Authentication and authorization section with the OAuth 2.0 Mermaid diagram** and click **Save**.
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/2ecdc20b-cfa5-4aa9-b344-0848d335a127)
+
+11.  On the **Project Design** editor pane, place the cursor at the end of the Mermaid element you added earlier in this task, press the **Enter** key to add an extra line, click the left-most icon in the **toolbar(1)** representing the header setting and, in the dropdown list, click **Header 2(2)**. This will automatically add the double hash character (**##(3)**) at the beginning of the line.
+
+      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/1038862f-9dc6-48af-8b5a-0f4d9b6bf3b8)
+
+12.  Directly after the newly added **##** character, type **User Interface** and press the **Enter** key.
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0e3efc10-958b-4413-8a13-03fcad653fea)
+
+15.  On the **Project Design** editor pane, in the toolbar, click the paper clip icon representing the **Insert a file** action, in the **Open** dialog box, navigate to the **Downloads** folder, select the **Website.png** file you downloaded in the previous exercise, and click **Open**.
+16.  Back on the **Project Design** editor pane, review the preview pane and verify that the image is properly displayed.
+17.  In the upper right corner of the editor pane, click the down-facing caret next to the **Save** button and, in the dropdown menu, click **Save with revision message**. 
 
     ![Azure DevOps](images/file-04.png)
 
