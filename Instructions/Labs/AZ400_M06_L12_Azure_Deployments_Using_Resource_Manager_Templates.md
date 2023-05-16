@@ -49,7 +49,7 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
 
      ![visual studio"](images/selectfilesinvs.png)
      
- 1. Now in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**
+ 1. Now in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**.
 
    
      ![visual studio"](images/mainfile.png)
@@ -224,7 +224,7 @@ In this task, you will modify the main template to reference the template module
 1. Now enter the following **Password** and click on **Sign in**.
    * Password: <inject key="AzureAdUserPassword"></inject>
    
-1. If you see the pop-up **Stay Signed in?**, click No
+1. If you see the pop-up **Stay Signed in?**, click No.
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
