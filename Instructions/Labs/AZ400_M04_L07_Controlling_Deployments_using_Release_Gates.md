@@ -57,12 +57,12 @@ After you complete this lab, you will be able to:
 
   >**Note:** If not **login**, use previously used **Username and Password** to login.
     
-1. On the.
+1. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
 1. On the next page accept defaults and click on continue.
 
     ![Azure DevOps](images/400-3updated.png)
-
+    
 1. On the **Almost Done...** page fill the captcha and click on continue. 
 
     ![Azure DevOps](images/m1-2updated.png)
