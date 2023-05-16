@@ -156,7 +156,19 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 12.  This sample text gives you an overview of several of the common MarkDown syntax features, ranging from Title and subtitles (##), bold            (**), italic (*), how to create tables, and more.
 13.  **Refresh** your browser, or select any other DevOps portal option and return to the **Overview(1)** and **Wiki(2)** section. Notice you are now presented with the **EshopOnWeb (Documents)** Wiki, as well as having the **Welcome to our Online Retail Store(3)** as **HomePage** of the Wiki.
      
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a8788d9b-3bd9-4fd0-90fe-63f8c221da8f)
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/66887737-8e52-47e7-88b9-9f3c31ad7005)
+
+#### Task 2: Manage content of a published wiki
+In this task, you will manage content of the wiki you published in the previous task.
+
+1. In the vertical menu on the left side, click **Repos(1)**, ensure that the dropdown menu in the upper section of the **Files(2)** pane displays the **EShopOnWeb(3)** repo and **main(4)** branch, in the repo folder hierarchy, select the **Documents(5)** folder, and select the **Welcome-to-our-Online-Retail-Store!.md(6)** file.
+
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/03c10aec-3f48-49b0-ae00-699400ccd8f4)
+
+2. Notice how the MarkDown format is visible here as raw text format, allowing you to continue editing the file content from here as well.
+
+   > **Note**: Since the Wiki source files are handled as source code, remember all practices from traditional source control (Clone, Pull Requests, Approvals and more), can now also be applied to Wiki pages.
+
 
 ### Exercise 2: Create and manage a project wiki
 
@@ -246,14 +258,33 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
 
      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0e3efc10-958b-4413-8a13-03fcad653fea)
 
-15.  On the **Project Design** editor pane, in the toolbar, click the paper clip icon representing the **Insert a file** action, in the **Open** dialog box, navigate to the **Downloads** folder, select the **Website.png** file you downloaded in the previous exercise, and click **Open**.
+13.  Download any image from Google by searching **brand.png(1)** and select the **image** to download.
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/3bed8aab-1af6-4414-b8cd-1b736ee86abb)
+ 
+14.  Right click on the image and download to the **Desktop(1)** and type File name as **Brand.png(2)** and **Save(3)** it in your lab VM.
+     
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/442100b3-4e25-42fd-ba27-b9551f9a78f5)
+
+15.  On the **Project Design(1)** editor pane, in the toolbar, click the **paper clip icon(2)** representing the **Insert a file** action, in the **Open** dialog box, navigate to the **Desktop(3)** folder, select the **Brand.png(4)** file you downloaded in the previous exercise, and click **Open(5)**.
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/465c9fd2-d4ec-4946-bb3c-836f8dd0b986)
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/cda57ce1-092f-4ce0-9778-fb11977956d5)
+
 16.  Back on the **Project Design** editor pane, review the preview pane and verify that the image is properly displayed.
 17.  In the upper right corner of the editor pane, click the down-facing caret next to the **Save** button and, in the dropdown menu, click **Save with revision message**. 
 
-    ![Azure DevOps](images/file-04.png)
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/c64d86e3-b188-4a1a-ab89-e1519c937826)
 
-1.  In the **Save page** dialog box, type **User Interface section with the Tailwind Traders image** and click **Save**.
-1.  Back on the editor pane, in the upper right corner, click **Close**. 
+18.  In the **Save page** dialog box, type **User Interface section with the Brand image** and click **Save**.
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/807aed99-22b8-48b8-b37a-10af8d2a5dc5)
+
+19.  Back on the editor pane, in the upper right corner, click **Close**. 
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/8e6f727f-2046-4e34-91ac-85f3d763461e)
+
 
 #### Task 2: Manage a project wiki
 
@@ -261,22 +292,47 @@ In this task, you will manage the newly created project wiki.
 
 >**Note**: You will start by reverting the most recent change to the wiki page.
 
-1.  On you lab VM, in the Azure DevOps portal displaying the **Wiki pane** of the **Sharing Team Knowledge using Azure Project Wikis** project, with the content of the **Project Design** wiki selected, in the upper right corner, click the vertical ellipsis symbol and, in the dropdown menu, click **View revisions**.
+1.  On you lab VM, in the Azure DevOps portal displaying the **Wiki pane** of the **EShopOnWeb** project, with the content of the **Project Design(1)** wiki selected, in the upper right corner, click the vertical **ellipsis symbol(2)** and, in the dropdown menu, click **View revisions(3)**.
 
-    ![Azure DevOps](images/view-revisions-01.png)
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/fe445170-24bf-4f3c-9d0a-f56f9ce4b660)
 
-    ![Azure DevOps](images/view-revisions-02.png)
+2.  On the **Revisions** pane, click the entry representing the most recent change. 
 
-1.  On the **Revisions** pane, click the entry representing the most recent change. 
-1.  On the resulting pane, review the comparison between the previous and the current version of the document, click **Revert**, when prompted for the confirmation, click **Revert** again, and then click **Browse Page**. 
-1.  Back on the **Project Design** pane, verify that the change was successfully reverted.
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/81eb4531-9f94-43b5-a4b0-fc0cb8fce46f)
+
+3.  On the resulting pane, review the comparison between the previous and the current version of the document, click **Revert**, when prompted for the confirmation, click **Revert** again, and then click **Browse Page**.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/2e7f8962-7aac-4b4a-9052-c6ad66eb6fcc)
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/6b8be05b-59d1-4a10-a58d-5b58affcf185)
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0842622b-db7e-4692-b081-ee4032195347)
+
+4.  Back on the **Project Design** pane, verify that the change was successfully reverted.
 
     >**Note**: Now you will add another page to the project wiki and set it as the wiki home page.
 
-1.  On the **Project Design** pane, at the bottom left corner, click **+ New page**.
-1.  On the page editor pane, in the **Page title** text box, type **Project Design Overview**, click **Save**, and then click **Close**.
-1.  Back in the pane listing the pages within the **Project Design** project wiki, locate the **Project Design Overview** entry, select it with the mouse pointer, drag and drop it above the **Project Design** page entry. 
-1.  Verify that the **Project Design Overview** entry is listed as the top level page with the home icon designating it as the wiki home page.
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a5135a7c-37d0-4c92-8ec1-b19cd2ba6b9f)
+
+
+5.  On the **Project Design** pane, at the bottom left corner, click **+ New page**.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/ed64ce89-2ddc-43f3-a265-3d45822fe2cb)
+
+6.  On the page editor pane, in the **Page title** text box, type **Project Design Overview**, click **Save**, and then click **Close**.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/6afb8158-9943-4780-85e1-2fa9857e67ec)
+
+7.  Back in the pane listing the pages within the **Project Design** project wiki, locate the **Project Design Overview** entry, select it with the mouse pointer, drag and drop it above the **Project Design** page entry. 
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/cfbf4d65-37a3-4e0e-8f63-c7a5cc153655)
+    
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f239c1ab-f4e6-4ddd-be44-b898b34e837d)
+
+8.  Verify that the **Project Design Overview** entry is listed as the top level page with the home icon designating it as the wiki home page.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/8f352e8d-42f8-4e35-8567-84dd4e7ee938)
+
 
 ## Review
 
