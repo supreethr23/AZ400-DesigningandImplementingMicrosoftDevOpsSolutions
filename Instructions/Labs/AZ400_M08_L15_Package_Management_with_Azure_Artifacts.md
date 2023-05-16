@@ -99,7 +99,7 @@ In this exercise, you will learn how to work with Azure Artifacts by using the f
 - import a NuGet package.
 - update a NuGet package.
 
-#### Task 3: Creating and connecting to a feed
+#### Task 1: Create and connect to a feed
 
 In this task, you will create and connect to a feed.
 
@@ -142,7 +142,7 @@ In this task, you will create and connect to a feed.
 
 11.  Close and reopen the other Visual Studio instance you used for cloning the EShopOnWeb repository, to account for the artifact source update and open the **EShopOnWebShared** solution. You will need it in the third task of this exercise.
 
-#### Task 2: Creating and publishing a NuGet package
+#### Task 2: Create and publish a NuGet package
 
 In this task, you will create and publish a NuGet package.
 
@@ -177,9 +177,9 @@ In this task, you will create and publish a NuGet package.
     
     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/41cfbb6a-3256-4c86-920b-eb590404083a)
    
-6.  Within the Visual Studio interface, in the **Solution Explorer** pane, right-click the **EShopOnWeb.Shared** project node and select **Properties**.
+6.  Within the Visual Studio interface, in the **Solution Explorer** pane, right-click the **EShopOnWeb.Shared(1)** project node and select **Properties(2)**.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0f8df7e2-2a1e-4f69-a501-2815190d795f)
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/8e4d483b-4652-4d67-ad88-cc8c32962c6e)
 
 7.  Press **Ctrl+Shift+B** or **Right-click** on the **EShopOnWeb.Shared Project(1)** and select **Build(2)** to build the project.. 
 
@@ -208,7 +208,7 @@ In this task, you will create and publish a NuGet package.
 
 14.  Within the File Explorer window, move the downloaded **nuget.exe** file from the **Downloads** folder into the folder containing the **EShopOnWeb.Shared** file.
 
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f68637a1-aa3d-4320-b37b-80210bbd5953)
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/e4813e1c-87b8-408d-85ad-8801b7b8b512)
 
 15.  In the same File Explorer window, select the **File(1)** menu header, in the dropdown menu, select **Open Windows PowerShell(2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator(3)**. 
     
@@ -218,48 +218,57 @@ In this task, you will create and publish a NuGet package.
 
      > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
 
-    ```
-    ./nuget.exe pack ./EShopOnWeb.Shared.csproj
-    ```
+     ```
+      ./nuget.exe pack ./EShopOnWeb.Shared.csproj
+     ```
 
-   > **Note**: Disregard any warnings displayed in the **Administrator: Windows PowerShell** window.
+     > **Note**: Disregard any warnings displayed in the **Administrator: Windows PowerShell** window.
 
-   > **Note**: NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
+     > **Note**: NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
     
-    <img width="786" alt="image" src="https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/37241967-c457-42cd-9a03-db5861d2c2af">
+     <img width="786" alt="image" src="https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/37241967-c457-42cd-9a03-db5861d2c2af">
 
     
-17. If you prompted with the **Error NU5133: NuGet.exe file on path C:\Users\PrathimaV\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\nuget.exe needs to be unblocked after downloading** the we need to unblock the **nuget.exe(1)** file which we downloaded to the **EShareOnWeb.Shared** folder by selecting **Properties(2)**.
+17. If you prompted with the **Error NU5133: NuGet.exe file on path C:\Users\xxxxx\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\nuget.exe needs to be unblocked after downloading** then we need to unblock the **nuget.exe(1)** file which we downloaded to the **EShareOnWeb.Shared** folder by selecting **Properties(2)**.
 
     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/c25eb7c4-2812-45a8-a099-5f07bfff8906)
 
+18. Check the **Unblock(1)** and click on **Apply(2)** to save the changes and click on **OK(3)**.
+
     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/90144ffc-dad9-4611-bf02-b6904ff0e5c5)
+    
+19. Now again run the **Poweshell command** from the **step 16** and it will create package successfully.
     
     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/450c2906-e427-4ada-88dc-431ad61d1bba)
 
-18. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to signin window login with the credentials provided in the environment details tab.
+20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to signin window login with the credentials provided in the environment details tab.
+    
+    > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+    
+    > **Password**: <inject key="AzureAdUserPassword"></inject>
 
     > **Note**: You need to provide an **API Key**, which can be any non-empty string. We're using **AzDO** here. When prompted, sign in to your Azure DevOps organization.
 
     ```
     ./nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO EShopOnWeb.Shared.1.0.0.nupkg
     ```
+    
     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0b64b742-087b-4e50-82b2-d86a47ec1e8c)
     
-19.  Wait for the confirmation of the successful package push operation.      
-20.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
-21.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWeb(2)** entry.
+21.  Wait for the confirmation of the successful package push operation.      
+22.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
+23.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWeb(2)** entry.
 
      > **Note**: The **EShopOnWebShared** feed should include the newly published NuGet package. 
 
      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/b81fc038-925e-4894-9cb0-684c875f545b)
     
-22.  Click the NuGet package to display its details.
+24.  Click the NuGet package to display its details.
     
      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/d51a0fb7-4c5f-44a3-b743-4d77b939291f)
 
 
-#### Task 3: Importing an Open-Source NuGet package to the Azure DevOps Package Feed
+#### Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
 
 Besides developing your own packages, why not using the Open Source Nuget (https://www.nuget.org) DotNet Package library? With a few million packages available, there will always be something useful for your application.
     
@@ -285,12 +294,13 @@ In this task, we will use a generic "Hello World" sample package, but you can us
 Let's consider this package an "approved" package for our DevOps team to reuse, by uploading it to the Azure Artifacts Package feed created earlier.
 
 1.  From the PowerShell window, execute the following command:
+
      ```
     .\nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO c:\EShopOnWeb\EShopOnWeb.Shared\HelloWorld\HelloWorld.nupkg
     ```
-     ```
-   > **Note**:  This results in an error message: Response status code does not indicate success: 409 (Conflict - 'HelloWorld 1.3.0.17' cannot be published to the   feed because it exists in at least one of the feed's upstream sources. Publishing this copy would prevent you from using 'HelloWorld 1.3.0.17' from 'NuGet Gallery'. For more information, see https://go.microsoft.com/fwlink/?linkid=864880 (DevOps Activity ID: AE08BE89-C2FA-4FF7-89B7-90805C88972C)).
-    ```
+    
+    > **Note**:  This results in an error message: Response status code does not indicate success: 409 (Conflict - 'HelloWorld 1.3.0.17' cannot be published to the   feed because it exists in at least one of the feed's upstream sources. Publishing this copy would prevent you from using 'HelloWorld 1.3.0.17' from 'NuGet Gallery'. For more information, see https://go.microsoft.com/fwlink/?linkid=864880 (DevOps Activity ID: AE08BE89-C2FA-4FF7-89B7-90805C88972C)).
+    
     <img width="946" alt="image" src="https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/5ccd5a9a-ebf4-4e2e-80bf-68a806e21282">
 
 When you created the Azure DevOps Artifacts Package Feed, by design, it allows for **upstream sources**, such as nuget.org in the dotnet example. However, nothing blocks your DevOps team to create an **"internal-only"** Package Feed.
@@ -302,12 +312,12 @@ When you created the Azure DevOps Artifacts Package Feed, by design, it allows f
 
 4.  In the **Go to an Upstream Package** window, select **Nuget(1)** as Package Type, and enter **HelloWorld(2)** in the search field.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/9f45bd54-3d8a-49bc-a855-2dc4488cb3fd)
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f3e52b11-bfd1-4692-8801-bca6636c678b)
     
 5.  Confirm by pressing the **Search(3)** button.
 6.  This results in a list of all HelloWorld packages with the different versions available.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/359b2dc5-f689-4eb1-b83f-222c9b612fb1)
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/5b18e658-d55b-4849-82cd-9859bbefb1e7)
 
 7.  Click the **left arrow key** to return to the **EShopOnWebShared** Feed.
 8.  Click the cogwheel to open **Feed Settings(1)**. Within the Feed Settings page, select **Upstream Sources(2)**.
@@ -324,22 +334,22 @@ When you created the Azure DevOps Artifacts Package Feed, by design, it allows f
     
 10.  With these saved changed, it will be possible to upload the **HelloWorld** package using the Nuget.exe from the PowerShell Window, by relaunching the following command:
      
-    ```
-    .\nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO c:\EShopOnWeb\EShopOnWeb.Shared\HelloWorld\HelloWorld.nupkg
-    ```
-   > **Note**:  This should now result in a successful upload
+     ```
+     .\nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO c:\EShopOnWeb\EShopOnWeb.Shared\HelloWorld\HelloWorld.nupkg
+     ```
+     > **Note**:  This should now result in a successful upload
     
-    ```
-    Pushing HelloWorld.nupkg to 'https://pkgs.dev.azure.com/pdtdemoworld/7dc3351f-bb0c-42ba-b3c9-43dab8e0dc49/_packaging/188ec0d5-ff93-4eb7-b9d3-               293fbf759f06/nuget/v2/'...
-    PUT https://pkgs.dev.azure.com/<AZUREDEVOPSORGANIZATION>/7dc3351f-bb0c-42ba-b3c9-43dab8e0dc49/_packaging/188ec0d5-ff93-4eb7-b9d3-293fbf759f06/nuget/v2/
-    MSBuild auto-detection: using msbuild version '17.5.0.10706' from 'C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin'.
-    Accepted https://pkgs.dev.azure.com/pdtdemoworld<AZUREDEVOPSORGANIZATION>/7dc3351f-bb0c-42ba-b3c9-43dab8e0dc49/_packaging/188ec0d5-ff93-4eb7-b9d3-293fbf759f06/nuget/v2/ 1645ms
-    Your package was pushed. 
-    PS C:\eShopOnWeb\EShopOnWeb.Shared> 
-    ```
-11.  From the Azure DevOps Portal, **refresh** the Artifacts Package Feed page. The list of packages shows both the **EShopOnWeb.Shared** custom-developed package,    as well as the **HelloWorld** public sourced package.
+        ```
+        Pushing HelloWorld.nupkg to 'https://pkgs.dev.azure.com/pdtdemoworld/7dc3351f-bb0c-42ba-b3c9-43dab8e0dc49/_packaging/188ec0d5-ff93-4eb7-b9d3-                               293fbf759f06/nuget/v2/'...
+        PUT https://pkgs.dev.azure.com/<AZUREDEVOPSORGANIZATION>/7dc3351f-bb0c-42ba-b3c9-43dab8e0dc49/_packaging/188ec0d5-ff93-4eb7-b9d3-293fbf759f06/nuget/v2/
+        MSBuild auto-detection: using msbuild version '17.5.0.10706' from 'C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin'.
+        Accepted https://pkgs.dev.azure.com/pdtdemoworld<AZUREDEVOPSORGANIZATION>/7dc3351f-bb0c-42ba-b3c9-43dab8e0dc49/_packaging/188ec0d5-ff93-4eb7-b9d3-293fbf759f06/nuget/v2/ 1645ms
+        Your package was pushed. 
+        PS C:\eShopOnWeb\EShopOnWeb.Shared> 
+        ```
+11.  From the Azure DevOps Portal, **refresh** the Artifacts Package Feed page. The list of packages shows both the **EShopOnWeb.Shared** custom-developed package, as well as the **HelloWorld** public sourced package.
 
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f4ebf2b7-5b84-4899-bb05-156518542d0a)
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/e32b964c-e32a-412f-b82f-10c5031afa0b)
 
 
 12.  From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared(1)** Project, and select **Manage Nuget Packages(2)** from the context menu.
