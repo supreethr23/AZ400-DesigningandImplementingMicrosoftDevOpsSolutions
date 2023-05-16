@@ -49,7 +49,9 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
 
      ![visual studio"](images/selectfilesinvs.png)
      
- 1. Now open **main.bicep** as the file **C:\\templates** as the destination.
+ 1. Now in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**
+
+   
      ![visual studio"](images/mainfile.png)
     
 1. Review the template to get a better understanding of its structure. There are five resource types included in the template:
@@ -64,12 +66,12 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
     > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
 
 
-#### Task 2: Create a template module for storage resources
+#### Task 2: Create a template module for storage resources.
 
 In this task, you will modify the templates you saved in the previous task such that the storage template module **storage.bicep** will create a storage account only, it will be imported by the first template. The storage template module needs to pass a value back to the main template, **main.bicep**, and this value will be defined in the outputs element of the storage template module.
 
-1. In Visual Studio Code, Open **C:\\templates** as the destination and **storage.bicep** as the file name.
-
+1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates(1)**, Select **storage.bicep(2)** file, Make sure that in the file name box **storage.bicep(3)** will be selected then click on **Open(4)**.
+   
    ![visual studio"](images/strfile.png)
 
 1. In the **storage.bicep** file displayed in the Visual Studio Code window, under the **resources section**, remove all the resource elements except the **storageAccounts** resource. It should result in a resource section looking as follows:
@@ -150,7 +152,7 @@ In this task, you will modify the templates you saved in the previous task such 
 
 In this task, you will modify the main template to reference the template module you created in the previous task.
 
-1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates\\main.bicep**, select it, and click **Open**.
+1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**
 
       ![visual studio"](images/mainfile.png)
       
@@ -214,7 +216,7 @@ In this task, you will modify the main template to reference the template module
  
 1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
 
-   ![Azure DevOps](images/azureportal-lab12png)
+   ![Azure DevOps](images/azureportal-lab12.png)
    
 1. If not Sign-in, then on the **Sign into Microsoft Azure** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
@@ -271,7 +273,7 @@ In this task, you will modify the main template to reference the template module
       
       ![azure portal"](images/rg.png)
       
-1. Click on **az400m06l15-RG** rsource group, on the az400m06l15-RG blade you can see the resources which we deployed in the previous steps using azure cloudshell.
+1. Click on **az400m06l15-RG(1)** resource group, on the **az400m06l15-RG blade(2)** you can see the **resources(3)** which we deployed in the previous steps using azure cloudshell.
        
       ![azure portal"](images/bicepresources.png)
        
@@ -281,6 +283,13 @@ In this task, you will modify the main template to reference the template module
    - Ensure that the linked template is accessible via the URI you specified.
 
  > **Note**: As a next step, you could now modularize the remaining resource definitions in the main deployment template, such as the network and virtual machine resource definitions.
+
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ## Review
 
