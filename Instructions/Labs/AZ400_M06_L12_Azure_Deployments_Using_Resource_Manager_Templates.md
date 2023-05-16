@@ -252,7 +252,7 @@ In this task, you will modify the main template to reference the template module
 1. From a **Bash** session in the Cloud Shell pane, run the following to perform a deployment by using a newly uploaded template:
 
    ```bash
-   LOCATION='<region>'
+   LOCATION='eastus'
    ```
     > **Note**: replace the name of the region with a region close to your location example : **"eastus"**. If you do not know what locations are available, run the `az account list-locations -o table` command.
   
@@ -263,7 +263,7 @@ In this task, you will modify the main template to reference the template module
    ```bash   
    az deployment group create --name az400m06l15[Deployment-ID] --resource-group az400m06l15-RG --template-file main.bicep
    ```
-    > **Note**: Retrieve the [Deployment-ID] specified in the environment details page from the lab guide, and substitute it into the command mentioned above.
+    > **Note**: Retrieve the [Deployment-ID] with <inject key="DeploymentID"></inject> specified in the environment details page from the lab guide.
 
 1. When prompted to provide the value for 'adminUsername', type **Student** and press the **Enter** key.
 1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key. (Password typing will not be shown)
