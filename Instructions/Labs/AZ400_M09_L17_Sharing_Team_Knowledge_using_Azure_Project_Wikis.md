@@ -28,34 +28,31 @@ After you complete this lab, you will be able to:
 
 3. On the next page accept defaults and click on continue.
 
-    ![Azure DevOps](images/400-3.png)
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7ff3a8ba-6703-4624-87a7-e5f2817b19b3)
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-   ![Azure DevOps](images/m1-2.png)
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/17b7f53a-e09c-4fb1-8604-755e334303dc)
 
 ### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of the preconfigured **EShopOnWeb** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
 
-#### Task 1: Configure the team project
+#### Task 1: Configure the EShopOnWeb project
 
-In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **EShopOnWeb** template.
 
-1.  In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. 
+In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
 
-    > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
+1.  Click **Sign in** and sign in with the credentials provided in environment details tab.
+    
+    > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+    
+    > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-1.  Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
-1.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
-1.  On the **Create New Project** page, click on **Choose Template** and select the **EShopOnWeb** template and click **Select Template**.
-1.  In the **New Project Name** textbox, type **Sharing Team Knowledge using Azure Project Wikis**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
-1.  Back on the **Create New Project** page, if prompted to install a missing extension, select the checkbox below the **ARM Outputs** and click **Create Project**.
+2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb(1)**, select visibilty as **Private(2)** and then click **Create Project(3)**
 
-    > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your Azure DevOps organization, delete the project, and try again.
-
-1.  On the **Create New Project** page, click **Navigate to project**.
-
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/ff673278-d825-45a2-bf15-96661f4fc36b)
+    
 ### Exercise 1: Publish code as wiki
 
 In this exercise, you will step through publishing an Azure DevOps repository as wiki and managing the published wiki.
@@ -64,12 +61,40 @@ In this exercise, you will step through publishing an Azure DevOps repository as
 
 #### Task 1: Publish a branch of an Azure DevOps repo as wiki
 
-In this task, you will publish a branch of an Azure DevOps repo as wiki.
+In this task, you will create Azure Repository and publish a branch of an Azure DevOps repo as wiki.
 
 > **Note**: If your published wiki corresponds to a product version, you can publish new branches as you release new versions of your product. 
 
-1.  On you lab computer, in the Azure DevOps portal displaying the **Sharing Team Knowledge using Azure Project Wikis** project, in the vertical menu on the left side, in the **Overview** section, click **Wiki** and review the existing content. 
-1.  In the vertical menu on the left side, click **Repos**, in the upper section of the **Files** pane, make sure you have  the **TailwindTraders-Website** repo selected (choose it from the dropdown on the top with Git icon). In the branch dropdown list (on top of "Files" with the branch icon), select **main**, and review the content of the main branch.
+1.  Ensure that you are viewing the **EShopOnWeb** team project on the Azure DevOps portal. 
+
+    > **Note**: You can access the project page directly by navigating to the [https://dev.azure.com/<inject key="DeploymentID" enableCopy="false"/>/EShopOnWeb]URL.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/15897f3d-e2ec-4fe5-b195-f7437bf32953)
+    
+2.  In the vertical menu on the left side of the **EShopOnWeb** pane, click **Repos**.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7431551f-bebf-4505-8533-4434ee85a9c9)
+
+3.  Click on the **Files(2)** pane, we can see that **EShopOnWeb is empty. Add some code!**. So click **Initialize(3)** to initialize the repository for the first time.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/949b6133-75e2-42bf-a68d-b21d7d3b9511)
+    
+4.  Click the **Files(1)** pane. In the branch dropdown list , select **main(2)** branch, and review the content of the main branch.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/dcd483fa-3e95-443f-b917-138bb6d73fca)
+
+6.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb** Repo title on top of the folder structure. Select the **elipsis (3 dots)**.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/485daed9-9839-4873-937c-38c59a817e86)
+
+8.  Choose **New / Folder**, and provide **Documents** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME** as New File name.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/bff5c51f-564f-447b-9b35-97c64afff0b6)
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7fe17a81-1af5-4661-8173-b0208daa45db)
+
+10.  On you lab computer, in the Azure DevOps portal displaying the **Sharing Team Knowledge using Azure Project Wikis** project, in the vertical menu on the left side, in the **Overview** section, click **Wiki** and review the existing content. 
+11.  In the vertical menu on the left side, click **Repos**, in the upper section of the **Files** pane, make sure you have  the **TailwindTraders-Website** repo selected (choose it from the dropdown on the top with Git icon). In the branch dropdown list (on top of "Files" with the branch icon), select **main**, and review the content of the main branch.
 
     ![Azure DevOps](images/tailwind-traders-website.png)
 
