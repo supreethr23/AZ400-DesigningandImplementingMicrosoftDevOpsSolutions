@@ -106,6 +106,168 @@ In this task, you will add policies to the main branch and only allow changes us
 ```
 // Testing my PR
 ```
+
+ 4. Click on **Commit > Commit** (leave default commit message).
+
+ 5. A message will pop-up, proposing to create a Pull Request (as your **Feature01** branch is now ahead in changes, compared to **main**). Click on **Create a Pull Request**.
+
+6. In the **New pull request** tab, leave defaults and click on **Create**.
+
+7. The Pull Request will show some pending requirements, based on the policies applied to the target **main** branch.
+
+     o At least 1 user should review and approve the changes.
+     
+     o Build validation, you will see that the build **eshoponweb-ci-pr** was triggered automatically
+     
+8. After all validations are successful, on the top-right click on **Approve**. Now from the **Set auto-complete** dropdown you can click on       **Complete**.    
+
+9. On the **Complete Pull Request** tab, click on **Complete Merge**
+
+**Exercise 2: Configure CI Pipeline as Code with YAML**
+
+In this exercise, you will configure CI Pipeline as code with YAML.
+
+**Task 1: Import the YAML build definition**
+
+In this task, you will add the YAML build definition that will be used to implement the Continuous Integration.
+
+Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
+
+  1. Go to **Pipelines>Pipelines**
+
+  2. Click on **New Pipeline** button
+
+  3. Select **Azure Repos Git (YAML)**
+
+  4. Select the **eShopOnWeb** repository
+
+  5. Select **Existing Azure Pipelines YAML File**
+
+  6. Select the **/.ado/eshoponweb-ci.yml** file then click on **Continue**
+
+     The CI definition consists of the following tasks:
+     
+       o **DotNet Restore:** With NuGet Package Restore you can install all your project's dependency without having to store them in source control.
+       
+       o **DotNet Build:** Builds a project and all of its dependencies.
+       
+       o **DotNet Test:** .Net test driver used to execute unit tests.
+       
+       o **DotNet Publish:** Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's             **Build.ArtifactStagingDirectory**.
+       
+       o **Publish Artifact - Website:** Publish the app artifact (created in the previous step) and make it available as a pipeline artifact.
+       
+       o **Publish Artifact - Bicep:** Publish the infrastructure artifact (Bicep file) and make it available as a pipeline artifact.
+       
+              
+   **Task 2: Enable Continuous Integration**
+   
+   The default build pipeline definition doesn't enable Continuous Integration
+   
+   1. Now, you need to replace the **trigger: none** code with the following code:
+      ```
+      trigger:
+     branches:
+       include:
+       - main
+     paths:
+       include:
+       - src/web/*
+       ```
+     This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).
+    
+     Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
+    
+  2. Click the **Save** button (not **Save and run**) to save the pipeline definition.
+  
+  3. Select **Create a new branch for this commit**
+
+  4. Keep the default branch name and **Start a pull request** checked.
+
+  5. Click on **Save**
+
+  6. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/Remove** option. Name it **eshoponweb-ci**   and click on **Save**.
+
+  7. Go to **Repos>Pullrequests**
+
+  8. Click on the existing pull request
+
+  9. After all validations are successful, on the top-right click on **Approve**. Now you can click on **Complete**.
+
+  10. On the **Complete Pull Request** tab, Click on **Complete Merge**
+
+ **Task 3: Test the CI pipeline**
+ 
+ In this task, you will create a Pull Request, using a new branch to merge a change into the protected **main** branch and automatically trigger the CI pipeline.
+ 
+   1. Navigate to the **Repos** section
+
+   2. Create a new branch named **Feature02** based on the **main** branch
+
+   3. Click the new **Feature02** branch
+
+   4. Navigate to the **/eShopOnWeb/src/Web/Program.cs** file and remove the first line:
+   ```
+   // Testing my PR
+   ```
+   5. Click on **Commit > Commit** (leave default commit message).
+
+   6. A message will pop-up, proposing to create a Pull Request (as your **Feature02** branch is now ahead in changes, compared to main).
+
+   7. Click on **Create a Pull Request**
+
+   8. In the **New pull request** tab, leave defaults and click on **Create**.
+
+   9. The Pull Request will show some pending requirements, based on the policies applied to the target **main** branch.
+
+   10. After all validations are successful, on the top-right click on **Approve**. Now from the **Set auto-complete** dropdown you can click on     **Complete**
+
+   11. On the **Complete Pull Request** tab, Click on **Complete Merge**
+
+   12. Go back to **Pipelines>Pipelines,** you will notice that the build **eshoponweb-ci** was triggered automatically after the code was            merged.
+
+   13. Click on the **eshoponweb-ci** build then select the last run.
+
+   14. After its successful execution, click on **Related > Published** to check the published artifacts:
+
+          o Bicep: the infrastructure artifact
+          
+          o Website: the app artifact
+          
+  **Review**
+  
+  In this lab, you enabled pull request validation using a build definition and configured CI pipeline as code with YAML in Azure DevOps.
+    
+    .
+   
+   
+
+
+
+
+  
+
+
+
+
+
+
+       
+              
+              
+       
+              
+             
+       
+       
+
+
+
+
+     
+   
+
+
  
  
 
