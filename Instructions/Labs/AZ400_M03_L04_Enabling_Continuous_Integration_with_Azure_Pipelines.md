@@ -165,18 +165,18 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
    The default build pipeline definition doesn't enable Continuous Integration
    
    1. Now, you need to replace the **trigger: none** code with the following code:
-      ```
-      trigger:
+   
+   ```
+     trigger:
      branches:
        include:
        - main
      paths:
        include:
        - src/web/*
-       ```
-     This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).
-    
-     Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
+   ``` 
+     
+   This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
     
   2. Click the **Save** button (not **Save and run**) to save the pipeline definition.
   
