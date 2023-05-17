@@ -247,7 +247,7 @@ In this task, you will modify the main template to reference the template module
      ![visual studio"](images/upload.png)
    
 1. In the **Open** dialog box, navigate to and select **C:\\templates\\main.bicep** and click **Open**.
-1. Follow the same steps to upload the **C:\\templates\\storage.bicep** file too
+1. Follow the same steps to upload the **C:\\templates\\storage.bicep** file too.
   
 1. From a **Bash** session in the Cloud Shell pane, run the following to perform a deployment by using a newly uploaded template:
 
