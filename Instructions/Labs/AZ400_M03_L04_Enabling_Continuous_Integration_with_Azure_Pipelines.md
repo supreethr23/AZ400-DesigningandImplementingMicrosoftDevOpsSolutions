@@ -17,13 +17,96 @@ After you complete this lab, you will be able to:
 
 ### Exercise 0: Configure the lab prerequisites
 
-In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
+In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the **eShopOnWeb**.
 
-#### Task 1: Configure the team project
+#### Task 1: Create and configure the team project
 
-In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Parts Unlimited** template.
+In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1.  In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. 
+   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **Create**
+
+**Task 2: (skip if done) Import eShopOnWeb Git Repository**
+
+  In this task you will import the eShopOnWeb Git repository that will be used by several labs.
+  
+   1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created eShopOnWeb project. Click on **Repos>Files , Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git and click **Import:**
+
+   2. The repository is organized the following way:
+
+         o. **.ado** folder contains Azure DevOps YAML pipelines
+         
+         o **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
+         
+         o **.azure** folder contains Bicep & ARM infrastructure as code templates used in some lab scenarios.
+         
+         o **.github** folder contains YAML GitHub workflow definitions.
+         
+         o. **src** folder contains the .NET 6 website used in the lab scenarios.
+         
+ **Exercise 1: Include build validation as part of a Pull Request**
+ 
+ In this exercise, you will include build validation to validate a Pull Request.
+ 
+ **Task 1: Import the YAML build definition**
+ 
+ In this task, you will import the YAML build definition that will be used as a Branch Policy to validate the pull requests.
+ 
+ Let's start by importing the build pipeline named **eshoponweb-ci-pr.yml**.
+ 
+   1. Go to **Pipelines>Pipelines**
+
+   2. Click on **Create Pipeline** or **New Pipeline** button
+
+   3. Select **Azure Repos Git (YAML)**
+
+   4. Select the **eShopOnWeb** repository
+
+   5. Select **Existing Azure Pipelines YAML File**
+
+   6. Select the **/.ado/eshoponweb-ci-pr.yml** file then click on **Continue**
+
+      The build definition consists of the following tasks:
+      
+         o **DotNet Restore:** With NuGet Package Restore you can install all your project's dependency without having to store them in source                   control. 
+        
+         o **DotNet Build:** Builds a project and all of its dependencies.
+        
+         o **DotNet Test:** .Net test driver used to execute unit tests.
+        
+         o **DotNet Publish:** Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's                 **Build.ArtifactStagingDirectory**.
+        
+   7. Click the **Save** button to save the pipeline definition
+     
+   8. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/Remove** option. Name it **eshoponweb-ci-pr** and click on **Save**.
+
+**Task 2: Branch Policies**
+
+In this task, you will add policies to the main branch and only allow changes using Pull Requests that comply with the defined policies. You want to ensure that changes in a branch are reviewed before they are merged.
+
+   1. Go to **Repos>Branches** section.
+   
+   2. On the **Mine** tab of the **Branches** pane, hover the mouse pointer over the **main** branch entry to reveal the ellipsis symbol on the         right side.
+
+   3. Click the ellipsis and, in the pop-up menu, select **Branch Policies**.
+
+   4. On the main tab of the repository settings, enable the option for **Require minimum number of reviewers**. Add 1 reviewer and check the box      **Allow requestors to approve their own changes**(as you are the only user in your project for the lab)
+
+   5. On the main tab of the repository settings, in the Build Validation section, click + (Add a new build policy) and in the Build pipeline list, select eshoponweb-ci-pr then click Save.
+
+
+     
+
+  
+        
+        
+ 
+ 
+ 
+ 
+ 
+
+
+
 
     > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
 
