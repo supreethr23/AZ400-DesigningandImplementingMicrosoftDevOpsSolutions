@@ -91,7 +91,29 @@ In this task, you will add policies to the main branch and only allow changes us
 
    4. On the main tab of the repository settings, enable the option for **Require minimum number of reviewers**. Add 1 reviewer and check the box      **Allow requestors to approve their own changes**(as you are the only user in your project for the lab)
 
-   5. On the main tab of the repository settings, in the Build Validation section, click + (Add a new build policy) and in the Build pipeline list, select eshoponweb-ci-pr then click Save.
+   5. On the **main** tab of the repository settings, in the **Build Validation** section, click + (Add a new build policy) and in the Build pipeline list, select **eshoponweb-ci-pr** then click **Save**
+
+ **Task 3: Working with Pull Requests**
+ 
+ In this task, you will use the Azure DevOps portal to create a Pull Request, using a new branch to merge a change into the protected main branch.
+ 
+ 1. Navigate to the **Repos** section in the eShopOnWeb navigation and click **Branches**.
+
+ 2. Create a new branch named **Feature01** based on the **main** branch.
+
+ 3. Click *Feature01 and navigate to the **/eShopOnWeb/src/Web/Program.cs** file as part of the **Feature01** branch and make the following change on the first line:
+
+```
+// Testing my PR
+```
+ 
+ 
+
+   
+   
+
+
+ .
 
 
      
