@@ -23,7 +23,7 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name               **eShopOnWeb(1)** and leave the other fields with defaults. Click on **Create(3)**.
+   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name               **eShopOnWeb(1)** and leave the other fields with defaults. Click on **Create project(3)**.
 
       ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/9e2f68d4-65b1-40a9-9720-f0c6aaf54432)
 
@@ -77,7 +77,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
       ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/61f93510-e853-4c27-a282-17ecca69ffa9)
 
-   5. Select the **/.ado/eshoponweb-ci-pr.yml** file then click on **Continue**
+   5. Select the **/.ado/eshoponweb-ci-pr.yml(2)** file then click on **Continue(2)**
 
       ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/09d727b5-d063-422e-9e91-ee03a3609d91)
 
@@ -133,29 +133,53 @@ In this task, you will add policies to the main branch and only allow changes us
  
  1. Navigate to the **Repos** section in the eShopOnWeb navigation and click **Branches**.
 
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/ece4471b-3036-4a86-b215-634e6623ed5b)
+
  2. Create a new branch named **Feature01** based on the **main** branch.
 
- 3. Click *Feature01 and navigate to the **/eShopOnWeb/src/Web/Program.cs** file as part of the **Feature01** branch and make the following change on the first line:
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/ad648c24-a981-4049-8fa9-12e15d6b9223)
+
+3. Click **Feature01(1)** and navigate to the **/eShopOnWeb/src(2)/Web(3)/Program.cs(4)** file as part of the **Feature01** branch and make the following change on the first line:
 
 ```
 // Testing my PR
 ```
 
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/3363744c-c742-4d3e-807a-af4deee0f09f)
+
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/151c2454-df66-4f90-a42f-41bddb2c0b8f)
+   
  4. Click on **Commit > Commit** (leave default commit message).
 
- 5. A message will pop-up, proposing to create a Pull Request (as your **Feature01** branch is now ahead in changes, compared to **main**). Click on **Create a Pull Request**.
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/ab9929d4-9df7-47b5-8861-e64c35fdfe0a)
+    
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/856c8ce9-61af-445a-9543-9179022536c2)
 
-6. In the **New pull request** tab, leave defaults and click on **Create**.
+ 5. A message will pop-up, proposing to create a Pull Request (as your **Feature01** branch is now ahead in changes, compared to **main**). Click on **Create a Pull Request(1)**.
 
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/b2b2b35f-6086-4573-a254-58de8902c019)
+
+6. In the **New pull request(1)** tab, leave defaults and click on **Create(2)**.
+   
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/d30f60cc-c213-4916-a0f8-08c0fc47cdab)
+   
 7. The Pull Request will show some pending requirements, based on the policies applied to the target **main** branch.
 
      o At least 1 user should review and approve the changes.
      
      o Build validation, you will see that the build **eshoponweb-ci-pr** was triggered automatically
      
-8. After all validations are successful, on the top-right click on **Approve**. Now from the **Set auto-complete** dropdown you can click on       **Complete**.    
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/4bda9092-c8c4-428d-ab32-b1abbf66e143)
 
+      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/6ddfba1a-74c8-4250-ba16-7feca31278c2)
+      
+8. After all validations are successful, on the top-right click on **Approve(1)**. Now from the **Set auto-complete dropdown(2)** you can click on **Complete(3)**.  
+
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/1f8be18a-d0fd-4861-aeb0-b60612eb370c)
+  
 9. On the **Complete Pull Request** tab, click on **Complete Merge**
+
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/6b5c35f3-0307-4caf-a89d-1e2007085a30)
 
 **Exercise 2: Configure CI Pipeline as Code with YAML**
 
@@ -167,31 +191,39 @@ In this task, you will add the YAML build definition that will be used to implem
 
 Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
-  1. Go to **Pipelines>Pipelines**
+  1. Go to **Pipelines>Pipelines(1)** and click on **New Pipeline(2)** button
 
-  2. Click on **New Pipeline** button
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/268df693-0604-47e8-9b34-6e9cdfda4e17)
 
-  3. Select **Azure Repos Git (YAML)**
+   2. Select **Azure Repos Git (YAML)**
 
-  4. Select the **eShopOnWeb** repository
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/da618915-df41-4523-91a1-24bbbf505eb5)
 
-  5. Select **Existing Azure Pipelines YAML File**
+  3. Select the **eShopOnWeb** repository
 
-  6. Select the **/.ado/eshoponweb-ci.yml** file then click on **Continue**
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/22afdccf-4ea1-4f93-9a31-6b59aa607d97)
 
-     The CI definition consists of the following tasks:
+  4. Select **Existing Azure Pipelines YAML File**
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/61f93510-e853-4c27-a282-17ecca69ffa9)
+
+  5. Select the **/.ado/eshoponweb-ci.yml(1)** file then click on **Continue(2)**
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/9b5c7e10-875f-477d-b8a9-7126b1aea7b0)
+
+    The CI definition consists of the following tasks:
      
-       o **DotNet Restore:** With NuGet Package Restore you can install all your project's dependency without having to store them in source control.
+   o **DotNet Restore:** With NuGet Package Restore you can install all your project's dependency without having to store them in source control.
        
-       o **DotNet Build:** Builds a project and all of its dependencies.
+   o **DotNet Build:** Builds a project and all of its dependencies.
        
-       o **DotNet Test:** .Net test driver used to execute unit tests.
+   o **DotNet Test:** .Net test driver used to execute unit tests.
        
-       o **DotNet Publish:** Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's             **Build.ArtifactStagingDirectory**.
+   o **DotNet Publish:** Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's             **Build.ArtifactStagingDirectory**.
        
-       o **Publish Artifact - Website:** Publish the app artifact (created in the previous step) and make it available as a pipeline artifact.
+   o **Publish Artifact - Website:** Publish the app artifact (created in the previous step) and make it available as a pipeline artifact.
        
-       o **Publish Artifact - Bicep:** Publish the infrastructure artifact (Bicep file) and make it available as a pipeline artifact.
+   o **Publish Artifact - Bicep:** Publish the infrastructure artifact (Bicep file) and make it available as a pipeline artifact.
        
               
    **Task 2: Enable Continuous Integration**
@@ -209,60 +241,90 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
        include:
        - src/web/*
    ``` 
-     
-   This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
+   
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7a44b1d7-578d-4468-9331-d0857fabdf80)
+   
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/2b6ded54-6d9c-427b-b516-fefe3631ba8a)
+
+    This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
     
   2. Click the **Save** button (not **Save and run**) to save the pipeline definition.
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0f563873-ac78-438b-865a-46bf8d880b95)
+
   
-  3. Select **Create a new branch for this commit**
+  3. Select **Create a new branch for this commit(1)** Keep the default branch name and **Start a pull request(2)** checked. and Click on **Save(3)**
 
-  4. Keep the default branch name and **Start a pull request** checked.
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/d10c6eb2-38b6-4415-8ec8-82bc3f96e695)
 
-  5. Click on **Save**
+  4. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis(1)** and **Rename/Remove** option. Name it **eshoponweb-ci(2)**   and click on **Save(3)**.
 
-  6. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/Remove** option. Name it **eshoponweb-ci**   and click on **Save**.
+     <img width="826" alt="image" src="https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/3ba3897a-b43d-4d27-89d3-0e8e8cba9d1b">
 
-  7. Go to **Repos>Pullrequests**
+  5. Go to **Repos(1)>Pullrequests(2)** and click on the existing pull request. After all validations are successful, on the top-right click on        **Approve(4)**. Now you can click on **Complete(4)**.
 
-  8. Click on the existing pull request
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/d8d00033-647d-4914-b92d-5fd1dcb67fca)
 
-  9. After all validations are successful, on the top-right click on **Approve**. Now you can click on **Complete**.
+  6. On the **Complete Pull Request** tab, Click on **Complete Merge**
 
-  10. On the **Complete Pull Request** tab, Click on **Complete Merge**
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/999bbacb-aa0c-4d35-9b25-44ae05a6f414)
 
- **Task 3: Test the CI pipeline**
+   **Task 3: Test the CI pipeline**
  
- In this task, you will create a Pull Request, using a new branch to merge a change into the protected **main** branch and automatically trigger the CI pipeline.
+ In this task, you will create a Pull Request, using a new branch to merge a change into the protected main branch and automatically trigger the CI pipeline Navigate to the Repos section
  
-   1. Navigate to the **Repos** section
+ 1. Navigate to the **Repos(1)->Branches(2)** section. Create a **new branch(3)** named **Feature02(4)** based on the **main** branch and Click on **Create(5)**
 
-   2. Create a new branch named **Feature02** based on the **main** branch
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/2b6bd299-9d55-4c83-820c-6598ecc32aae)
+    
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0d2c67fa-41ac-4884-9220-367d396d6ce3)
 
-   3. Click the new **Feature02** branch
+ 2. Click the new **Feature02(1)** branch and navigate to the **/eShopOnWeb/src(2)/Web(3)/Program.cs(4)** file and click on **Edit(5)** to remove the first line and click on commit.
 
-   4. Navigate to the **/eShopOnWeb/src/Web/Program.cs** file and remove the first line:
    ```
-   // Testing my PR
+   // Testing my PR (6)
    ```
-   5. Click on **Commit > Commit** (leave default commit message).
+   
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/b82cb9de-06de-4cce-ae50-afaa5bbc0ae1)
+   
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/90ac7a58-d510-4ec5-bb22-3bb92b3858fa)
 
-   6. A message will pop-up, proposing to create a Pull Request (as your **Feature02** branch is now ahead in changes, compared to main).
+ 3. Click on **Commit > Commit** (leave default commit message).
+   
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f73c1d6e-c295-4df8-bcf2-5e96c4c4432a)
 
-   7. Click on **Create a Pull Request**
 
-   8. In the **New pull request** tab, leave defaults and click on **Create**.
+ 4. A message will pop-up, proposing to create a Pull Request (as your **Feature02** branch is now ahead in changes, compared to main).
 
-   9. The Pull Request will show some pending requirements, based on the policies applied to the target **main** branch.
+ 5. Click on **Create a Pull Request**
 
-   10. After all validations are successful, on the top-right click on **Approve**. Now from the **Set auto-complete** dropdown you can click on     **Complete**
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/bab7b162-256a-4cb3-8816-09c109904e35)
 
-   11. On the **Complete Pull Request** tab, Click on **Complete Merge**
+ 6. In the **New pull request(1)** tab, leave defaults and click on **Create(3)** The Pull Request will show some pending requirements, based         on the policies applied to the target **main(2)** branch.
 
-   12. Go back to **Pipelines>Pipelines,** you will notice that the build **eshoponweb-ci** was triggered automatically after the code was            merged.
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/644d5804-d059-4791-b773-c8d601ba2867)
 
-   13. Click on the **eshoponweb-ci** build then select the last run.
+  7. After all validations are successful, on the top-right click on **Approve(1)**. Now from the **Set auto-complete** dropdown you can click       on **Complete(2)**
 
-   14. After its successful execution, click on **Related > Published** to check the published artifacts:
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/95e82965-e365-4544-b901-032680fa07c1)
+
+   8. On the **Complete Pull Request** tab, Click on **Complete Merge**
+
+     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/fa6bf84b-9b4d-49fe-ba3a-566f2584bd00)
+
+   9. Go back to **Pipelines>Pipelines,** you will notice that the build **eshoponweb-ci** was triggered automatically after the code was            merged.
+
+    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/4ed89433-01fb-4877-9b07-ca0c59fa4386)
+ 
+   10. Click on the **eshoponweb-ci** build then select the last run.
+
+       ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/78d2d488-bf0c-492f-b70a-2e7b77584863)
+
+
+   11. After its successful execution, click on **Related(1) > Published(2)** to check the published artifacts:
+
+       ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/598b475b-6a0b-46a4-bf07-92d3a525b578)
+
 
           o Bicep: the infrastructure artifact
           
