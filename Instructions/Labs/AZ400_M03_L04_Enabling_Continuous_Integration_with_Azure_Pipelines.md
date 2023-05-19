@@ -15,6 +15,21 @@ After you complete this lab, you will be able to:
 
 ## Instructions
 
+#### Set up an Azure DevOps organization.
+
+1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+
+2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+
+3. On the next page accept defaults and click on continue.
+   
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7ff3a8ba-6703-4624-87a7-e5f2817b19b3)
+   
+4. On the **Almost Done...** page fill the captcha and click on continue. 
+
+   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/17b7f53a-e09c-4fb1-8604-755e334303dc)
+
+
 ### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the **eShopOnWeb**.
