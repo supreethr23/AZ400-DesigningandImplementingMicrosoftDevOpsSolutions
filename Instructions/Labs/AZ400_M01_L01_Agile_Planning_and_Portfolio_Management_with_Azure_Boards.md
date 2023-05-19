@@ -236,8 +236,12 @@ The sprint backlog should contain all the information the team needs to successf
 
     > **Note**: Let's assume you're going to take some vacation.
 
-1. On the **Capacity** tab of the **Sprints** view, directly next to the entry representing your user account, in the **Days off** column, click the **0 days** entry. This will display a panel where you can set your days off.
-1. In the displayed panel, use the calendar view to set your vacation to span five work days during the current sprint (within the next three weeks) and, once completed, click **OK**.
+1. On the **Capacity** tab of the **Sprints** view, click on three dot next to **Revert** and select **Add all team members**
+
+   ![](images/team-member-1.png)
+  
+3. Directly next to the entry representing your user account, in the **Days off** column, click the **0 days** entry. This will display a panel where you can set your days off.
+4. In the displayed panel, use the calendar view to set your vacation to span five work days during the current sprint (within the next three weeks) and, once completed, click **OK**.
 
     ![Enter "Start", "End" and "Days Off" as mentioned](images/m1/az-400_m01_t3_s07.png)
 
