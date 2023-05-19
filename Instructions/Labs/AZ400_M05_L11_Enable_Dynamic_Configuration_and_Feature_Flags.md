@@ -34,7 +34,7 @@ After you complete this lab, you will be able to:
 
 3. On the next page accept defaults and click on continue.
    
-   ![](images/Organization-1.png)
+   ![](images/1.Organization-1.png)
    
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
