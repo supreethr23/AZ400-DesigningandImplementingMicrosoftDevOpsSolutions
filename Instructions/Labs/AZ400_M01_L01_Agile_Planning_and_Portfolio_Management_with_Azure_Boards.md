@@ -308,7 +308,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
 1. On the **Settings** panel, select the **Tag colors** tab, click **+ Tag color**, in the **Tag** textbox, type **data** and leave the default color in place.
 
-    !["Settings" window, "Tag colors", include "data" tag](images/m1/az-400_m01_t4_s3.png)
+    !["Settings" window, "Tag colors", include "data" tag](images/tagcolor.png)
 
     > **Note**: Whenever a backlog item or bug is tagged with **data**, that tag will be highlighted.
 
