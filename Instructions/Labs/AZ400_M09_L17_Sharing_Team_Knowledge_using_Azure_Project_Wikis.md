@@ -28,11 +28,11 @@ After you complete this lab, you will be able to:
 
 3. On the next page accept defaults and click on continue.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7ff3a8ba-6703-4624-87a7-e5f2817b19b3)
+    ![](images/AZ400_M09_L17_01.png)
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/17b7f53a-e09c-4fb1-8604-755e334303dc)
+    ![](images/AZ400_M09_L17_02.png)
 
 ### Exercise 0: Configure the lab prerequisites
 
@@ -51,8 +51,7 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
 
 2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb(1)**, select visibilty as **Private(2)** and then click **Create Project(3)**
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/ff673278-d825-45a2-bf15-96661f4fc36b)
-    
+    ![](images/AZ400_M09_L17_03.png)
 ### Exercise 1: Publish code as wiki
 
 In this exercise, you will step through publishing an Azure DevOps repository as wiki and managing the published wiki.
@@ -69,37 +68,36 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
     > **Note**: You can access the project page directly by navigating to the [https://dev.azure.com/<inject key="DeploymentID" enableCopy="false"/>/EShopOnWeb]URL.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/15897f3d-e2ec-4fe5-b195-f7437bf32953)
+    ![](images/AZ400_M09_L17_04.png)
     
 2.  In the vertical menu on the left side of the **EShopOnWeb** pane, click **Repos**.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7431551f-bebf-4505-8533-4434ee85a9c9)
+    ![](images/AZ400_M09_L17_05.png)
 
 3.  Click on the **Files(1)** pane, we can see that **EShopOnWeb is empty. Add some code!**. So click **Initialize(2)** to initialize the repository for the first time.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/949b6133-75e2-42bf-a68d-b21d7d3b9511)
+    ![](images/AZ400_M09_L17_06.png)
     
 4.  Click the **Files(1)** pane. In the branch dropdown list , select **main(2)** branch, and review the content of the main branch.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/dcd483fa-3e95-443f-b917-138bb6d73fca)
+    ![](images/AZ400_M09_L17_07.png)
 
 5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb(1)** Repo title on top of the folder structure. Select the **elipsis (3 dots)(2)**.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/485daed9-9839-4873-937c-38c59a817e86)
+    ![](images/AZ400_M09_L17_08.png)
 
 6.  Choose **New(1) / Folder(2)**, and provide **Documents(3)** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME(4)** as New File name. Click to **Create(5)** folder.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/bff5c51f-564f-447b-9b35-97c64afff0b6)
+    ![](images/AZ400_M09_L17_09.png)
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/63a3eef8-e4d1-46b1-bb4d-bed20641a4ca)
-
+    ![](images/AZ400_M09_L17_10.png)
 7.  The **READ.ME(1)** file will open in the built-in view mode. Since this is stored **'as code'(2)**, you need to **Commit** the changes by clicking the **Commit(3)** button.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a160d567-e9c0-4678-8386-c2ea332c90a9)
+        ![](images/AZ400_M09_L17_11.png)
 
 8.  In the Azure DevOps vertical menu on the left side, click **Overview(1)**, in the Overview section, select **Wiki(2)**, select **Publish code as wiki(3)**.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f1c7908a-d510-4b5e-b792-b3fd13f94ed8)
+    ![](images/AZ400_M09_L17_12.png)
 
 9. On the **Publish code as wiki** pane, specify the following **settings** and click **Publish(5)**.
    | Setting | Value |
@@ -111,11 +109,10 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
     > **Note**: This will automatically open the Wiki section, and publish the editor, where you can provide a Wiki page title, as well as adding the actual content. Notice you are encouraged to use MarkDown format, but make use of the ribbon to help you with some of the MarkDown layout syntax.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/00f548a7-fd25-40e3-949c-4dcb12c59fbc)
+    ![](images/AZ400_M09_L17_13.png)
 
 10.  In the Wiki Page **Title** field, enter **Welcome to our Online Retail Store!**.
-
-      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/fb653a0f-c238-42c0-b15c-b81a8232951b)
+    ![](images/AZ400_M09_L17_14.png)
 
 11.  In the **body(1)** of the Wiki Page, paste in the following text and **Save(2)** it:
     
@@ -151,19 +148,18 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
       #Summary
       Thank you for choosing our online retail store for your shopping needs. We look forward to serving you!
       ```
-      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/1e0e5a20-ffec-4abc-a38c-30b4c56d4f98)
+        ![](images/AZ400_M09_L17_15.png)
       
 12.  This sample text gives you an overview of several of the common MarkDown syntax features, ranging from Title and subtitles (##), bold            (**), italic (*), how to create tables, and more.
 13.  **Refresh** your browser, or select any other DevOps portal option and return to the **Overview(1)** and **Wiki(2)** section. Notice you are now presented with the **EshopOnWeb (Documents)** Wiki, as well as having the **Welcome to our Online Retail Store(3)** as **HomePage** of the Wiki.
-     
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/66887737-8e52-47e7-88b9-9f3c31ad7005)
+    ![](images/AZ400_M09_L17_16.png)
 
 #### Task 2: Manage content of a published wiki
 In this task, you will manage content of the wiki you published in the previous task.
 
 1. In the vertical menu on the left side, click **Repos(1)**, ensure that the dropdown menu in the upper section of the **Files(2)** pane displays the **EShopOnWeb(3)** repo and **main(4)** branch, in the repo folder hierarchy, select the **Documents(5)** folder, and select the **Welcome-to-our-Online-Retail-Store!.md(6)** file.
 
-   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/03c10aec-3f48-49b0-ae00-699400ccd8f4)
+    ![](images/AZ400_M09_L17_17.png)
 
 2. Notice how the MarkDown format is visible here as raw text format, allowing you to continue editing the file content from here as well.
 
@@ -182,31 +178,29 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
 
 1.  On your lab VM, in the Azure DevOps portal displaying the **Overview(1)** and **Wiki(2)** pane of the **EShopOnweb** project, with the content of the **EShopOnWeb (Documents)(3)** wiki selected, at the top of the pane, click the **EShopOnWeb (Documents)** dropdown list header, and, in the drop down list, select **Create new project wiki(4)**. 
 
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/89f9619f-beed-4f6f-a046-486b7520f1ce)
+      ![](images/AZ400_M09_L17_18.png)
 
 2.  In the Page title text box, type **Project Design**.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/aac19ef9-9c47-4ab5-a17f-19b71a8f9dc1)
+    ![](images/AZ400_M09_L17_19.png)
 
 3.  Place the cursor in the body of the page, click the left-most icon in the toolbar representing the header setting and, in the dropdown list, click **Header 1**. This will automatically add the hash character (**#**) at the beginning of the line.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/63cc6507-b9e2-4bac-9dc2-7451e613af17)
-    
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f083d671-f86b-407a-871b-00db90970b2e)
+    ![](images/AZ400_M09_L17_20.png)
+    ![](images/AZ400_M09_L17_21.png)
 
 4.  Directly after the newly added **#** character, type **Authentication and Authorization** and press the **Enter** key.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a717b53c-7c86-442c-8ffe-edcbf5df4ca6)
+    ![](images/AZ400_M09_L17_22.png)
 
 5.  Click the left-most icon in the toolbar representing the header setting and, in the dropdown list, click **Header 2**. This will automatically add the hash character (**##**) at the beginning of the line.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/90efc132-65ca-417a-bcd0-bd63d57b93ef)
+    ![](images/AZ400_M09_L17_23.png)
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/e1d6419d-3dd6-4aa8-94e8-8de96ffe81a2)
-
+    ![](images/AZ400_M09_L17_24.png)
 6.  Directly after the newly added **##** character, type **Azure DevOps OAuth 2.0 Authorization Flow** and press the **Enter** key.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f08324b5-bcd2-4072-9ac1-445f0e87e73f)
+    ![](images/AZ400_M09_L17_25.png)
 
 7.  **Copy and paste** the following code to insert a mermaid diagram on your wiki.
 
@@ -231,59 +225,51 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
 
     >**Note**: For details regarding the Mermaid syntax, refer to [About Mermaid](https://mermaid-js.github.io/mermaid/#/)
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a7d2219c-88ea-4a24-992e-9fd8f78a8ea2)
+    ![](images/AZ400_M09_L17_26.png)
 
 
 8.  To the right of the editor pane, in the preview pane, click **Load diagram** and review the outcome. 
 
     >**Note**: The output should resemble the flowchart that illustrates how to [Authorize access to REST APIs with OAuth 2.0](https://docs.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/oauth?view=azure-devops)
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/d94a4c66-766f-432a-9000-16c2545f2bb9)
+    ![](images/AZ400_M09_L17_27.png)
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/bf2d646f-0e33-499b-970d-51440016193f)
+    ![](images/AZ400_M09_L17_28.png)
 
 9.  In the upper right corner of the editor pane, click the down-facing caret next to the **Save** button and, in the dropdown menu, click **Save with revision message**. 
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/683085da-0d9d-4858-b0c0-1df8716789dd)
+    ![](images/AZ400_M09_L17_29.png)
 
 10.  In the **Save page** dialog box, type **Authentication and authorization section with the OAuth 2.0 Mermaid diagram** and click **Save**.
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/2ecdc20b-cfa5-4aa9-b344-0848d335a127)
+    ![](images/AZ400_M09_L17_30.png)
 
 11.  On the **Project Design** editor pane, place the cursor at the end of the Mermaid element you added earlier in this task, press the **Enter** key to add an extra line, click the left-most icon in the **toolbar(1)** representing the header setting and, in the dropdown list, click **Header 2(2)**. This will automatically add the double hash character (**##(3)**) at the beginning of the line.
-
-      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/1038862f-9dc6-48af-8b5a-0f4d9b6bf3b8)
+   
+       ![](images/AZ400_M09_L17_31.png)
 
 12.  Directly after the newly added **##** character, type **User Interface** and press the **Enter** key.
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0e3efc10-958b-4413-8a13-03fcad653fea)
+    ![](images/AZ400_M09_L17_32.png)
 
 13.  Download any image from Google by searching **brand.png(1)** and select the **image** to download.
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/3bed8aab-1af6-4414-b8cd-1b736ee86abb)
+    ![](images/AZ400_M09_L17_33.png)
  
 14.  Right click on the image and download to the **Desktop(1)** and type File name as **Brand.png(2)** and **Save(3)** it in your lab VM.
-     
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/442100b3-4e25-42fd-ba27-b9551f9a78f5)
+    ![](images/AZ400_M09_L17_34.png)
 
 15.  On the **Project Design(1)** editor pane, in the toolbar, click the **paper clip icon(2)** representing the **Insert a file** action, in the **Open** dialog box, navigate to the **Desktop(3)** folder, select the **Brand.png(4)** file you downloaded in the previous exercise, and click **Open(5)**.
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/465c9fd2-d4ec-4946-bb3c-836f8dd0b986)
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/cda57ce1-092f-4ce0-9778-fb11977956d5)
+    ![](images/AZ400_M09_L17_35.png)
+    ![](images/AZ400_M09_L17_36.png)
 
 16.  Back on the **Project Design** editor pane, review the preview pane and verify that the image is properly displayed.
 17.  In the upper right corner of the editor pane, click the down-facing caret next to the **Save** button and, in the dropdown menu, click **Save with revision message**. 
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/c64d86e3-b188-4a1a-ab89-e1519c937826)
+    
+     ![](images/AZ400_M09_L17_37.png)
 
 18.  In the **Save page** dialog box, type **User Interface section with the Brand image** and click **Save**.
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/807aed99-22b8-48b8-b37a-10af8d2a5dc5)
+    ![](images/AZ400_M09_L17_38.png)
 
 19.  Back on the editor pane, in the upper right corner, click **Close**. 
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/8e6f727f-2046-4e34-91ac-85f3d763461e)
+    ![](images/AZ400_M09_L17_39.png)
 
 
 #### Task 2: Manage a project wiki
@@ -294,44 +280,42 @@ In this task, you will manage the newly created project wiki.
 
 1.  On you lab VM, in the Azure DevOps portal displaying the **Wiki pane** of the **EShopOnWeb** project, with the content of the **Project Design(1)** wiki selected, in the upper right corner, click the vertical **ellipsis symbol(2)** and, in the dropdown menu, click **View revisions(3)**.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/fe445170-24bf-4f3c-9d0a-f56f9ce4b660)
+     ![](images/AZ400_M09_L17_40.png)
 
 2.  On the **Revisions** pane, click the entry representing the most recent change. 
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/81eb4531-9f94-43b5-a4b0-fc0cb8fce46f)
-
+    ![](images/AZ400_M09_L17_041.png)
 3.  On the resulting pane, review the comparison between the previous and the current version of the document, click **Revert**, when prompted for the confirmation, click **Revert** again, and then click **Browse Page**.
+    ![](images/AZ400_M09_L17_42.png)
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/2e7f8962-7aac-4b4a-9052-c6ad66eb6fcc)
+    ![](images/AZ400_M09_L17_43.png)
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/6b8be05b-59d1-4a10-a58d-5b58affcf185)
-
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0842622b-db7e-4692-b081-ee4032195347)
+    ![](images/AZ400_M09_L17_44.png)
 
 4.  Back on the **Project Design** pane, verify that the change was successfully reverted.
 
     >**Note**: Now you will add another page to the project wiki and set it as the wiki home page.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a5135a7c-37d0-4c92-8ec1-b19cd2ba6b9f)
+    ![](images/AZ400_M09_L17_45.png)
 
 
 5.  On the **Project Design** pane, at the bottom left corner, click **+ New page**.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/ed64ce89-2ddc-43f3-a265-3d45822fe2cb)
+    ![](images/AZ400_M09_L17_46.png)
 
 6.  On the page editor pane, in the **Page title** text box, type **Project Design Overview**, click **Save**, and then click **Close**.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/6afb8158-9943-4780-85e1-2fa9857e67ec)
+    ![](images/AZ400_M09_L17_47.png)
 
 7.  Back in the pane listing the pages within the **Project Design** project wiki, locate the **Project Design Overview** entry, select it with the mouse pointer, drag and drop it above the **Project Design** page entry. 
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/cfbf4d65-37a3-4e0e-8f63-c7a5cc153655)
+    ![](images/AZ400_M09_L17_48.png)
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f239c1ab-f4e6-4ddd-be44-b898b34e837d)
+    ![](images/AZ400_M09_L17_49.png)
 
 8.  Verify that the **Project Design Overview** entry is listed as the top level page with the home icon designating it as the wiki home page.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/8f352e8d-42f8-4e35-8567-84dd4e7ee938)
+    ![](images/AZ400_M09_L17_40.png)
 
 
 ## Review
