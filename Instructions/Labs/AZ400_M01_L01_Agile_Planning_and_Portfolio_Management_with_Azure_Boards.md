@@ -273,7 +273,7 @@ The sprint backlog should contain all the information the team needs to successf
 
     > **Note**: This will color all cards green if they meet the rule criteria set directly below, in the **Rule criteria** section.
 
-1. Click on **Add criteria**, and on the **Rule criteria** section, in the **Field** dropdown list, select **Activity**, in the **Operator** dropdown list, select **=**, and, in the **Value** dropdown list, select **Development**.
+1. Click on **+ Add criteria**, and on the **Rule criteria** section, in the **Field** dropdown list, select **Activity**, in the **Operator** dropdown list, select **=**, and, in the **Value** dropdown list, select **Development**.
 
     !["Settings" window, make sure all fields have mentioned information](images/m1/az-400_m01_t3_s14.png)
 
