@@ -340,8 +340,13 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     > **Note**: The Work in progress limit of 1 indicates that only one work item should be in this stage at a time. You would ordinarily set this higher, but there are only two work items to demonstrate the feature.
 
-1. On the **Settings** panel, on the **Columns** tab, drag and drop the newly created tab between **Committed** and **Done**.
-1. On the **Settings** panel, click **Save and close**.
+1. On the **Settings** panel, on the **Columns** tab.
+   
+1. click column option menu near **QA Approved** tab and select **> move right** untill the newly created tab is between **Committed** and **Done**.
+    
+    ![](images/approved-1.png)
+   
+3. On the **Settings** panel, click **Save and close**.
 
     ![On the "Settings" panel, clikc "Save & Close"](images/m1/az-400_m01_t4_s16.png)
 
