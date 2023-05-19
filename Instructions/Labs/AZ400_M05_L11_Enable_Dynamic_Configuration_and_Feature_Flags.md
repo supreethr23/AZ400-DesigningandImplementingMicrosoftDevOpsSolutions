@@ -128,9 +128,9 @@ You can create a connection from Azure Pipelines to external and remote services
 
 In this task, you will create a service principal by using the Azure CLI, which will allow Azure DevOps to:
 
-      o Deploy resources on your azure subscription
+     o Deploy resources on your azure subscription
    
-      o Deploy the eShopOnWeb application
+     o Deploy the eShopOnWeb application
    
 > **Note**: If you do already have a service principal, you can proceed directly to the next task.
       
