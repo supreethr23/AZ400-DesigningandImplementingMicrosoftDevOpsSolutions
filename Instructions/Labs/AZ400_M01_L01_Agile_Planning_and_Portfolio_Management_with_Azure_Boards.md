@@ -236,7 +236,7 @@ The sprint backlog should contain all the information the team needs to successf
 
     > **Note**: Let's assume you're going to take some vacation.
 
-1. On the **Capacity** tab of the **Sprints** view, click on three dot next to **Revert** and select **Add all team members**
+1. On the **Capacity** tab of the **Sprints** view, click on ellipsis icon next to **Revert** and select **Add all team members**
 
    ![](images/team-member-(1).png)
   
