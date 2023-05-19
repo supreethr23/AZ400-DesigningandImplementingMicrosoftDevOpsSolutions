@@ -24,39 +24,16 @@ In this exercise, you will set up the prerequisite for the lab, which consists o
 
 #### Task 1: Configure the team project
 
-In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Parts Unlimited** template.
+In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. 
+1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb**. Define **Private** as Visibility option.
+1. Click **Advanced** and specify **Scrum** as **Work Item Process**.
+  
+1. Click on **Create**.
 
-    > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
-
-1. Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
-
-    ![Azure DevOps Generator website. Clik on "Sign In" option](images/m1/az-400_m01_demogen.png)
-
-1. If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
-
-   ![Azure DevOps](images/m01.png)
- 
-1. On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb** (1), in the **Select organization** (2) dropdown list, select your Azure DevOps organization, and then click **Choose template** (3).
-
-   ![Azure DevOps](images/m1/az-400_m01_05.png)
-
-1. In the list of templates, locate the **PartsUnlimited** (1) template and click **Select Template** (2).
-
-    ![Azure DevOps](images/m03.png)
-
-1. Back on the **Create New Project** page, click **Create Project**
-
-    ![Azure DevOps](images/m1/az-400_m01_07.png)
-
-    > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your Azure DevOps organization, delete the project, and try again.
-
-1. On the **Create New Project** page, click **Navigate to project**.
-
-    ![Azure DevOps](images/m05.png)
-
-
+    ![Create Project](images/create-project.png)
+    
+    
 ### Exercise 1: Manage Agile project
 
 In this exercise, you will use Azure Boards to perform a number of common agile planning and portfolio management tasks, including management of teams, areas, iterations, work items, sprints and capacity, customizing Kanban boards, defining dashboards, and customizing team processes.
