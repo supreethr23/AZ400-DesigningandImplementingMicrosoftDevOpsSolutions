@@ -42,7 +42,25 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
    1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created eShopOnWeb project. Click on **Repos>Files , Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git and click on Import:
 
-### Exercise 1: Import and run CI/CD Pipelines
+   2. The repository is organized the following way:
+
+        O **.ado** folder contains Azure DevOps YAML pipelines
+        
+        O **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub                      Codespaces)
+        
+        O **.github** folder container YAML GitHub workflow definitions.
+        
+        O **.src** folder contains the .NET 6 website used on the lab scenarios.
+        
+   **Task 3: (skip if done) Set main branch as default branch**
+   
+   1. Go to **Repos>Branches**
+
+   2. Hover on the **main** branch then click the ellipsis on the right of the column
+
+   3. Click on **Set as default branch**
+  
+  ### Exercise 1: Import and run CI/CD Pipelines
 
 In this exercise, you will import and run the CI pipeline, configure the service connection with your Azure Subscription and then import and run the CD pipeline.
 
@@ -50,7 +68,7 @@ In this task, you will create an eShopOnWeb Azure DevOps project to be used by s
 
 #### Task 1: Import and run the CI pipeline
 
-Let's start by importing the CI pipeline named [eshoponweb-ci.yml](https://github.com/MicrosoftLearning/eShopOnWeb/blob/main/.ado/eshoponweb-ci.yml).
+Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
 1. Go to **Pipelines>Pipelines**
 
@@ -68,32 +86,32 @@ Let's start by importing the CI pipeline named [eshoponweb-ci.yml](https://githu
 
 1. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/Remove** option. Name it **eshoponweb-ci** and click on **Save**.
 
-Task 2: Manage the service connection
+**Task 2: Manage the service connection**
 
 You can create a connection from Azure Pipelines to external and remote services for executing tasks in a job.
 
 In this task, you will create a service principal by using the Azure CLI, which will allow Azure DevOps to:
 
-   1 Deploy resources on your azure subscription
+      o Deploy resources on your azure subscription
    
-   1 Deploy the eShopOnWeb application
+      o Deploy the eShopOnWeb application
    
-      Note: If you do already have a service principal, you can proceed directly to the next task.
+      >** Note: If you do already have a service principal, you can proceed directly to the next task.
       
  You will need a service principal to deploy Azure resources from Azure Pipelines.
  
  A service principal is automatically created by Azure Pipeline when you connect to an Azure subscription from inside a pipeline definition or when you create a new service connection from the project settings page (automatic option). You can also manually create the service principal from the portal or using Azure CLI and re-use it across projects.
  
-     1. From the lab computer, start a web browser, navigate to the Azure Portal, and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
+   1. From the lab computer, start a web browser, navigate to the **Azure Portal**, and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
      
-     2. In the Azure portal, click on the Cloud Shell icon, located directly to the right of the search textbox at the top of the page.
+   2. In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
      
-     3. If prompted to select either Bash or PowerShell, select Bash.
-     
-           Note: If this is the first time you are starting Cloud Shell and you are presented with the You have no storage mounted message, select the subscription you are using in this lab, and select Create storage.
-           
-      1. From the Bash prompt, in the Cloud Shell pane, run the following commands to retrieve the values of the Azure subscription ID attribute:
+   3. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
       
+        > ** Note: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
+           
+   1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID attribute:
+   
   ```
   subscriptionName=$(az account show --query name --output tsv)
 subscriptionId=$(az account show --query id --output tsv)
@@ -101,25 +119,52 @@ echo $subscriptionName
 echo $subscriptionId
 ```
 
-      2. From the Bash prompt, in the Cloud Shell pane, run the following command to create a service principal:
+>  * Note: Copy both values to a text file. You will need them later in this lab.
+     ![](images/pipelineruns-01.png)
+
+
+   2. From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a service principal:
+
+~~~
+az ad sp create-for-rbac --name sp-az400-azdo --role contributor --scopes /subscriptions/$subscriptionId
+~~~
+
+Note: The command will generate a JSON output. Copy the output to text file. You will need it later in this lab.
+
+  3. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **New Service Connection**.
+
+  4. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
+
+  5. The choose **Service principal (manual)** and click on **Next**.
+
+  6. Fill in the empty fields using the information gathered during previous steps:
+
+        o Subscription Id and Name
+        
+        o Service Principal Id (or clientId), Key (or Password) and TenantId.
+        
+        o In **Service connection name type azure subs**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
+        
+   7. Click on **Verify and Save**
+    
+ **Task 3: Import and run the CD pipeline**
+ 
+ Let's import the CD pipeline named **eshoponweb-cd-webapp-code.yml*.
+ 
+   1. Go to **Pipelines>Pipelines**
+
+   2. Click on **New pipeline** button
+
+   3. Select **Azure Repos Git (Yaml)**
+
+   4. Select the **eShopOnWeb** repository
+
+   5. Select **Existing Azure Pipelines YAML File**
+
+   6. Select the **.ado/eshoponweb-cd-webapp-code.yml** file then click on **Continue**
+   
+   7. In the YAML pipeline definition, customize:
       
-      
-
-Note: Copy both values to a text file. You will need them later in this lab.
-
-1. Go to **Pipelines>Pipelines**
-
-1. Click on **New pipeline** button
-
-1. Select **Azure Repos Git (Yaml)**
-
-1. Select the **eShopOnWeb** repository
-
-1. Select **Existing Azure Pipelines YAML File**
-
-1. Select the **.ado/eshoponweb-cd-webapp-code.yml** file then click on **Continue**
-
-1. In the YAML pipeline definition, customize:
 - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
 - **az400eshop-NAME** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
 - **AZ400-EWebShop-NAME** with **AZ400-EWebShop1-<inject key="DeploymentID" enableCopy="false"/>**.
