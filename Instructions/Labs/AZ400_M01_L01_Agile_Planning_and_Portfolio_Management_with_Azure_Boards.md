@@ -123,9 +123,9 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
     > **Note**: The work item form includes all of the relevant work item settings. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. We will explore one of the ways to add a feature to this epic.
 
 1. In the **Related work** section on the lower right-side, select the **Add link** entry and, in the dropdown list, select **New item**.
-1. On the **Add link** panel, in the **Link Type** dropdown list, select **Child**. Next, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **OK**.
+1. On the **Add link** panel, in the **Link Type** dropdown list, select **Child**. Next, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **Add link**.
 
-    ![Include Title "Training Dashboard" and click "OK"](images/m1/az-400_m01_t2_s9.png)
+    ![Include Title "Training Dashboard" and click "OK"](images/addlink.png)
 
     > **Note**: On the **Training dashboard** panel, note that the assignment, **Area**, and **Iteration** are already set to the same values as the epic that the feature is based on. In addition, the feature is automatically linked to the parent item it was created from.
 
