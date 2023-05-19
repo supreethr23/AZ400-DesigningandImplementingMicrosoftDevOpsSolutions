@@ -150,9 +150,11 @@ In this task, you will create a service principal by using the Azure CLI, which 
      
    3. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
    
-      > **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
+      > **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage** then it will create storage account to store the logs.
          
       ![](images/19.selectbash.png)
+      
+      ![](images/68.storage.png)
         
    4. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID attribute:
    
@@ -179,13 +181,13 @@ In this task, you will create a service principal by using the Azure CLI, which 
 
    6. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections(1) (under Pipelines)** and **Create Service Connection(2)**.
 
-     ![](images/22.projectssetting.png)
+      ![](images/22.projectssetting.png)
      
-     ![](images/23.serviceconnection.png)
+      ![](images/23.serviceconnection.png)
       
    7. On the **New service connection** blade, select **Azure Resource Manager(1)** and **Next(2)** (may need to scroll down).
 
-     ![](images/24.azureresourcemanager.png)
+      ![](images/24.azureresourcemanager.png)
 
    8. The choose **Service principal (manual)(1)** and click on **Next(2)**.
 
@@ -233,14 +235,14 @@ In this task, you will create a service principal by using the Azure CLI, which 
 
       ![](images/33.newpipeline-4-1.png)
    
-    In the YAML pipeline definition, customize:
+      In the YAML pipeline definition, customize:
       
-   - **YOUR-SUBSCRIPTION-ID(2)** with your Azure subscription id.
-   - **AZ400-EWebshop-NAME(1)** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
-   - **AZ400-EWebShop-NAME** with **AZ400-EWebShop1-<inject key="DeploymentID" enableCopy="false"/>**.
-   - **az400-webapp-NAME(3)** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
+      - **YOUR-SUBSCRIPTION-ID(2)** with your Azure subscription id.
+      - **AZ400-EWebshop-NAME(1)** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
+      - **AZ400-EWebShop-NAME** with **AZ400-EWebShop1-<inject key="DeploymentID" enableCopy="false"/>**.
+      - **az400-webapp-NAME(3)** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
 
-     ![](images/34.ymlnamereplace-1.png)
+      ![](images/34.ymlnamereplace-1.png)
          
    6. Click on **Save and Run** and wait for the pipeline to execute successfully.
 
@@ -250,9 +252,9 @@ In this task, you will create a service principal by using the Azure CLI, which 
        
        ![](images/36.pipelinesuccess.png)
 
-    The CD definition consists of the following tasks:
-    - **Resources**: it is prepared to automatically trigger based on CI pipeline completion. It also downloads the repository for the bicep file.
-    - **AzureResourceManagerTemplateDeployment**: Deploys the Azure Web App using bicep template.
+      The CD definition consists of the following tasks:
+       - **Resources**: it is prepared to automatically trigger based on CI pipeline completion. It also downloads the repository for the bicep file.
+       - **AzureResourceManagerTemplateDeployment**: Deploys the Azure Web App using bicep template.
 
   7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines(1)>Pipelines(2)** and          click on the recently created pipeline. Click on the **ellipsis(3)** and **Rename/Remove(4)** option. Name it **eshoponweb-cd-webapp-code(5)** and click on          **Save(6)**.
 
