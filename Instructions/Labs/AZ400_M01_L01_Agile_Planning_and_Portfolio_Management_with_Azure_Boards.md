@@ -18,59 +18,19 @@ After you complete this lab, you will be able to:
 
 ## Instructions
 
-### Set up an Azure DevOps organization
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to [**Azure Devops**](https://go.microsoft.com/fwlink/?LinkId=307137)
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/400-3.png)
-
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/m1-2.png)
-
 ### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
 
 #### Task 1: Configure the team project
 
-In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Parts Unlimited** template.
+In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. 
-
-    > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
-
-1. Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
-
-    ![Azure DevOps Generator website. Clik on "Sign In" option](images/m1/az-400_m01_demogen.png)
-
-1. If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
-
-   ![Azure DevOps](images/m01.png)
- 
-1. On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb** (1), in the **Select organization** (2) dropdown list, select your Azure DevOps organization, and then click **Choose template** (3).
-
-   ![Azure DevOps](images/m1/az-400_m01_05.png)
-
-1. In the list of templates, locate the **PartsUnlimited** (1) template and click **Select Template** (2).
-
-    ![Azure DevOps](images/m03.png)
-
-1. Back on the **Create New Project** page, click **Create Project**
-
-    ![Azure DevOps](images/m1/az-400_m01_07.png)
-
-    > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your Azure DevOps organization, delete the project, and try again.
-
-1. On the **Create New Project** page, click **Navigate to project**.
-
-    ![Azure DevOps](images/m05.png)
-
-
+1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and under the **Advanced** section, choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
+   
+   ![Create Project](images/az400_02-02.png)
+   ![Create Project](images/az400_02-03.png)
+    
 ### Exercise 1: Manage Agile project
 
 In this exercise, you will use Azure Boards to perform a number of common agile planning and portfolio management tasks, including management of teams, areas, iterations, work items, sprints and capacity, customizing Kanban boards, defining dashboards, and customizing team processes.
@@ -163,9 +123,9 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
     > **Note**: The work item form includes all of the relevant work item settings. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. We will explore one of the ways to add a feature to this epic.
 
 1. In the **Related work** section on the lower right-side, select the **Add link** entry and, in the dropdown list, select **New item**.
-1. On the **Add link** panel, in the **Link Type** dropdown list, select **Child**. Next, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **OK**.
+1. On the **Add link** panel, in the **Link Type** dropdown list, select **Child**. Next, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **Add link**.
 
-    ![Include Title "Training Dashboard" and click "OK"](images/m1/az-400_m01_t2_s9.png)
+    ![Include Title "Training Dashboard" and click "OK"](images/addlink.png)
 
     > **Note**: On the **Training dashboard** panel, note that the assignment, **Area**, and **Iteration** are already set to the same values as the epic that the feature is based on. In addition, the feature is automatically linked to the parent item it was created from.
 
@@ -276,8 +236,12 @@ The sprint backlog should contain all the information the team needs to successf
 
     > **Note**: Let's assume you're going to take some vacation.
 
-1. On the **Capacity** tab of the **Sprints** view, directly next to the entry representing your user account, in the **Days off** column, click the **0 days** entry. This will display a panel where you can set your days off.
-1. In the displayed panel, use the calendar view to set your vacation to span five work days during the current sprint (within the next three weeks) and, once completed, click **OK**.
+1. On the **Capacity** tab of the **Sprints** view, click on ellipsis icon next to **Revert** and select **Add all team members**
+
+   ![](images/team-member-(1).png)
+  
+3. Directly next to the entry representing your user account, in the **Days off** column, click the **0 days** entry. This will display a panel where you can set your days off.
+4. In the displayed panel, use the calendar view to set your vacation to span five work days during the current sprint (within the next three weeks) and, once completed, click **OK**.
 
     ![Enter "Start", "End" and "Days Off" as mentioned](images/m1/az-400_m01_t3_s07.png)
 
@@ -309,7 +273,7 @@ The sprint backlog should contain all the information the team needs to successf
 
     > **Note**: This will color all cards green if they meet the rule criteria set directly below, in the **Rule criteria** section.
 
-1. In the **Rule criteria** section, in the **Field** dropdown list, select **Activity**, in the **Operator** dropdown list, select **=**, and, in the **Value** dropdown list, select **Development**.
+1. Click on **+ Add criteria**, and on the **Rule criteria** section, in the **Field** dropdown list, select **Activity**, in the **Operator** dropdown list, select **=**, and, in the **Value** dropdown list, select **Development**.
 
     !["Settings" window, make sure all fields have mentioned information](images/m1/az-400_m01_t3_s14.png)
 
@@ -344,7 +308,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
 1. On the **Settings** panel, select the **Tag colors** tab, click **+ Tag color**, in the **Tag** textbox, type **data** and leave the default color in place.
 
-    !["Settings" window, "Tag colors", include "data" tag](images/m1/az-400_m01_t4_s3.png)
+    !["Settings" window, "Tag colors", include "data" tag](images/tagcolor.png)
 
     > **Note**: Whenever a backlog item or bug is tagged with **data**, that tag will be highlighted.
 
@@ -376,8 +340,13 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     > **Note**: The Work in progress limit of 1 indicates that only one work item should be in this stage at a time. You would ordinarily set this higher, but there are only two work items to demonstrate the feature.
 
-1. On the **Settings** panel, on the **Columns** tab, drag and drop the newly created tab between **Committed** and **Done**.
-1. On the **Settings** panel, click **Save and close**.
+1. On the **Settings** panel, on the **Columns** tab.
+   
+1. click column option menu near **QA Approved** tab and select **> move right** untill the newly created tab is between **Committed** and **Done**.
+    
+    ![](images/approved-1.png)
+   
+3. On the **Settings** panel, click **Save and close**.
 
     ![On the "Settings" panel, clikc "Save & Close"](images/m1/az-400_m01_t4_s16.png)
 
