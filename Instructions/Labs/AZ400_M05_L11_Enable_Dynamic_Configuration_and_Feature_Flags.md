@@ -26,6 +26,20 @@ After you complete this lab, you will be able to:
 
 ## Instructions
 
+#### Set up an Azure DevOps organization.
+
+1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+
+2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+
+3. On the next page accept defaults and click on continue.
+   
+   ![](images/Organization-1.png)
+   
+4. On the **Almost Done...** page fill the captcha and click on continue. 
+
+   ![](images/Organization-2.png)
+
 ### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the **eShopOnWeb**
@@ -34,19 +48,21 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**
+   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project(1)**. Give your project the name **eShopOnWeb(1)** and choose visiblility as **Private(2)**. Click on **Create(3)**
    
  **Task 2: (skip if done) Import eShopOnWeb Git Repository**
  
  In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-   1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created eShopOnWeb project. Click on **Repos>Files , Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git and click on Import:
+   1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created eShopOnWeb project. Navigate to **Repos(1)>Files(2)**       and under the Import a repository click on **Import(3)**. 
+  
+   4. On the **Import a Git Repository** window, Select repository type as **Git(1)** paste the following URL in Clone URL tab                                             **https://github.com/MicrosoftLearning/eShopOnWeb.git(2)** and click on **Import(3)**.
 
    2. The repository is organized the following way:
 
         O **.ado** folder contains Azure DevOps YAML pipelines
         
-        O **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub                      Codespaces)
+        O **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
         
         O **.github** folder container YAML GitHub workflow definitions.
         
@@ -54,11 +70,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
         
    **Task 3: (skip if done) Set main branch as default branch**
    
-   1. Go to **Repos>Branches**
-
-   2. Hover on the **main** branch then click the ellipsis on the right of the column
-
-   3. Click on **Set as default branch**
+   1. Go to **Repos(1)>Branches(2)**. Hover on the **main(3)** branch then click the **ellipsis(4)** on the right of the column and Click on **Set as default branch(5)**
   
   ### Exercise 1: Import and run CI/CD Pipelines
 
@@ -70,9 +82,7 @@ In this task, you will create an eShopOnWeb Azure DevOps project to be used by s
 
 Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
-1. Go to **Pipelines>Pipelines**
-
-1. Click on **Create Pipeline** button
+1. Go to **Pipelines(1)>Pipelines(2)**. Click on **Create Pipeline(3)** button
 
 1. Select **Azure Repos Git (Yaml)**
 
@@ -84,7 +94,7 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
 1. Click the **Run** button to run the pipeline
 
-1. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/Remove** option. Name it **eshoponweb-ci** and click on **Save**.
+1. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis** and **Rename/Remove** option. Name it **eshoponweb-ci** and click on **Save**.
 
 **Task 2: Manage the service connection**
 
@@ -96,13 +106,13 @@ In this task, you will create a service principal by using the Azure CLI, which 
    
       o Deploy the eShopOnWeb application
    
-      >** Note: If you do already have a service principal, you can proceed directly to the next task.
+> **Note**: If you do already have a service principal, you can proceed directly to the next task.
       
- You will need a service principal to deploy Azure resources from Azure Pipelines.
+ You will need a **service principal** to deploy Azure resources from Azure Pipelines.
  
- A service principal is automatically created by Azure Pipeline when you connect to an Azure subscription from inside a pipeline definition or when you create a new service connection from the project settings page (automatic option). You can also manually create the service principal from the portal or using Azure CLI and re-use it across projects.
+ A **service principal** is automatically created by Azure Pipeline when you connect to an Azure subscription from inside a pipeline definition or when you create a new service connection from the project settings page (automatic option). You can also manually create the service principal from the portal or using Azure CLI and re-use it across projects.
  
-   1. From the lab computer, start a web browser, navigate to the **Azure Portal**, and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
+   1. From the lab computer, start a web browser, navigate to the **portal.azure.com**, and sign in with the user account **email(1)** and **password(2)** that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
      
    2. In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
      
@@ -131,11 +141,11 @@ az ad sp create-for-rbac --name sp-az400-azdo --role contributor --scopes /subsc
 
 Note: The command will generate a JSON output. Copy the output to text file. You will need it later in this lab.
 
-  3. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **New Service Connection**.
+  3. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings(1)>Service Connections(2) (under Pipelines)** and **Create Service Connection(3)**.
 
-  4. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
+  4. On the **New service connection** blade, select **Azure Resource Manager(1)** and **Next(2)** (may need to scroll down).
 
-  5. The choose **Service principal (manual)** and click on **Next**.
+  5. The choose **Service principal (manual)(1)** and click on **Next(2)**.
 
   6. Fill in the empty fields using the information gathered during previous steps:
 
@@ -151,24 +161,22 @@ Note: The command will generate a JSON output. Copy the output to text file. You
  
  Let's import the CD pipeline named **eshoponweb-cd-webapp-code.yml*.
  
-   1. Go to **Pipelines>Pipelines**
+   1. Go to **Pipelines(1)>Pipelines(2)** and Click on **New pipeline(3)** button
 
-   2. Click on **New pipeline** button
+   2. Select **Azure Repos Git (Yaml)**
 
-   3. Select **Azure Repos Git (Yaml)**
+   3. Select the **eShopOnWeb** repository
 
-   4. Select the **eShopOnWeb** repository
+   4. Select **Existing Azure Pipelines YAML File**
 
-   5. Select **Existing Azure Pipelines YAML File**
-
-   6. Select the **.ado/eshoponweb-cd-webapp-code.yml** file then click on **Continue**
+   5. Select the **.ado/eshoponweb-cd-webapp-code.yml(1)** file then click on **Continue(2)**
    
-   7. In the YAML pipeline definition, customize:
+    In the YAML pipeline definition, customize:
       
-- **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
-- **az400eshop-NAME** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
-- **AZ400-EWebShop-NAME** with **AZ400-EWebShop1-<inject key="DeploymentID" enableCopy="false"/>**.
-- **az400-webapp-NAME** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
+   - **YOUR-SUBSCRIPTION-ID(2)** with your Azure subscription id.
+   - **AZ400-EWebshop-NAME(1)** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
+   - **AZ400-EWebShop-NAME** with **AZ400-EWebShop1-<inject key="DeploymentID" enableCopy="false"/>**.
+   - **az400-webapp-NAME(3)** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Click on **Save and Run** and wait for the pipeline to execute successfully.
 
@@ -178,7 +186,7 @@ Note: The command will generate a JSON output. Copy the output to text file. You
     - **Resources**: it is prepared to automatically trigger based on CI pipeline completion. It also downloads the repository for the bicep file.
     - **AzureResourceManagerTemplateDeployment**: Deploys the Azure Web App using bicep template.
 
-1. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/Remove** option. Name it **eshoponweb-cd-webapp-code** and click on **Save**.
+1. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines(1)>Pipelines(2)** and click on the recently created pipeline. Click on the **ellipsis(3)** and **Rename/Remove(4)** option. Name it **eshoponweb-cd-webapp-code(5)** and click on **Save(6)**.
 
 ### Exercise 2: Manage Azure App Configuration
 
@@ -191,28 +199,28 @@ If you want to know how to implement this in your application, please take a loo
 
 1. In the Azure Portal, search for the **App Configuration** service
 1. Click **Create app configuration** then select:
-    - Your Azure Subscription
-    - The Resource Group created previously (it should be named **AZ400-EWebShop1-<inject key="DeploymentID" enableCopy="false"/>**)
-    - Retain the same region
-    - Give a unique name **appcs-<inject key="DeploymentID" enableCopy="false"/>**.
-    - Select the **Free** pricing tier
-1. Click on **Review + create** then **Create**
-1. After creating the App Configuration service, go to **Overview** and copy/save the value of the **Endpoint**.
+    - Your Azure Subscription(1)
+    - The Resource Group **(2)** created previously (it should be named **AZ400-EWebShop1-<inject key="DeploymentID" enableCopy="false"/>**)
+    - Retain the same region which is in the CD Pipeline previously **(3)**
+    - Give a unique name **appcs-<inject key="DeploymentID" enableCopy="false"/>** **(4)**.
+    - Select the **Free(5)** pricing tier
+1. Click on **Review + create(6)** then **Create**
+1. After creating the App Configuration service, go to **Overview(1)** and copy/save the value of the **Endpoint(2)**.
 
 #### Task 2: Enable Managed Identity
 
-1. Go to the Web App deployed using the pipeline (it should be named **az400-webapp-NAME**).
-1. In the **Settings** section, click on **Identity** then switch status to **On** in the **System Assigned** section, click **save>yes** and wait a few seconds for the operation to finish.
-1. Go back to the App Configuration service and click on **Access control** then **Add role assignment**.
-1. In the **Role** section, select **App Configuration Data Reader**
-1. In the **Members** section, check **Manage Identity** then select the managed identity of your Web App (they should have the same name).
+1. Go to the **Web App(1)** deployed using the pipeline (it should be named **az400-webapp-NAME**).
+1. In the **Settings(2)** section, click on **Identity(3)** then switch status to **On(4)** in the **System Assigned** section, click **save(5)>yes(6)** and wait a few seconds for the operation to finish.
+1. Go back to the **App Configuration(1)** service and click on **Access control(IAM)(2)** then **+Add(3)->Add role assignment(4)**.
+1. In the **Role(1)** section, select **App Configuration Data Reader(2)** and click on **Next(3)**.
+1. In the **Members(1)** section, check **Manage Identity(2)** then click on **+ Select members(3)**. In the select manage identities tab select **Managed Identity(4)** as **App Service** of your **Web App(5)** (they should have the same name) and then click on **Select(6)**.
 1. Click on **Review and assign**
 
 #### Task 3: Configure the Web App
 
 In order to make sure that your website is accessing App Configuration, you need to update its configuration.
 1. Go back to your Web App.
-1. In the **Settings** section, click on **Configuration**.
+1. In the **Settings(1)** section, click on **Configuration(2)** and select **+ New application setting(3)**.
 1. Add two new application settings:
     - First app setting
         - **Name:** UseAppConfig
@@ -220,21 +228,21 @@ In order to make sure that your website is accessing App Configuration, you need
     - Second app setting
         - **Name:** AppConfigEndpoint
         - **Value:** *the value you saved/copied previously from App Configuration Endpoint. It should look like https://appcs-NAME-REGION.azconfig.io*
-1. Click **Ok** then **Save** and wait for the settings to be updated.
-1. Go to **Overview** and click on **Browse**
+1. Click **Save** then **Cotinue** and wait for the settings to be updated.
+1. Go to **Overview(1)** and click on **Browse(2)**
 1. At this step, you will see no changes in the website since the App Configuration doesn't contain any data. This is what you will do in the next tasks.
 
 #### Task 4: Test the Configuration Management
 
-1. In your website, select **Visual Studio** in the **Brand** drop-down list and click on the arrow button (**>**).
-1. You will see a message saying *"THERE ARE NO RESULTS THAT MATCH YOUR SEARCH"*.
+1. In your website, select **Visual Studio(2)** in the **Brand(1)** drop-down list and click on the arrow button (**>(3)**).
+1. You will see a message saying **"THERE ARE NO RESULTS THAT MATCH YOUR SEARCH"(4)**.
 The goal of this Lab is to be able to update that value without updating the website's code or redeploying it.
-1. In order to try this, go back to App Configuration.
-1. In the **Operations** section, select **Configuration Explorer**.
-1. Click on **Create > Key-value** then add:
-    - **Key:** eShopWeb:Settings:NoResultsMessage
-    - **Value:** *type your custom message*
-1. Click **Apply** then go back to your website and refresh the page.
+1. In order to try this, go back to **App Configuration(1)**.
+1. In the **Operations(2)** section, select **Configuration Explorer(3)**.
+1. Click on **+ Create(4) > Key-value(5)** then add:
+    - **Key(6):** eShopWeb:Settings:NoResultsMessage
+    - **Value(7):** *type your custom message*
+1. Click **Apply(8)** then go back to your website and refresh the webapp browser page.
 1. You should see your new message instead of the old default value.
 
 Congratulations! In this task, you tested the **Configuration explorer** in Azure App Configuration.
@@ -242,12 +250,12 @@ Congratulations! In this task, you tested the **Configuration explorer** in Azur
 #### Task 5: Test the Feature Flag
 
 Let's continue to test the Feature manager.
-1. In order to try this, go back to App Configuration.
-1. In the **Operations** section, select **Feature manager**.
-1. Click on **Create** then add:
-    - **Enable feature flag:** Checked
-    - **Feature flag name:** SalesWeekend
-1. Click **Apply** then go back to your website and refresh the page.
+1. In order to try this, go back to **App Configuration(1)**.
+1. In the **Operations(2)** section, select **Feature manager(3)**.
+1. Click on **+ Create(4)** then add:
+    - **Enable feature flag(1):** Checked
+    - **Feature flag name(2):** SalesWeekend
+1. Click **Apply(3)** then go back to your website and refresh the page.
 1. You should see an image with text "ALL T-SHIRTS ON SALE THIS WEEKEND".
 1. You can disable this feature in App Configuration and then you would see that the image disappears.
 
