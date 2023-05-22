@@ -1,8 +1,8 @@
 # Lab Scenario Preview: AZ-400: Version Controlling with Git in Azure Repos
 
-# Lab 02: Version Controlling with Git in Azure Repos
+## Lab 02: Version Controlling with Git in Azure Repos
 
-## Lab overview
+### Lab overview
 
 Azure DevOps supports two types of version control, Git and Team Foundation Version Control (TFVC). Here is a quick overview of the two version control systems:
 
@@ -14,7 +14,7 @@ Git is the default version control provider for new projects. You should use Git
 
 In this lab, you will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Azure DevOps. In addition, you will learn about Git branching and merging support. You will use Visual Studio Code, but the same processes apply for using any Git-compatible client.
 
-## Objectives
+### Objectives
 
 After you complete this lab, you will be able to:
 
@@ -24,6 +24,6 @@ After you complete this lab, you will be able to:
 -   Work with branches by using Visual Studio Code
 
 
-## Architecture Diagram
+### Architecture Diagram
 
    ![Architecture Diagram](images/lab2-architecture.png)
