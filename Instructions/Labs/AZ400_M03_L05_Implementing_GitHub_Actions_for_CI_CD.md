@@ -13,7 +13,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/)
+   ![Architecture Diagram](images/lab5-architecture.png)
 
 ## Lab requirements
 
