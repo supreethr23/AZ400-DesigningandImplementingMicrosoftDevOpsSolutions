@@ -1,5 +1,7 @@
 # Lab Scenario Preview: AZ-400: Version Controlling with Git in Azure Repos
 
+# Lab 02: Version Controlling with Git in Azure Repos
+
 ## Lab overview
 
 Azure DevOps supports two types of version control, Git and Team Foundation Version Control (TFVC). Here is a quick overview of the two version control systems:
