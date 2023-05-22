@@ -1,5 +1,4 @@
 # Lab 08: Configuring Pipelines as Code with YAML
-# Student lab manual
 
 ## Lab overview
 
@@ -19,9 +18,11 @@ After you complete this lab, you will be able to:
 
 -   configure CI/CD pipelines as code with YAML in Azure DevOps
 
-## Instructions
+## Architecture Diagram
 
-#### Set up an Azure DevOps organization
+   ![Architecture Diagram](images/)
+
+# Set up an Azure DevOps organization
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -48,11 +49,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/agent2.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://dev.azure.com/unhueteb/_git/eshopweb-az400).
 
-#### Task 1: Create and configure the team project
+## Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps project to be used by several labs.
 
@@ -60,7 +61,7 @@ In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps proj
 
     ![Create Project](images/400-2.png)
 
-#### Task 2: Import eShopOnWeb Git Repository
+## Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -75,7 +76,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-#### Task 2: Create Azure resources
+## Task 2: Create Azure resources
 
 In this task, you will create an Azure web app by using the Azure portal.
 
@@ -120,11 +121,11 @@ In this task, you will create an Azure web app by using the Azure portal.
 
 1. Close the Azure Cloud Shell, but leave the Azure Portal open in the browser.
 
-### Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
+# Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
 
 In this exercise, you will configure CI/CD Pipelines as code with YAML in Azure DevOps.
 
-#### Task 1: Add a YAML build definition
+## Task 1: Add a YAML build definition
 
 In this task, you will add a YAML build definition to the existing project.
 
@@ -145,7 +146,7 @@ In this task, you will add a YAML build definition to the existing project.
 
     > **Note**: Each task from the YAML file is available for review, including any warnings and errors.
 
-#### Task 2: Add continuous delivery to the YAML definition
+## Task 2: Add continuous delivery to the YAML definition
 
 In this task, you will add continuous delivery to the YAML-based definition of the pipeline you created in the previous task.
 
@@ -321,17 +322,17 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 
     ```
 
-#### Task 4: Review the deployed site
+## Task 4: Review the deployed site
 
 1. Switch back to web browser window displaying the Azure portal and navigate to the blade displaying the properties of the Azure web app.
 1. On the Azure web app blade, click **Overview** and, on the overview blade, click **Browse** to open your site in a new web browser tab.
 1. Verify that the deployed site loads as expected in the new browser tab, showing the EShopOnWeb E-commerce website.
 
-### Exercise 2: Configure Environment settings for CI/CD Pipelines as Code with YAML in Azure DevOps
+# Exercise 2: Configure Environment settings for CI/CD Pipelines as Code with YAML in Azure DevOps
 
 In this exercise, you will add approvals to a YAML-based Pipeline in Azure DevOps.
 
-#### Task 1: Set up Pipeline Environments
+## Task 1: Set up Pipeline Environments
 
 YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure DevOps Classic Release Pipelines. However, some similarities can be configured for YAML Pipelines-as-Code using **Environments**. In this task, you will use this mechanism to configure approvals for the Build Stage.
 

@@ -1,5 +1,5 @@
 # Lab 15: Package Management with Azure Artifacts
-# Student lab manual
+
 
 ## Lab overview
 
@@ -15,9 +15,11 @@ After you complete this lab, you will be able to:
 -  Update a NuGet package.
 
 
-## Instructions
+## Architecture Diagram
 
-#### Set up an Azure DevOps organization
+  ![Architecture Diagram](images/)
+
+## Set up an Azure DevOps organization
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137, and if prompted sign with the credentials provided in environment details tab.
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
@@ -30,11 +32,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/m1-2.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template and a Visual Studio configuration.
 
-#### Task 1: Configure the team project
+## Task 1: Configure the team project
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **PartsUnlimited** template.
 
@@ -52,7 +54,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 1.  On the **Create New Project** page, click **Navigate to project**.
 
-#### Task 2: Configuring the Parts Unlimited solution in Visual Studio
+## Task 2: Configuring the Parts Unlimited solution in Visual Studio
 
 In this task, you will configure Visual Studio to prepare for the lab.
 
@@ -70,7 +72,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     > **Note**: If you get before we get started window click on continue.
 
-### Exercise 1: Working with Azure Artifacts
+# Exercise 1: Working with Azure Artifacts
 
 In this exercise, you will learn how to work with Azure Artifacts by using the following steps:
 
@@ -79,7 +81,7 @@ In this exercise, you will learn how to work with Azure Artifacts by using the f
 - import a NuGet package.
 - update a NuGet package.
 
-#### Task 1: Creating and connecting to a feed
+## Task 1: Creating and connecting to a feed
 
 In this task, you will create and connect to a feed.
 
@@ -104,7 +106,7 @@ In this task, you will create and connect to a feed.
 
 1.  Close and reopen the other Visual Studio instance you used for cloning the PartsUnlimited repository, to account for the artifact source update and open the **PartsUnlimited** solution. You will need it in the third task of this exercise.
 
-#### Task 2: Creating and publishing a NuGet package
+## Task 2: Creating and publishing a NuGet package
 
 In this task, you will create and publish a NuGet package.
 
@@ -176,7 +178,7 @@ In this task, you will create and publish a NuGet package.
 
 1.  Click the NuGet package to display its details.
 
-#### Task 3: Importing a NuGet package
+## Task 3: Importing a NuGet package
 
 In this task, you will import a NuGet package.
 
@@ -190,7 +192,7 @@ In this task, you will import a NuGet package.
 
     > **Note**: The NuGet package doesn't add any value yet, but we managed to verify that the workflow works as intended. 
 
-#### Task 4: Updating a NuGet package
+## Task 4: Updating a NuGet package
 
 In this task, you will update a NuGet package.
 

@@ -1,5 +1,4 @@
 # Lab 07: Controlling Deployments using Release Gates
-# Student lab manual
 
 ## Lab overview
 
@@ -31,11 +30,14 @@ After you complete this lab, you will be able to:
 - Configure release gates.
 - Test release gates.
 
+## Architecture Diagram
+
+  ![Architecture Diagram](images/) 
+
 ## Estimated timing: 75 minutes
 
-## Instructions
 
-#### Set up an Azure DevOps organization. 
+## Set up an Azure DevOps organization. 
 
 1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
 
@@ -79,13 +81,13 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/billingsetup1.png)
 
-### Exercise 1: Configure the lab prerequisites
+# Exercise 1: Configure the lab prerequisites
 
 > **Note**: If you already created this project during previous labs, this exercise can be skipped.
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb). 
 
-#### Task 1: Create and configure the team project
+## Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -93,7 +95,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Create Project](images/createprojectupdated.png)
 
-#### Task 2: Import eShopOnWeb Git Repository
+## Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -108,7 +110,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-#### Task 3: Configure CI Pipeline as Code with YAML in Azure DevOps
+## Task 3: Configure CI Pipeline as Code with YAML in Azure DevOps
 
 In this task, you will add a YAML build definition to the existing project.
 
@@ -147,9 +149,9 @@ In this task, you will add a YAML build definition to the existing project.
 
     > **Note**: Each task from the YAML file is available for review, including any warnings and errors.
 
-### Exercise 2: Creating the necessary Azure Resources for the Release Pipeline
+# Exercise 2: Creating the necessary Azure Resources for the Release Pipeline
 
-#### Task 1: Create two Azure web apps
+## Task 1: Create two Azure web apps
 
 In this task, you will create two Azure web apps representing the **Canary** and **Production** environments, into which you'll deploy the application via Azure Pipelines.
 
@@ -198,7 +200,7 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
 1. Wait for the Web App Services Resources provisioning process to complete and close the **Cloud Shell** pane.
 
-#### Task 2: Configure an Application Insights resource
+## Task 2: Configure an Application Insights resource
 
 1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **Application Insights(1)** and, in the list of results, select **Application Insights(2)**.
 
@@ -287,11 +289,11 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
 1. Confirm the creation of the Alert rule by clicking **Review+Create(5)**, and confirm once more by clicking **Create**. Wait for the alert rule to get created successfully.
 
-### Exercise 3: Configure the release pipeline
+# Exercise 3: Configure the release pipeline
 
 In this exercise, you will configure a release pipeline.
 
-#### Task 1: Set Up Release Tasks
+## Task 1: Set Up Release Tasks
 
 In this task, you will set up the release tasks as part of the Release Pipeline.
 
@@ -405,11 +407,11 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
     > **Note**: Now you have the application with CI/CD configured. In the next exercise we will set up Quality Gates as part of a more advanced  Release pipeline.
 
-### Exercise 4: Configure release gates
+# Exercise 4: Configure release gates
 
 In this exercise, you will set up Quality Gates in the release pipeline.
 
-#### Task 1: Configure pre-deployment gates for approvals
+## Task 1: Configure pre-deployment gates for approvals
 
 In this task, you will configure pre-deployment gates.
 
@@ -445,7 +447,7 @@ In this task, you will configure pre-deployment gates.
 
      ![Azure devops](images/approve.png) 
 
-#### Task 2: Configure post-deployment gates for Azure Monitor
+## Task 2: Configure post-deployment gates for Azure Monitor
 
 In this task, you will enable the post-deployment gate for the Canary Environment.
 
@@ -495,11 +497,11 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
 
    [Azure devops](images/saverea.png)
 
-### Exercise 5: Test release gates
+# Exercise 5: Test release gates
 
 In this exercise, you will test the release gates by updating the application, which will trigger a deployment.
 
-#### Task 1: Update and deploy application after adding release gates
+## Task 1: Update and deploy application after adding release gates
 
 In this task, you will first generate some alerts for the Canary Web App, followed by tracking the release process with the release gates enabled.
 

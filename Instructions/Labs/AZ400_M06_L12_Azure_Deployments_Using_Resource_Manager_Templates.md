@@ -1,5 +1,4 @@
 # Lab 12: Azure Deployments using Azure Bicep templates
-# Student lab manual
 
 ## Lab overview
 
@@ -17,23 +16,25 @@ After you complete this lab, you will be able to:
 - Deploy all the resources to Azure using Azure Bicep Templates.
 - Deploy resources to Azure using linked templates
 
-## Instructions
+## Architecture Diagram
 
-### Exercise 1: Configure the lab prerequisites
+  ![Architecture Diagram](images/)
+
+# Exercise 1: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include Visual Studio Code.
 
-#### Task 1: Install and configure Git and Visual Studio Code
+## Task 1: Install and configure Git and Visual Studio Code
 
 In this task, you will install Visual Studio Code. If you have already implemented this prerequisite, you can proceed directly to the next task.
 
 1. If you don't have Visual Studio Code installed yet, from your lab computer, start a web browser, navigate to the [Visual Studio Code download page](https://code.visualstudio.com/), download it, and install it.
 
-### Exercise 1: Author and deploy Bicep templates
+# Exercise 1: Author and deploy Bicep templates
 
 In this lab, you will create an Azure Bicep template and a template module. You will then modify the main deployment template to use the template module and update the dependencies, and finally deploy the templates to Azure.
 
-#### Task 1: Create Azure Bicep template
+## Task 1: Create Azure Bicep template
 
 In this task, you will use Visual Studio Code to create a Azure Bicep template
 
@@ -66,7 +67,7 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
     > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
 
 
-#### Task 2: Create a template module for storage resources.
+## Task 2: Create a template module for storage resources.
 
 In this task, you will modify the templates you saved in the previous task such that the storage template module **storage.bicep** will create a storage account only, it will be imported by the first template. The storage template module needs to pass a value back to the main template, **main.bicep**, and this value will be defined in the outputs element of the storage template module.
 
@@ -148,7 +149,7 @@ In this task, you will modify the templates you saved in the previous task such 
    output storageURI string = storageAccount.properties.primaryEndpoints.blob
    ```
 
-#### Task 3: Modify the main template to use the template module
+## Task 3: Modify the main template to use the template module
 
 In this task, you will modify the main template to reference the template module you created in the previous task.
 
@@ -204,7 +205,7 @@ In this task, you will modify the main template to reference the template module
 
 1. Save the template.
 
-#### Task 4: Deploy resources to Azure by using template modules
+## Task 4: Deploy resources to Azure by using template modules
 
  > **Note**: You can deploy templates in several ways, such as using Azure CLI installed locally or from the Azure Cloud Shell or from a CI/CD pipeline. In this lab, you will use Azure CLI from the Azure Cloud Shell.
 

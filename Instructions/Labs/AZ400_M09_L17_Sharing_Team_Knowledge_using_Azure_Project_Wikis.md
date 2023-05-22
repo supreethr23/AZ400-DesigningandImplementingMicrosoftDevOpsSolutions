@@ -1,6 +1,5 @@
 # Lab 17: Sharing Team Knowledge using Azure Project Wikis
-
-# Student lab manual
+l
 
 ## Lab overview
 
@@ -14,13 +13,15 @@ After you complete this lab, you will be able to:
 - Add and edit markdown
 - Create a Mermaid diagram
 
+## Architecture Diagram
+ 
+  ![Architecture Diagram](images/)
+
 ## Lab duration
 
 -   Estimated time: **45 minutes**
 
-## Instructions
-
-#### Set up an Azure DevOps organization. 
+## Set up an Azure DevOps organization. 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -34,11 +35,11 @@ After you complete this lab, you will be able to:
 
    ![Azure DevOps](images/m1-2.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of the preconfigured **Tailwind Traders** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
 
-#### Task 1: Configure the team project
+## Task 1: Configure the team project
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Tailwind Traders** template.
 
@@ -56,13 +57,13 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 1.  On the **Create New Project** page, click **Navigate to project**.
 
-### Exercise 1: Publish code as wiki
+# Exercise 1: Publish code as wiki
 
 In this exercise, you will step through publishing an Azure DevOps repository as wiki and managing the published wiki.
 
 > **Note**: Content that you maintain in a Git repository can be published to an Azure DevOps wiki. For example, content written to support a software development kit, product documentation, or README files can be published directly to a wiki. You have the option of publishing multiple wikis within the same Azure DevOps team project.
 
-#### Task 1: Publish a branch of an Azure DevOps repo as wiki
+## Task 1: Publish a branch of an Azure DevOps repo as wiki
 
 In this task, you will publish a branch of an Azure DevOps repo as wiki.
 
@@ -94,7 +95,7 @@ In this task, you will publish a branch of an Azure DevOps repo as wiki.
 
 1.  Review the content of  **GitHubActions** file and note the overall structure of the wiki, matching the structure of the underlying repo.
 
-#### Task 2: Manage content of a published wiki
+## Task 2: Manage content of a published wiki
 
 In this task, you will manage content of the wiki you published in the previous task.
 
@@ -122,13 +123,13 @@ In this task, you will manage content of the wiki you published in the previous 
 1.  On the **Preview** tab of the **GitHubActions.md** pane, verify that the image is being displayed.
 1.  In the vertical menu on the left side, click **Overview**, in the **Overview** section, select **Wiki**, verify that **Tailwind Traders (Documents)** appears in the upper section of the pane, and that the content of the **GitHubActions** pane includes the newly referenced image. 
 
-### Exercise 2: Create and manage a project wiki
+# Exercise 2: Create and manage a project wiki
 
 In this exercise, you will step through creating and managing a project wiki.
 
 > **Note**: You can create and manage wiki independently of the existing repos. 
 
-#### Task 1: Create a project wiki including a Mermaid diagram and an image
+## Task 1: Create a project wiki including a Mermaid diagram and an image
 
 In this task, you will create a project wiki and add to it a Mermaid diagram and an image.
 
@@ -188,7 +189,7 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
 1.  In the **Save page** dialog box, type **User Interface section with the Tailwind Traders image** and click **Save**.
 1.  Back on the editor pane, in the upper right corner, click **Close**. 
 
-#### Task 2: Manage a project wiki
+## Task 2: Manage a project wiki
 
 In this task, you will manage the newly created project wiki.
 
