@@ -1,4 +1,4 @@
-# Lab Scenario Preview: AZ-400: Implement continuous feedback
+# Lab Scenario Preview: AZ-400: Implement continuous feedback - Part A
 
 ## Lab 16: Monitoring Application Performance with Application Insights
 
