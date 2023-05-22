@@ -17,7 +17,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
-![Architecture Diagram](images/)
+![Architecture Diagram](images/lab9-architecture.png)
 
 ### Before you start
 
