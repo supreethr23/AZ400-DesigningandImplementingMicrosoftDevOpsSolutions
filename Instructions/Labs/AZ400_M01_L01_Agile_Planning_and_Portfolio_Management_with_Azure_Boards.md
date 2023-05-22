@@ -19,7 +19,7 @@ After you complete this lab, you will be able to:
 
  ![Architecture Diagram](images/lab1-architecture.png)
 
-#### Set up an Azure DevOps organization
+## Set up an Azure DevOps organization
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
 
