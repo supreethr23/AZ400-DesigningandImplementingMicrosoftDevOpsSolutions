@@ -26,4 +26,4 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-   ![Architecture Diagram](images/lab2-architecture.png)
+   ![Architecture Diagram](../images/lab2-architecture.png)
