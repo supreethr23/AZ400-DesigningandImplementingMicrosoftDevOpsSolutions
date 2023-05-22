@@ -17,6 +17,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
+ ![Architecture Diagram](images/lab1-architecture.png)
 
 #### Set up an Azure DevOps organization
 
@@ -34,14 +35,9 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/lab1-image2.png)
 
-### Exercise 0: Configure the lab prerequisites
-
-  ![Architecture Diagram](images/lab1-architecture.png)
-
 # Exercise 0: Configure the lab prerequisites
 
-
-In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
+In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb). 
 
 ## Task 1: Configure the team project
 
