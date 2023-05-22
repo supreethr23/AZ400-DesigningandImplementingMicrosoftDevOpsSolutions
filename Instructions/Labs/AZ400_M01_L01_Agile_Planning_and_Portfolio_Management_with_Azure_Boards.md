@@ -18,6 +18,20 @@ After you complete this lab, you will be able to:
 
 ## Instructions
 
+#### Set up an Azure DevOps organization
+
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
+
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    * Password: <inject key="AzureAdUserPassword"></inject>
+
+2. If the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+
+3. On the next page accept defaults, accept the captcha and click on continue.
+
+    ![Azure DevOps](images/az400_02-01.png)
+
 ### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
