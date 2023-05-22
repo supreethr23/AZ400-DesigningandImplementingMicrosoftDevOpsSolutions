@@ -1,4 +1,4 @@
-# Lab Scenario Preview: AZ-400: Implement continuous feedback
+# Lab Scenario Preview: AZ-400: Implement continuous feedback - Part B
 
 ## Lab 17: Sharing Team Knowledge using Azure Project Wikis
 
