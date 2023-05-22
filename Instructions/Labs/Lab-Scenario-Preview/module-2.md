@@ -1,4 +1,4 @@
-# Lab Scenario Preview: AZ-400: Work with Azure Repos and GitHub
+# Lab Scenario Preview: AZ-400: Version Controlling with Git in Azure Repos
 
 ## Lab overview
 
