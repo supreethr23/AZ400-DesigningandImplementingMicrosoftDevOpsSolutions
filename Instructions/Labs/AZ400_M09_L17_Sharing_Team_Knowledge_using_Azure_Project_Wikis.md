@@ -1,5 +1,4 @@
 # Lab 17: Sharing Team Knowledge using Azure Project Wikis
-l
 
 ## Lab overview
 
@@ -15,7 +14,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
  
-  ![Architecture Diagram](images/)
+  ![Architecture Diagram](images/lab17-architecture.png)
 
 ## Lab duration
 
