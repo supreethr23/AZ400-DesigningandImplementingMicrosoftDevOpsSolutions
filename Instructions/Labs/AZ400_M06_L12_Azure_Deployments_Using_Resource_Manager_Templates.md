@@ -18,7 +18,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/)
+  ![Architecture Diagram](images/lab12-architecture.png)
 
 # Exercise 1: Configure the lab prerequisites
 
