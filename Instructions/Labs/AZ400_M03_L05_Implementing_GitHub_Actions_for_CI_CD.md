@@ -1,5 +1,4 @@
 # Lab 05: Implementing GitHub Actions for CI/CD
-# Student lab manual
 
 ## Lab overview
 
@@ -12,13 +11,16 @@ After you complete this lab, you will be able to:
 - Implement a GitHub Action workflow by using DevOps Starter
 - Explain the basic characteristics of GitHub Action workflows
 
+## Architecture Diagram
+
+   ![Architecture Diagram](images/)
+
 ## Lab requirements
 
 - If you don't already have a GitHub account that you can use for this lab, follow instructions available at [Signing up for a new GitHub account](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
 
-## Instructions
 
-#### Prepare a GitHub account
+## Prepare a GitHub account
 
 1. If you already have a GitHub account that you can use for this lab proceed with Exercise 1, else follow the instructions to create an account.
 
@@ -36,7 +38,7 @@ After you complete this lab, you will be able to:
 
    ![Github](images/mod6_25.png)
 
-### Exercise 0: Import eShopOnWeb to your GitHub Repository
+# Exercise 0: Import eShopOnWeb to your GitHub Repository
 
 In this exercise, you will import the existing [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb) repository code to your own GitHub private repo.
 
@@ -47,7 +49,7 @@ The repository is organized the following way:
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-#### Task 1: Create a public repository in GitHub and import eShopOnWeb
+## Task 1: Create a public repository in GitHub and import eShopOnWeb
 
 In this task, you will create an empty public GitHub repository and import the existing [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb) repository.
 
@@ -75,11 +77,11 @@ In this task, you will create an empty public GitHub repository and import the e
     ![Enable GitHub Actions](images/enable-actions.png)
 
 
-### Exercise 1: Setup your GitHub Repository and Azure access
+# Exercise 1: Setup your GitHub Repository and Azure access
 
 In this exercise, you will create an Azure Service Principal to authorize GitHub accessing your Azure subscription from GitHub Actions. You will also setup the GitHub workflow that will build, test and deploy your website to Azure. 
 
-#### Task 1: Create an Azure Service Principal and save it as GitHub secret
+## Task 1: Create an Azure Service Principal and save it as GitHub secret
 
 In this task, you will create the Azure Service Principal used by GitHub to deploy the desired resources. As an alternative, you could also use [OpenID connect in Azure](https://docs.github.com/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure), as a secretless authentication mechanism.
 
@@ -116,7 +118,7 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
 
 1. Click on **Add secret**. Now GitHub Actions will be able to reference the service principal, using the repository secret.
 
-#### Task 2: Modify and execute the GitHub workflow
+## Task 2: Modify and execute the GitHub workflow
 
 In this task, you will modify the given GitHub workflow and execute it to deploy the solution in your own subscription.
 
@@ -135,7 +137,7 @@ In this task, you will modify the given GitHub workflow and execute it to deploy
 
 1. Click on **Start Commit** and **Commit Changes** leaving defaults (changing the main branch). The workflow will get automatically executed.
 
-#### Task 3: Review GitHub Workflow execution
+## Task 3: Review GitHub Workflow execution
  
 In this task, you will review the GitHub workflow execution:
 
@@ -152,7 +154,7 @@ In this task, you will review the GitHub workflow execution:
 
     ![Browse WebApp](images/browse-webapp.png)
 
-#### (OPTIONAL) Task 4: Add manual approval pre-deploy using GitHub Environments
+## (OPTIONAL) Task 4: Add manual approval pre-deploy using GitHub Environments
 
 In this task, you will use GitHub environments to ask for manual approval before executing the actions defined on the deploy job of your workflow.
 

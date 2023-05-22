@@ -1,5 +1,4 @@
 # Lab 03: Configuring Agent Pools and Understanding Pipeline Styles
-# Student lab manual
 
 ## Lab overview
 
@@ -15,6 +14,10 @@ After you complete this lab, you will be able to:
 
 - implement YAML-based pipelines
 - implement self-hosted agents
+
+## Architecture Diagram
+
+   ![Architecture Diagram](images/)
 
 ## Set up an Azure DevOps organization
 

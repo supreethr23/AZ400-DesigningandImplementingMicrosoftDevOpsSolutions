@@ -1,5 +1,4 @@
 # Lab 09: Setting Up and Running Functional Tests
-# Student lab manual
 
 ## Lab overview
 
@@ -16,18 +15,19 @@ After you complete this lab, you will be able to:
 - Trigger build and release
 - Run tests in Chrome and Firefox
 
+## Architecture Diagram
 
-## Instructions
+![Architecture Diagram](images/)
 
 ### Before you start
 
-#### Review applications required for this lab
+## Review applications required for this lab
 
 Identify the applications that you'll use in this lab:
     
 -   Microsoft Edge
 
-#### Set up an Azure DevOps organization. 
+## Set up an Azure DevOps organization. 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -41,11 +41,11 @@ Identify the applications that you'll use in this lab:
 
     ![Azure DevOps](images/m1-2.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template and Azure resources. 
 
-#### Task 1: Configure the team project
+## Task 1: Configure the team project
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Selenium** template.
 
@@ -63,7 +63,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 1.  On the **Create New Project** page, click **Navigate to project**.
 
-#### Task 2: Create Azure resources
+## Task 2: Create Azure resources
 
 In this task, you will provision an Azure VM running Windows Server 2016 along with SQL Express 2017, Chrome, and Firefox.
 
@@ -88,11 +88,11 @@ In this task, you will provision an Azure VM running Windows Server 2016 along w
 
     > **Note**: Wait for the process to complete. This should take about 30 minutes. 
 
-### Exercise 1: Implement Selenium tests by using a self-hosted Azure DevOps agent
+# Exercise 1: Implement Selenium tests by using a self-hosted Azure DevOps agent
 
 In this exercise, you will implement Selenium tests by using a self-hosted Azure DevOps agent.
 
-#### Task 1: Configure a self-hosted Azure DevOps agent
+## Task 1: Configure a self-hosted Azure DevOps agent
 
 In this task, you will configure a self-hosted agent by using the VM you deployed in the previous exercise. Selenium requires the agent to be run in the interactive mode to execute the UI tests.
 
@@ -174,7 +174,7 @@ In this task, you will configure a self-hosted agent by using the VM you deploye
 
 1.  Once the download of the **DacFramework.msi** file completes, use it to run the installation of the Microsoft SQL Server Data-Tier Application Framework with the default settings.
 
-#### Task 2: Configure a release pipeline
+## Task 2: Configure a release pipeline
 
 In this task, you will configure the release pipeline.
 
@@ -206,7 +206,7 @@ In this task, you will configure the release pipeline.
 
 1.  Repeat the previous step for **SQL Deployment** and the **Selenium tests execution** phases. If needed, click **Save** to save the changes.
 
-#### Task 3: Trigger Build and Release
+## Task 3: Trigger Build and Release
 
 In this task, we will trigger the **Build** to compile Selenium C# scripts along with the Web application. The resulting binaries are copied to self-hosted agent and the Selenium scripts are executed as part of the automated **Release**.
 

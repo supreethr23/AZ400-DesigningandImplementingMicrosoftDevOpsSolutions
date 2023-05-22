@@ -15,6 +15,10 @@ After you complete this lab, you will be able to:
 -   Define dashboards
 -   Customize team process
 
+## Architecture Diagram
+
+  ![Architecture Diagram](images/)
+
 # Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.

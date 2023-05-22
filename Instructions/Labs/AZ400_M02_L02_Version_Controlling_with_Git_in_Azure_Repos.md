@@ -1,4 +1,4 @@
-# Lab 02: Version Controlling with Git in Azure Repos
+# Lab 02: Work with Azure Repos and GitHub
 
 ## Lab overview
 
@@ -24,7 +24,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
-
+   ![Architecture Diagram](images/)
 
 ## Set up an Azure DevOps organization
 
