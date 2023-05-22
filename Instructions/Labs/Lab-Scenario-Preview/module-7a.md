@@ -1,4 +1,4 @@
-# Lab Scenario Preview: AZ-400: Implement security and validate code bases for compliance
+# Lab Scenario Preview: AZ-400: Implement security and validate code bases for compliance - Part A
 
 ## Lab 13: Implement Security and Compliance in an Azure Pipeline
 
