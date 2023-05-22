@@ -19,7 +19,7 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-   ![Architecture Diagram](images/lab3-architecture.png)
+   ![Architecture Diagram](../images/lab3-architecture.png)
    
 ## Lab 04: Enabling Continuous Integration with Azure Pipelines
 
@@ -37,7 +37,7 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-  ![Architecture Diagram](images/lab4-architecture.png)
+  ![Architecture Diagram](../images/lab4-architecture.png)
   
 ## Lab 05: Implementing GitHub Actions for CI/CD
 
@@ -54,6 +54,6 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-   ![Architecture Diagram](images/lab5-architecture.png)
+   ![Architecture Diagram](../images/lab5-architecture.png)
 
 
