@@ -1,4 +1,4 @@
-# Lab 01: Agile Planning and Portfolio Management with Azure Boards
+# Lab 01: Get started on a DevOps transformation journey
 
 ## Lab overview
 
