@@ -20,7 +20,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/)
+   ![Architecture Diagram](images/lab8-architecture.png)
 
 # Set up an Azure DevOps organization
 
