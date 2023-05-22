@@ -24,11 +24,12 @@ After you complete this lab, you will be able to:
 
 3. On the next page accept defaults and click on continue.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7ff3a8ba-6703-4624-87a7-e5f2817b19b3)
+    ![](images/AZ400_M08_L15_01.png)
+    
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/c292f452-5b04-4e88-9c86-dec87f398141)
+    ![](images/AZ400_M08_L15_02.png)
 
 ### Exercise 0: Configure the lab prerequisites
 
@@ -46,7 +47,7 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
 
 2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb(1)**, select visibilty as **Private(2)** and then click **Create Project(3)**
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/ff673278-d825-45a2-bf15-96661f4fc36b)
+    ![](images/AZ400_M08_L15_03.png)
 
 #### Task 2: Configuring the EShopOnWeb solution in Visual Studio
 
@@ -56,11 +57,11 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     > **Note**: You can access the project page directly by navigating to the [https://dev.azure.com/<inject key="DeploymentID" enableCopy="false"/>/EShopOnWeb]URL.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/20b2de76-feaa-4f7a-9625-69a79fffe73e)
+    ![](images/AZ400_M08_L15_04.png)
 
 2.  In the vertical menu on the left side of the **EShopOnWeb** pane, click **Repos**.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/93d76be3-eb78-402e-9823-6427b86609d5)
+    ![](images/AZ400_M08_L15_05.png)
 
 3.  When we click on the **Files(2)** pane, we can see that **EShopOnWeb is empty. Add some code!**. So click **Initialize(3)** to initialize the repository for the first time.
 
@@ -68,15 +69,15 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
 4. In the **EShopOnWeb** repo Click on **Clone**.
 
-   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/c062b731-a76a-47ca-a2c9-a38b233a82f1)
+    ![](images/AZ400_M08_L15_07.png)
 
 5. Select the drop-down arrow next to **Clone in VS Code(1)**, and, in the dropdown menu, select **Visual Studio(2)**.
 
-   ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/b338d3e2-e172-4cbb-b950-7ded6017a68b)
+    ![](images/AZ400_M08_L15_08.png)
 
 6.  If prompted whether to proceed, click **Open Microsoft Visual Studio Web Protocol Handler Selector**.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/ced2d1ae-4c9d-46ee-9a9b-1270e8970d34)
+    ![](images/AZ400_M08_L15_09.png)
 
 7.  If prompted, sign in with the user account you used to set up your Azure DevOps organization. Username and password can be obtained from the environmental details page.
 
@@ -84,11 +85,11 @@ In this task, you will configure Visual Studio to prepare for the lab.
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/bcb16d9c-00c0-4e4f-aa74-0681fdca736d)
+    ![](images/AZ400_M08_L15_10.png)
 
 8.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/314e67a7-730f-4851-933c-4b31be1f2d08)
+    ![](images/AZ400_M08_L15_11.png)
 
 ### Exercise 1: Working with Azure Artifacts
 
@@ -105,37 +106,37 @@ In this task, you will create and connect to a feed.
 
 1.  In the web browser window displaying your project settings in the Azure DevOps portal, in the vertical navigational pane, select **Artifacts**.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/b3494450-2aff-42d4-b6bb-b4a87fc14188)
+ ![](images/AZ400_M08_L15_12.png)
 
 2.  With the **Artifacts** hub displayed, click **+ Create feed** at the top of the pane. 
 
     > **Note**: This feed will be a collection of NuGet packages available to users within the organization and will sit alongside the public NuGet feed as a peer. The scenario in this lab will focus on the workflow for using Azure Artifacts, so the actual architectural and development decisions are purely illustrative.  This feed will include common functionality that can be shared across projects in this organization. 
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/fb0f3a21-3709-4570-b8bb-8bad139835d6)
+    ![](images/AZ400_M08_L15_13.png)
 
 3.  On the **Create new feed** pane, in the **Name** textbox, type **EShopOnWebShared(1)**, in the **Scope** section, select the **Organization(2)** option, leave other settings with their default values, and click **Create(3)**. 
 
     > **Note**: Any user who wants to connect to this NuGet feed must configure their environment. 
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/5deb9ab9-bcb9-49e4-a529-4b9257873bf6)
+    ![](images/AZ400_M08_L15_14.png)
     
 4.  Back on the **Artifacts** hub, click **Connect to feed**.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/5f195095-85ee-41d5-9a55-36bbb1f29826)
+    !![](images/AZ400_M08_L15_15.png)
 
 5.  On the **Connect to feed** pane, in the **NuGet** section, select **Visual Studio(1)** and, on the **Visual Studio** pane, copy the **Source(2)** url.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/acd0b0b0-822b-452e-a031-ef1cc2265938)
+    ![](images/AZ400_M08_L15_16.png)
 
 6.  Switch back to the **Visual Studio** window and wait for the installation to be get completed. 
 7.  In the Visual Studio window, click **Tools(1)** menu header, in the dropdown menu, select **NuGet Package Manager(2)** and, in the cascading menu, select **Package Manager Settings(3)**.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0e4843f8-ce22-4058-9c5e-67e5c0138998)
+    ![](images/AZ400_M08_L15_17.png)
     
 8.  In the **Options** dialog box, click **Package Sources** and click the plus sign to add a new package source.
 9.  At the bottom of the dialog box, in the **Name** textbox, replace **Package Sources(1)** with **EShopOnWebShared(2)** and, in the **Source** textbox, paste the **Source URL(3)** you copied in the Azure DevOps portal. 
     
-    <img width="529" alt="image" src="https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/065aca07-0b41-4be4-935d-765c044f7fdc">
+    ![](images/AZ400_M08_L15_18.png)
     
 10.  Click **Update(4)** and then click **OK(5)** to finalize the addition.    
      > **Note**: Visual Studio is now connected to the new feed.
@@ -150,12 +151,12 @@ In this task, you will create and publish a NuGet package.
 
     > **Note**: We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/036ec295-cbcb-4c1b-8191-ba4fc7d92ef1)
+    ![](images/AZ400_M08_L15_19.png)
 
 2.  On the **Recent project templates** page of the **Create a new project** pane, use the search textbox to locate the **Class Library(1)** template, and select the template for **C#(2)**, and click **Next(3)**. 
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/46b7cb16-85dc-440f-a60d-8f9d440bc485)
-    
+    ![](images/AZ400_M08_L15_20.png)
+
 3.  On the **Class Library** page of the **Create a new project** pane, specify the following settings and click **Next(5)**:
 
     | Setting | Value |
@@ -167,52 +168,47 @@ In this task, you will create and publish a NuGet package.
     
     > **Note**: Make sure not to select **.NET Standard**.
 
-    <img width="760" alt="image" src="https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/001443b5-e541-4601-800e-cfe4cba8e66a">
+    ![](images/AZ400_M08_L15_21.png)
     
 4.  Click Next. Accept **.NET 6.0 (Long Term Support)(1)** as Framework option and click **Create(2)**.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/33215b51-4b9e-4eec-9e50-3c61d0827a34)
+    ![](images/AZ400_M08_L15_22.png)
 
 5.  Within the Visual Studio interface, in the **Solution Explorer** pane, right-click **Class1.cs(1)**, in the right-click menu, select **Delete(2)**, and, when prompted for confirmation, click **OK**.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/41cfbb6a-3256-4c86-920b-eb590404083a)
+    ![](images/AZ400_M08_L15_23.png)
    
 6.  Within the Visual Studio interface, in the **Solution Explorer** pane, right-click the **EShopOnWeb.Shared(1)** project node and select **Properties(2)**.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/8e4d483b-4652-4d67-ad88-cc8c32962c6e)
+    ![](images/AZ400_M08_L15_24.png)
 
 7.  Press **Ctrl+Shift+B** or **Right-click** on the **EShopOnWeb.Shared Project(1)** and select **Build(2)** to build the project.. 
 
     > **Note**: In the next task we'll use **NuGet.exe** to generate a NuGet package directly from the built project, but it requires the project to be built first.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/943dcffb-e6fc-4671-90e3-a4bcd898520a)
+    ![](images/AZ400_M08_L15_25.png)
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/61315a4f-27d7-4416-87e1-ab24387dfcae)
+    ![](images/AZ400_M08_L15_26.png)
    
 8.  Switch to the web browser displaying the Azure DevOps portal. 
 9.  Navigate to the **Connect to feed** pane, in the **NuGet** section and select **NuGet.exe**. This will display the **NuGet.exe** pane.
 10.  On the **NuGet.exe(2)** pane, click **Get the tools(3)**.
-    
-     <img width="933" alt="image" src="https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a4724af0-2d15-4e3e-81d5-c2e5f6f8f2dd">
+    ![](images/AZ400_M08_L15_27.png)
     
 11.  On the **Get the tools** pane, click the **Download the latest NuGet** link. This will automatically open another browser tab displaying the **Available NuGet Distribution Versions** page.   
 
 12.  On the **Available NuGet Distribution Versions** page, select nuget.exe version **v5.5.1** and download the executable to the local **Downloads** folder.
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/c3ab865b-cae0-484a-92ff-0bd5064b0d0b)
+    ![](images/AZ400_M08_L15_28.png)
 
 
 13.  Switch to the **Visual Studio** window. In the **Solution Explorer** pane, right-click the **EShopOnWeb.Shared(1)** project folder and, in the right-click menu, select **Open Folder in File Explorer(2)**.
-
-      ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/6552d651-d479-488d-beee-f38f5f05d93f)
+    ![](images/AZ400_M08_L15_29.png)
 
 14.  Within the File Explorer window, move the downloaded **nuget.exe** file from the **Downloads** folder into the folder containing the **EShopOnWeb.Shared** file.
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/e4813e1c-87b8-408d-85ad-8801b7b8b512)
+    ![](images/AZ400_M08_L15_30.png)
 
 15.  In the same File Explorer window, select the **File(1)** menu header, in the dropdown menu, select **Open Windows PowerShell(2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator(3)**. 
-    
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/74335420-e989-4524-91b0-ab24b464b112)
+    ![](images/AZ400_M08_L15_31.png)
     
 16.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project. 
 
@@ -225,21 +221,20 @@ In this task, you will create and publish a NuGet package.
      > **Note**: Disregard any warnings displayed in the **Administrator: Windows PowerShell** window.
 
      > **Note**: NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
-    
-     <img width="786" alt="image" src="https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/37241967-c457-42cd-9a03-db5861d2c2af">
+        ![](images/AZ400_M08_L15_32.png)
 
     
 17. If you prompted with the **Error NU5133: NuGet.exe file on path C:\Users\xxxxx\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\nuget.exe needs to be unblocked after downloading** then we need to unblock the **nuget.exe(1)** file which we downloaded to the **EShareOnWeb.Shared** folder by selecting **Properties(2)**.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/c25eb7c4-2812-45a8-a099-5f07bfff8906)
+    ![](images/AZ400_M08_L15_33.png)
 
 18. Check the **Unblock(1)** and click on **Apply(2)** to save the changes and click on **OK(3)**.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/90144ffc-dad9-4611-bf02-b6904ff0e5c5)
+    ![](images/AZ400_M08_L15_34.png)
     
 19. Now again run the **Poweshell command** from the **step 16** and it will create package successfully.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/450c2906-e427-4ada-88dc-431ad61d1bba)
+    ![](images/AZ400_M08_L15_35.png)
 
 20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to signin window login with the credentials provided in the environment details tab.
     
@@ -253,19 +248,17 @@ In this task, you will create and publish a NuGet package.
     ./nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO EShopOnWeb.Shared.1.0.0.nupkg
     ```
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/0b64b742-087b-4e50-82b2-d86a47ec1e8c)
+    ![](images/AZ400_M08_L15_36.png)
     
 21.  Wait for the confirmation of the successful package push operation.      
 22.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
 23.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWeb(2)** entry.
 
      > **Note**: The **EShopOnWebShared** feed should include the newly published NuGet package. 
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/b81fc038-925e-4894-9cb0-684c875f545b)
+    ![](images/AZ400_M08_L15_37.png)
     
 24.  Click the NuGet package to display its details.
-    
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/d51a0fb7-4c5f-44a3-b743-4d77b939291f)
+    ![](images/AZ400_M08_L15_38.png)
 
 
 #### Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
@@ -279,15 +272,15 @@ In this task, we will use a generic "Hello World" sample package, but you can us
     ```
     .\nuget install HelloWorld -ExcludeVersion
     ```
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/786352a3-4c4b-4845-9b1e-d1256fc006af)
+    ![](images/AZ400_M08_L15_39.png)
 
 2.  The HelloWorld package got installed in a subfolder **HelloWorld**, under the EShopOnWeb.Shared folder.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/38a9abc6-013b-4168-b6ad-4deb9aa9b7d6)
+    ![](images/AZ400_M08_L15_40.png)
 
 3.  From the Visual Studio **Solution Explorer**, navigate to the **EShopOnWeb.Shared** Project, and notice the **HelloWorld** subfolder. Click on the little arrow to the left of the subfolder, to open the folder and file list.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/2f715660-dd93-4f14-ae28-d784b2f50392)
+    ![](images/AZ400_M08_L15_41.png)
 
 #### Task 4: Upload the Open-Source NuGet package to Azure Artifacts
 
@@ -301,35 +294,35 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     
     > **Note**:  This results in an error message: Response status code does not indicate success: 409 (Conflict - 'HelloWorld 1.3.0.17' cannot be published to the   feed because it exists in at least one of the feed's upstream sources. Publishing this copy would prevent you from using 'HelloWorld 1.3.0.17' from 'NuGet Gallery'. For more information, see https://go.microsoft.com/fwlink/?linkid=864880 (DevOps Activity ID: AE08BE89-C2FA-4FF7-89B7-90805C88972C)).
     
-    <img width="946" alt="image" src="https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/5ccd5a9a-ebf4-4e2e-80bf-68a806e21282">
+    ![](images/AZ400_M08_L15_42.png)
 
 When you created the Azure DevOps Artifacts Package Feed, by design, it allows for **upstream sources**, such as nuget.org in the dotnet example. However, nothing blocks your DevOps team to create an **"internal-only"** Package Feed.
     
 2.  Navigate to the Azure DevOps Portal, browse to **Artifacts**, and select the **EShopOnWebShared** Feed.
 3.  Click **Search Upstream Sources(2)**
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a8f03dd9-8b59-41d6-b7d6-39eb1713b6ac)
+    ![](images/AZ400_M08_L15_43.png)
 
 4.  In the **Go to an Upstream Package** window, select **Nuget(1)** as Package Type, and enter **HelloWorld(2)** in the search field.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/f3e52b11-bfd1-4692-8801-bca6636c678b)
+    ![](images/AZ400_M08_L15_44.png)
     
 5.  Confirm by pressing the **Search(3)** button.
 6.  This results in a list of all HelloWorld packages with the different versions available.
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/5b18e658-d55b-4849-82cd-9859bbefb1e7)
+    ![](images/AZ400_M08_L15_45.png)
 
 7.  Click the **left arrow key** to return to the **EShopOnWebShared** Feed.
 8.  Click the cogwheel to open **Feed Settings(1)**. Within the Feed Settings page, select **Upstream Sources(2)**.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/e8bf6f9c-2966-42c1-93ae-a297e953adc8)
+    ![](images/AZ400_M08_L15_46.png)
 
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/ab6d6836-d109-4b96-8796-d02497a903be)
+    ![](images/AZ400_M08_L15_47.png)
 
 
 9.  Notice the different Upstream Package Managers for different development languages. Select **Nuget.org(3)** from the list. Press the **Delete(5)** button, Followed by pressing the **Save(6)** button.    
  
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/702e0286-b509-4891-b988-8b004d94278e)
+    ![](images/AZ400_M08_L15_48.png)
 
     
 10.  With these saved changed, it will be possible to upload the **HelloWorld** package using the Nuget.exe from the PowerShell Window, by relaunching the following command:
@@ -348,19 +341,17 @@ When you created the Azure DevOps Artifacts Package Feed, by design, it allows f
         PS C:\eShopOnWeb\EShopOnWeb.Shared> 
         ```
 11.  From the Azure DevOps Portal, **refresh** the Artifacts Package Feed page. The list of packages shows both the **EShopOnWeb.Shared** custom-developed package, as well as the **HelloWorld** public sourced package.
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/e32b964c-e32a-412f-b82f-10c5031afa0b)
+    ![](images/AZ400_M08_L15_49.png)
 
 
 12.  From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared(1)** Project, and select **Manage Nuget Packages(2)** from the context menu.
-
-     ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/75815c41-d64a-4cca-8c8b-25a207b83847)
+    ![](images/AZ400_M08_L15_50.png)
 
 13. From the Nuget Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
 14. Click **Browse(1)**, and wait for the list of Nuget Packages to load.
 15. This list will also show both the **EShopOnWeb.Shared(2)** custom-developed package, as well as the **HelloWorld(2)** public sourced package.
     
-    ![image](https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/a30d6701-4400-4579-953f-8542c744ec8c)
+    ![](images/AZ400_M08_L15_51.png)
 
 
 #### Review
