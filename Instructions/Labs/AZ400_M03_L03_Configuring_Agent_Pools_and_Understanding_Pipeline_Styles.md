@@ -16,9 +16,7 @@ After you complete this lab, you will be able to:
 - implement YAML-based pipelines
 - implement self-hosted agents
 
-## Instructions
-
-#### Set up an Azure DevOps organization
+## Set up an Azure DevOps organization
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -38,11 +36,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/agent1.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
 
-#### Task 1: Configure the team project
+## Task 1: Configure the team project
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **PartsUnlimited** template.
 
@@ -67,11 +65,11 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 1.  On the **Create New Project** page, click **Navigate to project**.
 
-### Exercise 1: Author YAML-based Azure DevOps pipelines
+# Exercise 1: Author YAML-based Azure DevOps pipelines
 
 In this exercise, you will convert a classic Azure DevOps pipeline into a YAML-based one. 
 
-#### Task 1: Create an Azure DevOps YAML pipeline
+## Task 1: Create an Azure DevOps YAML pipeline
 
 In this task, you will create a template-based Azure DevOps YAML pipeline.
 
@@ -85,11 +83,11 @@ In this task, you will create a template-based Azure DevOps YAML pipeline.
 
 1.  On the **Review your pipeline YAML** pane, review the sample pipeline, click the down-facing caret symbol next to the **Run** button, click **Save**.
 
-### Exercise 2: Manage Azure DevOps agent pools
+# Exercise 2: Manage Azure DevOps agent pools
 
 In this exercise, you will implement self-hosted Azure DevOps agent.
 
-#### Task 1: Configure an Azure DevOps self-hosting agent
+## Task 1: Configure an Azure DevOps self-hosting agent
 
 In this task, you will configure the LOD VM as an Azure DevOps self-hosting agent and use it to run a build pipeline.
 

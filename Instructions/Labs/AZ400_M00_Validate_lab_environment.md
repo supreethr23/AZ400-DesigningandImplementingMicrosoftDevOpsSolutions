@@ -1,12 +1,4 @@
----
-lab:
-    title: 'Lab 00: Validate lab environment'
-    module: 'Module 0: Welcome'
----
-
 # Lab 00: Validate lab environment
-
-# Student lab manual
 
 ## Instructions
 
