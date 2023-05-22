@@ -17,9 +17,29 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
+
+#### Set up an Azure DevOps organization
+
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
+
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    * Password: <inject key="AzureAdUserPassword"></inject>
+
+1. On the next page accept defaults and click on continue.
+
+   ![Azure DevOps](images/lab1-image1.png)
+
+1. On the Almost Done... page fill the captcha and click on continue.
+
+    ![Azure DevOps](images/lab1-image2.png)
+
+### Exercise 0: Configure the lab prerequisites
+
   ![Architecture Diagram](images/lab1-architecture.png)
 
 # Exercise 0: Configure the lab prerequisites
+
 
 In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
 
@@ -27,10 +47,9 @@ In this exercise, you will set up the prerequisite for the lab, which consists o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and under the **Advanced** section, choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
-   
-   ![Create Project](images/az400_02-02.png)
-   ![Create Project](images/az400_02-03.png)
+1. On your lab computer, in a browser window open your Azure DevOps organization. Select your **Organization (1)** and give your project name **eShopOnWeb (2)** and under the **Advanced (3)** section, choose **Scrum (4)** on the **Work Item process** dropdown. Click on **+ Create project (5)**.
+
+   ![Create Project](images/lab1-image3.png)
     
 # Exercise 1: Manage Agile project
 
