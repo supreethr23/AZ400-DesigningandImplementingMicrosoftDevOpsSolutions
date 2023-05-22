@@ -23,7 +23,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/)
+  ![Architecture Diagram](images/lab11-architecture.png)
 
 ## Estimated timing: 60 minutes
 
