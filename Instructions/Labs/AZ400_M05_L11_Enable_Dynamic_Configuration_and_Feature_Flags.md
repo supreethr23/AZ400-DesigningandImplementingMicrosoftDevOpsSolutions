@@ -1,5 +1,4 @@
 # Lab 11: Enable Dynamic Configuration and Feature Flags
-# Student lab manual
 
 ## Lab requirements
 
@@ -22,19 +21,22 @@ After you complete this lab, you will be able to:
 - Enable dynamic configuration
 - Manage feature flags
 
+## Architecture Diagram
+
+  ![Architecture Diagram](images/lab11-architecture.png)
+
 ## Estimated timing: 60 minutes
 
-## Instructions
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
 
-### Exercise 1: Import and run CI/CD Pipelines
+# Exercise 1: Import and run CI/CD Pipelines
 
 In this exercise, you will import and run the CI pipeline, configure the service connection with your Azure Subscription and then import and run the CD pipeline.
 
-#### Task 1: Import and run the CI pipeline
+## Task 1: Import and run the CI pipeline
 
 Let's start by importing the CI pipeline named [eshoponweb-ci.yml](https://github.com/MicrosoftLearning/eShopOnWeb/blob/main/.ado/eshoponweb-ci.yml).
 
@@ -54,7 +56,7 @@ Let's start by importing the CI pipeline named [eshoponweb-ci.yml](https://githu
 
 1. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/Remove** option. Name it **eshoponweb-ci** and click on **Save**.
 
-#### Task 2: Import and run the CD pipeline
+## Task 2: Import and run the CD pipeline
 
 1. Go to **Pipelines>Pipelines**
 
@@ -84,14 +86,14 @@ Let's start by importing the CI pipeline named [eshoponweb-ci.yml](https://githu
 
 1. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/Remove** option. Name it **eshoponweb-cd-webapp-code** and click on **Save**.
 
-### Exercise 2: Manage Azure App Configuration
+# Exercise 2: Manage Azure App Configuration
 
 In this exercise, you will create the App Configuration resource in Azure, enable the managed identity and then test the full solution.
 
 >Note: This exercise doesn't require any coding skills. The website's code implements already Azure App Configuration functionalities.
 If you want to know how to implement this in your application, please take a look at these tutorials: [Use dynamic configuration in an ASP.NET Core app](https://learn.microsoft.com/azure/azure-app-configuration/enable-dynamic-configuration-aspnet-core) and [Manage feature flags in Azure App Configuration](https://learn.microsoft.com/azure/azure-app-configuration/manage-feature-flags).
 
-#### Task 1: Create the App Configuration resource
+## Task 1: Create the App Configuration resource
 
 1. In the Azure Portal, search for the **App Configuration** service
 1. Click **Create app configuration** then select:
@@ -103,7 +105,7 @@ If you want to know how to implement this in your application, please take a loo
 1. Click on **Review + create** then **Create**
 1. After creating the App Configuration service, go to **Overview** and copy/save the value of the **Endpoint**.
 
-#### Task 2: Enable Managed Identity
+## Task 2: Enable Managed Identity
 
 1. Go to the Web App deployed using the pipeline (it should be named **az400-webapp-NAME**).
 1. In the **Settings** section, click on **Identity** then switch status to **On** in the **System Assigned** section, click **save>yes** and wait a few seconds for the operation to finish.
@@ -112,7 +114,7 @@ If you want to know how to implement this in your application, please take a loo
 1. In the **Members** section, check **Manage Identity** then select the managed identity of your Web App (they should have the same name).
 1. Click on **Review and assign**
 
-#### Task 3: Configure the Web App
+## Task 3: Configure the Web App
 
 In order to make sure that your website is accessing App Configuration, you need to update its configuration.
 1. Go back to your Web App.
@@ -128,7 +130,7 @@ In order to make sure that your website is accessing App Configuration, you need
 1. Go to **Overview** and click on **Browse**
 1. At this step, you will see no changes in the website since the App Configuration doesn't contain any data. This is what you will do in the next tasks.
 
-#### Task 4: Test the Configuration Management
+## Task 4: Test the Configuration Management
 
 1. In your website, select **Visual Studio** in the **Brand** drop-down list and click on the arrow button (**>**).
 1. You will see a message saying *"THERE ARE NO RESULTS THAT MATCH YOUR SEARCH"*.
@@ -143,7 +145,7 @@ The goal of this Lab is to be able to update that value without updating the web
 
 Congratulations! In this task, you tested the **Configuration explorer** in Azure App Configuration.
 
-#### Task 5: Test the Feature Flag
+## Task 5: Test the Feature Flag
 
 Let's continue to test the Feature manager.
 1. In order to try this, go back to App Configuration.

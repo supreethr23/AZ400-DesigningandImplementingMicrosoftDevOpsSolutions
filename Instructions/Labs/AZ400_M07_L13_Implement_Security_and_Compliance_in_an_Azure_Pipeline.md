@@ -1,5 +1,4 @@
 # Lab 13: Implement Security and Compliance in an Azure Pipeline
-# Student lab manual
 
 ## Lab overview
 
@@ -23,9 +22,11 @@ After you complete this lab, you will be able to:
 - Activate WhiteSource Bolt
 - Run a build pipeline and review WhiteSource security and compliance report
 
-## Instructions
+## Architecture Diagram
 
-#### Set up an Azure DevOps organization. 
+   ![Architecture Diagram](images/lab13-architecture.png)
+
+## Set up an Azure DevOps organization. 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -57,11 +58,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/policies-enable-3rd.png)    
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://dev.azure.com/unhueteb/_git/eshopweb-az400).
 
-#### Task 1:  (skip if done) Create and configure the team project
+## Task 1:  (skip if done) Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -69,7 +70,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Create Project](images/create-project.png)
 
-#### Task 2:  (skip if done) Import eShopOnWeb Git Repository
+## Task 2:  (skip if done) Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -84,11 +85,11 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-### Exercise 1: Implement Security and Compliance in an Azure DevOps pipeline by using Mend Bolt
+# Exercise 1: Implement Security and Compliance in an Azure DevOps pipeline by using Mend Bolt
 
 In this exercise, leverage Mend Bolt to scan the project code for security vulnerabilities and licensing compliance issues, and view the resulting report.
 
-#### Task 1: Activate Mend Bolt extension
+## Task 1: Activate Mend Bolt extension
 
 In this task, you will activate WhiteSource Bolt in the newly generated Azure Devops project.
 
@@ -111,7 +112,7 @@ In this task, you will activate WhiteSource Bolt in the newly generated Azure De
     ![Get Mend Account](images/mend-account.png)
 
 
-#### Task 2: Create and Trigger a build
+## Task 2: Create and Trigger a build
 
 In this task, you will create and trigger a CI build pipeline within  Azure DevOps project. You will use **Mend Bolt** extension to identify vulnerable OSS components present in this code.
 
@@ -140,11 +141,11 @@ In this task, you will create and trigger a CI build pipeline within  Azure DevO
     ![Mend Results](images/mend-results.png)
 
 
-### Exercise 2: Remove the Azure DevOps billing
+# Exercise 2: Remove the Azure DevOps billing
 
 In this exercise, you will remove the Azure DevOps billing enabled in this lab to eliminate unexpected charges.
 
-#### Task 1: Remove the Azure DevOps billing
+## Task 1: Remove the Azure DevOps billing
 
 In this task, you will remove pipeline billing to eliminate unnecessary charges.
 

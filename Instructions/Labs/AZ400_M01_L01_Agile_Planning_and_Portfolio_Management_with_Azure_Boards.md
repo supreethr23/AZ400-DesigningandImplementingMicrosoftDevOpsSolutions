@@ -1,5 +1,4 @@
 # Lab 01: Agile Planning and Portfolio Management with Azure Boards
-# Student lab manual
 
 ## Lab overview
 
@@ -16,7 +15,8 @@ After you complete this lab, you will be able to:
 -   Define dashboards
 -   Customize team process
 
-## Instructions
+## Architecture Diagram
+
 
 #### Set up an Azure DevOps organization
 
@@ -36,9 +36,14 @@ After you complete this lab, you will be able to:
 
 ### Exercise 0: Configure the lab prerequisites
 
+  ![Architecture Diagram](images/lab1-architecture.png)
+
+# Exercise 0: Configure the lab prerequisites
+
+
 In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
 
-#### Task 1: Configure the team project
+## Task 1: Configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -46,11 +51,11 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
    ![Create Project](images/lab1-image3.png)
     
-### Exercise 1: Manage Agile project
+# Exercise 1: Manage Agile project
 
 In this exercise, you will use Azure Boards to perform a number of common agile planning and portfolio management tasks, including management of teams, areas, iterations, work items, sprints and capacity, customizing Kanban boards, defining dashboards, and customizing team processes.
 
-#### Task 1: Manage teams, areas, and iterations
+## Task 1: Manage teams, areas, and iterations
 
 In this task, you will create a new team and configure its area and iterations. 
 
@@ -109,7 +114,7 @@ Each new project is configured with a default team, which name matches the proje
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
-#### Task 2: Manage work items
+## Task 2: Manage work items
 
 In this task, you will step through common work item management tasks.
 
@@ -222,7 +227,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
-#### Task 3: Manage sprints and capacity
+## Task 3: Manage sprints and capacity
 
 In this task, you will step through common sprint and capacity management tasks.
 
@@ -310,7 +315,7 @@ The sprint backlog should contain all the information the team needs to successf
 
     > **Note**: The task associated with **Development** is now green and very easy to identify.
 
-#### Task 4: Customize Kanban boards
+## Task 4: Customize Kanban boards
 
 In this task, you will step through the process of customizing Kanban boards.
 
@@ -413,7 +418,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
-#### Task 5: Customize team process
+## Task 5: Customize team process
 
 In this task we'll create a custom Scrum-based process. The process will include a backlog item field designed to track to a proprietary PartsUnlimited ticket ID.
 
@@ -477,7 +482,7 @@ All processes are shared within the same organization. That is, one or more team
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
-### Exercise 2 (optional) : Define dashboards
+# Exercise 2 (optional) : Define dashboards
 
 In this task, you will step through the process of creating dashboards and their core components.
 

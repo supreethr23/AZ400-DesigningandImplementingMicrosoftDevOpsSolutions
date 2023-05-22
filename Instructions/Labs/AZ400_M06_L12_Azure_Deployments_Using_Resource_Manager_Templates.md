@@ -1,5 +1,4 @@
 # Lab 12: Azure Deployments using Azure Bicep templates
-# Student lab manual
 
 ## Lab overview
 
@@ -17,47 +16,45 @@ After you complete this lab, you will be able to:
 - Deploy all the resources to Azure using Azure Bicep Templates.
 - Deploy resources to Azure using linked templates
 
-## Instructions
+## Architecture Diagram
 
-### Exercise 0: Configure the lab prerequisites
+  ![Architecture Diagram](images/lab12-architecture.png)
+
+# Exercise 1: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include Visual Studio Code.
 
-#### Task 1: Install and configure Git and Visual Studio Code
+## Task 1: Install and configure Git and Visual Studio Code
 
 In this task, you will install Visual Studio Code. If you have already implemented this prerequisite, you can proceed directly to the next task.
 
 1. If you don't have Visual Studio Code installed yet, from your lab computer, start a web browser, navigate to the [Visual Studio Code download page](https://code.visualstudio.com/), download it, and install it.
 
-### Exercise 1: Author and deploy Bicep templates
+# Exercise 1: Author and deploy Bicep templates
 
 In this lab, you will create an Azure Bicep template and a template module. You will then modify the main deployment template to use the template module and update the dependencies, and finally deploy the templates to Azure.
 
-#### Task 1: Create Azure Bicep template
+## Task 1: Create Azure Bicep template
 
 In this task, you will use Visual Studio Code to create a Azure Bicep template
 
-1. From your lab computer, start Visual Studio Code, in Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Preferences**, in the cascading menu, select **Extensions**, in the **Search Extensions** textbox, type **Bicep**, select the one published by Microsoft, and click **Install** to install the Azure Bicep language support.
+1. From the Jump VM, start Visual Studio Code.
 
-     ![visual studio"](images/extention.png)
-  
-     ![visual studio"](images/AZ-400-M6.png)
-  
-  
-1. In a web browser, connect to **<https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows/main.bicep>**. Click on **Raw** option for the file. Copy the contents of the code window and paste it into Visual Studio Code editor.
-
-      ![visual studio"](images/raw.png)
-
-    > **Note**: Rather than creating a template from scratch we will use one of the [Azure Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/) named **Deploy a simple Windows template VM**. The templates are downloadable the templates from GitHub - [vm-simple-windows](https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-windows).
-
-1. On your lab computer, open File Explorer and create the following local folder that will serve to store templates:
-
-   - **C:\\templates**
+     ![visual studio"](images/vs.png)
    
-     ![visual studio"](images/newfolder.png)
-   
-1. Switch back to Visual Studio Code window with our main.bicep template, click the **File** top level menu, in the dropdown menu, click **Save as**, and save the template as **main.bicep** in the newly created local folder **C:\\templates**.
+1. Select **Extensions(1)**, in the **Search Extensions** textbox, type **Bicep(2)**, select **Bicep(3)** the one published by Microsoft, and click **Install(4)** to install the Azure Bicep language support.
+     
+     ![visual studio"](images/vsbicep.png)
+  
+1. In Visual Studio Code, Click on **Files(1)>Open file(2)** to open a file.
 
+     ![visual studio"](images/selectfilesinvs.png)
+     
+ 1. Now in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**.
+
+   
+     ![visual studio"](images/mainfile.png)
+    
 1. Review the template to get a better understanding of its structure. There are five resource types included in the template:
 
    - Microsoft.Storage/storageAccounts
@@ -66,15 +63,17 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
    - Microsoft.Network/networkInterfaces
    - Microsoft.Compute/virtualMachines
 
-1. In Visual Studio Code, save the file again, but this time choose **C:\\templates** as the destination and **storage.bicep** as the file name.
 
     > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
-    
-      ![visual studio"](images/bicepfiles.png)
 
-#### Task 2: Create a template module for storage resources
+
+## Task 2: Create a template module for storage resources.
 
 In this task, you will modify the templates you saved in the previous task such that the storage template module **storage.bicep** will create a storage account only, it will be imported by the first template. The storage template module needs to pass a value back to the main template, **main.bicep**, and this value will be defined in the outputs element of the storage template module.
+
+1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates(1)**, Select **storage.bicep(2)** file, Make sure that in the file name box **storage.bicep(3)** will be selected then click on **Open(4)**.
+   
+   ![visual studio"](images/strfile.png)
 
 1. In the **storage.bicep** file displayed in the Visual Studio Code window, under the **resources section**, remove all the resource elements except the **storageAccounts** resource. It should result in a resource section looking as follows:
 
@@ -150,12 +149,15 @@ In this task, you will modify the templates you saved in the previous task such 
    output storageURI string = storageAccount.properties.primaryEndpoints.blob
    ```
 
-#### Task 3: Modify the main template to use the template module
+## Task 3: Modify the main template to use the template module
 
 In this task, you will modify the main template to reference the template module you created in the previous task.
 
-1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates\\main.bicep**, select it, and click **Open**.
-1. In the **main.bicep** file, in the resource section remove the storage resource element
+1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**
+
+      ![visual studio"](images/mainfile.png)
+      
+3. In the **main.bicep** file, in the resource section remove the storage resource element
 
    ```bicep
    resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
@@ -203,7 +205,7 @@ In this task, you will modify the main template to reference the template module
 
 1. Save the template.
 
-#### Task 4: Deploy resources to Azure by using template modules
+## Task 4: Deploy resources to Azure by using template modules
 
  > **Note**: You can deploy templates in several ways, such as using Azure CLI installed locally or from the Azure Cloud Shell or from a CI/CD pipeline. In this lab, you will use Azure CLI from the Azure Cloud Shell.
 
@@ -212,27 +214,46 @@ In this task, you will modify the main template to reference the template module
  > **Note**: To use Azure Cloud Shell, you will upload the both the main.bicep and storage.bicep files into your Cloud Shell's home directory.
 
  > **Note**: Currently, Azure CLI does not support deploying remote Bicep files. You can build the bicep files to get the ARM Template JSON and then upload them to an storage account, then deploy them remotely.
+ 
+1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
 
-1. On the lab computer, in the web browser displaying the Azure Portal, click the **Cloud Shell** icon to open Cloud Shell.
-1. In the Cloud Shell pane, select **Bash**.
+   ![Azure DevOps](images/azureportal-lab12.png)
+   
+1. If not Sign-in, then on the **Sign into Microsoft Azure** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+   
+1. Now enter the following **Password** and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
+   
+1. If you see the pop-up **Stay Signed in?**, click No.
 
-     ![visual studio"](images/bash.png)
-    
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+1. If **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+
+1. In the Azure portal, click the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
+
+      ![Clouldshell](images/cloudshell.png)
+  
+1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
+
+     ![Clouldshell](images/bash.png)
+
    > **Note**: If this is the first time you are starting Cloud Shell and you are presented with the You have no storage mounted message, select the subscription you are using in this lab, and select Create storage.
    
      ![visual studio"](images/creatstr.png)
    
 1. In the Cloud Shell pane, click the **Upload/download files** icon and, in the dropdown menu, click **Upload**.
    
-     ![visual studio"](images/upload-6.png)
+     ![visual studio"](images/upload.png)
    
 1. In the **Open** dialog box, navigate to and select **C:\\templates\\main.bicep** and click **Open**.
-1. Follow the same steps to upload the **C:\\templates\\storage.bicep** file too
+1. Follow the same steps to upload the **C:\\templates\\storage.bicep** file too.
   
 1. From a **Bash** session in the Cloud Shell pane, run the following to perform a deployment by using a newly uploaded template:
 
    ```bash
-   LOCATION='<region>'
+   LOCATION='eastus'
    ```
     > **Note**: replace the name of the region with a region close to your location example : **"eastus"**. If you do not know what locations are available, run the `az account list-locations -o table` command.
   
@@ -243,20 +264,33 @@ In this task, you will modify the main template to reference the template module
    ```bash   
    az deployment group create --name az400m06l15[Deployment-ID] --resource-group az400m06l15-RG --template-file main.bicep
    ```
-    > **Note**: Retrieve the [Deployment-ID] specified in the environment details page from the lab guide, and substitute it into the command mentioned above.
+    > **Note**: Retrieve the [Deployment-ID] with <inject key="DeploymentID"></inject> specified in the environment details page from the lab guide.
 
 1. When prompted to provide the value for 'adminUsername', type **Student** and press the **Enter** key.
 1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key. (Password typing will not be shown)
    > **Note**: It will take around 5 minutes to get output.
-
-1. If you receive errors when running the above command to deploy the template, try the following:
+   
+1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **resource group(1)** and, in the list of results, select **Resouce groups(2)**.
+      
+      ![azure portal"](images/rg.png)
+      
+1. Click on **az400m06l15-RG(1)** resource group, on the **az400m06l15-RG blade(2)** you can see the **resources(3)** which we deployed in the previous steps using azure cloudshell.
+       
+      ![azure portal"](images/bicepresources.png)
+       
+3. If you receive errors when running the above command to deploy the template, try the following:
 
    - If you have multiple Azure subscriptions ensure you have set the subscription context to the correct one where the resource group is deployed.
    - Ensure that the linked template is accessible via the URI you specified.
 
  > **Note**: As a next step, you could now modularize the remaining resource definitions in the main deployment template, such as the network and virtual machine resource definitions.
 
- > **Note**: If you are not planning on using the deployed resources, you should delete them to avoid associated charges. You can do so simply by deleting the resource group **az400m06l15-RG**.
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ## Review
 

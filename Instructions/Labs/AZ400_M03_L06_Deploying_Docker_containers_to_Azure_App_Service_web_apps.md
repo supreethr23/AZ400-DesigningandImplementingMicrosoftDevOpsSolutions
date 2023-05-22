@@ -1,5 +1,4 @@
 # Lab 06: Deploying Docker containers to Azure App Service web apps
-# Student lab manual
 
 ## Lab overview
 
@@ -13,7 +12,11 @@ After you complete this lab, you will be able to:
 - Push an image to Azure Container Registry
 - Deploy a Docker image as a container to Azure App Service by using Azure DevOps
 
-### Set up an Azure DevOps organization
+## Architecture Diagram
+
+   ![Architecture Diagram](images/lab6-architecture.png)
+
+## Set up an Azure DevOps organization
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [**Azure Devops**](https://go.microsoft.com/fwlink/?LinkId=307137). 
 
@@ -36,17 +39,17 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/agent2.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
 
-#### Task 1: Create and configure the team project
+## Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
 
-#### Task 2: Import eShopOnWeb Git Repository
+## Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -59,17 +62,17 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-#### Task 3: Set main branch as default branch
+## Task 3: Set main branch as default branch
 
 1. Go to **Repos>Branches**
 1. Hover on the **main** branch then click the ellipsis on the right of the column
 1. Click on **Set as default branch**
 
-### Exercise 1: Manage the service connection
+# Exercise 1: Manage the service connection
 
 In this exercise, you will configure the service connection with your Azure Subscription then import and run the CI pipeline.
 
-#### Task 1: Manage the service connection
+## Task 1: Manage the service connection
 
 You can create a connection from Azure Pipelines to external and remote services for executing tasks in a job.
 
@@ -122,11 +125,11 @@ A service principal is automatically created by Azure Pipeline when you connect 
 
 1. Click on **Verify and Save**.
 
-### Exercise 2: Import and run the CI pipeline
+# Exercise 2: Import and run the CI pipeline
 
 In this exercise, you will import and run the CI pipeline.
 
-#### Task 1: Import and run the CI pipeline
+## Task 1: Import and run the CI pipeline
 
 1. Go to **Pipelines>Pipelines**
 
@@ -159,11 +162,11 @@ In this exercise, you will import and run the CI pipeline.
 
 1. Navigate to the [**Azure Portal**](https://portal.azure.com), search for the Azure Container Registry in the recently created Resource Group (it should be named **rg-az400-container-NAME**). Make sure that the **eshoponweb/web** was created and contains two tags (one of them is **Latest**).
 
-### Exercise 3: Import and run the CD pipeline
+# Exercise 3: Import and run the CD pipeline
 
 In this exercise, you will configure the service connection with your Azure Subscription then import and run the CD pipeline.
 
-#### Task 1: Add a new role assignment
+## Task 1: Add a new role assignment
 
 In this task, you will add a new role assignment to allow Azure App Service pull the docker image from Azure Container Registry.
 
@@ -188,7 +191,7 @@ In this task, you will add a new role assignment to allow Azure App Service pull
 
 You should now see the JSON output which confirms the success of the command run.
 
-#### Task 2: Import and run the CD pipeline
+## Task 2: Import and run the CD pipeline
 
 In this task, you will import and run the CI pipeline.
 
@@ -225,7 +228,7 @@ In this task, you will import and run the CI pipeline.
 
     > **Note 3**: 
 
-#### Task 3: Test the solution
+## Task 3: Test the solution
 
 1. In the Azure Portal, navigate to the recently created Resource Group, you should now see three resources (Ap Service, App Service Plan and Container Registry).
 
@@ -233,11 +236,11 @@ In this task, you will import and run the CI pipeline.
 
 Congratulations! In this exercise, you deployed a website using custom docker image.
 
-### Exercise 3: Remove the Azure DevOps billing
+# Exercise 3: Remove the Azure DevOps billing
 
 In this exercise, you will remove the Azure DevOps billing enabled in this lab to eliminate unexpected charges.
 
-#### Task 1: Remove the Azure DevOps billing
+## Task 1: Remove the Azure DevOps billing
 
 In this task, you will remove pipeline billing to eliminate unnecessary charges.
 

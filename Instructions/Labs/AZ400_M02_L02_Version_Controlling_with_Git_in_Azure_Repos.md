@@ -1,5 +1,4 @@
 # Lab 02: Version Controlling with Git in Azure Repos
-# Student lab manual
 
 ## Lab overview
 
@@ -22,9 +21,12 @@ After you complete this lab, you will be able to:
 -   Review history of changes
 -   Work with branches by using Visual Studio Code
 
-## Instructions
 
-#### Set up an Azure DevOps organization
+## Architecture Diagram
+
+   ![Architecture Diagram](images/lab2-architecture.png)
+
+## Set up an Azure DevOps organization
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials provided in environment details tab.
 
@@ -34,11 +36,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/az400_02-01.png)
     
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb)
     
-#### Task 1: Create and configure the team project
+## Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -48,7 +50,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
     
     ![Create Project](images/az400_02-03.png)
 
-#### Task 2: Import eShopOnWeb Git Repository
+## Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -63,7 +65,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-#### Task 3: Configure Git and Visual Studio Code
+## Task 3: Configure Git and Visual Studio Code
 
 In this task, you will configure Git and Visual Studio Code, including configuring the Git credential helper to securely store the Git credentials used to communicate with Azure DevOps.
 
@@ -87,11 +89,11 @@ In this task, you will configure Git and Visual Studio Code, including configuri
     git config --global user.email <johndoe@example.com>
     ```
 
-### Exercise 1: Clone an existing repository
+# Exercise 1: Clone an existing repository
 
 In this exercise, you use Visual Studio Code to clone the Git repository you provisioned as part of the previous exercise.
 
-#### Task 1: Clone an existing repository
+## Task 1: Clone an existing repository
 
 In this task, you will step through the process of cloning a Git repository by using Visual Studio Code.
 
@@ -126,7 +128,7 @@ In this task, you will step through the process of cloning a Git repository by u
 
     > **Note**: You can ignore warnings you might receive regarding problems with loading of the project. The solution may not be in the state suitable for a build, but we're going to focus on working with Git, so building the project is not required.
 
-### Exercise 2: Save work with commits
+# Exercise 2: Save work with commits
 
 In this exercise, you will step through several scenarios that involve the use of Visual Studio Code to stage and commit changes.
 
@@ -138,7 +140,7 @@ Git commits consist of the following:
 - A reference to the parent commit(s). Git manages your code history using these references.
 - A message describing a commit. You give this message to Git when you create the commit. It's a good idea to keep this message descriptive, but to the point.
 
-#### Task 1: Commit changes
+## Task 1: Commit changes
 
 In this task, you will use Visual Studio Code to commit changes.
 
@@ -168,7 +170,7 @@ In this task, you will use Visual Studio Code to commit changes.
 
 1.  In the lower left corner of the Visual Studio Code window, to the right of the **main** label, note the **Synchronize Changes** icon of a circle with two vertical arrows pointing in the opposite directions and the number **1** next to the arrow pointing up. Click the icon and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/main**. 
 
-#### Task 2: Review commits
+## Task 2: Review commits
 
 In this task, you will use the Azure DevOps portal to review commits.
 
@@ -178,7 +180,7 @@ In this task, you will use the Azure DevOps portal to review commits.
 
      ![ADO Repo Commits](images/az400_02-09.png)
 
-#### Task 3: Stage changes
+## Task 3: Stage changes
 
 In this task, you will explore the use of staging changes by using Visual Studio Code. Staging changes allows you to selectively add certain files to a commit while passing over the changes made in other files.
 
@@ -209,7 +211,7 @@ In this task, you will explore the use of staging changes by using Visual Studio
 
     > **Note**: Note that since only the staged change was committed, the other change is still pending to be synchronized.
 
-### Exercise 3: Review history
+# Exercise 3: Review history
 
 In this exercise, you will use the Azure DevOps portal to review the history of commits.
 
@@ -217,7 +219,7 @@ Git uses the parent reference information stored in each commit to manage a full
 
 Git's use of the **Branches and Merges** feature works through pull requests, so the commit history of your development doesn't necessarily form a straight, chronological line. When you use history to compare versions, think in terms of file changes between two commits instead of file changes between two points in time. A recent change to a file in the main branch may have come from a commit created two weeks ago in a feature branch that was merged yesterday.
 
-#### Task 1: Compare files
+## Task 1: Compare files
 
 In this task, you will step through commit history by using the Azure DevOps portal.
 
@@ -235,7 +237,7 @@ In this task, you will step through commit history by using the Azure DevOps por
 
     > **Note**: This view represents the state of the source corresponding to the commit, allowing you to review and download each of the source files.
 
-### Exercise 4: Work with branches
+# Exercise 4: Work with branches
 
 In this exercise, you will step through scenarios that involve branch management by using Visual Studio Code and the Azure DevOps portal.
 
@@ -243,7 +245,7 @@ You can manage in your Azure DevOps Git repo from the **Branches** view of **Azu
 
 Committing changes to a branch will not affect other branches and you can share branches with others without having to merge the changes into the main project. You can also create new branches to isolate changes for a feature or a bug fix from your main branch and other work. Since the branches are lightweight, switching between branches is quick and easy. Git does not create multiple copies of your source when working with branches, but rather uses the history information stored in commits to recreate the files on a branch when you start working on it. Your Git workflow should create and use branches for managing features and bugfixes. The rest of the Git workflow, such as sharing code and reviewing code with pull requests, all work through branches. Isolating work in branches makes it very simple to change what you are working on by simply changing your current branch.
 
-#### Task 1: Create a new branch in your local repository
+## Task 1: Create a new branch in your local repository
 
 In this task, you will create a branch by using Visual Studio Code.
 
@@ -258,7 +260,7 @@ In this task, you will create a branch by using Visual Studio Code.
 
     > **Note**: At this point, you are automatically switched to the **dev** branch.
 
-#### Task 2: Delete a branch
+## Task 2: Delete a branch
 
 In this task, you will use the Visual Studio Code to work with a branch created in the previous task.
 
@@ -306,7 +308,7 @@ Git keeps track of which branch you are working on and makes sure that, when you
 
 1.  Verify that the **origin/dev** branch no longer appears in the list of branches.
 
-#### Task 3: Restore a branch
+## Task 3: Restore a branch
 
 In this task, you will use the Azure DevOps portal restore the branch you deleted in the previous task.
 
@@ -321,7 +323,7 @@ In this task, you will use the Azure DevOps portal restore the branch you delete
 
     > **Note**: You can use this functionality to restore a deleted branch as long as you know its exact name.
 
-#### Task 4: Branch Policies
+## Task 4: Branch Policies
 
 
 In this task, you will use the Azure DevOps portal to add policies to the main branch and only allow changes using Pull Requests that comply with the defined policies. You want to ensure that changes in a branch are reviewed before they are merged.
@@ -339,7 +341,7 @@ For simplicity we will work directly on the web browser repo editor (working dir
 
     ![Policy Settings](images/az400_02-17.png)
 
-#### Task 5: Testing branch policy
+## Task 5: Testing branch policy
 
 In this task, you will use the Azure DevOps portal to test the policy and create your first Pull Request.
 
@@ -357,7 +359,7 @@ In this task, you will use the Azure DevOps portal to test the policy and create
 
 1. Click on **Cancel** to skip the commit.
 
-#### Task 6: Working with Pull Requests
+## Task 6: Working with Pull Requests
 
 In this task, you will use the Azure DevOps portal to create a Pull Request, using the **dev** branch to merge a change into the protected **main** branch. An Azure DevOps work item with be linked to the changes to be able to trace pending work with code activity.
 
@@ -392,7 +394,7 @@ In this task, you will use the Azure DevOps portal to create a Pull Request, usi
     
 2. Click on **Complete Merge**
         
-#### Task 7: Applying tags
+## Task 7: Applying tags
 
 The product team has decided that the current version of the site should be released as v1.1.0-beta.
 

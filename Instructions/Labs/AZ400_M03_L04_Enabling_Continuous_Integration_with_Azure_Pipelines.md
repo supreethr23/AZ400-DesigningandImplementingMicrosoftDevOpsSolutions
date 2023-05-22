@@ -1,5 +1,4 @@
 # Lab 04: Enabling Continuous Integration with Azure Pipelines
-# Student lab manual
 
 ## Lab overview
 
@@ -13,13 +12,15 @@ After you complete this lab, you will be able to:
 -   Track and review a build
 -   Invoke a continuous integration build
 
-## Instructions
+## Architecture Diagram
 
-### Exercise 0: Configure the lab prerequisites
+  ![Architecture Diagram](images/lab4-architecture.png)
+
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
 
-#### Task 1: Configure the team project
+## Task 1: Configure the team project
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Parts Unlimited** template.
 
@@ -46,11 +47,11 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
     ![Azure DevOps Generator website. Clik on "Navigate to Project"](images/m1/navigate_project_v1.png)
 
-### Exercise 1: Introduction to Azure DevOps Build 
+# Exercise 1: Introduction to Azure DevOps Build 
 
 In this exercise, you will create a basic build pipeline from a template, track and review the new build job, and trigger a continuous integration build.
 
-#### Task 1: Creating a basic build pipeline from a template
+## Task 1: Creating a basic build pipeline from a template
 
 In this task, you will create and configure a build pipeline by using a predefined template.
 
@@ -135,7 +136,7 @@ In this task, you will create and configure a build pipeline by using a predefin
 
 ![Azure DevOps](images/mod6_12.png)
 
-#### Task 2: Tracking and reviewing a build
+## Task 2: Tracking and reviewing a build
 
 In this task, you will track and review the new build job.
 
@@ -150,7 +151,7 @@ In this task, you will track and review the new build job.
     > **Note**: The summary view provides overview details about the build, including details about commits, tests, and artifacts.
 
 
-#### Task 3: Invoking a continuous integration build
+## Task 3: Invoking a continuous integration build
 
 In this task, you will trigger a continuous integration build.
 

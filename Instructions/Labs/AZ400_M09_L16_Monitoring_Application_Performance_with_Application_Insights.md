@@ -1,5 +1,5 @@
 # Lab 16: Monitoring Application Performance with Application Insights
-# Student lab manual
+
 
 ## Lab overview
 
@@ -17,9 +17,11 @@ After you complete this lab, you will be able to:
 - Track Azure web app usage by using Application Insights
 - Create Azure web app alerts by using Application Insights
 
-## Instructions
+## Architecture Diagram
 
-#### Set up an Azure DevOps organization. 
+   ![Architecture Diagram](images/lab16-architecture.png)
+
+## Set up an Azure DevOps organization. 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [**Azure Devops**](https://go.microsoft.com/fwlink/?LinkId=307137)
 
@@ -46,11 +48,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/agent2-1.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template and Azure resources, including an Azure web app and an Azure SQL database. 
 
-#### Task 1: Configure the team project
+## Task 1: Configure the team project
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Parts Unlimited** template.
 
@@ -78,7 +80,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
     ![Azure DevOps](images/mod17_img4-1.png)
 
-#### Task 2: Create Azure resources
+## Task 2: Create Azure resources
 
 In this task, you will create an Azure web app and an Azure SQL database by using the cloud shell in Azure portal.
 
@@ -180,11 +182,11 @@ In this task, you will create an Azure web app and an Azure SQL database by usin
      -t SQLAzure --settings "DefaultConnectionString=$CONNSTRING" 
     ```
 
-### Exercise 1: Monitor an Azure App Service web app by using Azure Application Insights
+# Exercise 1: Monitor an Azure App Service web app by using Azure Application Insights
 
 In this exercise, you will deploy a web app to Azure App Service by using Azure DevOps pipelines, generate traffic targeting the web app, and use Application Insights to review the web traffic, investigate application performance, track application usage, and configure alerting.
 
-#### Task 1: Deploy a web app to Azure App Service by using Azure DevOps
+## Task 1: Deploy a web app to Azure App Service by using Azure DevOps
 
 In this task, you will deploying a web app to Azure by using Azure DevOps pipelines.
 
@@ -265,7 +267,7 @@ web site.
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
-#### Task 2: Generate and review application traffic
+## Task 2: Generate and review application traffic
 
 In this task, you will generate traffic targeting the App Service web app you deployed in the previous task and review the data collected by Application Insights resource associated with the web app.
 
@@ -295,7 +297,7 @@ In this task, you will generate traffic targeting the App Service web app you de
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
-#### Task 3: Investigate application performance
+## Task 3: Investigate application performance
 
 In this task, you will use Application Insights to investigate performance of the App Service web app.
 
@@ -368,7 +370,7 @@ In this task, you will use Application Insights to investigate performance of th
 
       > **Note**: This will split the server requests based on pages they reference, represented by different colors in the chart.
 
-#### Task 4: Track application usage
+## Task 4: Track application usage
 
    > **Note**: Application Insights provides a broad set of features to track application usage. 
 
@@ -427,7 +429,7 @@ In this task, you will use Application Insights to investigate performance of th
     > **Note**: A cohort is a set of users, sessions, events, or operations that have something in common. In Application Insights, cohorts are defined by an analytics query. In cases where you have to analyze a specific set of users or events repeatedly, cohorts can give you more flexibility to express exactly the set you're interested in. Cohorts are used in ways similar to filters, but cohort definitions are built from custom analytics queries, so they're much more adaptable and complex. Unlike filters, you can save cohorts so other members of your team can reuse them.
 
 
-#### Task 5: Configure web app alerts
+## Task 5: Configure web app alerts
 
 1. While on the **More \| Gallery** blade, in the vertical menu on the left side, in the **Monitoring** section, click **Alerts**. 
 
@@ -475,13 +477,13 @@ In this task, you will use Application Insights to investigate performance of th
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
-### Exercise 2: Remove the Azure lab resources
+# Exercise 2: Remove the Azure lab resources
 
 In this exercise, you will remove the Azure resources provisione in this lab to eliminate unexpected charges. 
 
  >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
-#### Task 2: Remove the Azure DevOps billing
+## Task 2: Remove the Azure DevOps billing
 
 In this task, you will remove pipeline billing to eliminate unnecessary charges.
 

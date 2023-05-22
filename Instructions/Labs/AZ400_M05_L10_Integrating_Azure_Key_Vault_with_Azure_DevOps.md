@@ -1,5 +1,4 @@
 # Lab 10: Integrating Azure Key Vault with Azure DevOps
-# Student lab manual
 
 ## Lab overview
 
@@ -20,10 +19,11 @@ After you complete this lab, you will be able to:
 -   Create an Azure key vault. 
 -   Track pull requests through the Azure DevOps pipeline.
 
+## Architecture Diagram
 
-## Instructions
+   ![Architecture Diagram](images/lab10-architecture.png)
 
-#### Set up an Azure DevOps organization
+## Set up an Azure DevOps organization
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -37,11 +37,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/m1-2.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
 
-#### Task 1: Create and configure the team project
+## Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -49,7 +49,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Create Project](images/create-project.png)
 
-#### Task 2: Import eShopOnWeb Git Repository
+## Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -64,13 +64,13 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-### Exercise 1: Setup CI pipeline to build eShopOnWeb container
+# Exercise 1: Setup CI pipeline to build eShopOnWeb container
 
 Setup CI YAML pipeline for:
 - Creating an Azure Container Registry to keep the container images
 - Using Docker Compose to build and push **eshoppublicapi** and **eshopwebmvc** container images. Only **eshopwebmvc** container will be deployed.
 
-#### Task 1:  Create a Service Principal
+## Task 1:  Create a Service Principal
 
 In this task, you will create a Service Principal by using the Azure CLI, which will allow Azure DevOps to:
 - Deploy resources on your Azure subscription
@@ -124,7 +124,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
 1. Click on **Verify and Save**.
 
-#### Task 2: Setup and Run CI pipeline
+## Task 2: Setup and Run CI pipeline
 
 In this task, you will import an existing CI YAML pipeline definition, modify and run it. It will create a new Azure Container Registry (ACR) and build/publish the eShopOnWeb container images.
 
@@ -157,7 +157,7 @@ In this task, you will import an existing CI YAML pipeline definition, modify an
     ![ACR password](images/acr-password.png)
 
 
-#### Task 3: Create an Azure Key vault
+## Task 3: Create an Azure Key vault
 
 In this task, you will create an Azure Key vault by using the Azure portal.
 
@@ -198,7 +198,7 @@ For this lab scenario, we will have a Azure Container Instance (ACI) that pull a
     | Value | ACR access password copied in previous task |
 
 
-#### Task 4: Create a Variable Group connected to Azure Key Vault
+## Task 4: Create a Variable Group connected to Azure Key Vault
 
 In this task, you will create a Variable Group in Azure DevOps that will retrieve the ACR password secret from Key Vault using the Service Connection (Service Principal)
 
@@ -220,7 +220,7 @@ In this task, you will create a Variable Group in Azure DevOps that will retriev
 
     ![Variable Group create](images/vg-create.png)
 
-#### Task 5: Setup CD Pipeline to deploy container in Azure Container Instance(ACI)
+## Task 5: Setup CD Pipeline to deploy container in Azure Container Instance(ACI)
 
 In this task, you will import a CD pipeline, customize it and run it for deploying the container image created before in a Azure Container Instance.
 
