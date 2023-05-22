@@ -1,4 +1,4 @@
-# Lab Scenario Preview: AZ-400: Implement security and validate code bases for compliance
+# Lab Scenario Preview: AZ-400: Implement security and validate code bases for compliance - Part B
 
 ## Lab 14: Managing technical debt with SonarCloud and Azure DevOps
 
