@@ -43,9 +43,9 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization. Select your **Organization (1)** and give your project name **eShopOnWeb (2)** and under the **Advanced (3)** section, choose **Scrum (4)** on the **Work Item process** dropdown. Click on **+ Create project (5)**.
+1. On your lab computer, in a browser window open your Azure DevOps organization. Select your **Organization (1)** and give your project name **eShopOnWeb (2)**, select visibilty as **Private(3)** and under the **Advanced (4)** section, choose **Scrum (5)** on the **Work Item process** dropdown. Click on **+ Create project (6)**.
 
-   ![Create Project](images/lab1-image3.png)
+   ![Create Project](images/lab01-image-01.png)
     
 # Exercise 1: Manage Agile project
 

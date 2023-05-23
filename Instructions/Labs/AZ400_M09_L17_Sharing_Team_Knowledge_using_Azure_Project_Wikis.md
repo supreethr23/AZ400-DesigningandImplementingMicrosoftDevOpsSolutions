@@ -29,11 +29,11 @@ After you complete this lab, you will be able to:
 
 3. On the next page accept defaults and click on continue.
 
-    ![](images/AZ400_M09_L17_01.png)
+    ![](images/lab1-image1.png)
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-    ![](images/AZ400_M09_L17_02.png)
+    ![](images/lab1-image2.png)
 
 # Exercise 0: Configure the lab prerequisites
 
@@ -51,7 +51,6 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
     > **Password**: <inject key="AzureAdUserPassword"></inject>
 
 2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb(1)**, select visibilty as **Private(2)** and then click **Create Project(3)**
-
 
     ![](images/AZ400_M09_L17_03.png)
     
@@ -85,12 +84,11 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
     ![](images/AZ400_M09_L17_07.png)
 
-5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb(1)** Repo title on top of the folder structure. Select the **elipsis (3 dots)(2)**.
+5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb(1)** Repo title on top of the folder structure. Select the **elipsis (2)**.
 
     ![](images/AZ400_M09_L17_08.png)
 
-6.  Choose **New(1) / Folder(2)**, and provide **Documents(3)** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME(4)** as New File name. Click to **Create(5)** folder.
-
+6.  Choose **+New(1) / Folder(2)**, and provide **Documents(3)** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME(4)** as New File name. Click to **Create(5)** folder.
 
     ![](images/AZ400_M09_L17_09.png)
 
@@ -98,7 +96,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
     
 7.  The **READ.ME(1)** file will open in the built-in view mode. Since this is stored **'as code'(2)**, you need to **Commit** the changes by clicking the **Commit(3)** button.
 
-        ![](images/AZ400_M09_L17_11.png)
+    ![](images/AZ400_M09_L17_11.png)
 
 8.  In the Azure DevOps vertical menu on the left side, click **Overview(1)**, in the Overview section, select **Wiki(2)**, select **Publish code as wiki(3)**.
     
@@ -153,7 +151,8 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
       #Summary
       Thank you for choosing our online retail store for your shopping needs. We look forward to serving you!
       ```
-        ![](images/AZ400_M09_L17_15.png)
+     
+      ![](images/AZ400_M09_L17_15.png)
       
 12.  This sample text gives you an overview of several of the common MarkDown syntax features, ranging from Title and subtitles (##), bold            (**), italic (*), how to create tables, and more.
 13.  **Refresh** your browser, or select any other DevOps portal option and return to the **Overview(1)** and **Wiki(2)** section. Notice you are now presented with the **EshopOnWeb (Documents)** Wiki, as well as having the **Welcome to our Online Retail Store(3)** as **HomePage** of the Wiki.
@@ -258,7 +257,7 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
 13.  Download any image from Google by searching **brand.png(1)** and select the **image** to download.
     ![](images/AZ400_M09_L17_33.png)
  
-14.  Right click on the image and download to the **Desktop(1)** and type File name as **Brand.png(2)** and **Save(3)** it in your lab VM.
+14.  Right click on the image and save it to the **Desktop(1)** and type File name as **Brand.png(2)** and **Save(3)** it in your lab VM.
     ![](images/AZ400_M09_L17_34.png)
 
 15.  On the **Project Design(1)** editor pane, in the toolbar, click the **paper clip icon(2)** representing the **Insert a file** action, in the **Open** dialog box, navigate to the **Desktop(3)** folder, select the **Brand.png(4)** file you downloaded in the previous exercise, and click **Open(5)**.
@@ -289,7 +288,8 @@ In this task, you will manage the newly created project wiki.
 
 2.  On the **Revisions** pane, click the entry representing the most recent change. 
 
-    ![](images/AZ400_M09_L17_041.png)
+     ![](images/AZ400_M09_L17_41.png)
+     
 3.  On the resulting pane, review the comparison between the previous and the current version of the document, click **Revert**, when prompted for the confirmation, click **Revert** again, and then click **Browse Page**.
     ![](images/AZ400_M09_L17_42.png)
 
