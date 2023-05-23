@@ -1,0 +1,21 @@
+[
+    {
+      "Name": "Module 04: Design and implement a release strategy",
+      "Language": "English",
+      "BaseURL": "https://github.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/tree/stage",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/stage/Instructions/Labs/LabIntro.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://github.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/blob/stage/Instructions/Labs/AZ400_M04_L07_Controlling_Deployments_using_Release_Gates.md",
+          "Order": 2
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/12-22-updates/Instructions/Labs/AZ400_M04_L10_Creating_a_Release_Dashboard.md",
+          "Order": 3
+        }
+      ]
+    }
+  ]
