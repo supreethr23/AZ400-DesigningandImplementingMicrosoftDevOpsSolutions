@@ -85,7 +85,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
     ![](images/AZ400_M09_L17_07.png)
 
-5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb(1)** Repo title on top of the folder structure. Select the **elipsis (3 dots)(2)**.
+5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb(1)** Repo title on top of the folder structure. Select the **elipsis (2)**.
 
     ![](images/AZ400_M09_L17_08.png)
 
@@ -98,7 +98,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
     
 7.  The **READ.ME(1)** file will open in the built-in view mode. Since this is stored **'as code'(2)**, you need to **Commit** the changes by clicking the **Commit(3)** button.
 
-        ![](images/AZ400_M09_L17_11.png)
+     ![](images/AZ400_M09_L17_11.png)
 
 8.  In the Azure DevOps vertical menu on the left side, click **Overview(1)**, in the Overview section, select **Wiki(2)**, select **Publish code as wiki(3)**.
     
