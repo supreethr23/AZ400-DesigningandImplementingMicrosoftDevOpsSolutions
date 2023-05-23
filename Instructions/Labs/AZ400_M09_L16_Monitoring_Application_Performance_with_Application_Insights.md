@@ -23,7 +23,11 @@ After you complete this lab, you will be able to:
 
 ## Set up an Azure DevOps organization. 
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to [**Azure Devops**](https://go.microsoft.com/fwlink/?LinkId=307137)
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
+
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    * Password: <inject key="AzureAdUserPassword"></inject>
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
@@ -251,12 +255,12 @@ In this task, you will deploying a web app to Azure by using Azure DevOps pipeli
 25.  Switch back to the web browser window displaying the Azure DevOps portal, in the vertical navigational pane, select the **Pipelines**, and, in the **Pipelines** section, click the entry representing your most recently run build pipeline.
 26.  If the build has not yet completed, track it through until it does, then, in the vertical navigational pane, in the **Pipelines** section, click **Releases**, on the **PartsUnlimiteE2E** pane, click **Release-1** and follow the release pipeline to its completion.
 27.  Switch to the web browser window displaying the Azure portal and, on the **App Service web app** blade, in the vertical menu bar on the left side, click **Overview**. 
-28.  On the right side, in the **Essentials** section, click the **Default domain** link. This will automatically open another web browser tab displaying the **Parts Unlimited** 
+1.  On the right side, in the **Essentials** section, click the **Default domain** link. This will automatically open another web browser tab displaying the **Parts Unlimited** 
 web site.
 
 > **Note**: Please wait until the the requested URL is visible, it may take around 10 minutes to load the respective webpage.
 
-29.  Verify that the **Parts Unlimited** web site loads as expected. 
+28.  Verify that the **Parts Unlimited** web site loads as expected. 
 
      ![Azure DevOps](images/mod17_img8-1.png)
 
@@ -483,7 +487,7 @@ In this exercise, you will remove the Azure resources provisione in this lab to 
 
  >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
-## Task 2: Remove the Azure DevOps billing
+#### Task 1: Remove the Azure DevOps billing
 
 In this task, you will remove pipeline billing to eliminate unnecessary charges.
 

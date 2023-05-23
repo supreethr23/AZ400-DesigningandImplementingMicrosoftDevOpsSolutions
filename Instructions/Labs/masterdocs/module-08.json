@@ -9,7 +9,7 @@
           "Order": 1
         },
         {
-          "RawFilePath": "https://github.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/blob/stage/Instructions/Labs/AZ400_M08_L15_Package_Management_with_Azure_Artifacts.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/stage/Instructions/Labs/AZ400_M08_L15_Package_Management_with_Azure_Artifacts.md",
           "Order": 2
         }
       ]
