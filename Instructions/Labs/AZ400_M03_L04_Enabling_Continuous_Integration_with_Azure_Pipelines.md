@@ -16,159 +16,335 @@ After you complete this lab, you will be able to:
 
   ![Architecture Diagram](images/lab4-architecture.png)
 
-# Exercise 0: Configure the lab prerequisites
+#### Set up an Azure DevOps organization.
 
-In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
 
-## Task 1: Configure the team project
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
-In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Parts Unlimited** template.
+    * Password: <inject key="AzureAdUserPassword"></inject>
 
-1.  In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. 
+2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
-    > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
+3. On the next page accept defaults and click on continue.
+   
+   ![](images/az400-m3-L4-01.png)
+   
+4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-2.  Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
+   ![](images/az400-m3-L4-02.png)
 
-     ![Azure DevOps Generator website. Clik on "Sign In" option](images/m1/demo_signin_v1.png)
-3.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
-4.  On the **Create New Project** page, in the **New Project Name** textbox, type **Enabling Continuous Integration with Azure Pipelines**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
+### Exercise 0: Configure the lab prerequisites
 
-     ![Azure DevOps](images/mod6-task1image.png)
+In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the **eShopOnWeb**.
+
+#### Task 1: Create and configure the team project
+
+In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
+
+   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name               **eShopOnWeb(1)** and leave the other fields with defaults. Click on **Create project(3)**.
+
+      ![](images/az400-m3-L4-03.png)
+
+**Task 2: (skip if done) Import eShopOnWeb Git Repository**
+
+  In this task you will import the eShopOnWeb Git repository that will be used by several labs.
+  
+   1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created eShopOnWeb project. Click on             **Repos(1)>Files(2) , Import a Repository**. Select **Import(3)**. On the **Import a Git Repository(4)** window, paste the following URL                     https://github.com/MicrosoftLearning/eShopOnWeb.git (5) and click **Import(6)**.
+
+      ![](images/az400-m3-L4-04.png)
+      
+      ![](images/az400-m3-L4-05.png)
+
+   2. The repository is organized the following way:
+
+         o. **.ado** folder contains Azure DevOps YAML pipelines
+         
+         o **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
+         
+         o **.azure** folder contains Bicep & ARM infrastructure as code templates used in some lab scenarios.
+         
+         o **.github** folder contains YAML GitHub workflow definitions.
+         
+         o. **src** folder contains the .NET 6 website used in the lab scenarios.
+         
+       ![](images/az400-m3-L4-06.png)
+         
+ **Exercise 1: Include build validation as part of a Pull Request**
+ 
+ In this exercise, you will include build validation to validate a Pull Request.
+ 
+ **Task 1: Import the YAML build definition**
+ 
+ In this task, you will import the YAML build definition that will be used as a Branch Policy to validate the pull requests.
+ 
+ Let's start by importing the build pipeline named **eshoponweb-ci-pr.yml**.
+ 
+   1. Go to **Pipelines(1)>Pipelines(2)**. Click on **Create Pipeline(3)** or **New Pipeline** button.
+
+      ![](images/az400-m3-L4-07.png)  
+
+   2. Select **Azure Repos Git (YAML)**
+
+      ![](images/az400-m3-L4-08.png)
+
+   3. Select the **eShopOnWeb** repository.
+
+      ![](images/az400-m3-L4-09.png)
+
+   4. Select **Existing Azure Pipelines YAML File**
+
+      ![](images/az400-m3-L4-10.png)
+
+   5. Select the **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**
+
+      ![](images/az400-m3-L4-11.png)
+
+       The build definition consists of the following tasks:
+      
+         o **DotNet Restore:** With NuGet Package Restore you can install all your project's dependency without having to store them in source                   control. 
+        
+         o **DotNet Build:** Builds a project and all of its dependencies.
+        
+         o **DotNet Test:** .Net test driver used to execute unit tests.
+        
+         o **DotNet Publish:** Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's                 **Build.ArtifactStagingDirectory**.
+        
+        ![](images/az400-m3-L4-12.png)
+
+   6. Click the **Save** button to save the pipeline definition
+
+      ![](images/az400-m3-L4-13.png)
      
-5.  In the list of templates, locate the **PartsUnlimited** template and click **Select Template**.
+   7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis(1)** and **Rename/Remove(2)** option.
+   
+      ![](images/az400-m3-L4-14.png)
 
-    ![Azure DevOps Generator website. On the choose template window, select "PartsUnlimited"](images/m1/pu_template_v1.png)
-6.  Back on the **Create New Project** page, click **Create Project**
+   8. Name it **eshoponweb-ci-pr(1)** and click on **Save(2)**.
 
-    > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your DevOps organization, delete the project, and try again.
+      ![](images/az400-m3-L4-15.png)    
 
-7.  On the **Create New Project** page, click **Navigate to project**.
+**Task 2: Branch Policies**
 
-    ![Azure DevOps Generator website. Clik on "Navigate to Project"](images/m1/navigate_project_v1.png)
+In this task, you will add policies to the main branch and only allow changes using Pull Requests that comply with the defined policies. You want to ensure that changes in a branch are reviewed before they are merged.
 
-# Exercise 1: Introduction to Azure DevOps Build 
+   1. Go to **Repos(1)>Branches(2)** section. On the **Mine** tab of the **Branches** pane, hover the mouse pointer over the **main(3)** branch entry to reveal the **ellipsis symbol(4)** on the right side.
 
-In this exercise, you will create a basic build pipeline from a template, track and review the new build job, and trigger a continuous integration build.
+      ![](images/az400-m3-L4-16.png)
 
-## Task 1: Creating a basic build pipeline from a template
+   2. Click the **ellipsis(4)** and, in the pop-up menu, select **Branch Policies(5)**.
 
-In this task, you will create and configure a build pipeline by using a predefined template.
+      ![](images/az400-m3-L4-17.png)
 
-1.  In the web browser displaying your Azure DevOps organization with the **Enabling Continuous Integration with Azure Pipelines** project you generated in the previous exercise, in the vertical navigational pane, select the **Pipelines** section and ensure that the **Pipelines** view is displayed.
+   3. On the main tab of the repository settings, enable the option for **Require minimum number of reviewers(1)**. Add **1(2)** reviewer and check the box **Allow requestors to approve their own changes(3)**(as you are the only user in your project for the lab)
 
-      ![Azure DevOps](images/mod6_1.png)
+      ![](images/az400-m3-L4-18.png)
 
-    > **Note**: Alternatively, you can access the project page directly by navigating to the [https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Enabling%20Continuous%20Integration%20with%20Azure%20Pipelines) URL, where the `<your-Azure-DevOps-account-name>` placeholder, represents your account name. 
+   4. On the **main(1)** tab of the repository settings, in the **Build Validation(2)** section, **click + (Add a new build policy)(3)** and in the Build pipeline list, select **eshoponweb-ci-pr(4)** then click **Save(5)**
 
-2.  On the **Pipelines** pane, hover the mouse pointer over the entry representing the existing **PartsUnlimitedE2E** pipeline to reveal the ellipsis symbol on the right side.
-3.  Click the ellipsis and, in the dropdown menu, click **Edit**.
+      ![](images/az400-m3-L4-19.png)
 
-    ![Azure DevOps](images/mod6_2.png)
+      ![](images/az400-m3-L4-20.png)
 
-   > **Note**: In order to avoid two pipelines being triggered later in the lab, start by disabling the CI trigger for the pipeline created by the template.
+ **Task 3: Working with Pull Requests**
+ 
+ In this task, you will use the Azure DevOps portal to create a Pull Request, using a new branch to merge a change into the protected main branch.
+ 
+ 1. Navigate to the **Repos(1)->Branches(2)** section in the eShopOnWeb navigation and click **New Branch(3)**.
 
-4.  On the **Tasks** tab of the **PartsUnlimitedE2E** pane, click the **Triggers** tab, clear the checkbox **Enable continuous integration**, click **Save & queue** and then click **Save**.
+    ![](images/az400-m3-L4-21.png)
+
+ 2. Create a new branch named **Feature01(1)** based on the **main** branch and click **Create(2)**.
+
+    ![](images/az400-m3-L4-22.png)
+
+3. Click **Feature01(1)** and navigate to the **/eShopOnWeb/src(2)/Web(3)/Program.cs(4)** file as part of the **Feature01** branch and click on **edit(5)** to make the following change on the first line:
+
+   ```
+   // Testing my PR
+   ```
+
+   ![](images/az400-m3-L4-23.png)
+
+   ![](images/az400-m3-L4-24.png)
+   
+ 4. Click on **Commit > Commit** (leave default commit message).
+
+    ![](images/az400-m3-L4-25.png)
+    
+    ![](images/az400-m3-L4-26.png)
+
+5. A message will pop-up, proposing to create a Pull Request (as your **Feature01** branch is now ahead in changes, compared to **main**). Click on **Create a Pull Request(1)**.
+
+    ![](images/az400-m3-L4-27.png)
+
+6. In the **New pull request(1)** tab, leave defaults and click on **Create(2)**.
+   
+   ![](images/az400-m3-L4-28.png)
+   
+7. The Pull Request will show some pending requirements, based on the policies applied to the target **main** branch.
+
+     o **At least 1 user** (1) should review and approve the changes (**Add(2)** required approver and **select(3)** the approver to complete the PR).
+     o Build validation, you will see that the build **eshoponweb-ci-pr** was triggered automatically
+     
+     ![](images/az400-m3-L4-29.png)
+     
+     ![](images/az400-m3-L4-30.png)    
+      
+8. After all validations are successful, on the top-right click on **Approve(1)**. Now from the **Set auto-complete dropdown(2)** you can click on **Complete(3)**.  
+
+   ![](images/az400-m3-L4-31.png)
   
-    ![Azure DevOps](images/mod6_3.png)
+9. On the **Complete Pull Request** tab, click on **Complete Merge**
 
-5.  To create a new pipeline, navigate back to the **Pipelines** view by selecting **Pipelines** in the vertical navigational pane in the Azure DevOps portal.
-6.  Back on the **Pipelines** pane, click **New pipeline** to create a new build pipeline.
+   ![](images/az400-m3-L4-32.png)
 
-   ![Azure DevOps](images/mod6_4.png)
+**Exercise 2: Configure CI Pipeline as Code with YAML**
 
-> **Note**: The default option for build pipelines involves the use of YAML. For this lab, you will use the classic editor. 
+  In this exercise, you will configure CI Pipeline as code with YAML.
 
-7.  On the **Where is your code ?** pane, click the **Use the classic editor** link at the bottom of the page.
+**Task 1: Import the YAML build definition**
 
-   ![Azure DevOps](images/mod6_5.png)
+  In this task, you will add the YAML build definition that will be used to implement the Continuous Integration.
 
- > **Note**: You need to start by configuring the source repository. Every major platform is available, but the default options are all we need here. This build will use the **master** branch of the **PartsUnlimited** repo. 
+  Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
-8.  Ensure that the **Azure Repos Git** option with the **PartsUnlimited** repository and **master** branch entries are selected, and click **Continue**.
+  1. Go to **Pipelines>Pipelines(1)** and click on **New Pipeline(2)** button
 
-  ![Azure DevOps](images/mod6_6.png)
-9.  On the **Choose a template** pane, in the **Search** text box, type **ASP.NET**, in the list of results, select the **ASP.NET** template and click **Apply** to apply this template to the build definition. 
+     ![](images/az400-m3-L4-33.png)
 
-  ![Azure DevOps](images/mod6_7.png)
+  2. Select **Azure Repos Git (YAML)**
 
-  > **Note**: Note that there are many options that should cover all of our mainstream scenarios. For our purposes here, we'll just build the project using the baseline ASP.NET template. The process for this build pipeline is easy to follow. After getting the source, Azure DevOps will use NuGet to restore any dependent packages. Then, the project will be built and tested. The results will then be published to the configured target.
+      ![](images/az400-m3-L4-34.png)
 
-10. On the **Tasks** tab, Click on **Pipelines** task , and select the Agent pool  **az400m05l05a-pool** from the drop down list.
+  3. Select the **eShopOnWeb** repository
 
-   ![Azure DevOps](images/az400-4-5.png)
+     ![](images/az400-m3-L4-35.png)
 
-10. On the **Tasks** tab, look for **test Assemblies** task , right-click and **disable selected task(s)**.
+  4. Select **Existing Azure Pipelines YAML File**
 
-   ![Azure DevOps](images/mod6-7.1.png)
+     ![](images/az400-m3-L4-36.png)
+
+  5. Select the **/.ado/eshoponweb-ci.yml(1)** file then click on **Continue(2)**
+
+     ![](images/az400-m3-L4-37.png)
+
+     The CI definition consists of the following tasks:
+     
+   o **DotNet Restore:** With NuGet Package Restore you can install all your project's dependency without having to store them in source control.
+       
+   o **DotNet Build:** Builds a project and all of its dependencies.
+       
+   o **DotNet Test:** .Net test driver used to execute unit tests.
+       
+   o **DotNet Publish:** Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's             **Build.ArtifactStagingDirectory**.
+       
+   o **Publish Artifact - Website:** Publish the app artifact (created in the previous step) and make it available as a pipeline artifact.
+       
+   o **Publish Artifact - Bicep:** Publish the infrastructure artifact (Bicep file) and make it available as a pipeline artifact.
+       
+              
+   **Task 2: Enable Continuous Integration**
+   
+   The default build pipeline definition doesn't enable Continuous Integration
+   
+   1. Now, you need to replace the **trigger: none** code with the following code:
+   
+      ```
+        trigger:
+        branches:
+          include:
+          - main
+        paths:
+          include:
+          - src/web/*
+      ``` 
+   
+      ![](images/az400-m3-L4-38.png)
+   
+      ![](images/az400-m3-L4-39.png)
+
+      This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
+    
+  2. Click the **Dropdown** and **Save(2)** button (not **Save and run**) to save the pipeline definition.
+
+     ![](images/az400-m3-L4-40.png)
   
-   ![Azure DevOps](images/mod6-7.2.png)
+  3. Select **Create a new branch for this commit(1)** Keep the default branch name and **Start a pull request(2)** checked. and Click on **Save(3)**
 
-11.  Select the **Variables** tab and review its content.
+     ![](images/az400-m3-L4-41.png)
 
-   ![Azure DevOps](images/mod6_8.png)
+  4. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to                          **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis(1)** and **Rename/Remove** option. Name it            **eshoponweb-ci(2)**   and click on **Save(3)**.
 
-   > **Note**: Here you can configure special parameters to be used during the build, such as the configuration or platform.
+     ![](images/az400-m3-L4-42.png)
 
-12.  Select the **Triggers** tab and check the **Enable continuous integration** checkbox. 
+  5. Go to **Repos(1)>Pullrequests(2)** and click on the existing pull request. After all validations are successful, on the top-right click on        **Approve(3)**. Now you can click on **Complete(4)**.
 
-   ![Azure DevOps](images/mod6_9.png)
+     ![](images/az400-m3-L4-43.png)
 
-  > **Note**: This automatically invokes the build whenever source changes are committed. Triggers allow you to automatically invoke builds on a schedule, when another build completes, or when changes are made to the source.
+  6. On the **Complete Pull Request** tab, Click on **Complete Merge**
 
-13.  Select the **Options** tab and review its content.
+     ![](images/az400-m3-L4-44.png)
 
-  ![Azure DevOps](images/mod6_10.png)
+ **Task 3: Test the CI pipeline**
+ 
+ In this task, you will create a Pull Request, using a new branch to merge a change into the protected main branch and automatically trigger the CI pipeline Navigate to the Repos section
+ 
+ 1. Navigate to the **Repos(1)->Branches(2)** section. Create a **new branch(3)** named **Feature02(4)** based on the **main** branch and Click on **Create(5)**
 
- > **Note**: This section includes a wide variety of options related to the build workflow. Note that you'll generally configure options for specific build tasks on the configuration views of the tasks themselves.
+    ![](images/az400-m3-L4-45.png)
+    
+    ![](images/az400-m3-L4-46.png)
 
-14.  Select the **History** tab. 
+ 2. Click the new **Feature02(1)** branch and navigate to the **/eShopOnWeb/src(2)/Web(3)/Program.cs(4)** file and click on **Edit(5)** to remove the first line and click on commit.
 
-![Azure DevOps](images/mod6_11.png)
+    ```
+     // Testing my PR (6)
+    ```
+   
+    ![](images/az400-m3-L4-47.png)
+   
+    ![](images/az400-m3-L4-48.png)
 
-   > **Note**: At this point, the tab does not contain any entries, but it will show a history of changes you make to the build definition.
+ 3. Click on **Commit > Commit** (leave default commit message).
+   
+    ![](images/az400-m3-L4-49.png)
 
-15.  Select the **Save & Queue** tab header and, in the dropdown menu, select **Save & Queue** entry to save and queue a new build.
+ 4. A message will pop-up, proposing to create a Pull Request (as your **Feature02** branch is now ahead in changes, compared to main).
 
-  > **Note**: You can define the retention time for pipeline artifacts from **Project Settings** > **Settings** > **Retention policy**. These settings enable you to configure which pipeline runs are retained and for how long. 
+ 5. Click on **Create a Pull Request**
 
-16.  In the **Run pipeline** pane, accept the default options and click **Save and run**. This will automatically display the **Summary** tab of the pipeline run job, with the **Queued** status.
+     ![](images/az400-m3-L4-50.png)
 
-![Azure DevOps](images/mod6_12.png)
+ 6. In the **New pull request(1)** tab, leave defaults and click on **Create(3)** The Pull Request will show some pending requirements, based         on the policies applied to the target **main(2)** branch.
 
-## Task 2: Tracking and reviewing a build
+     ![](images/az400-m3-L4-51.png)
 
-In this task, you will track and review the new build job.
+ 7. After all validations are successful, on the top-right click on **Approve(1)**. Now from the **Set auto-complete** dropdown you can click       on **Complete(2)**
 
-> **Note**: Once the build begins, you'll be able to track the console output per task. 
+     ![](images/az400-m3-L4-52.png)
 
-1.  On the **Summary** tab of the pipeline run job, in the **Jobs** section, click **Agent job 1**. This will display the details pane of the job.
+ 8. On the **Complete Pull Request** tab, Click on **Complete Merge**
 
-    > **Note**: If you want to review an earlier task, you can scroll the right pane to review its logs.
+     ![](images/az400-m3-L4-53.png)
 
-2.  Once the build completes successfully, on the job details pane, click the left-facing arrow to return to the summary view. 
+ 9. Go back to **Pipelines>Pipelines,** you will notice that the build **eshoponweb-ci** was triggered automatically after the code was            merged.
 
-    > **Note**: The summary view provides overview details about the build, including details about commits, tests, and artifacts.
+    ![](images/az400-m3-L4-54.png)
+ 
+ 10. Click on the **eshoponweb-ci** build then select the last run.
 
+       ![](images/az400-m3-L4-55.png)
 
-## Task 3: Invoking a continuous integration build
-
-In this task, you will trigger a continuous integration build.
-
-   > **Note**: In the first task of this exercise, you configured the build to support continuous integration. In this task, you will test its functionality.
-
-1.  In the web browser window displaying your project settings in the Azure DevOps portal, in the vertical navigational pane, select the **Repos** section and ensure that the **Files** view is displayed.
-2.  In the middle pane, navigate to the file **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Home/Index.cshtml** and select it. 
-3.  On the **Index.cshtml** pane, click **Edit**.
-4.  On the **Index.cshtml** pane, make a minor update by changing the line `ViewBag.Title = "Home Page";` to `ViewBag.Title = "Lab Project Home Page";` and click **Commit**.
-5.  On the **Commit** pane, accept the default commit details and click **Commit**.
-
-    > **Note**: This will automatically trigger a build. 
-
-6.  In the vertical navigational pane, select the **Pipelines** section and ensure that the **Pipelines** view is displayed.
-7.  On the **Pipelines** pane, verify that it contains the entry representing a new build, which was triggered by your change. 
-8.  Click the build entry to display its details and verify that it completed successfully. 
-
-#### Review
-
-In this lab, you used the Azure DevOps portal to create a basic build pipeline from a template, to track and review a build, and to invoke a continuous integration build.
+ 11. After its successful execution, click on **Related(1) > Published(2)** to check the published artifacts:
+           
+     ![](images/az400-m3-L4-56.png)  
+     
+     o Bicep: the infrastructure artifact  
+     o Website: the app artifact
+     
+     ![](images/az400-m3-L4-57.png)
+          
+  **Review**
+  
+  In this lab, you enabled pull request validation using a build definition and configured CI pipeline as code with YAML in Azure DevOps. 
