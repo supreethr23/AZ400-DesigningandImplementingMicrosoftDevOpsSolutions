@@ -151,7 +151,8 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
       #Summary
       Thank you for choosing our online retail store for your shopping needs. We look forward to serving you!
       ```
-        ![](images/AZ400_M09_L17_15.png)
+     
+      ![](images/AZ400_M09_L17_15.png)
       
 12.  This sample text gives you an overview of several of the common MarkDown syntax features, ranging from Title and subtitles (##), bold            (**), italic (*), how to create tables, and more.
 13.  **Refresh** your browser, or select any other DevOps portal option and return to the **Overview(1)** and **Wiki(2)** section. Notice you are now presented with the **EshopOnWeb (Documents)** Wiki, as well as having the **Welcome to our Online Retail Store(3)** as **HomePage** of the Wiki.
