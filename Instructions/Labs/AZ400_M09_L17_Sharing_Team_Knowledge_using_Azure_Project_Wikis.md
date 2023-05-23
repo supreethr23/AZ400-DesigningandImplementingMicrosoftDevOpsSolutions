@@ -29,11 +29,11 @@ After you complete this lab, you will be able to:
 
 3. On the next page accept defaults and click on continue.
 
-    ![](images/AZ400_M09_L17_01.png)
+    ![](images/lab1-image1.png)
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-    ![](images/AZ400_M09_L17_02.png)
+    ![](images/lab1-image2.png)
 
 # Exercise 0: Configure the lab prerequisites
 
