@@ -1,5 +1,5 @@
 # Lab 14: Managing technical debt with SonarCloud and Azure DevOps
-# Student lab manual
+
 
 ## Lab overview
 
@@ -25,25 +25,27 @@ After you complete this lab, you will be able to:
 - Analyze SonarCloud reports
 - Integrate static analysis into the Azure DevOps pull request process
 
-## Instructions
+## Architecture Diagram
 
-### Before you start
+   ![Architecture Diagram](images/lab14-architecture.png)
 
-#### Review applications required for this lab
+# Before you start
+
+## Review applications required for this lab
 
 Identify the applications that you'll use in this lab:
     
 -   Microsoft Edge
 
-#### Set up an Azure DevOps organization. 
+## Set up an Azure DevOps organization. 
 
 If you don't already have an Azure DevOps organization that you can use for this lab, create one by following the instructions available at [Create an organization or project collection](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/create-organization?view=azure-devops).
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
 
-#### Task 1: Create and Configure the team project
+## Task 1: Create and Configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -92,7 +94,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
   
     ![Azure DevOps](images/az400-17-1.png)
 
-#### Task 2: (skip if done) Import eShopOnWeb Git Repository
+## Task 2: (skip if done) Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -107,9 +109,9 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-### Exercise 1: Configure Sonarcloud Setup
+# Exercise 1: Configure Sonarcloud Setup
 
-#### Task 1: Change your Azure DevOps Project to Public
+## Task 1: Change your Azure DevOps Project to Public
 
 In this task you will change the visibility of your Azure DevOps project to public, as Sonarcloud is free for public ADO projects.
 
@@ -117,7 +119,7 @@ In this task you will change the visibility of your Azure DevOps project to publ
 
 ![Change ADO project to Public](images/az400-17-3.png)
 
-#### Task 2: Generate an Azure DevOps personal access token
+## Task 2: Generate an Azure DevOps personal access token
 
 In this task, you will generate an Azure DevOps personal access token that will be used to authenticate from the Postman app you will install in the next task of this exercise.
 
@@ -144,7 +146,7 @@ In this task, you will generate an Azure DevOps personal access token that will 
 
 1. On the **Success** pane, click **Close**.
 
-#### Task 3: Install and configure the SonarCloud Azure DevOps extension
+## Task 3: Install and configure the SonarCloud Azure DevOps extension
 
 In this task, you will install and configure the SonarCloud Azure DevOps extension in your Azure DevOps project.
 
@@ -216,7 +218,7 @@ In this task, you will install and configure the SonarCloud Azure DevOps extensi
 
     ![Rename pipeline](images/az400-17-12.png)
 
-#### Task 3: Check pipeline results
+## Task 3: Check pipeline results
 
 In this task, you will check pipeline results.
 
@@ -247,11 +249,11 @@ In this task, you will check pipeline results.
 
     ![Quality Gate passed](images/az400-17-14.png)
 
-### Exercise 2: Analyze SonarCloud reports
+# Exercise 2: Analyze SonarCloud reports
 
 In this exercise, you will analyze SonarCloud reports.
 
-#### Task 1: Analyze SonarCloud reports
+## Task 1: Analyze SonarCloud reports
 
 In this task, you will analyze SonarCloud reports.
 
@@ -279,7 +281,7 @@ In this task, you will analyze SonarCloud reports.
 
     > **Note**: Our sample project is very small and has no historical data. However, there are thousands of [public projects on SonarCloud](https://sonarcloud.io/explore/projects) that have more interesting and realistic results.
 
-### Exercise 3: Implement Azure DevOps pull request integration with SonarCloud
+# Exercise 3: Implement Azure DevOps pull request integration with SonarCloud
 
 In this exercise, you will set up pull request integration between Azure DevOps and SonarCloud.
 
@@ -288,7 +290,7 @@ In this exercise, you will set up pull request integration between Azure DevOps 
 - Add an Azure DevOps personal access token to a SonarCloud project, which authorizes its access to pull requests (already created in this lab).
 - Configure an Azure DevOps branch policy that controls a pull request-triggered build
 
-#### Task 1: Configure pull request integration in SonarCloud
+## Task 1: Configure pull request integration in SonarCloud
 
 In this task, you will configure pull request integration in SonarCloud by assigning an Azure DevOps personal access token to your SonarCloud project.
 
@@ -304,7 +306,7 @@ In this task, you will configure pull request integration in SonarCloud by assig
 
     ![Sonarcloud PR settings](images/az400-17-17.png)
 
-#### Task 2: Configure a branch policy for integration with SonarCloud
+## Task 2: Configure a branch policy for integration with SonarCloud
 
 In this task, you will configure an Azure DevOps branch policy for integration with SonarCloud.
 
@@ -322,7 +324,7 @@ In this task, you will configure an Azure DevOps branch policy for integration w
 
     > **Note**: Azure DevOps is now configured to trigger a SonarCloud analysis when any pull request targeting the **main** branch is created.
 
-#### Task 3: Validate pull request integration
+## Task 3: Validate pull request integration
 
 In this task, you will validate pull request integration between Azure DevOps and SonarCloud by creating a pull request and reviewing the resulting outcome.
 
@@ -358,7 +360,7 @@ In this task, you will validate pull request integration between Azure DevOps an
     ![Sonarcloud decorator](images/az400-17-23.png)
 
 
-#### Task 4: Block pull requests in response to failing Code Quality checks
+## Task 4: Block pull requests in response to failing Code Quality checks
 
 In this task, you will configure blocking of pull requests in response to failing Code Quality checks.
 

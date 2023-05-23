@@ -1,5 +1,5 @@
 # Lab 15: Package Management with Azure Artifacts
-# Student lab manual
+
 
 ## Lab overview
 
@@ -15,10 +15,16 @@ After you complete this lab, you will be able to:
 -  Update a NuGet package.
 
 
-## Instructions
+## Architecture Diagram
 
-#### Set up an Azure DevOps organization
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137, and if prompted sign with the credentials provided in environment details tab.
+  ![Architecture Diagram](images/lab15-architecture.png)
+
+## Set up an Azure DevOps organization
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
+
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    * Password: <inject key="AzureAdUserPassword"></inject>
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
@@ -26,12 +32,11 @@ After you complete this lab, you will be able to:
 
     ![](images/AZ400_M08_L15_01.png)
     
-
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
     ![](images/AZ400_M08_L15_02.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include the preconfigured EShopOnWeb team project based on an Azure DevOps Organization and a Visual Studio configuration.
 
@@ -91,7 +96,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     ![](images/AZ400_M08_L15_11.png)
 
-### Exercise 1: Working with Azure Artifacts
+# Exercise 1: Working with Azure Artifacts
 
 In this exercise, you will learn how to work with Azure Artifacts by using the following steps:
 
@@ -106,7 +111,7 @@ In this task, you will create and connect to a feed.
 
 1.  In the web browser window displaying your project settings in the Azure DevOps portal, in the vertical navigational pane, select **Artifacts**.
     
- ![](images/AZ400_M08_L15_12.png)
+    ![](images/AZ400_M08_L15_12.png)
 
 2.  With the **Artifacts** hub displayed, click **+ Create feed** at the top of the pane. 
 
@@ -142,6 +147,7 @@ In this task, you will create and connect to a feed.
      > **Note**: Visual Studio is now connected to the new feed.
 
 11.  Close and reopen the other Visual Studio instance you used for cloning the EShopOnWeb repository, to account for the artifact source update and open the **EShopOnWebShared** solution. You will need it in the third task of this exercise.
+
 
 #### Task 2: Create and publish a NuGet package
 
@@ -260,7 +266,6 @@ In this task, you will create and publish a NuGet package.
 24.  Click the NuGet package to display its details.
     ![](images/AZ400_M08_L15_38.png)
 
-
 #### Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
 
 Besides developing your own packages, why not using the Open Source Nuget (https://www.nuget.org) DotNet Package library? With a few million packages available, there will always be something useful for your application.
@@ -296,7 +301,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     
     ![](images/AZ400_M08_L15_42.png)
 
-When you created the Azure DevOps Artifacts Package Feed, by design, it allows for **upstream sources**, such as nuget.org in the dotnet example. However, nothing blocks your DevOps team to create an **"internal-only"** Package Feed.
+    When you created the Azure DevOps Artifacts Package Feed, by design, it allows for **upstream sources**, such as nuget.org in the dotnet example. However, nothing blocks your DevOps team to create an **"internal-only"** Package Feed.
     
 2.  Navigate to the Azure DevOps Portal, browse to **Artifacts**, and select the **EShopOnWebShared** Feed.
 3.  Click **Search Upstream Sources(2)**

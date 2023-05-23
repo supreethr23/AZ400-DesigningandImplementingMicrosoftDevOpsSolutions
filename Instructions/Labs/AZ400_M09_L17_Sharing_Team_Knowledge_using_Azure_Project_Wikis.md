@@ -1,7 +1,5 @@
 # Lab 17: Sharing Team Knowledge using Azure Project Wikis
 
-# Student lab manual
-
 ## Lab overview
 
 In this lab, you will create and configure wiki in an Azure DevOps, including managing markdown content and creating a Mermaid diagram.
@@ -14,15 +12,18 @@ After you complete this lab, you will be able to:
 - Add and edit markdown
 - Create a Mermaid diagram
 
-## Lab duration
+## Architecture Diagram
+ 
+  ![Architecture Diagram](images/lab17-architecture.png)
 
--   Estimated time: **45 minutes**
 
-## Instructions
+## Set up an Azure DevOps organization. 
 
-#### Set up an Azure DevOps organization. 
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    * Password: <inject key="AzureAdUserPassword"></inject>
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
@@ -34,12 +35,12 @@ After you complete this lab, you will be able to:
 
     ![](images/AZ400_M09_L17_02.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of the preconfigured **EShopOnWeb** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
 
-#### Task 1: Configure the EShopOnWeb project
 
+#### Task 1: Configure the EShopOnWeb project
 
 In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
 
@@ -51,14 +52,16 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
 
 2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb(1)**, select visibilty as **Private(2)** and then click **Create Project(3)**
 
+
     ![](images/AZ400_M09_L17_03.png)
+    
 ### Exercise 1: Publish code as wiki
 
 In this exercise, you will step through publishing an Azure DevOps repository as wiki and managing the published wiki.
 
 > **Note**: Content that you maintain in a Git repository can be published to an Azure DevOps wiki. For example, content written to support a software development kit, product documentation, or README files can be published directly to a wiki. You have the option of publishing multiple wikis within the same Azure DevOps team project.
 
-#### Task 1: Publish a branch of an Azure DevOps repo as wiki
+## Task 1: Publish a branch of an Azure DevOps repo as wiki
 
 In this task, you will create Azure Repository and publish a branch of an Azure DevOps repo as wiki.
 
@@ -88,9 +91,11 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
 6.  Choose **New(1) / Folder(2)**, and provide **Documents(3)** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME(4)** as New File name. Click to **Create(5)** folder.
 
+
     ![](images/AZ400_M09_L17_09.png)
 
     ![](images/AZ400_M09_L17_10.png)
+    
 7.  The **READ.ME(1)** file will open in the built-in view mode. Since this is stored **'as code'(2)**, you need to **Commit** the changes by clicking the **Commit(3)** button.
 
         ![](images/AZ400_M09_L17_11.png)
@@ -166,13 +171,13 @@ In this task, you will manage content of the wiki you published in the previous 
    > **Note**: Since the Wiki source files are handled as source code, remember all practices from traditional source control (Clone, Pull Requests, Approvals and more), can now also be applied to Wiki pages.
 
 
-### Exercise 2: Create and manage a project wiki
+# Exercise 2: Create and manage a project wiki
 
 In this exercise, you will step through creating and managing a project wiki.
 
 > **Note**: You can create and manage wiki independently of the existing repos. 
 
-#### Task 1: Create a project wiki including a Mermaid diagram and an image
+## Task 1: Create a project wiki including a Mermaid diagram and an image
 
 In this task, you will create a project wiki and add to it a Mermaid diagram and an image.
 
@@ -272,7 +277,7 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
     ![](images/AZ400_M09_L17_39.png)
 
 
-#### Task 2: Manage a project wiki
+## Task 2: Manage a project wiki
 
 In this task, you will manage the newly created project wiki.
 

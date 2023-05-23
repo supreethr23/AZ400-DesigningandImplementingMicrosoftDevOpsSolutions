@@ -1,5 +1,4 @@
 # Lab 11: Enable Dynamic Configuration and Feature Flags
-# Student lab manual
 
 ## Lab requirements
 
@@ -22,13 +21,18 @@ After you complete this lab, you will be able to:
 - Enable dynamic configuration
 - Manage feature flags
 
-## Estimated timing: 60 minutes
+## Architecture Diagram
 
-## Instructions
+  ![Architecture Diagram](images/lab11-architecture.png)
+
 
 #### Set up an Azure DevOps organization.
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
+
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    * Password: <inject key="AzureAdUserPassword"></inject>
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
@@ -37,8 +41,6 @@ After you complete this lab, you will be able to:
    ![](images/1.Organization-1.png)
    
 4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-   ![](images/Organization-2.png)
 
 ### Exercise 0: Configure the lab prerequisites
 
@@ -82,7 +84,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
       
       ![](images/7.maindefaultbranch.png)
       
-  ### Exercise 1: Import and run CI/CD Pipelines
+### Exercise 1: Import and run CI/CD Pipelines
 
 In this exercise, you will import and run the CI pipeline, configure the service connection with your Azure Subscription and then import and run the CD pipeline.
 
@@ -262,14 +264,14 @@ o Deploy the eShopOnWeb application
      
      ![](images/38.rename-2.png) 
 
-### Exercise 2: Manage Azure App Configuration
+# Exercise 2: Manage Azure App Configuration
 
 In this exercise, you will create the App Configuration resource in Azure, enable the managed identity and then test the full solution.
 
 >Note: This exercise doesn't require any coding skills. The website's code implements already Azure App Configuration functionalities.
 If you want to know how to implement this in your application, please take a look at these tutorials: [Use dynamic configuration in an ASP.NET Core app](https://learn.microsoft.com/azure/azure-app-configuration/enable-dynamic-configuration-aspnet-core) and [Manage feature flags in Azure App Configuration](https://learn.microsoft.com/azure/azure-app-configuration/manage-feature-flags).
 
-#### Task 1: Create the App Configuration resource
+## Task 1: Create the App Configuration resource
 
 1. In the Azure Portal, search for the **App Configuration** service
 
@@ -294,7 +296,7 @@ If you want to know how to implement this in your application, please take a loo
 
    ![](images/43.endpointurl.png)
 
-#### Task 2: Enable Managed Identity
+## Task 2: Enable Managed Identity
 
 1. Go to the **Web App(1)** deployed using the pipeline (it should be named **az400-webapp-NAME**).
 
@@ -322,7 +324,7 @@ If you want to know how to implement this in your application, please take a loo
 
    ![](images/50.roleassignment-4.png)
 
-#### Task 3: Configure the Web App
+## Task 3: Configure the Web App
 
 In order to make sure that your website is accessing App Configuration, you need to update its configuration.
 1. Go back to your Web App.
@@ -355,7 +357,7 @@ In order to make sure that your website is accessing App Configuration, you need
    
 6. At this step, you will see no changes in the website since the App Configuration doesn't contain any data. This is what you will do in the next tasks.
 
-#### Task 4: Test the Configuration Management
+## Task 4: Test the Configuration Management
 
 1. In your website, select **Visual Studio(2)** in the **Brand(1)** drop-down list and click on the arrow button (**>(3)**).
 
@@ -381,7 +383,7 @@ The goal of this Lab is to be able to update that value without updating the web
    
 Congratulations! In this task, you tested the **Configuration explorer** in Azure App Configuration.
 
-#### Task 5: Test the Feature Flag
+## Task 5: Test the Feature Flag
 
 Let's continue to test the Feature manager.
 1. In order to try this, go back to **App Configuration(1)**. In the **Operations(2)** section, select **Feature manager(3)**.

@@ -1,5 +1,4 @@
 # Lab 04: Enabling Continuous Integration with Azure Pipelines
-# Student lab manual
 
 ## Lab overview
 
@@ -13,11 +12,17 @@ After you complete this lab, you will be able to:
 -   Track and review a build
 -   Invoke a continuous integration build
 
-## Instructions
+## Architecture Diagram
+
+  ![Architecture Diagram](images/lab4-architecture.png)
 
 #### Set up an Azure DevOps organization.
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
+
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    * Password: <inject key="AzureAdUserPassword"></inject>
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
@@ -28,7 +33,6 @@ After you complete this lab, you will be able to:
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
    ![](images/az400-m3-L4-02.png)
-
 
 ### Exercise 0: Configure the lab prerequisites
 
@@ -170,7 +174,7 @@ In this task, you will add policies to the main branch and only allow changes us
     
     ![](images/az400-m3-L4-26.png)
 
- 5. A message will pop-up, proposing to create a Pull Request (as your **Feature01** branch is now ahead in changes, compared to **main**). Click on **Create a Pull Request(1)**.
+5. A message will pop-up, proposing to create a Pull Request (as your **Feature01** branch is now ahead in changes, compared to **main**). Click on **Create a Pull Request(1)**.
 
     ![](images/az400-m3-L4-27.png)
 
@@ -282,7 +286,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/az400-m3-L4-44.png)
 
-   **Task 3: Test the CI pipeline**
+ **Task 3: Test the CI pipeline**
  
  In this task, you will create a Pull Request, using a new branch to merge a change into the protected main branch and automatically trigger the CI pipeline Navigate to the Repos section
  
@@ -331,7 +335,6 @@ In this task, you will add policies to the main branch and only allow changes us
  10. Click on the **eshoponweb-ci** build then select the last run.
 
        ![](images/az400-m3-L4-55.png)
-
 
  11. After its successful execution, click on **Related(1) > Published(2)** to check the published artifacts:
            
