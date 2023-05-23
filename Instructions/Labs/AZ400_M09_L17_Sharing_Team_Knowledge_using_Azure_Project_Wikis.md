@@ -52,7 +52,6 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
 
 2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb(1)**, select visibilty as **Private(2)** and then click **Create Project(3)**
 
-
     ![](images/AZ400_M09_L17_03.png)
     
 ### Exercise 1: Publish code as wiki
