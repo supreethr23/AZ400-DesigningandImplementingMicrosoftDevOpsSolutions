@@ -40,7 +40,7 @@ After you complete this lab, you will be able to:
 In this exercise, you will set up the prerequisites for the lab, which consist of the preconfigured **EShopOnWeb** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
 
 
-#### Task 1: Configure the EShopOnWeb project
+## Task 1: Configure the EShopOnWeb project
 
 In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
 
@@ -54,7 +54,7 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
 
     ![](images/AZ400_M09_L17_03.png)
     
-### Exercise 1: Publish code as wiki
+# Exercise 1: Publish code as wiki
 
 In this exercise, you will step through publishing an Azure DevOps repository as wiki and managing the published wiki.
 
@@ -158,7 +158,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 13.  **Refresh** your browser, or select any other DevOps portal option and return to the **Overview(1)** and **Wiki(2)** section. Notice you are now presented with the **EshopOnWeb (Documents)** Wiki, as well as having the **Welcome to our Online Retail Store(3)** as **HomePage** of the Wiki.
     ![](images/AZ400_M09_L17_16.png)
 
-#### Task 2: Manage content of a published wiki
+## Task 2: Manage content of a published wiki
 In this task, you will manage content of the wiki you published in the previous task.
 
 1. In the vertical menu on the left side, click **Repos(1)**, ensure that the dropdown menu in the upper section of the **Files(2)** pane displays the **EShopOnWeb(3)** repo and **main(4)** branch, in the repo folder hierarchy, select the **Documents(5)** folder, and select the **Welcome-to-our-Online-Retail-Store!.md(6)** file.
