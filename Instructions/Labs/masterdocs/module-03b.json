@@ -8,7 +8,7 @@
           "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/stage/Instructions/Labs/LabIntro.md",
           "Order": 1
         },
-          {
+        {
           "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/stage/Instructions/Labs/AZ400_M03_L05_Implementing_GitHub_Actions_for_CI_CD.md",
           "Order": 2
         },
