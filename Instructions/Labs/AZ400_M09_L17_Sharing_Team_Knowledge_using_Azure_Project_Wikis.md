@@ -258,7 +258,7 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
 13.  Download any image from Google by searching **brand.png(1)** and select the **image** to download.
     ![](images/AZ400_M09_L17_33.png)
  
-14.  Right click on the image and download to the **Desktop(1)** and type File name as **Brand.png(2)** and **Save(3)** it in your lab VM.
+14.  Right click on the image and save it to the **Desktop(1)** and type File name as **Brand.png(2)** and **Save(3)** it in your lab VM.
     ![](images/AZ400_M09_L17_34.png)
 
 15.  On the **Project Design(1)** editor pane, in the toolbar, click the **paper clip icon(2)** representing the **Insert a file** action, in the **Open** dialog box, navigate to the **Desktop(3)** folder, select the **Brand.png(4)** file you downloaded in the previous exercise, and click **Open(5)**.
