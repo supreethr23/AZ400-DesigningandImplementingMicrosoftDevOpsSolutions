@@ -289,7 +289,8 @@ In this task, you will manage the newly created project wiki.
 
 2.  On the **Revisions** pane, click the entry representing the most recent change. 
 
-    ![](images/AZ400_M09_L17_041.png)
+     ![](images/AZ400_M09_L17_41.png)
+     
 3.  On the resulting pane, review the comparison between the previous and the current version of the document, click **Revert**, when prompted for the confirmation, click **Revert** again, and then click **Browse Page**.
     ![](images/AZ400_M09_L17_42.png)
 
