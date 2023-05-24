@@ -94,7 +94,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
      ![](images/AZ400_M09_L17_10.png)
     
-7.  The **READ.ME (1)** file will open in the built-in view mode. Since this is stored **'as code'(2)**, you need to **Commit** the changes by clicking the **Commit (3)** button.
+7.  The **READ.ME (1)** file will open in the built-in view mode. Since this is stored **'as code' (2)**, you need to **Commit** the changes by clicking the **Commit (3)** button.
 
      ![](images/AZ400_M09_L17_11.png)
 
