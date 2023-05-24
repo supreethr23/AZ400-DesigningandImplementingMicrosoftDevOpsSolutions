@@ -277,8 +277,6 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
 
 18.  In the **Save page** dialog box, type **User Interface section with the Brand image** and click **Save**.
     
-      ![](images/AZ400_M09_L17_38.png)
-
 19.  Back on the editor pane, in the upper right corner, click **Close**. 
      
       ![](images/AZ400_M09_L17_39.png)
