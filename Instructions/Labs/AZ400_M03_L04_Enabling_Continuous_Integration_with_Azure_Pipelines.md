@@ -145,7 +145,8 @@ In this task, you will add policies to the main branch and only allow changes us
       ![](images/az400-m3-L4-19.png)
 
       ![](images/AZ-400-build.png)
-    > Note : If you get any error while saving the branch validation refresh the page and try again.
+      
+      >**Note**: If you get any error while saving the branch validation refresh the page and try again.
 
  ## Task 3: Working with Pull Requests
  
