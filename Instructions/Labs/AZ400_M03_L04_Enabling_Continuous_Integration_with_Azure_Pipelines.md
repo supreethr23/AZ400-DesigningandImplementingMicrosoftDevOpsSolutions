@@ -16,7 +16,7 @@ After you complete this lab, you will be able to:
 
   ![Architecture Diagram](images/lab4-architecture.png)
 
-#### Set up an Azure DevOps organization.
+# Set up an Azure DevOps organization.
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
 
@@ -34,11 +34,11 @@ After you complete this lab, you will be able to:
 
    ![](images/az400-m3-L4-02.png)
 
-### Exercise 0: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the **eShopOnWeb**.
 
-#### Task 1: Create and configure the team project
+## Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -46,15 +46,15 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
       ![](images/az400-m3-L4-03.png)
 
-**Task 2: (skip if done) Import eShopOnWeb Git Repository**
+## Task 2: (skip if done) Import eShopOnWeb Git Repository
 
   In this task you will import the eShopOnWeb Git repository that will be used by several labs.
   
    1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created eShopOnWeb project. Click on             **Repos(1)>Files(2) , Import a Repository**. Select **Import(3)**. On the **Import a Git Repository(4)** window, paste the following URL                     https://github.com/MicrosoftLearning/eShopOnWeb.git (5) and click **Import(6)**.
 
-      ![](images/az400-m3-L4-04.png)
+      ![](images/AZ-400-import.png)
       
-      ![](images/az400-m3-L4-05.png)
+      ![](images/AZ-400-git.png)
 
    2. The repository is organized the following way:
 
@@ -70,11 +70,11 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
          
        ![](images/az400-m3-L4-06.png)
          
- **Exercise 1: Include build validation as part of a Pull Request**
+ # Exercise 1: Include build validation as part of a Pull Request
  
  In this exercise, you will include build validation to validate a Pull Request.
  
- **Task 1: Import the YAML build definition**
+ ## Task 1: Import the YAML build definition
  
  In this task, you will import the YAML build definition that will be used as a Branch Policy to validate the pull requests.
  
@@ -86,7 +86,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
    2. Select **Azure Repos Git (YAML)**
 
-      ![](images/az400-m3-L4-08.png)
+      ![](images/AZ-400-code.png)
 
    3. Select the **eShopOnWeb** repository.
 
@@ -98,7 +98,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
    5. Select the **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**
 
-      ![](images/az400-m3-L4-11.png)
+      ![](images/AZ-400-yaml.1.png)
 
        The build definition consists of the following tasks:
       
@@ -110,21 +110,21 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
         
          o **DotNet Publish:** Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's                 **Build.ArtifactStagingDirectory**.
         
-        ![](images/az400-m3-L4-12.png)
+        ![](images/AZ-400-pipeline.png)
 
    6. Click the **Save** button to save the pipeline definition
 
       ![](images/az400-m3-L4-13.png)
      
-   7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis(1)** and **Rename/Remove(2)** option.
+   7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis(1)** and **Rename/move(2)** option.
    
-      ![](images/az400-m3-L4-14.png)
+      ![](images/AZ-400-eshop.png)
 
    8. Name it **eshoponweb-ci-pr(1)** and click on **Save(2)**.
 
-      ![](images/az400-m3-L4-15.png)    
+      ![](images/AZ-400-rename.png)    
 
-**Task 2: Branch Policies**
+## Task 2: Branch Policies
 
 In this task, you will add policies to the main branch and only allow changes using Pull Requests that comply with the defined policies. You want to ensure that changes in a branch are reviewed before they are merged.
 
@@ -144,9 +144,10 @@ In this task, you will add policies to the main branch and only allow changes us
 
       ![](images/az400-m3-L4-19.png)
 
-      ![](images/az400-m3-L4-20.png)
+      ![](images/AZ-400-build.png)
+    > Note : If you get any error while saving the branch validation refresh the page and try again.
 
- **Task 3: Working with Pull Requests**
+ ## Task 3: Working with Pull Requests
  
  In this task, you will use the Azure DevOps portal to create a Pull Request, using a new branch to merge a change into the protected main branch.
  
@@ -172,7 +173,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
     ![](images/az400-m3-L4-25.png)
     
-    ![](images/az400-m3-L4-26.png)
+    ![](images/AZ-400-commit.png)
 
 5. A message will pop-up, proposing to create a Pull Request (as your **Feature01** branch is now ahead in changes, compared to **main**). Click on **Create a Pull Request(1)**.
 
@@ -180,7 +181,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
 6. In the **New pull request(1)** tab, leave defaults and click on **Create(2)**.
    
-   ![](images/az400-m3-L4-28.png)
+   ![](images/AZ-400-newpr.png)
    
 7. The Pull Request will show some pending requirements, based on the policies applied to the target **main** branch.
 
@@ -199,11 +200,11 @@ In this task, you will add policies to the main branch and only allow changes us
 
    ![](images/az400-m3-L4-32.png)
 
-**Exercise 2: Configure CI Pipeline as Code with YAML**
+# Exercise 2: Configure CI Pipeline as Code with YAML
 
   In this exercise, you will configure CI Pipeline as code with YAML.
 
-**Task 1: Import the YAML build definition**
+## Task 1: Import the YAML build definition
 
   In this task, you will add the YAML build definition that will be used to implement the Continuous Integration.
 
@@ -215,7 +216,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
   2. Select **Azure Repos Git (YAML)**
 
-      ![](images/az400-m3-L4-34.png)
+      ![](images/AZ-400-repo.png)
 
   3. Select the **eShopOnWeb** repository
 
@@ -244,7 +245,7 @@ In this task, you will add policies to the main branch and only allow changes us
    o **Publish Artifact - Bicep:** Publish the infrastructure artifact (Bicep file) and make it available as a pipeline artifact.
        
               
-   **Task 2: Enable Continuous Integration**
+   ## Task 2: Enable Continuous Integration
    
    The default build pipeline definition doesn't enable Continuous Integration
    
@@ -272,7 +273,7 @@ In this task, you will add policies to the main branch and only allow changes us
   
   3. Select **Create a new branch for this commit(1)** Keep the default branch name and **Start a pull request(2)** checked. and Click on **Save(3)**
 
-     ![](images/az400-m3-L4-41.png)
+     ![](images/AZ-400-save.png)
 
   4. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to                          **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis(1)** and **Rename/Remove** option. Name it            **eshoponweb-ci(2)**   and click on **Save(3)**.
 
@@ -286,7 +287,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/az400-m3-L4-44.png)
 
- **Task 3: Test the CI pipeline**
+ ## Task 3: Test the CI pipeline
  
  In this task, you will create a Pull Request, using a new branch to merge a change into the protected main branch and automatically trigger the CI pipeline Navigate to the Repos section
  
@@ -318,7 +319,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
  6. In the **New pull request(1)** tab, leave defaults and click on **Create(3)** The Pull Request will show some pending requirements, based         on the policies applied to the target **main(2)** branch.
 
-     ![](images/az400-m3-L4-51.png)
+     ![](images/AZ-400-pull.png)
 
  7. After all validations are successful, on the top-right click on **Approve(1)**. Now from the **Set auto-complete** dropdown you can click       on **Complete(2)**
 
