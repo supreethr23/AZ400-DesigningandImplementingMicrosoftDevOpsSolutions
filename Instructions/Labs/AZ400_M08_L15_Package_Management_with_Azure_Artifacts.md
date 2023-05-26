@@ -227,6 +227,7 @@ In this task, you will create and publish a NuGet package.
      > **Note**: Disregard any warnings displayed in the **Administrator: Windows PowerShell** window.
 
      > **Note**: NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
+        
         ![](images/AZ400_M08_L15_32.png)
 
     
