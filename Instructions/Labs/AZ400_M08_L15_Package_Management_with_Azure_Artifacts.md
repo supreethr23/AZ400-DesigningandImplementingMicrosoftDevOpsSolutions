@@ -117,11 +117,11 @@ In this task, you will create and connect to a feed.
     
     ![](images/AZ400_M08_L15_12.png)
 
-2.  With the **Artifacts** hub displayed, click **+ Create feed** at the top of the pane. 
+2.  With the **Artifacts** hub displayed, selct organization **odluser-<inject key="DeploymentID" enableCopy="false"/>** and click **+ Create feed** at the top of the pane. 
 
     > **Note**: This feed will be a collection of NuGet packages available to users within the organization and will sit alongside the public NuGet feed as a peer. The scenario in this lab will focus on the workflow for using Azure Artifacts, so the actual architectural and development decisions are purely illustrative.  This feed will include common functionality that can be shared across projects in this organization. 
     
-    ![](images/AZ400_M08_L15_13.png)
+    ![](images/AZ400_M08_L15_(13).png)
 
 3.  On the **Create new feed** pane, in the **Name** textbox, type **EShopOnWebShared(1)**, in the **Scope** section, select the **Organization(2)** option, leave other settings with their default values, and click **Create(3)**. 
 
