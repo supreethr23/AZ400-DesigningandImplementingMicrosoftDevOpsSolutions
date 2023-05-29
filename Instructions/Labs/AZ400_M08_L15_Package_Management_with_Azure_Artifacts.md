@@ -224,9 +224,11 @@ In this task, you will create and publish a NuGet package.
 
      > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
 
-17.   - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
+17.   Before running powershell command in step no-18, please perform below steps:
+      - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
       - On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok**.
-      - Repeat same above step for **Systems variables** and click on **ok** for all wizards.
+      - Repeat same above step for **Systems variables** click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
+     
 18.  Run following command:
 
      ```
