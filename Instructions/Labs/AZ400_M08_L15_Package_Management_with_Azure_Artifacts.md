@@ -50,7 +50,7 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb(1)**, select visibilty as **Private(2)** and then click **Create Project(3)**
+2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb(1)**, select visibilty as **Private(2)** and then click **+ Create Project(3)**
 
     ![](images/AZ400_M08_L15_03.png)
 
