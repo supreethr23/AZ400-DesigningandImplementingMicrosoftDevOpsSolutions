@@ -129,9 +129,9 @@ In this task, you will create and connect to a feed.
     
     ![](images/AZ400_M08_L15_14.png)
     
-4.  Back on the **Artifacts** hub, click **Connect to feed**.
+4.  Back on the **Artifacts** hub, select **odluser-<inject key="DeploymentID" enableCopy="false"/>** Organization, click **Connect to feed**.
     
-    !![](images/AZ400_M08_L15_15.png)
+    !![](images/AZ400_M08_L15_(15).png)
 
 5.  On the **Connect to feed** pane, in the **NuGet** section, select **Visual Studio(1)** and, on the **Visual Studio** pane, copy the **Source(2)** url.
     
