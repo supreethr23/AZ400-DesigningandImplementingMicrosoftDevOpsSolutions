@@ -94,7 +94,9 @@ In this task, you will configure Visual Studio to prepare for the lab.
     
 8.  On **Personalize your Visul Studio experience** page click **Start Visual Studio**.
 
-8.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
+     ![](images/az400-vs.png)
+     
+9.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
 
     ![](images/AZ400_M08_L15_11.png)
 
