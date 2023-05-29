@@ -80,9 +80,9 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     ![](images/AZ400_M08_L15_08.png)
 
-6.  If prompted whether to proceed, click **Open Microsoft Visual Studio Web Protocol Handler Selector**.
+6.  If prompted whether to proceed, click on **Open**.
 
-    ![](images/AZ400_M08_L15_09.png)
+    ![](images/AZ400_M08_L15_(09).png)
 
 7.  If prompted, sign in with the user account you used to set up your Azure DevOps organization. Username and password can be obtained from the environmental details page.
 
