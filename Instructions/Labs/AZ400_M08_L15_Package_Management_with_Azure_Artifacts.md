@@ -309,7 +309,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
 1.  From the PowerShell window, execute the following command:
 
      ```
-    .\nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO c:\EShopOnWeb\EShopOnWeb.Shared\HelloWorld\HelloWorld.nupkg
+    .\nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO c:\Users\azureuser\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\HelloWorld\HelloWorld.nupkg
     ```
     
     > **Note**:  This results in an error message: Response status code does not indicate success: 409 (Conflict - 'HelloWorld 1.3.0.17' cannot be published to the   feed because it exists in at least one of the feed's upstream sources. Publishing this copy would prevent you from using 'HelloWorld 1.3.0.17' from 'NuGet Gallery'. For more information, see https://go.microsoft.com/fwlink/?linkid=864880 (DevOps Activity ID: AE08BE89-C2FA-4FF7-89B7-90805C88972C)).
