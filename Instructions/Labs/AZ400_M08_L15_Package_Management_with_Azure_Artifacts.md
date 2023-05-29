@@ -348,7 +348,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
 10.  With these saved changed, it will be possible to upload the **HelloWorld** package using the Nuget.exe from the PowerShell Window, by relaunching the following command:
      
      ```
-     .\nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO c:\Users\azureuser\source\repos\EShopOnWeb\EShopOnWeb.Shared\HelloWorld\HelloWorld.nupkg
+     .\nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO c:\Users\azureuser\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\HelloWorld\HelloWorld.nupkg
      ```
      > **Note**:  This should now result in a successful upload
     
