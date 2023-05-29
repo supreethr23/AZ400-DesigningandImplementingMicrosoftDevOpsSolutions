@@ -84,7 +84,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     ![](images/AZ400_M08_L15_(09).png)
 
-7.  If prompted, sign in with the user account you used to set up your Azure DevOps organization. Username and password can be obtained from the environmental details page.
+7.  If prompted, sign in with the user account you used to set up your Azure DevOps organization. Enter following Username and password.
 
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
@@ -247,7 +247,7 @@ In this task, you will create and publish a NuGet package.
     
     ![](images/AZ400_M08_L15_35.png)
 
-20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to signin window login with the credentials provided in the environment details tab.
+20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to signin window login with the following credentials.
     
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
