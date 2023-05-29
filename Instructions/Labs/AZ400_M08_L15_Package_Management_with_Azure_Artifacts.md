@@ -80,7 +80,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     ![](images/AZ400_M08_L15_08.png)
 
-6.  If prompted whether to proceed, click on **Open**.
+6.  If **This site is trying to open Microsoft visua---ndler Selector** prompted , click on **Open**.
 
     ![](images/AZ400_M08_L15_(09).png)
 
