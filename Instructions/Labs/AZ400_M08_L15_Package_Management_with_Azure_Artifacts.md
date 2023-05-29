@@ -224,6 +224,15 @@ In this task, you will create and publish a NuGet package.
 
      > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
 
+17.   - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
+      - On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok**.
+      - Repeat same above step for **Systems variables** and click on **ok** for all wizards.
+18.  Run following command:
+
+     ```
+      cd c:\Users\azureuser\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared
+     ```
+
      ```
       ./nuget.exe pack ./EShopOnWeb.Shared.csproj
      ```
@@ -233,7 +242,6 @@ In this task, you will create and publish a NuGet package.
      > **Note**: NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
         
         ![](images/AZ400_M08_L15_32.png)
-
     
 17. If you prompted with the **Error NU5133: NuGet.exe file on path C:\Users\xxxxx\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\nuget.exe needs to be unblocked after downloading** then we need to unblock the **nuget.exe(1)** file which we downloaded to the **EShareOnWeb.Shared** folder by selecting **Properties(2)**.
 
