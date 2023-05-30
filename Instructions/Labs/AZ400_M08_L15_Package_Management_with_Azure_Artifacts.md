@@ -193,7 +193,7 @@ In this task, you will create and publish a NuGet package.
     
     ![](images/AZ400_M08_L15_20.png)
 
-3.  On the **Class Library** page of the **Create a new project** pane, specify the following settings and click **Next (5)**:
+3.  On the **Class Library** page of the **Configure your new project** pane, specify the following settings and click **Next (5)**:
 
     | Setting | Value |
     | --- | --- |
