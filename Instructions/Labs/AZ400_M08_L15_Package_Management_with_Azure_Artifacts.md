@@ -114,12 +114,12 @@ In this task, you will configure Visual Studio to prepare for the lab.
           
        ![](images/az-400-image5.png)
              
-     - On **clone Repository** page under Browse a Respository select **Azure Devops** and Connect to a Project select **EShopOnWeb** repo and **Clone**.
+     - On **Clone Repository** page under Browse a Respository select **Azure Devops** and Connect to a Project select **EShopOnWeb** repo and **Clone**.
            
         ![](images/az-400-image6.png)
         ![](images/az-400-image7.png)
          
-     - If prompted, sign in with the user account you used to set up your Azure DevOps organization. Enter following Username and password.
+     - If prompted, sign in with the following Username and password.
 
           > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
