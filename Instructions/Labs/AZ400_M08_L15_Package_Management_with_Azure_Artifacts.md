@@ -233,7 +233,7 @@ In this task, you will create and publish a NuGet package.
     
 11.  On the **Get the tools** pane, click the **Download the latest NuGet** link. This will automatically open another browser tab displaying the **Available NuGet Distribution Versions** page.   
 
-12.  On the **Available NuGet Distribution Versions** page, select nuget.exe version **v5.5.1** and download the executable to the local **Downloads** folder.
+12.  On the **Available NuGet Distribution Versions** page, select nuget.exe - recommended latest **v6.5.0** and download the executable to the local **Downloads** folder.
     ![](images/AZ400_M08_L15_28.png)
 
 
