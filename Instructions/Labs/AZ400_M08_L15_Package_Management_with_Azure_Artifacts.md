@@ -36,11 +36,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/lab1-image2.png)
 
-## Exercise 1: Configure the lab prerequisites
+# Exercise 1: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include the preconfigured EShopOnWeb team project based on an Azure DevOps Organization and a Visual Studio configuration.
 
-### Task 1: Configure the EShopOnWeb project
+## Task 1: Configure the EShopOnWeb project
 
 In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
 
@@ -54,7 +54,7 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
 
     ![](images/AZ400_M08_L15_03.png)
 
-### Task 2: Configuring the EShopOnWeb solution in Visual Studio
+## Task 2: Configuring the EShopOnWeb solution in Visual Studio
 
 In this task, you will configure Visual Studio to prepare for the lab.
 
@@ -125,7 +125,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
     
           > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-## Exercise 2: Working with Azure Artifacts
+# Exercise 2: Working with Azure Artifacts
 
 In this exercise, you will learn how to work with Azure Artifacts by using the following steps:
 
@@ -134,7 +134,7 @@ In this exercise, you will learn how to work with Azure Artifacts by using the f
 - import a NuGet package.
 - update a NuGet package.
 
-### Task 1: Create and connect to a feed
+## Task 1: Create and connect to a feed
 
 In this task, you will create and connect to a feed.
 
@@ -179,7 +179,7 @@ In this task, you will create and connect to a feed.
       ![](images/az-400-image8.png)
 
 
-### Task 2: Create and publish a NuGet package
+## Task 2: Create and publish a NuGet package
 
 In this task, you will create and publish a NuGet package.
 
@@ -319,7 +319,7 @@ In this task, you will create and publish a NuGet package.
 
       ![](images/AZ400_M08_L15_(38).png)
 
-### Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
+## Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
 
 Besides developing your own packages, why not using the Open Source Nuget (https://www.nuget.org) DotNet Package library? With a few million packages available, there will always be something useful for your application.
     
@@ -340,7 +340,7 @@ In this task, we will use a generic "Hello World" sample package, but you can us
     
     ![](images/AZ400_M08_L15_41.png)
 
-### Task 4: Upload the Open-Source NuGet package to Azure Artifacts
+## Task 4: Upload the Open-Source NuGet package to Azure Artifacts
 
 Let's consider this package an "approved" package for our DevOps team to reuse, by uploading it to the Azure Artifacts Package feed created earlier.
 
@@ -418,7 +418,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-### Review
+## Review
 
 In this lab, you learned how to work with Azure Artifacts by using the following steps:
 
