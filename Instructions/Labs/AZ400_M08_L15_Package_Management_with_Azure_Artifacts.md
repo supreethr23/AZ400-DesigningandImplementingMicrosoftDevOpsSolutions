@@ -153,6 +153,8 @@ In this task, you will create and connect to a feed.
 
 11.  Close and reopen the other Visual Studio instance you used for cloning the EShopOnWeb repository, to account for the artifact source update and open the **EShopOnWebShared** solution. You will need it in the third task of this exercise.
 
+      ![](images/az-400-image8.png)
+
 
 ### Task 2: Create and publish a NuGet package
 
