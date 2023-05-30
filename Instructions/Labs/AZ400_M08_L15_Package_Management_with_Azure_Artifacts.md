@@ -117,11 +117,11 @@ In this task, you will create and connect to a feed.
     
     ![](images/AZ400_M08_L15_12.png)
 
-2.  With the **Artifacts** hub displayed, selct organization **odluser-<inject key="DeploymentID" enableCopy="false"/>** and click **+ Create feed** at the top of the pane. 
+2.  With the **Artifacts** hub displayed, selct organization **odluser-<inject key="DeploymentID" enableCopy="false"/>** **(1) and click **+ Create feed (2)** at the top of the pane. 
 
     > **Note**: This feed will be a collection of NuGet packages available to users within the organization and will sit alongside the public NuGet feed as a peer. The scenario in this lab will focus on the workflow for using Azure Artifacts, so the actual architectural and development decisions are purely illustrative.  This feed will include common functionality that can be shared across projects in this organization. 
     
-    ![](images/AZ400_M08_L15_(13).png)
+    ![](images/AZ400_M08_L15_013.png)
 
 3.  On the **Create new feed** pane, in the **Name** textbox, type **EShopOnWebShared(1)**, in the **Scope** section, select the **Organization(2)** option, leave other settings with their default values, and click **Create(3)**. 
 
@@ -129,9 +129,9 @@ In this task, you will create and connect to a feed.
     
     ![](images/AZ400_M08_L15_14.png)
     
-4.  Back on the **Artifacts** hub, select **odluser-<inject key="DeploymentID" enableCopy="false"/>** Organization, click **Connect to feed**.
+4.  Back on the **Artifacts** hub, select **odluser-<inject key="DeploymentID" enableCopy="false"/>** **(1)** Organization, click **Connect to feed (2)**.
     
-    !![](images/AZ400_M08_L15_(15).png)
+    !![](images/AZ400_M08_L15_015.png)
 
 5.  On the **Connect to feed** pane, in the **NuGet** section, select **Visual Studio(1)** and, on the **Visual Studio** pane, copy the **Source(2)** url.
     
@@ -226,7 +226,15 @@ In this task, you will create and publish a NuGet package.
 
 17.   Before running powershell command in step no-18, please perform below steps:
       - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
+      
+         ![](images/az-400-image2.png)
+         
       - On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok**.
+      
+         ![](images/az-400-image1.png)
+         
+         ![](images/AZ400_M08_L15_EV.png)
+         
       - Repeat same above step for **Systems variables** click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
      
 18.  Run following command:
@@ -243,7 +251,7 @@ In this task, you will create and publish a NuGet package.
 
      > **Note**: NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
         
-        ![](images/AZ400_M08_L15_32.png)
+        ![](images/AZ400_M08_L15_(32).png)
     
 17. If you prompted with the **Error NU5133: NuGet.exe file on path C:\Users\xxxxx\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\nuget.exe needs to be unblocked after downloading** then we need to unblock the **nuget.exe(1)** file which we downloaded to the **EShareOnWeb.Shared** folder by selecting **Properties(2)**.
 
