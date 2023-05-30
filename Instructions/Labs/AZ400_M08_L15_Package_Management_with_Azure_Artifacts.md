@@ -44,13 +44,13 @@ In this exercise, you will set up the prerequisites for the lab, which include t
 
 In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
 
-1.  Click **Sign in** and sign in with the credentials provided in environment details tab.
+1.  Click **Sign in** and sign in with the following credentials.
     
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibilty as **Private (2)** and then click **+ Create Project(3)**
+2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibilty as **Private (2)**, and then click **+ Create Project(3)**
 
     ![](images/AZ400_M08_L15_03.png)
 
