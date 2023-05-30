@@ -127,7 +127,7 @@ In this task, you will create and connect to a feed.
 
     > **Note**: Any user who wants to connect to this NuGet feed must configure their environment. 
     
-    ![](images/AZ400_M08_L15_14.png)
+    ![](images/AZ400_M08_L15_(14).png)
     
 4.  Back on the **Artifacts** hub, select **odluser-<inject key="DeploymentID" enableCopy="false"/>** **(1)** Organization, click **Connect to feed (2)**.
     
@@ -135,7 +135,7 @@ In this task, you will create and connect to a feed.
 
 5.  On the **Connect to feed** pane, in the **NuGet** section, select **Visual Studio(1)** and, on the **Visual Studio** pane, copy the **Source(2)** url.
     
-    ![](images/AZ400_M08_L15_16.png)
+    ![](images/AZ400_M08_L15_(16).png)
 
 6.  Switch back to the **Visual Studio** window and wait for the installation to be get completed. 
 7.  In the Visual Studio window, click **Tools(1)** menu header, in the dropdown menu, select **NuGet Package Manager(2)** and, in the cascading menu, select **Package Manager Settings(3)**.
@@ -145,7 +145,7 @@ In this task, you will create and connect to a feed.
 8.  In the **Options** dialog box, click **Package Sources** and click the plus sign to add a new package source.
 9.  At the bottom of the dialog box, in the **Name** textbox, replace **Package Sources(1)** with **EShopOnWebShared(2)** and, in the **Source** textbox, paste the **Source URL(3)** you copied in the Azure DevOps portal. 
     
-    ![](images/AZ400_M08_L15_18.png)
+    ![](images/AZ400_M08_L15_(18).png)
     
 10.  Click **Update(4)** and then click **OK(5)** to finalize the addition.    
      > **Note**: Visual Studio is now connected to the new feed.
@@ -203,7 +203,7 @@ In this task, you will create and publish a NuGet package.
 8.  Switch to the web browser displaying the Azure DevOps portal. 
 9.  Navigate to the **Connect to feed** pane, in the **NuGet** section and select **NuGet.exe**. This will display the **NuGet.exe** pane.
 10.  On the **NuGet.exe(2)** pane, click **Get the tools(3)**.
-    ![](images/AZ400_M08_L15_27.png)
+    ![](images/AZ400_M08_L15_(27).png)
     
 11.  On the **Get the tools** pane, click the **Download the latest NuGet** link. This will automatically open another browser tab displaying the **Available NuGet Distribution Versions** page.   
 
@@ -284,10 +284,10 @@ In this task, you will create and publish a NuGet package.
 23.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWeb(2)** entry.
 
      > **Note**: The **EShopOnWebShared** feed should include the newly published NuGet package. 
-    ![](images/AZ400_M08_L15_37.png)
+    ![](images/AZ400_M08_L15_(37)png)
     
 24.  Click the NuGet package to display its details.
-    ![](images/AZ400_M08_L15_38.png)
+    ![](images/AZ400_M08_L15_(38).png)
 
 #### Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
 
@@ -329,7 +329,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
 2.  Navigate to the Azure DevOps Portal, browse to **Artifacts**, and select the **EShopOnWebShared** Feed.
 3.  Click **Search Upstream Sources(2)**
 
-    ![](images/AZ400_M08_L15_43.png)
+    ![](images/AZ400_M08_L15_(43).png)
 
 4.  In the **Go to an Upstream Package** window, select **Nuget(1)** as Package Type, and enter **HelloWorld(2)** in the search field.
     
@@ -343,7 +343,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
 7.  Click the **left arrow key** to return to the **EShopOnWebShared** Feed.
 8.  Click the cogwheel to open **Feed Settings(1)**. Within the Feed Settings page, select **Upstream Sources(2)**.
     
-    ![](images/AZ400_M08_L15_46.png)
+    ![](images/AZ400_M08_L15_(46).png)
 
     ![](images/AZ400_M08_L15_47.png)
 
