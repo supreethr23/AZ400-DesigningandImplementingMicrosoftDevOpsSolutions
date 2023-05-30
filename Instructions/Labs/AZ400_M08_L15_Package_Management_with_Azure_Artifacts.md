@@ -68,17 +68,17 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     ![](images/AZ400_M08_L15_05.png)
 
-3.  When we click on the **Files(2)** pane, we can see that **EShopOnWeb is empty. Add some code!**. So click **Initialize(3)** to initialize the repository for the first time.
+3. When we click on the **Files(2)** pane, we can see that **EShopOnWeb is empty. Add some code!**. So click **Initialize(3)** to initialize the repository for the first time.
 
-    <img width="615" alt="image" src="https://github.com/prathimavalasapally/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/assets/127385764/7472e4bb-247b-404d-ab3d-1282d7c0fc16">
+    ![](images/az-400-image3.png)
 
 4. In the **EShopOnWeb** repo Click on **Clone**.
 
-    ![](images/AZ400_M08_L15_07.png)
+    ![](images/AZ400_M08_L15_(07).png)
 
 5. Select the drop-down arrow next to **Clone in VS Code(1)**, and, in the dropdown menu, select **Visual Studio(2)**.
 
-    ![](images/AZ400_M08_L15_08.png)
+    ![](images/AZ400_M08_L15_(08).png)
 
 6.  If **This site is trying to open Microsoft visua---ndler Selector** prompted , click on **Open**.
 
