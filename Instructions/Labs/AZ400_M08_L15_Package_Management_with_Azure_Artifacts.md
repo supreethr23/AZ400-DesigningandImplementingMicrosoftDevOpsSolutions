@@ -189,7 +189,7 @@ In this task, you will create and publish a NuGet package.
     
     ![](images/AZ400_M08_L15_19.png)
 
-2.  On the **Recent project templates** page of the **Create a new project** pane, use the search textbox to locate the **Class Library (1)** template, and select the template for **C# (2)**, and click **Next (3)**. 
+2.  On the **Recent project templates** page of the **Create a new project** pane, use the search textbox to locate the **Class Library (1)** template, select the template for **C# (2)**, and click **Next (3)**. 
     
     ![](images/AZ400_M08_L15_20.png)
 
