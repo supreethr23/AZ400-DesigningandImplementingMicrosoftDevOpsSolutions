@@ -62,7 +62,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     > **Note**: You can access the project page directly by navigating to the [https://dev.azure.com/<inject key="DeploymentID" enableCopy="false"/>/EShopOnWeb]URL.
 
-    ![](images/AZ400_M08_L15_04.png)
+    ![](images/AZ400_M08_L15_(04).png)
 
 2.  In the vertical menu on the left side of the **EShopOnWeb** pane, click **Repos**.
 
@@ -96,11 +96,38 @@ In this task, you will configure Visual Studio to prepare for the lab.
     
 9.  On **Personalize your Visul Studio experience** page click **Start Visual Studio**.
 
-     ![](images/az400-vs.png)
+     ![](images/az400-vs.png)            
      
 10.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
 
+
+      ![](images/AZ400_M08_L15_11.png)
+    
+    >**Note**: If **Visual Studio** take more than 5- minutes to get launch follow the below steps:
+   
+     - Close the **Visual studio** by navigating to **Task Manager** and on task manager select **Microsoft Visual studio 2022**, click **End task** and reopen **Visual studio**  from start menu.
+
+       ![](images/az-400-image(4).png)
+       
+    - If prompted click **Contiune without code** on **Visual studio 2022** page
+    
+    - Within the Visual Studio interface click **Git** tool and slect **Clone Repository**
+          
+       ![](images/az-400-image5.png)
+             
+     - On **clone Repository** page under Browse a Respository select **Azure Devops** and Connect to a Project select **EShopOnWeb** repo and **Clone**.
+           
+        ![](images/az-400-image6.png)
+        ![](images/az-400-image7.png)
+         
+      - If prompted, sign in with the user account you used to set up your Azure DevOps organization. Enter following Username and password.
+
+          > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+    
+          > **Password**: <inject key="AzureAdUserPassword"></inject>
+
      ![](images/AZ400_M08_L15_11.png)
+
 
 ## Exercise 2: Working with Azure Artifacts
 
