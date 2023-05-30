@@ -345,12 +345,12 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     
     ![](images/AZ400_M08_L15_(46).png)
 
-    ![](images/AZ400_M08_L15_47.png)
+    ![](images/AZ400_M08_L15_(47).png)
 
 
 9.  Notice the different Upstream Package Managers for different development languages. Select **Nuget.org(3)** from the list. Press the **Delete(5)** button, Followed by pressing the **Save(6)** button.    
  
-    ![](images/AZ400_M08_L15_48.png)
+    ![](images/AZ400_M08_L15_(48).png)
 
     
 10.  With these saved changed, it will be possible to upload the **HelloWorld** package using the Nuget.exe from the PowerShell Window, by relaunching the following command:
@@ -369,7 +369,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
         PS C:\eShopOnWeb\EShopOnWeb.Shared> 
         ```
 11.  From the Azure DevOps Portal, **refresh** the Artifacts Package Feed page. The list of packages shows both the **EShopOnWeb.Shared** custom-developed package, as well as the **HelloWorld** public sourced package.
-    ![](images/AZ400_M08_L15_49.png)
+    ![](images/AZ400_M08_L15_(49).png)
 
 
 12.  From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared(1)** Project, and select **Manage Nuget Packages(2)** from the context menu.
