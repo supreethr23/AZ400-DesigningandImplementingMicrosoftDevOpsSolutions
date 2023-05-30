@@ -20,7 +20,7 @@ After you complete this lab, you will be able to:
   ![Architecture Diagram](images/lab15-architecture.png)
 
 ## Set up an Azure DevOps organization
-1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign in with the credentials.
 
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
@@ -50,7 +50,7 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibilty as **Private (2)**, and then click **+ Create Project(3)**
+2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibility as **Private (2)**, and then click **+ Create Project(3)**
 
     ![](images/AZ400_M08_L15_03.png)
 
