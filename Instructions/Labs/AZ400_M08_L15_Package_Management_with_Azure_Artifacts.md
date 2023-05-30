@@ -84,23 +84,26 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     ![](images/AZ400_M08_L15_(09).png)
 
-7.  If prompted, sign in with the user account you used to set up your Azure DevOps organization. Enter following Username and password.
+7.  On **Sign in to Visual Studio** page click **Sign in**.
 
+    ![](images/AZ400_M08_L15_10.png)
+    
+8.  If prompted, sign in with following Username and password.
+  
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
     
-    ![](images/AZ400_M08_L15_10.png)
-    
-8.  On **Personalize your Visul Studio experience** page click **Start Visual Studio**.
+9.  On **Personalize your Visul Studio experience** page click **Start Visual Studio**.
 
      ![](images/az400-vs.png)            
      
-9.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
+10.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
 
-    ![](images/AZ400_M08_L15_11.png)
+
+      ![](images/AZ400_M08_L15_11.png)
     
-    >**Note**: If **Visual Studio** take more than 5 minutes to get launch follow the below steps:
+    >**Note**: If **Visual Studio** take more than 5- minutes to get launch follow the below steps:
    
      - Close the **Visual studio** by navigating to **Task Manager** and on task manager select **Microsoft Visual studio 2022**, click **End task** and reopen **Visual studio**  from start menu.
 
@@ -122,6 +125,9 @@ In this task, you will configure Visual Studio to prepare for the lab.
           > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
           > **Password**: <inject key="AzureAdUserPassword"></inject>
+
+     ![](images/AZ400_M08_L15_11.png)
+
 
 ## Exercise 2: Working with Azure Artifacts
 
@@ -173,6 +179,8 @@ In this task, you will create and connect to a feed.
      > **Note**: Visual Studio is now connected to the new feed.
 
 11.  Close and reopen the other Visual Studio instance you used for cloning the EShopOnWeb repository, to account for the artifact source update and open the **EShopOnWebShared** solution. You will need it in the third task of this exercise.
+
+      ![](images/az-400-image8.png)
 
 
 ### Task 2: Create and publish a NuGet package
@@ -242,11 +250,7 @@ In this task, you will create and publish a NuGet package.
 15.  In the same File Explorer window, select the **File (1)** menu header, in the dropdown menu, select **Open Windows PowerShell (2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator (3)**. 
     ![](images/AZ400_M08_L15_31.png)
     
-16.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project. 
-
-     > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
-
-17.   Before running powershell command in step no-18, please perform below steps:
+16.   Before running powershell command in step no-17 and 18, please perform below steps:
       - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
       
          ![](images/az-400-image2.png)
@@ -259,22 +263,29 @@ In this task, you will create and publish a NuGet package.
          
       - Repeat same above step for **Systems variables** click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
      
-18.  Run following command:
+17.  Run the following command
 
      ```
-      cd c:\Users\azureuser\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared
+      cd "<path>"
      ```
+     
+     >**Note**: Navigate to file explorer and copy the path and replace the "<path"> with path which you copied from file explorer.
+
+      ![](images/file(1).png)
+      
+18.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project.
 
      ```
       ./nuget.exe pack ./EShopOnWeb.Shared.csproj
      ```
 
      > **Note**: Disregard any warnings displayed in the **Administrator: Windows PowerShell** window.
+     > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
 
-     > **Note**: NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
-        
-        ![](images/AZ400_M08_L15_(32).png)
-    
+19.  NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
+
+     ![](images/AZ400_M08_L15_(32).png)
+       
      >**Note**: If you prompted with the **Error NU5133: NuGet.exe file on path C:\Users\xxxxx\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\nuget.exe needs to be unblocked after downloading** then we need to unblock the **nuget.exe(1)** file which we downloaded to the **EShareOnWeb.Shared** folder by selecting **Properties(2)**.
 
      ![](images/AZ400_M08_L15_33.png)
