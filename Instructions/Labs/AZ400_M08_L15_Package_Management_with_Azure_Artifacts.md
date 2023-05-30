@@ -223,7 +223,7 @@ In this task, you will create and publish a NuGet package.
 15.  In the same File Explorer window, select the **File (1)** menu header, in the dropdown menu, select **Open Windows PowerShell (2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator (3)**. 
     ![](images/AZ400_M08_L15_31.png)
     
-16.   Before running powershell command in step no-17, please perform below steps:
+16.   Before running powershell command in step no-17 and 18, please perform below steps:
       - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
       
          ![](images/az-400-image2.png)
@@ -236,7 +236,7 @@ In this task, you will create and publish a NuGet package.
          
       - Repeat same above step for **Systems variables** click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
      
-17.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project. 
+17.  Run the following command
 
      ```
       cd "<path>"
@@ -246,15 +246,18 @@ In this task, you will create and publish a NuGet package.
 
       ![](images/file(1).png)
       
-18.  Run the following command.
+18.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project.
 
      ```
       ./nuget.exe pack ./EShopOnWeb.Shared.csproj
      ```
 
      > **Note**: Disregard any warnings displayed in the **Administrator: Windows PowerShell** window.
+     > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
 
-     > **Note**: NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
+19.  NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
+
+     ![](imagesAZ400_M08_L15_(32))
        
      >**Note**: If you prompted with the **Error NU5133: NuGet.exe file on path C:\Users\xxxxx\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\nuget.exe needs to be unblocked after downloading** then we need to unblock the **nuget.exe(1)** file which we downloaded to the **EShareOnWeb.Shared** folder by selecting **Properties(2)**.
 
