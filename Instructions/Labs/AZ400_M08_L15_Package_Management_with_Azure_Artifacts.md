@@ -378,7 +378,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     ![](images/AZ400_M08_L15_(47).png)
 
 
-9.  Notice the different Upstream Package Managers for different development languages. Select **Nuget.org(3)** from the list. Press the **Delete(5)** button, Followed by pressing the **Save(6)** button.    
+9.  Notice the different Upstream Package Managers for different development languages. Select **NuGet Gallery(3)** from the list. Press the **Delete(5)** button, Followed by pressing the **Save(6)** button.    
  
     ![](images/AZ400_M08_L15_(48).png)
 
