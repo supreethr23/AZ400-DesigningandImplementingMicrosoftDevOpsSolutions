@@ -244,9 +244,9 @@ In this task, you will create and publish a NuGet package.
      ```
       cd "<path>"
      ```
-       >**Note**: Navigate to file explorer and copy the path and replace the "<path"> with path which you copied from file explorer.
+   >**Note**: Navigate to file explorer and copy the path and replace the "<path"> with path which you copied from file explorer.
 
-          ![](images/file1.png)
+   ![](images/file1.png)
 
      ```
       ./nuget.exe pack ./EShopOnWeb.Shared.csproj
