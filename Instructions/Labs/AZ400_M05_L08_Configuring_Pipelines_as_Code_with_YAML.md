@@ -30,24 +30,25 @@ After you complete this lab, you will be able to:
 
 3. On the next page accept defaults and click on continue.
 
-    ![Azure DevOps](images/400-3.png)
+    ![Azure DevOps](images/az-400-5-1.png)
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-    ![Azure DevOps](images/m1-2.png)
+    ![Azure DevOps](images/az-400-5-2.png)
 
 5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
-    ![Azure DevOps](images/agent1.png)
+    ![Azure DevOps](images/az-400-5-3.png)
 
 6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
 
-    ![Azure DevOps](images/agent3.png)
-    ![Azure DevOps](images/agent4.png)    
+    ![Azure DevOps](images/az-400-5-4.png)
+    
+    ![Azure DevOps](images/az-400-5-5.png)    
 
 7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
 
-    ![Azure DevOps](images/agent2.png)
+    ![Azure DevOps](images/az-400-5-6.png)
 
 # Exercise 0: Configure the lab prerequisites
 
@@ -59,7 +60,7 @@ In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps proj
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb_MultiStageYAML** and leave the other fields with defaults. Click on **Create**.
 
-    ![Create Project](images/400-2.png)
+    ![Create Project](images/az-400-5-7.png)
 
 ## Task 2: Import eShopOnWeb Git Repository
 
@@ -67,7 +68,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb_MultiStageYAML** project. Click on **Repos>Files** , **Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click **Import**:
 
-    ![Import Repository](images/import-repo.png)
+    ![Import Repository](images/az-400-5-8.png)
 
 1.  The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines
