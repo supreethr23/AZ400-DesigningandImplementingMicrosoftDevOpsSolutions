@@ -105,6 +105,8 @@ In this task, you will configure Visual Studio to prepare for the lab.
      - Close the **Visual studio** by navigating to **Task Manager** and on task manager select **Microsoft Visual studio 2022**, click **End task** and reopen **Visual studio**  from start menu.
 
        ![](images/az-400-image(4).png)
+       
+    - If prompted click **Contiune without code** on **Visual studio 2022** page
     
     - Within the Visual Studio interface click **Git** tool and slect **Clone Repository**
           
