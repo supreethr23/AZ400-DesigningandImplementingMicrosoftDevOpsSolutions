@@ -117,7 +117,7 @@ In this task, you will create and connect to a feed.
     
     ![](images/AZ400_M08_L15_12.png)
 
-2.  With the **Artifacts** hub displayed, selct organization **odluser-<inject key="DeploymentID" enableCopy="false"/>** **(1) and click **+ Create feed (2)** at the top of the pane. 
+2.  With the **Artifacts** hub displayed, selct organization **odluser-<inject key="DeploymentID" enableCopy="false"/>** **(1)** and click **+ Create feed (2)** at the top of the pane. 
 
     > **Note**: This feed will be a collection of NuGet packages available to users within the organization and will sit alongside the public NuGet feed as a peer. The scenario in this lab will focus on the workflow for using Azure Artifacts, so the actual architectural and development decisions are purely illustrative.  This feed will include common functionality that can be shared across projects in this organization. 
     
