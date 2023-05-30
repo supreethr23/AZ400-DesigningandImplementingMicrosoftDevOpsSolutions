@@ -267,7 +267,7 @@ In this task, you will create and publish a NuGet package.
 
      ![](images/AZ400_M08_L15_34.png)
     
-19. Now again run the **Poweshell command** from the **step 16** and it will create package successfully.
+19. Now again run the **Poweshell command** from the **step 18** and it will create package successfully.
     
      ![](images/AZ400_M08_L15_35.png)
 
