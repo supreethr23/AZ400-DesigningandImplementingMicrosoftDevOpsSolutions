@@ -94,11 +94,30 @@ In this task, you will configure Visual Studio to prepare for the lab.
     
 8.  On **Personalize your Visul Studio experience** page click **Start Visual Studio**.
 
-     ![](images/az400-vs.png)
+     ![](images/az400-vs.png)            
      
 9.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
 
     ![](images/AZ400_M08_L15_11.png)
+    
+    >**Note**: If **Visual Studio** take more than 5-10 mins kindly close the **Visual studio** by navigating to **task Manager** and on task manager select **Microsoft Visual studio 2022**, click **End task** and reopen **Visual studio**  from start menu.
+
+    ![](images/az-400-image4.png)
+    
+       - Within the Visual Studio interface click **git** tool and slect **clone Repository**
+          
+          ![](images/az-400-image5.png)
+             
+       - On **clone Repository** page under Browse a Respository select **Azure Devops** and Connect to a Project select EShopOnWeb repo and clone.
+           
+           ![](images/az-400-image6.png)
+           ![](images/az-400-image7.png)
+         
+       - If prompted, sign in with the user account you used to set up your Azure DevOps organization. Enter following Username and password.
+
+          > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+    
+          > **Password**: <inject key="AzureAdUserPassword"></inject>
 
 ## Exercise 2: Working with Azure Artifacts
 
