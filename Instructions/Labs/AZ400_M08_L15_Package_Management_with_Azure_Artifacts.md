@@ -103,7 +103,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
       ![](images/AZ400_M08_L15_11.png)
     
-     >**Note**: If **Visual Studio** take more than 5- minutes to get launch follow the below steps:
+     >**Note**: If **Visual Studio** take more than 5 minutes to get launch follow the below steps:
    
      - Close the **Visual studio** by navigating to **Task Manager** and on task manager select **Microsoft Visual studio 2022**, click **End task** and reopen **Visual studio**  from start menu.
 
