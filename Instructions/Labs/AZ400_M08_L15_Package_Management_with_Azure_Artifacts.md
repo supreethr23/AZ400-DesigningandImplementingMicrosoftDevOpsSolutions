@@ -84,21 +84,23 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     ![](images/AZ400_M08_L15_(09).png)
 
-7.  If prompted, sign in with the user account you used to set up your Azure DevOps organization. Enter following Username and password.
+7.  On **Sign in to Visual Studio** page click **Sign in**.
 
+    ![](images/AZ400_M08_L15_10.png)
+    
+8.  If prompted, sign in with following Username and password.
+  
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
     
-    ![](images/AZ400_M08_L15_10.png)
-    
-8.  On **Personalize your Visul Studio experience** page click **Start Visual Studio**.
+9.  On **Personalize your Visul Studio experience** page click **Start Visual Studio**.
 
      ![](images/az400-vs.png)
      
-9.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
+10.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
 
-    ![](images/AZ400_M08_L15_11.png)
+     ![](images/AZ400_M08_L15_11.png)
 
 ## Exercise 2: Working with Azure Artifacts
 
