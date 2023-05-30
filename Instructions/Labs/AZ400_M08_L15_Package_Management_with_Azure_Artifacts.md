@@ -257,7 +257,7 @@ In this task, you will create and publish a NuGet package.
 
 19.  NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
 
-     ![](imagesAZ400_M08_L15_(32))
+     ![](images/AZ400_M08_L15_(32).png)
        
      >**Note**: If you prompted with the **Error NU5133: NuGet.exe file on path C:\Users\xxxxx\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\nuget.exe needs to be unblocked after downloading** then we need to unblock the **nuget.exe(1)** file which we downloaded to the **EShareOnWeb.Shared** folder by selecting **Properties(2)**.
 
