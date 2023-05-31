@@ -181,15 +181,14 @@ For this lab scenario, we will have a Azure Container Instance (ACI) that pull a
 
     > **Note**: You need to secure access to your key vaults by allowing only authorized applications and users. To access the data from the vault, you will need to provide read (Get/List) permissions to the previously created service principal that you will be using for authentication in the pipeline.
 
-1.   Navigate to the newly created keyvault,in the left navigation pane,click on **Access Policies** and click on **Create**
+1.   Navigate to the newly created key vault,in the left navigation pane,click on **Access Policies** and click on **Create**
 
      - On the **Permission** blade, check **Get** and **List** permissions below **Secret Permission**. Click on **Next**.
      - On the **Principal** blade, search for the **previously created Service Principal**, either using the Id or Name given. Click on **Next** and **Next** again.
      - On the **Review + create** blade, click on **Create**
 
-1. Back on the **Create a Key Vault** blade, click on **Review + Create > Create**
-
-    > **Note**: Wait for the Azure Key vault to be provisioned. This should take less than 1 minute.
+      
+      > **Note**: Wait for the Azure Key vault to be provisioned. This should take less than 1 minute.
 
 1.  On the **Your deployment is complete** blade, click on **Go to resource**.
 1.  On the Azure Key vault blade, in the vertical menu on the left side of the blade, in the **Objects** section, click on **Secrets**.
