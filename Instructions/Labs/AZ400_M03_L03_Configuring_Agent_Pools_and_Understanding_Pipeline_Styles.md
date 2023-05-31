@@ -120,7 +120,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 
 1.  On the **Agent pools** pane, in the upper right corner, click **Add pool**. 
 
-1.  On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name** text box, type **az400m05l05a-pool** and then click **Create**.
+1.  On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name** text box, type **az400m05l05a-pool**, under **Pipeline permissions** select both checkboxes and then click **Create**.
 
     ![Azure DevOps](images/lab-4-5.png)    
     
