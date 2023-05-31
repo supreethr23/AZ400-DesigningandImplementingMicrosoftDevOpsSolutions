@@ -266,9 +266,9 @@ In this task, you will add policies to the main branch and only allow changes us
 
       This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
     
-  2. Click the **Dropdown** and **Save (2)** button (not **Save and run**) to save the pipeline definition.
+  2. Click the **Dropdown** and **Save** button (not **Save and run**) to save the pipeline definition.
 
-     ![](images/az400-m3-L4-40.png)
+     ![](images/az400-m3-L4-(40)(1).png)
   
   3. Select **Create a new branch for this commit (1)** Keep the default branch name and **Start a pull request(2)** checked. and Click on **Save(3)**
 
