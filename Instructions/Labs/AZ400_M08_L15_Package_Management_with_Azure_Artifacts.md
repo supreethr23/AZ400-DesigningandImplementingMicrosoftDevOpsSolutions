@@ -262,10 +262,10 @@ In this task, you will create and publish a NuGet package.
 17.  Run the following command
 
      ```
-      cd "<path>"
+      cd [path]
      ```
      
-     >**Note**: Navigate to file explorer and copy the path and replace the "<path>" with path which you copied from file explorer.
+     >**Note**: Navigate to file explorer and copy the path and replace the [path]  with path which you copied from file explorer.
 
       ![](images/file(1).png)
       
