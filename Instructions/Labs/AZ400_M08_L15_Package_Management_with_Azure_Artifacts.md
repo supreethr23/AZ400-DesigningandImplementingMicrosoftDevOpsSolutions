@@ -248,13 +248,13 @@ In this task, you will create and publish a NuGet package.
 
      - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
         
-       ![](images/az-400-image2.png)
+      ![](images/az-400-image2.png)
          
      - On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
          
-       ![](images/az-400-image1.png)
+      ![](images/az-400-image1.png)
          
-       ![](images/AZ400_M08_L15_EV.png)
+      ![](images/AZ400_M08_L15_EV.png)
 
 16.  Navigate to File Explorer in the same File Explorer window, select the **File (1)** menu header, in the dropdown menu, select **Open Windows PowerShell (2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator (3)**. 
    
