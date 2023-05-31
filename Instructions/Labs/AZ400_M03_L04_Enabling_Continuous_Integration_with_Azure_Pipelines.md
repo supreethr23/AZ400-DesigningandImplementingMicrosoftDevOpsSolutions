@@ -158,7 +158,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
  2. Create a new branch named **Feature01 (1)** based on the **main** branch and click **Create (2)**.
 
-    ![](images/az-400-lab3-8)
+    ![](images/az-400-lab3-8.png)
 
 3. Click **Feature01 (1)** and navigate to the **/eShopOnWeb/src(2)/Web(3)/Program.cs (4)** file as part of the **Feature01** branch and click on **edit (5)** to make the following change on the first line:
 
@@ -197,7 +197,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
    ![](images/az400-m3-L4-31.png)
   
-9. On the **Complete Pull Request** tab, click on **Complete Merge**
+9.  8. On the **Complete Pull Request** tab, select only **Complete associated work items after merging** checkbox  and Click on **Complete Merge**
 
    ![](images/az400-m3-L4-32.png)
 
@@ -261,10 +261,8 @@ In this task, you will add policies to the main branch and only allow changes us
           include:
           - src/web/*
       ``` 
-   
-      ![](images/az400-m3-L4-38.png)
-   
-      ![](images/az400-m3-L4-39.png)
+
+      ![](images/az-400-lab3-7.png)
 
       This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
     
@@ -276,11 +274,11 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/AZ-400-save.png)
 
-  4. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to                          **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis (1)** and **Rename/Remove** option. Name it            **eshoponweb-ci (2)**   and click on **Save (3)**.
+  4. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to                          **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis (1)** and **Rename/move** option. Name it **eshoponweb-ci (2)**  and click on **Save (3)**.
 
      ![](images/az400-m3-L4-42.png)
 
-  5. Go to **Repos (1)>Pullrequests (2)** and click on the existing pull request. After all validations are successful, on the top-right click on        **Approve (3)**. Now you can click on **Complete (4)**.
+  5. Go to **Repos (1)>Pullrequests (2)** and click on the existing pull request. After all validations are successful, on the top-right click on **Approve (3)**. Now you can click on **Complete (4)**.
 
      ![](images/az400-m3-L4-43.png)
 
@@ -296,7 +294,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
     ![](images/az400-m3-L4-45.png)
     
-    ![](images/az-400-lab3-9)
+    ![](images/az-400-lab3-9.png)
 
  2. Click the new **Feature02 (1)** branch and navigate to the **/eShopOnWeb/src (2)/Web (3)/Program.cs (4)** file and click on **Edit (5)** to remove the first line // **Testing my PR (6)** and click on commit.
    
