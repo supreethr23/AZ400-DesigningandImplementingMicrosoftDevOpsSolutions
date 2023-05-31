@@ -39,7 +39,7 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/az400-azdev.png)
     
-6. 6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
+6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
 
     ![Azure DevOps](images/az-400-lab3-1.png)
     ![Azure DevOps](images/az-400-lab3-2.png)    
