@@ -318,11 +318,11 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/az400-m3-L4-50.png)
 
- 6. In the **New pull request (1)** tab, leave defaults and click on **Create (3)** The Pull Request will show some pending requirements, based         on the policies applied to the target **main (2)** branch.
+ 6. In the **New pull request (1)** tab, leave defaults and click on **Create (3)** The Pull Request will show some pending requirements, based on the policies applied to the target **main (2)** branch and wait untill build completes.
 
      ![](images/AZ-400-pull.png)
 
- 7. After all validations are successful, on the top-right click on **Approve (1)**. Now from the **Set auto-complete** dropdown you can click       on **Complete (2)**
+ 7. After all validations are successful, on the top-right click on **Approve (1)**. Now from the **Set auto-complete** dropdown you can click on **Complete (2)**
 
      ![](images/az400-m3-L4-52.png)
 
@@ -330,7 +330,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/az400-m3-L4-53.png)
 
- 9. Go back to **Pipelines>Pipelines,** you will notice that the build **eshoponweb-ci** was triggered automatically after the code was            merged.
+ 9. Go back to **Pipelines>Pipelines,** you will notice that the build **eshoponweb-ci** was triggered automatically after the code was merged.
 
     ![](images/az400-m3-L4-54.png)
  
