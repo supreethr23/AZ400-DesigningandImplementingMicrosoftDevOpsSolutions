@@ -242,11 +242,8 @@ In this task, you will create and publish a NuGet package.
 
 14.  Within the File Explorer window, move the downloaded **nuget.exe** file from the **Downloads** folder into the folder containing the **EShopOnWeb.Shared** file.
     ![](images/AZ400_M08_L15_30.png)
-
-15.  In the same File Explorer window, select the **File (1)** menu header, in the dropdown menu, select **Open Windows PowerShell (2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator (3)**. 
-    ![](images/AZ400_M08_L15_31.png)
     
-16.   Before running PowerShell command in step no-17 and 18, please perform below steps:
+15.  Before running PowerShell command in step no-17 and 18, please perform below steps:
       - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
       
          ![](images/az-400-image2.png)
@@ -256,7 +253,11 @@ In this task, you will create and publish a NuGet package.
          ![](images/az-400-image1.png)
          
          ![](images/AZ400_M08_L15_EV.png)
-     
+
+16.  Navigate to File Explorer in the same File Explorer window, select the **File (1)** menu header, in the dropdown menu, select **Open Windows PowerShell (2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator (3)**. 
+   
+     ![](images/AZ400_M08_L15_31.png)
+    
 17.  Run the following command
 
      ```
