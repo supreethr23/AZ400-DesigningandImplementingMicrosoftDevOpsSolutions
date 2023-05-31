@@ -37,7 +37,7 @@ After you complete this lab, you will be able to:
 
 # Exercise 0: Configure the lab prerequisites
 
-In this exercise, you will set up the prerequisites for the lab, which consist of the preconfigured **EShopOnWeb** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
+In this exercise, you will set up the prerequisites for the lab, which consist of the pre-configured **EShopOnWeb** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
 
 
 ## Task 1: Configure the EShopOnWeb project
@@ -50,7 +50,7 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibilty as **Private (2)** and then click **Create Project (3)**
+2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibility as **Private (2)** and then click **Create Project (3)**
 
      ![](images/AZ400_M09_L17_03.png)
     
@@ -84,7 +84,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
      ![](images/AZ400_M09_L17_07.png)
 
-5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb (1)** Repo title on top of the folder structure. Select the **elipsis (2)**.
+5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb (1)** Repo title on top of the folder structure. Select the **ellipsis (2)**. 
 
      ![](images/AZ400_M09_L17_08.png)
 

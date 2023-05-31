@@ -20,7 +20,7 @@ After you complete this lab, you will be able to:
   ![Architecture Diagram](images/lab15-architecture.png)
 
 ## Set up an Azure DevOps organization
-1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign in with the credentials.
 
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
@@ -36,25 +36,25 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/lab1-image2.png)
 
-## Exercise 1: Configure the lab prerequisites
+# Exercise 1: Configure the lab prerequisites
 
-In this exercise, you will set up the prerequisites for the lab, which include the preconfigured EShopOnWeb team project based on an Azure DevOps Organization and a Visual Studio configuration.
+In this exercise, you will set up the prerequisites for the lab, which include the pre-configured EShopOnWeb team project based on an Azure DevOps Organization and a Visual Studio configuration.
 
-### Task 1: Configure the EShopOnWeb project
+## Task 1: Configure the EShopOnWeb project
 
 In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
 
-1.  Click **Sign in** and sign in with the credentials provided in environment details tab.
+1.  Click **Sign in** and sign in with the following credentials.
     
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibilty as **Private (2)** and then click **+ Create Project(3)**
+2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibility as **Private (2)**, and then click **+ Create Project(3)**
 
     ![](images/AZ400_M08_L15_03.png)
 
-### Task 2: Configuring the EShopOnWeb solution in Visual Studio
+## Task 2: Configuring the EShopOnWeb solution in Visual Studio
 
 In this task, you will configure Visual Studio to prepare for the lab.
 
@@ -62,7 +62,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     > **Note**: You can access the project page directly by navigating to the [https://dev.azure.com/<inject key="DeploymentID" enableCopy="false"/>/EShopOnWeb]URL.
 
-    ![](images/AZ400_M08_L15_04.png)
+    ![](images/AZ400_M08_L15_(04).png)
 
 2.  In the vertical menu on the left side of the **EShopOnWeb** pane, click **Repos**.
 
@@ -84,23 +84,48 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     ![](images/AZ400_M08_L15_(09).png)
 
-7.  If prompted, sign in with the user account you used to set up your Azure DevOps organization. Enter following Username and password.
+7.  On **Sign in to Visual Studio** page click **Sign in**.
 
+    ![](images/AZ400_M08_L15_10.png)
+    
+8.  If prompted, sign in with following Username and password.
+  
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
     
-    ![](images/AZ400_M08_L15_10.png)
-    
-8.  On **Personalize your Visul Studio experience** page click **Start Visual Studio**.
+9.  On **Personalize your Visual Studio experience** page click **Start Visual Studio**.
 
-     ![](images/az400-vs.png)
+     ![](images/az400-vs.png)            
      
-9.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
+10.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
 
-    ![](images/AZ400_M08_L15_11.png)
+      ![](images/AZ400_M08_L15_11.png)
+    
+     >**Note**: If **Visual Studio** takes more than 5 minutes to get launched follow the below steps:
+   
+     - Close the **Visual Studio** by navigating to **Task Manager** and on task manager select **Microsoft Visual studio 2022**, click **End Task** and reopen **Visual Studio**  from start menu.
 
-## Exercise 2: Working with Azure Artifacts
+       ![](images/az-400-image(4).png)
+       
+     - If prompted click **Continue without code** on **Visual studio 2022** page
+    
+     - Within the Visual Studio interface click **Git** tool and select **Clone Repository**
+          
+       ![](images/az-400-image5.png)
+             
+     - On **Clone Repository** page under Browse a Repository select **Azure DevOps** and Connect to a Project select **EShopOnWeb** repo and **Clone**.
+           
+        ![](images/az-400-image6.png)
+        ![](images/az-400-image7.png)
+         
+     - If prompted, sign in with the following Username and password.
+
+          > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+    
+          > **Password**: <inject key="AzureAdUserPassword"></inject>
+
+# Exercise 2: Working with Azure Artifacts
 
 In this exercise, you will learn how to work with Azure Artifacts by using the following steps:
 
@@ -109,7 +134,7 @@ In this exercise, you will learn how to work with Azure Artifacts by using the f
 - import a NuGet package.
 - update a NuGet package.
 
-### Task 1: Create and connect to a feed
+## Task 1: Create and connect to a feed
 
 In this task, you will create and connect to a feed.
 
@@ -117,7 +142,7 @@ In this task, you will create and connect to a feed.
     
     ![](images/AZ400_M08_L15_12.png)
 
-2.  With the **Artifacts** hub displayed, selct organization **odluser-<inject key="DeploymentID" enableCopy="false"/>** **(1)** and click **+ Create feed (2)** at the top of the pane. 
+2.  With the **Artifacts** hub displayed, select organization **odluser-<inject key="DeploymentID" enableCopy="false"/>** **(1)** and click **+ Create feed (2)** at the top of the pane. 
 
     > **Note**: This feed will be a collection of NuGet packages available to users within the organization and will sit alongside the public NuGet feed as a peer. The scenario in this lab will focus on the workflow for using Azure Artifacts, so the actual architectural and development decisions are purely illustrative.  This feed will include common functionality that can be shared across projects in this organization. 
     
@@ -151,8 +176,10 @@ In this task, you will create and connect to a feed.
 
 11.  Close and reopen the other Visual Studio instance you used for cloning the EShopOnWeb repository, to account for the artifact source update and open the **EShopOnWebShared** solution. You will need it in the third task of this exercise.
 
+      ![](images/az-400-image8.png)
 
-### Task 2: Create and publish a NuGet package
+
+## Task 2: Create and publish a NuGet package
 
 In this task, you will create and publish a NuGet package.
 
@@ -162,11 +189,11 @@ In this task, you will create and publish a NuGet package.
     
     ![](images/AZ400_M08_L15_19.png)
 
-2.  On the **Recent project templates** page of the **Create a new project** pane, use the search textbox to locate the **Class Library (1)** template, and select the template for **C# (2)**, and click **Next (3)**. 
+2.  On the **Recent project templates** page of the **Create a new project** pane, use the search textbox to locate the **Class Library (1)** template, select the template for **C# (2)**, and click **Next (3)**. 
     
     ![](images/AZ400_M08_L15_20.png)
 
-3.  On the **Class Library** page of the **Create a new project** pane, specify the following settings and click **Next (5)**:
+3.  On the **Class Library** page of the **Configure your new project** pane, specify the following settings and click **Next (5)**:
 
     | Setting | Value |
     | --- | --- |
@@ -206,7 +233,7 @@ In this task, you will create and publish a NuGet package.
     
 11.  On the **Get the tools** pane, click the **Download the latest NuGet** link. This will automatically open another browser tab displaying the **Available NuGet Distribution Versions** page.   
 
-12.  On the **Available NuGet Distribution Versions** page, select nuget.exe version **v5.5.1** and download the executable to the local **Downloads** folder.
+12.  On the **Available NuGet Distribution Versions** page, select nuget.exe - recommended latest **v6.5.0** and download the executable to the local **Downloads** folder.
     ![](images/AZ400_M08_L15_28.png)
 
 
@@ -215,43 +242,45 @@ In this task, you will create and publish a NuGet package.
 
 14.  Within the File Explorer window, move the downloaded **nuget.exe** file from the **Downloads** folder into the folder containing the **EShopOnWeb.Shared** file.
     ![](images/AZ400_M08_L15_30.png)
-
-15.  In the same File Explorer window, select the **File (1)** menu header, in the dropdown menu, select **Open Windows PowerShell (2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator (3)**. 
-    ![](images/AZ400_M08_L15_31.png)
     
-16.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project. 
-
-     > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
-
-17.   Before running powershell command in step no-18, please perform below steps:
+15.  Before running PowerShell command in step no-17 and 18, please perform below steps:
       - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
       
          ![](images/az-400-image2.png)
          
-      - On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok**.
+      - On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
       
          ![](images/az-400-image1.png)
          
          ![](images/AZ400_M08_L15_EV.png)
-         
-      - Repeat same above step for **Systems variables** click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
-     
-18.  Run following command:
+
+16.  Navigate to File Explorer in the same File Explorer window, select the **File (1)** menu header, in the dropdown menu, select **Open Windows PowerShell (2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator (3)**. 
+   
+     ![](images/AZ400_M08_L15_31.png)
+    
+17.  Run the following command
 
      ```
-      cd c:\Users\azureuser\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared
+      cd "<path>"
      ```
+     
+     >**Note**: Navigate to file explorer and copy the path and replace the "<path>" with path which you copied from file explorer.
+
+      ![](images/file(1).png)
+      
+18.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project.
 
      ```
       ./nuget.exe pack ./EShopOnWeb.Shared.csproj
      ```
 
      > **Note**: Disregard any warnings displayed in the **Administrator: Windows PowerShell** window.
+     > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
 
-     > **Note**: NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
-        
-        ![](images/AZ400_M08_L15_(32).png)
-    
+19.  NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
+
+     ![](images/AZ400_M08_L15_(32).png)
+       
      >**Note**: If you prompted with the **Error NU5133: NuGet.exe file on path C:\Users\xxxxx\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\nuget.exe needs to be unblocked after downloading** then we need to unblock the **nuget.exe(1)** file which we downloaded to the **EShareOnWeb.Shared** folder by selecting **Properties(2)**.
 
      ![](images/AZ400_M08_L15_33.png)
@@ -260,11 +289,11 @@ In this task, you will create and publish a NuGet package.
 
      ![](images/AZ400_M08_L15_34.png)
     
-19. Now again run the **Poweshell command** from the **step 16** and it will create package successfully.
+19. Now again run the **PowerShell command** from the **step 18** and it will create package successfully.
     
      ![](images/AZ400_M08_L15_35.png)
 
-20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to signin window login with the following credentials.
+20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to sign in window login with the following credentials.
     
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
@@ -289,13 +318,13 @@ In this task, you will create and publish a NuGet package.
 
       ![](images/AZ400_M08_L15_(38).png)
 
-### Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
+## Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
 
-Besides developing your own packages, why not using the Open Source Nuget (https://www.nuget.org) DotNet Package library? With a few million packages available, there will always be something useful for your application.
+Besides developing your own packages, why not using the Open Source NuGet (https://www.nuget.org) DotNet Package library? With a few million packages available, there will always be something useful for your application.
     
 In this task, we will use a generic "Hello World" sample package, but you can use the same approach for other packages in the library.
 
-1.  From the same PowerShell window, run the following nuget command to install the sample package:
+1.  From the same PowerShell window, run the following NuGet command to install the sample package:
     
     ```
     .\nuget install HelloWorld -ExcludeVersion
@@ -310,7 +339,7 @@ In this task, we will use a generic "Hello World" sample package, but you can us
     
     ![](images/AZ400_M08_L15_41.png)
 
-### Task 4: Upload the Open-Source NuGet package to Azure Artifacts
+## Task 4: Upload the Open-Source NuGet package to Azure Artifacts
 
 Let's consider this package an "approved" package for our DevOps team to reuse, by uploading it to the Azure Artifacts Package feed created earlier.
 
@@ -335,20 +364,20 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     
      ![](images/AZ400_M08_L15_44.png)
     
-5.  Confirm by pressing the **Search(3)** button.
+5.  Confirm by pressing the **Search (3)** button.
 6.  This results in a list of all HelloWorld packages with the different versions available.
 
      ![](images/AZ400_M08_L15_45.png)
 
 7.  Click the **left arrow key** to return to the **EShopOnWebShared** Feed.
-8.  Click the cogwheel to open **Feed Settings(1)**. Within the Feed Settings page, select **Upstream Sources(2)**.
+8.  Click the cogwheel to open **Feed Settings (1)**. Within the Feed Settings page, select **Upstream Sources (2)**.
     
      ![](images/AZ400_M08_L15_(46).png)
 
     ![](images/AZ400_M08_L15_(47).png)
 
 
-9.  Notice the different Upstream Package Managers for different development languages. Select **Nuget.org(3)** from the list. Press the **Delete(5)** button, Followed by pressing the **Save(6)** button.    
+9.  Notice the different Upstream Package Managers for different development languages. Select **NuGet Gallery (3)** from the list. Press the **Delete (5)** button, Followed by pressing the **Save (6)** button.    
  
     ![](images/AZ400_M08_L15_(48).png)
 
@@ -372,12 +401,12 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
      ![](images/AZ400_M08_L15_(49).png)
 
 
-12.  From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared(1)** Project, and select **Manage Nuget Packages(2)** from the context menu.
+12.  From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared(1)** Project, and select **Manage NuGet Packages (2)** from the context menu.
       ![](images/AZ400_M08_L15_50.png)
 
-13. From the Nuget Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
-14. Click **Browse(1)**, and wait for the list of Nuget Packages to load.
-15. This list will also show both the **EShopOnWeb.Shared(2)** custom-developed package, as well as the **HelloWorld(2)** public sourced package.
+13. From the NuGet Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
+14. Click **Browse (1)**, and wait for the list of NuGet Packages to load.
+15. This list will also show both the **EShopOnWeb.Shared (2)** custom-developed package, as well as the **HelloWorld (2)** public sourced package.
     
      ![](images/AZ400_M08_L15_51.png)
      
@@ -388,7 +417,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-### Review
+## Review
 
 In this lab, you learned how to work with Azure Artifacts by using the following steps:
 
