@@ -35,7 +35,7 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/lab1-image2.png)
     
-5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
+5. On the Azure DevOps page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
     ![Azure DevOps](images/az-400-lab3-(1).png)
     
