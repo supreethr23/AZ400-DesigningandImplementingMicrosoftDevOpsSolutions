@@ -292,7 +292,7 @@ In this task, you will create and publish a NuGet package.
     
      ![](images/AZ400_M08_L15_35.png)
 
-20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to signin window login with the following credentials.
+20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to sign in window login with the following credentials.
     
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
