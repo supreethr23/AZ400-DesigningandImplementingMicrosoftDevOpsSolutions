@@ -197,7 +197,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
    ![](images/az400-m3-L4-31.png)
   
-9.  8. On the **Complete Pull Request** tab, select only **Complete associated work items after merging** checkbox  and Click on **Complete Merge**
+9. On the **Complete Pull Request** tab, select only **Complete associated work items after merging** checkbox  and Click on **Complete Merge**
 
    ![](images/az400-m3-L4-32.png)
 
