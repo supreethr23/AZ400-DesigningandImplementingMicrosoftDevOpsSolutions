@@ -230,31 +230,35 @@ In this task, you will create and publish a NuGet package.
 8.  Switch to the web browser displaying the Azure DevOps portal. 
 9.  Navigate to the **Connect to feed** pane, in the **NuGet** section and select **NuGet.exe**. This will display the **NuGet.exe** pane.
 10. On the **NuGet.exe (2)** pane, click **Get the tools (3)**.
+
      ![](images/AZ400_M08_L15_(27).png)
     
 11. On the **Get the tools** pane, click the **Download the latest NuGet** link. This will automatically open another browser tab displaying the **Available NuGet Distribution Versions** page.   
 
 12. On the **Available NuGet Distribution Versions** page, select nuget.exe - recommended latest **v6.5.0** and download the executable to the local **Downloads** folder.
+
     ![](images/AZ400_M08_L15_28.png)
 
 
 13. Switch to the **Visual Studio** window. In the **Solution Explorer** pane, right-click the **EShopOnWeb.Shared (1)** project folder and, in the right-click menu, select **Open Folder in File Explorer (2)**.
+
     ![](images/AZ400_M08_L15_29.png)
 
 14. Within the File Explorer window, move the downloaded **nuget.exe** file from the **Downloads** folder into the folder containing the **EShopOnWeb.Shared** file.
+
     ![](images/AZ400_M08_L15_30.png)
     
 15. Before running PowerShell command in step no-17 and 18, please perform below steps:
 
-    - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
+    i. From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
         
-      ![](images/az-400-image2.png)
+       ![](images/az-400-image2.png)
          
-    - On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
+    ii. On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
          
-      ![](images/az-400-image1.png)
+       ![](images/az-400-image1.png)
          
-      ![](images/AZ400_M08_L15_EV.png)
+       ![](images/AZ400_M08_L15_EV.png)
 
 16.  Navigate to File Explorer in the same File Explorer window, select the **File (1)** menu header, in the dropdown menu, select **Open Windows PowerShell (2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator (3)**. 
    
