@@ -321,11 +321,11 @@ In this task, you will create and publish a NuGet package.
 
 ## Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
 
-Besides developing your own packages, why not using the Open Source Nuget (https://www.nuget.org) DotNet Package library? With a few million packages available, there will always be something useful for your application.
+Besides developing your own packages, why not using the Open Source NuGet (https://www.nuget.org) DotNet Package library? With a few million packages available, there will always be something useful for your application.
     
 In this task, we will use a generic "Hello World" sample package, but you can use the same approach for other packages in the library.
 
-1.  From the same PowerShell window, run the following nuget command to install the sample package:
+1.  From the same PowerShell window, run the following NuGet command to install the sample package:
     
     ```
     .\nuget install HelloWorld -ExcludeVersion
