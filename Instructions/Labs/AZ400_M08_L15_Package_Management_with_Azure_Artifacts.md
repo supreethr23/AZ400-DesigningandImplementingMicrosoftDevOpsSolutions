@@ -38,7 +38,7 @@ After you complete this lab, you will be able to:
 
 # Exercise 1: Configure the lab prerequisites
 
-In this exercise, you will set up the prerequisites for the lab, which include the preconfigured EShopOnWeb team project based on an Azure DevOps Organization and a Visual Studio configuration.
+In this exercise, you will set up the prerequisites for the lab, which include the pre-configured EShopOnWeb team project based on an Azure DevOps Organization and a Visual Studio configuration.
 
 ## Task 1: Configure the EShopOnWeb project
 
