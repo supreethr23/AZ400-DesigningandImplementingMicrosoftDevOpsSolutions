@@ -158,7 +158,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
  2. Create a new branch named **Feature01 (1)** based on the **main** branch and click **Create (2)**.
 
-    ![](images/AZ-400-feature.png)
+    ![](images/az-400-lab3-8)
 
 3. Click **Feature01 (1)** and navigate to the **/eShopOnWeb/src(2)/Web(3)/Program.cs (4)** file as part of the **Feature01** branch and click on **edit (5)** to make the following change on the first line:
 
@@ -254,7 +254,7 @@ In this task, you will add policies to the main branch and only allow changes us
    
       ```
         trigger:
-        branches:
+         branches:
           include:
           - main
         paths:
@@ -284,7 +284,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/az400-m3-L4-43.png)
 
-  On the **Complete Pull Request** tab, select only **Complete associated work items after merging** checkbox  and Click on **Complete Merge**
+  6. On the **Complete Pull Request** tab, select only **Complete associated work items after merging** checkbox  and Click on **Complete Merge**
 
      ![](images/az400-m3-L4-44.png)
 
@@ -296,7 +296,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
     ![](images/az400-m3-L4-45.png)
     
-    ![](images/az400-m3-L4-46.png)
+    ![](images/az-400-lab3-9)
 
  2. Click the new **Feature02 (1)** branch and navigate to the **/eShopOnWeb/src (2)/Web (3)/Program.cs (4)** file and click on **Edit (5)** to remove the first line // **Testing my PR (6)** and click on commit.
    
