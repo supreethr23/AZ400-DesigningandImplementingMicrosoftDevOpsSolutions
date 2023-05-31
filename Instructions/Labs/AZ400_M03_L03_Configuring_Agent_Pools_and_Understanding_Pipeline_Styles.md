@@ -126,7 +126,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     
 1.  Back on the **Agent pools** pane, click the entry representing the newly created **az400m05l05a-pool**. 
 
-1.  On the **Jobs** tab of the **az400m05l05a-pool** pane, click the **Agents** header.
+1.  On the **Jobs** tab of the **az400m05l05a-pool** pane, select the **Agents** tab.
 
 1.  Start Windows PowerShell as administrator and in the **Administrator: Windows PowerShell** console run the following lines to locate the **C:\\agent** directory and to run the pre-installed agent inside the directory. 
 
