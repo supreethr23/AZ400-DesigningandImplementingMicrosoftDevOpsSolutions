@@ -23,6 +23,10 @@ After you complete this lab, you will be able to:
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    * Password: <inject key="AzureAdUserPassword"></inject>
+
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
 3. In the pop-up for *Action Required*, select **Ask later**. 
@@ -60,22 +64,25 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
     > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
 
-1.  Click **Sign in** and if prompted sign with the credentials provided in environment details tab.
+2.  Click **Sign in** and if prompted sign with the following credentials.
 
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
-1.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
+    * Password: <inject key="AzureAdUserPassword"></inject>
 
-1.  On the **Create New Project** page, in the **New Project Name** textbox, type **Configuring Agent Pools and Understanding Pipeline Styles**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
+3.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
+
+4.  On the **Create New Project** page, in the **New Project Name** textbox, type **Configuring Agent Pools and Understanding Pipeline Styles**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
     
-1.  On the **Choose a template** page, click the **PartsUnlimited** template, and then click **Select Template**.
+5.  On the **Choose a template** page, click the **PartsUnlimited** template, and then click **Select Template**.
 
-1.  Click **Create Project**
+6.  Click **Create Project**
 
      ![Azure DevOps](images/lab4-1.png)
 
     > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your DevOps organization, delete the project, and try again.
 
-1.  On the **Create New Project** page, click **Navigate to project**.
+7.  On the **Create New Project** page, click **Navigate to project**.
 
 # Exercise 1: Author YAML-based Azure DevOps pipelines
 
