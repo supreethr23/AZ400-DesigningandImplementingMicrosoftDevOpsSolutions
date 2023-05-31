@@ -148,7 +148,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     | Enter server URL | the URL of your Azure DevOps organization, in the format **https://dev.azure.com/<organization_name>**, where `<organization_name>` represents the name of your Azure DevOps organization |
     | Enter authentication type (press enter for PAT) | **Enter** |
     | Enter personal access token | The access token you recorded earlier in this task |
-    | Enter agent pool (press enter for default) | **az400m05l05a-pool** |
+    | Enter agent pool (press enter for default) | enter **az400m05l05a-pool** |
     | Enter agent name (press enter for labvm-<inject key="DeploymentID" enableCopy="false"/> | **Enter** |
     | Enter work folder (press enter for _work) | **Enter** |
     | **(Only if shown)** Enter Perform an unzip for tasks for each step. (press enter for N) | **WARNING**: only press **Enter** if the message is shown|
