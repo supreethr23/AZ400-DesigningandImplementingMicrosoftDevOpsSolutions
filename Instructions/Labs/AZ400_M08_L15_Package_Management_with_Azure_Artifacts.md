@@ -94,7 +94,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
     
-9.  On **Personalize your Visul Studio experience** page click **Start Visual Studio**.
+9.  On **Personalize your Visual Studio experience** page click **Start Visual Studio**.
 
      ![](images/az400-vs.png)            
      
@@ -108,13 +108,13 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
        ![](images/az-400-image(4).png)
        
-     - If prompted click **Contiune without code** on **Visual studio 2022** page
+     - If prompted click **Continue without code** on **Visual studio 2022** page
     
-     - Within the Visual Studio interface click **Git** tool and slect **Clone Repository**
+     - Within the Visual Studio interface click **Git** tool and select **Clone Repository**
           
        ![](images/az-400-image5.png)
              
-     - On **Clone Repository** page under Browse a Respository select **Azure Devops** and Connect to a Project select **EShopOnWeb** repo and **Clone**.
+     - On **Clone Repository** page under Browse a Repository select **Azure Devops** and Connect to a Project select **EShopOnWeb** repo and **Clone**.
            
         ![](images/az-400-image6.png)
         ![](images/az-400-image7.png)
@@ -246,18 +246,16 @@ In this task, you will create and publish a NuGet package.
 15.  In the same File Explorer window, select the **File (1)** menu header, in the dropdown menu, select **Open Windows PowerShell (2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator (3)**. 
     ![](images/AZ400_M08_L15_31.png)
     
-16.   Before running powershell command in step no-17 and 18, please perform below steps:
+16.   Before running PowerShell command in step no-17 and 18, please perform below steps:
       - From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
       
          ![](images/az-400-image2.png)
          
-      - On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok**.
+      - On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
       
          ![](images/az-400-image1.png)
          
          ![](images/AZ400_M08_L15_EV.png)
-         
-      - Repeat same above step for **Systems variables** click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
      
 17.  Run the following command
 
@@ -290,7 +288,7 @@ In this task, you will create and publish a NuGet package.
 
      ![](images/AZ400_M08_L15_34.png)
     
-19. Now again run the **Poweshell command** from the **step 18** and it will create package successfully.
+19. Now again run the **PowerShell command** from the **step 18** and it will create package successfully.
     
      ![](images/AZ400_M08_L15_35.png)
 
@@ -365,20 +363,20 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     
      ![](images/AZ400_M08_L15_44.png)
     
-5.  Confirm by pressing the **Search(3)** button.
+5.  Confirm by pressing the **Search (3)** button.
 6.  This results in a list of all HelloWorld packages with the different versions available.
 
      ![](images/AZ400_M08_L15_45.png)
 
 7.  Click the **left arrow key** to return to the **EShopOnWebShared** Feed.
-8.  Click the cogwheel to open **Feed Settings(1)**. Within the Feed Settings page, select **Upstream Sources(2)**.
+8.  Click the cogwheel to open **Feed Settings (1)**. Within the Feed Settings page, select **Upstream Sources (2)**.
     
      ![](images/AZ400_M08_L15_(46).png)
 
     ![](images/AZ400_M08_L15_(47).png)
 
 
-9.  Notice the different Upstream Package Managers for different development languages. Select **NuGet Gallery(3)** from the list. Press the **Delete(5)** button, Followed by pressing the **Save(6)** button.    
+9.  Notice the different Upstream Package Managers for different development languages. Select **NuGet Gallery (3)** from the list. Press the **Delete (5)** button, Followed by pressing the **Save (6)** button.    
  
     ![](images/AZ400_M08_L15_(48).png)
 
@@ -402,12 +400,12 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
      ![](images/AZ400_M08_L15_(49).png)
 
 
-12.  From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared(1)** Project, and select **Manage Nuget Packages(2)** from the context menu.
+12.  From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared(1)** Project, and select **Manage NuGet Packages (2)** from the context menu.
       ![](images/AZ400_M08_L15_50.png)
 
-13. From the Nuget Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
-14. Click **Browse(1)**, and wait for the list of Nuget Packages to load.
-15. This list will also show both the **EShopOnWeb.Shared(2)** custom-developed package, as well as the **HelloWorld(2)** public sourced package.
+13. From the NuGet Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
+14. Click **Browse (1)**, and wait for the list of NuGet Packages to load.
+15. This list will also show both the **EShopOnWeb.Shared (2)** custom-developed package, as well as the **HelloWorld (2)** public sourced package.
     
      ![](images/AZ400_M08_L15_51.png)
      
