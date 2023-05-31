@@ -37,7 +37,7 @@ After you complete this lab, you will be able to:
     
 5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
-    ![Azure DevOps](images/az400-azdev.png)
+    ![Azure DevOps](images/az-400-lab3-(1).png)
     
 6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
 
