@@ -42,7 +42,7 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name  **eShopOnWeb (1)** and leave the other fields with defaults. Click on **Create project (3)**.
+   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name  **eShopOnWeb (1)**, select visibility as **Private(2)**  and leave the other fields with defaults. Click on **Create project (3)**.
 
       ![](images/az400-m3-L4-03.png)
 
@@ -158,7 +158,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
  2. Create a new branch named **Feature01 (1)** based on the **main** branch and click **Create (2)**.
 
-    ![](images/AZ-400-feature.png)
+    ![](images/az-400-lab3-8.png)
 
 3. Click **Feature01 (1)** and navigate to the **/eShopOnWeb/src(2)/Web(3)/Program.cs (4)** file as part of the **Feature01** branch and click on **edit (5)** to make the following change on the first line:
 
@@ -186,8 +186,8 @@ In this task, you will add policies to the main branch and only allow changes us
    
 7. The Pull Request will show some pending requirements, based on the policies applied to the target **main** branch.
 
-     o **At least 1 user (1) should review and approve the changes (**Add (2)** required approver and **select (3)** the approver to complete the PR).
-     o Build validation, you will see that the build **eshoponweb-ci-pr** was triggered automatically
+    - **At least 1 user should review and approve the changes (1)**, click **Add (2)** select required approver and **select the approver to complete the PR(3)**.
+    - Build validation, you will see that the build **eshoponweb-ci-pr** was triggered automatically
      
      ![](images/az400-m3-L4-29.png)
      
@@ -197,7 +197,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
    ![](images/az400-m3-L4-31.png)
   
-9. On the **Complete Pull Request** tab, click on **Complete Merge**
+9. On the **Complete Pull Request** tab, select only **Complete associated work items after merging** checkbox  and Click on **Complete Merge**
 
    ![](images/az400-m3-L4-32.png)
 
@@ -254,17 +254,15 @@ In this task, you will add policies to the main branch and only allow changes us
    
       ```
         trigger:
-        branches:
+         branches:
           include:
           - main
         paths:
           include:
           - src/web/*
       ``` 
-   
-      ![](images/az400-m3-L4-38.png)
-   
-      ![](images/az400-m3-L4-39.png)
+
+      ![](images/az-400-lab3-7.png)
 
       This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
     
@@ -276,15 +274,15 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/AZ-400-save.png)
 
-  4. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to                          **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis (1)** and **Rename/Remove** option. Name it            **eshoponweb-ci (2)**   and click on **Save (3)**.
+  4. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to                          **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis (1)** and **Rename/move** option. Name it **eshoponweb-ci (2)**  and click on **Save (3)**.
 
      ![](images/az400-m3-L4-42.png)
 
-  5. Go to **Repos (1)>Pullrequests (2)** and click on the existing pull request. After all validations are successful, on the top-right click on        **Approve (3)**. Now you can click on **Complete (4)**.
+  5. Go to **Repos (1)>Pullrequests (2)** and click on the existing pull request. After all validations are successful, on the top-right click on **Approve (3)**. Now you can click on **Complete (4)**.
 
      ![](images/az400-m3-L4-43.png)
 
-  6. On the **Complete Pull Request** tab, Click on **Complete Merge**
+  6. On the **Complete Pull Request** tab, select only **Complete associated work items after merging** checkbox  and Click on **Complete Merge**
 
      ![](images/az400-m3-L4-44.png)
 
@@ -296,13 +294,9 @@ In this task, you will add policies to the main branch and only allow changes us
 
     ![](images/az400-m3-L4-45.png)
     
-    ![](images/az400-m3-L4-46.png)
+    ![](images/az-400-lab3-9.png)
 
- 2. Click the new **Feature02 (1)** branch and navigate to the **/eShopOnWeb/src (2)/Web (3)/Program.cs (4)** file and click on **Edit (5)** to remove the first line and click on commit.
-
-    ```
-     // Testing my PR (6)
-    ```
+ 2. Click the new **Feature02 (1)** branch and navigate to the **/eShopOnWeb/src (2)/Web (3)/Program.cs (4)** file and click on **Edit (5)** to remove the first line // **Testing my PR (6)** and click on commit.
    
     ![](images/az400-m3-L4-47.png)
    
@@ -318,19 +312,19 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/az400-m3-L4-50.png)
 
- 6. In the **New pull request (1)** tab, leave defaults and click on **Create (3)** The Pull Request will show some pending requirements, based         on the policies applied to the target **main (2)** branch.
+ 6. In the **New pull request (1)** tab, leave defaults and click on **Create (3)** The Pull Request will show some pending requirements, based on the policies applied to the target **main (2)** branch and wait untill build completes.
 
      ![](images/AZ-400-pull.png)
 
- 7. After all validations are successful, on the top-right click on **Approve (1)**. Now from the **Set auto-complete** dropdown you can click       on **Complete (2)**
+ 7. After all validations are successful, on the top-right click on **Approve (1)**. Now from the **Set auto-complete** dropdown you can click on **Complete (2)**
 
      ![](images/az400-m3-L4-52.png)
 
- 8. On the **Complete Pull Request** tab, Click on **Complete Merge**
+ 8. On the **Complete Pull Request** tab, select only **Complete associated work items after merging** checkbox  and Click on **Complete Merge**
 
      ![](images/az400-m3-L4-53.png)
 
- 9. Go back to **Pipelines>Pipelines,** you will notice that the build **eshoponweb-ci** was triggered automatically after the code was            merged.
+ 9. Go back to **Pipelines>Pipelines,** you will notice that the build **eshoponweb-ci** was triggered automatically after the code was merged.
 
     ![](images/az400-m3-L4-54.png)
  

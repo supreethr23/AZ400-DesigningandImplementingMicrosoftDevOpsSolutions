@@ -35,19 +35,28 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/lab1-image2.png)
     
-5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
+5. On the Azure DevOps page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
-    ![Azure DevOps](images/az400-azdev.png)
+    ![Azure DevOps](images/az-400-lab3-(1).png)
+    
+6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
+
+    ![Azure DevOps](images/az-400-lab3-1.png)
+    ![Azure DevOps](images/az-400-lab3-2.png)    
+
+7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+
+    ![Azure DevOps](images/az-400-lab3-3.png)
 
 # Exercise 0: Configure the lab prerequisites
 
-In this exercise, you will set up the prerequisite for the lab, which consists of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
+In this exercise, you will set up the prerequisite for the lab, which consists of the pre-configured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
 
 ## Task 1: Configure the team project
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **PartsUnlimited** template.
 
-1.  In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. 
+1.  In a new tab of Edge browser navigate to https://azuredevopsdemogenerator.azurewebsites.net. This utility site will automate the process of creating a new Azure DevOps project within your account that is pre-populated with content (work items, repos, etc.) required for the lab. 
 
     > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
 
@@ -94,15 +103,18 @@ In this exercise, you will implement self-hosted Azure DevOps agent.
 
 In this task, you will configure the LOD VM as an Azure DevOps self-hosting agent and use it to run a build pipeline.
 
-1.  In the Azure DevOps portal, in the upper right corner of the Azure DevOps page, click the **User settings** icon, in the dropdown menu, click **Personal access tokens**, on the **Personal Access Tokens** pane, and click **+ New Token**.
+1.  In the Azure DevOps portal, in the upper right corner of the Azure DevOps page, click the **User settings** icon, in the dropdown menu, click **Personal access tokens**
+     ![Azure DevOps](images/az-400-lab3-4.png)
+  
+1.  On the **Personal Access Tokens** pane, and click **+ New Token**.
 
 1.  On the **Create a new personal access token** pane, click the **Show all scopes** link and, specify the following settings and click **Create** (leave all others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Name | **Configuring Agent Pools and Understanding Pipeline Styles lab** |
-    | Scope (custom defined) | **Agent Pools** (show more scopes option below if needed)|
-    | Permissions | **Read and manage** |
+    | Scope (custom defined) | **Agent Pools** (show all scopes option below if needed)|
+    | Agent Pools | **Read and manage** |
     
      
      ![Azure DevOps](images/lab4-2.png)
@@ -120,13 +132,13 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 
 1.  On the **Agent pools** pane, in the upper right corner, click **Add pool**. 
 
-1.  On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name** text box, type **az400m05l05a-pool** and then click **Create**.
+1.  On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name** text box, type **az400m05l05a-pool**, under **Pipeline permissions** select both checkboxes and then click **Create**.
 
-    ![Azure DevOps](images/lab-4-5.png)    
+    ![Azure DevOps](images/az-400-lab3-5.png)    
     
 1.  Back on the **Agent pools** pane, click the entry representing the newly created **az400m05l05a-pool**. 
 
-1.  On the **Jobs** tab of the **az400m05l05a-pool** pane, click the **Agents** header.
+1.  On the **Jobs** tab of the **az400m05l05a-pool** pane, select the **Agents** tab.
 
 1.  Start Windows PowerShell as administrator and in the **Administrator: Windows PowerShell** console run the following lines to locate the **C:\\agent** directory and to run the pre-installed agent inside the directory. 
 
@@ -148,8 +160,8 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     | Enter server URL | the URL of your Azure DevOps organization, in the format **https://dev.azure.com/<organization_name>**, where `<organization_name>` represents the name of your Azure DevOps organization |
     | Enter authentication type (press enter for PAT) | **Enter** |
     | Enter personal access token | The access token you recorded earlier in this task |
-    | Enter agent pool (press enter for default) | **az400m05l05a-pool** |
-    | Enter agent name (press enter for labvm-<inject key="DeploymentID" enableCopy="false"/> | **Enter** |
+    | Enter agent pool (press enter for default) | enter **az400m05l05a-pool** |
+    | Enter agent name (press enter for labvm-<inject key="DeploymentID" enableCopy="false"/>) | **Enter** |
     | Enter work folder (press enter for _work) | **Enter** |
     | **(Only if shown)** Enter Perform an unzip for tasks for each step. (press enter for N) | **WARNING**: only press **Enter** if the message is shown|
     | Enter run agent as service? (Y/N) (press enter for N) | **Y** |
@@ -182,12 +194,14 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     demands:
     - agent.name -equals Agentname
     ```
-       > **Note**: Replace Agentname with **labvm-<inject key="DeploymentID" enableCopy="false"/>**
+    > **Note**: Replace Agentname with **labvm-<inject key="DeploymentID" enableCopy="false"/>**
     
-       > **WARNING**: Be careful with copy/paste, make sure you have same indentation shown above.
+    > **WARNING**: Be careful with copy/paste, make sure you have same indentation shown above. 
    
 1.  Change `Task: NugetInstaller@0` to  `Task: NugetInstaller@1` . 
-
+ 
+    ![Azure DevOps](images/az-400-lab3-6.png)
+ 
 1.  On the **PartsUnlimited** edit pane, in the upper right corner of the pane, click **Save** and, on the **Save** pane, click **Save** again. This will automatically trigger the build based on this pipeline. 
 
 1.  In the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**.
