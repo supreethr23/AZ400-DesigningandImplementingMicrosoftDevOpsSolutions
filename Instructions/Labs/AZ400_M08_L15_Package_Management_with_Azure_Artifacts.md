@@ -114,7 +114,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
           
        ![](images/az-400-image5.png)
              
-     - On **Clone Repository** page under Browse a Repository select **Azure Devops** and Connect to a Project select **EShopOnWeb** repo and **Clone**.
+     - On **Clone Repository** page under Browse a Repository select **Azure DevOps** and Connect to a Project select **EShopOnWeb** repo and **Clone**.
            
         ![](images/az-400-image6.png)
         ![](images/az-400-image7.png)
