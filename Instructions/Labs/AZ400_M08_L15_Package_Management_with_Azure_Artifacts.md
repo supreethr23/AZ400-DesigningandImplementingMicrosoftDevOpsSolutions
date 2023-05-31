@@ -100,7 +100,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
      
 10.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
 
-      ![](images/AZ400_M08_L15_11.png)
+      ![](images/AZ400_M08_L15_11(1).png)
     
      >**Note**: If **Visual Studio** takes more than 5 minutes to get launched follow the below steps:
    
@@ -153,7 +153,7 @@ In this task, you will create and connect to a feed.
 
     > **Note**: Any user who wants to connect to this NuGet feed must configure their environment. 
     
-    ![](images/AZ400_M08_L15_(14).png)
+    ![](images/AZ400_M08_L15_14(1).png)
     
 4.  Back on the **Artifacts** hub, select **odluser-<inject key="DeploymentID" enableCopy="false"/>** **(1)** Organization, click **Connect to feed (2)**.
     
@@ -171,7 +171,7 @@ In this task, you will create and connect to a feed.
 8.  In the **Options** dialog box, click **Package Sources** and click the plus sign to add a new package source.
 9.  At the bottom of the dialog box, in the **Name** textbox, replace **Package Sources (1)** with **EShopOnWebShared (2)** and, in the **Source** textbox, paste the **Source URL (3)** you copied in the Azure DevOps portal and click **Update (4)** and then click **OK (5)** to finalize the addition. 
     
-     ![](images/AZ400_M08_L15_(18).png)
+     ![](images/AZ400_M08_L15_(18)(1).png)
      
      > **Note**: Visual Studio is now connected to the new feed.
 
@@ -213,7 +213,7 @@ In this task, you will create and publish a NuGet package.
 
 5.  Within the Visual Studio interface, in the **Solution Explorer** pane, right-click **Class1.cs (1)**, in the right-click menu, select **Delete (2)**, and, when prompted for confirmation, click **OK**.
     
-    ![](images/AZ400_M08_L15_23.png)
+    ![](images/AZ400_M08_L15_23(1).png)
    
 6.  Within the Visual Studio interface, in the **Solution Explorer** pane, right-click the **EShopOnWeb.Shared (1)** project node and select **Properties (2)**.
     
@@ -364,7 +364,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
 2.  Navigate to the Azure DevOps Portal, browse to **Artifacts**, and select the **EShopOnWebShared** Feed.
 3.  Click **Search Upstream Sources(2)**
 
-     ![](images/AZ400_M08_L15_(43).png)
+     ![](images/AZ400_M08_L15_(43)(1).png)
 
 4.  In the **Go to an Upstream Package** window, select **Nuget(1)** as Package Type, and enter **HelloWorld(2)** in the search field.
     
