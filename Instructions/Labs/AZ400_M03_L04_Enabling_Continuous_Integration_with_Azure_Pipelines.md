@@ -298,11 +298,7 @@ In this task, you will add policies to the main branch and only allow changes us
     
     ![](images/az400-m3-L4-46.png)
 
- 2. Click the new **Feature02 (1)** branch and navigate to the **/eShopOnWeb/src (2)/Web (3)/Program.cs (4)** file and click on **Edit (5)** to remove the first line and click on commit.
-
-    ```
-     // Testing my PR (6)
-    ```
+ 2. Click the new **Feature02 (1)** branch and navigate to the **/eShopOnWeb/src (2)/Web (3)/Program.cs (4)** file and click on **Edit (5)** to remove the first line // **Testing my PR (6)** and click on commit.
    
     ![](images/az400-m3-L4-47.png)
    
