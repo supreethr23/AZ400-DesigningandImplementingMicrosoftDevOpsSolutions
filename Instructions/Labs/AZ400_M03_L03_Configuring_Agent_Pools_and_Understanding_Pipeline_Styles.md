@@ -101,8 +101,8 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     | Setting | Value |
     | --- | --- |
     | Name | **Configuring Agent Pools and Understanding Pipeline Styles lab** |
-    | Scope (custom defined) | **Agent Pools** (show more scopes option below if needed)|
-    | Permissions | **Read and manage** |
+    | Scope (custom defined) | **Agent Pools** (show all scopes option below if needed)|
+    | Agent Pools | **Read and manage** |
     
      
      ![Azure DevOps](images/lab4-2.png)
