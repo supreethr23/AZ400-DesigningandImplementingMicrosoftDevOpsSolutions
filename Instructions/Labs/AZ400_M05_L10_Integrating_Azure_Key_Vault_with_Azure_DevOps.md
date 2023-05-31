@@ -241,7 +241,7 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
 
     - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
     - **az400eshop-NAME** replace NAME with <inject key="DeploymentID" enableCopy="false"/>.
-    - Replace **YOUR-ACR.azurecr.io** and **ACR-USERNAME** with your ACR login server and Usrname (To retrieve the login server and username  can be reviewed on the ACR>Access Keys).
+    - Replace **YOUR-ACR.azurecr.io** and **ACR-USERNAME** with your ACR login server and Username. (To retrieve the login server and username  navigate to azure portal,search for Container Registries and click on the available container registry,from the left navigation pane go to **Access Keys** and copy the login server and the username).
     - **AZ400-EWebShop-NAME** with the resource group name defined before in the lab.(replace NAME with <inject key="DeploymentID" enableCopy="false"/>)
 
 1. Click on **Save and Run**.
