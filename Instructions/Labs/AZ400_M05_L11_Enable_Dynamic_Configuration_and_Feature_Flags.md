@@ -26,7 +26,7 @@ After you complete this lab, you will be able to:
   ![Architecture Diagram](images/lab11-architecture.png)
 
 
-#### Set up an Azure DevOps organization.
+## Set up an Azure DevOps organization(Skip if already done)
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
 
@@ -42,7 +42,7 @@ After you complete this lab, you will be able to:
    
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-### Exercise 0: Configure the lab prerequisites
+### Exercise 0: Configure the lab prerequisites 
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the **eShopOnWeb**
 
@@ -118,11 +118,11 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
    ![](images/13.runthepipeline.png)
 
-7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis** and **Rename/Remove** option. Name it **eshoponweb-ci** and click on **Save**.
+7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis** and **Rename/move** option. Name it **eshoponweb-ci** and click on **Save**.
 
    ![](images/14.renamepipeline.png)
    
-   ![](images/15.renamepipeline-2.png)
+   ![](images/lab-11-1.png)
 
 **Task 2: Manage the service connection**
 
