@@ -53,7 +53,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previoulsy created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
 
     ![Import Repository](images/lab-400-2.png)
 
@@ -145,7 +145,7 @@ In this task, you will import an existing CI YAML pipeline definition, modify an
     - **PowerShell** task take the bicep output (acr login server) and creates pipeline variable.
     - **DockerCompose** task builds and pushes the container images for eShopOnWeb to the Azure Container Registry .
 
-1. Your pipeline will take a name based on the project name. Lets **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the elipsis and **Rename/move** option. Name it **eshoponweb-ci-dockercompose** and click on **Save**.
+1. Your pipeline will take a name based on the project name. Lets **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/move** option. Name it **eshoponweb-ci-dockercompose** and click on **Save**.
 
 1. Once the execution is finished, on the Azure Portal, open previously defined Resource Group, and you should find an Azure Container Registry (ACR) with the created container images **eshoppublicapi** and **eshopwebmvc**. You will only use **eshopwebmvc** on the deploy phase.
 
@@ -219,7 +219,7 @@ In this task, you will create a Variable Group in Azure DevOps that will retriev
     | Azure subscription | **Available Azure service connection > Azure subs** |
     | Key vault name | Your key vault name|
 
-    > **Note**:If you dont find the key vault that you had created in the previous task,in the Azure subscription drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click on **Authorize**, and from the dropdown select  **Available Azure service connection > Azure subs** and select the key vault that you had created earlier.
+    > **Note**:If you don't find the key vault that you had created in the previous task,in the Azure subscription drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click on **Authorize**, and from the dropdown select  **Available Azure service connection > Azure subs** and select the key vault that you had created earlier.
 
 1. Under **Variables**, click on **+ Add** and select the **acr-secret** secret. Click on **OK**.
 1. Click on **Save**.
