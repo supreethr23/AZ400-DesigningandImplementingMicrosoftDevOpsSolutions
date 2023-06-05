@@ -50,7 +50,7 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project(1)**. Give your project the name **eShopOnWeb(1)** and choose visiblility as **Private(2)**. Click on **Create(3)**
+   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project(1)**. Give your project the name **eShopOnWeb(1)** and choose visibility as **Private(2)**. Click on **Create(3)**
       
       ![](images/3.createproject-1.png)
       
@@ -339,7 +339,7 @@ In order to make sure that your website is accessing App Configuration, you need
       
          ![](images/53.2ndappsetting.png)
       
-4. Click **Save** then **Cotinue** and wait for the settings to be updated.
+4. Click **Save** then **Continue** and wait for the settings to be updated.
 
    ![](images/54.appsetting-2.png)
    
