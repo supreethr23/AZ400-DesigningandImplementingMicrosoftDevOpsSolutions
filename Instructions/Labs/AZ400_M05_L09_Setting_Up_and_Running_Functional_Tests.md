@@ -27,7 +27,7 @@ Identify the applications that you'll use in this lab:
     
 -   Microsoft Edge
 
-## Set up an Azure DevOps organization. 
+## Set up an Azure DevOps organization (Skip if already done) 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -35,11 +35,11 @@ Identify the applications that you'll use in this lab:
 
 3. On the next page accept defaults and click on continue.
 
-    ![Azure DevOps](images/400-3.png)
+    ![Azure DevOps](images/az-400-5-1.png)
 
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-    ![Azure DevOps](images/m1-2.png)
+    ![Azure DevOps](images/az-400-5-2.png)
 
 # Exercise 0: Configure the lab prerequisites
 
@@ -107,7 +107,7 @@ In this task, you will configure a self-hosted agent by using the VM you deploye
     | User Name | **vmadmin** |
     | Password | **P2ssw0rd@123** |
 
-1.  Within the Remote Desktop session to **az40011bvm**, open a Chrome web browser window, navigate to **https://dev.azure.com** and sign in to your Azure DevOps organization. 
+1.  Within the Remote Desktop session to **az40011bvm**, open a Chrome web browser window, navigate to **https://go.microsoft.com/fwlink/?LinkId=307137** and sign in to your Azure DevOps organization. 
 
 1.  In the lower left corner of the **Azure DevOps** portal, click **Organization settings**.
 
@@ -127,9 +127,10 @@ In this task, you will configure a self-hosted agent by using the VM you deploye
 
     ```cmd
     cd C:\AzAgent
+    ```
+    
+    ```cmd
     Config.cmd
-    .\run --diagnostics
-    .\run.cmd
     ```
 
 1.  In the **Administrator: Command Prompt** window, when prompted to **Enter server URL**, type **https://dev.azure.com/(your-DevOps-organization-name)/**, where **(your-DevOps-organization-name)** represents the name of your Azure DevOps Organization, and press the **Enter** key.
@@ -142,7 +143,7 @@ In this task, you will configure a self-hosted agent by using the VM you deploye
 
     | Setting | Value |
     | --- | --- |
-    | Name | **Setting Up and Running Functional Tests lab** |
+    | Name | Type **Setting Up and Running Functional Tests lab** |
     | Scopes | **Custom Defined** |
     | Scopes | Click **Show all scopes** (at the bottom of the window) |
     | Scopes | **Agent Pools** - **Read & Manage** |
@@ -182,7 +183,7 @@ In this task, you will configure the release pipeline.
 
 1.  Within the Remote Desktop session to **az40011bvm**, in the browser window displaying the **Azure DevOps** portal, click the **Azure DevOps** symbol in the upper left corner.
 
-1.  On the pane displaying your organization projects, click the tile representing the **Setting** project.
+1.  On the pane displaying your organization projects, click the tile representing the **Setting Up and Running Functional Tests** project.
 
 1.  On the **Setting** pane, in the vertical navigational pane, select **Pipelines**, within the **Pipelines** section, click **Releases** and then, on the **Selenium** pane, click **Edit**.
 

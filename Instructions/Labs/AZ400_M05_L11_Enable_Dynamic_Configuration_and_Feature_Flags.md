@@ -26,7 +26,7 @@ After you complete this lab, you will be able to:
   ![Architecture Diagram](images/lab11-architecture.png)
 
 
-#### Set up an Azure DevOps organization.
+## Set up an Azure DevOps organization(Skip if already done)
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
 
@@ -42,7 +42,7 @@ After you complete this lab, you will be able to:
    
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-### Exercise 0: Configure the lab prerequisites
+### Exercise 0: Configure the lab prerequisites 
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the **eShopOnWeb**
 
@@ -94,10 +94,8 @@ In this task, you will create an eShopOnWeb Azure DevOps project to be used by s
 
 Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
-1. Go to **Pipelines(1)>Pipelines(2)**. Click on **Create Pipeline(3)** button
+1. From the left navigation pane go to **Pipelines > Pipelines**.Click on **New pipeline** button
    
-   ![](images/8.createpipeline-1.png)
-
 2. Select **Azure Repos Git (Yaml)**.
 
    ![](images/9.selectazurereposgityml.png)
@@ -108,7 +106,7 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
 4. Select **Existing Azure Pipelines YAML File**.
 
-   ![](images/11.existingymlpipeline.png)
+   ![](images/AZ-400-ss.png)
 
 5. Select the **/.ado/eshoponweb-ci.yml** file then click on **Continue**.
 
@@ -118,11 +116,11 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
    ![](images/13.runthepipeline.png)
 
-7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis** and **Rename/Remove** option. Name it **eshoponweb-ci** and click on **Save**.
+7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis** and **Rename/move** option. Name it **eshoponweb-ci** and click on **Save**.
 
    ![](images/14.renamepipeline.png)
    
-   ![](images/15.renamepipeline-2.png)
+   ![](images/lab-11-1.png)
 
 **Task 2: Manage the service connection**
 
@@ -181,21 +179,18 @@ o Deploy the eShopOnWeb application
 
       ![](images/21.serviceprinciplecommand.png)
 
-   6. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections(1) (under Pipelines)** and **Create Service Connection(2)**.
+  6. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections(1) (under Pipelines)** and **Create Service Connection(2)**.
 
       ![](images/22.projectssetting.png)
      
-      ![](images/23.serviceconnection.png)
+  7. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
+
       
-   7. On the **New service connection** blade, select **Azure Resource Manager(1)** and **Next(2)** (may need to scroll down).
+  8. The choose **Service principal (manual)(1)** and click on **Next(2)**.
 
-      ![](images/24.azureresourcemanager.png)
+      ![](images/lab-400-border 0.1.png)
 
-   8. The choose **Service principal (manual)(1)** and click on **Next(2)**.
-
-      ![](images/25.serviceprinciple.png)
-
-   9. Fill in the empty fields using the information gathered during previous steps:
+  9. Fill in the empty fields using the information gathered during previous steps:
 
         o **Subscription Id(1)** and **Subscription Name(2)**.
         
@@ -209,9 +204,9 @@ o Deploy the eShopOnWeb application
         
         ![](images/27.SPcreation-1.png)
         
-        ![](images/28.newsp.png)
+        ![](images/lab-400.15.png)
         
-        ![](images/29.newsp-2.png)
+        ![](images/lab-400-1.2.1.png)
           
  **Task 3: Import and run the CD pipeline**
  
@@ -239,16 +234,15 @@ o Deploy the eShopOnWeb application
    
       In the YAML pipeline definition, customize:
       
-      - **YOUR-SUBSCRIPTION-ID(2)** with your Azure subscription id.
       - **AZ400-EWebshop-NAME(1)** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
-      - **AZ400-EWebShop-NAME** with **AZ400-EWebShop1-<inject key="DeploymentID" enableCopy="false"/>**.
+      - **YOUR-SUBSCRIPTION-ID(2)** with your Azure subscription id.
       - **az400-webapp-NAME(3)** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
 
       ![](images/34.ymlnamereplace-1.png)
          
    6. Click on **Save and Run** and wait for the pipeline to execute successfully.
 
-      > **Note**: The deployment may take a few minutes to complete.
+      > **Note**: The deployment may take a few minutes to complete.When the pipeline is running if you get a prompt  as **Permissions Needed** click on **view** and click on permit 
 
        ![](images/35.pipelinesave&run.png)
        
@@ -258,7 +252,7 @@ o Deploy the eShopOnWeb application
        - **Resources**: it is prepared to automatically trigger based on CI pipeline completion. It also downloads the repository for the bicep file.
        - **AzureResourceManagerTemplateDeployment**: Deploys the Azure Web App using bicep template.
 
-  7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines(1)>Pipelines(2)** and          click on the recently created pipeline. Click on the **ellipsis(3)** and **Rename/Remove(4)** option. Name it **eshoponweb-cd-webapp-code(5)** and click on          **Save(6)**.
+  7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines(1)>Pipelines(2)** and          click on the recently created pipeline. Click on the **ellipsis(3)** and **Rename/move(4)** option. Name it **eshoponweb-cd-webapp-code(5)** and click on          **Save(6)**.
 
      ![](images/37.rename-1.png)   
      
@@ -337,13 +331,13 @@ In order to make sure that your website is accessing App Configuration, you need
         - **Name:** UseAppConfig
         - **Value:** true
 
-      ![](images/52.1stappsetting.png)
+         ![](images/52.1stappsetting.png)
       
     - Second app setting
         - **Name:** AppConfigEndpoint
         - **Value:** *the value you saved/copied previously from App Configuration Endpoint. It should look like https://appcs-NAME-REGION.azconfig.io*
       
-      ![](images/53.2ndappsetting.png)
+         ![](images/53.2ndappsetting.png)
       
 4. Click **Save** then **Cotinue** and wait for the settings to be updated.
 
@@ -353,7 +347,7 @@ In order to make sure that your website is accessing App Configuration, you need
    
 5. Go to **Overview(1)** and click on **Browse(2)**
 
-   ![](images/56.clickbrowse.png)
+   ![](images/lab-400-border.png)
    
 6. At this step, you will see no changes in the website since the App Configuration doesn't contain any data. This is what you will do in the next tasks.
 
