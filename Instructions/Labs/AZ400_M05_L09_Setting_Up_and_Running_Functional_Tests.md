@@ -229,7 +229,7 @@ In this task, we will trigger the **Build** to compile Selenium C# scripts along
 
 1.  Once the release completes, on the **Selenium > Release-1 > Dev** pane, click on the **Tests** tab to analyze the test results. Select the required filters from the dropdown in **Outcome** section to view the tests and their status.
 
-**Note :** If you you the pipeline agents offline for more than 30 minutes , please run the below and perfrom Task 3.
+**Note :** If you you the pipeline agents offline for more than 30 minutes , please run the below and perform Task 3.
 
    ```cmd
      .\run --diagnostics
