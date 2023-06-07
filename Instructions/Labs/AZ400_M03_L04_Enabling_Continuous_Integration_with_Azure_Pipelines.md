@@ -266,9 +266,9 @@ In this task, you will add policies to the main branch and only allow changes us
 
       This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
     
-  2. Click the **Dropdown** and **Save (2)** button (not **Save and run**) to save the pipeline definition.
+  2. Click the **Dropdown** and **Save** button (not **Save and run**) to save the pipeline definition.
 
-     ![](images/az400-m3-L4-40.png)
+     ![](images/az400-m3-L4-(40)(1).png)
   
   3. Select **Create a new branch for this commit (1)** Keep the default branch name and **Start a pull request(2)** checked. and Click on **Save(3)**
 
@@ -312,7 +312,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/az400-m3-L4-50.png)
 
- 6. In the **New pull request (1)** tab, leave defaults and click on **Create (3)** The Pull Request will show some pending requirements, based on the policies applied to the target **main (2)** branch and wait untill build completes.
+ 6. In the **New pull request (1)** tab, leave defaults and click on **Create (3)** The Pull Request will show some pending requirements, based on the policies applied to the target **main (2)** branch and wait until build completes.
 
      ![](images/AZ-400-pull.png)
 
@@ -340,7 +340,13 @@ In this task, you will add policies to the main branch and only allow changes us
      o Website: the app artifact
      
      ![](images/az400-m3-L4-57.png)
+     
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
           
-  **Review**
+ #### Review
   
   In this lab, you enabled pull request validation using a build definition and configured CI pipeline as code with YAML in Azure DevOps. 
