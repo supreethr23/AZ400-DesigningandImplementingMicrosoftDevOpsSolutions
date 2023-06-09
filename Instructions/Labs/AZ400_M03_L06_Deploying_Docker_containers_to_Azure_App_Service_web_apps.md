@@ -16,58 +16,6 @@ After you complete this lab, you will be able to:
 
    ![Architecture Diagram](images/lab6-architecture.png)
 
-## Set up an Azure DevOps organization
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to [**Azure Devops**](https://go.microsoft.com/fwlink/?LinkId=307137). 
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/400-3.png)
-
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/m1-2.png)
-
-5. In the **Organization Settings** window on the left menu click on **Billing** and select **Setup Billing** then click on save, you can find the **Organization Settings** in the left bottom corner of the Azure DevOps home page.
-
-    ![Azure DevOps](images/agent3.png)
-    ![Azure DevOps](images/agent4.png)    
-
-6. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
-
-    ![Azure DevOps](images/agent2.png)
-
-# Exercise 0: Configure the lab prerequisites
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
-
-## Task 1: Create and configure the team project
-
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
-
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
-
-## Task 2: Import eShopOnWeb Git Repository
-
-In this task you will import the eShopOnWeb Git repository that will be used by several labs.
-
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previoulsy created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**: 
-
-1.  The repository is organized the following way:
-    - **.ado** folder contains Azure DevOps YAML pipelines
-    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
-    - **.azure** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
-    - **.github** folder container YAML GitHub workflow definitions.
-    - **src** folder contains the .NET 6 website used on the lab scenarios.
-
-## Task 3: Set main branch as default branch
-
-1. Go to **Repos>Branches**
-1. Hover on the **main** branch then click the ellipsis on the right of the column
-1. Click on **Set as default branch**
-
 # Exercise 1: Manage the service connection
 
 In this exercise, you will configure the service connection with your Azure Subscription then import and run the CI pipeline.
