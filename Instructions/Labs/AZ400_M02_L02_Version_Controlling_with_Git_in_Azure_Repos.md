@@ -25,32 +25,13 @@ After you complete this lab, you will be able to:
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab2-architecture.png)
-
-## Set up an Azure DevOps organization
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials provided in environment details tab.
-
-2. If the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults, accept the captcha and click on continue.
-
-    ![Azure DevOps](images/az400_02-01.png)
     
 # Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb)
-    
-## Task 1: Create and configure the team project
+   
 
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
-
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and under the **Advanced** section, choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
-
-    ![Create Project](images/az400_02-02.png)
-    
-    ![Create Project](images/az400_02-03.png)
-
-## Task 2: Import eShopOnWeb Git Repository
+## Task 1: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -65,7 +46,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-## Task 3: Configure Git and Visual Studio Code
+## Task 2: Configure Git and Visual Studio Code
 
 In this task, you will configure Git and Visual Studio Code, including configuring the Git credential helper to securely store the Git credentials used to communicate with Azure DevOps.
 
