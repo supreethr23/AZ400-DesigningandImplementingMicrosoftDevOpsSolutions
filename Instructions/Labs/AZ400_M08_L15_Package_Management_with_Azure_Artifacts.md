@@ -19,42 +19,12 @@ After you complete this lab, you will be able to:
 
   ![Architecture Diagram](images/lab15-architecture.png)
 
-## Set up an Azure DevOps organization
-1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign in with the credentials.
-
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-    * Password: <inject key="AzureAdUserPassword"></inject>
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-
-   ![Azure DevOps](images/lab1-image1.png)
-    
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/lab1-image2.png)
 
 # Exercise 1: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include the pre-configured EShopOnWeb team project based on an Azure DevOps Organization and a Visual Studio configuration.
 
-## Task 1: Configure the EShopOnWeb project
-
-In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
-
-1.  Click **Sign in** and sign in with the following credentials.
-    
-    > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
-    
-    > **Password**: <inject key="AzureAdUserPassword"></inject>
-
-2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibility as **Private (2)**, and then click **+ Create Project(3)**
-
-    ![](images/AZ400_M08_L15_03.png)
-
-## Task 2: Configuring the EShopOnWeb solution in Visual Studio
+## Task 1: Configuring the EShopOnWeb solution in Visual Studio
 
 In this task, you will configure Visual Studio to prepare for the lab.
 
