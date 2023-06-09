@@ -20,35 +20,17 @@ After you complete this lab, you will be able to:
    ![Architecture Diagram](images/lab3-architecture.png)
 
 ## Set up an Azure DevOps organization
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
-
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-    * Password: <inject key="AzureAdUserPassword"></inject>
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. In the pop-up for *Action Required*, select **Ask later**. 
-
-4. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/lab1-image1.png)
     
-5. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/lab1-image2.png)
-    
-6. On the Azure DevOps page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
+1. On the Azure DevOps page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
     ![Azure DevOps](images/az-400-lab3-(1).png)
     
-7. In the **Organization Setting** window on the left menu click on **Billing (1)** and select **Setup Billing (2)** then click on **save (3)**.
+2. In the **Organization Setting** window on the left menu click on **Billing (1)** and select **Setup Billing (2)** then click on **save (3)**.
 
     ![Azure DevOps](images/az-400-lab3-1.png)
     ![Azure DevOps](images/az-400-lab3-2.png)    
 
-8. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+3. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
 
     ![Azure DevOps](images/az-400-lab3-3.png)
 
