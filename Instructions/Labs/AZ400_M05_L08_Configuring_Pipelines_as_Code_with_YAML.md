@@ -22,33 +22,6 @@ After you complete this lab, you will be able to:
 
    ![Architecture Diagram](images/lab8-architecture.png)
 
-# Set up an Azure DevOps organization
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/az-400-5-1.png)
-
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/az-400-5-2.png)
-
-5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
-
-    ![Azure DevOps](images/az-400-5-3.png)
-
-6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
-
-    ![Azure DevOps](images/az-400-5-4.png)
-    
-    ![Azure DevOps](images/az-400-5-5.png)    
-
-7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
-
-    ![Azure DevOps](images/az-400-5-6.png)
 
 # Exercise 0: Configure the lab prerequisites
 
