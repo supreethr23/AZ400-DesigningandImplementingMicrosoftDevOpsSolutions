@@ -26,65 +26,6 @@ After you complete this lab, you will be able to:
 
    ![Architecture Diagram](images/lab13-architecture.png)
 
-## Set up an Azure DevOps organization. 
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/400-3.png)
-
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/m1-2.png)
-
-5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
-
-    ![Azure DevOps](images/agent1.png)
-
-6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
-
-    ![Azure DevOps](images/agent3.png)
-    
-    ![Azure DevOps](images/agent4.png)    
-
-7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
-
-    ![Azure DevOps](images/agent2.png)    
-
-8. In the **Organization Setting** window on the left menu click on **Policies** and enable **Third-party application access via OAuth**.
-
-    ![Azure DevOps](images/policies-enable-3rd.png)    
-
-# Exercise 0: Configure the lab prerequisites
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://dev.azure.com/unhueteb/_git/eshopweb-az400).
-
-## Task 1:  (skip if done) Create and configure the team project
-
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
-
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **Create**.
-
-    ![Create Project](images/create-project.png)
-
-## Task 2:  (skip if done) Import eShopOnWeb Git Repository
-
-In this task you will import the eShopOnWeb Git repository that will be used by several labs.
-
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click **Import**:
-
-    ![Import Repository](images/import-repo.png)
-
-1.  The repository is organized the following way:
-    - **.ado** folder contains Azure DevOps YAML pipelines
-    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
-    - **.azure** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
-    - **.github** folder container YAML GitHub workflow definitions.
-    - **src** folder contains the .NET 6 website used on the lab scenarios.
-
 # Exercise 1: Implement Security and Compliance in an Azure DevOps pipeline by using Mend Bolt
 
 In this exercise, leverage Mend Bolt to scan the project code for security vulnerabilities and licensing compliance issues, and view the resulting report.
