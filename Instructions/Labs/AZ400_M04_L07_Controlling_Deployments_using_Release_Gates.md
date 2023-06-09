@@ -61,8 +61,8 @@ In this task, you will add a YAML build definition to the existing project.
 
 1. In the **Selecting an existing YAML File** blade, specify the following parameters:
    
-- Branch: **main**
-- Path: Select **/.ado/eshoponweb-ci.yml** from the drop-down.
+    - Branch: **main**
+    - Path: Select **/.ado/eshoponweb-ci.yml** from the drop-down.
 
     ![Import Repository](images/newpip4.png)
   
