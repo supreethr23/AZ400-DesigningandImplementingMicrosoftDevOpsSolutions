@@ -16,60 +16,7 @@ After you complete this lab, you will be able to:
 
   ![Architecture Diagram](images/lab4-architecture.png)
 
-# Set up an Azure DevOps organization (Skip if already done).
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
-
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-    * Password: <inject key="AzureAdUserPassword"></inject>
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-   
-   ![](images/AZ-400-odl.png)
-   
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-   ![](images/AZ-400-almost.png)
-
-# Exercise 0: Configure the lab prerequisites
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the **eShopOnWeb**.
-
-## Task 1: Create and configure the team project
-
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
-
-   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name  **eShopOnWeb (1)**, select visibility as **Private(2)**  and leave the other fields with defaults. Click on **Create project (3)**.
-
-      ![](images/az400-m3-L4-03.png)
-
-## Task 2: (skip if done) Import eShopOnWeb Git Repository
-
-  In this task you will import the eShopOnWeb Git repository that will be used by several labs.
-  
-   1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created eShopOnWeb project. Click on             **Repos (1)>Files (2) , Import a Repository**. Select **Import (3)**. On the **Import a Git Repository (4)** window, paste the following URL                     https://github.com/MicrosoftLearning/eShopOnWeb.git (5) and click **Import (6)**.
-
-      ![](images/AZ-400-import.png)
-      
-      ![](images/AZ-400-git.png)
-
-   2. The repository is organized the following way:
-
-         o. **.ado** folder contains Azure DevOps YAML pipelines
-         
-         o **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
-         
-         o **.azure** folder contains Bicep & ARM infrastructure as code templates used in some lab scenarios.
-         
-         o **.github** folder contains YAML GitHub workflow definitions.
-         
-         o. **src** folder contains the .NET 6 website used in the lab scenarios.
-         
-       ![](images/az400-m3-L4-06.png)
-         
  # Exercise 1: Include build validation as part of a Pull Request
  
  In this exercise, you will include build validation to validate a Pull Request.
