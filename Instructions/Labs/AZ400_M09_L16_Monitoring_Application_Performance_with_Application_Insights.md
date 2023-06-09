@@ -21,37 +21,6 @@ After you complete this lab, you will be able to:
 
    ![Architecture Diagram](images/lab16-architecture.png)
 
-## Set up an Azure DevOps organization. 
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
-
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-    * Password: <inject key="AzureAdUserPassword"></inject>
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/400-3-1.png)
-
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/m1-2-1.png)
-
-5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
-
-    ![Azure DevOps](images/agent1-1.png)
-
-6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing** then click on save.
-
-    ![Azure DevOps](images/agent3-1.png)
-    ![Azure DevOps](images/agent4-1.png)    
-
-7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
-
-    ![Azure DevOps](images/agent2-1.png)
-
 # Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template and Azure resources, including an Azure web app and an Azure SQL database. 
