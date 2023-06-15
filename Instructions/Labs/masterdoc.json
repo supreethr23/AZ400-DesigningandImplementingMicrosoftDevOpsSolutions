@@ -1,0 +1,81 @@
+[
+  {
+    "Name": "AZ 400 : Designing and Implementing Microsoft DevOps Solutions",
+    "Language": "English",
+    "BaseURL": "https://github.com/MicrosoftLearning/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/LabIntro.md",
+        "Order": 1
+      },
+	  {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M01_L01_Agile_Planning_and_Portfolio_Management_with_Azure_Boards.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M02_L02_Version_Controlling_with_Git_in_Azure_Repos.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M03_L03_Configuring_Agent_Pools_and_Understanding_Pipeline_Styles.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M03_L04_Enabling_Continuous_Integration_with_Azure_Pipelines.md",
+        "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M03_L05_Implementing_GitHub_Actions_for_CI_CD.md",
+        "Order": 6
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M03_L06_Deploying_Docker_containers_to_Azure_App_Service_web_apps.md",
+        "Order": 7
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M04_L07_Controlling_Deployments_using_Release_Gates.md",
+        "Order": 8
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M05_L08_Configuring_Pipelines_as_Code_with_YAML.md",
+        "Order": 9
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M05_L09_Setting_Up_and_Running_Functional_Tests.md",
+        "Order": 10
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M05_L10_Integrating_Azure_Key_Vault_with_Azure_DevOps.md",
+        "Order": 11
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M05_L11_Enable_Dynamic_Configuration_and_Feature_Flags.md",
+        "Order": 12
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M06_L12_Azure_Deployments_Using_Resource_Manager_Templates.md",
+        "Order": 13
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M07_L13_Implement_Security_and_Compliance_in_an_Azure_Pipeline.md",
+        "Order": 14
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M07_L14_Managing_technical_debt_with_SonarQube_and_Azure_DevOps.md",
+        "Order": 15
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M08_L15_Package_Management_with_Azure_Artifacts.md",
+        "Order": 16
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M09_L16_Monitoring_Application_Performance_with_Application_Insights.md",
+        "Order": 17
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Azure-pass-new/Instructions/Labs/AZ400_M09_L17_Sharing_Team_Knowledge_using_Azure_Project_Wikis.md",
+        "Order": 18
+      }
+    ]
+  }
+]
