@@ -523,9 +523,7 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 
     > **Note**: You can now add this chart to a dashboard.
 
-## Review
 
-In this lab you used Azure Boards to perform a number of common agile planning and portfolio management tasks, including management of teams, areas, iterations, work items, sprints and capacity, customizing Kanban boards, defining dashboards, and customizing team processes.
 #### Review
 
 In this lab you used Azure Boards to perform a number of common agile planning and portfolio management tasks, including management of teams, areas, iterations, work items, sprints and capacity, customizing Kanban boards, defining dashboards, and customizing team processes.
