@@ -194,7 +194,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
     ![WITs moved to the specified columns from previous steps](images/m1/az-400_m01_t2_s23.png)
 
-    > **Note**: The task board is one view into the backlog. You can also use the tabular view.
+     > **Note**: The task board is one view into the backlog. You can also use the tabular view.
 
 1. On the **Board** tab of the **EShop-WEB** pane, at the top of the pane, click **View as Backlog** to display the tabular form.
 
