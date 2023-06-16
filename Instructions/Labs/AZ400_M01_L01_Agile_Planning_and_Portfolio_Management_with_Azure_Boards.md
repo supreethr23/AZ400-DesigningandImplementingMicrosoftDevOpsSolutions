@@ -94,7 +94,9 @@ Each new project is configured with a default team, which name matches the proje
 
 1. Repeat the previous step to add **Sprint 2** and **Sprint 3**. You could say that we are currently in the 2nd week of the first sprint.
 
-    ![Do the same for Sprint 2 and 3, make sure they are created for "EShop-Web" team](images/m1/az-400_m01_iterations.png)
+    ![Do the same for Sprint 2 and 3, make sure they are created for "EShop-Web" team](images/m1/az-400_m01_iterations-new.png)
+    
+    ![Do the same for Sprint 2 and 3, make sure they are created for "EShop-Web" team](images/m1/sprint-new.png)
 
 1. Back on the **Boards** pane, at the top of the pane, select the **Areas** tab. You will find there an automatically generated area with the name matching the name of the team.
 1. Click the ellipsis symbol (...) next to the **default area** entry and, in the dropdown list, select **Include sub areas**.
