@@ -83,11 +83,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
       ![](images/az400-m3-L4-17.png)
 
-   3. On the main tab of the repository settings, enable the option for **Require minimum number of reviewers (1)**. Add **1 (2)** reviewer and check the box **Allow requestors to approve their own changes (3)**(as you are the only user in your project for the lab)
-
-      ![](images/az400-m3-L4-18.png)
-
-   4. On the **main (1)** tab of the repository settings, in the **Build Validation (2)** section, **click + (Add a new build policy) (3)** and in the Build pipeline list, select **eshoponweb-ci-pr (4)** then click **Save (5)**
+   3. On the **main (1)** tab of the repository settings, in the **Build Validation (2)** section, **click + (Add a new build policy) (3)** and in the Build pipeline list, select **eshoponweb-ci-pr (4)** then click **Save (5)**
 
       ![](images/az400-m3-L4-19.png)
 
