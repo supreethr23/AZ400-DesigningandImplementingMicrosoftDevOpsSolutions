@@ -22,7 +22,7 @@ After you complete this lab, you will be able to:
 
 ## Prepare a GitHub account
 
-1. If you already have a GitHub account that you can use for this lab proceed with Exercise 1, else follow the instructions to create an account.
+1. If you already have a GitHub account that you can use for this lab proceed with Exercise 0, else follow the instructions to create an account.
 
 1. Navigate to the https://github.com/ Click on Signup.
    
