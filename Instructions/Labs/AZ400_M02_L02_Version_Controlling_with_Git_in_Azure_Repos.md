@@ -168,9 +168,9 @@ In this task, you will explore the use of staging changes by using Visual Studio
 1. Switch back to the **Visual Studio Code** window.
 1. Update the open **Program.cs** class by changing the first comment with the following, and saving the file.
 
-```csharp
-    //My second change
-```
+   ```csharp
+   //My second change
+   ```
 
 1. In the Visual Studio Code window, switch back the **EXPLORER** tab, navigate to the **/eShopOnWeb/src/Web/Constants.cs** file and select it. This will automatically display its content in the details pane.
 1. Add to the **Constants.cs** file a comment on the first line and save the file.
