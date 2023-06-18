@@ -156,8 +156,8 @@ In this task, you will import and run the CI pipeline.
 1. Select the **/.ado/eshoponweb-cd-webapp-docker.yml** file then click on **Continue**
 
 1. In the YAML pipeline definition, customize:
-- **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
-- **rg-az400-container-NAME** with the resource group name defined before in the lab.
+   - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
+   - **rg-az400-container-NAME** with the resource group name defined before in the lab.
 
 1. Click on **Save and Run** and wait for the pipeline to execute succesfully.
 
