@@ -174,7 +174,6 @@ In this task, you will import and run the CI pipeline.
 
     > **Note 2**: The use of the **/.azure/bicep/webapp-to-acr-roleassignment.bicep** template creates a new role assignment for the web app with AcrPull role to be able to retreive the docker image. This could be done in the first template, but since the role assignment can take some time to propagate, it's a good idea to do both tasks separately.
 
-    > **Note 3**: 
 
 ## Task 3: Test the solution
 
