@@ -183,19 +183,6 @@ In this task, you will import and run the CI pipeline.
 
 Congratulations! In this exercise, you deployed a website using custom docker image.
 
-# Exercise 3: Remove the Azure DevOps billing
-
-In this exercise, you will remove the Azure DevOps billing enabled in this lab to eliminate unexpected charges.
-
-## Task 1: Remove the Azure DevOps billing
-
-In this task, you will remove pipeline billing to eliminate unnecessary charges.
-
-1. On the lab computer, switch to the browser window displaying Azure DevOps organization homepage and select **Organization Settings** at bottom left corner.
-
-1. Under **Organization Settings** select **Billing** and click on **Change billing** button to open Change billing pane.
-
-1. In the **Change billing** pane, select **Remove billing** setting and click on Save.
 
 ## Review
 
