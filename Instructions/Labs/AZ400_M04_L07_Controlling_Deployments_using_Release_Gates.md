@@ -194,10 +194,10 @@ In this task, you will create two Azure web apps representing the **Canary** and
       ![portal](images/failedreupdated.png)
      
 1.  On the **Create an Alert Rule** blade, in the **Condition** section, leave the **Threshold** set to **Static(1)**, validate the other default settings as follows:
-- Aggregation Type: Count(2)
-- Operator: Greater Than(3)
-- Unit: Count(4)
-- Threshold value: type 0(5)
+    - Aggregation Type: Count(2)
+    - Operator: Greater Than(3)
+    - Unit: Count(4)
+    - Threshold value: type 0(5)
 
      ![portal](images/cond.png)
     
@@ -401,19 +401,19 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
 
 1. On the **Post-deployment conditions** pane, expand the **Advanced** section and configure the following options:
 
-- Filter type: **None(1)**
-- Severity: **Sev0, Sev1, Sev2, Sev3, Sev4(2)**
-- Time Range: **Past Hour(3)**
-- Alert State: **Acknowledged, New(4)**
-- Monitor Condition: **Fired(5)**
+    - Filter type: **None(1)**
+    - Severity: **Sev0, Sev1, Sev2, Sev3, Sev4(2)**
+    - Time Range: **Past Hour(3)**
+    - Alert State: **Acknowledged, New(4)**
+    - Monitor Condition: **Fired(5)**
  
      ![Azure devops](images/pre-deployset3.png) 
      
 1. On **Post-deployment conditions** pane, expand the **Evaluation options** and configure the following options:
 
-- Set the value of **Time between re-evaluation of gates** to **5 Minutes(1)**.
-- Set the value of **Timeout after which gates fail** to **8 Minutes(2)**.
-- Select the **On successful gates, ask for approvals(3)** option.
+    - Set the value of **Time between re-evaluation of gates** to **5 Minutes(1)**.
+    - Set the value of **Timeout after which gates fail** to **8 Minutes(2)**.
+    - Select the **On successful gates, ask for approvals(3)** option.
 
      ![Azure devops](images/pre-deployset5.png) 
 
