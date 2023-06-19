@@ -206,9 +206,9 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 1. Notice the 2 different Stages, **Build .Net Core Solution** and **Deploy to Azure Web App** appearing.
 1. Wait for the pipeline to kick off and wait until it completes the Build Stage successfully.
 1. Once the Deploy Stage wants to start, you are prompted with **Permissions Needed**, as well as an orange bar saying 
-    ```
-    This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
-    ```
+     
+    > **Note**: This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
+
 1. Click on **View**
 1. From the **Waiting for Review** pane, click **Permit**.
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
