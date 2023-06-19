@@ -95,7 +95,7 @@ In this exercise, you will import and run the CI pipeline.
    - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
    - **rg-az400-container-NAME** with the resource group name defined before in the lab.
 
-1. Click on **Save and Run** and wait for the pipeline to execute succesfully.
+1. Select **Create new branch for this commit** and click on **Save and Run** and wait for the pipeline to execute succesfully.
 
     > **Note**: The deployment may take a few minutes to complete if it is ask for permission click on permit.
 
@@ -159,7 +159,7 @@ In this task, you will import and run the CI pipeline.
    - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
    - **rg-az400-container-NAME** with the resource group name defined before in the lab.
 
-1. Click on **Save and Run** and wait for the pipeline to execute succesfully.
+1. Select **Create new branch for this commit** and click on **Save and Run** and wait for the pipeline to execute succesfully.
 
     > **Note**: The deployment may take a few minutes to complete and if its asks for permission click on Permit.
 
