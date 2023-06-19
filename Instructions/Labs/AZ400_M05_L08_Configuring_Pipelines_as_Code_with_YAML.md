@@ -50,7 +50,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-## Task 2: Create Azure resources
+## Task 3: Create Azure resources
 
 In this task, you will create an Azure web app by using the Azure portal.
 
@@ -296,7 +296,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 
     ```
 
-## Task 4: Review the deployed site
+## Task 3: Review the deployed site
 
 1. Switch back to web browser window displaying the Azure portal and navigate to the blade displaying the properties of the Azure web app.
 1. On the Azure web app blade, click **Overview** and, on the overview blade, click **Browse** to open your site in a new web browser tab.
