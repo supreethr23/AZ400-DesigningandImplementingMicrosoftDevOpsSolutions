@@ -26,11 +26,11 @@ After you complete this lab, you will be able to:
   ![Architecture Diagram](images/lab11-architecture.png)
 
 
-### Exercise 1: Import and run CI/CD Pipeline
+# Exercise 1: Import and run CI/CD Pipeline
 
 In this exercise, you will import and run the CI pipeline, configure the service connection with your Azure Subscription and then import and run the CD pipeline.
 
-**Task 1: Import and run the CD pipeline**
+## Task 1: Import and run the CD pipeline
  
  Let's import the CD pipeline named **eshoponweb-cd-webapp-code.yml**.
  
