@@ -56,9 +56,9 @@ In this exercise, you will import and run the CI pipeline, configure the service
    
       In the YAML pipeline definition, customize:
       
-      - **AZ400-EWebshop-NAME(1)** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
+      - **AZ400-EWebshop-NAME(1)** replace NAME with any random value.
       - **YOUR-SUBSCRIPTION-ID(2)** with your Azure subscription id.
-      - **az400-webapp-NAME(3)** replace NAME with **<inject key="DeploymentID" enableCopy="false"/>**.
+      - **az400-webapp-NAME(3)** replace NAME with any random value**.
 
       ![](images/34.ymlnamereplace-1.png)
          
@@ -71,10 +71,11 @@ In this exercise, you will import and run the CI pipeline, configure the service
        ![](images/36.pipelinesuccess.png)
 
       The CD definition consists of the following tasks:
+      
        - **Resources**: it is prepared to automatically trigger based on CI pipeline completion. It also downloads the repository for the bicep file.
        - **AzureResourceManagerTemplateDeployment**: Deploys the Azure Web App using bicep template.
 
-  7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines(1)>Pipelines(2)** and          click on the recently created pipeline. Click on the **ellipsis(3)** and **Rename/move(4)** option. Name it **eshoponweb-cd-webapp-code(5)** and click on          **Save(6)**.
+  8. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines(1)>Pipelines(2)** and click on the recently created pipeline. Click on the **ellipsis(3)** and **Rename/move(4)** option. Name it **eshoponweb-cd-webapp-code(5)** and click on **Save(6)**.
 
      ![](images/37.rename-1.png)   
      
@@ -97,9 +98,9 @@ If you want to know how to implement this in your application, please take a loo
    
 2. Click **Create app configuration** then select:
     - Your Azure Subscription(1)
-    - The Resource Group **(2)** created previously (it should be named **AZ400-EWebShop1-<inject key="DeploymentID" enableCopy="false"/>**)
+    - The Resource Group **(2)** created previously (it should be named **AZ400-EWebShop-<SUFFIX>**)
     - Retain the same region which is in the CD Pipeline previously **(3)**
-    - Give a unique name **appcs-<inject key="DeploymentID" enableCopy="false"/>** **(4)**.
+    - Give a unique name **appcs-<SUFFIX>** **(4)**.
     - Select the **Free(5)** pricing tier
 
     ![](images/41.createappconfig-2.png)
