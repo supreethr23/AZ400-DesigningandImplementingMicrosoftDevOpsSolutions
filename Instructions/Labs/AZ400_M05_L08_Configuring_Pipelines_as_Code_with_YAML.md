@@ -347,41 +347,41 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
 1. Next, under Line **63** (vmImage: Windows-2019), add a new empty line.
 1. Paste in the following Yaml Snippet:
 
-```yaml
-    strategy:
-      runOnce:
-        deploy:
-```
+   ```yaml
+       strategy:
+         runOnce:
+           deploy:
+   ```
 1. Select the remaining snippet (Line **67** all the way to the end), and use the **Tab** key to fix the YAML indentation. 
 
-the resulting YAML snippet should look like this now, reflecting the **Deploy Stage**:
+   the resulting YAML snippet should look like this now, reflecting the **Deploy Stage**:
 
-```yaml
-- stage: Deploy
-  displayName: Deploy to an Azure Web App
-  jobs:
-  - deployment: Deploy
-    environment: approvals
-    pool:
-      vmImage: 'windows-2019'
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - task: DownloadBuildArtifacts@0
-            inputs:
-              buildType: 'current'
-              downloadType: 'single'
-              artifactName: 'Website'
-              downloadPath: '$(Build.ArtifactStagingDirectory)'
-          - task: AzureRmWebAppDeployment@4
-            inputs:
-              ConnectionType: 'AzureRM'
-              azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
-              appType: 'webApp'
-              WebAppName: 'eshoponWebYAML369825031'
-              packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
-```
+   ```yaml
+   - stage: Deploy
+     displayName: Deploy to an Azure Web App
+     jobs:
+     - deployment: Deploy
+       environment: approvals
+       pool:
+         vmImage: 'windows-2019'
+       strategy:
+         runOnce:
+           deploy:
+             steps:
+             - task: DownloadBuildArtifacts@0
+               inputs:
+                 buildType: 'current'
+                 downloadType: 'single'
+                 artifactName: 'Website'
+                 downloadPath: '$(Build.ArtifactStagingDirectory)'
+             - task: AzureRmWebAppDeployment@4
+               inputs:
+                 ConnectionType: 'AzureRM'
+                 azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
+                 appType: 'webApp'
+                 WebAppName: 'eshoponWebYAML369825031'
+                 packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
+   ```
 
 1. Confirm the changes to the code YAML file by clicking **Commit** and clicking **Commit** again in the appearing Commit pane.
 1. Navigate to the Azure DevOps Project menu to the left, select **Pipelines**, select **Pipelines** and notice the **EshopOnWeb_MultiStageYAML** Pipeline used earlier.
