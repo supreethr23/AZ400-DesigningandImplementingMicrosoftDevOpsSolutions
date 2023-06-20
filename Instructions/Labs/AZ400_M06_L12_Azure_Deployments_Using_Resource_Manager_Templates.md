@@ -63,8 +63,7 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
    - Microsoft.Network/networkInterfaces
    - Microsoft.Compute/virtualMachines
 
-
-    > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
+  > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
 
 
 ## Task 2: Create a template module for storage resources.
