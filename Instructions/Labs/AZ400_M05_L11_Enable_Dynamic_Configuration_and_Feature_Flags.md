@@ -32,7 +32,7 @@ In this exercise, you will import and run the CI pipeline, configure the service
 
 **Task 1: Import and run the CD pipeline**
  
- Let's import the CD pipeline named **eshoponweb-cd-webapp-code.yml*.
+ Let's import the CD pipeline named **eshoponweb-cd-webapp-code.yml**.
  
    1. Go to **Pipelines(1)>Pipelines(2)** and Click on **New pipeline(3)** button
 
