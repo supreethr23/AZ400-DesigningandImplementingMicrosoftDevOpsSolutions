@@ -129,8 +129,8 @@ For this lab scenario, we will have a Azure Container Instance (ACI) that pull a
     | Setting | Value |
     | --- | --- |
     | Subscription |*Leave it as default subscription*|
-    | Resource group | an Azure region close to the location of your lab environment |
-    | Key vault name | **keyvault<inject key="DeploymentID" enableCopy="false" />**|
+    | Resource group | **AZ400-EWebShop** |
+    | Key vault name | **keyvault<SUFFIX>**|
     | Region | an Azure region close to the location of your lab environment |
     | Pricing tier | **Standard** |
     | Days to retain deleted vaults | **7** |
