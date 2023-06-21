@@ -262,7 +262,7 @@ In this task, you will modify the main template to reference the template module
    ```bash   
    az deployment group create --name az400m06l15[Deployment-ID] --resource-group az400m06l15-RG --template-file main.bicep
    ```
-    > **Note**: Retrieve the [Deployment-ID] with <inject key="DeploymentID"></inject> specified in the environment details page from the lab guide.
+    > **Note**: Replace the [Deployment-ID] with <inject key="DeploymentID"></inject> 
 
 1. When prompted to provide the value for 'adminUsername', type **Student** and press the **Enter** key.
 1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key. (Password typing will not be shown)
@@ -272,20 +272,21 @@ In this task, you will modify the main template to reference the template module
       
 1. Click on **az400m06l15-RG(1)** resource group, on the **az400m06l15-RG blade(2)** you can see the **resources(3)** which we deployed in the previous steps using azure cloudshell.
        
-      ![azure portal"](images/bicepresources.png)
+      ![azure portal"](images/bicepresources1.png)
        
 3. If you receive errors when running the above command to deploy the template, try the following:
 
    - If you have multiple Azure subscriptions ensure you have set the subscription context to the correct one where the resource group is deployed.
    - Ensure that the linked template is accessible via the URI you specified.
 
- > **Note**: As a next step, you could now modularize the remaining resource definitions in the main deployment template, such as the network and virtual machine resource definitions.
+   > **Note**: As a next step, you could now modularize the remaining resource definitions in the main deployment template, such as the network and virtual machine resource definitions.
 
-**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ## Review
