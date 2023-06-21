@@ -30,7 +30,7 @@ In this task, you will install Visual Studio Code. If you have already implement
 
 1. If you don't have Visual Studio Code installed yet, from your lab computer, start a web browser, navigate to the [Visual Studio Code download page](https://code.visualstudio.com/), download it, and install it.
 
-# Exercise 1: Author and deploy Bicep templates
+# Exercise 2: Author and deploy Bicep templates
 
 In this lab, you will create an Azure Bicep template and a template module. You will then modify the main deployment template to use the template module and update the dependencies, and finally deploy the templates to Azure.
 
@@ -63,9 +63,7 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
    - Microsoft.Network/networkInterfaces
    - Microsoft.Compute/virtualMachines
 
-
-    > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
-
+   > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
 
 ## Task 2: Create a template module for storage resources.
 
