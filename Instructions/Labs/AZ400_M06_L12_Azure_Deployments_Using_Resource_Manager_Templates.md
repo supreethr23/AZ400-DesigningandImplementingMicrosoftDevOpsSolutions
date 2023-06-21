@@ -110,15 +110,19 @@ In this task, you will modify the templates you saved in the previous task such 
    var maaEndpoint = substring('emptyString', 0, 0)
    ```
 
-1. Next, remove all parameter values except location and add the following parameter code, resulting in the following outcome:
+1. Next, remove all parameter values except location. 
 
    ```bicep
    @description('Location for all resources.')
    param location string = resourceGroup().location
+    ```
+   
+1. Add the following parameter code, below the location parameter resulting in the following outcome:
 
+   ```bicep
    @description('Name for the storage account.')
    param storageAccountName string
-   ```
+     ```
 
 1. Next, at the end of the file, remove the current output and add a new one called storageURI output value. Modify the output so it looks like the below.
 
