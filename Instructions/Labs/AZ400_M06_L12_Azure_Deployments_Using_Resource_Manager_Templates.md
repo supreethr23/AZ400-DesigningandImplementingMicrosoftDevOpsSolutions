@@ -30,7 +30,7 @@ In this task, you will install Visual Studio Code. If you have already implement
 
 1. If you don't have Visual Studio Code installed yet, from your lab computer, start a web browser, navigate to the [Visual Studio Code download page](https://code.visualstudio.com/), download it, and install it.
 
-# Exercise 1: Author and deploy Bicep templates
+# Exercise 2: Author and deploy Bicep templates
 
 In this lab, you will create an Azure Bicep template and a template module. You will then modify the main deployment template to use the template module and update the dependencies, and finally deploy the templates to Azure.
 
@@ -44,16 +44,16 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
    
 1. Select **Extensions(1)**, in the **Search Extensions** textbox, type **Bicep(2)**, select **Bicep(3)** the one published by Microsoft, and click **Install(4)** to install the Azure Bicep language support.
      
-     ![visual studio"](images/vsbicep.png)
+     ![visual studio"](images/az-400-6-1.png)
   
 1. In Visual Studio Code, Click on **Files(1)>Open file(2)** to open a file.
 
-     ![visual studio"](images/selectfilesinvs.png)
+     ![visual studio"](images/az-400-6-2.png)
      
  1. Now in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**.
 
    
-     ![visual studio"](images/mainfile.png)
+     ![visual studio"](images/az-400-6-3.png)
     
 1. Review the template to get a better understanding of its structure. There are five resource types included in the template:
 
@@ -63,9 +63,7 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
    - Microsoft.Network/networkInterfaces
    - Microsoft.Compute/virtualMachines
 
-
-    > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
-
+   > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
 
 ## Task 2: Create a template module for storage resources.
 
@@ -73,7 +71,7 @@ In this task, you will modify the templates you saved in the previous task such 
 
 1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates(1)**, Select **storage.bicep(2)** file, Make sure that in the file name box **storage.bicep(3)** will be selected then click on **Open(4)**.
    
-   ![visual studio"](images/strfile.png)
+   ![visual studio"](images/az-400-6-4.png)
 
 1. In the **storage.bicep** file displayed in the Visual Studio Code window, under the **resources section**, remove all the resource elements except the **storageAccounts** resource. It should result in a resource section looking as follows:
 
@@ -155,7 +153,7 @@ In this task, you will modify the main template to reference the template module
 
 1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**
 
-      ![visual studio"](images/mainfile.png)
+      ![visual studio"](images/az-400-6-3.png)
       
 3. In the **main.bicep** file, in the resource section remove the storage resource element
 
@@ -264,32 +262,31 @@ In this task, you will modify the main template to reference the template module
    ```bash   
    az deployment group create --name az400m06l15[Deployment-ID] --resource-group az400m06l15-RG --template-file main.bicep
    ```
-    > **Note**: Retrieve the [Deployment-ID] with <inject key="DeploymentID"></inject> specified in the environment details page from the lab guide.
+    > **Note**: Replace the [Deployment-ID] with <inject key="DeploymentID"></inject> 
 
 1. When prompted to provide the value for 'adminUsername', type **Student** and press the **Enter** key.
 1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key. (Password typing will not be shown)
    > **Note**: It will take around 5 minutes to get output.
    
-1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **resource group(1)** and, in the list of results, select **Resouce groups(2)**.
-      
-      ![azure portal"](images/rg.png)
+1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **resource group** and, in the list of results, select **Resouce groups**.
       
 1. Click on **az400m06l15-RG(1)** resource group, on the **az400m06l15-RG blade(2)** you can see the **resources(3)** which we deployed in the previous steps using azure cloudshell.
        
-      ![azure portal"](images/bicepresources.png)
+      ![azure portal"](images/bicepresources1.png)
        
 3. If you receive errors when running the above command to deploy the template, try the following:
 
    - If you have multiple Azure subscriptions ensure you have set the subscription context to the correct one where the resource group is deployed.
    - Ensure that the linked template is accessible via the URI you specified.
 
- > **Note**: As a next step, you could now modularize the remaining resource definitions in the main deployment template, such as the network and virtual machine resource definitions.
+   > **Note**: As a next step, you could now modularize the remaining resource definitions in the main deployment template, such as the network and virtual machine resource definitions.
 
-**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ## Review
