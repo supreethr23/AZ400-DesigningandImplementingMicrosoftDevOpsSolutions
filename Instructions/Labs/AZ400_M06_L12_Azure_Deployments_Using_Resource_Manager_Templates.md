@@ -44,16 +44,16 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
    
 1. Select **Extensions(1)**, in the **Search Extensions** textbox, type **Bicep(2)**, select **Bicep(3)** the one published by Microsoft, and click **Install(4)** to install the Azure Bicep language support.
      
-     ![visual studio"](images/vsbicep.png)
+     ![visual studio"](images/az-400-6-1.png)
   
 1. In Visual Studio Code, Click on **Files(1)>Open file(2)** to open a file.
 
-     ![visual studio"](images/selectfilesinvs.png)
+     ![visual studio"](images/az-400-6-2.png)
      
  1. Now in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**.
 
    
-     ![visual studio"](images/mainfile.png)
+     ![visual studio"](images/az-400-6-3.png)
     
 1. Review the template to get a better understanding of its structure. There are five resource types included in the template:
 
@@ -71,7 +71,7 @@ In this task, you will modify the templates you saved in the previous task such 
 
 1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates(1)**, Select **storage.bicep(2)** file, Make sure that in the file name box **storage.bicep(3)** will be selected then click on **Open(4)**.
    
-   ![visual studio"](images/strfile.png)
+   ![visual studio"](images/az-400-6-4.png)
 
 1. In the **storage.bicep** file displayed in the Visual Studio Code window, under the **resources section**, remove all the resource elements except the **storageAccounts** resource. It should result in a resource section looking as follows:
 
@@ -153,7 +153,7 @@ In this task, you will modify the main template to reference the template module
 
 1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**
 
-      ![visual studio"](images/mainfile.png)
+      ![visual studio"](images/az-400-6-3.png)
       
 3. In the **main.bicep** file, in the resource section remove the storage resource element
 
@@ -268,9 +268,7 @@ In this task, you will modify the main template to reference the template module
 1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key. (Password typing will not be shown)
    > **Note**: It will take around 5 minutes to get output.
    
-1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **resource group(1)** and, in the list of results, select **Resouce groups(2)**.
-      
-      ![azure portal"](images/rg.png)
+1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **resource group** and, in the list of results, select **Resouce groups**.
       
 1. Click on **az400m06l15-RG(1)** resource group, on the **az400m06l15-RG blade(2)** you can see the **resources(3)** which we deployed in the previous steps using azure cloudshell.
        
