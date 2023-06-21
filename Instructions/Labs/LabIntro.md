@@ -26,13 +26,13 @@
    
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
-   ![](images/dp-500-intro4.png)
+   ![](images/dp-500-intro-4.png)
 
 1. Enter the following **Password** and click on **Sign in**. 
    
    * Password: <inject key="AzureAdUserPassword"></inject>
 
-    ![](images/dp-500-intro5.png)
+    ![](images/dp-500-intro-5.png)
     
 1. First-time users are often prompted to Stay Signed In, if you see any such pop-up, click on No.
    
@@ -40,10 +40,11 @@
 
 1. From the home page select **Resource groups** from the Navigate section.
 
-    ![](images/dp-500-intro6.png)
+    ![](images/dp-500-intro-6.png)
     
 1. Review the resource groups available from the list, which you will be using in next sections.
 
 1. Click on **Next** from the bottom right and follow the instructions to perform the lab.
 
-    ![](../media/intro11-5.png)
+    ![](images/az-400-intro5.png)
+    
