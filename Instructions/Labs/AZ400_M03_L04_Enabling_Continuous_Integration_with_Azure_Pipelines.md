@@ -24,7 +24,7 @@ After you complete this lab, you will be able to:
 
     * Password: <inject key="AzureAdUserPassword"></inject>
 
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+2. If prompted click **Ask later** on **Action Required** page.
 
 3. On the next page accept defaults and click on continue.
    
