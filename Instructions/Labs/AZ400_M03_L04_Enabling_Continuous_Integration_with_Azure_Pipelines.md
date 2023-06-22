@@ -96,7 +96,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
       ![](images/az400-m3-L4-10.png)
 
-   5. Select the **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**
+   5. Select the path **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**
 
       ![](images/AZ-400-yaml.1.png)
 
