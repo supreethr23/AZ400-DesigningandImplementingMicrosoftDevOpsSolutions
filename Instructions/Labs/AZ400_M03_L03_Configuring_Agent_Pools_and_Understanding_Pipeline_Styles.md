@@ -82,6 +82,20 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 7.  On the **Create New Project** page, click **Navigate to project**.
 
+## Task 2: Configuring Components for Visual Studio
+
+In this task, you will be installing individual components for Visual studio for the final job run in Exercise 2, Task 1
+
+1. Minimize the broswer tab and search and select for **Visual Studio Installer** in the search bar 
+
+2. Open the Visual Studio Installer and then select **Modify** option for the installed Visual Studio version.
+
+   ![Visual Studio Installer](images/visual-studioinstaller.png)
+
+3. Change the tab to Individual Components and select **.NET Framework 4.6.1 targeting pack** and **.NET Framework 4.6.1 SDK** and click on **Modify**.
+
+   ![Azure DevOps](images/individual_components.png)
+
 # Exercise 1: Author YAML-based Azure DevOps pipelines
 
 In this exercise, you will convert a classic Azure DevOps pipeline into a YAML-based one. 
