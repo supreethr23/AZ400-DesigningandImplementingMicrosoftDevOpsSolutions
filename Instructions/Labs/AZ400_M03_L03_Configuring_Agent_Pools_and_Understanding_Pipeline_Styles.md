@@ -201,7 +201,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
     ```
     > **Note**: Replace Agentname with **labvm-<inject key="DeploymentID" enableCopy="false"/>**
     
-1.  Change `Task: NugetInstaller@0` to  `Task: NugetInstaller@1` . 
+1.  Change `Task: NugetInstaller@0` Tool to  `Task: NugetInstaller@1` . 
  
     ![Azure DevOps](images/az-400-lab3-6.png)
     
