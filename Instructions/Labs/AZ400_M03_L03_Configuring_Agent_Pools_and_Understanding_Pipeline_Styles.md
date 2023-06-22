@@ -92,7 +92,7 @@ In this task, you will create a template-based Azure DevOps YAML pipeline.
 
 1.  From the web browser displaying the Azure DevOps portal with the **Configuring Agent Pools and Understanding Pipeline Styles** project open, in the vertical navigational pane on the left side, click **Pipelines**. 
 
-1.  On the **Recent** tab of the **Pipelines** pane, click **New pipeline** (located at top right corner ).
+1.  On **Pipelines** pane, click **New pipeline** (located at top right corner ).
 
 1.  On the **Where is your code?** pane, click **Azure Repos Git**. 
 
