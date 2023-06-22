@@ -24,7 +24,7 @@ After you complete this lab, you will be able to:
 
     * Password: <inject key="AzureAdUserPassword"></inject>
 
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+2. If prompted click **Ask later** on **Action Required** page.
 
 3. On the next page accept defaults and click on continue.
    
@@ -96,7 +96,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
       ![](images/az400-m3-L4-10.png)
 
-   5. Select the **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**
+   5. Select the path **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**
 
       ![](images/AZ-400-yaml.1.png)
 
@@ -186,17 +186,15 @@ In this task, you will add policies to the main branch and only allow changes us
    
 7. The Pull Request will show some pending requirements, based on the policies applied to the target **main** branch.
 
-    - **At least 1 user should review and approve the changes (1)**, click **Add (2)** select required approver and **select the approver to complete the PR(3)**.
+    - It shows **At least 1 user should review and approve the changes (1)**, click **Add (2)** select Required Reviewer and **select the Reviewer to complete the PR(3)**.
     - Build validation, you will see that the build **eshoponweb-ci-pr** was triggered automatically
      
      ![](images/az400-m3-L4-29.png)
      
      ![](images/az400-m3-L4-30.png)    
       
-8. After all validations are successful, on the top-right click on **Approve (1)**. Now from the **Set auto-complete dropdown (2)** you can click on **Complete (3)**.  
+8. After all validations are successful, on the top-right click on **Approve (1)**,  click on **Complete (3)**.  
 
-   ![](images/az400-m3-L4-31.png)
-  
 9. On the **Complete Pull Request** tab, select only **Complete associated work items after merging** checkbox  and Click on **Complete Merge**
 
    ![](images/az400-m3-L4-32.png)
@@ -316,7 +314,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/AZ-400-pull.png)
 
- 7. After all validations are successful, on the top-right click on **Approve (1)**. Now from the **Set auto-complete** dropdown you can click on **Complete (2)**
+ 7. After all validations are successful, on the top-right click on **Approve (1)**, click on **Complete (2)**
 
      ![](images/az400-m3-L4-52.png)
 
