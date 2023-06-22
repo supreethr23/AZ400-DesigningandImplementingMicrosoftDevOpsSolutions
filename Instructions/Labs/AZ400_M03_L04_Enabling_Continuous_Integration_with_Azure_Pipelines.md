@@ -186,7 +186,7 @@ In this task, you will add policies to the main branch and only allow changes us
    
 7. The Pull Request will show some pending requirements, based on the policies applied to the target **main** branch.
 
-    - **At least 1 user should review and approve the changes (1)**, click **Add (2)** select Required Reviewer and **select the Reviewer to complete the PR(3)**.
+    - It shows **At least 1 user should review and approve the changes (1)**, click **Add (2)** select Required Reviewer and **select the Reviewer to complete the PR(3)**.
     - Build validation, you will see that the build **eshoponweb-ci-pr** was triggered automatically
      
      ![](images/az400-m3-L4-29.png)
