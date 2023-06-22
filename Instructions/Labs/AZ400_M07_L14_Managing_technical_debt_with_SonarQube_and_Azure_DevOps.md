@@ -45,7 +45,7 @@ In this task you will change the visibility of your Azure DevOps project to publ
 
 1. On the lab computer, in the web browser window displaying the Azure DevOps portal, open your **eShopOnWeb** project, and click on **Project Settings** (bottom left corner). Change **Visibility** to **Public**. Click **Save**
 
-![Change ADO project to Public](images/az400-17-3.png)
+    ![Change ADO project to Public](images/az400-17-3.png)
 
 ## Task 2: Generate an Azure DevOps personal access token
 
@@ -113,7 +113,6 @@ In this task, you will install and configure the SonarCloud Azure DevOps extensi
 
 1. On the **Analyze projects - Select repositories** page, in the list of Azure DevOps projects, select the checkbox next to the **eshoponweb / eshoponweb ** entry and click **Set up**.
 
-
 1. On the **Choose your Analysis Method** page, click **With Azure DevOps Pipelines** tile.
 
     ![With Azure DevOps Pipelines ](images/az400-17-8.png)
@@ -166,7 +165,6 @@ In this task, you will check pipeline results.
 
     ![Sonarcloud report](images/az400-17-13.png)
 
-
 1. Switch to the web browser in the **Azure DevOps portal** with the most recent build run, click **Run new** and, on the **Run pipeline** pane, click **Run**.
 
 1. On the build run pane, review the content of the **Summary** tab and then click the **Extensions** tab header.
@@ -199,7 +197,6 @@ In this task, you will analyze SonarCloud reports.
     | **Coverage** | An indication of the percentage of code that is being validated by tests such as unit tests. To guard effectively against bugs, these tests should exercise or cover a large portion of your code |
     | **Duplications** | The duplications decoration shows which parts of the source code are duplicated |
     | **Security Hotspots** | Security-sensitive code that requires manual review to assess whether or not a vulnerability exists |
-
 
 1. Click the number designating the count of **Bugs**. This will automatically display the content of the **Issues** tab.
 
