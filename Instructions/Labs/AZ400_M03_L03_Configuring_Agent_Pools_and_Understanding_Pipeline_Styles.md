@@ -46,11 +46,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
     > **Note**: For more information on the site, see https://docs.microsoft.com/en-us/azure/devops/demo-gen.
 
-2.  Click **Sign in** and if prompted sign with the following credentials.
-
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-    * Password: <inject key="AzureAdUserPassword"></inject>
+2.  Click **Sign in** and if prompted sign with the credentials provided in environment details page.
 
 3.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
 
@@ -197,11 +193,6 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 
 1.  On the **Recent** tab of the **Pipelines** pane, click the **PartsUnlimited** entry, on the **Runs** tab of the **PartsUnlimited** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
    
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Review
 
