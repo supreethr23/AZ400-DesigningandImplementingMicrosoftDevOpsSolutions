@@ -472,13 +472,6 @@ In this task, you will first generate some alerts for the Canary Web App, follow
 1. Wait another 3 minutes and validate the status of the Release Gates again. As it is now +8 minutes after the initial Release Gates got checked, and it's been more than 8 minutes since the initial Application Insight Alert got triggered with action "Fired", it should result in a successful Release Gate, having allowed the deployment of the Production Release Stage as well.
 
     ![Azure devops](images/gates.png) 
-    
-**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
- - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
- - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
- - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
- - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ## Review
