@@ -2,7 +2,7 @@
 
 ### Getting Started with Lab
 
-1. Once the environment is provisioned, a virtual machine (JumpVM) on the left and lab guide on the right will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab.
+1. Once the environment is provisioned, a virtual machine (JumpVM) will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab.
 
 1. To get the lab environment details, you can select the **Lab Environment** tab, you can locate the **Lab Environment** tab on the upper right corner. Additionally, the credentials will also be emailed to your email address provided during registration.
 
@@ -12,11 +12,9 @@
    
     > **Note:** In the welcome to Microsoft Edge page, select **Start without your data** and on the help for importing Google browsing data page select the **Continue without this data** button and procced to select **Confirm and start browsing** in the next page.
 
-1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+1. On **Sign in to Microsoft Azure** blade, you will see a login screen, copy the email/username from **Environment Details** page in the environment. Enter the email/username and then click on **Next**. 
 
-1. Now enter the following password and click on **Sign in**.
-   * Password: <inject key="AzureAdUserPassword"></inject>
+1. copy the Password from **Environment Details** page in the environment. Enter the password and click on **Sign in**.
    
 1. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
