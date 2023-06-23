@@ -111,6 +111,12 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
         }
     ```
 
+1. You also need to run the following command to register the resource provider for the **Azure App Service** you will deploy later:
+
+   ```bash
+   az provider register --namespace Microsoft.Web
+   ```
+   
 1. In a browser window, go back to your **eShopOnWeb** GitHub repository.
 1. On the repository page, go to **Settings**, click on **Secrets and variables > Actions**. Click on **New repository secret**
     - Name : **AZURE_CREDENTIALS**
