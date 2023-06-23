@@ -430,21 +430,6 @@ In this task, you will use Application Insights to investigate performance of th
 
 18.  After about five minutes, check your email account to verify that you have received an email indicating that the alert you defined was triggered.
 
-# Exercise 2: Remove the Azure lab resources
-
-In this exercise, you will remove the Azure resources provisione in this lab to eliminate unexpected charges. 
-
- >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-#### Task 1: Remove the Azure DevOps billing
-
-In this task, you will remove pipeline billing to eliminate unnecessary charges.
-
-1. On the lab computer, switch to the browser window displaying Azure DevOps organization homepage and select **Organization Settings** at bottom left corner.
-
-2. Under **Organization Settings** select **Billing** and click on **Change billing** button to open Change billing pane.
-
-3. In the **Change billing** pane, select **Remove billing** setting and click on Save.
 
 ## Review
 
