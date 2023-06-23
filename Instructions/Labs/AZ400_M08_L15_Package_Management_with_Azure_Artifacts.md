@@ -90,11 +90,8 @@ In this task, you will configure Visual Studio to prepare for the lab.
         
         ![](images/az-400-image7.png)
          
-     - If prompted, sign in with the following Username and password.
+     - If prompted, sign in with the Username and password provided to you in the **Environment Details** page.
 
-          > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
-    
-          > **Password**: <inject key="AzureAdUserPassword"></inject>
 
 # Exercise 2: Working with Azure Artifacts
 
@@ -269,11 +266,7 @@ In this task, you will create and publish a NuGet package.
     
      ![](images/AZ400_M08_L15_35.png)
 
-20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to sign in window login with the following credentials.
-    
-    > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
-    
-    > **Password**: <inject key="AzureAdUserPassword"></inject>
+20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to sign in window login with the azure credentials provided to you in the **Environment Details** page.
 
     > **Note**: You need to provide an **API Key**, which can be any non-empty string. We're using **AzDO** here. When prompted, sign in to your Azure DevOps organization.
 
@@ -385,12 +378,6 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
 15. This list will also show both the **EShopOnWeb.Shared (2)** custom-developed package, as well as the **HelloWorld (2)** public sourced package.
     
      ![](images/AZ400_M08_L15_51.png)
-     
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ## Review
