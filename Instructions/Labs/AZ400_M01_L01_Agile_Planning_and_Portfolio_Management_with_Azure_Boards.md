@@ -21,11 +21,7 @@ After you complete this lab, you will be able to:
 
 ## Set up an Azure DevOps organization
 
-1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
-
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-    * Password: <inject key="AzureAdUserPassword"></inject>
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials provided in the **Environment Details** page.
 
 1. On the next page accept defaults and click on continue.
 
@@ -105,11 +101,6 @@ Each new project is configured with a default team, which name matches the proje
 
     > **Note**: The default setting for all teams is to exclude sub-area paths. We will change it to include sub-areas so that the team gets visibility into all of the work items from all teams. Optionally, the management team could also choose to not include sub-areas, which automatically removes work items from their view as soon as they are assigned to one of the teams.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 2: Manage work items
 
@@ -178,7 +169,6 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
      ![View Backlog Items" ](images/m1/az-400_m01_t2_s18.png)
 
-
     > **Note**: Backlog items have a state that defines where they are relative to being completed. While you could open and edit the work item using the form, it's easier to just drag cards on the board.
 
 1. On the **Board** tab of the **EShop-WEB** panel, drag the first work item named **As a customer, I want to view new tutorials** from the **New** to **Approved** stage.
@@ -217,11 +207,6 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 1. Repeat the last five steps to add another task named **Optimize data query for most recent tutorials**. Set its **Remaining Work** to **3** and its **Activity** to **Design**. Click **Save & Close** once completed.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 3: Manage sprints and capacity
 
@@ -407,11 +392,6 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     > **Note**: If you would like to review a more sophisticated board with many more work items, on the **Board** tab of the **Boards** panel, in the upper left corner, select **EShop-WEB** and, in the dropdown list of teams, select the **eShopOnWeb Team**. This board provides a playground for you to experiment with and review the results.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 5: Customize team process
 
@@ -470,12 +450,7 @@ All processes are shared within the same organization. That is, one or more team
 
     > **Note**: Once the work item is saved, Azure DevOps will also save the new custom information so that it will be available for queries and through the rest of Azure DevOps.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+   
 # Exercise 2 (optional) : Define dashboards
 
 In this task, you will step through the process of creating dashboards and their core components.
