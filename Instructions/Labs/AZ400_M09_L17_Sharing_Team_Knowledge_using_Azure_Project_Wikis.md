@@ -15,6 +15,20 @@ After you complete this lab, you will be able to:
 ## Architecture Diagram
  
   ![Architecture Diagram](images/lab17-architecture.png)
+
+## Exercise 0: Configure the EShopOnWeb project
+
+In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
+
+1.  Click **Sign in** and sign in to DevOps with the credentials provided in environment details tab.
+    
+    > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+    
+    > **Password**: <inject key="AzureAdUserPassword"></inject>
+
+2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb1 (1)**, select visibility as **Private (2)** and then click **Create Project (3)**
+
+     ![](images/AZ400_M09_L17_03.png)
     
 # Exercise 1: Publish code as wiki
 
@@ -28,13 +42,13 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
 > **Note**: If your published wiki corresponds to a product version, you can publish new branches as you release new versions of your product. 
 
-1.  Ensure that you are viewing the **EShopOnWeb** team project on the Azure DevOps portal. 
+1.  Ensure that you are viewing the **EShopOnWeb1** team project on the Azure DevOps portal. 
 
      > **Note**: You can access the project page directly by navigating to the [https://dev.azure.com/<inject key="DeploymentID" enableCopy="false"/>/EShopOnWeb]URL.
 
      ![](images/AZ400_M09_L17_04.png)
     
-2.  In the vertical menu on the left side of the **EShopOnWeb** pane, click **Repos**.
+2.  In the vertical menu on the left side of the **EShopOnWeb1** pane, click **Repos**.
 
      ![](images/AZ400_M09_L17_05.png)
 
@@ -46,7 +60,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
      ![](images/AZ400_M09_L17_07.png)
 
-5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb (1)** Repo title on top of the folder structure. Select the **ellipsis (2)**. 
+5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb1 (1)** Repo title on top of the folder structure. Select the **ellipsis (2)**. 
 
      ![](images/AZ400_M09_L17_08.png)
 
