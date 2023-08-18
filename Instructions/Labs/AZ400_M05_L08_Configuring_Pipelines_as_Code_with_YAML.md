@@ -18,6 +18,8 @@ After you complete this lab, you will be able to:
 
 -   configure CI/CD pipelines as code with YAML in Azure DevOps
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab8-architecture.png)
