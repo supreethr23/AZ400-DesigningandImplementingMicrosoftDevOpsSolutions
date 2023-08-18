@@ -34,7 +34,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/lab7-architecture.png) 
+  ![Architecture Diagram](images/lab7-architecture-new.png) 
 
 ## Estimated timing: 75 minutes
 
