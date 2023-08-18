@@ -394,3 +394,5 @@ In this task, you will configure blocking of pull requests in response to failin
 ## Review
 
 In this lab, you learned how to integrate Azure DevOps Services with SonarCloud.
+
+### You have successfully completed the lab.
