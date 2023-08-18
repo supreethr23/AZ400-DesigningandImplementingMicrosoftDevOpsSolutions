@@ -178,6 +178,14 @@ In this task, you will use GitHub environments to ask for manual approval before
     ![approval](images/gh-approve.png)
 
 1. Workflow will follow the **deploy** job execution and finish.
+
+  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 ## Review
 
 In this lab, you implemented a GitHub Action workflow that deploys an Azure web app by using DevOps Starter.
