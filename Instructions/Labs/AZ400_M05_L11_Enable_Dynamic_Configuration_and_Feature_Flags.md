@@ -413,3 +413,5 @@ Let's continue to test the Feature manager.
 ## Review
 
 In this lab, you learned how to dynamically enable configuration and manage feature flags.
+
+### You have successfully completed the lab.
