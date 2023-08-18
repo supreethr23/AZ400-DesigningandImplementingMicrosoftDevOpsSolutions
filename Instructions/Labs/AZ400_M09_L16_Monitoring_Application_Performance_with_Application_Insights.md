@@ -500,3 +500,5 @@ In this task, you will remove pipeline billing to eliminate unnecessary charges.
 ## Review
 
 In this exercise, you deployed a web app to Azure App Service by using Azure DevOps pipelines, generated traffic targeting the web app, and used Application Insights to review the web traffic, investigate application performance, track application usage, and configure alerting.
+
+### You have successfully completed the lab.
