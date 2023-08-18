@@ -12,6 +12,8 @@ After you complete this lab, you will be able to:
 - Add and edit markdown
 - Create a Mermaid diagram
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
  
   ![Architecture Diagram](images/lab17-architecture.png)
