@@ -12,6 +12,8 @@ After you complete this lab, you will be able to:
 -   Track and review a build
 -   Invoke a continuous integration build
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
   ![Architecture Diagram](images/lab4-architecture.png)
