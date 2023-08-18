@@ -411,6 +411,6 @@ The product team has decided that the current version of the site should be rele
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-#### Review
+## Review
 
 In this lab, you used Visual Studio Code to clone an existing repository, save work with commits, review history of changes, and work with branches.
