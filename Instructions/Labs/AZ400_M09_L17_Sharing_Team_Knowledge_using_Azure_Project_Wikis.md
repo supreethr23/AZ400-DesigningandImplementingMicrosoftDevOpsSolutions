@@ -347,3 +347,5 @@ In this task, you will manage the newly created project wiki.
 ## Review
 
 In this lab, you created and configured Wiki in an Azure DevOps, including managing markdown content and creating a Mermaid diagram.
+
+### You have successfully completed the lab.
