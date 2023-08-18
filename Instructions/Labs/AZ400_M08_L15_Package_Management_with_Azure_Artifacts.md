@@ -431,3 +431,5 @@ In this lab, you learned how to work with Azure Artifacts by using the following
 - created and publish a NuGet package.
 - imported a NuGet package.
 - updated a NuGet package.
+
+### You have successfully completed the lab.
