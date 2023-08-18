@@ -21,6 +21,8 @@ After you complete this lab, you will be able to:
 - Enable dynamic configuration
 - Manage feature flags
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
   ![Architecture Diagram](images/lab11-architecture.png)
