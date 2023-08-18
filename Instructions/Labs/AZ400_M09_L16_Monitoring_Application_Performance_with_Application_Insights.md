@@ -17,6 +17,8 @@ After you complete this lab, you will be able to:
 - Track Azure web app usage by using Application Insights
 - Create Azure web app alerts by using Application Insights
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab16-architecture.png)
