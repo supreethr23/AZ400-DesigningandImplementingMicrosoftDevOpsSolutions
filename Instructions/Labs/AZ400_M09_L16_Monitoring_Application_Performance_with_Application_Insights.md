@@ -374,6 +374,13 @@ In this task, you will use Application Insights to investigate performance of th
 
       > **Note**: This will split the server requests based on pages they reference, represented by different colors in the chart.
 
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 ## Task 4: Track application usage
 
    > **Note**: Application Insights provides a broad set of features to track application usage. 
@@ -473,13 +480,6 @@ In this task, you will use Application Insights to investigate performance of th
     > **Note**: This will trigger a server error since that category does not exist. Refresh the page a few times to generate more errors.
 
 18.  After about five minutes, check your email account to verify that you have received an email indicating that the alert you defined was triggered.
-
-19. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 # Exercise 2: Remove the Azure lab resources
 
