@@ -22,7 +22,7 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-   ![Architecture Diagram](../images/lab8-architecture.png)
+   ![Architecture Diagram](../images/lab8-architecture-new.png)
    
 ## Lab 09: Setting Up and Running Functional Tests
 
