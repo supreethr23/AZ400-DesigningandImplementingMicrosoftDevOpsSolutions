@@ -16,7 +16,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab6-architecture.png)
+   ![Architecture Diagram](images/lab6-architecture-new.png)
 
 ## Set up an Azure DevOps organization
 
