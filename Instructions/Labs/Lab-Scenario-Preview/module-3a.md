@@ -39,21 +39,3 @@ After you complete this lab, you will be able to:
 
   ![Architecture Diagram](../images/lab4-architecture.png)
   
-## Lab 05: Implementing GitHub Actions for CI/CD
-
-### Lab overview
-
-In this lab, you will learn how to implement a GitHub Action workflow that deploys an Azure web app by using DevOps Starter.
-
-### Objectives
-
-After you complete this lab, you will be able to:
-
-- Implement a GitHub Action workflow by using DevOps Starter
-- Explain the basic characteristics of GitHub Action workflows
-
-### Architecture Diagram
-
-   ![Architecture Diagram](../images/lab5-architecture.png)
-
-
