@@ -21,7 +21,7 @@ After you complete this lab, you will be able to:
 -   Review history of changes
 -   Work with branches by using Visual Studio Code
 
-### Estimated time: 40 minutes
+### Estimated time: 60 minutes
 
 ## Architecture Diagram
 
