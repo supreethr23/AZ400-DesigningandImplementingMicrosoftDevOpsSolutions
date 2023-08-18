@@ -22,6 +22,8 @@ After you complete this lab, you will be able to:
 - Activate WhiteSource Bolt
 - Run a build pipeline and review WhiteSource security and compliance report
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab13-architecture.png)
