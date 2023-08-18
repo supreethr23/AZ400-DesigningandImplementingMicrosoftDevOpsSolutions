@@ -15,7 +15,7 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-   ![Architecture Diagram](../images/lab5-architecture.png)
+   ![Architecture Diagram](../images/lab5-architecture-new.png)
 
 ## Lab 06: Deploying Docker containers to Azure App Service web apps
 
