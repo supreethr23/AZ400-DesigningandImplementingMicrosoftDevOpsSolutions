@@ -19,7 +19,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
-![Architecture Diagram](images/lab9-architecture.png)
+![Architecture Diagram](images/lab9-architecture-new.png)
 
 ### Before you start
 
