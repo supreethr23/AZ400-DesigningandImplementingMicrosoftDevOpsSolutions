@@ -414,3 +414,5 @@ The product team has decided that the current version of the site should be rele
 ## Review
 
 In this lab, you used Visual Studio Code to clone an existing repository, save work with commits, review history of changes, and work with branches.
+
+### You have successfully completed the lab.
