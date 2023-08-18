@@ -296,3 +296,5 @@ In this task, you will modify the main template to reference the template module
 ## Review
 
 In this lab, you learned how to create an Azure Resource manager template, modularize it by using a linked template, modify the main deployment template to call the linked template and updated dependencies, and finally deploy the templates to Azure.
+
+### You have successfully completed the lab.
