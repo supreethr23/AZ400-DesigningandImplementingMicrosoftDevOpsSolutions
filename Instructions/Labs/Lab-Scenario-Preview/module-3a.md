@@ -19,7 +19,7 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-   ![Architecture Diagram](../images/lab3-architecture.png)
+   ![Architecture Diagram](../images/lab3-architecture-new.png)
    
 ## Lab 04: Enabling Continuous Integration with Azure Pipelines
 
