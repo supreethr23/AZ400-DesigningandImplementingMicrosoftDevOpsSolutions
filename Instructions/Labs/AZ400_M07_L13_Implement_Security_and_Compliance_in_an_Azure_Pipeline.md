@@ -166,3 +166,4 @@ In this task, you will remove pipeline billing to eliminate unnecessary charges.
 
 In this lab, you integrated a GitHub project with Azure DevOps by using the new Azure Pipelines integration from the Marketplace.
 
+### You have successfully completed the lab.
