@@ -16,6 +16,8 @@ After you complete this lab, you will be able to:
 - Deploy all the resources to Azure using Azure Bicep Templates.
 - Deploy resources to Azure using linked templates
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
   ![Architecture Diagram](images/lab12-architecture.png)
