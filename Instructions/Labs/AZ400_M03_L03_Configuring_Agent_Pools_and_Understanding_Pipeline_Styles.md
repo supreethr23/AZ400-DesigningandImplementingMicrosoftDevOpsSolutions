@@ -15,9 +15,11 @@ After you complete this lab, you will be able to:
 - implement YAML-based pipelines
 - implement self-hosted agents
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab3-architecture.png)
+   ![Architecture Diagram](images/lab3-architecture-new.png)
 
 ## Set up an Azure DevOps organization
 
@@ -227,12 +229,12 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 
 1.  On the **Recent** tab of the **Pipelines** pane, click the **PartsUnlimited** entry, on the **Runs** tab of the **PartsUnlimited** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
    
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
     > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Review
+## Review
 
 In this lab, you learned how to convert classic pipelines into YAML-based ones and how to implement and use self-hosted agents.

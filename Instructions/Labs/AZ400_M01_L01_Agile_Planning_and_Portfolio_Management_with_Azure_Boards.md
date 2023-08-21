@@ -15,9 +15,11 @@ After you complete this lab, you will be able to:
 -   Define dashboards
 -   Customize team process
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
- ![Architecture Diagram](images/lab1-architecture.png)
+ ![Architecture Diagram](images/lab1-architecture-new.png)
 
 ## Set up an Azure DevOps organization
 
@@ -526,3 +528,5 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 ## Review
 
 In this lab you used Azure Boards to perform a number of common agile planning and portfolio management tasks, including management of teams, areas, iterations, work items, sprints and capacity, customizing Kanban boards, defining dashboards, and customizing team processes.
+
+### You have successfully completed the lab.

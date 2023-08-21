@@ -22,9 +22,11 @@ After you complete this lab, you will be able to:
 - Activate WhiteSource Bolt
 - Run a build pipeline and review WhiteSource security and compliance report
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab13-architecture.png)
+   ![Architecture Diagram](images/lab13-architecture-new.png)
 
 ## Set up an Azure DevOps organization. 
 
@@ -155,9 +157,15 @@ In this task, you will remove pipeline billing to eliminate unnecessary charges.
 
 1. In the **Change billing** pane, select **Remove billing** setting and click on Save.
 
-#### Review
+  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
 
-In this lab, you integrated a GitHub project with Azure DevOps by using the new Azure Pipelines integration from the Marketplace.
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 ## Review
 
-In this lab, you will use **WhiteSource Bolt with Azure DevOps** to automatically detect vulnerable open source components, outdated libraries, and license compliance issues in your code.
+In this lab, you integrated a GitHub project with Azure DevOps by using the new Azure Pipelines integration from the Marketplace.
+
+### You have successfully completed the lab.

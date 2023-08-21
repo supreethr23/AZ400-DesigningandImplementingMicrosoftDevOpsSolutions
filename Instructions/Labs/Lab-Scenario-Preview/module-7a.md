@@ -26,4 +26,6 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-   ![Architecture Diagram](../images/lab13-architecture.png)
+   ![Architecture Diagram](../images/lab13-architecture-new.png)
+
+>**Note**: Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located at the top right corner which leads you to the lab environment and guide. You can also have a detailed preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/07b47b5c-983f-4f4e-b876-0a707d62aebe), prior to launching your environment.

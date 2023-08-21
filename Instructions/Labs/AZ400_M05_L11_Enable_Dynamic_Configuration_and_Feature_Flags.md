@@ -21,9 +21,11 @@ After you complete this lab, you will be able to:
 - Enable dynamic configuration
 - Manage feature flags
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/lab11-architecture.png)
+  ![Architecture Diagram](images/lab11-architecture-new.png)
 
 
 ## Set up an Azure DevOps organization(Skip if already done)
@@ -403,6 +405,15 @@ Let's continue to test the Feature manager.
 
    **Congratulations!!** In this task, you tested the **Feature manager** in Azure App Configuration.
 
+  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 ## Review
 
 In this lab, you learned how to dynamically enable configuration and manage feature flags.
+
+### You have successfully completed the lab.

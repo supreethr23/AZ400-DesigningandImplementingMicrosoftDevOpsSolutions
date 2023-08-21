@@ -19,7 +19,7 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-   ![Architecture Diagram](../images/lab3-architecture.png)
+   ![Architecture Diagram](../images/lab3-architecture-new.png)
    
 ## Lab 04: Enabling Continuous Integration with Azure Pipelines
 
@@ -37,23 +37,6 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-  ![Architecture Diagram](../images/lab4-architecture.png)
+  ![Architecture Diagram](../images/lab4-architecture-new.png)
   
-## Lab 05: Implementing GitHub Actions for CI/CD
-
-### Lab overview
-
-In this lab, you will learn how to implement a GitHub Action workflow that deploys an Azure web app by using DevOps Starter.
-
-### Objectives
-
-After you complete this lab, you will be able to:
-
-- Implement a GitHub Action workflow by using DevOps Starter
-- Explain the basic characteristics of GitHub Action workflows
-
-### Architecture Diagram
-
-   ![Architecture Diagram](../images/lab5-architecture.png)
-
-
+>**Note**: Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located at the top right corner which leads you to the lab environment and guide. You can also have a detailed preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/90b9e19e-8f86-4d5b-944e-38a95a9cb33d), prior to launching your environment.

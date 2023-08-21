@@ -16,9 +16,11 @@ After you complete this lab, you will be able to:
 - Deploy all the resources to Azure using Azure Bicep Templates.
 - Deploy resources to Azure using linked templates
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/lab12-architecture.png)
+  ![Architecture Diagram](images/lab12-architecture-new.png)
 
 # Exercise 1: Configure the lab prerequisites
 
@@ -296,3 +298,5 @@ In this task, you will modify the main template to reference the template module
 ## Review
 
 In this lab, you learned how to create an Azure Resource manager template, modularize it by using a linked template, modify the main deployment template to call the linked template and updated dependencies, and finally deploy the templates to Azure.
+
+### You have successfully completed the lab.
