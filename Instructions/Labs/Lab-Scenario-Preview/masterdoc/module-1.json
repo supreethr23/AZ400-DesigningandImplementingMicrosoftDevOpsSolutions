@@ -5,7 +5,7 @@
     "BaseURL": "https://github.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/tree/stage",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/stage/Instructions/Labs/Lab-Scenario-Preview/module-1.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/prod/Instructions/Labs/Lab-Scenario-Preview/module-1.md",
         "Order": 1
       }
     ]
