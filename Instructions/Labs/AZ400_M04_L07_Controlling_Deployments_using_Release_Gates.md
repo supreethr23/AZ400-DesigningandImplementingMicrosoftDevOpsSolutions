@@ -30,9 +30,11 @@ After you complete this lab, you will be able to:
 - Configure release gates.
 - Test release gates.
 
+### Estimated time: 90 minutes
+
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/lab7-architecture.png) 
+  ![Architecture Diagram](images/lab7-architecture-new.png) 
 
 ## Estimated timing: 75 minutes
 
@@ -148,6 +150,13 @@ In this task, you will add a YAML build definition to the existing project.
     ![Import Repository](images/newpip6.png)
 
     > **Note**: Each task from the YAML file is available for review, including any warnings and errors.
+
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 # Exercise 2: Creating the necessary Azure Resources for the Release Pipeline
 
@@ -407,6 +416,13 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
     > **Note**: Now you have the application with CI/CD configured. In the next exercise we will set up Quality Gates as part of a more advanced  Release pipeline.
 
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 # Exercise 4: Configure release gates
 
 In this exercise, you will set up Quality Gates in the release pipeline.
@@ -545,14 +561,8 @@ In this task, you will first generate some alerts for the Canary Web App, follow
 
     ![Azure devops](images/gates.png) 
     
-**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
- - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
- - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
- - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
- - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
 ## Review
 
 In this lab, you configured release pipelines and then configured and tested release gates.
+
+### You have successfully completed the lab.

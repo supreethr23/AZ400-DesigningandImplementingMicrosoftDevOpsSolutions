@@ -25,9 +25,11 @@ After you complete this lab, you will be able to:
 - Analyze SonarCloud reports
 - Integrate static analysis into the Azure DevOps pull request process
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab14-architecture.png)
+   ![Architecture Diagram](images/lab14-architecture-new.png)
 
 # Before you start
 
@@ -384,6 +386,15 @@ In this task, you will configure blocking of pull requests in response to failin
 
     > **Note**: At this point, users **will not be able to merge pull request until the Code Quality check is successful**. This, in turn, requires that all issues identified by SonarCloud have been either fixed or marked as **confirmed** or **resolved** in the corresponding SonarCloud project.
 
+  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 ## Review
 
 In this lab, you learned how to integrate Azure DevOps Services with SonarCloud.
+
+### You have successfully completed the lab.

@@ -22,7 +22,7 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-   ![Architecture Diagram](../images/lab8-architecture.png)
+   ![Architecture Diagram](../images/lab8-architecture-new.png)
    
 ## Lab 09: Setting Up and Running Functional Tests
 
@@ -43,7 +43,7 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-![Architecture Diagram](../images/lab9-architecture.png)
+![Architecture Diagram](../images/lab9-architecture-new.png)
 
 ## Lab 10: Integrating Azure Key Vault with Azure DevOps
 
@@ -68,7 +68,7 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-   ![Architecture Diagram](../images/lab10-architecture.png)
+   ![Architecture Diagram](../images/lab10-architecture-new.png)
    
 ## Lab 11: Enable Dynamic Configuration and Feature Flags
 
@@ -85,5 +85,6 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-  ![Architecture Diagram](../images/lab11-architecture.png)
+  ![Architecture Diagram](../images/lab11-architecture-new.png)
 
+>**Note**: Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located at the top right corner which leads you to the lab environment and guide. You can also have a detailed preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/b81cf657-caa1-4970-b058-3fa75865fe03), prior to launching your environment.

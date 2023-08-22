@@ -12,9 +12,11 @@ After you complete this lab, you will be able to:
 - Add and edit markdown
 - Create a Mermaid diagram
 
+### Estimated time: 60 minutes
+
 ## Architecture Diagram
  
-  ![Architecture Diagram](images/lab17-architecture.png)
+  ![Architecture Diagram](images/lab17-architecture-new.png)
 
 
 ## Set up an Azure DevOps organization. 
@@ -290,6 +292,12 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
      
       ![](images/AZ400_M09_L17_39.png)
 
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ## Task 2: Manage a project wiki
 
@@ -337,15 +345,9 @@ In this task, you will manage the newly created project wiki.
 8.  Verify that the **Project Design Overview** entry is listed as the top level page with the home icon designating it as the wiki home page.
 
     ![](images/AZ400_M09_L17_40.png)
-    
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
 
 ## Review
 
 In this lab, you created and configured Wiki in an Azure DevOps, including managing markdown content and creating a Mermaid diagram.
+
+### You have successfully completed the lab.
