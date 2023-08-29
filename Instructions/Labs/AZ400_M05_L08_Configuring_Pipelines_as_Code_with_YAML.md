@@ -12,19 +12,19 @@ Git is the default version control provider for new projects. You should use Git
 
 In this lab, you will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Azure DevOps. In addition, you will learn about Git branching and merging support. You will use Visual Studio Code, but the same processes apply for using any Git-compatible client.
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
 -   configure CI/CD pipelines as code with YAML in Azure DevOps
 
-### Estimated time: 60 minutes
+## Estimated time: 60 minutes
 
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab8-architecture-new.png)
 
-# Set up an Azure DevOps organization
+### Set up an Azure DevOps organization
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -52,11 +52,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/az-400-5-6.png)
 
-# Exercise 0: Configure the lab prerequisites
+### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://dev.azure.com/unhueteb/_git/eshopweb-az400).
 
-## Task 1: Create and configure the team project
+#### Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps project to be used by several labs.
 
@@ -64,7 +64,7 @@ In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps proj
 
     ![Create Project](images/az-400-5-7.png)
 
-## Task 2: Import eShopOnWeb Git Repository
+#### Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -79,11 +79,12 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-## Task 2: Create Azure resources
+#### Task 2: Create Azure resources
 
 In this task, you will create an Azure web app by using the Azure portal.
 
 1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
+
 1. In the Azure portal, in the toolbar, click the **Cloud Shell** icon located directly to the right of the search text box.
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
@@ -124,18 +125,17 @@ In this task, you will create an Azure web app by using the Azure portal.
 
 1. Close the Azure Cloud Shell, but leave the Azure Portal open in the browser.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
-# Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
+### Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
 
 In this exercise, you will configure CI/CD Pipelines as code with YAML in Azure DevOps.
 
-## Task 1: Add a YAML build definition
+#### Task 1: Add a YAML build definition
 
 In this task, you will add a YAML build definition to the existing project.
 
@@ -145,25 +145,32 @@ In this task, you will add a YAML build definition to the existing project.
     > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
 
 1. On the **Where is your code?** pane, click **Azure Repos Git (YAML)** option.
+
 1. On the **Select a repository** pane, click **eShopOnWeb_MultiStageYAML**.
+
 1. On the **Configure your pipeline** pane, scroll down and select **Existing Azure Pipelines YAML File**.
+
 1. In the **Selecting an existing YAML File** blade, specify the following parameters:
 - Branch: **main**
 - Path: **.ado/eshoponweb-ci.yml**
-1. Click **Continue** to save these settings.
-1. From the **Review your Pipeline YAML** screen, click **Run** to start the Build Pipeline process.
-1. Wait for the Build Pipeline to complete successfully. Ignore any warnings regarding the source code itself, as they are not relevant for this lab exercise.
+
+7. Click **Continue** to save these settings.
+
+8. From the **Review your Pipeline YAML** screen, click **Run** to start the Build Pipeline process.
+9. Wait for the Build Pipeline to complete successfully. Ignore any warnings regarding the source code itself, as they are not relevant for this lab exercise.
 
     > **Note**: Each task from the YAML file is available for review, including any warnings and errors.
 
-## Task 2: Add continuous delivery to the YAML definition
+#### Task 2: Add continuous delivery to the YAML definition
 
 In this task, you will add continuous delivery to the YAML-based definition of the pipeline you created in the previous task.
 
-> **Note**: Now that the build and test processes are successful, we can now add delivery to the YAML definition.
+  > **Note**: Now that the build and test processes are successful, we can now add delivery to the YAML definition.
 
 1. On the pipeline run pane, click the ellipsis symbol in the upper right corner and, in the dropdown menu, click **Edit pipeline**.
+
 1. On the pane displaying the content of the **eShopOnWeb_MultiStageYAML/.ado/eshoponweb-ci.yml** file, navigate to the end of the file (line 56), and hit **Enter/Return** to add a new empty line.
+
 1. Being on line **57**, add the following content to define the **Release** stage in the YAML pipeline.
 
     > **Note**: You can define whatever stages you need to better organize and track pipeline progress.
@@ -183,6 +190,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
     > **Note**: This will be the location where new tasks are added.
 
 1. In the list of tasks on the right side of the code pane, search for and select the **Azure App Service Deploy** task.
+
 1. In the **Azure App Service deploy** pane, specify the following settings and click **Add**:
 
     - in the **Azure subscription** drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click **Authorize**, and, when prompted, authenticate by using the same user account you used during the Azure resource deployment.
@@ -211,13 +219,17 @@ In this task, you will add continuous delivery to the YAML-based definition of t
     > **Note**: By default, these two stages run independently. As a result, the build output from the first stage might not be available to the second stage without additional changes. To implement these changes, we will add a new task to download the deployment artifact in the beginning of the deploy stage.
 
 1. Place the cursor on the first line under the **steps** node of the **deploy** stage, and hit Enter/Return to add a new empty line (Line 64).
+
 1. On the **Tasks** pane, search for and select the **Download build artifacts** task.
+
 1. Specify the following parameters for this task:
     - Download Artifacts produced by: **Current Build**
     - Download Type: **Specific Artifact**
     - Artifact Name: **Enter "Website" in the text box**
     - Destination Directory: **$(Build.ArtifactStagingDirectory)**
+
 1. Click **Add**.
+
 1. The snippet of added code should look similar to below:
 
     ```yaml
@@ -237,17 +249,25 @@ In this task, you will add continuous delivery to the YAML-based definition of t
     > **Note**: Since our original CI-YAML was not configured to automatically trigger a new build, we have to initiate this one manually.
 
 1. From the Azure DevOps left menu, navigate to **Pipelines** and select **Pipelines** again. 
+
 1. Open the **EShopOnWeb_MultiStageYAML** Pipeline and click **Run Pipeline**.
+
 1. Confirm the **Run** from the appearing pane.
+
 1. Notice the 2 different Stages, **Build .Net Core Solution** and **Deploy to Azure Web App** appearing.
+
 1. Wait for the pipeline to kick off and wait until it completes the Build Stage successfully.
+
 1. Once the Deploy Stage wants to start, you are prompted with **Permissions Needed**, as well as an orange bar saying 
     ```
     This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
     ```
 1. Click on **View**
+
 1. From the **Waiting for Review** pane, click **Permit**.
+
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
+
 1. This sets off the Deploy Stage. Wait for this to complete successfully.
 
      > **Note**: If the deployment should fail, because of an issue with the YAML Pipeline syntax, use this as a reference:
@@ -332,44 +352,58 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 
     ```
 
-## Task 4: Review the deployed site
+#### Task 4: Review the deployed site
 
 1. Switch back to web browser window displaying the Azure portal and navigate to the blade displaying the properties of the Azure web app.
+
 1. On the Azure web app blade, click **Overview** and, on the overview blade, click **Browse** to open your site in a new web browser tab.
+
 1. Verify that the deployed site loads as expected in the new browser tab, showing the EShopOnWeb E-commerce website.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
-# Exercise 2: Configure Environment settings for CI/CD Pipelines as Code with YAML in Azure DevOps
+### Exercise 2: Configure Environment settings for CI/CD Pipelines as Code with YAML in Azure DevOps
 
 In this exercise, you will add approvals to a YAML-based Pipeline in Azure DevOps.
 
-## Task 1: Set up Pipeline Environments
+#### Task 1: Set up Pipeline Environments
 
 YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure DevOps Classic Release Pipelines. However, some similarities can be configured for YAML Pipelines-as-Code using **Environments**. In this task, you will use this mechanism to configure approvals for the Build Stage.
 
 1. From the Azure DevOps Project **EShopOnWeb_MultiStageYAML**, navigate to **Pipelines**.
+
 1. Under the Pipelines Menu to the left, select **Environments**.
+
 1. Click **Create Environment**.
+
 1. In the **New Environment** pane, add a Name for the Environment, called **approvals**.
+
 1. Under **Resources**, select **None**.
+
 1. Confirm the settings by pressing the **Create** button.
+
 1. Once the environment got created, click on the "ellipsis" (...) next to the button "Add Resource".
+
 1. Select **Approvals and Checks**.
+
 1. From the **Add your first check**, select **Approvals**.
+
 1. Add your Azure DevOps User Account Name to the **approvers** field.
 
     > **Note:** In a real-life scenario, this would reflect the name of your DevOps team working on this project.
 
 1. Confirm the approval settings defined, by pressing the **Create** button.
+
 1. Last, we need to add the necessary "environment: approvals" settings to the YAML pipeline code for the Deploy Stage. To do this, navigate to **Repos**, browse to the **.ado** folder, and select the **eshoponweb-ci.yml** Pipeline-as-Code file.
+
 1. From the Contents view, click the **Edit** button to switch to Editing mode.
+
 1. Navigate to the start of the **Deploy job** (-job: Deploy on Line 60)
+
 1. Add a new empty line right below, and add the following snippet:
 
     ```yaml
@@ -386,8 +420,11 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
           vmImage: 'windows-2019'
     ```
 1. As the environment is a specific setting of a deployment stage, it cannot be used by "jobs". Therefore, we have to make some additional changes to the current job definition.
+
 1. On Line **60**, rename "- job: Deploy" to **- deployment: Deploy**
+
 1. Next, under Line **63** (vmImage: Windows-2019), add a new empty line.
+
 1. Paste in the following Yaml Snippet:
 
 ```yaml
@@ -427,18 +464,25 @@ the resulting YAML snippet should look like this now, reflecting the **Deploy St
 ```
 
 1. Confirm the changes to the code YAML file by clicking **Commit** and clicking **Commit** again in the appearing Commit pane.
-1. Navigate to the Azure DevOps Project menu to the left, select **Pipelines**, select **Pipelines** and notice the **EshopOnWeb_MultiStageYAML** Pipeline used earlier.
-1. Open the Pipeline.
-1. Click **Run Pipeline** to trigger a new Pipeline run; confirm by clicking **Run**.
-1. Just like before, the Build Stage kicks off as expected. Wait for it to complete successfully.
-1. From the appearing pane **Checks and manual validations for Deploy to Azure Web App**, click the **View** button next to this message.click the **Permit** button.
-1. Click **Permit** again in the following pop-up.
-1. Next, since we have the *environment:approvals* configured for the Deploy Stage, it will ask for an approval confirmation before it kicks off.
-1. This is visible from the Pipeline view, where it says **Waiting (0/1 checks passed)**. A notification message is also displayed saying **approval needs review before this run can continue to Deploy to an Azure Web App**. 
-1. This allows the Deploy Stage to kick off and successfully deploying the Azure Web App source code.
 
- 
-    > **Note:** While this example only used the approvals, know the other checks such as Azure Monitor, REST API, etc... can be used in a similar way
+1. Navigate to the Azure DevOps Project menu to the left, select **Pipelines**, select **Pipelines** and notice the **EshopOnWeb_MultiStageYAML** Pipeline used earlier.
+
+1. Open the Pipeline.
+
+1. Click **Run Pipeline** to trigger a new Pipeline run; confirm by clicking **Run**.
+
+1. Just like before, the Build Stage kicks off as expected. Wait for it to complete successfully.
+
+1. From the appearing pane **Checks and manual validations for Deploy to Azure Web App**, click the **View** button next to this message.click the **Permit** button.
+
+1. Click **Permit** again in the following pop-up.
+
+1. Next, since we have the *environment:approvals* configured for the Deploy Stage, it will ask for an approval confirmation before it kicks off.
+
+1. This is visible from the Pipeline view, where it says **Waiting (0/1 checks passed)**. A notification message is also displayed saying **approval needs review before this run can continue to Deploy to an Azure Web App**. 
+
+1. This allows the Deploy Stage to kick off and successfully deploying the Azure Web App source code.
+  > **Note:** While this example only used the approvals, know the other checks such as Azure Monitor, REST API, etc... can be used in a similar way
 
 ## Review
 

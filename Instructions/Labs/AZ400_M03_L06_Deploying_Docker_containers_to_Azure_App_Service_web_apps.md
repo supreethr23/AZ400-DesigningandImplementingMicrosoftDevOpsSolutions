@@ -4,7 +4,7 @@
 
 In this lab, you will learn how to use an Azure DevOps CI/CD pipeline to build a custom Docker image, push it to Azure Container Registry, and deploy it as a container to Azure App Service. 
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
@@ -12,13 +12,13 @@ After you complete this lab, you will be able to:
 - Push an image to Azure Container Registry
 - Deploy a Docker image as a container to Azure App Service by using Azure DevOps
 
-### Estimated time: 60 minutes
+## Estimated time: 30 minutes
 
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab6-architecture-new.png)
 
-## Set up an Azure DevOps organization
+### Set up an Azure DevOps organization
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [**Azure Devops**](https://go.microsoft.com/fwlink/?LinkId=307137). 
 
@@ -41,17 +41,17 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/agent2.png)
 
-# Exercise 0: Configure the lab prerequisites
+### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
 
-## Task 1: Create and configure the team project
+#### Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
 
-## Task 2: Import eShopOnWeb Git Repository
+#### Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -64,17 +64,17 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-## Task 3: Set main branch as default branch
+#### Task 3: Set main branch as default branch
 
 1. Go to **Repos>Branches**
 1. Hover on the **main** branch then click the ellipsis on the right of the column
 1. Click on **Set as default branch**
 
-# Exercise 1: Manage the service connection
+### Exercise 1: Manage the service connection
 
 In this exercise, you will configure the service connection with your Azure Subscription then import and run the CI pipeline.
 
-## Task 1: Manage the service connection
+#### Task 1: Manage the service connection
 
 You can create a connection from Azure Pipelines to external and remote services for executing tasks in a job.
 
@@ -83,17 +83,19 @@ In this task, you will create a service principal by using the Azure CLI, which 
 - Push the docker image to Azure Container Registry
 - Add a role assignment to allow Azure App Service pull the docker image from Azure Container Registry
 
-> **Note**: If you do already have a service principal, you can proceed directly to the next task.
+    > **Note**: If you do already have a service principal, you can proceed directly to the next task.
 
 You will need a service principal to deploy  Azure resources from Azure Pipelines.
 
 A service principal is automatically created by Azure Pipeline when you connect to an Azure subscription from inside a pipeline definition or when you create a new service connection from the project settings page (automatic option). You can also manually create the service principal from the portal or using Azure CLI and re-use it across projects. 
 
 1.  From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
+
 1.  In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page. 
+
 1.  If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
-   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**. 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**. 
 
 1.  From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID attribute: 
 
@@ -127,11 +129,11 @@ A service principal is automatically created by Azure Pipeline when you connect 
 
 1. Click on **Verify and Save**.
 
-# Exercise 2: Import and run the CI pipeline
+### Exercise 2: Import and run the CI pipeline
 
 In this exercise, you will import and run the CI pipeline.
 
-## Task 1: Import and run the CI pipeline
+#### Task 1: Import and run the CI pipeline
 
 1. Go to **Pipelines>Pipelines**
 
@@ -164,16 +166,18 @@ In this exercise, you will import and run the CI pipeline.
 
 1. Navigate to the [**Azure Portal**](https://portal.azure.com), search for the Azure Container Registry in the recently created Resource Group (it should be named **rg-az400-container-NAME**). Make sure that the **eshoponweb/web** was created and contains two tags (one of them is **Latest**).
 
-# Exercise 3: Import and run the CD pipeline
+### Exercise 3: Import and run the CD pipeline
 
 In this exercise, you will configure the service connection with your Azure Subscription then import and run the CD pipeline.
 
-## Task 1: Add a new role assignment
+#### Task 1: Add a new role assignment
 
 In this task, you will add a new role assignment to allow Azure App Service pull the docker image from Azure Container Registry.
 
 1. Navigate to the [**Azure Portal**](https://portal.azure.com).
+
 1. In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page. 
+
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID attribute: 
@@ -193,7 +197,7 @@ In this task, you will add a new role assignment to allow Azure App Service pull
 
 You should now see the JSON output which confirms the success of the command run.
 
-## Task 2: Import and run the CD pipeline
+#### Task 2: Import and run the CD pipeline
 
 In this task, you will import and run the CI pipeline.
 
@@ -230,7 +234,7 @@ In this task, you will import and run the CI pipeline.
 
     > **Note 3**: 
 
-## Task 3: Test the solution
+#### Task 3: Test the solution
 
 1. In the Azure Portal, navigate to the recently created Resource Group, you should now see three resources (Ap Service, App Service Plan and Container Registry).
 
@@ -238,11 +242,11 @@ In this task, you will import and run the CI pipeline.
 
 Congratulations! In this exercise, you deployed a website using custom docker image.
 
-# Exercise 3: Remove the Azure DevOps billing
+### Exercise 3: Remove the Azure DevOps billing
 
 In this exercise, you will remove the Azure DevOps billing enabled in this lab to eliminate unexpected charges.
 
-## Task 1: Remove the Azure DevOps billing
+#### Task 1: Remove the Azure DevOps billing
 
 In this task, you will remove pipeline billing to eliminate unnecessary charges.
 
@@ -252,15 +256,14 @@ In this task, you will remove pipeline billing to eliminate unnecessary charges.
 
 1. In the **Change billing** pane, select **Remove billing** setting and click on Save.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation lab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 
 In this lab, you used an Azure DevOps CI/CD pipeline to build a custom Docker image, pushed it to Azure Container Registry, and deployed it as a container to Azure App Service by using Azure DevOps.
 
-### You have successfully completed the lab.
+## You have successfully completed the lab.

@@ -4,7 +4,7 @@
 
 In this lab, you'll create an Azure Bicep template and modularize it using the Azure Bicep Modules concept. You'll then modify the main deployment template to use the module and finally deploy the all the resources to Azure.
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
@@ -16,27 +16,27 @@ After you complete this lab, you will be able to:
 - Deploy all the resources to Azure using Azure Bicep Templates.
 - Deploy resources to Azure using linked templates
 
-### Estimated time: 60 minutes
+## Estimated time: 45 minutes
 
 ## Architecture Diagram
 
   ![Architecture Diagram](images/lab12-architecture-new.png)
 
-# Exercise 1: Configure the lab prerequisites
+### Exercise 1: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include Visual Studio Code.
 
-## Task 1: Install and configure Git and Visual Studio Code
+#### Task 1: Install and configure Git and Visual Studio Code
 
 In this task, you will install Visual Studio Code. If you have already implemented this prerequisite, you can proceed directly to the next task.
 
 1. If you don't have Visual Studio Code installed yet, from your lab computer, start a web browser, navigate to the [Visual Studio Code download page](https://code.visualstudio.com/), download it, and install it.
 
-# Exercise 2: Author and deploy Bicep templates
+### Exercise 2: Author and deploy Bicep templates
 
 In this lab, you will create an Azure Bicep template and a template module. You will then modify the main deployment template to use the template module and update the dependencies, and finally deploy the templates to Azure.
 
-## Task 1: Create Azure Bicep template
+#### Task 1: Create Azure Bicep template
 
 In this task, you will use Visual Studio Code to create a Azure Bicep template
 
@@ -67,7 +67,7 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
 
    > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
 
-## Task 2: Create a template module for storage resources.
+#### Task 2: Create a template module for storage resources.
 
 In this task, you will modify the templates you saved in the previous task such that the storage template module **storage.bicep** will create a storage account only, it will be imported by the first template. The storage template module needs to pass a value back to the main template, **main.bicep**, and this value will be defined in the outputs element of the storage template module.
 
@@ -153,7 +153,7 @@ In this task, you will modify the templates you saved in the previous task such 
    output storageURI string = storageAccount.properties.primaryEndpoints.blob
    ```
 
-## Task 3: Modify the main template to use the template module
+#### Task 3: Modify the main template to use the template module
 
 In this task, you will modify the main template to reference the template module you created in the previous task.
 
@@ -205,19 +205,19 @@ In this task, you will modify the main template to reference the template module
    - A relative path is used for your template module.
    - Use parameters to pass values from the main template to the template modules.
 
-    > **Note**: With Azure ARM Templates, you would have used a storage account to upload the linked template to make it easier for others to use them. With Azure Bicep modules, you have the option to upload them to Azure Bicep Module registry which has both public and private registry options. More information can be found on the [Azure Bicep documentation](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/modules#file-in-registry).
+   > **Note**: With Azure ARM Templates, you would have used a storage account to upload the linked template to make it easier for others to use them. With Azure Bicep modules, you have the option to upload them to Azure Bicep Module registry which has both public and private registry options. More information can be found on the [Azure Bicep documentation](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/modules#file-in-registry).
 
 1. Save the template.
 
-## Task 4: Deploy resources to Azure by using template modules
+#### Task 4: Deploy resources to Azure by using template modules
 
- > **Note**: You can deploy templates in several ways, such as using Azure CLI installed locally or from the Azure Cloud Shell or from a CI/CD pipeline. In this lab, you will use Azure CLI from the Azure Cloud Shell.
+   > **Note**: You can deploy templates in several ways, such as using Azure CLI installed locally or from the Azure Cloud Shell or from a CI/CD pipeline. In this lab, you will use Azure CLI from the Azure Cloud Shell.
 
- > **Note**: In contrast to ARM templates you cannot use Azure portal to directly deploy Bicep templates.
+   > **Note**: In contrast to ARM templates you cannot use Azure portal to directly deploy Bicep templates.
 
- > **Note**: To use Azure Cloud Shell, you will upload the both the main.bicep and storage.bicep files into your Cloud Shell's home directory.
+   > **Note**: To use Azure Cloud Shell, you will upload the both the main.bicep and storage.bicep files into your Cloud Shell's home directory.
 
- > **Note**: Currently, Azure CLI does not support deploying remote Bicep files. You can build the bicep files to get the ARM Template JSON and then upload them to an storage account, then deploy them remotely.
+   > **Note**: Currently, Azure CLI does not support deploying remote Bicep files. You can build the bicep files to get the ARM Template JSON and then upload them to an storage account, then deploy them remotely.
  
 1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
 
@@ -271,7 +271,9 @@ In this task, you will modify the main template to reference the template module
     > **Note**: Replace the [Deployment-ID] with <inject key="DeploymentID"></inject> 
 
 1. When prompted to provide the value for 'adminUsername', type **Student** and press the **Enter** key.
+
 1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key. (Password typing will not be shown)
+   
    > **Note**: It will take around 5 minutes to get output.
    
 1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **resource group** and, in the list of results, select **Resouce groups**.
@@ -288,15 +290,14 @@ In this task, you will modify the main template to reference the template module
    > **Note**: As a next step, you could now modularize the remaining resource definitions in the main deployment template, such as the network and virtual machine resource definitions.
 
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 
 In this lab, you learned how to create an Azure Resource manager template, modularize it by using a linked template, modify the main deployment template to call the linked template and updated dependencies, and finally deploy the templates to Azure.
 
-### You have successfully completed the lab.
+## You have successfully completed the lab.

@@ -8,20 +8,20 @@ Regardless of the choice of the pipeline style, to build your code or deploy you
 
 In this lab, you will learn how to implement and use self-hosted agents with YAML pipelines.
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
 - implement YAML-based pipelines
 - implement self-hosted agents
 
-### Estimated time: 60 minutes
+## Estimated time: 45 minutes
 
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab3-architecture-new.png)
 
-## Set up an Azure DevOps organization
+### Set up an Azure DevOps organization
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -52,11 +52,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/az-400-lab3-3.png)
 
-# Exercise 0: Configure the lab prerequisites
+### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisite for the lab, which consists of the pre-configured Parts Unlimited team project based on an Azure DevOps Demo Generator template.
 
-## Task 1: Configure the team project
+#### Task 1: Configure the team project
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **PartsUnlimited** template.
 
@@ -84,7 +84,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 7.  On the **Create New Project** page, click **Navigate to project**.
 
-## Task 2: Configuring Components for Visual Studio
+#### Task 2: Configuring Components for Visual Studio
 
 In this task, you will be installing individual components for Visual studio for the final job run in Exercise 2, Task 1
 
@@ -98,11 +98,11 @@ In this task, you will be installing individual components for Visual studio for
 
    ![Azure DevOps](images/individual_components.png)
 
-# Exercise 1: Author YAML-based Azure DevOps pipelines
+### Exercise 1: Author YAML-based Azure DevOps pipelines
 
 In this exercise, you will convert a classic Azure DevOps pipeline into a YAML-based one. 
 
-## Task 1: Create an Azure DevOps YAML pipeline
+#### Task 1: Create an Azure DevOps YAML pipeline
 
 In this task, you will create a template-based Azure DevOps YAML pipeline.
 
@@ -116,11 +116,11 @@ In this task, you will create a template-based Azure DevOps YAML pipeline.
 
 1.  On the **Review your pipeline YAML** pane, review the sample pipeline, click the down-facing caret symbol next to the **Run** button, click **Save**.
 
-# Exercise 2: Manage Azure DevOps agent pools
+### Exercise 2: Manage Azure DevOps agent pools
 
 In this exercise, you will implement self-hosted Azure DevOps agent.
 
-## Task 1: Configure an Azure DevOps self-hosting agent
+#### Task 1: Configure an Azure DevOps self-hosting agent
 
 In this task, you will configure the LOD VM as an Azure DevOps self-hosting agent and use it to run a build pipeline.
 
@@ -229,11 +229,11 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 
 1.  On the **Recent** tab of the **Pipelines** pane, click the **PartsUnlimited** entry, on the **Runs** tab of the **PartsUnlimited** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
    
-    > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-    > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 

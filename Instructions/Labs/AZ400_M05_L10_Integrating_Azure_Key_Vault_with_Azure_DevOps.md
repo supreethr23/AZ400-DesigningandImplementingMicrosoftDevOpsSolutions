@@ -11,7 +11,7 @@ In this lab, you will see how you can integrate Azure Key Vault with an Azure De
 - configure permissions to allow the service principal to read the secret.
 - configure pipeline to retrieve the password from the Azure Key vault and pass it on to subsequent tasks.
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
@@ -19,13 +19,13 @@ After you complete this lab, you will be able to:
 -   Create an Azure key vault. 
 -   Track pull requests through the Azure DevOps pipeline.
 
-### Estimated time: 45 minutes
+## Estimated time: 40 minutes
 
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab10-architecture-new.png)
 
-## Set up an Azure DevOps organization (Skip if already done)
+### Set up an Azure DevOps organization (Skip if already done)
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -39,11 +39,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/az-400-5-2.png)
 
-# Exercise 0: Configure the lab prerequisites
+### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
 
-## Task 1: Create and configure the team project
+#### Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -51,7 +51,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Create Project](images/lab-400-1.png)
 
-## Task 2: Import eShopOnWeb Git Repository
+#### Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -66,13 +66,13 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-# Exercise 1: Setup CI pipeline to build eShopOnWeb container
+### Exercise 1: Setup CI pipeline to build eShopOnWeb container
 
 Setup CI YAML pipeline for:
 - Creating an Azure Container Registry to keep the container images
 - Using Docker Compose to build and push **eshoppublicapi** and **eshopwebmvc** container images. Only **eshopwebmvc** container will be deployed.
 
-## Task 1:  Create a Service Principal
+#### Task 1:  Create a Service Principal
 
 In this task, you will create a Service Principal by using the Azure CLI, which will allow Azure DevOps to:
 - Deploy resources on your Azure subscription
@@ -85,7 +85,9 @@ You will need a Service Principal to deploy  Azure resources from Azure Pipeline
 A Service Principal is automatically created by Azure Pipelines, when you connect to an Azure subscription from inside a pipeline definition or when you create a new Service Connection from the project settings page (automatic option). You can also manually create the Service Principal from the portal or using Azure CLI and re-use it across projects.
 
 1.  From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
+
 1.  In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
+
 1.  If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
@@ -126,7 +128,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
 1. Click on **Verify and Save**.
 
-## Task 2: Setup and Run CI pipeline
+#### Task 2: Setup and Run CI pipeline
 
 In this task, you will import an existing CI YAML pipeline definition, modify and run it. It will create a new Azure Container Registry (ACR) and build/publish the eShopOnWeb container images.
 
@@ -159,14 +161,16 @@ In this task, you will import an existing CI YAML pipeline definition, modify an
     ![ACR password](images/lab-400-7.png)
 
 
-## Task 3: Create an Azure Key vault
+#### Task 3: Create an Azure Key vault
 
 In this task, you will create an Azure Key vault by using the Azure portal.
 
 For this lab scenario, we will have a Azure Container Instance (ACI) that pull and runs a container image stored in Azure Container Registry (ACR). We intend to store the password for the ACR as a secret in the key vault.
 
 1.  In the Azure portal, in the **Search resources, services, and docs** text box, type **Key vault** and press the **Enter** key. 
+
 1.  Select **Key vault** blade, click on **Create>Key Vault**. 
+
 1.  On the **Basics** tab of the **Create key vault** blade, specify the following settings and click on **Next**:
 
     | Setting | Value |
@@ -193,8 +197,11 @@ For this lab scenario, we will have a Azure Container Instance (ACI) that pull a
       > **Note**: Wait for the Azure Key vault to be provisioned. This should take less than 1 minute.
 
 1.  On the **Your deployment is complete** blade, click on **Go to resource**.
+
 1.  On the Azure Key vault blade, in the vertical menu on the left side of the blade, in the **Objects** section, click on **Secrets**.
+
 1.  On the **Secrets** blade, click on **Generate/Import**.
+
 1.  On the **Create a secret** blade, specify the following settings and click on **Create** (leave others with their default values):
 
     | Setting | Value |
@@ -204,7 +211,7 @@ For this lab scenario, we will have a Azure Container Instance (ACI) that pull a
     | Value | ACR access password copied in previous task |
 
 
-## Task 4: Create a Variable Group connected to Azure Key Vault
+#### Task 4: Create a Variable Group connected to Azure Key Vault
 
 In this task, you will create a Variable Group in Azure DevOps that will retrieve the ACR password secret from Key Vault using the Service Connection (Service Principal)
 
@@ -228,7 +235,7 @@ In this task, you will create a Variable Group in Azure DevOps that will retriev
 
     ![Variable Group create](images/lab-400-8.png)
 
-## Task 5: Setup CD Pipeline to deploy container in Azure Container Instance(ACI)
+#### Task 5: Setup CD Pipeline to deploy container in Azure Container Instance(ACI)
 
 In this task, you will import a CD pipeline, customize it and run it for deploying the container image created before in a Azure Container Instance.
 
@@ -246,13 +253,17 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
     - **AZ400-EWebShop-NAME** with the resource group name defined before in the lab.(replace NAME with <inject key="DeploymentID" enableCopy="false"/>)
 
 1. Click on **Save and Run**.
+
 1. Once the Deploy Stage wants to start, you are prompted with **Permissions Needed**, as well as an orange bar saying 
     ```
     This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
     ```
 1. Click on **View**
+
 1. From the **Waiting for Review** pane, click **Permit**.
+
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
+
 1. Wait for this to complete successfully.
 
     > **Note**: The deployment may take a few minutes to complete. The CD definition consists of the following tasks:
@@ -262,12 +273,11 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
 
 1. Your pipeline will take a name based on the project name. Lets **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/move** option. Name it **eshoponweb-cd-aci** and click on **Save**.
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 

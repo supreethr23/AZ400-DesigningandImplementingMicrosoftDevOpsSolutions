@@ -1,11 +1,10 @@
 # Lab 15: Package Management with Azure Artifacts
 
-
 ## Lab overview
 
 Azure Artifacts facilitate discovery, installation, and publishing NuGet, npm, and Maven packages in Azure DevOps. It's deeply integrated with other Azure DevOps features such as Build, making package management a seamless part of your existing workflows.
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
@@ -14,13 +13,14 @@ After you complete this lab, you will be able to:
 -  Import a NuGet package.
 -  Update a NuGet package.
 
-### Estimated time: 60 minutes
+## Estimated time: 40 minutes
 
 ## Architecture Diagram
 
   ![Architecture Diagram](images/lab15-architecture-new.png)
 
-## Set up an Azure DevOps organization
+### Set up an Azure DevOps organization
+
 1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign in with the credentials.
 
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
@@ -37,11 +37,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/lab1-image2.png)
 
-# Exercise 1: Configure the lab prerequisites
+### Exercise 1: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include the pre-configured EShopOnWeb team project based on an Azure DevOps Organization and a Visual Studio configuration.
 
-## Task 1: Configure the EShopOnWeb project
+#### Task 1: Configure the EShopOnWeb project
 
 In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
 
@@ -55,7 +55,7 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
 
     ![](images/AZ400_M08_L15_03.png)
 
-## Task 2: Configuring the EShopOnWeb solution in Visual Studio
+#### Task 2: Configuring the EShopOnWeb solution in Visual Studio
 
 In this task, you will configure Visual Studio to prepare for the lab.
 
@@ -127,7 +127,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
     
           > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-# Exercise 2: Working with Azure Artifacts
+### Exercise 2: Working with Azure Artifacts
 
 In this exercise, you will learn how to work with Azure Artifacts by using the following steps:
 
@@ -136,7 +136,7 @@ In this exercise, you will learn how to work with Azure Artifacts by using the f
 - import a NuGet package.
 - update a NuGet package.
 
-## Task 1: Create and connect to a feed
+#### Task 1: Create and connect to a feed
 
 In this task, you will create and connect to a feed.
 
@@ -181,7 +181,7 @@ In this task, you will create and connect to a feed.
       ![](images/az-400-image8.png)
 
 
-## Task 2: Create and publish a NuGet package
+#### Task 2: Create and publish a NuGet package
 
 In this task, you will create and publish a NuGet package.
 
@@ -325,7 +325,7 @@ In this task, you will create and publish a NuGet package.
 
       ![](images/AZ400_M08_L15_(38).png)
 
-## Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
+#### Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
 
 Besides developing your own packages, why not using the Open Source NuGet (https://www.nuget.org) DotNet Package library? With a few million packages available, there will always be something useful for your application.
     
@@ -346,7 +346,7 @@ In this task, we will use a generic "Hello World" sample package, but you can us
     
     ![](images/AZ400_M08_L15_41.png)
 
-## Task 4: Upload the Open-Source NuGet package to Azure Artifacts
+#### Task 4: Upload the Open-Source NuGet package to Azure Artifacts
 
 Let's consider this package an "approved" package for our DevOps team to reuse, by uploading it to the Azure Artifacts Package feed created earlier.
 
@@ -412,17 +412,18 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
       ![](images/AZ400_M08_L15_50.png)
 
 13. From the NuGet Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
+
 14. Click **Browse (1)**, and wait for the list of NuGet Packages to load.
+
 15. This list will also show both the **EShopOnWeb.Shared (2)** custom-developed package, as well as the **HelloWorld (2)** public sourced package.
     
      ![](images/AZ400_M08_L15_51.png)
      
-    > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-    > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 
@@ -433,4 +434,4 @@ In this lab, you learned how to work with Azure Artifacts by using the following
 - imported a NuGet package.
 - updated a NuGet package.
 
-### You have successfully completed the lab.
+## You have successfully completed the lab.

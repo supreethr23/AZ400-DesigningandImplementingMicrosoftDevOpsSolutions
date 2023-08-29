@@ -15,20 +15,20 @@ Azure DevOps integration with WhiteSource Bolt will enable you to:
 - Enforce open source license compliance, including dependencies’ licenses.
 - Identify outdated open source libraries with recommendations to update.
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
 - Activate WhiteSource Bolt
 - Run a build pipeline and review WhiteSource security and compliance report
 
-### Estimated time: 60 minutes
+## Estimated time: 45 minutes
 
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab13-architecture-new.png)
 
-## Set up an Azure DevOps organization. 
+### Set up an Azure DevOps organization. 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -60,11 +60,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/policies-enable-3rd.png)    
 
-# Exercise 0: Configure the lab prerequisites
+### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://dev.azure.com/unhueteb/_git/eshopweb-az400).
 
-## Task 1:  (skip if done) Create and configure the team project
+#### Task 1:  (skip if done) Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -72,7 +72,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Create Project](images/create-project.png)
 
-## Task 2:  (skip if done) Import eShopOnWeb Git Repository
+#### Task 2:  (skip if done) Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -87,11 +87,11 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-# Exercise 1: Implement Security and Compliance in an Azure DevOps pipeline by using Mend Bolt
+### Exercise 1: Implement Security and Compliance in an Azure DevOps pipeline by using Mend Bolt
 
 In this exercise, leverage Mend Bolt to scan the project code for security vulnerabilities and licensing compliance issues, and view the resulting report.
 
-## Task 1: Activate Mend Bolt extension
+#### Task 1: Activate Mend Bolt extension
 
 In this task, you will activate WhiteSource Bolt in the newly generated Azure Devops project.
 
@@ -114,7 +114,7 @@ In this task, you will activate WhiteSource Bolt in the newly generated Azure De
     ![Get Mend Account](images/mend-account.png)
 
 
-## Task 2: Create and Trigger a build
+#### Task 2: Create and Trigger a build
 
 In this task, you will create and trigger a CI build pipeline within  Azure DevOps project. You will use **Mend Bolt** extension to identify vulnerable OSS components present in this code.
 
@@ -143,11 +143,11 @@ In this task, you will create and trigger a CI build pipeline within  Azure DevO
     ![Mend Results](images/mend-results.png)
 
 
-# Exercise 2: Remove the Azure DevOps billing
+### Exercise 2: Remove the Azure DevOps billing
 
 In this exercise, you will remove the Azure DevOps billing enabled in this lab to eliminate unexpected charges.
 
-## Task 1: Remove the Azure DevOps billing
+#### Task 1: Remove the Azure DevOps billing
 
 In this task, you will remove pipeline billing to eliminate unnecessary charges.
 
@@ -157,15 +157,14 @@ In this task, you will remove pipeline billing to eliminate unnecessary charges.
 
 1. In the **Change billing** pane, select **Remove billing** setting and click on Save.
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 
 In this lab, you integrated a GitHub project with Azure DevOps by using the new Azure Pipelines integration from the Marketplace.
 
-### You have successfully completed the lab.
+## You have successfully completed the lab.

@@ -6,7 +6,7 @@
 
 In this lab, you will learn how to execute Selenium test cases on a C# web application, as part of the Azure DevOps Release pipeline. 
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
@@ -15,21 +15,21 @@ After you complete this lab, you will be able to:
 - Trigger build and release
 - Run tests in Chrome and Firefox
 
-### Estimated time: 60 minutes
+## Estimated time: 60 minutes
 
 ## Architecture Diagram
 
 ![Architecture Diagram](images/lab9-architecture-new.png)
 
-### Before you start
+## Before you start
 
-## Review applications required for this lab
+### Review applications required for this lab
 
 Identify the applications that you'll use in this lab:
     
 -   Microsoft Edge
 
-## Set up an Azure DevOps organization (Skip if already done) 
+### Set up an Azure DevOps organization (Skip if already done) 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -43,11 +43,11 @@ Identify the applications that you'll use in this lab:
 
     ![Azure DevOps](images/az-400-5-2.png)
 
-# Exercise 0: Configure the lab prerequisites
+### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which include the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template and Azure resources. 
 
-## Task 1: Configure the team project
+#### Task 1: Configure the team project
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Selenium** template.
 
@@ -56,16 +56,20 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
     > **Note**: For more information on the site, see [What is the Azure DevOps Services Demo Generator?](https://docs.microsoft.com/en-us/azure/devops/demo-gen).
 
 1.  Click **Sign in** and sign in using the Microsoft account associated with your Azure DevOps subscription.
+
 1.  If required, on the **Azure DevOps Demo Generator** page, click **Accept** to accept the permission requests for accessing your Azure DevOps subscription.
+
 1.  On the **Create New Project** page, in the **New Project Name** textbox, type **Setting Up and Running Functional Tests**, in the **Select organization** dropdown list, select your Azure DevOps organization, and then click **Choose template**.
+
 1.  In the list of templates, in the toolbar, click **DevOps Labs**, select the **Selenium** template and click **Select Template**.
+
 1.  Back on the **Create New Project** page, click **Create Project**
 
     > **Note**: Wait for the process to complete. This should take about 2 minutes. In case the process fails, navigate to your DevOps organization, delete the project, and try again.
 
 1.  On the **Create New Project** page, click **Navigate to project**.
 
-## Task 2: Create Azure resources
+#### Task 2: Create Azure resources
 
 In this task, you will provision an Azure VM running Windows Server 2016 along with SQL Express 2017, Chrome, and Firefox.
 
@@ -90,11 +94,11 @@ In this task, you will provision an Azure VM running Windows Server 2016 along w
 
     > **Note**: Wait for the process to complete. This should take about 30 minutes. 
 
-# Exercise 1: Implement Selenium tests by using a self-hosted Azure DevOps agent
+### Exercise 1: Implement Selenium tests by using a self-hosted Azure DevOps agent
 
 In this exercise, you will implement Selenium tests by using a self-hosted Azure DevOps agent.
 
-## Task 1: Configure a self-hosted Azure DevOps agent
+#### Task 1: Configure a self-hosted Azure DevOps agent
 
 In this task, you will configure a self-hosted agent by using the VM you deployed in the previous exercise. Selenium requires the agent to be run in the interactive mode to execute the UI tests.
 
@@ -177,7 +181,7 @@ In this task, you will configure a self-hosted agent by using the VM you deploye
 
 1.  Once the download of the **DacFramework.msi** file completes, use it to run the installation of the Microsoft SQL Server Data-Tier Application Framework with the default settings.
 
-## Task 2: Configure a release pipeline
+#### Task 2: Configure a release pipeline
 
 In this task, you will configure the release pipeline.
 
@@ -209,7 +213,7 @@ In this task, you will configure the release pipeline.
 
 1.  Repeat the previous step for **SQL Deployment** and the **Selenium tests execution** phases. If needed, click **Save** to save the changes.
 
-## Task 3: Trigger Build and Release
+#### Task 3: Trigger Build and Release
 
 In this task, we will trigger the **Build** to compile Selenium C# scripts along with the Web application. The resulting binaries are copied to self-hosted agent and the Selenium scripts are executed as part of the automated **Release**.
 
@@ -238,12 +242,11 @@ In this task, we will trigger the **Build** to compile Selenium C# scripts along
      .\run.cmd
    ```
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 
