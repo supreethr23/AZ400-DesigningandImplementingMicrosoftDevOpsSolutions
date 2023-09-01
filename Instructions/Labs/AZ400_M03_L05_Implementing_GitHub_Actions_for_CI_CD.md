@@ -4,14 +4,14 @@
 
 In this lab, you will learn how to implement a GitHub Action workflow that deploys an Azure web app by using DevOps Starter.
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
 - Implement a GitHub Action workflow by using DevOps Starter
 - Explain the basic characteristics of GitHub Action workflows
 
-### Estimated time: 60 minutes
+## Estimated time: 40 minutes
 
 ## Architecture Diagram
 
@@ -22,7 +22,7 @@ After you complete this lab, you will be able to:
 - If you don't already have a GitHub account that you can use for this lab, follow instructions available at [Signing up for a new GitHub account](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
 
 
-## Prepare a GitHub account
+### Prepare a GitHub account
 
 1. If you already have a GitHub account that you can use for this lab proceed with Exercise 1, else follow the instructions to create an account.
 
@@ -40,7 +40,7 @@ After you complete this lab, you will be able to:
 
    ![Github](images/mod6_25.png)
 
-# Exercise 0: Import eShopOnWeb to your GitHub Repository
+### Exercise 0: Import eShopOnWeb to your GitHub Repository
 
 In this exercise, you will import the existing [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb) repository code to your own GitHub private repo.
 
@@ -51,7 +51,7 @@ The repository is organized the following way:
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
 
-## Task 1: Create a public repository in GitHub and import eShopOnWeb
+#### Task 1: Create a public repository in GitHub and import eShopOnWeb
 
 In this task, you will create an empty public GitHub repository and import the existing [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb) repository.
 
@@ -79,11 +79,11 @@ In this task, you will create an empty public GitHub repository and import the e
     ![Enable GitHub Actions](images/enable-actions.png)
 
 
-# Exercise 1: Setup your GitHub Repository and Azure access
+### Exercise 1: Setup your GitHub Repository and Azure access
 
 In this exercise, you will create an Azure Service Principal to authorize GitHub accessing your Azure subscription from GitHub Actions. You will also setup the GitHub workflow that will build, test and deploy your website to Azure. 
 
-## Task 1: Create an Azure Service Principal and save it as GitHub secret
+#### Task 1: Create an Azure Service Principal and save it as GitHub secret
 
 In this task, you will create the Azure Service Principal used by GitHub to deploy the desired resources. As an alternative, you could also use [OpenID connect in Azure](https://docs.github.com/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure), as a secretless authentication mechanism.
 
@@ -93,13 +93,13 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
 1. On the **Create a resource group** tab, give the following name to your Resource Group: **rg-az400-eshopeonweb-NAME** (replace NAME for some unique alias). Click on **Review+Create > Create**.
 1. In the Azure Portal, open the **Cloud Shell** (next to the search bar).
 
-    > NOTE: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**
+    > **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**
 
 1. Make sure the terminal is running in **Bash** mode and execute the following command, replacing **SUBSCRIPTION-ID** and **RESOURCE-GROUP** with your own identifiers (both can be found on the **Overview** page of the Resorce Group):
 
     `az ad sp create-for-rbac --name GH-Action-eshoponweb --role contributor --scopes /subscriptions/SUBSCRIPTION-ID/resourceGroups/RESOURCE-GROUP --sdk-auth`
 
-    > NOTE: this command will create a Service Principal with Contributor access to the Resource Group created before. This way we make sure GitHub Actions will only have the permissions needed to interact only with this Resource Group (not the rest of the subscription)
+    > **Note**: this command will create a Service Principal with Contributor access to the Resource Group created before. This way we make sure GitHub Actions will only have the permissions needed to interact only with this Resource Group (not the rest of the subscription)
 
 1. The command will output a JSON object, you will later keep it as a GitHub secret for the workflow, copy it. The JSON contains the identifiers used to authenticate against Azure in the name of an Azure AD application identity (service principal).
 
@@ -120,11 +120,12 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
 
 1. Click on **Add secret**. Now GitHub Actions will be able to reference the service principal, using the repository secret.
 
-## Task 2: Modify and execute the GitHub workflow
+#### Task 2: Modify and execute the GitHub workflow
 
 In this task, you will modify the given GitHub workflow and execute it to deploy the solution in your own subscription.
 
 1. In a browser window, go back to your **eShopOnWeb** GitHub repository.
+
 1. On the repository page, go to **Code** and open the following file: **eShopOnWeb/.github/workflows/eshoponweb-cicd.yml**. This workflow defines the CI/CD process for the given .NET 6 website code.
 
 1. Uncomment the **on** section (delete "#"). The workflow triggers with every push to the main branch and also offers manual triggering ("workflow_dispatch").
@@ -139,11 +140,12 @@ In this task, you will modify the given GitHub workflow and execute it to deploy
 
 1. Click on **Start Commit** and **Commit Changes** leaving defaults (changing the main branch). The workflow will get automatically executed.
 
-## Task 3: Review GitHub Workflow execution
+#### Task 3: Review GitHub Workflow execution
  
 In this task, you will review the GitHub workflow execution:
 
 1. In a browser window, go back to your **eShopOnWeb** GitHub repository.
+
 1. On the repository page, go to **Actions**, you will see the workflow setup before executing. Click on it.
 
     ![GitHub workflow in progress](images/gh-actions.png)
@@ -156,11 +158,12 @@ In this task, you will review the GitHub workflow execution:
 
     ![Browse WebApp](images/browse-webapp.png)
 
-## (OPTIONAL) Task 4: Add manual approval pre-deploy using GitHub Environments
+#### (OPTIONAL) Task 4: Add manual approval pre-deploy using GitHub Environments
 
 In this task, you will use GitHub environments to ask for manual approval before executing the actions defined on the deploy job of your workflow.
 
 1. On the repository page, go to **Code** and open the following file: **eShopOnWeb/.github/workflows/eshoponweb-cicd.yml**.
+
 1. In the **deploy** job section, you can find a reference to an **enviroment** called **Development**. GitHub used [environments](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment) add protection rules (and secrets) for your targets.
 
 1. On the repository page, go to **Settings**, open **Environments** and click **New environment**.
@@ -181,12 +184,11 @@ In this task, you will use GitHub environments to ask for manual approval before
 
 1. Workflow will follow the **deploy** job execution and finish.
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 

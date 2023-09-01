@@ -4,7 +4,7 @@
 
 In this lab, you will create and configure wiki in an Azure DevOps, including managing markdown content and creating a Mermaid diagram.
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
@@ -12,14 +12,14 @@ After you complete this lab, you will be able to:
 - Add and edit markdown
 - Create a Mermaid diagram
 
-### Estimated time: 60 minutes
+## Estimated time: 60 minutes
 
 ## Architecture Diagram
  
   ![Architecture Diagram](images/lab17-architecture-new.png)
 
 
-## Set up an Azure DevOps organization. 
+### Set up an Azure DevOps organization. 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
 
@@ -37,12 +37,12 @@ After you complete this lab, you will be able to:
 
     ![](images/lab1-image2.png)
 
-# Exercise 0: Configure the lab prerequisites
+### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of the pre-configured **EShopOnWeb** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
 
 
-## Task 1: Configure the EShopOnWeb project
+#### Task 1: Configure the EShopOnWeb project
 
 In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
 
@@ -56,13 +56,13 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
 
      ![](images/AZ400_M09_L17_03.png)
     
-# Exercise 1: Publish code as wiki
+### Exercise 1: Publish code as wiki
 
 In this exercise, you will step through publishing an Azure DevOps repository as wiki and managing the published wiki.
 
 > **Note**: Content that you maintain in a Git repository can be published to an Azure DevOps wiki. For example, content written to support a software development kit, product documentation, or README files can be published directly to a wiki. You have the option of publishing multiple wikis within the same Azure DevOps team project.
 
-## Task 1: Publish a branch of an Azure DevOps repo as wiki
+#### Task 1: Publish a branch of an Azure DevOps repo as wiki
 
 In this task, you will create Azure Repository and publish a branch of an Azure DevOps repo as wiki.
 
@@ -163,14 +163,14 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
       
      ![](images/AZ400_M09_L17_16.png)
     
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-## Task 2: Manage content of a published wiki
+#### Task 2: Manage content of a published wiki
 In this task, you will manage content of the wiki you published in the previous task.
 
 1. In the vertical menu on the left side, click **Repos (1)**, ensure that the dropdown menu in the upper section of the **Files (2)** pane displays the **EShopOnWeb (3)** repo and **main (4)** branch, in the repo folder hierarchy, select the **Documents (5)** folder, and select the **Welcome-to-our-Online-Retail-Store!.md (6)** file.
@@ -182,13 +182,13 @@ In this task, you will manage content of the wiki you published in the previous 
    > **Note**: Since the Wiki source files are handled as source code, remember all practices from traditional source control (Clone, Pull Requests, Approvals and more), can now also be applied to Wiki pages.
 
 
-# Exercise 2: Create and manage a project wiki
+### Exercise 2: Create and manage a project wiki
 
 In this exercise, you will step through creating and managing a project wiki.
 
 > **Note**: You can create and manage wiki independently of the existing repos. 
 
-## Task 1: Create a project wiki including a Mermaid diagram and an image
+#### Task 1: Create a project wiki including a Mermaid diagram and an image
 
 In this task, you will create a project wiki and add to it a Mermaid diagram and an image.
 
@@ -282,6 +282,7 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
       ![](images/AZ400_M09_L17_36.png)
 
 16.  Back on the **Project Design** editor pane, review the preview pane and verify that the image is properly displayed.
+
 17.  In the upper right corner of the editor pane, click the down-facing caret next to the **Save** button and, in the dropdown menu, click **Save with revision message**. 
     
       ![](images/AZ400_M09_L17_37.png)
@@ -292,14 +293,13 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
      
       ![](images/AZ400_M09_L17_39.png)
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
-## Task 2: Manage a project wiki
+#### Task 2: Manage a project wiki
 
 In this task, you will manage the newly created project wiki.
 
@@ -350,4 +350,4 @@ In this task, you will manage the newly created project wiki.
 
 In this lab, you created and configured Wiki in an Azure DevOps, including managing markdown content and creating a Mermaid diagram.
 
-### You have successfully completed the lab.
+## You have successfully completed the lab.

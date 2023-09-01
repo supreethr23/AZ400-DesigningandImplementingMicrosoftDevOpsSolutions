@@ -1,13 +1,12 @@
 # Lab 16: Monitoring Application Performance with Application Insights
 
-
 ## Lab overview
 
 Application Insights is an extensible Application Performance Management (APM) service for web developers on multiple platforms. You can use it to monitor your live web applications. It automatically detects performance anomalies, includes powerful analytics tools to help you diagnose issues, and helps you continuously improve performance and usability. It works for apps on a wide variety of platforms including .NET, Node.js and Java EE, hosted on-premises, hybrid, or any public cloud. It integrates with your DevOps process with connection points available in a variety of development tools. It also allows you to monitor and analyze telemetry from mobile apps through integration with Visual Studio App Center.
 
 In this lab, you'll learn about how you can add Application Insights to an existing web application, as well as how to monitor the application via the Azure portal.
 
-## Objectives
+## Lab objectives
 
 After you complete this lab, you will be able to:
 
@@ -17,13 +16,13 @@ After you complete this lab, you will be able to:
 - Track Azure web app usage by using Application Insights
 - Create Azure web app alerts by using Application Insights
 
-### Estimated time: 60 minutes
+## Estimated time: 60 minutes
 
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab16-architecture-new.png)
 
-## Set up an Azure DevOps organization. 
+### Set up an Azure DevOps organization. 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
 
@@ -54,11 +53,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/agent2-1.png)
 
-# Exercise 0: Configure the lab prerequisites
+### Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of the preconfigured Parts Unlimited team project based on an Azure DevOps Demo Generator template and Azure resources, including an Azure web app and an Azure SQL database. 
 
-## Task 1: Configure the team project
+#### Task 1: Configure the team project
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Parts Unlimited** template.
 
@@ -86,7 +85,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
     ![Azure DevOps](images/mod17_img4-1.png)
 
-## Task 2: Create Azure resources
+#### Task 2: Create Azure resources
 
 In this task, you will create an Azure web app and an Azure SQL database by using the cloud shell in Azure portal.
 
@@ -188,41 +187,54 @@ In this task, you will create an Azure web app and an Azure SQL database by usin
      -t SQLAzure --settings "DefaultConnectionString=$CONNSTRING" 
     ```
 
-# Exercise 1: Monitor an Azure App Service web app by using Azure Application Insights
+### Exercise 1: Monitor an Azure App Service web app by using Azure Application Insights
 
 In this exercise, you will deploy a web app to Azure App Service by using Azure DevOps pipelines, generate traffic targeting the web app, and use Application Insights to review the web traffic, investigate application performance, track application usage, and configure alerting.
 
-## Task 1: Deploy a web app to Azure App Service by using Azure DevOps
+#### Task 1: Deploy a web app to Azure App Service by using Azure DevOps
 
 In this task, you will deploying a web app to Azure by using Azure DevOps pipelines.
 
 > **Note**: The sample project we are using in this lab includes a continuous integration build, which we will use without modifications. There is also a continuous delivery release pipeline that will require minor changes before it is ready for deployment to the Azure resources you implemented in the previous task. 
 
 1. Switch to the web browser window displaying the **Monitoring Application Performance** project in the Azure DevOps portal, in the vertical navigational pane, select the **Pipelines**, and, in the **Pipelines** section, select **Releases**.
+
 2. In the list of release pipelines, on the **PartsUnlimitedE2E** pane, click **Edit**. 
+
 3. On the **All pipelines > PartsUnlimitedE2E** pane, click the rectangle representing the **Dev** stage, on the **Dev** pane, click **Delete**, and, in the **Delete stage** dialog box, click **Confirm**.
+
 4. Back on the **All pipelines > PartsUnlimitedE2E** pane, click the rectangle representing the **QA** stage, on the **QA** pane, click **Delete**, and, in the **Delete stage** dialog box, click **Confirm**.
-6. Back on the **All pipelines > PartsUnlimitedE2E** pane, in the rectangle representing the **Production** stage, click the **1 job, 1 task** link.
-7. On the pane displaying the list of tasks of the **Production*** stage, click the entry representing the **Azure App Service Deploy** task.
-8. On the **Azure App Service deploy** pane, in the **Azure subscription** dropdown list, select the entry representing the Azure subscription you are using in this lab, and click **Authorize** to create the corresponding service connection, and in the **Azure service name** dropdown list select your app service name. When prompted, sign in using the account with the Owner role in the Azure subscription and the Global Administrator role in the Azure AD tenant associated with the Azure subscription.
-9. With the **Tasks** tab of the **All pipelines > PartsUnlimitedE2E** pane active, click the **Pipeline** tab header to return to the diagram of the pipeline. 
-10. In the diagram, click the **Pre-deployment condition** oval symbol on the left side of the rectangle representing the **Production** stage.
-11. On the **Pre-deployment condition** pane, in the **Select trigger** section, select **After release**.
+
+5. Back on the **All pipelines > PartsUnlimitedE2E** pane, in the rectangle representing the **Production** stage, click the **1 job, 1 task** link.
+
+6. On the pane displaying the list of tasks of the **Production*** stage, click the entry representing the **Azure App Service Deploy** task.
+
+7. On the **Azure App Service deploy** pane, in the **Azure subscription** dropdown list, select the entry representing the Azure subscription you are using in this lab, and click **Authorize** to create the corresponding service connection, and in the **Azure service name** dropdown list select your app service name. When prompted, sign in using the account with the Owner role in the Azure subscription and the Global Administrator role in the Azure AD tenant associated with the Azure subscription.
+
+8. With the **Tasks** tab of the **All pipelines > PartsUnlimitedE2E** pane active, click the **Pipeline** tab header to return to the diagram of the pipeline. 
+
+9. In the diagram, click the **Pre-deployment condition** oval symbol on the left side of the rectangle representing the **Production** stage.
+
+10. On the **Pre-deployment condition** pane, in the **Select trigger** section, select **After release**.
 
      > **Note**: This will invoke the release pipeline after the project's build pipeline succeeds.
 
-12. With the **Pipeline** tab of the **All pipelines > PartsUnlimitedE2E** pane active, click the **Variables** tab header.
-13. In the list of variables, set the value of the **WebsiteName** variable to match the name of the Azure App Service web app you created earlier in this lab.
-14. In the upper right corner of the pane, click **Save**, and, when prompted, in the **Save** dialog box, click **OK** again.
+11. With the **Pipeline** tab of the **All pipelines > PartsUnlimitedE2E** pane active, click the **Variables** tab header.
+
+12. In the list of variables, set the value of the **WebsiteName** variable to match the name of the Azure App Service web app you created earlier in this lab.
+
+13. In the upper right corner of the pane, click **Save**, and, when prompted, in the **Save** dialog box, click **OK** again.
 
      > **Note**: Now that the release pipeline is in place, we can expect that any commits to the master branch will trigger the build and release pipelines.
 
-15. In the web browser window displaying the Azure DevOps portal, in the vertical navigational pane, click **Repos**. 
-16. On the **Files** pane, navigate to and select the **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Web.config** file.
+14. In the web browser window displaying the Azure DevOps portal, in the vertical navigational pane, click **Repos**. 
+
+15. On the **Files** pane, navigate to and select the **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Web.config** file.
 
      > **Note**: This application already has configuration settings for the Application Insights key and for a SQL connection. 
 
-17. On the **Web.config** pane, review the lines referencing the Application Insights key and for a SQL connection:
+
+16. On the **Web.config** pane, review the lines referencing the Application Insights key and for a SQL connection:
 
     ```xml
     <add key="Keys:ApplicationInsights:InstrumentationKey" value="0839cc6f-b99b-44b1-9d74-4e408b7aee29" />
@@ -238,72 +250,80 @@ In this task, you will deploying a web app to Azure by using Azure DevOps pipeli
 
      > **Note**: Now trigger the build and release processes without modifying any relevant code, by simply adding an empty line to the end of the file
 
-18. On the **Web.config** pane, click **Edit**, add an empty line to the end of the file, click **Commit** and, on the **Commit** pane, click **Commit** again.
+17. On the **Web.config** pane, click **Edit**, add an empty line to the end of the file, click **Commit** and, on the **Commit** pane, click **Commit** again.
 
      > **Note**: A new build will begin and ultimately result in a deployment to Azure. Do not wait for its completion, but instead proceed to the next step.
 
-19.  Switch to the web browser displaying the Azure portal and navigate to the App Service web app you provisioned earlier in the lab. 
-20.  On the App Service web app blade, click in the vertical menu on the left side, in the **Settings** section, click **Configuration** tab.
-21.  In the list of **Application settings**, click the **APPINSIGHTS_INSTRUMENTATIONKEY** entry. 
-22.  On the **Add/Edit application setting** blade, copy the text in the **Value** textbox and click **Cancel**.
+18.  Switch to the web browser displaying the Azure portal and navigate to the App Service web app you provisioned earlier in the lab. 
+
+19.  On the App Service web app blade, click in the vertical menu on the left side, in the **Settings** section, click **Configuration** tab.
+
+20.  In the list of **Application settings**, click the **APPINSIGHTS_INSTRUMENTATIONKEY** entry. 
+
+21.  On the **Add/Edit application setting** blade, copy the text in the **Value** textbox and click **Cancel**.
 
       > **Note**: This is the default setting added during the App Service web app deployment, which already contains the Application Insights ID. We need to add a new setting expected by our app, with a different name but the matching value. This is a specific requirement for our sample.
 
-23.  In the **Application settings** section, click **+ New application setting**.
-24.  On the **Add/Edit application setting** blade, in the **Name** textbox, type **Keys:ApplicationInsights:InstrumentationKey**, in the **Value** textbox, type the string of characters you copied into Clipboard and click **OK** and then **Save**.
+22.  In the **Application settings** section, click **+ New application setting**.
+
+23.  On the **Add/Edit application setting** blade, in the **Name** textbox, type **Keys:ApplicationInsights:InstrumentationKey**, in the **Value** textbox, type the string of characters you copied into Clipboard and click **OK** and then **Save**.
 
       > **Note**: Changes to the application settings and connection strings trigger restart of the web app.
 
-25.  Switch back to the web browser window displaying the Azure DevOps portal, in the vertical navigational pane, select the **Pipelines**, and, in the **Pipelines** section, click the entry representing your most recently run build pipeline.
-26.  If the build has not yet completed, track it through until it does, then, in the vertical navigational pane, in the **Pipelines** section, click **Releases**, on the **PartsUnlimiteE2E** pane, click **Release-1** and follow the release pipeline to its completion.
-27.  Switch to the web browser window displaying the Azure portal and, on the **App Service web app** blade, in the vertical menu bar on the left side, click **Overview**. 
-1.  On the right side, in the **Essentials** section, click the **Default domain** link. This will automatically open another web browser tab displaying the **Parts Unlimited** 
+24.  Switch back to the web browser window displaying the Azure DevOps portal, in the vertical navigational pane, select the **Pipelines**, and, in the **Pipelines** section, click the entry representing your most recently run build pipeline.
+
+25.  If the build has not yet completed, track it through until it does, then, in the vertical navigational pane, in the **Pipelines** section, click **Releases**, on the **PartsUnlimiteE2E** pane, click **Release-1** and follow the release pipeline to its completion.
+
+26.  Switch to the web browser window displaying the Azure portal and, on the **App Service web app** blade, in the vertical menu bar on the left side, click **Overview**. 
+
+27. On the right side, in the **Essentials** section, click the **Default domain** link. This will automatically open another web browser tab displaying the **Parts Unlimited** 
 web site.
 
-> **Note**: Please wait until the the requested URL is visible, it may take around 10 minutes to load the respective webpage.
+    > **Note**: Please wait until the the requested URL is visible, it may take around 10 minutes to load the respective webpage.
 
 28.  Verify that the **Parts Unlimited** web site loads as expected. 
 
      ![Azure DevOps](images/mod17_img8-1.png)
 
-30. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
-
-## Task 2: Generate and review application traffic
+#### Task 2: Generate and review application traffic
 
 In this task, you will generate traffic targeting the App Service web app you deployed in the previous task and review the data collected by Application Insights resource associated with the web app.
 
 1.  In the web browser window displaying the **Parts Unlimited** web site, navigate through its pages to generate some traffic.
+
 2.  On the **Parts Unlimited** web site, click the **Brakes** menu item.
 
     ![Azure DevOps](images/mod17_img9-1.png)
 
-4.  In the URL textbox at the top of the browser window, append **1** to the end of the URL string and press **Enter**, effectively setting the **CategoryId** parameter to **11**. 
+3.  In the URL textbox at the top of the browser window, append **1** to the end of the URL string and press **Enter**, effectively setting the **CategoryId** parameter to **11**. 
 
     ![Azure DevOps](images/mod17_img10-1.png)
 
     > **Note**: This will trigger a server error since that category does not exist. Refresh the page a few times to generate more errors.
 
 4.  Return to the web browser tab displaying the Azure portal.
+
 5.  In the web browser tab displaying the Azure portal, on the **App Service** web app blade, in the vertical menu bar on the left, in the **Settings** section, click the **Application Insights** entry to display the **Application Insights** configuration blade.
 
     > **Note**: This blade includes settings that allow you to integrate Application Insights with different types of apps. While the default experience produces a wealth of data for tracking and monitoring apps, the API provides support for more specialized scenarios and custom event tracking.
 
 6.  On the **Application Insights** configuration blade, click the **View Application Insights data** link.
+
 7.  Review the resulting **Application Insights** blade displaying charts presenting different characteristics of the collected data, including the traffic you generated and failed requests you triggered earlier in this task.
 
-8. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
-
-## Task 3: Investigate application performance
+#### Task 3: Investigate application performance
 
 In this task, you will use Application Insights to investigate performance of the App Service web app.
 
@@ -320,7 +340,9 @@ In this task, you will use Application Insights to investigate performance of th
     > **Note**: Live Metrics Stream enables you to probe the beating heart of your live, in-production web application. You can select and filter metrics and performance counters to watch in real time, without any impact to your service. You can also inspect stack traces from sample failed requests and exceptions.
 
 4.  Return to the web browser displaying the **Parts Unlimited** web site, navigate through its pages to generate some traffic, including a few server errors. 
+
 5.  Return to the web browser displaying the Azure portal to watch the live traffic as it arrives. 
+
 6.  On the **Application Insights** blade, in the vertical menu on the left side, in the **Investigate** section, click **Transaction search**.
 
     > **Note**: Transaction search provides a flexible interface to locate the exact telemetry you need to answer questions. 
@@ -334,11 +356,13 @@ In this task, you will use Application Insights to investigate performance of th
     > **Note**: These results are grouped based common properties.
 
 9.  On the **Transaction search** blade, in the middle of the blade, right above the list of results, click **Results** to return to the original view, listing all results.
+
 10.  At the top of the **Transaction search** blade, click **Event types = All selected**, in the dropdown list, clear the **Select all** checkbox, and, in the list of event types, select the **Exception** checkbox.
 
      > **Note**: There should be some exceptions representing the errors you generated earlier. 
 
 11.  In the list of results, click one of them. This will display the **End-to-end transaction details** blade, providing a full timeline view of the exception within the context of its request. 
+
 12.  At the bottom of the **End-to-end transaction details** blade, click **View all telemetry**.
 
       > **Note**: The **Telemetry** view provides the same data but in a different format. On the right hand side of the **End-to-end transaction details** blade, you can also review the details of the exception itself, such as its properties and call stack.
@@ -348,6 +372,7 @@ In this task, you will use Application Insights to investigate performance of th
      > **Note**: After you've deployed your web app or web site to any server, you can set up tests to monitor its availability and responsiveness. Application Insights sends web requests to your application at regular intervals from points around the world. It alerts you if your application doesn't respond or responds slowly. 
 
 14.  On the **Availability** blade, in the toolbar, click **+ Add Classic test**.
+
 15.  On the **Create test** blade, in the **Test name** textbox, type **Home page**, set the **URL** to the root of your App Service web app, and click **Create**.
 
       > **Note**: The test will not run immediately, so there won't be any data. If you check back later, you should see the availability data updated to reflect the tests against your live site. Don't wait for this now.
@@ -376,14 +401,13 @@ In this task, you will use Application Insights to investigate performance of th
 
       > **Note**: This will split the server requests based on pages they reference, represented by different colors in the chart.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
-## Task 4: Track application usage
+#### Task 4: Track application usage
 
    > **Note**: Application Insights provides a broad set of features to track application usage. 
 
@@ -392,11 +416,13 @@ In this task, you will use Application Insights to investigate performance of th
     > **Note**: While there aren't many users of our application yet, some data will be available. 
 
 2.  On the **Users** blade, below the main chart, click **View More Insights**. This will display additional data, extending the blade downwards.
+
 3.  Scroll down to review details about the geographies, operating systems, and browsers.
 
     > **Note**: You can also drill into user-specific data to gain a better understanding of the user-specific usage patterns.
 
 4.  On the **Users** blade, in the vertical menu on the left side, in the **Usage** section, click **Events**.
+
 5.  On the **Events** blade, below the main chart, click **View More Insights**.
 
     > **Note**: The display will include a range of built-in events raised so far based on site usage. You can programmatically add custom events with custom data to meet your needs.
@@ -437,21 +463,25 @@ In this task, you will use Application Insights to investigate performance of th
      > **Note**: The Impact Analysis experience was transitioned to Azure Workbooks
 
 14.  Click on **Impact Analysis Workbook**, and in the **Selected event** dropdown list, in the **Page Views** section, select **Home Page - Parts Unlimited**, in the **Impacting event**, select **Browse Product - Parts Unlimited**, review the results, and close the blade.
+
 15. On the **Impact** blade, in the vertical menu on the left side, in the **Usage** section, click **Cohorts**.
 
     > **Note**: A cohort is a set of users, sessions, events, or operations that have something in common. In Application Insights, cohorts are defined by an analytics query. In cases where you have to analyze a specific set of users or events repeatedly, cohorts can give you more flexibility to express exactly the set you're interested in. Cohorts are used in ways similar to filters, but cohort definitions are built from custom analytics queries, so they're much more adaptable and complex. Unlike filters, you can save cohorts so other members of your team can reuse them.
 
-
-## Task 5: Configure web app alerts
+#### Task 5: Configure web app alerts
 
 1. While on the **More \| Gallery** blade, in the vertical menu on the left side, in the **Monitoring** section, click **Alerts**. 
 
     > **Note**: Alerts enable you to set triggers that perform actions when Application Insights measurements reach specified conditions.
 
 2. On the **Alerts** blade, in the toolbar, click **+ Create** in dropdown select **Alert rule**.
+
 3. On the **Create alert rule** blade, note that, in the **Scope** section, the current Application Insights resource will be selected by default. 
+
 4. On the **Create alert rule** blade, in the **Condition** section, in select a signal dropdown click on **See all signals**.
+
 5. On the **Select a signal** blade, search for and select the **Failed requests** metric.
+
 6. On the **Configure signal logic** blade, scroll down to the **Alert logic** section, ensure that **Threshold** is set to **Static** and set the **Threshold value** to **1**. 
 
     > **Note**: This will trigger the alert once a second failed request is reported. By default, the conditions will be evaluated every minute and based on the aggregation of measurements over the past 5 minutes. 
@@ -461,6 +491,7 @@ In this task, you will use Application Insights to investigate performance of th
     > **Note**: Now that the condition is created, we need to define an **Action Group** for it to execute. 
 
 8. Back on the **Create alert rule** blade, in the **Action** section, click **Select action group** and then, on the **Select an action group to attach to this alert rule, click **+ Create action group**.
+
 9. On the **Basics** tab of the **Create action group** blade, specify the following settings and click **Next: Notifications >**:
 
     | Setting | Value |
@@ -471,19 +502,26 @@ In this task, you will use Application Insights to investigate performance of th
     | Display name | **az400m17-ag** |
 
 10. On the **Notifications** tab of the **Create action group** blade, in the **Notification type** dropdown list, select **Email/SMS message/Push/Voice**. This will open the **Email/SMS message/Push/Voice** blade. 
+
 11. On the **Email/SMS message/Push/Voice** blade, select the **Email** checkbox, in the **Email** textbox, type your email address, and click **OK**.
+
 12. Back on the **Notifications** tab of the **Create action group** blade, in the **Name** textbox, type **email** and click **Next: Actions >**:
+
 13. On the **Actions** tab of the **Create action group** blade, select the **Action type** dropdown list, review the available options without making any changes, and click **Review + create**.
+
 14. On the **Review + create** tab of the **Create action group** blade, click **Create**
+
 15. Back on the **Create alert rule** blade, in the **Alert rule details** section, in the **Alert rule name** textbox, type **az400m17 lab alert rule**, review the remaining alert rule settings without modifying them, and click **Create alert rule**.
+
 16. Switch to the web browser window displaying the **Parts Unlimited** web site, on the **Parts Unlimited** web site, click the **Brakes** menu item.
+
 17. In the URL textbox at the top of the browser window, append **1** to the end of the URL string and press **Enter**, effectively setting the **CategoryId** parameter to **11**. 
 
     > **Note**: This will trigger a server error since that category does not exist. Refresh the page a few times to generate more errors.
 
 18.  After about five minutes, check your email account to verify that you have received an email indicating that the alert you defined was triggered.
 
-# Exercise 2: Remove the Azure lab resources
+### Exercise 2: Remove the Azure lab resources
 
 In this exercise, you will remove the Azure resources provisione in this lab to eliminate unexpected charges. 
 
@@ -503,4 +541,4 @@ In this task, you will remove pipeline billing to eliminate unnecessary charges.
 
 In this exercise, you deployed a web app to Azure App Service by using Azure DevOps pipelines, generated traffic targeting the web app, and used Application Insights to review the web traffic, investigate application performance, track application usage, and configure alerting.
 
-### You have successfully completed the lab.
+## You have successfully completed the lab.
