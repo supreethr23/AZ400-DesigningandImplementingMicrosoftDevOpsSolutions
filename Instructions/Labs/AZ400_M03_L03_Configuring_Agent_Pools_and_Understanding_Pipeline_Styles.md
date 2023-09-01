@@ -15,7 +15,7 @@ After you complete this lab, you will be able to:
 - implement YAML-based pipelines
 - implement self-hosted agents
 
-### Estimated time: 60 minutes
+## Estimated timing: 60 minutes
 
 ## Architecture Diagram
 
