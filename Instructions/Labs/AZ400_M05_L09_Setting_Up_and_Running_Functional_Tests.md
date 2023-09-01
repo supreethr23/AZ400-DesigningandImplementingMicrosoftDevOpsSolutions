@@ -15,7 +15,7 @@ After you complete this lab, you will be able to:
 - Trigger build and release
 - Run tests in Chrome and Firefox
 
-### Estimated time: 60 minutes
+## Estimated timing: 60 minutes
 
 ## Architecture Diagram
 
