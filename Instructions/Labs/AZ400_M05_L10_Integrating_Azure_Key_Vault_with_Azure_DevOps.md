@@ -19,7 +19,7 @@ After you complete this lab, you will be able to:
 -   Create an Azure key vault. 
 -   Track pull requests through the Azure DevOps pipeline.
 
-### Estimated time: 45 minutes
+## Estimated timing: 45 minutes
 
 ## Architecture Diagram
 
