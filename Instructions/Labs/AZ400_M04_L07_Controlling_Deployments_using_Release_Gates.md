@@ -30,7 +30,7 @@ After you complete this lab, you will be able to:
 - Configure release gates.
 - Test release gates.
 
-### Estimated time: 90 minutes
+## Estimated timing: 90 minutes
 
 ## Architecture Diagram
 
