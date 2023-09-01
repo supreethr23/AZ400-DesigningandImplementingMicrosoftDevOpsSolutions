@@ -15,7 +15,7 @@ After you complete this lab, you will be able to:
 -   Define dashboards
 -   Customize team process
 
-### Estimated time: 60 minutes
+## Estimated timing: 60 minutes
 
 ## Architecture Diagram
 
