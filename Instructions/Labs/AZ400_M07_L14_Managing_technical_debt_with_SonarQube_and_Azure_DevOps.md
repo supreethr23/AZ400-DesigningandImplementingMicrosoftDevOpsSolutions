@@ -25,7 +25,7 @@ After you complete this lab, you will be able to:
 - Analyze SonarCloud reports
 - Integrate static analysis into the Azure DevOps pull request process
 
-### Estimated time: 60 minutes
+## Estimated timing: 60 minutes
 
 ## Architecture Diagram
 
