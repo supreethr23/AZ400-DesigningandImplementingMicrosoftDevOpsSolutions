@@ -14,7 +14,7 @@ After you complete this lab, you will be able to:
 -  Import a NuGet package.
 -  Update a NuGet package.
 
-### Estimated time: 60 minutes
+## Estimated timing: 60 minutes
 
 ## Architecture Diagram
 
