@@ -12,7 +12,7 @@ After you complete this lab, you will be able to:
 -   Track and review a build
 -   Invoke a continuous integration build
 
-## Estimated timing: 60 minutes
+## Estimated timing: 45 minutes
 
 ## Architecture Diagram
 
