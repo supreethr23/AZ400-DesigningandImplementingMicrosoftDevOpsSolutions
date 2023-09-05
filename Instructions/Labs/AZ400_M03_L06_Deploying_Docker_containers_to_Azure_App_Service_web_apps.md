@@ -12,7 +12,7 @@ After you complete this lab, you will be able to:
 - Push an image to Azure Container Registry
 - Deploy a Docker image as a container to Azure App Service by using Azure DevOps
 
-## Estimated timing: 60 minutes
+## Estimated timing: 30 minutes
 
 ## Architecture Diagram
 
