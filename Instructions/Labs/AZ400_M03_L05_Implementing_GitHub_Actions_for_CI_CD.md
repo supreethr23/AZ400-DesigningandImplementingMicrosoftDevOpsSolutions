@@ -11,7 +11,7 @@ After you complete this lab, you will be able to:
 - Implement a GitHub Action workflow by using DevOps Starter
 - Explain the basic characteristics of GitHub Action workflows
 
-## Estimated timing: 60 minutes
+## Estimated timing: 40 minutes
 
 ## Architecture Diagram
 
