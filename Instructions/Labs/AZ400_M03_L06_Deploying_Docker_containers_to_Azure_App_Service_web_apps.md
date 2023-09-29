@@ -14,7 +14,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab6-architecture.png)
+   ![Architecture Diagram](images/lab6-architecture1.png)
 
 # Exercise 1: Manage the service connection
 
