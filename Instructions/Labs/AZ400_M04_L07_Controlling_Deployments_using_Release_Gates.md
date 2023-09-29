@@ -24,11 +24,11 @@ There are 4 types of gates included by default in every account.
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
-- Configure release pipelines.
-- Configure release gates.
-- Test release gates.
+- Configuring release pipelines.
+- Configuring release gates.
+- Testing release gates.
 
 ## Architecture Diagram
 
