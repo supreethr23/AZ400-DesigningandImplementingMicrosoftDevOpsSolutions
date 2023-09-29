@@ -14,7 +14,7 @@ In this lab you will perform:
 
 ## Architecture Diagram
  
-  ![Architecture Diagram](images/lab17-architecture.png)
+  ![Architecture Diagram](images/lab17-architecture1.png)
 
 ## Exercise 0: Configure the EShopOnWeb project
 
