@@ -8,12 +8,12 @@ In this lab, you will learn how to execute Selenium test cases on a C# web appli
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
-- Configure a self-hosted Azure DevOps agent
-- Configure release pipeline
-- Trigger build and release
-- Run tests in Chrome and Firefox
+- Configuring a self-hosted Azure DevOps agent
+- Configuring release pipeline
+- Triggering build and release
+- Running tests in Chrome and Firefox
 
 ## Architecture Diagram
 
