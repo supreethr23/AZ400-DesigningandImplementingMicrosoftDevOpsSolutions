@@ -14,7 +14,7 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
 -  Exercise 01: Clone an existing repository
 -  Exercise 02: Save work with commits
@@ -35,7 +35,7 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Navigate to **Repos>Files** and then click on **Import** within the **Import a repository** card. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Navigate to **Repos>Files (1)** and then click on **Import (2)** within the **Import a repository** card. On the **Import a Git Repository** window, paste the following URL **https://github.com/MicrosoftLearning/eShopOnWeb.git (3)**  and click on **Import(4)**:
 
     ![Import Repository](images/az400_02-04.png)
 
