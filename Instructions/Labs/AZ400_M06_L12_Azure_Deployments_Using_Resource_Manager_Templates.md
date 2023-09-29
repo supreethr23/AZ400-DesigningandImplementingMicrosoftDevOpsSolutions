@@ -6,16 +6,15 @@ In this lab, you'll create an Azure Bicep template and modularize it using the A
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
-- Understand and create a Azure Bicep Templates.
-- Create a reusable Bicep module for storage resources.
-- Upload Linked Template to Azure Blob Storage and generate SAS token.
-- Modify the main template to use the module.
-- Modify the main template to update dependencies.
-- Deploy all the resources to Azure using Azure Bicep Templates.
-- Deploy resources to Azure using linked templates
-
+- Creating a Azure Bicep Templates.
+- Creating a reusable Bicep module for storage resources.
+- Uploading Linked Template to Azure Blob Storage and generate SAS token.
+- Modifying the main template to use the module.
+- Modifying the main template to update dependencies.
+- Deploying all the resources to Azure using Azure Bicep Templates.
+- Deploying resources to Azure using linked templates
 ## Estimated time: 45 minutes
 
 ## Architecture Diagram
