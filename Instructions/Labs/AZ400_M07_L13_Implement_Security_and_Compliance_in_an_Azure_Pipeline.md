@@ -24,7 +24,7 @@ In this lab you will perform:
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab13-architecture.png)
+   ![Architecture Diagram](images/lab13-architecture1.png)
 
 # Exercise 1: Implement Security and Compliance in an Azure DevOps pipeline by using Mend Bolt
 
