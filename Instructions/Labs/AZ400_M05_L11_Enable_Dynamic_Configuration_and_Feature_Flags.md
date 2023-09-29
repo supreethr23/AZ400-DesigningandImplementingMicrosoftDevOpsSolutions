@@ -16,10 +16,10 @@
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
-- Enable dynamic configuration
-- Manage feature flags
+- Enabling dynamic configuration
+- Managing feature flags
 
 ## Architecture Diagram
 
