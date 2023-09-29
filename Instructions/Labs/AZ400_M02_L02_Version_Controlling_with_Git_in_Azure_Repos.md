@@ -24,7 +24,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab2-architecture.png)
+   ![Architecture Diagram](images/lab2-architecture2.png)
     
 # Exercise 0: Configure the lab prerequisites
 
