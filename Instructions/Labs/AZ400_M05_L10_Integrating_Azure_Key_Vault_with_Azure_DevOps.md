@@ -21,7 +21,7 @@ In this lab you will perform:
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab10-architecture.png)
+   ![Architecture Diagram](images/lab10-architecture1.png)
 
 # Exercise 1: Setup CI pipeline to build eShopOnWeb container
 
