@@ -14,13 +14,13 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
--   configure CI/CD pipelines as code with YAML in Azure DevOps
+-   configuring CI/CD pipelines as code with YAML in Azure DevOps
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab8-architecture.png)
+   ![Architecture Diagram](images/lab8-architecture1.png)
 
 
 # Exercise 0: Configure the lab prerequisites
@@ -39,7 +39,7 @@ In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps proj
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb_MultiStageYAML** project. Click on **Repos>Files** , **Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb_MultiStageYAML** project. Click on **Repos>Files (1)** , **Import a Repository**. Select **Import (2)**. On the **Import a Git Repository** window, paste the following URL **https://github.com/MicrosoftLearning/eShopOnWeb.git (3)**  and click **Import (4)**:
 
     ![Import Repository](images/az-400-5-8.png)
 
@@ -112,8 +112,8 @@ In this task, you will add a YAML build definition to the existing project.
 1. On the **Select a repository** pane, click **eShopOnWeb_MultiStageYAML**.
 1. On the **Configure your pipeline** pane, scroll down and select **Existing Azure Pipelines YAML File**.
 1. In the **Selecting an existing YAML File** blade, specify the following parameters:
-- Branch: **main**
-- Path: **.ado/eshoponweb-ci.yml**
+   - Branch: **main**
+   - Path: **.ado/eshoponweb-ci.yml**
 1. Click **Continue** to save these settings.
 1. From the **Review your Pipeline YAML** screen, click **Run** to start the Build Pipeline process.
 1. Wait for the Build Pipeline to complete successfully. Ignore any warnings regarding the source code itself, as they are not relevant for this lab exercise.

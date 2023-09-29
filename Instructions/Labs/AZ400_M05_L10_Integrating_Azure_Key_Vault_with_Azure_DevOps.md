@@ -13,15 +13,15 @@ In this lab, you will see how you can integrate Azure Key Vault with an Azure De
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
--   Create an Azure Active Directory (Azure AD) service principal.
--   Create an Azure key vault. 
--   Track pull requests through the Azure DevOps pipeline.
+-   Creating an Azure Active Directory (Azure AD) service principal.
+-   Creating an Azure key vault. 
+-   Tracking pull requests through the Azure DevOps pipeline.
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab10-architecture.png)
+   ![Architecture Diagram](images/lab10-architecture1.png)
 
 # Exercise 1: Setup CI pipeline to build eShopOnWeb container
 
@@ -66,7 +66,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
     > **Note**: The command will generate a JSON output. Copy the output to text file. You will need it later in this lab.
 
-1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **Create Service Connection**.
+1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings (1) > Service Connections (under Pipelines) (2)** and **New Service Connection (3)**.
 
     ![New Service Connection](images/lab-400-3.png)
 
@@ -91,7 +91,7 @@ In this task, you will import an existing CI YAML pipeline definition, modify an
 
 1.  On the **Where is your code?** window, select **Azure Repos Git (YAML)** and select the **eShopOnWeb** repository.
 
-1.  On the **Configure** section, choose **Existing Azure Pipelines YAML file**. Provide the following path **/.ado/eshoponweb-ci-dockercompose.yml** and click on **Continue**.
+1.  On the **Configure** section, choose **Existing Azure Pipelines YAML file (1)**. Provide the following **path (2)** **/.ado/eshoponweb-ci-dockercompose.yml** and click on **Continue**.
 
     ![Select Pipeline](images/lab-400-5.png)
 
@@ -173,15 +173,15 @@ In this task, you will create a Variable Group in Azure DevOps that will retriev
 
     | Setting | Value |
     | --- | --- |
-    | Variable Group Name | **eshopweb-vg** |
-    | Link secrets from Azure KV ... | **enable** |
-    | Azure subscription | **Available Azure service connection > Azure subs** |
-    | Key vault name | Your key vault name|
+    | **Variable Group Name (1)** | **eshopweb-vg** |
+    | **Link secrets from Azure KV ... (2)** | **enable** |
+    | **Azure subscription (3)** | **Available Azure service connection > Azure subs** |
+    | **Key vault name (4)** | Your key vault name|
 
     > **Note**:If you don't find the key vault that you had created in the previous task,in the Azure subscription drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click on **Authorize**, and from the dropdown select  **Available Azure service connection > Azure subs** and select the key vault that you had created earlier.
 
-1. Under **Variables**, click on **+ Add** and select the **acr-secret** secret. Click on **OK**.
-1. Click on **Save**.
+1. Under **Variables**, click on **+ Add** and select the **acr-secret (5)** secret. Click on **OK**.
+1. Click on **Save (6)**.
 
     ![Variable Group create](images/lab-400-8.png)
 

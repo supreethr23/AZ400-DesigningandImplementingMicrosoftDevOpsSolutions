@@ -7,7 +7,7 @@ Azure Artifacts facilitate discovery, installation, and publishing NuGet, npm, a
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
 -  Create and connect to a feed.
 -  Create and publish a NuGet package.
@@ -17,7 +17,7 @@ After you complete this lab, you will be able to:
 
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/lab15-architecture.png)
+  ![Architecture Diagram](images/lab15-architecture1.png)
 
 
 # Exercise 1: Configure the lab prerequisites

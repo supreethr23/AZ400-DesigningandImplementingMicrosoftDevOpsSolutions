@@ -19,15 +19,15 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
-- Setup an Azure DevOps project and CI build to integrate with SonarCloud
-- Analyze SonarCloud reports
-- Integrate static analysis into the Azure DevOps pull request process
+- Setting-up an Azure DevOps project and CI build to integrate with SonarCloud
+- Analyzing SonarCloud reports
+- Integrating static analysis into the Azure DevOps pull request process
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab14-architecture.png)
+   ![Architecture Diagram](images/lab14-architecture1.png)
 
 # Before you start
 
@@ -51,7 +51,7 @@ In this task you will change the visibility of your Azure DevOps project to publ
 
 In this task, you will generate an Azure DevOps personal access token that will be used to authenticate from the Postman app you will install in the next task of this exercise.
 
-1. On the lab computer, in the web browser window displaying the Azure DevOps portal, in the upper right corner of the Azure DevOps page, click the **User settings** icon, in the dropdown menu, click **Personal access tokens**, on the **Personal Access Tokens** pane, and click **+ New Token**.
+1. On the lab computer, in the web browser window displaying the Azure DevOps portal, in the upper right corner of the Azure DevOps page, click the **User settings (1)** icon, in the dropdown menu, click **Personal access tokens (2)**, on the **Personal Access Tokens** pane, and click **+ New Token (1)**.
 
     ![Create PAT](images/az400-17-4.png)
 
@@ -59,20 +59,20 @@ In this task, you will generate an Azure DevOps personal access token that will 
 
      | Setting | Value |
      | --- | --- |
-     | Name | **Managing technical debt with SonarCloud and Azure DevOps lab** |
-     | Scopes | **Custom defined** |
-     | Scope | **Code** |
+     | Name | **Managing technical debt with SonarCloud and Azure DevOps lab (2)** |
+     | Scopes | **Custom defined (3)** |
+     | Scope | **Code (4)** |
      | Permissions | **Full** |
      
     ![Create PAT](images/az400-17-5.png)     
 
-1. On the **Success** pane, copy the value of the personal access token to Clipboard.
+1. On the **Success** pane, **copy** (1) the value of the personal access token to Clipboard.
 
     ![Create PAT](images/az400-17-6.png)  
 
      > **Note**: Make sure you record the value of the token. You will not be able to retrieve it once you close this pane.
 
-1. On the **Success** pane, click **Close**.
+1. On the **Success** pane, click **Close (2)**.
 
 ## Task 3: Install and configure the SonarCloud Azure DevOps extension
 
@@ -129,13 +129,13 @@ In this task, you will install and configure the SonarCloud Azure DevOps extensi
 
 1.  On the **Where is your code?** window, select **Azure Repos Git (YAML)** and select the **eShopOnWeb** repository.
 
-1.  On the **Configure** section, choose **Existing Azure Pipelines YAML file**. Provide the following path **/.ado/eshoponweb-sonar-ci.yml** and click **Continue**. Review the pipeline with details mentioned in next step **(some settings should be replaced)**
+1.  On the **Configure** section, choose **Existing Azure Pipelines YAML file (1)**. Provide the following **path (2)** **/.ado/eshoponweb-sonar-ci.yml** and click **Continue (3)**. Review the pipeline with details mentioned in next step **(some settings should be replaced)**
 
     ![Sonar CI Pipeline](images/az400-17-10.png)
 
 1. Back on Sonarcloud website, on the **Analyze a project with Azure Pipelines** page, in the **Configure Azure Pipelines** section, click **.NET**. This will display a sequence of steps required to **Prepare Analysis Configuration**, **Run Code Analysis**, and **Publish Quality Gate Result**. You will need these instructions to **modify the "Prepare Analysis Configuration " task on the YAML Pipeline given in previous step**.
 
-1. Once the pipeline has been modified, click on **Save and Run**.
+1. Once the pipeline has been modified, click on **Save and Run (4)**.
 
     ![Sonar CI Pipeline](images/az400-17-11.png)
 
@@ -183,7 +183,7 @@ In this exercise, you will analyze SonarCloud reports.
 
 In this task, you will analyze SonarCloud reports.
 
-1. On the **Overview** tab of the SonarCloud project, we see a summary for the report about the **main branch evolution** . If you click **Main branch** icon (left column), and choose **Overall Code**, you will see a more detailed report.
+1. On the **Overview** tab of the SonarCloud project, we see a summary for the report about the **main branch evolution** . If you click **Main branch (1)** icon (left column), and choose **Overall Code (2)**, you will see a more detailed report.
 
     ![Sonarcloud Report](images/az400-17-16.png)
 
@@ -223,11 +223,11 @@ In this task, you will configure pull request integration in SonarCloud by assig
 
 1. On the project's dashboard page, click the icon for the **Administration** tab and, in the dropdown menu, click **General Settings**.
 
-1. On the **General Settings** page, click **Pull Requests**.
+1. On the **General Settings** page, click **Pull Requests (1)**.
 
-1. In the **General** section of the **Pull Requests** settings, in the **Provider** dropdown list, select **Azure DevOps Services** and click **Save**.
+1. In the **General** section of the **Pull Requests** settings, in the **Provider (2)** dropdown list, select **Azure DevOps Services** and click **Save (3)**.
 
-1. In the **Integration with Azure DevOps Services** section of the **Pull Requests** settings, in the **Personal access token** textbox, paste the previously generated Azure DevOps personal access token and click **Save**
+1. In the **Integration with Azure DevOps Services** section of the **Pull Requests** settings, in the **Personal access token (4)** textbox, paste the previously generated Azure DevOps personal access token and click **Save (5)**
 
     ![Sonarcloud PR settings](images/az400-17-17.png)
 
@@ -237,9 +237,9 @@ In this task, you will configure an Azure DevOps branch policy for integration w
 
 1. Switch to the web browser window displaying the **eShopOnWeb** project in the **Azure DevOps portal**.
 
-1. In the vertical menu bar at the far left of the Azure DevOps portal, click **Repos** and, in the **Repos** section, click **Branches**.
+1. In the vertical menu bar at the far left of the Azure DevOps portal, click **Repos** and, in the **Repos** section, click **Branches (1)**.
 
-1. On the **Branches** pane, in the list of branches, hover with the mouse pointer over the right edge of the **main** branch entry to reveal the vertical ellipsis character designating the **More options** menu, click it, and, in the popup menu, click **Branch policies**.
+1. On the **Branches** pane, in the list of branches, hover with the mouse pointer over the right edge of the **main** branch entry to reveal the vertical ellipsis character designating the **More options (2)** menu, click it, and, in the popup menu, click **Branch policies (3)**.
 
     ![Sonarcloud PR settings](images/az400-17-18.png)
     
@@ -269,7 +269,7 @@ In this task, you will validate pull request integration between Azure DevOps an
 
 1. On the **BasketViewModelService.cs** pane, click **Commit**.
 
-1. On the **Commit** pane, in the **Branch name** textbox, type **branch1**, select the **Create a pull request** checkbox, and click **Commit**.
+1. On the **Commit** pane, in the **Branch name** textbox, type **branch1 (1)**, select the **Create a pull request (2)** checkbox, and click **Commit (3)**.
 
     ![Commit PR](images/az400-17-19.png)
 
@@ -303,7 +303,7 @@ In this task, you will configure blocking of pull requests in response to failin
 
 1. On the **main** pane, scroll down to the **Status Checks** section and click **+**.
 
-1. On the **Add status policy** pane, in the **Status to check** dropdown list, select the **SonarCloud/quality gate** entry, ensure that the **Policy requirement** option is set to **Required**, and click **Save**
+1. On the **Add status policy** pane, in the **Status to check** dropdown list, select the **SonarCloud/quality gate (1)** entry, ensure that the **Policy requirement** option is set to **Required (2)**, and click **Save (3)**
 
     ![PR quality gate failed](images/az400-17-21.png)
 

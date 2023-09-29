@@ -6,15 +6,15 @@ In this lab, you will learn how to use an Azure DevOps CI/CD pipeline to build a
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
-- Build a custom Docker image by using an Microsoft hosted Linux agent
-- Push an image to Azure Container Registry
-- Deploy a Docker image as a container to Azure App Service by using Azure DevOps
+- Building a custom Docker image by using an Microsoft hosted Linux agent
+- Pushing an image to Azure Container Registry
+- Deploying a Docker image as a container to Azure App Service by using Azure DevOps
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab6-architecture.png)
+   ![Architecture Diagram](images/lab6-architecture1.png)
 
 # Exercise 1: Manage the service connection
 
@@ -39,7 +39,7 @@ A service principal is automatically created by Azure Pipeline when you connect 
 1.  In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page. 
 1.  If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
-   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**. 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**. 
 
 1.  From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID attribute: 
 

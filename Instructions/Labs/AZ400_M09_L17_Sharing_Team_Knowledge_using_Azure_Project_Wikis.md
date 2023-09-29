@@ -6,15 +6,15 @@ In this lab, you will create and configure wiki in an Azure DevOps, including ma
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
-- Create a wiki in an Azure Project
-- Add and edit markdown
-- Create a Mermaid diagram
+- Creating a wiki in an Azure Project
+- Adding and editing markdown
+- Creating a Mermaid diagram
 
 ## Architecture Diagram
  
-  ![Architecture Diagram](images/lab17-architecture.png)
+  ![Architecture Diagram](images/lab17-architecture1.png)
 
 ## Exercise 0: Configure the EShopOnWeb project
 

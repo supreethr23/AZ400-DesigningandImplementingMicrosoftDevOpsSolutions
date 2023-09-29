@@ -24,15 +24,15 @@ There are 4 types of gates included by default in every account.
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
-- Configure release pipelines.
-- Configure release gates.
-- Test release gates.
+- Configuring release pipelines.
+- Configuring release gates.
+- Testing release gates.
 
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/lab7-architecture.png) 
+  ![Architecture Diagram](images/lab7-architecture1.png) 
 
 ## Estimated timing: 75 minutes
 
@@ -251,7 +251,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
      ![Azure devops](images/artifact.png)
      
-1. Select the **eShopOnWeb** in the **Source (build pipeline)** field. Click **Add** to confirm the selection of the artifact.
+1. Select the **eShopOnWeb (1)** in the **Source (build pipeline)** field. Click **Add (2)** to confirm the selection of the artifact.
     
      ![Azure devops](images/addartifact.png)
 
@@ -351,7 +351,7 @@ In this task, you will configure pre-deployment gates.
 
     ![Azure devops](images/pre-deploy.png)
     
-1. On **Pre-deployment conditions** pane, set the **Pre-deployment approvals** slider to **Enabled** and, in the **Approvers** text box, type and select your Azure DevOps account name.
+1. On **Pre-deployment conditions** pane, set the **Pre-deployment approvals** slider to **Enabled (1)** and, in the **Approvers (2)** text box, type and select your Azure DevOps account name.
 
     ![Azure devops](images/predeploy.png)
 
