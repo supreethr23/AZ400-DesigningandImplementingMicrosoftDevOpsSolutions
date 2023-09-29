@@ -14,7 +14,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/lab4-architecture.png)
+  ![Architecture Diagram](images/lab4-architecture1.png)
 
 
  # Exercise 1: Include build validation as part of a Pull Request
