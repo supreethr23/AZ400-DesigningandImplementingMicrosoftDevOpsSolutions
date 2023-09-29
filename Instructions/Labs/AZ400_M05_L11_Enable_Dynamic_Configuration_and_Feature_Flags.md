@@ -16,10 +16,10 @@
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
-- Enable dynamic configuration
-- Manage feature flags
+- Enabling dynamic configuration
+- Managing feature flags
 
 ## Estimated time: 60 minutes
 
@@ -331,14 +331,14 @@ In order to make sure that your website is accessing App Configuration, you need
 
 3. Add two new application settings:
     - First app setting
-        - **Name:** UseAppConfig
-        - **Value:** true
+        - **Name (1):** UseAppConfig
+        - **Value (2):** true
 
          ![](images/52.1stappsetting.png)
       
     - Second app setting
-        - **Name:** AppConfigEndpoint
-        - **Value:** *the value you saved/copied previously from App Configuration Endpoint. It should look like https://appcs-NAME-REGION.azconfig.io*
+        - **Name (1):** AppConfigEndpoint
+        - **Value (2):** *the value you saved/copied previously from App Configuration Endpoint. It should look like https://appcs-NAME-REGION.azconfig.io*
       
          ![](images/53.2ndappsetting.png)
       

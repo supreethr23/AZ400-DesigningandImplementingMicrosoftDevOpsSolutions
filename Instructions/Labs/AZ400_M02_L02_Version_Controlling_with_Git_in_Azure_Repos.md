@@ -14,12 +14,12 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
--   Clone an existing repository
--   Save work with commits
--   Review history of changes
--   Work with branches by using Visual Studio Code
+-  Exercise 01: Clone an existing repository
+-  Exercise 02: Save work with commits
+-  Exercise 03: Review history of changes
+-  Exercise 04: Work with branches by using Visual Studio Code
 
 ## Estimated time: 60 minutes
 
@@ -55,7 +55,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Navigate to **Repos>Files** and then click on **Import** within the **Import a repository** card. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Navigate to **Repos>Files (1)** and then click on **Import (2)** within the **Import a repository** card. On the **Import a Git Repository** window, paste the following URL **https://github.com/MicrosoftLearning/eShopOnWeb.git (3)**  and click on **Import (4)**:
 
     ![Import Repository](images/az400_02-04.png)
 
@@ -199,9 +199,9 @@ In this task, you will explore the use of staging changes by using Visual Studio
 
 1. Update the open **Program.cs** class by changing the first comment with the following, and saving the file.
 
-```csharp
-    //My second change
-```
+   ```csharp
+       //My second change
+   ```
 
 1. In the Visual Studio Code window, switch back the **EXPLORER** tab, navigate to the **/eShopOnWeb/src/Web/Constants.cs** file and select it. This will automatically display its content in the details pane.
 

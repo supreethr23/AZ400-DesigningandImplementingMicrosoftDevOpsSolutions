@@ -24,11 +24,11 @@ There are 4 types of gates included by default in every account.
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
-- Configure release pipelines.
-- Configure release gates.
-- Test release gates.
+- Configuring release pipelines.
+- Configuring release gates.
+- Testing release gates.
 
 ## Estimated time: 75 minutes
 
@@ -132,8 +132,8 @@ In this task, you will add a YAML build definition to the existing project.
 
 1. In the **Selecting an existing YAML File** blade, specify the following parameters:
    
-- Branch: **main**
-- Path: Select **/.ado/eshoponweb-ci.yml** from the drop-down.
+   - Branch: **main**
+   - Path: Select **/.ado/eshoponweb-ci.yml** from the drop-down.
 
     ![Import Repository](images/newpip4.png)
   
@@ -273,10 +273,10 @@ In this task, you will create two Azure web apps representing the **Canary** and
       ![portal](images/failedreupdated.png)
      
 1.  On the **Create an Alert Rule** blade, in the **Condition** section, leave the **Threshold** set to **Static(1)**, validate the other default settings as follows:
-- Aggregation Type: Count(2)
-- Operator: Greater Than(3)
-- Unit: Count(4)
-- Threshold value: type 0(5)
+    - Aggregation Type: Count(2)
+    - Operator: Greater Than(3)
+    - Unit: Count(4)
+    - Threshold value: type 0(5)
 
      ![portal](images/cond.png)
     
@@ -330,7 +330,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
      ![Azure devops](images/artifact.png)
      
-1. Select the **eShopOnWeb** in the **Source (build pipeline)** field. Click **Add** to confirm the selection of the artifact.
+1. Select the **eShopOnWeb (1)** in the **Source (build pipeline)** field. Click **Add (2)** to confirm the selection of the artifact.
     
      ![Azure devops](images/addartifact.png)
 
@@ -436,7 +436,7 @@ In this task, you will configure pre-deployment gates.
 
     ![Azure devops](images/pre-deploy.png)
     
-1. On **Pre-deployment conditions** pane, set the **Pre-deployment approvals** slider to **Enabled** and, in the **Approvers** text box, type and select your Azure DevOps account name.
+1. On **Pre-deployment conditions** pane, set the **Pre-deployment approvals** slider to **Enabled (1)** and, in the **Approvers (2)** text box, type and select your Azure DevOps account name.
 
     ![Azure devops](images/predeploy.png)
 
@@ -487,19 +487,19 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
 
 1. On the **Post-deployment conditions** pane, expand the **Advanced** section and configure the following options:
 
-- Filter type: **None(1)**
-- Severity: **Sev0, Sev1, Sev2, Sev3, Sev4(2)**
-- Time Range: **Past Hour(3)**
-- Alert State: **Acknowledged, New(4)**
-- Monitor Condition: **Fired(5)**
+   - Filter type: **None(1)**
+   - Severity: **Sev0, Sev1, Sev2, Sev3, Sev4(2)**
+   - Time Range: **Past Hour(3)**
+   - Alert State: **Acknowledged, New(4)**
+   - Monitor Condition: **Fired(5)**
  
      ![Azure devops](images/pre-deployset3.png) 
      
 1. On **Post-deployment conditions** pane, expand the **Evaluation options** and configure the following options:
 
-- Set the value of **Time between re-evaluation of gates** to **5 Minutes(1)**.
-- Set the value of **Timeout after which gates fail** to **8 Minutes(2)**.
-- Select the **On successful gates, ask for approvals(3)** option.
+   - Set the value of **Time between re-evaluation of gates** to **5 Minutes(1)**.
+   - Set the value of **Timeout after which gates fail** to **8 Minutes(2)**.
+   - Select the **On successful gates, ask for approvals(3)** option.
 
      ![Azure devops](images/pre-deployset5.png) 
 

@@ -6,11 +6,11 @@ In this lab, you will learn how to use an Azure DevOps CI/CD pipeline to build a
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
-- Build a custom Docker image by using an Microsoft hosted Linux agent
-- Push an image to Azure Container Registry
-- Deploy a Docker image as a container to Azure App Service by using Azure DevOps
+- Building a custom Docker image by using an Microsoft hosted Linux agent
+- Pushing an image to Azure Container Registry
+- Deploying a Docker image as a container to Azure App Service by using Azure DevOps
 
 ## Estimated time: 30 minutes
 
@@ -148,8 +148,8 @@ In this exercise, you will import and run the CI pipeline.
 1. Select the **/.ado/eshoponweb-ci-docker.yml** file then click on **Continue**
 
 1. In the YAML pipeline definition, customize:
-- **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
-- **rg-az400-container-NAME** with the resource group name defined before in the lab.
+   - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
+   - **rg-az400-container-NAME** with the resource group name defined before in the lab.
 
 1. Click on **Save and Run** and wait for the pipeline to execute succesfully.
 
@@ -214,8 +214,8 @@ In this task, you will import and run the CI pipeline.
 1. Select the **/.ado/eshoponweb-cd-webapp-docker.yml** file then click on **Continue**
 
 1. In the YAML pipeline definition, customize:
-- **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
-- **rg-az400-container-NAME** with the resource group name defined before in the lab.
+   - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
+   - **rg-az400-container-NAME** with the resource group name defined before in the lab.
 
 1. Click on **Save and Run** and wait for the pipeline to execute succesfully.
 

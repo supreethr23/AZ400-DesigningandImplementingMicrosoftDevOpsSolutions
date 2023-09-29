@@ -14,9 +14,9 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
--   configure CI/CD pipelines as code with YAML in Azure DevOps
+-   configuring CI/CD pipelines as code with YAML in Azure DevOps
 
 ## Estimated time: 60 minutes
 
@@ -68,7 +68,7 @@ In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps proj
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb_MultiStageYAML** project. Click on **Repos>Files** , **Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb_MultiStageYAML** project. Click on **Repos>Files (1)** , **Import a Repository**. Select **Import (2)**. On the **Import a Git Repository** window, paste the following URL **https://github.com/MicrosoftLearning/eShopOnWeb.git (3)**  and click **Import (4)**:
 
     ![Import Repository](images/az-400-5-8.png)
 

@@ -10,10 +10,10 @@ In this lab, you will learn how to implement and use self-hosted agents with YAM
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
-- implement YAML-based pipelines
-- implement self-hosted agents
+- implementing YAML-based pipelines
+- implementing self-hosted agents
 
 ## Estimated time: 45 minutes
 
@@ -48,7 +48,7 @@ After you complete this lab, you will be able to:
     ![Azure DevOps](images/az-400-lab3-1.png)
     ![Azure DevOps](images/az-400-lab3-2.png)    
 
-7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+7. On the **MS Hosted CI/CD (1)** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save (2)**.
 
     ![Azure DevOps](images/az-400-lab3-3.png)
 
@@ -153,7 +153,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 
 1.  On the **Agent pools** pane, in the upper right corner, click **Add pool**. 
 
-1.  On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name** text box, type **az400m05l05a-pool**, under **Pipeline permissions** select both checkboxes and then click **Create**.
+1.  On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name (1)** text box, type **az400m05l05a-pool (2)**, under **Pipeline permissions (3)** select both checkboxes and then click **Create (4)**.
 
     ![Azure DevOps](images/az-400-lab3-5.png)    
     

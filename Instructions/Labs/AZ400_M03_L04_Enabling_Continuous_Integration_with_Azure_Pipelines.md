@@ -6,11 +6,11 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
--   Create a basic build pipeline from a template
--   Track and review a build
--   Invoke a continuous integration build
+-   Creating a basic build pipeline from a template
+-   Tracking and reviewing a build
+-   Invoking a continuous integration build
 
 ## Estimated time: 45 minutes
 

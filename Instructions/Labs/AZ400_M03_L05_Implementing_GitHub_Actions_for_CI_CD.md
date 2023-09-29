@@ -74,7 +74,7 @@ In this task, you will create an empty public GitHub repository and import the e
 
 1. Click on **Begin Import** and wait for your repository to be ready.
 
-1. On the repository page, go to **Settings**, click on **Actions > General** and choose the option **Allow all actions and reusable workflows**. Click on **Save**.
+1. On the repository page, go to **Settings (1)**, click on **Actions > General (2)** and choose the option **Allow all actions and reusable workflows (3)**. Click on **Save (4)**.
 
     ![Enable GitHub Actions](images/enable-actions.png)
 
