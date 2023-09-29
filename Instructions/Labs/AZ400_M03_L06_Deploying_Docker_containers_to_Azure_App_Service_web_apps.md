@@ -187,5 +187,3 @@ Congratulations! In this exercise, you deployed a website using custom docker im
 ## Review
 
 In this lab, you used an Azure DevOps CI/CD pipeline to build a custom Docker image, pushed it to Azure Container Registry, and deployed it as a container to Azure App Service by using Azure DevOps.
-
-## You have successfully completed the lab.
