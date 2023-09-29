@@ -27,7 +27,7 @@ In this lab you will perform:
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab14-architecture.png)
+   ![Architecture Diagram](images/lab14-architecture1.png)
 
 # Before you start
 
