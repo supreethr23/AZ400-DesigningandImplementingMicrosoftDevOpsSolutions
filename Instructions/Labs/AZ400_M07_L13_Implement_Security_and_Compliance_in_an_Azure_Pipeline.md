@@ -17,10 +17,10 @@ Azure DevOps integration with WhiteSource Bolt will enable you to:
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
-- Activate WhiteSource Bolt
-- Run a build pipeline and review WhiteSource security and compliance report
+- Activating WhiteSource Bolt
+- Running a build pipeline and reviewing WhiteSource security and compliance report
 
 ## Architecture Diagram
 
@@ -61,7 +61,7 @@ In this task, you will create and trigger a CI build pipeline within  Azure DevO
 
 1.  On the **Where is your code?** window, select **Azure Repos Git (YAML)** and select the **eShopOnWeb** repository.
 
-1.  On the **Configure** section, choose **Existing Azure Pipelines YAML file**. Provide the following path **/.ado/eshoponweb-ci-mend.yml** and click **Continue**.
+1.  On the **Configure** section, choose **Existing Azure Pipelines YAML file (1)**. Provide the following **path (2)** **/.ado/eshoponweb-ci-mend.yml** and click **Continue (3)**.
 
     ![Select Pipeline](images/select-pipeline.png)
 
