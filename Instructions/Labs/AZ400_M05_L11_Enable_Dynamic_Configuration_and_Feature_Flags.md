@@ -23,7 +23,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/lab11-architecture.png)
+  ![Architecture Diagram](images/lab11-architecture1.png)
 
 
 # Exercise 1: Import and run CI/CD Pipeline
