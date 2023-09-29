@@ -15,6 +15,7 @@ In this lab, you will perform:
 - Modifying the main template to update dependencies.
 - Deploying all the resources to Azure using Azure Bicep Templates.
 - Deploying resources to Azure using linked templates
+
 ## Estimated time: 45 minutes
 
 ## Architecture Diagram
