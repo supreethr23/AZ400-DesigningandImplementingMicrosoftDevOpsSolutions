@@ -436,7 +436,7 @@ In this task, you will configure pre-deployment gates.
 
     ![Azure devops](images/pre-deploy.png)
     
-1. On **Pre-deployment conditions** pane, set the **Pre-deployment approvals** slider to **Enabled** and, in the **Approvers** text box, type and select your Azure DevOps account name.
+1. On **Pre-deployment conditions** pane, set the **Pre-deployment approvals** slider to **Enabled (1)** and, in the **Approvers (2)** text box, type and select your Azure DevOps account name.
 
     ![Azure devops](images/predeploy.png)
 
