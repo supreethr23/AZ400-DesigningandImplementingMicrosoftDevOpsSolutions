@@ -67,7 +67,7 @@ Each new project is configured with a default team, which name matches the proje
 
     ![Azure DevOps project window. Click on "Project settings" option](images/m1/az-400_m01_09.png)
 
-1. In the **General** section, select the **Teams** tab. There are already a default team in this project, **EShopOnWeb Team**, but you'll create a new one for this lab. Click **New Team**.
+1. In the **General** section, select the **Teams (1)** tab. There are already a default team in this project, **EShopOnWeb Team**, but you'll create a new one for this lab. Click **New Team (2)**.
 
     ![In project settings window, "Teams" tab, click on "New Team"](images/m1/az-400_m01_10.png)
 
@@ -83,7 +83,7 @@ Each new project is configured with a default team, which name matches the proje
 
     ![In project settings window, "Teams" tab, "PUL-Web" team, click on "Iterations and Area Paths"](images/m1/az-400_m01_12.png)
 
-1. At the top of the **Boards** pane, select the **Iterations** tab and then click **+ Select iteration(s)**.
+1. At the top of the **Boards** pane, select the **Iterations (1)** tab and then click **+ Select iteration(s) (2)**.
 
     ![In the "interations" tab, click on "Select Iteration"](images/m1/az-400_m01_13.png)
 
@@ -98,8 +98,8 @@ Each new project is configured with a default team, which name matches the proje
 
     ![Do the same for Sprint 2 and 3, make sure they are created for "EShop-Web" team](images/m1/az-400_m01_iterations.png)
 
-1. Back on the **Boards** pane, at the top of the pane, select the **Areas** tab. You will find there an automatically generated area with the name matching the name of the team.
-1. Click the ellipsis symbol (...) next to the **default area** entry and, in the dropdown list, select **Include sub areas**.
+1. Back on the **Boards** pane, at the top of the pane, select the **Areas (1)** tab. You will find there an automatically generated area with the name matching the name of the team.
+1. Click the **ellipsis symbol (...) (2)** next to the **default area** entry and, in the dropdown list, select **Include sub areas (3)**.
 
     ![In the "Areas" tab, clik on the ellipsis icon (...) for "EShop-WEB" area and select "Include sub areas"](images/m1/az-400_m01_includesubareas.png)
 
@@ -123,14 +123,14 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
     > **Note**: There are many ways to create work items in Azure DevOps, and we'll explore a few of them. Sometimes it's as simple as firing one off from a dashboard.
 
-1. On the **Work Items** window, click on **+ New Work Item > Epic**.
+1. On the **Work Items (1)** window, click on **+ New Work Item (2) > Epic (3)**.
 
     ![In the "Boards">"Work Items" window, click on "New work item" >Epic](images/m1/az-400_m01_t2_s2.png)
 
-1. In the **Enter title** textbox, type **Product training**.
-1. In the upper left corner, select the **Unassigned** entry and, in the dropdown list, select your user account in order to assign the new work item to yourself.
-1. Next to the **Area** entry, select the **eShopOnWeb** entry and, in the dropdown list, select **EShop-WEB**. This will set the **Area** to **eShopOnWeb\EShop-WEB**.
-1. Next to the **Iteration** entry, select the **eShopOnWeb** entry and, in the dropdown list, select **Sprint 2**. This will set the **Iteration** to **eShopOnWeb\Sprint 2**.
+1. In the **Enter title** textbox, type **Product training(1)**.
+1. In the upper left corner, select the **Unassigned(2)** entry and, in the dropdown list, select your user account in order to assign the new work item to yourself.
+1. Next to the **Area** entry, select the **eShopOnWeb** entry and, in the dropdown list, select **EShop-WEB**. This will set the **Area** to **eShopOnWeb\EShop-WEB(3)**.
+1. Next to the **Iteration** entry, select the **eShopOnWeb** entry and, in the dropdown list, select **Sprint 2**. This will set the **Iteration** to **eShopOnWeb\Sprint 2(4)**.
 1. Click **Save** to finalize your changes. **Do not close it**.
 
     ![Enter previously shown information and click "Save" in Epic window](images/m1/az-400_m01_t2_s7.png)
@@ -241,9 +241,9 @@ Planning meetings typically consist of two parts. In the first part, the team an
 
 The sprint backlog should contain all the information the team needs to successfully plan and complete work within the time allotted without having to rush at the end. Before planning the sprint, you'd want to have created, prioritized, and estimated the backlog and defined the sprints.
 
-1. In the vertical navigational pane of the Azure DevOps portal, select the **Boards** icon and, in the list of the **Boards** items, select **Sprints**.
+1. In the vertical navigational pane of the Azure DevOps portal, select the **Boards** icon and, in the list of the **Boards** items, select **Sprints (1)**.
 
-1. On the **Taskboard** tab of the **Sprints** view, in the toolbar, on the right hand side, select the **View options** symbol (directly to the left of the funnel icon) and, in the **View options** dropdown list, select the **Work details** entry.
+1. On the **Taskboard** tab of the **Sprints** view, in the toolbar, on the right hand side, select the **View options (2)** symbol (directly to the left of the funnel icon) and, in the **View options** dropdown list, select the **Work details (3)** entry.
 
     ![In the "Boards">"Sprints" window, "EShop-WEB" team, select "View options" icon and click on "Work details"](images/m1/az-400_m01_t3_s2.png)
 
@@ -397,17 +397,17 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
 1. On the **Boards** panel, click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
 
-1. On the **Settings** panel, return to the **Columns** tab and select the **QA Approved** tab.
+1. On the **Settings** panel, return to the **Columns (1)** tab and select the **QA Approved** tab.
 
     > **Note**: A lag often exists between when work gets moved into a column and when work starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns. When split, each column contains two sub-columns: **Doing** and **Done**. Split columns let your team implement a pull model. Without split columns, teams push work forward, to signal that they've completed their stage of work. However, pushing it to the next stage doesn't necessarily mean that a team member immediately starts work on that item.
 
-1. On the **QA Approved** tab, enable the **Split column into doing and done** checkbox to create two separate columns.
+1. On the **QA Approved** tab, enable the **Split column into doing and done (2)** checkbox to create two separate columns.
 
     > **Note**: As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what **done** means. By specifying the **Definition of done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage.
 
-1. On the **QA Approved** tab, at the bottom of the panel, in the **Definition of done** textbox, type **Passes \*\*all\*\* tests**.
+1. On the **QA Approved** tab, at the bottom of the panel, in the **Definition of done** textbox, type **Passes \*\*all\*\* tests (3)**.
 
-1. On the **Settings** panel, click **Save and close**.
+1. On the **Settings** panel, click **Save and close (4)**.
 
     ![On the "Settings" panel, review information and click "Save and close"](images/m1/az-400_m01_t4_s25.png)
 
