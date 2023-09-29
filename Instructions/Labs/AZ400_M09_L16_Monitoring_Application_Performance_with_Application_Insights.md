@@ -9,13 +9,13 @@ In this lab, you'll learn about how you can add Application Insights to an exist
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
-- Deploy Azure App Service web apps
-- Generate and monitor Azure web app application traffic by using Application Insights
-- Investigate Azure web app performance by using Application Insights
-- Track Azure web app usage by using Application Insights
-- Create Azure web app alerts by using Application Insights
+- Deploying Azure App Service web apps
+- Generating and monitor Azure web app application traffic by using Application Insights
+- Investigating Azure web app performance by using Application Insights
+- Tracking Azure web app usage by using Application Insights
+- Creating Azure web app alerts by using Application Insights
 
 ## Architecture Diagram
 
