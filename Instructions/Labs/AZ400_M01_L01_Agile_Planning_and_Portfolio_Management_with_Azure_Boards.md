@@ -6,14 +6,14 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
--   Manage teams, areas, and iterations
--   Manage work items
--   Manage sprints and capacity
--   Customize Kanban boards
--   Define dashboards
--   Customize team process
+-  Task 01: Manage teams, areas, and iterations
+-  Task 02: Manage work items
+-  Task 03: Manage sprints and capacity
+-  Task 04: Customize Kanban boards
+-  Task 05: Define dashboards
+-  Task 06: Customize team process
 
 ## Estimated time: 60 minutes
 
