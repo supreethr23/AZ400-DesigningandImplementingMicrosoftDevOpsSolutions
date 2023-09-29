@@ -18,7 +18,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-  ![Architecture Diagram](images/lab12-architecture.png)
+  ![Architecture Diagram](images/lab12-architecture1.png)
 
 # Exercise 1: Configure the lab prerequisites
 
