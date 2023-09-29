@@ -17,10 +17,10 @@ Azure DevOps integration with WhiteSource Bolt will enable you to:
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab you will perform:
 
-- Activate WhiteSource Bolt
-- Run a build pipeline and review WhiteSource security and compliance report
+- Activating WhiteSource Bolt
+- Running a build pipeline and reviewing WhiteSource security and compliance report
 
 ## Estimated time: 45 minutes
 
@@ -76,7 +76,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files (1)** , **Import (2)**. On the **Import a Git Repository** window, paste the following URL **https://github.com/MicrosoftLearning/eShopOnWeb.git (3)**  and click **Import (4)**:
 
     ![Import Repository](images/import-repo.png)
 
@@ -122,7 +122,7 @@ In this task, you will create and trigger a CI build pipeline within  Azure DevO
 
 1.  On the **Where is your code?** window, select **Azure Repos Git (YAML)** and select the **eShopOnWeb** repository.
 
-1.  On the **Configure** section, choose **Existing Azure Pipelines YAML file**. Provide the following path **/.ado/eshoponweb-ci-mend.yml** and click **Continue**.
+1.  On the **Configure** section, choose **Existing Azure Pipelines YAML file (1)**. Provide the following **path (2)** **/.ado/eshoponweb-ci-mend.yml** and click **Continue (3)**.
 
     ![Select Pipeline](images/select-pipeline.png)
 
