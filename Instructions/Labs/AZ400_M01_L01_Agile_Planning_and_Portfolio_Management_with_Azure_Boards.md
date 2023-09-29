@@ -17,7 +17,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
- ![Architecture Diagram](images/lab1-architecture.png)
+ ![Architecture Diagram](images/lab1-architecture1.png)
 
 ## Set up an Azure DevOps organization
 
