@@ -6,11 +6,11 @@ In this lab, you will learn how to use an Azure DevOps CI/CD pipeline to build a
 
 ## Lab objectives
 
-After you complete this lab, you will be able to:
+In this lab, you will perform:
 
-- Build a custom Docker image by using an Microsoft hosted Linux agent
-- Push an image to Azure Container Registry
-- Deploy a Docker image as a container to Azure App Service by using Azure DevOps
+- Building a custom Docker image by using an Microsoft hosted Linux agent
+- Pushing an image to Azure Container Registry
+- Deploying a Docker image as a container to Azure App Service by using Azure DevOps
 
 ## Estimated time: 30 minutes
 
