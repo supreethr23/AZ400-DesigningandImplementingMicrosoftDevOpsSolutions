@@ -112,8 +112,8 @@ In this task, you will add a YAML build definition to the existing project.
 1. On the **Select a repository** pane, click **eShopOnWeb_MultiStageYAML**.
 1. On the **Configure your pipeline** pane, scroll down and select **Existing Azure Pipelines YAML File**.
 1. In the **Selecting an existing YAML File** blade, specify the following parameters:
-- Branch: **main**
-- Path: **.ado/eshoponweb-ci.yml**
+   - Branch: **main**
+   - Path: **.ado/eshoponweb-ci.yml**
 1. Click **Continue** to save these settings.
 1. From the **Review your Pipeline YAML** screen, click **Run** to start the Build Pipeline process.
 1. Wait for the Build Pipeline to complete successfully. Ignore any warnings regarding the source code itself, as they are not relevant for this lab exercise.
