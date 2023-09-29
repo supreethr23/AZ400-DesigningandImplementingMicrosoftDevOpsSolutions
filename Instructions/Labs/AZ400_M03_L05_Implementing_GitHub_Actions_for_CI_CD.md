@@ -13,7 +13,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-   ![Architecture Diagram](images/lab5-architecture.png)
+   ![Architecture Diagram](images/lab5-architecture1.png)
 
 ## Lab requirements
 
