@@ -16,10 +16,10 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 After you complete this lab, you will be able to:
 
--   Clone an existing repository
--   Save work with commits
--   Review history of changes
--   Work with branches by using Visual Studio Code
+-  Exercise 01: Clone an existing repository
+-  Exercise 02: Save work with commits
+-  Exercise 03: Review history of changes
+-  Exercise 04: Work with branches by using Visual Studio Code
 
 
 ## Architecture Diagram
