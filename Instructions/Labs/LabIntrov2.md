@@ -1,6 +1,6 @@
 # **Getting Started with Your AZ-400: Designing and Implementing Microsoft DevOps Solutions Workshop**
  
-Welcome to your AZ-400: Designing and Implementing Microsoft DevOps Solutions! We've prepared a seamless environment for you to explore and learn Microsoft DevOps Solutions. Let's begin by making the most of this experience:
+Welcome to your AZ-400: Designing and Implementing Microsoft DevOps Solutions workshop! We've prepared a seamless environment for you to explore and learn Microsoft DevOps Solutions. Let's begin by making the most of this experience:
  
 ## **Accessing Your Lab Environment**
  
