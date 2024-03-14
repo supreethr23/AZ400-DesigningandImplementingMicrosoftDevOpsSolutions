@@ -88,9 +88,13 @@ In this exercise, you will create an Azure Service Principal to authorize GitHub
 In this task, you will create the Azure Service Principal used by GitHub to deploy the desired resources. As an alternative, you could also use [OpenID connect in Azure](https://docs.github.com/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure), as a secretless authentication mechanism.
 
 1. On your lab computer, in a browser window, open the  [Azure Portal](https://portal.azure.com).
+
 1. In the portal, look for **Resource Groups** and click on it.
+
 1. Click on **+ Create** to create a new Resource Group for the exercise.
-1. On the **Create a resource group** tab, give the following name to your Resource Group: **rg-az400-eshopeonweb-NAME** (replace NAME for some unique alias). Click on **Review+Create > Create**.
+
+1. On the **Create a resource group** tab, give the following name to your Resource Group: **rg-az400-eshopeonweb-<inject key="DeploymentID" enableCopy="false"/>**. Click on **Review + Create > Create**.
+
 1. In the Azure Portal, open the **Cloud Shell** (next to the search bar).
 
     > NOTE: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**
@@ -99,21 +103,32 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
 
     `az ad sp create-for-rbac --name GH-Action-eshoponweb --role contributor --scopes /subscriptions/SUBSCRIPTION-ID/resourceGroups/RESOURCE-GROUP --sdk-auth`
 
-    > NOTE: this command will create a Service Principal with Contributor access to the Resource Group created before. This way we make sure GitHub Actions will only have the permissions needed to interact only with this Resource Group (not the rest of the subscription)
+    >**Note:** this command will create a Service Principal with Contributor access to the Resource Group created before. This way we make sure GitHub Actions will only have the permissions needed to interact only with this Resource Group (not the rest of the subscription).
+
+    >**Note:** If the error message states, **Please run 'az login'**, then follow these steps:-
+
+    1. ```bash 
+        az login
+        ```
+    
+    2. Navigate to the **https://microsoft.com/devicelogin** page, and enter the device code which is mentioned in the Bash session, and follow the instructions which is mentioned in the page.
+    
+    3. Navigate back to the **Azure Portal**, as you can see the Service Principal with Contributor access to the Resource Group created.
 
 1. The command will output a JSON object, you will later keep it as a GitHub secret for the workflow, copy it. The JSON contains the identifiers used to authenticate against Azure in the name of an Azure AD application identity (service principal).
 
     ```JSON
-        {
-            "clientId": "<GUID>",
-            "clientSecret": "<GUID>",
-            "subscriptionId": "<GUID>",
-            "tenantId": "<GUID>",
-            (...)
-        }
+    {
+        "clientId": "<GUID>",
+        "clientSecret": "<GUID>",
+        "subscriptionId": "<GUID>",
+        "tenantId": "<GUID>",
+        (...)
+    }
     ```
 
 1. In a browser window, go back to your **eShopOnWeb** GitHub repository.
+
 1. On the repository page, go to **Settings**, click on **Secrets and variables > Actions**. Click on **New repository secret**
     - Name : **AZURE_CREDENTIALS**
     - Secret: **paste the previously copied  JSON object** (GitHub is able to keep multiple secrets under same name, used by  [azure/login](https://github.com/Azure/login) action )
@@ -125,28 +140,36 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
 In this task, you will modify the given GitHub workflow and execute it to deploy the solution in your own subscription.
 
 1. In a browser window, go back to your **eShopOnWeb** GitHub repository.
+
 1. On the repository page, go to **Code** and open the following file: **eShopOnWeb/.github/workflows/eshoponweb-cicd.yml**. This workflow defines the CI/CD process for the given .NET 6 website code.
 
-1. Uncomment the **on** section (delete "#"). The workflow triggers with every push to the main branch and also offers manual triggering ("workflow_dispatch").
+1. Select the **Edit** (pencil icon). Uncomment the **on** section (delete "#"). The workflow triggers with every push to the main branch and also offers manual triggering ("workflow_dispatch").
 
 1. In the **env** section, make the following changes:
     - Replace **NAME** in **RESOURCE-GROUP** variable. It should be the same resource group created in previous steps.
     - (Optional) You can choose your closest [azure region](https://azure.microsoft.com/en-gb/explore/global-infrastructure/geographies/#geographies) for **LOCATION**. For example, "eastus", "eastasia", "westus", etc.
     - Replace **YOUR-SUBS-ID** in **SUBSCRIPTION-ID**.
-    - Replace **NAME** in **WEBAPP-NAME** with some unique alias. It will be used to create a globally unique website using Azure App Service.
+    - Replace **NAME** in **WEBAPP-NAME** with **<inject key="DeploymentID" enableCopy="false"/>**. It will be used to create a globally unique website using Azure App Service.
 
 1. Read the workflow carefully, comments are provided to help understand.
 
-1. Click on **Start Commit** and **Commit Changes** leaving defaults (changing the main branch). The workflow will get automatically executed.
+1. Click on **Commit changes...** and **Commit changes** again leaving defaults (changing the main branch). The workflow will get automatically executed.
 
 ## Task 3: Review GitHub Workflow execution
  
 In this task, you will review the GitHub workflow execution:
 
 1. In a browser window, go back to your **eShopOnWeb** GitHub repository.
-1. On the repository page, go to **Actions**, you will see the workflow setup before executing. Click on it.
 
-    ![GitHub workflow in progress](images/gh-actions.png)
+1. On the repository page, go to **Actions**, you will see the workflow setup before executing. Click on **eShopOnWeb Build and Test** (make sure you are selecting the **eShopOnWeb Build and Test** workflow which is associated with the **eshoponweb-ccid.yml**).
+
+    ![GitHub workflow in progress](images/actions.png)
+
+    >**Note:** If it shows you the **Workflows aren’t being run on this repository**, select **Enable Actions on this repository**.
+
+1. On the select workflow that is **eShopOnWeb Build and Test (1)** page, select **Run workflow (2)** drop-down, and select **Run workflow (3)**.
+
+    ![GitHub workflow in progress](images/runworkflow.png)
 
 1. Wait for the workflow to finish. From the **Summary** you can see the two workflow jobs, the status and Artifacts retained from the execution. You can click in each job to review logs.
 
