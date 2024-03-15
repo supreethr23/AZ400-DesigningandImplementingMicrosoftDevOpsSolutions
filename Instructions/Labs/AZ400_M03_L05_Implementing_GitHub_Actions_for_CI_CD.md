@@ -107,13 +107,13 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
 
     >**Note:** If the error message states, **Please run 'az login'**, then follow these steps:-
 
-    1. ```bash 
-        az login
-        ```
+1. ```bash 
+    az login
+    ```
     
-    2. Navigate to the **https://microsoft.com/devicelogin** page, and enter the device code which is mentioned in the Bash session, and follow the instructions which is mentioned in the page.
+2. Navigate to the **https://microsoft.com/devicelogin** page, and enter the device code which is mentioned in the Bash session, and follow the instructions which is mentioned in the page.
     
-    3. Navigate back to the **Azure Portal**, as you can see the Service Principal with Contributor access to the Resource Group created.
+3. Navigate back to the **Azure Portal**, as you can see the Service Principal with Contributor access to the Resource Group created.
 
 1. The command will output a JSON object, you will later keep it as a GitHub secret for the workflow, copy it. The JSON contains the identifiers used to authenticate against Azure in the name of an Azure AD application identity (service principal).
 

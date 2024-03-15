@@ -93,7 +93,7 @@ A service principal is automatically created by Azure Pipeline when you connect 
 1.  In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page. 
 1.  If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
-   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**. 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**. 
 
 1.  From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID attribute: 
 
@@ -146,8 +146,8 @@ In this exercise, you will import and run the CI pipeline.
 1. Select the **/.ado/eshoponweb-ci-docker.yml** file then click on **Continue**
 
 1. In the YAML pipeline definition, customize:
-- **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
-- **rg-az400-container-NAME** with the resource group name defined before in the lab.
+    - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
+    - **rg-az400-container-NAME** with the resource group name defined before in the lab.
 
 1. Click on **Save and Run** and wait for the pipeline to execute succesfully.
 
@@ -210,8 +210,8 @@ In this task, you will import and run the CI pipeline.
 1. Select the **/.ado/eshoponweb-cd-webapp-docker.yml** file then click on **Continue**
 
 1. In the YAML pipeline definition, customize:
-- **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
-- **rg-az400-container-NAME** with the resource group name defined before in the lab.
+    - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
+    - **rg-az400-container-NAME** with the resource group name defined before in the lab.
 
 1. Click on **Save and Run** and wait for the pipeline to execute succesfully.
 
