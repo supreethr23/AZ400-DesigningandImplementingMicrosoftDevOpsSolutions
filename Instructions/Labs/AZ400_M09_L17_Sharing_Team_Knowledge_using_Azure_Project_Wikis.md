@@ -90,7 +90,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 
      ![](images/AZ400_M09_L17_08.png)
 
-6.  Choose **+New(1) / Folder (2)**, and provide **Documents (3)** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME (4)** as New File name. Click to **Create (5)** folder.
+6.  Choose **+New(1) / Folder (2)**, and provide **Documents (3)** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME (4)** as New file name. Click to **Create (5)** folder.
 
      ![](images/AZ400_M09_L17_09.png)
 

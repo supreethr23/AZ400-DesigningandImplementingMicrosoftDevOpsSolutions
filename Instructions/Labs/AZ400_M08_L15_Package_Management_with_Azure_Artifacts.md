@@ -51,7 +51,7 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibility as **Private (2)**, and then click **+ Create Project(3)**
+1.  On the **Create New Project** page, in the **Project Name** textbox, type **EShopOnWeb (1)**, select visibility as **Private (2)**, and then click **+ Create Project(3)**
 
     ![](images/AZ400_M08_L15_03.png)
 
@@ -158,7 +158,7 @@ In this task, you will create and connect to a feed.
     
 4.  Back on the **Artifacts** hub, select **odluser-<inject key="DeploymentID" enableCopy="false"/>** **(1)** Organization, click **Connect to feed (2)**.
     
-    !![](images/AZ400_M08_L15_015.png)
+    ![](images/AZ400_M08_L15_015.png)
 
 5.  On the **Connect to feed** pane, in the **NuGet** section, select **Visual Studio (1)** and, on the **Visual Studio** pane, copy the **Source (2)** url.
     
@@ -236,7 +236,7 @@ In this task, you will create and publish a NuGet package.
     
 11. On the **Get the tools** pane, click the **Download the latest NuGet** link. This will automatically open another browser tab displaying the **Available NuGet Distribution Versions** page.   
 
-12. On the **Available NuGet Distribution Versions** page, select nuget.exe - recommended latest **v6.5.0** and download the executable to the local **Downloads** folder.
+12. On the **Available NuGet Distribution Versions** page, select the latest version and download the executable to the local **Downloads** folder.
 
     ![](images/AZ400_M08_L15_28.png)
 
@@ -255,7 +255,7 @@ In this task, you will create and publish a NuGet package.
         
        ![](images/az-400-image2.png)
          
-    ii. On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK** in **Variable name** field and enter **true** in  **Variable value** field and click on **ok** for all wizards.
+    ii. On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK (1)** in **Variable name** field and enter **true (2)** in  **Variable value** field and click on **OK** for all wizards.
          
        ![](images/az-400-image1.png)
          
