@@ -119,7 +119,7 @@ In this task you will change the visibility of your Azure DevOps project to publ
 
 1. On the lab computer, in the web browser window displaying the Azure DevOps portal, open your **eShopOnWeb** project, and click on **Project Settings** (bottom left corner). Change **Visibility** to **Public**. Click **Save**
 
-![Change ADO project to Public](images/az400-17-3.png)
+   ![Change ADO project to Public](images/az400-17-3.png)
 
 ## Task 2: Generate an Azure DevOps personal access token
 
@@ -153,6 +153,7 @@ In this task, you will generate an Azure DevOps personal access token that will 
 In this task, you will install and configure the SonarCloud Azure DevOps extension in your Azure DevOps project.
 
 1. On your lab computer, start a web browser, navigate to the [SonarCloud extension page](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) on the Visual Studio Marketplace, click **Get it free**, ensure that the name of your Azure DevOps organization appears in the **Select an Azure Devops organization** dropdown list, and click **Install**.
+
 1. Once the installation completes, click **Proceed to organization**. This will redirect the browser to the Azure DevOps portal displaying your organization's home page.
 
     > **Note**: If you do not have the appropriate permissions to install an extension from the marketplace, a request will be sent to the account administrator to ask them to approve the installation.
@@ -163,13 +164,15 @@ In this task, you will install and configure the SonarCloud Azure DevOps extensi
 
 1. On the SonarCloud home page, click **Log in**.
 
+   ![Import ADO org to Sonarcloud](images/2.png)
+
 1. On the **Log in to SonarCloud**, click **Azure DevOps** option.
 
 1. If prompted for *permissions required* click on **Accept**.
 
     > **Note**: In SonarCloud, you will create an organization and, within it, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
 
-1. Click **Import an organization from Azure**.
+1. Click **Import an organization**.
 
     ![Import ADO org to Sonarcloud](images/az400-17-22.png)
 
@@ -177,7 +180,7 @@ In this task, you will install and configure the SonarCloud Azure DevOps extensi
 
     ![Import ADO org to Sonarcloud](images/az400-17-7.png)
 
-1. In the **Import organization details** section, in the **Key** textbox,it shows the same name as your Azure DevOps organization and click **Continue**.
+1. In the **Import organization details** section, in the **Key** textbox,it shows the same name as your Azure DevOps organization.
 
     > **Note**: The key must be unique within the SonarCloud system. Make sure that the green checkmark appears to the right of the **Key** textbox. This indicates that the key satisfies the uniqueness prerequisite.
 
@@ -185,8 +188,11 @@ In this task, you will install and configure the SonarCloud Azure DevOps extensi
 
     > **Note**: You have now created the SonarCloud organization that mirrors your Azure DevOps organization.
 
-1. On the **Analyze projects - Select repositories** page, in the list of Azure DevOps projects, select the checkbox next to the **eshoponweb / eshoponweb ** entry and click **Set up**.
+1. On the **Analyze projects - Select repositories** page, in the list of Azure DevOps projects, select the checkbox next to the **eshoponweb / eshoponweb** entry and click **Set up**.
 
+1. On **Set up project for Cleanas You Code** page, select **Previous version** under the new code for this project will be based on.
+
+   ![Import ADO org to Sonarcloud](images/1.png)
 
 1. On the **Choose your Analysis Method** page, click **With Azure DevOps Pipelines** tile.
 

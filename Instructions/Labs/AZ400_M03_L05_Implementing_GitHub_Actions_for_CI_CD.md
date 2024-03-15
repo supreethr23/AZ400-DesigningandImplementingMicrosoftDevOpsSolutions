@@ -127,6 +127,8 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
     }
     ```
 
+    ![Import ADO org to Sonarcloud](images/3.png)
+
 1. In a browser window, go back to your **eShopOnWeb** GitHub repository.
 
 1. On the repository page, go to **Settings**, click on **Secrets and variables > Actions**. Click on **New repository secret**
