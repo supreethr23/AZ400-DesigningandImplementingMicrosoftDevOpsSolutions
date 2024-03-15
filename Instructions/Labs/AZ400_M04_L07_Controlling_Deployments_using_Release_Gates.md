@@ -71,11 +71,11 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/m1-2updated.png)
 
-1. On the Azure Devops page click on **Azure DevOps(1)** located at top left corner and then click on **Organization Setting(2)** at the left down corner.
+1. On the Azure Devops page click on **Azure DevOps(1)** located at top left corner and then click on **Organization Settings (2)** at the left down corner.
 
     ![Azure DevOps](images/agent1updated.png)
     
-1. In the **Organization Setting** window on the left menu click on **Billing(1)** and select **Setup Billing(2)**, It will automatically select your **azure subscription(3)** then click on **Save(4)**.
+1. In the **Organization Settings** window on the left menu click on **Billing (1)** and select **Setup Billing (2)**, It will automatically select your **azure subscription (3)** then click on **Save(4)**.
 
     ![Azure DevOps](images/bill.png)    
 
@@ -93,7 +93,7 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb(1)** and leave the other fields with defaults. Click on **+ Create Project(3)**.
+1.  On your lab computer, in a browser window open your Azure DevOps organization by selecting **Azure DevOps**. Give your project the name **eShopOnWeb (1)** and leave the other fields with defaults. Click on **+ Create project (3)**.
 
     ![Create Project](images/createprojectupdated.png)
 
@@ -101,7 +101,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos(1)>Files(2)** , **Import a Repository**. Select **Import(3)**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git **(4)** and click **Import(5)**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos (1)>Files (2)** , **Import a Repository**. Select **Import (3)**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git **(4)** and click **Import (5)**:
 
      ![Import Repository](images/import.png)
 
@@ -211,7 +211,7 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
 ## Task 2: Configure an Application Insights resource
 
-1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **Application Insights(1)** and, in the list of results, select **Application Insights(2)**.
+1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **Application Insights (1)** and, in the list of results, select **Application Insights (2)**.
 
       ![portal](images/ain.png)
    
@@ -223,17 +223,16 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
     | Setting | Value |
     | --- | --- |
-    | Resource group | **az400m04l09-RG(2)** |
-    | Name | the name of the Canary web app you recorded in the previous task(3) |
-    | Region | the same Azure region to which you deployed the web apps earlier in the previous task(4) |
-    | Resource Mode | **Classic(5)** |
+    | Resource group | **az400m04l09-RG (2)** |
+    | Name | the name of the Canary web app you recorded in the previous task (3) |
+    | Region | the same Azure region to which you deployed the web apps earlier in the previous task (4) |
     
  
     > **Note**: Disregard the deprecation message. This is required in order to prevent failures of the Enable Continuous Integration DevOps task you will be using later in this lab.
 
-1. Click **Review + create(6)** and then click **Create**.
+1. Click **Review + create (6)** and then click **Create**.
 
-     ![portal](images/ainrandc.png)
+     ![portal](images/applicationinsights.png)
     
 1. Wait for the provisioning process to complete.
 
@@ -270,19 +269,19 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
       ![portal](images/alert.png)
        
-1. O n the **Create an alert rule** blade, in the **Select a name** textbox, Select  **Failed Requests(1)** from the drop-down. 
+1. On the **Create an alert rule** blade, in the **Select a name** textbox, Select  **Failed Requests(1)** from the drop-down. 
 
       ![portal](images/failedreupdated.png)
      
 1.  On the **Create an Alert Rule** blade, in the **Condition** section, leave the **Threshold** set to **Static(1)**, validate the other default settings as follows:
-- Aggregation Type: Count(2)
-- Operator: Greater Than(3)
-- Unit: Count(4)
-- Threshold value: type 0(5)
+- Aggregation Type: **Count (2)**
+- Operator: **Greater Than (3)**
+- Unit: **Count (4)**
+- Threshold value: type **0** (5)
 
      ![portal](images/cond.png)
     
-1. Click on **Next:Actions**. Don't make any changes in the **Actions** settings blade, and define the following parameters under the **Details** section:
+1. Click on **Next: Actions >**. Don't make any changes in the **Actions** settings blade, and define the following parameters under the **Details** section:
 
     | Setting | Value |
     | --- | --- |
@@ -290,13 +289,14 @@ In this task, you will create two Azure web apps representing the **Canary** and
     | Alert rule name | **RGATESCanary_FailedRequests(2)** |
     | Advanced Options: Automatically resolve alerts | **Unchecked (3)(4)** |
     
-      ![portal](images/createalertrule.png)
+      
+    ![portal](images/createalertrule.png)
 
     > **Note**: Metric alert rules might take up to 10 minutes to activate.
 
     > **Note**: You can create multiple alert rules on different metrics such as availability < 99 percent, server response time > 5 Seconds, or server exceptions > 0
 
-1. Confirm the creation of the Alert rule by clicking **Review+Create(5)**, and confirm once more by clicking **Create**. Wait for the alert rule to get created successfully.
+1. Confirm the creation of the Alert rule by clicking **Review + create (5)**, and confirm once more by clicking **Create**. Wait for the alert rule to get created successfully.
 
 # Exercise 3: Configure the release pipeline
 
