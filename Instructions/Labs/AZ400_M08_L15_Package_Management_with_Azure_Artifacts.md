@@ -180,7 +180,6 @@ In this task, you will create and connect to a feed.
 
       ![](images/az-400-image8.png)
 
-
 ## Task 2: Create and publish a NuGet package
 
 In this task, you will create and publish a NuGet package.
@@ -327,102 +326,111 @@ In this task, you will create and publish a NuGet package.
 
 ## Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
 
-Besides developing your own packages, why not using the Open Source NuGet (https://www.nuget.org) DotNet Package library? With a few million packages available, there will always be something useful for your application.
-    
-In this task, we will use a generic "Hello World" sample package, but you can use the same approach for other packages in the library.
+Besides developing your own packages, why not using the Open Source NuGet (<https://www.nuget.org>) DotNet Package library? With a few million packages available, there will always be something useful for your application.
 
-1.  From the same PowerShell window, run the following NuGet command to install the sample package:
-    
+In this task, we will use a generic "Newtonsoft.Json" sample package, but you can use the same approach for other packages in the library.
+
+1. From the same PowerShell window, navigate to the **EShopOnWeb.Shared** folder, run the following **dotnet** command to install the sample package:
+
+    ```powershell
+    dotnet add package Newtonsoft.Json
     ```
-    .\nuget install HelloWorld -ExcludeVersion
+
+1. Check the output of the install process. It shows the different Feeds it will try to download the package:
+
+    ```powershell
+    Feeds used:
+      https://api.nuget.org/v3/registration5-gz-semver2/newtonsoft.json/index.json
+      https://pkgs.dev.azure.com/<AZURE_DEVOPS_ORGANIZATION>/eShopOnWeb/_packaging/eShopOnWebShared/nuget/v3/index.json
     ```
-    ![](images/AZ400_M08_L15_39.png)
 
-2.  The HelloWorld package got installed in a subfolder **HelloWorld**, under the EShopOnWeb.Shared folder.
-    
-    ![](images/AZ400_M08_L15_40.png)
+1. Next, it will show additional output regarding the actual installation process itself.
 
-3.  From the Visual Studio **Solution Explorer**, navigate to the **EShopOnWeb.Shared** Project, and notice the **HelloWorld** subfolder. Click on the little arrow to the left of the subfolder, to open the folder and file list.
-    
-    ![](images/AZ400_M08_L15_41.png)
+    ```powershell
+    Determining projects to restore...
+    Writing C:\Users\AppData\Local\Temp\tmpxnq5ql.tmp
+    info : X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
+    info : X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
+    info : Adding PackageReference for package 'Newtonsoft.Json' into project 'c:\EShopOnWeb\eShopOnWeb.Shared\EShopOnWeb.Shared.csproj'.
+    info :   GET https://api.nuget.org/v3/registration5-gz-semver2/newtonsoft.json/index.json
+    info :   OK https://api.nuget.org/v3/registration5-gz-semver2/newtonsoft.json/index.json 124ms
+    info : Restoring packages for c:\eShopOnWeb\eShopOnWeb.Shared\eShopOnWeb.Shared.csproj...
+    info :   GET https://api.nuget.org/v3/vulnerabilities/index.json
+    info :   OK https://api.nuget.org/v3/vulnerabilities/index.json 84ms
+    info :   GET https://api.nuget.org/v3-vulnerabilities/2024.02.15.23.23.24/vulnerability.base.json
+    info :   GET https://api.nuget.org/v3-vulnerabilities/2024.02.15.23.23.24/2024.02.17.11.23.35/vulnerability.update.json
+    info :   OK https://api.nuget.org/v3-vulnerabilities/2024.02.15.23.23.24/vulnerability.base.json 14ms
+    info :   OK https://api.nuget.org/v3-vulnerabilities/2024.02.15.23.23.24/2024.02.17.11.23.35/vulnerability.update.json 30ms
+    info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'c:\EShopOnWeb\EShopOnWeb.Shared\eShopOnWeb.Shared.csproj'.
+    info : PackageReference for package 'Newtonsoft.Json' version '13.0.3' added to file 'c:\EShopOnWeb\EShopOnWeb.Shared\EShopOnWeb.Shared.csproj'.
+    info : Writing assets file to disk. Path: c:\eShopOnWeb\eShopOnWeb.Shared\obj\project.assets.json
+    log  : Restored c:\eShopOnWeb\eShopOnWeb.Shared\eShopOnWeb.Shared.csproj (in 294 ms).
+    ```
+
+1. The Newtonsoft.Json package got installed in the Packages as **Newtonsoft.Json**. From the Visual Studio **Solution Explorer**, navigate to the **EShopOnWeb.Shared** Project, expand Dependencies, and notice the **Newtonsoft.Json** under the Packages. Click on the little arrow to the left of the Packages, to open the folder and file list.
 
 ## Task 4: Upload the Open-Source NuGet package to Azure Artifacts
 
 Let's consider this package an "approved" package for our DevOps team to reuse, by uploading it to the Azure Artifacts Package feed created earlier.
 
-1.  From the PowerShell window, execute the following command:
+1. From the Visual Studio, right-click the new **Newtonsoft.Json** package, and select **Open Folder in File Explorer** from the context menu. You will see the new **Newtonsoft.Json** package with the extension **.nupkg**.
+2. Copy the full path from the address bar of the File Explorer window.
+3. From the PowerShell window, execute the following command replacing the path with the one you copied:
 
-     ```
-    .\nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO c:\Users\azureuser\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\HelloWorld\HelloWorld.nupkg
+    ```powershell
+    dotnet nuget push --source "EShopOnWebShared" --api-key az C:\eShopOnWeb\eShopOnWeb.Shared\Newtonsoft.Json\newtonsoft.json.13.0.3.nupkg
     ```
-    
-    > **Note**:  This results in an error message: Response status code does not indicate success: 409 (Conflict - 'HelloWorld 1.3.0.17' cannot be published to the   feed because it exists in at least one of the feed's upstream sources. Publishing this copy would prevent you from using 'HelloWorld 1.3.0.17' from 'NuGet Gallery'. For more information, see https://go.microsoft.com/fwlink/?linkid=864880 (DevOps Activity ID: AE08BE89-C2FA-4FF7-89B7-90805C88972C)).
-    
-    ![](images/AZ400_M08_L15_42.png)
 
-    When you created the Azure DevOps Artifacts Package Feed, by design, it allows for **upstream sources**, such as nuget.org in the dotnet example. However, nothing blocks your DevOps team to create an **"internal-only"** Package Feed.
-    
-2.  Navigate to the Azure DevOps Portal, browse to **Artifacts**, and select the **EShopOnWebShared** Feed.
-3.  Click **Search Upstream Sources(2)**
+    > **Note**:  This results in an error message:
 
-     ![](images/AZ400_M08_L15_(43)(1).png)
+    ```text
+    Response status code does not indicate success: 409 (Conflict - 'Newtonsoft.Json 1.3.0.17' cannot be published to the feed because it exists in at least one of the feed's upstream sources. Publishing this copy would prevent you from using 'Newtonsoft.Json 1.3.0.17' from 'NuGet Gallery'. For more information, see https://go.microsoft.com/fwlink/?linkid=864880 (DevOps Activity ID: AE08BE89-C2FA-4FF7-89B7-90805C88972C)).
+    ```
 
-4.  In the **Go to an Upstream Package** window, select **Nuget(1)** as Package Type, and enter **HelloWorld(2)** in the search field.
-    
-     ![](images/AZ400_M08_L15_44.png)
-    
-5.  Confirm by pressing the **Search (3)** button.
-6.  This results in a list of all HelloWorld packages with the different versions available.
+   >**Note** :When you created the Azure DevOps Artifacts Package Feed, by design, it allows for **upstream sources**, such as nuget.org in the dotnet example. However, nothing blocks your DevOps team to create an **"internal-only"** Package Feed.
 
-     ![](images/AZ400_M08_L15_45.png)
+1. Navigate to the Azure DevOps Portal, browse to **Artifacts**, and select the **eShopOnWebShared** Feed.
 
-7.  Click the **left arrow key** to return to the **EShopOnWebShared** Feed.
-8.  Click the cogwheel to open **Feed Settings (1)**. Within the Feed Settings page, select **Upstream Sources (2)**.
-    
-     ![](images/AZ400_M08_L15_(46).png)
+1. Click **Search Upstream Sources**.
 
-    ![](images/AZ400_M08_L15_(47).png)
+1. In the **Go to an Upstream Package** window, select **NuGet** as Package Type, and enter **Newtonsoft.Json** in the search field.
 
+1. Confirm by pressing the **Search** button.
 
-9.  Notice the different Upstream Package Managers for different development languages. Select **NuGet Gallery (3)** from the list. Press the **Delete (5)** button, Followed by pressing the **Save (6)** button.    
- 
-    ![](images/AZ400_M08_L15_(48).png)
+1. This results in a list of all Newtonsoft.Json packages with the different versions available.
 
-    
-10.  With these saved changed, it will be possible to upload the **HelloWorld** package using the Nuget.exe from the PowerShell Window, by relaunching the following command:
-     
-     ```
-     .\nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO c:\Users\azureuser\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared\HelloWorld\HelloWorld.nupkg
-     ```
-     > **Note**:  This should now result in a successful upload
-    
-        ```
-        Pushing HelloWorld.nupkg to 'https://pkgs.dev.azure.com/pdtdemoworld/7dc3351f-bb0c-42ba-b3c9-43dab8e0dc49/_packaging/188ec0d5-ff93-4eb7-b9d3-                               293fbf759f06/nuget/v2/'...
-        PUT https://pkgs.dev.azure.com/<AZUREDEVOPSORGANIZATION>/7dc3351f-bb0c-42ba-b3c9-43dab8e0dc49/_packaging/188ec0d5-ff93-4eb7-b9d3-293fbf759f06/nuget/v2/
-        MSBuild auto-detection: using msbuild version '17.5.0.10706' from 'C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin'.
-        Accepted https://pkgs.dev.azure.com/pdtdemoworld<AZUREDEVOPSORGANIZATION>/7dc3351f-bb0c-42ba-b3c9-43dab8e0dc49/_packaging/188ec0d5-ff93-4eb7-b9d3-293fbf759f06/nuget/v2/ 1645ms
-        Your package was pushed. 
-        PS C:\eShopOnWeb\EShopOnWeb.Shared> 
-        ```
-11.  From the Azure DevOps Portal, **refresh** the Artifacts Package Feed page. The list of packages shows both the **EShopOnWeb.Shared** custom-developed package, as well as the **HelloWorld** public sourced package.
-     ![](images/AZ400_M08_L15_(49).png)
+1. Click the **left arrow key** to return to the **EShopOnWebShared** Feed.
 
+1. Click the cogwheel to open **Feed Settings**. Within the Feed Settings page, select **Upstream Sources**.
 
-12.  From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared(1)** Project, and select **Manage NuGet Packages (2)** from the context menu.
-      ![](images/AZ400_M08_L15_50.png)
+1. Notice the different Upstream Package Managers for different development languages. Select **NuGet Gallery** from the list. Press the **Delete** button, followed by pressing the **Save** button.
 
-13. From the NuGet Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
-14. Click **Browse (1)**, and wait for the list of NuGet Packages to load.
-15. This list will also show both the **EShopOnWeb.Shared (2)** custom-developed package, as well as the **HelloWorld (2)** public sourced package.
-    
-     ![](images/AZ400_M08_L15_51.png)
-     
+1. With these saved changes, it will be possible to upload the **Newtonsoft.Json** package using the NuGet.exe from the PowerShell Window, by relaunching the following command:
+
+    ```text
+     dotnet nuget push --source "EShopOnWebShared" --api-key az C:\EShopOnWeb\EShopOnWeb.Shared\Newtonsoft.Json\newtonsoft.json.13.0.3.nupkg
+    ```
+
+    > **Note**: This should now result in a successful upload.
+
+    ```text
+    Pushing newtonsoft.json.13.0.3.nupkg to 'https://pkgs.dev.azure.com/<AZURE_DEVOPS_ORGANIZATION>/_packaging/5faffb6c-018b-4452-a4d6-72c6bffe79db/nuget/v2/'...
+    PUT https://pkgs.dev.azure.com/<AZURE_DEVOPS_ORGANIZATION>/_packaging/5faffb6c-018b-4452-a4d6-72c6bffe79db/nuget/v2/
+    Accepted https://pkgs.dev.azure.com/<AZURE_DEVOPS_ORGANIZATION>/_packaging/5faffb6c-018b-4452-a4d6-72c6bffe79db/nuget/v2/ 3160ms
+    Your package was pushed.
+    ```
+
+1. From the Azure DevOps Portal, **refresh** the Artifacts Package Feed page. The list of packages shows both the **EShopOnWeb.Shared** custom-developed package, as well as the **Newtonsoft.Json** public sourced package.
+1. From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared** Project, and select **Manage NuGet Packages** from the context menu.
+1. From the NuGet Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
+1. Click **Browse**, and wait for the list of NuGet Packages to load.
+1. This list will also show both the **EShopOnWeb.Shared** custom-developed package, as well as the **Newtonsoft.Json** public sourced package.
+
     > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
     > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
     > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 
 ## Review
 
