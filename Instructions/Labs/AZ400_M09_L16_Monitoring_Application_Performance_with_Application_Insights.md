@@ -91,6 +91,12 @@ In this exercise, you will configure CI/CD Pipelines as code with YAML in Azure 
 
 In this task, you will add a YAML build definition to the existing project.
 
+1. In the vertical menu bar at the far left of the Azure DevOps portal, click **Repos** and, in the **Repos** section, click **Branches**.
+
+1. Navigate to the **Branches** pane and locate the **main** branch entry. Hover your mouse pointer over the right edge of the branch entry to reveal the vertical ellipsis character, indicating the presence of the **More options** menu. Ensure that **Set as default branch** is chosen. If it is not already selected, proceed to set it as the default branch by selecting **Set as default branch**.
+
+    ![Sonarcloud PR settings](images/5.png)
+
 1. Navigate back to the **Pipelines** pane in of the **Pipelines** hub.
 1. Click **New pipeline** (or Create Pipeline if this is the first one you create).
 
@@ -196,7 +202,7 @@ In this task, you will add a YAML build definition to the existing project.
 
 1. Before saving the updates to the yml-file, give it a more clear name. On top of the yaml-editor window, it shows **EShopOnweb/azure-pipelines-#.yml**. (where # is a number, typically 1 but could be different in your setup.) Select **that filename**, and rename it to **m09l16-pipeline.yml**
 
-1. Click **Save**, on the **Save** pane, click **Save** again to commit the change directly into the master branch.
+1. Click **Validate + Save**, on the **Save** pane, click **Run** again to commit the change directly into the main branch.
 
     > **Note**: Since our original CI-YAML was not configured to automatically trigger a new build, we have to initiate this one manually.
 
@@ -204,10 +210,10 @@ In this task, you will add a YAML build definition to the existing project.
 
     > **Note**: if you kept all previous pipelines from previous lab exercises, this new pipeline might have reused a default **eShopOnWeb (#)** sequence name for the pipeline as shown in below screenshot. Select a pipeline (most probably the one with the highest sequence number, select Edit and validate it points to the m09l16-pipeline.yml code file).
 
-    ![Screenshot of Azure Pipelines showing eShopOnWeb runs](images/m3/eshoponweb-m9l16-pipeline.png)
-
 1. Confirm to run this pipeline by clicking **Run** from the appearing pane and confirm by clicking **Run** once more.
+
 1. Notice the 2 different Stages, **Build .Net Core Solution** and **Deploy to Azure Web App** appearing.
+
 1. Wait for the pipeline to kick off.
 
 1. **Ignore** any Warnings showing up during the Build Stage. Wait until it completes the Build Stage successfully. (You can select the actual Build stage to see more details from the logs.)
@@ -328,6 +334,8 @@ Azure Load Testing uses Azure RBAC to grant permissions for performing specific 
 1. Select the **service principal**, and then select **Select**.
 1. In the **Review + assign tab**, select **Review + assign** to add the role assignment.
 
+   ![Screenshot of Azure Pipelines showing eShopOnWeb runs](images/9.png)
+
 You can now use the service connection in your Azure Pipelines workflow definition to access your Azure load testing resource.
 
 #### Task 3: Export load test input files and Import to Azure Repos
@@ -394,12 +402,12 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
     ```
 
 1. If the indentation of the YAML snippet is giving errors (red squiggly lines), fix them by adding 2 spaces or tab to position the snippet correctly.  
-1. With both snippets added to the CI/CD pipeline, **Save** the changes.
+1. With both snippets added to the CI/CD pipeline, **Validate + Save** the changes.
 1. Once saved, click **Run** to trigger the pipeline.
 1. Confirm the branch (main) and click the **Run** button to start the pipeline run.
 1. From the pipeline status page, click the **Build** stage to open the verbose logging details of the different tasks in the pipeline.
 1. Wait for the pipeline to kick off the Build Stage, and arrive at the **AzureLoadTest** task in the flow of the pipeline.
-1. While the task is running, browse to the **Azure Load Testing** in the Azure Portal, and see how the pipeline creates a new RunTest, named **adoloadtest1**. You can select it to show the outcome values of the TestRun job.
+1. While the task is running, browse to the **Azure Load Testing** in the Azure Portal, and see how the pipeline creates a new RunTest, named **ado_run**. You can select it to show the outcome values of the TestRun job.
 1. Navigate back to the Azure DevOps CI/CD Pipeline Run view, where the **AzureLoadTest task** completed successfully. From the verbose logging output, the resulting values of the load test will be visible as well:
 
     ```text
@@ -432,6 +440,7 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
     Finishing: AzureLoadTest
     
     ```
+    ![Screenshot of Azure Pipelines showing eShopOnWeb runs](images/6.png)
 
 1. You have now performed an automated Load Test as part of a pipeline run. In the last task, you will specify conditions for failure, meaning, we will not allow our deploy Stage to start, if the performance of the web app is below a certain threshold.
 
@@ -451,7 +460,11 @@ In this task, You'll use load test fail criteria to get alerted (have a failed p
     ```
 
 1. Save the changes to the config.yaml by clicking **Commit** and Commit once more.
+
+   ![Screenshot of Azure Pipelines showing eShopOnWeb runs](images/7.png)
+
 1. Navigate back to **Pipelines** and run the **eShopOnWeb** pipeline again. After a few minutes, it will complete the run with a **failed** status for the **AzureLoadTest** task.
+
 1. Open the verbose logging view for the pipeline, and validate the details of the **AzureLoadtest**. A similar sample output is below:
 
     ```text
@@ -485,6 +498,7 @@ In this task, You'll use load test fail criteria to get alerted (have a failed p
     Finishing: AzureLoadTest
 
     ```
+   ![Screenshot of Azure Pipelines showing eShopOnWeb runs](images/10.png)
 
 1. Notice how the last line of the Load testing output says **##[error]TestResult: FAILED**; since we defined a **FailCriteria** having an avg response time of > 300, or having an error percentage of > 20, now seeing an avg response time which is more than 300, the task will be flagged as failed.
 
@@ -492,31 +506,14 @@ In this task, You'll use load test fail criteria to get alerted (have a failed p
 
 1. The FAILED status of the pipeline task, actually reflects a SUCCESS of the Azure Load Testing requirement criteria validation.
 
-### Exercise 3: Remove the Azure lab resources
-
-In this exercise, you will remove the Azure resources provisioned in this lab to eliminate unexpected charges.
-
-> **Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-#### Task 1: Remove the Azure lab resources
-
-In this task, you will use Azure Cloud Shell to remove the Azure resources provisioned in this lab to eliminate unnecessary charges.
-
-1. In the Azure portal, open the **Bash** shell session within the **Cloud Shell** pane.
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-    ```sh
-    az group list --query "[?starts_with(name,'az400m09l16')].name" --output tsv
-    ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-    ```sh
-    az group list --query "[?starts_with(name,'az400m09l16')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
-    ```
-
-    >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
+    > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+    > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 
 In this exercise, you deployed a web app to Azure App Service by using Azure Pipelines, as well as deploying an Azure Load Testing Resource with TestRuns. Next, you integrated the JMeter load testing config.yaml file to Azure Repos source control, and extending your CI/CD pipeline with the Azure Load Testing. In the last exercise, you learned how to define the success criteria of the LoadTest.
+
+### You have successfully completed the lab.
