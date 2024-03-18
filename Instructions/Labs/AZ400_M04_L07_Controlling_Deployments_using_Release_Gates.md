@@ -135,10 +135,10 @@ In this task, you will add a YAML build definition to the existing project.
 
 1. In the **Selecting an existing YAML File** blade, specify the following parameters:
    
-- Branch: **main**
-- Path: Select **/.ado/eshoponweb-ci.yml** from the drop-down.
+    - Branch: **main**
+    - Path: Select **/.ado/eshoponweb-ci.yml** from the drop-down.
 
-    ![Import Repository](images/newpip4.png)
+        ![Import Repository](images/newpip4.png)
   
 1. Click **Continue** to save these settings.
 1. From the **Review your Pipeline YAML** screen, click **Run** to start the Build Pipeline process.
@@ -274,12 +274,12 @@ In this task, you will create two Azure web apps representing the **Canary** and
       ![portal](images/failedreupdated.png)
      
 1.  On the **Create an Alert Rule** blade, in the **Condition** section, leave the **Threshold** set to **Static(1)**, validate the other default settings as follows:
-- Aggregation Type: **Count (2)**
-- Operator: **Greater Than (3)**
-- Unit: **Count (4)**
-- Threshold value: type **0** (5)
+    - Aggregation Type: **Count (2)**
+    - Operator: **Greater Than (3)**
+    - Unit: **Count (4)**
+    - Threshold value: type **0** (5)
 
-     ![portal](images/cond.png)
+        ![portal](images/cond.png)
     
 1. Click on **Next: Actions >**. Don't make any changes in the **Actions** settings blade, and define the following parameters under the **Details** section:
 
@@ -489,23 +489,23 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
 
 1. On the **Post-deployment conditions** pane, expand the **Advanced** section and configure the following options:
 
-- Filter type: **None(1)**
-- Severity: **Sev0, Sev1, Sev2, Sev3, Sev4(2)**
-- Time Range: **Past Hour(3)**
-- Alert State: **Acknowledged, New(4)**
-- Monitor Condition: **Fired(5)**
- 
-     ![Azure devops](images/pre-deployset3.png) 
+    - Filter type: **None(1)**
+    - Severity: **Sev0, Sev1, Sev2, Sev3, Sev4(2)**
+    - Time Range: **Past Hour(3)**
+    - Alert State: **Acknowledged, New(4)**
+    - Monitor Condition: **Fired(5)**
+    
+        ![Azure devops](images/pre-deployset3.png) 
      
 1. On **Post-deployment conditions** pane, expand the **Evaluation options** and configure the following options:
 
-- Set the value of **Time between re-evaluation of gates** to **5 Minutes(1)**.
-- Set the value of **Timeout after which gates fail** to **8 Minutes(2)**.
-- Select the **On successful gates, ask for approvals(3)** option.
+    - Set the value of **Time between re-evaluation of gates** to **5 Minutes(1)**.
+    - Set the value of **Timeout after which gates fail** to **8 Minutes(2)**.
+    - Select the **On successful gates, ask for approvals(3)** option.
 
-     ![Azure devops](images/pre-deployset5.png) 
+        ![Azure devops](images/pre-deployset5.png) 
 
-    > **Note**: The sampling interval and timeout work together so that the gates will call their functions at suitable intervals and reject the deployment if they don't succeed during the same sampling interval within the timeout period.
+        > **Note**: The sampling interval and timeout work together so that the gates will call their functions at suitable intervals and reject the deployment if they don't succeed during the same sampling interval within the timeout period.
 
 1. Close the **Post-deployment conditions** pane, by clicking the **x** mark in its upper right corner.
 

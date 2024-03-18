@@ -190,7 +190,7 @@ o Deploy the eShopOnWeb application
       
   8. The choose **Service principal (manual)(1)** and click on **Next(2)**.
 
-      ![](images/lab-400-border 0.1.png)
+     ![](<images/lab-400-border 0.1.png>)
 
   9. Fill in the empty fields using the information gathered during previous steps:
 
