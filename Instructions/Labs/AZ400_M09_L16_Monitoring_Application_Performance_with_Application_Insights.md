@@ -368,7 +368,7 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
 1. To create and run a load test, the Azure Pipelines workflow definition uses the **Azure Load Testing task extension** from the Azure DevOps Marketplace. Open the [Azure Load Testing task extension](https://marketplace.visualstudio.com/items?itemName=AzloadTest.AzloadTesting) in the Azure DevOps Marketplace, and select **Get it free**.
 1. Select your Azure DevOps organization, and then select **Install** to install the extension.
 1. From within the Azure DevOps Portal and Project, navigate to **Pipelines** and select the pipeline created at the start of this exercise. Click **Edit**.
-1. In the YAML script, navigate to **line 56** and press ENTER/RETURN, to add a new empty line. (this is right before the Deploy Stage of the YAML file).
+1. In the YAML script, navigate to **line 57** and press ENTER/RETURN, to add a new empty line. (this is right before the Deploy Stage of the YAML file).
 1. At line 57, select the Tasks Assistant to the right-hand side, and search for **Azure Load Testing**.
 1. Complete the graphical pane with the correct settings of your scenario:
    - Azure Subscription: Select the subscription which runs your Azure Resources
