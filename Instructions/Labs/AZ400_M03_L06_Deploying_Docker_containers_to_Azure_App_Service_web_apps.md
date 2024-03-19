@@ -8,7 +8,7 @@ In this lab, you will learn how to use an Azure DevOps CI/CD pipeline to build a
 
 After you complete this lab, you will be able to:
 
-- Build a custom Docker image by using an Microsoft hosted Linux agent
+- Build a custom Docker image by using a Microsoft hosted Linux agent
 - Push an image to Azure Container Registry
 - Deploy a Docker image as a container to Azure App Service by using Azure DevOps
 
