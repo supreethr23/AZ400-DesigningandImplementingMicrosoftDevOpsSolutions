@@ -98,10 +98,12 @@ A service principal is automatically created by Azure Pipeline when you connect 
 1.  From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID attribute: 
 
     ```
-    subscriptionName=$(az account show --query name --output tsv)
-    subscriptionId=$(az account show --query id --output tsv)
-    echo $subscriptionName
-    echo $subscriptionId
+     subscriptionId=$(az account show --query id --output tsv)
+     echo $subscriptionId
+     spId=$(az ad sp list --display-name sp-az400-azdo --query "[].id" --output tsv)
+     echo $spId
+     roleName=$(az role definition list --name "User Access Administrator" --query "[0].name" --output tsv)
+     echo $roleName
     ```
 
     > **Note**: Copy both values to a text file. You will need them later in this lab.
