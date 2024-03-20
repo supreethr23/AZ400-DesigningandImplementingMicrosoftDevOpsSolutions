@@ -1,63 +1,109 @@
-# Lab 12: Azure Deployments using Azure Bicep templates
+# Lab 12: Manage infrastructure as code using Azure and DSC
+
+# Deployments using Azure Bicep templates
+
+## Student lab manual
+
+## Lab requirements
+
+- This lab requires **Microsoft Edge** or an [Azure DevOps supported browser.](https://docs.microsoft.com/azure/devops/server/compatibility)
+
+- **Set up an Azure DevOps organization:** If you don't already have an Azure DevOps organization that you can use for this lab, create one by following the instructions available at [Create an organization or project collection](https://docs.microsoft.com/azure/devops/organizations/accounts/create-organization).
+
+- Identify an existing Azure subscription or create a new one.
+
+- Verify that you have a Microsoft account or a Microsoft Entra account with the Owner role in the Azure subscription and the Global Administrator role in the Microsoft Entra tenant associated with the Azure subscription. For details, refer to [List Azure role assignments using the Azure portal](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-list-portal) and [View and assign administrator roles in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/roles/manage-roles-portal).
 
 ## Lab overview
 
-In this lab, you'll create an Azure Bicep template and modularize it using the Azure Bicep Modules concept. You'll then modify the main deployment template to use the module and finally deploy the all the resources to Azure.
+In this lab, you'll create an Azure Bicep template and modularize it using the Azure Bicep Modules concept. You'll then modify the main deployment template to use the module and finally deploy all the resources to Azure.
 
 ## Objectives
 
 After you complete this lab, you will be able to:
 
-- Understand and create a Azure Bicep Templates.
-- Create a reusable Bicep module for storage resources.
-- Upload Linked Template to Azure Blob Storage and generate SAS token.
-- Modify the main template to use the module.
-- Modify the main template to update dependencies.
-- Deploy all the resources to Azure using Azure Bicep Templates.
-- Deploy resources to Azure using linked templates
+- Understand an Azure Bicep template's structure.
+- Create a reusable Bicep module.
+- Modify the main template to use the module
+- Deploy all the resources to Azure using Azure YAML pipelines.
 
-## Estimated timing: 60 minutes
+## Estimated timing: 45 minutes
 
-## Architecture Diagram
+## Instructions
 
-  ![Architecture Diagram](images/lab12-architecture-new.png)
+## Set up an Azure DevOps organization. 
 
-# Exercise 1: Configure the lab prerequisites
+1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
-In this exercise, you will set up the prerequisites for the lab, which include Visual Studio Code.
+2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
-## Task 1: Install and configure Git and Visual Studio Code
+3. On the next page accept defaults and click on continue.
 
-In this task, you will install Visual Studio Code. If you have already implemented this prerequisite, you can proceed directly to the next task.
+    ![Azure DevOps](images/400-3.png)
 
-1. If you don't have Visual Studio Code installed yet, from your lab computer, start a web browser, navigate to the [Visual Studio Code download page](https://code.visualstudio.com/), download it, and install it.
+4. On the **Almost Done...** page fill the captcha and click on continue. 
 
-# Exercise 2: Author and deploy Bicep templates
+    ![Azure DevOps](images/m1-2.png)
 
-In this lab, you will create an Azure Bicep template and a template module. You will then modify the main deployment template to use the template module and update the dependencies, and finally deploy the templates to Azure.
+5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
-## Task 1: Create Azure Bicep template
+    ![Azure DevOps](images/agent1.png)
 
-In this task, you will use Visual Studio Code to create a Azure Bicep template
+6. In the **Organization Setting** window on the left menu click on **Billing**.
 
-1. From the Jump VM, start Visual Studio Code.
-
-     ![visual studio"](images/vs.png)
-   
-1. Select **Extensions(1)**, in the **Search Extensions** textbox, type **Bicep(2)**, select **Bicep(3)** the one published by Microsoft, and click **Install(4)** to install the Azure Bicep language support.
-     
-     ![visual studio"](images/az-400-6-1.png)
-  
-1. In Visual Studio Code, Click on **Files(1)>Open file(2)** to open a file.
-
-     ![visual studio"](images/az-400-6-2.png)
-     
- 1. Now in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**.
-
-   
-     ![visual studio"](images/az-400-6-3.png)
+    ![Azure DevOps](images/agent3.png)
     
-1. Review the template to get a better understanding of its structure. There are five resource types included in the template:
+7. Select **Setup Billing** then click on save.
+    ![Azure DevOps](images/agent4.png)    
+
+8. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+
+    ![Azure DevOps](images/agent2.png)    
+
+9. In the **Organization Setting** window on the left menu click on **Policies** and enable **Third-party application access via OAuth**.
+
+    ![Azure DevOps](images/policies-enable-3rd.png)    
+
+# Exercise 0: Configure the lab prerequisites
+
+In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://dev.azure.com/unhueteb/_git/eshopweb-az400).
+
+### Task 1: Create and configure the team project
+
+In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
+
+1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **Create**.
+
+    ![Create Project](images/create-project.png)
+
+### Task 2: Import eShopOnWeb Git Repository
+
+In this task you will import the eShopOnWeb Git repository that will be used by several labs.
+
+1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL <https://github.com/MicrosoftLearning/eShopOnWeb.git>  and click **Import**:
+
+    ![Import Repository](images/import-repo.png)
+
+1. The repository is organized the following way:
+    - **.ado** folder contains Azure DevOps YAML pipelines.
+    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces).
+    - **infra** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
+    - **.github** folder container YAML GitHub workflow definitions.
+    - **src** folder contains the .NET 8 website used on the lab scenarios.
+
+## Exercise 1: Understand an Azure Bicep template and simplify it using a reusable module
+
+In this lab, you will review an Azure Bicep template and simplify it using a reusable module.
+
+### Task 1: Create Azure Bicep template
+
+In this task, you will use Visual Studio Code to create an Azure Bicep template
+
+1. In the browser tab you have your Azure DevOps project open, navigate to **Repos** and **Files**. Open the `.azure\bicep` folder and find the `simple-windows-vm.bicep` file.
+
+   ![Simple-windows-vm.bicep file](./images/browsebicepfile.png)
+
+1. Review the template to get a better understanding of its structure. There are some parameters with types, default values and validation, some variables, and quite a few resources with these types:
 
    - Microsoft.Storage/storageAccounts
    - Microsoft.Network/publicIPAddresses
@@ -65,17 +111,17 @@ In this task, you will use Visual Studio Code to create a Azure Bicep template
    - Microsoft.Network/networkInterfaces
    - Microsoft.Compute/virtualMachines
 
-   > **Note**: We now have two identical JSON files: **C:\\templates\\main.bicep** and **C:\\templates\\storage.bicep**.
+1. Pay attention to how simple the resource definitions are and the ability to implicitly reference symbolic names instead of explicit `dependsOn` throughout the template.
 
-## Task 2: Create a template module for storage resources.
+### Task 2: Create a bicep module for storage resources
 
-In this task, you will modify the templates you saved in the previous task such that the storage template module **storage.bicep** will create a storage account only, it will be imported by the first template. The storage template module needs to pass a value back to the main template, **main.bicep**, and this value will be defined in the outputs element of the storage template module.
+In this task, you will create a storage template module **storage.bicep** which will create a storage account only and will be imported by the main template. The storage template module needs to pass a value back to the main template, **main.bicep**, and this value will be defined in the outputs element of the storage template module.
 
-1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates(1)**, Select **storage.bicep(2)** file, Make sure that in the file name box **storage.bicep(3)** will be selected then click on **Open(4)**.
-   
-   ![visual studio"](images/az-400-6-4.png)
+1. First we need to remove the storage resource from our main template. From the top right corner of your browser window click the **Edit** button:
 
-1. In the **storage.bicep** file displayed in the Visual Studio Code window, under the **resources section**, remove all the resource elements except the **storageAccounts** resource. It should result in a resource section looking as follows:
+   ![Edit button](./images/m06/edit.png)
+
+1. Now delete the storage resource:
 
    ```bicep
    resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
@@ -88,51 +134,15 @@ In this task, you will modify the templates you saved in the previous task such 
    }
    ```
 
-1. Next, remove all the variables definitions:
+1. Commit the file, however, we're not done with it yet.
 
-   ```bicep
-   var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
-   var nicName = 'myVMNic'
-   var addressPrefix = '10.0.0.0/16'
-   var subnetName = 'Subnet'
-   var subnetPrefix = '10.0.0.0/24'
-   var virtualNetworkName = 'MyVNET'
-   var networkSecurityGroupName = 'default-NSG'
-   var securityProfileJson = {
-     uefiSettings: {
-       secureBootEnabled: true
-       vTpmEnabled: true
-     }
-     securityType: securityType
-   }
-   var extensionName = 'GuestAttestation'
-   var extensionPublisher = 'Microsoft.Azure.Security.WindowsAttestation'
-   var extensionVersion = '1.0'
-   var maaTenantName = 'GuestAttestation'
-   var maaEndpoint = substring('emptyString', 0, 0)
-   ```
+   ![Commiting the file](./images/m06/commit.png)
 
-1. Next, remove all parameter values except location. 
+1. Next, hover your mouse over the bicep folder and click the ellipsis icon, then select **New**, and **File**. Enter **storage.bicep** for the name and click **Create**.
 
-   ```bicep
-   @description('Location for all resources.')
-   param location string = resourceGroup().location
-    ```
-   
-1. Add the following parameter code, below the location parameter resulting in the following outcome:
+   ![New file menu](./images/m06/newfile.png)
 
-   ```bicep
-   @description('Name for the storage account.')
-   param storageAccountName string
-     ```
-
-1. Next, at the end of the file, remove the current output and add a new one called storageURI output value. Modify the output so it looks like the below.
-
-   ```bicep
-   output storageURI string = storageAccount.properties.primaryEndpoints.blob
-   ```
-
-1. Save the storage.bicep template module. The storage template should now look as follows:
+1. Now copy the following code snippet into the file and commit your changes:
 
    ```bicep
    @description('Location for all resources.')
@@ -153,28 +163,13 @@ In this task, you will modify the templates you saved in the previous task such 
    output storageURI string = storageAccount.properties.primaryEndpoints.blob
    ```
 
-## Task 3: Modify the main template to use the template module
+### Task 3: Modify the main template to use the template module
 
 In this task, you will modify the main template to reference the template module you created in the previous task.
 
-1. In Visual Studio Code, click the **File** top level menu, in the dropdown menu, select **Open File**, in the Open File dialog box, navigate to **C:\\templates(1)**,  Select **main.bicep(2)** file, Make sure that in the file name box **main.bicep(3)** will be selected then click on **Open(4)**
+1. Navigate back to the `simple-windows-vm.bicep` file and click on the **Edit** button once again.
 
-      ![visual studio"](images/az-400-6-3.png)
-      
-3. In the **main.bicep** file, in the resource section remove the storage resource element
-
-   ```bicep
-   resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
-     name: storageAccountName
-     location: location
-     sku: {
-       name: 'Standard_LRS'
-     }
-     kind: 'Storage'
-   }
-   ```
-
-1. Next, add the following code directly in the same location where the newly deleted storage resource element was:
+1. Next, add the following code after the variables:
 
    ```bicep
    module storageModule './storage.bicep' = {
@@ -200,103 +195,107 @@ In this task, you will modify the main template to reference the template module
 1. Review the following details in the main template:
 
    - A module in the main template is used to link to another template.
-   - The module has a symbolic name called storageModule. This name is used for configuring any dependencies.
-   - You can only use Incremental deployment mode when using template modules.
+   - The module has a symbolic name called `storageModule`. This name is used for configuring any dependencies.
+   - You can only use **Incremental** deployment mode when using template modules.
    - A relative path is used for your template module.
    - Use parameters to pass values from the main template to the template modules.
 
-    > **Note**: With Azure ARM Templates, you would have used a storage account to upload the linked template to make it easier for others to use them. With Azure Bicep modules, you have the option to upload them to Azure Bicep Module registry which has both public and private registry options. More information can be found on the [Azure Bicep documentation](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/modules#file-in-registry).
+1. Commit the template.
 
-1. Save the template.
+## Exercise 2: Deploying the templates to Azure using YAML pipelines
 
-## Task 4: Deploy resources to Azure by using template modules
+In this lab, you will create a service connection and use it in an Azure DevOps YAML pipeline to deploy your template to your Azure environment.
 
- > **Note**: You can deploy templates in several ways, such as using Azure CLI installed locally or from the Azure Cloud Shell or from a CI/CD pipeline. In this lab, you will use Azure CLI from the Azure Cloud Shell.
+### Task 1: Create a Service Connection for deployment
 
- > **Note**: In contrast to ARM templates you cannot use Azure portal to directly deploy Bicep templates.
+In this task, you will create a Service Principal by using the Azure CLI, which will allow Azure DevOps to:
 
- > **Note**: To use Azure Cloud Shell, you will upload the both the main.bicep and storage.bicep files into your Cloud Shell's home directory.
+- Deploy resources on your Azure subscription.
+- Have read access on the later created Key Vault secrets.
 
- > **Note**: Currently, Azure CLI does not support deploying remote Bicep files. You can build the bicep files to get the ARM Template JSON and then upload them to an storage account, then deploy them remotely.
- 
-1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
+> **Note**: If you do already have a Service Principal, you can proceed directly to the next task.
 
-   ![Azure DevOps](images/azureportal-lab12.png)
-   
-1. If not Sign-in, then on the **Sign into Microsoft Azure** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
-   
-1. Now enter the following **Password** and click on **Sign in**.
-   * Password: <inject key="AzureAdUserPassword"></inject>
-   
-1. If you see the pop-up **Stay Signed in?**, click No.
+You will need a Service Principal to deploy  Azure resources from Azure Pipelines. Since we are going to retrieve secrets in a pipeline, we will need to grant permission to the service when we create the Azure Key Vault.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+A Service Principal is automatically created by Azure Pipelines, when you connect to an Azure subscription from inside a pipeline definition or when you create a new Service Connection from the project settings page (automatic option). You can also manually create the Service Principal from the portal or using Azure CLI and re-use it across projects.
 
-1. If **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
-
-1. In the Azure portal, click the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
-
-      ![Clouldshell](images/cloudshell.png)
-  
+1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Microsoft Entra tenant associated with this subscription.
+1. In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
-     ![Clouldshell](images/bash.png)
+   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
 
-   > **Note**: If this is the first time you are starting Cloud Shell and you are presented with the You have no storage mounted message, select the subscription you are using in this lab, and select Create storage.
-   
-     ![visual studio"](images/creatstr.png)
-   
-1. In the Cloud Shell pane, click the **Upload/download files** icon and, in the dropdown menu, click **Upload**.
-   
-     ![visual studio"](images/upload.png)
-   
-1. In the **Open** dialog box, navigate to and select **C:\\templates\\main.bicep** and click **Open**.
-1. Follow the same steps to upload the **C:\\templates\\storage.bicep** file too.
-  
-1. From a **Bash** session in the Cloud Shell pane, run the following to perform a deployment by using a newly uploaded template:
+1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID and subscription name attributes:
+
+    ```bash
+    az account show --query id --output tsv
+    az account show --query name --output tsv
+    ```
+
+    > **Note**: Copy both values to a text file. You will need them later in this lab.
+
+1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a Service Principal (replace the **myServicePrincipalName** with any unique string of characters consisting of letters and digits) and **mySubscriptionID** with your Azure subscriptionId :
+
+    ```bash
+    az ad sp create-for-rbac --name myServicePrincipalName \
+                         --role contributor \
+                         --scopes /subscriptions/mySubscriptionID
+    ```
+
+    > **Note**: The command will generate a JSON output. Copy the output to text file. You will need it later in this lab.
+
+1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **New Service Connection**.
+
+    ![New Service Connection](images/new-service-connection.png)
+
+1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
+
+1. The choose **Service Principal (manual)** and click on **Next**.
+
+1. Fill in the empty fields using the information gathered during previous steps:
+    - Subscription Id and Name.
+    - Service Principal Id (appId), Service principal key (password) and Tenant ID (tenant).
+    - In **Service connection name** type **azure subs**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
+
+    ![Azure Service Connection](images/azure-service-connection.png)
+
+1. Click on **Verify and Save**.
+
+### Task 2: Deploy resources to Azure by YAML pipelines
+
+1. Navigate back to the **Pipelines** pane in of the **Pipelines** hub.
+1. In the **Create your first Pipeline** window, click **Create pipeline**.
+
+    > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
+
+1. On the **Where is your code?** pane, click **Azure Repos Git (YAML)** option.
+1. On the **Select a repository** pane, click **eShopOnWeb**.
+1. On the **Configure your pipeline** pane, scroll down and select **Existing Azure Pipelines YAML File**.
+1. In the **Selecting an existing YAML File** blade, specify the following parameters:
+   - Branch: **main**
+   - Path: **.ado/eshoponweb-cd-windows-cm.yml**
+1. Click **Continue** to save these settings.
+1. In the variables section, choose a name for your resource group, set the desired location and replace the value of the service connection with one of your existing service connections you created earlier.
+1. Click the **Save and run** button from the top right corder and when the commit dialog appeared, click **Save and run** again.
+
+   ![Save and running the YAML pipeline after making changes](./images/m06/saveandrun.png)
+
+1. Wait for the deployment to finish and review the results.
+   ![Successful resource deployment to Azure using YAML pipelines](./images/m06/deploy.png)
+
+### Task 3: Remove the Azure lab resources
+
+In this task, you will use Azure Cloud Shell to remove the Azure resources provisioned in this lab to eliminate unnecessary charges.
+
+1. In the Azure portal, open the **Bash** shell session within the **Cloud Shell** pane.
+1. Delete all resource groups you created throughout the labs of this module by running the following command (replace the resource group name with what you chose):
 
    ```bash
-   LOCATION='eastus'
-   ```
-    > **Note**: replace the name of the region with a region close to your location example : **"eastus"**. If you do not know what locations are available, run the `az account list-locations -o table` command.
-  
-   ```bash
-   az group create --name az400m06l15-RG --location $LOCATION
+   az group list --query "[?starts_with(name,'AZ400-EWebShop-NAME')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
 
-   ```bash   
-   az deployment group create --name az400m06l15[Deployment-ID] --resource-group az400m06l15-RG --template-file main.bicep
-   ```
-    > **Note**: Replace the [Deployment-ID] with <inject key="DeploymentID"></inject> 
-
-1. When prompted to provide the value for 'adminUsername', type **Student** and press the **Enter** key.
-1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key. (Password typing will not be shown)
-   > **Note**: It will take around 5 minutes to get output.
-   
-1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **resource group** and, in the list of results, select **Resouce groups**.
-      
-1. Click on **az400m06l15-RG(1)** resource group, on the **az400m06l15-RG blade(2)** you can see the **resources(3)** which we deployed in the previous steps using azure cloudshell.
-       
-      ![azure portal"](images/bicepresources1.png)
-       
-3. If you receive errors when running the above command to deploy the template, try the following:
-
-   - If you have multiple Azure subscriptions ensure you have set the subscription context to the correct one where the resource group is deployed.
-   - Ensure that the linked template is accessible via the URI you specified.
-
-   > **Note**: As a next step, you could now modularize the remaining resource definitions in the main deployment template, such as the network and virtual machine resource definitions.
-
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+   > **Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
 
 ## Review
 
-In this lab, you learned how to create an Azure Resource manager template, modularize it by using a linked template, modify the main deployment template to call the linked template and updated dependencies, and finally deploy the templates to Azure.
-
-### You have successfully completed the lab.
+In this lab, you learned how to create an Azure Bicep template, modularize it by using a template module, modify the main deployment template to use the module and updated dependencies, and finally deploy the templates to Azure using YAML pipelines.
