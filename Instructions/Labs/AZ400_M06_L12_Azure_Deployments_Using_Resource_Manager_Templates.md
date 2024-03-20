@@ -2,8 +2,6 @@
 
 # Deployments using Azure Bicep templates
 
-## Student lab manual
-
 ## Lab requirements
 
 - This lab requires **Microsoft Edge** or an [Azure DevOps supported browser.](https://docs.microsoft.com/azure/devops/server/compatibility)
@@ -54,6 +52,7 @@ After you complete this lab, you will be able to:
     ![Azure DevOps](images/agent3.png)
     
 7. Select **Setup Billing** then click on save.
+
     ![Azure DevOps](images/agent4.png)    
 
 8. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
@@ -72,9 +71,9 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **Create**.
+1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **+ Create Project**.
 
-    ![Create Project](images/create-project.png)
+    ![Create Project](images/6-10.png)
 
 ### Task 2: Import eShopOnWeb Git Repository
 
@@ -99,9 +98,9 @@ In this lab, you will review an Azure Bicep template and simplify it using a reu
 
 In this task, you will use Visual Studio Code to create an Azure Bicep template
 
-1. In the browser tab you have your Azure DevOps project open, navigate to **Repos** and **Files**. Open the `.azure\bicep` folder and find the `simple-windows-vm.bicep` file.
+1. In the browser tab you have your Azure DevOps project open, navigate to **Repos** and **Files**. Open the `infra` folder and find the `simple-windows-vm.bicep` file.
 
-   ![Simple-windows-vm.bicep file](./images/browsebicepfile.png)
+   ![Simple-windows-vm.bicep file](./images/6-8.png)
 
 1. Review the template to get a better understanding of its structure. There are some parameters with types, default values and validation, some variables, and quite a few resources with these types:
 
@@ -119,7 +118,7 @@ In this task, you will create a storage template module **storage.bicep** which 
 
 1. First we need to remove the storage resource from our main template. From the top right corner of your browser window click the **Edit** button:
 
-   ![Edit button](./images/m06/edit.png)
+   ![Edit button](./images/6-9.png)
 
 1. Now delete the storage resource:
 
@@ -136,11 +135,9 @@ In this task, you will create a storage template module **storage.bicep** which 
 
 1. Commit the file, however, we're not done with it yet.
 
-   ![Commiting the file](./images/m06/commit.png)
-
 1. Next, hover your mouse over the bicep folder and click the ellipsis icon, then select **New**, and **File**. Enter **storage.bicep** for the name and click **Create**.
 
-   ![New file menu](./images/m06/newfile.png)
+   ![New file menu](./images/6-7.png)
 
 1. Now copy the following code snippet into the file and commit your changes:
 
@@ -244,9 +241,11 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
     > **Note**: The command will generate a JSON output. Copy the output to text file. You will need it later in this lab.
 
+    ![New Service Connection](images/6-5.png)
+
 1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **New Service Connection**.
 
-    ![New Service Connection](images/new-service-connection.png)
+    ![New Service Connection](images/6-6.png)
 
 1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
 
@@ -257,7 +256,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
     - Service Principal Id (appId), Service principal key (password) and Tenant ID (tenant).
     - In **Service connection name** type **azure subs**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
 
-    ![Azure Service Connection](images/azure-service-connection.png)
+      ![Azure Service Connection](images/azure-service-connection.png)
 
 1. Click on **Verify and Save**.
 
@@ -275,27 +274,44 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
    - Branch: **main**
    - Path: **.ado/eshoponweb-cd-windows-cm.yml**
 1. Click **Continue** to save these settings.
-1. In the variables section, choose a name for your resource group, set the desired location and replace the value of the service connection with one of your existing service connections you created earlier.
+
+   ![Save and running the YAML pipeline after making changes](./images/6-3.png)
+
+1. In the variables section, replace name with **az400m06l15-RG** resource group, set the desired **location** and replace the value of the service connection with one of your existing service connections you created earlier.
+
 1. Click the **Save and run** button from the top right corder and when the commit dialog appeared, click **Save and run** again.
 
-   ![Save and running the YAML pipeline after making changes](./images/m06/saveandrun.png)
+   ![Save and running the YAML pipeline after making changes](./images/6-2.png)
+
+1. Wait for the pipeline to kick off.
+
+1. **Ignore** any Warnings showing up during the Build Stage. Wait until it completes the Build Stage successfully. (You can select the actual Build stage to see more details from the logs.)
+
+1. Once the Deploy Stage wants to start, you are prompted with **Permissions Needed**, as well as an orange bar saying:
+
+    ```text
+    This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
+    ```
+
+1. Click on **View**
+1. From the **Waiting for Review** pane, click **Permit**.
+1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
+1. This sets off the Deploy Stage. Wait for this to complete successfully.
 
 1. Wait for the deployment to finish and review the results.
-   ![Successful resource deployment to Azure using YAML pipelines](./images/m06/deploy.png)
 
-### Task 3: Remove the Azure lab resources
+   ![Successful resource deployment to Azure using YAML pipelines](./images/6-1.png)
 
-In this task, you will use Azure Cloud Shell to remove the Azure resources provisioned in this lab to eliminate unnecessary charges.
+  
+  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
 
-1. In the Azure portal, open the **Bash** shell session within the **Cloud Shell** pane.
-1. Delete all resource groups you created throughout the labs of this module by running the following command (replace the resource group name with what you chose):
-
-   ```bash
-   az group list --query "[?starts_with(name,'AZ400-EWebShop-NAME')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
-   ```
-
-   > **Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ## Review
 
 In this lab, you learned how to create an Azure Bicep template, modularize it by using a template module, modify the main deployment template to use the module and updated dependencies, and finally deploy the templates to Azure using YAML pipelines.
+
+### You have successfully completed the lab.
