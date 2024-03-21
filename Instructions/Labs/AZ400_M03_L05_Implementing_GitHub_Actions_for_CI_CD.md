@@ -107,7 +107,7 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
 
     >**Note:** If the error message states, **Please run 'az login'**, then follow these steps:-
 
-1. ```bash 
+   ```bash 
     az login
     ```
     
@@ -128,6 +128,12 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
     ```
 
     ![Import ADO org to Sonarcloud](images/3.png)
+
+1. You also need to run the following command to register the resource provider for the **Azure App Service** you will deploy later:
+
+   ```bash
+   az provider register --namespace Microsoft.Web
+   ```
 
 1. In a browser window, go back to your **eShopOnWeb** GitHub repository.
 
