@@ -218,6 +218,7 @@ In this task, you will add a YAML build definition to the existing project.
     - in the **App Service name** dropdown list, select the name of the web app you deployed earlier in the lab (**az400eshoponweb...).
     - in the **Package or folder** text box, **update** the Default Value to `$(Build.ArtifactStagingDirectory)/**/Web.zip`.
     - Expand **Application and Configuration Settings** and add the value `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development`
+
 1. Confirm the settings from the Assistant pane by clicking the **Add** button.
 
     > **Note**: This will automatically add the deployment task to the YAML pipeline definition.
@@ -425,7 +426,7 @@ Perform the following steps to download the input files for an existing load tes
 
    ![](images/9-5.png)
 
-1. specify **jmeter** as folder name, and **placeholder.txt** for the file name (Note: a Folder cannot be created as empty)
+1. Specify **jmeter** as folder name, and **placeholder.txt** for the file name (Note: a Folder cannot be created as empty)
 
    ![](images/9-4.png)
 
@@ -474,8 +475,8 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
             loadTestRunDescription: 'load testing from ADO'
     ```
 
-1. below the inserted YAML snippet, add a new empty line by pressing ENTER/RETURN.
-1. below this empty line, add a snippet for the Publish task, showing the results of the Azure Load testing task during the pipeline run:
+1. Below the inserted YAML snippet, add a new empty line by pressing ENTER/RETURN.
+1. Below this empty line, add a snippet for the Publish task, showing the results of the Azure Load testing task during the pipeline run:
 
     ```yml
         - publish: $(System.DefaultWorkingDirectory)/loadTest
