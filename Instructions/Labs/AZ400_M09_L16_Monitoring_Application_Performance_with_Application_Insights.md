@@ -300,7 +300,7 @@ In this task, you will deploy an Azure Load Testing Resource into your Azure sub
 1. From the Azure Load Testing Page, click **Create** to start the deployment process.
 1. From the 'Create a Load Testing Resource' page, provide the necessary details for the resource deployment:
    - **Subscription**: select your Azure Subscription
-   - **Resource Group**: select the Resource Group you used for deploying the Web App Service in the earlier exercise
+   - **Resource Group**: select **az400m09l16-RG**
    - **Name**: eShopOnWebLoadTesting<inject key="DeploymentID" enableCopy="false"/>
    - **Region**: Select a region that is close to your region
 
