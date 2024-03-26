@@ -264,17 +264,17 @@ In this task, you will create and publish a NuGet package.
    
      ![](images/AZ400_M08_L15_31.png)
     
-17.  Run the following command
+17.  Run the following command.
 
+     >**Note**: Navigate to file explorer and copy the path and replace the [path]  with path which you copied from file explorer.
+     
      ```
       cd [path]
      ```
-     
-     >**Note**: Navigate to file explorer and copy the path and replace the [path]  with path which you copied from file explorer.
 
       ![](images/file(1).png)
       
-18.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project.
+19.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project.
 
      ```
       ./nuget.exe pack ./EShopOnWeb.Shared.csproj
@@ -283,7 +283,7 @@ In this task, you will create and publish a NuGet package.
      > **Note**: Disregard any warnings displayed in the **Administrator: Windows PowerShell** window.
      > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
 
-19.  NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
+20.  NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
 
      ![](images/AZ400_M08_L15_(32).png)
        
@@ -312,15 +312,28 @@ In this task, you will create and publish a NuGet package.
     ```
     
     ![](images/AZ400_M08_L15_36.png)
-    
-21.  Wait for the confirmation of the successful package push operation.      
-22.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
-23.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWeb(2)** entry.
+
+    >**Note**: If you encounter following error **Response status code does not indicate success: 409 (Conflict - 'EShopOnWeb.Shared 1.0.0' cannot be published to the feed because it exists in at least one of the feed's upstream sources. Publishing this copy would prevent you from using 'EShopOnWeb.Shared 1.0.0' from 'NuGet Gallery'. For more information, see https://go.microsoft.com/fwlink/?linkid=864880 (DevOps Activity ID: 439FD43A-8013-498D-A85E-5D95C93668B8)).** Please follow the following steps.
+
+     - Navigate to the Azure DevOps Portal, browse to **Artifacts**. 
+     
+     - Select the **odluser** Feed > **Settings** icon.
+        ![](images/img1.png)
+     
+     - Switch to Upstream Sources tab and select **NuGet Gallery** and click on **Delete**.
+        ![](images/img2.png)
+     
+     - Click on the ellipse button and select Save to save the changes.
+        ![](images/img3.png)
+        
+22.  Wait for the confirmation of the successful package push operation.      
+23.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
+24.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWeb(2)** entry.
 
      > **Note**: The **EShopOnWebShared** feed should include the newly published NuGet package. 
     ![](images/AZ400_M08_L15_(37)png)
     
-24.  Click the NuGet package to display its details.
+25.  Click the NuGet package to display its details.
 
       ![](images/AZ400_M08_L15_(38).png)
 
