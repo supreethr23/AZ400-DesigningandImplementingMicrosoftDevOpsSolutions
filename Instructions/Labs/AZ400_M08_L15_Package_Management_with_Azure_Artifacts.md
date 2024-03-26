@@ -323,7 +323,7 @@ In this task, you will create and publish a NuGet package.
 
      - Navigate to the Azure DevOps Portal, browse to **Artifacts**. 
      
-     - Select the **odluser** Feed > **Settings** icon.
+     - Select the **EShopOnWebShared** Feed > **Settings** icon.
         ![](images/img5.png)
      
      - Switch to Upstream Sources tab and select **NuGet Gallery** and click on **Delete**.
@@ -331,7 +331,9 @@ In this task, you will create and publish a NuGet package.
      
      - Click on the ellipse button and select Save to save the changes.
         ![](images/img3.png)
-        
+
+     - Navigate back to windows powershell and re-run the command.
+               
 22.  Wait for the confirmation of the successful package push operation.      
 23.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
 24.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWebShared(2)** entry.
@@ -393,14 +395,24 @@ In this task, we will use a generic "Newtonsoft.Json" sample package, but you ca
 Let's consider this package an "approved" package for our DevOps team to reuse, by uploading it to the Azure Artifacts Package feed created earlier.
 
 1. From the Visual Studio, right-click the new **Newtonsoft.Json** package, and select **Open Folder in File Explorer** from the context menu. You will see the new **Newtonsoft.Json** package with the extension **.nupkg**.
-2. Copy the full path from the address bar of the File Explorer window.
-3. From the PowerShell window, execute the following command replacing the path with the one you copied:
+2. Copy the full path from the address bar of the File Explorer window and paste it in notepad. 
+   ![](images/img6.png)
+
+3. Right click on **newtonsoft.json.9.0.1.nupkg**  and select **Properties** then copy the  **newtonsoft.json.9.0.1.nupkg** file name.
+     ![](images/img7.png)
+   
+5. Navigate back to notepad where you recorded the path and add **\** and paste the **newtonsoft.json.9.0.1.nupkg** file name at the end.
+     ![](images/img8.png)
+
+6. From the PowerShell window, execute the following command replacing the path with the one you copied:
 
     ```powershell
-    dotnet nuget push --source "EShopOnWebShared" --api-key az C:\eShopOnWeb\eShopOnWeb.Shared\Newtonsoft.Json\newtonsoft.json.13.0.3.nupkg
+    dotnet nuget push --source "EShopOnWebShared" --api-key az [path]
     ```
 
-    > **Note**: This should now result in a successful upload.
+   ![](images/img9.png)
+
+   > **Note**: This should now result in a successful upload.
 
     ```text
     Pushing newtonsoft.json.13.0.3.nupkg to 'https://pkgs.dev.azure.com/<AZURE_DEVOPS_ORGANIZATION>/_packaging/5faffb6c-018b-4452-a4d6-72c6bffe79db/nuget/v2/'...
@@ -409,10 +421,15 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     Your package was pushed.
     ```
 1. From the Azure DevOps Portal, **refresh** the Artifacts Package Feed page. The list of packages shows both the **EShopOnWeb.Shared** custom-developed package, as well as the **Newtonsoft.Json** public sourced package.
+
+   ![](images/img10.png)
+   
 1. From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared** Project, and select **Manage NuGet Packages** from the context menu.
 1. From the NuGet Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
 1. Click **Browse**, and wait for the list of NuGet Packages to load.
 1. This list will also show both the **EShopOnWeb.Shared** custom-developed package, as well as the **Newtonsoft.Json** public sourced package.
+
+    ![](images/img11.png)
 
     > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
     > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
