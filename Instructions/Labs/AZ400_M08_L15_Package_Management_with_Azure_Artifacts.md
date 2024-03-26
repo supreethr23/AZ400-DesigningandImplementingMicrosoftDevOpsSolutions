@@ -241,7 +241,7 @@ In this task, you will create and publish a NuGet package.
 
 12. On the **Available NuGet Distribution Versions** page, select the latest version and download the executable to the local **Downloads** folder.
 
-    ![](images/AZ400_M08_L15_28.png)
+    ![](images/img4.png)
 
 13. Switch to the **Visual Studio** window. In the **Solution Explorer** pane, right-click the **EShopOnWeb.Shared (1)** project folder and, in the right-click menu, select **Open Folder in File Explorer (2)**.
 
