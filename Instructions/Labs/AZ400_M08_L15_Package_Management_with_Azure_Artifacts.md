@@ -267,7 +267,7 @@ In this task, you will create and publish a NuGet package.
 18.  Run the following to create a .nupkg file from the project.
 
      ```
-      dotnet pack .\eShopOnWeb.Shared.csproj
+      dotnet pack .\EShopOnWeb.Shared.csproj
      ```
 19.  In the PowerShell window, run the following command to open the bin\Release folder:
 
@@ -275,12 +275,12 @@ In this task, you will create and publish a NuGet package.
        cd .\bin\Release
      ```  
 
-19. Run the following to publish the package to the EShopOnWebShared feed:
+20. Run the following to publish the package to the EShopOnWebShared feed:
 
      ```
         iex "& { $(irm https://aka.ms/install-artifacts-credprovider.ps1) } -AddNetfx"
      ```  
-19.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project.
+21.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project.
 
      ```
       ./nuget.exe pack ./EShopOnWeb.Shared.csproj
@@ -289,7 +289,7 @@ In this task, you will create and publish a NuGet package.
      > **Note**: Disregard any warnings displayed in the **Administrator: Windows PowerShell** window.
      > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
 
-20.  NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
+22.  NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
 
      ![](images/AZ400_M08_L15_(32).png)
        
@@ -297,15 +297,15 @@ In this task, you will create and publish a NuGet package.
 
      ![](images/AZ400_M08_L15_33.png)
 
-18. Check the **Unblock (1)** and click on **Apply (2)** to save the changes and click on **OK (3)**.
+23. Check the **Unblock (1)** and click on **Apply (2)** to save the changes and click on **OK (3)**.
 
      ![](images/AZ400_M08_L15_34.png)
     
-19. Now again run the **PowerShell command** from the **step 18** and it will create package successfully.
+24. Now again run the **PowerShell command** from the **step 21** and it will create package successfully.
     
      ![](images/AZ400_M08_L15_35.png)
 
-20. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to sign in window login with the following credentials.
+25. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to sign in window login with the following credentials.
     
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
@@ -334,14 +334,14 @@ In this task, you will create and publish a NuGet package.
 
      - Navigate back to windows powershell and re-run the command.
                
-22.  Wait for the confirmation of the successful package push operation.      
-23.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
-24.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWebShared(2)** entry.
+26.  Wait for the confirmation of the successful package push operation.      
+27.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
+28.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWebShared(2)** entry.
 
      > **Note**: The **EShopOnWebShared** feed should include the newly published NuGet package. 
     ![](images/AZ400_M08_L15_(37)png)
     
-25.  Click the NuGet package to display its details.
+29.  Click the NuGet package to display its details.
 
       ![](images/AZ400_M08_L15_(38).png)
 
@@ -404,7 +404,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
 5. Navigate back to notepad where you recorded the path and add **\** and paste the **newtonsoft.json.9.0.1.nupkg** file name at the end.
      ![](images/img8.png)
 
-6. From the PowerShell window, execute the following command replacing the path with the one you copied:
+6. From the PowerShell window, execute the following command replacing the [path] with the one you copied:
 
     ```powershell
     dotnet nuget push --source "EShopOnWebShared" --api-key az [path]
