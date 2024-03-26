@@ -324,17 +324,17 @@ In this task, you will create and publish a NuGet package.
      - Navigate to the Azure DevOps Portal, browse to **Artifacts**. 
      
      - Select the **odluser** Feed > **Settings** icon.
-        ![](images/img(1).png)
+        ![](images/img5.png)
      
      - Switch to Upstream Sources tab and select **NuGet Gallery** and click on **Delete**.
-        ![](images/img2.png)
+        ![](images/img(2).png)
      
      - Click on the ellipse button and select Save to save the changes.
         ![](images/img3.png)
         
 22.  Wait for the confirmation of the successful package push operation.      
 23.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
-24.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **odluser(2)** entry.
+24.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWebShared(2)** entry.
 
      > **Note**: The **EShopOnWebShared** feed should include the newly published NuGet package. 
     ![](images/AZ400_M08_L15_(37)png)
