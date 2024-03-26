@@ -107,7 +107,7 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
 
     >**Note:** If the error message states, **Please run 'az login'**, then follow these steps:-
 
-1. ```bash 
+   ```bash 
     az login
     ```
     
@@ -128,6 +128,12 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
     ```
 
     ![Import ADO org to Sonarcloud](images/3.png)
+
+1. You also need to run the following command to register the resource provider for the **Azure App Service** you will deploy later:
+
+   ```bash
+   az provider register --namespace Microsoft.Web
+   ```
 
 1. In a browser window, go back to your **eShopOnWeb** GitHub repository.
 
@@ -151,7 +157,7 @@ In this task, you will modify the given GitHub workflow and execute it to deploy
     - Replace **NAME** in **RESOURCE-GROUP** variable. It should be the same resource group created in previous steps.
     - (Optional) You can choose your closest [azure region](https://azure.microsoft.com/en-gb/explore/global-infrastructure/geographies/#geographies) for **LOCATION**. For example, "eastus", "eastasia", "westus", etc.
     - Replace **YOUR-SUBS-ID** in **SUBSCRIPTION-ID**.
-    - Replace **NAME** in **WEBAPP-NAME** with **<inject key="DeploymentID" enableCopy="false"/>**. It will be used to create a globally unique website using Azure App Service.
+    - Replace **WEBAPP-NAME** with **eshoponweb-webapp-<inject key="DeploymentID" enableCopy="false"/>**. It will be used to create a globally unique website using Azure App Service.
 
 1. Read the workflow carefully, comments are provided to help understand.
 
@@ -176,6 +182,10 @@ In this task, you will review the GitHub workflow execution:
 1. Wait for the workflow to finish. From the **Summary** you can see the two workflow jobs, the status and Artifacts retained from the execution. You can click in each job to review logs.
 
     ![Succesfull workflow](images/gh-action-success.png)
+
+    >**Note**: If the job fails, you should navigate back to the **Code** section and locate to **eShopOnWeb/.github/workflows/eshoponweb-cicd.yml** file. Then, select the **Edit** (pencil icon) within the **publish** section. Replace **${{ env.WEBAPP-NAME }}** with **app-name: eshoponweb-webapp-<inject key="DeploymentID" enableCopy="false"/>** and save the changes by committing them.
+
+    ![Succesfull workflow](images/3-1.png)
 
 1. In a browser window, go back to the Azure Portal (https://portal.azure.com/). Open the resource group created before. You will see that the GitHub Action, using a bicep template, has created an Azure App Service Plan + App Service. You can see the published website opening the App Service and clicking **Browse**.
 

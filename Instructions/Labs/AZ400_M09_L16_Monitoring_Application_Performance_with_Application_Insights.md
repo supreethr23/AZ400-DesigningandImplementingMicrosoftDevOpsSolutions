@@ -26,15 +26,47 @@ After you complete this lab, you will be able to:
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
 
-#### Task 1: (skip if done) Create and configure the team project
+### Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
+1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
+
+2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+
+3. On the next page accept defaults and click on continue.
+
+    ![Azure DevOps](images/400-3.png)
+
+4. On the **Almost Done...** page fill the captcha and click on continue. 
+
+    ![Azure DevOps](images/m1-2.png)
+
+5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
+
+    ![Azure DevOps](images/agent1.png)
+
+6. In the **Organization Setting** window on the left menu click on **Billing**.
+
+    ![Azure DevOps](images/agent3.png)
+    
+7. Select **Setup Billing** then click on save.
+
+    ![Azure DevOps](images/agent4.png)    
+
+8. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+
+    ![Azure DevOps](images/agent2.png)    
+
+9. In the **Organization Setting** window on the left menu click on **Policies** and enable **Third-party application access via OAuth**.
+
+    ![Azure DevOps](images/policies-enable-3rd.png)    
+
+10. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
 
     ![Create Project](images/create-project.png)
 
-#### Task 2: (skip if done) Import eShopOnWeb Git Repository
+### Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -49,7 +81,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 8 website used on the lab scenarios.
 
-#### Task 2: Create Azure resources
+### Task 3: Create Azure resources
 
 In this task, you will create an Azure web app by using the cloud shell in Azure portal.
 
@@ -83,11 +115,17 @@ In this task, you will create an Azure web app by using the cloud shell in Azure
 
     > **Note**: Record the name of the web app. You will need it later in this lab.
 
-### Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
+    > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+    > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+## Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
 
 In this exercise, you will configure CI/CD Pipelines as code with YAML in Azure DevOps.
 
-#### Task 1: Add a YAML build and deploy definition
+### Task 1: Add a YAML build and deploy definition
 
 In this task, you will add a YAML build definition to the existing project.
 
@@ -98,7 +136,8 @@ In this task, you will add a YAML build definition to the existing project.
     ![Sonarcloud PR settings](images/5.png)
 
 1. Navigate back to the **Pipelines** pane in of the **Pipelines** hub.
-1. Click **New pipeline** (or Create Pipeline if this is the first one you create).
+
+1. Click **Create pipeline** .
 
     > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
 
@@ -109,7 +148,6 @@ In this task, you will add a YAML build definition to the existing project.
 1. **Copy** the full template pipeline from below, knowing you will need to make parameter modifications **before saving** the changes:
 
     ```yml
-    
     #Template Pipeline for CI/CD
     # trigger:
     # - main
@@ -166,7 +204,6 @@ In this task, you will add a YAML build definition to the existing project.
             downloadType: 'single'
             artifactName: 'Website'
             downloadPath: '$(Build.ArtifactStagingDirectory)'
-
     ```
 
 1. Set the cursor on a new line at the end of the YAML definition. **Make sure you position the cursor at the indentation of the previous task level**.
@@ -181,6 +218,7 @@ In this task, you will add a YAML build definition to the existing project.
     - in the **App Service name** dropdown list, select the name of the web app you deployed earlier in the lab (**az400eshoponweb...).
     - in the **Package or folder** text box, **update** the Default Value to `$(Build.ArtifactStagingDirectory)/**/Web.zip`.
     - Expand **Application and Configuration Settings** and add the value `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development`
+
 1. Confirm the settings from the Assistant pane by clicking the **Add** button.
 
     > **Note**: This will automatically add the deployment task to the YAML pipeline definition.
@@ -203,6 +241,8 @@ In this task, you will add a YAML build definition to the existing project.
 1. Before saving the updates to the yml-file, give it a more clear name. On top of the yaml-editor window, it shows **EShopOnweb/azure-pipelines-#.yml**. (where # is a number, typically 1 but could be different in your setup.) Select **that filename**, and rename it to **m09l16-pipeline.yml**
 
 1. Click **Validate + Save**, on the **Save** pane, click **Run** again to commit the change directly into the main branch.
+
+     ![](images/9-14.png)
 
     > **Note**: Since our original CI-YAML was not configured to automatically trigger a new build, we have to initiate this one manually.
 
@@ -229,17 +269,28 @@ In this task, you will add a YAML build definition to the existing project.
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
 1. This sets off the Deploy Stage. Wait for this to complete successfully.
 
-#### Task 2: Review the deployed site
+### Task 2: Review the deployed site
 
 1. Switch back to web browser window displaying the Azure portal and navigate to the blade displaying the properties of the Azure web app.
 1. On the Azure web app blade, click **Overview** and, on the overview blade, click **Browse** to open your site in a new web browser tab.
+
+   ![](images/9-13.png)
+
 1. Verify that the deployed site loads as expected in the new browser tab, showing the eShopOnWeb E-commerce website.
 
-### Exercise 2: Deploy and Setup Azure Load Testing
+     ![](images/9-12.png)
+
+    > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+    > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+## Exercise 2: Deploy and Setup Azure Load Testing
 
 In this exercise, you will deploy an Azure Load Testing Resource in Azure, and configure different Load Testing scenarios for your live-running Azure App Service.
 
-#### Task 1: Deploy Azure Load Testing
+### Task 1: Deploy Azure Load Testing
 
 In this task, you will deploy an Azure Load Testing Resource into your Azure subscription.
 
@@ -249,24 +300,33 @@ In this task, you will deploy an Azure Load Testing Resource into your Azure sub
 1. From the Azure Load Testing Page, click **Create** to start the deployment process.
 1. From the 'Create a Load Testing Resource' page, provide the necessary details for the resource deployment:
    - **Subscription**: select your Azure Subscription
-   - **Resource Group**: select the Resource Group you used for deploying the Web App Service in the earlier exercise
-   - **Name**: eShopOnWebLoadTesting
+   - **Resource Group**: select **az400m09l16-RG**
+   - **Name**: eShopOnWebLoadTesting<inject key="DeploymentID" enableCopy="false"/>
    - **Region**: Select a region that is close to your region
 
     > **Note**: Azure Load Testing service is not available in all Azure Regions.
 
 1. Click **Review and Create**, to have your settings validated.
+
+    ![](images/9-11.png)
+
 1. Click **Create** to confirm, and get the Azure Load Testing resource deployed.
+
+   ![](images/9-10.png)
+
 1. You are switched to the 'Deployment is in progress' page. Wait for a few minutes, until the deployment completes successfully.
 1. Click **Go to Resource** from the deployment progress page, to navigate to the **eShopOnWebLoadTesting** Azure Load Testing resource.
 
     > **Note**: If you closed the blade or closed the Azure Portal during the deployment of the Azure Load Testing Resource, you can find it again from the Azure Portal Search field, or from the Resources / Recent list of resources.
 
-#### Task 2: Create Azure Load Testing tests
+### Task 2: Create Azure Load Testing tests
 
 In this task, you will create different Azure Load Testing tests, using different load configuration settings.
 
 1. From within the **eShopOnWebLoadTesting** Azure Load Testing Resource blade, navigate to **Tests**. Click the **+Create** menu option, and select **Create a URL-based test**.
+
+   ![](images/9-9.png)
+
 1. Complete the following parameters and settings to create a load test:
    - **Test URL**: Enter the URL from the Azure App Service you deployed in the previous exercise (az400eshoponweb...azurewebsites.net), **including https://**
    - **Specify Load**: Virtual Users
@@ -275,6 +335,9 @@ In this task, you will create different Azure Load Testing tests, using differen
    - **Ramp-up time (minutes)**:  1
 
 1. Confirm the configuration of the test, by clicking **Review and Create**,  (Don't make any changes in the other tabs). Click **Create** once more.
+
+   ![](images/9-8.png)
+
 1. This kicks off the Load Testing tests, which will run The test will run for 5 minutes.
 1. With the test running, navigate back to the **eShopOnWebLoadTesting** Azure Load Testing Resource page, and navigate to **Tests**, select **Tests** and see a test **Get_eshoponweb...**
 1. From the top menu, click **Create**, **Create a URL-based test**, to create a 2nd Load test.
@@ -287,9 +350,12 @@ In this task, you will create different Azure Load Testing tests, using differen
    - **Ramp-up time (minutes)**:  1
 
 1. Confirm the configuration of the test, by clicking **Review + create**, and **Create** once more.
+
+    ![](images/9-7.png)
+
 1. The test will run for about 5 minutes.
 
-#### Task 3: Validate Azure Load Testing results
+### Task 3: Validate Azure Load Testing results
 
 In this task, you will validate the outcome of an Azure Load Testing TestRun.
 
@@ -305,13 +371,13 @@ With both quick tests complete, let's make a few changes to them, and validate t
 1. More below, several of these values are represented using dashboard graph line and chart views.
 1. Take a few minutes to **compare the results** of both simulated tests with each other, and **identify the impact** of more users on the App Service performance.
 
-### Exercise 2: Automate a Load Test with CI/CD in Azure Pipelines
+### Exercise 3: Automate a Load Test with CI/CD in Azure Pipelines
 
 Get started with automating load tests in Azure Load Testing by adding it to a CI/CD pipeline. After running a load test in the Azure portal, you export the configuration files, and configure a CI/CD pipeline in Azure Pipelines (similar capability exists for GitHub Actions).
 
 After you complete this exercise, you have a CI/CD workflow that is configured to run a load test with Azure Load Testing.
 
-#### Task 1: Identify ADO Service Connection Details
+### Task 1: Identify ADO Service Connection Details
 
 In this task, you will grant the required permissions to the Azure DevOps Service Connection's Service Principal.
 
@@ -323,7 +389,9 @@ In this task, you will grant the required permissions to the Azure DevOps Servic
 1. This redirects you to the Azure Portal, from where it opens the **Service Principal** details for the identity object.
 1. Copy the **Display Name** value (formatted like Name_of_ADO_Organization_eShopOnWeb_-b86d9ae1-7552-4b75-a1e0-27fb2ea7f9f4) aside, as you will need this in the next steps.
 
-#### Task 2: Grant Service Principal Permissions
+    ![](images/9-6.png)
+
+### Task 2: Grant Service Principal Permissions
 
 Azure Load Testing uses Azure RBAC to grant permissions for performing specific activities on your load testing resource. To run a load test from your CI/CD pipeline, you grant the **Load Test Contributor** role to the service principal.
 
@@ -338,7 +406,7 @@ Azure Load Testing uses Azure RBAC to grant permissions for performing specific 
 
 You can now use the service connection in your Azure Pipelines workflow definition to access your Azure load testing resource.
 
-#### Task 3: Export load test input files and Import to Azure Repos
+### Task 3: Export load test input files and Import to Azure Repos
 
 To run a load test with Azure Load Testing in a CI/CD workflow, you need to add the load test configuration settings and any input files in your source control repository. If you have an existing load test, you can download the configuration settings and all input files from the Azure portal.
 
@@ -355,28 +423,42 @@ Perform the following steps to download the input files for an existing load tes
 
 1. Commit all extracted input files to your source control repository. To do this, navigate to the **Azure DevOps Portal**(<https://dev.azure.com>), and navigate to the **eShopOnWeb** DevOps Project.
 1. Select **Repos**. In the source code folder structure, notice the **tests** subfolder. Notice the ellipsis (...), and select **New > Folder**.
-1. specify **jmeter** as folder name, and **placeholder.txt** for the file name (Note: a Folder cannot be created as empty)
+
+   ![](images/9-5.png)
+
+1. Specify **jmeter** as folder name, and **placeholder.txt** for the file name (Note: a Folder cannot be created as empty)
+
+   ![](images/9-4.png)
+
 1. Click **Commit** to confirm the creation of the placeholder file and jmeter folder.
 1. From the **Folder structure**, navigate to the new created **jmeter** subfolder. Click the **ellipsis(...)** and select **Upload File(s)**.
 1. Using the **Browse** option, navigate to the location of the extracted zip-file, and select both **config.yaml** and **quick_test.jmx**.
 1. Click **Commit** to confirm the file upload into source control.
 
-#### Task 4: Update the CI/CD workflow YAML definition file
+### Task 4: Update the CI/CD workflow YAML definition file
 
 In this task, you will import the Azure Load Testing - Azure DevOps Marketplace extension, as well as updating the existing CI/CD pipeline with the AzureLoadTest task.
 
 1. To create and run a load test, the Azure Pipelines workflow definition uses the **Azure Load Testing task extension** from the Azure DevOps Marketplace. Open the [Azure Load Testing task extension](https://marketplace.visualstudio.com/items?itemName=AzloadTest.AzloadTesting) in the Azure DevOps Marketplace, and select **Get it free**.
+
+   ![](images/9-3.png)
+
 1. Select your Azure DevOps organization, and then select **Install** to install the extension.
+
+   ![](images/9-2.png)
+
 1. From within the Azure DevOps Portal and Project, navigate to **Pipelines** and select the pipeline created at the start of this exercise. Click **Edit**.
-1. In the YAML script, navigate to **line 57** and press ENTER/RETURN, to add a new empty line. (this is right before the Deploy Stage of the YAML file).
+1. In the YAML script, navigate to **line 56** and press ENTER/RETURN, to add a new empty line. (this is right before the Deploy Stage of the YAML file).
 1. At line 57, select the Tasks Assistant to the right-hand side, and search for **Azure Load Testing**.
 1. Complete the graphical pane with the correct settings of your scenario:
    - Azure Subscription: Select the subscription which runs your Azure Resources
-   - Load Test File: '$(Build.SourcesDirectory)/tests/jmeter/config.yaml'
-   - Load Test Resource Group: The Resource Group which holds your Azure Load Testing Resources
-   - Load Test Resource Name: ESHopOnWebLoadTesting
-   - Load Test Run Name: ado_run
-   - Load Test Run Description: load testing from ADO
+   - Load Test File: **'$(Build.SourcesDirectory)/tests/jmeter/config.yaml'**
+   - Load Test Resource Group: **az400m09l16-RG**
+   - Load Test Resource Name: **ESHopOnWebLoadTesting**
+   - Load Test Run Name: **ado_run**
+   - Load Test Run Description: **load testing from ADO**
+
+    ![](images/9-1.png)
 
 1. Confirm the injection of the parameters as a snippet of YAML by clicking **Add**
 1. If the indentation of the YAML snippet is giving errors (red squiggly lines), fix them by adding 2 spaces or tab to position the snippet correctly.  
@@ -393,8 +475,8 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
             loadTestRunDescription: 'load testing from ADO'
     ```
 
-1. below the inserted YAML snippet, add a new empty line by pressing ENTER/RETURN.
-1. below this empty line, add a snippet for the Publish task, showing the results of the Azure Load testing task during the pipeline run:
+1. Below the inserted YAML snippet, add a new empty line by pressing ENTER/RETURN.
+1. Below this empty line, add a snippet for the Publish task, showing the results of the Azure Load testing task during the pipeline run:
 
     ```yml
         - publish: $(System.DefaultWorkingDirectory)/loadTest
@@ -444,7 +526,7 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
 
 1. You have now performed an automated Load Test as part of a pipeline run. In the last task, you will specify conditions for failure, meaning, we will not allow our deploy Stage to start, if the performance of the web app is below a certain threshold.
 
-#### Task 5 : Add failure/success criteria to Load Testing Pipeline
+### Task 5 : Add failure/success criteria to Load Testing Pipeline
 
 In this task, You'll use load test fail criteria to get alerted (have a failed pipeline run as result) when the application doesn't meet your quality requirements.
 
@@ -505,12 +587,6 @@ In this task, You'll use load test fail criteria to get alerted (have a failed p
     > Note: Imagine in a real-life scenario, you would validate the performance of your App Service, and if the performance is below a certain threshold - typically meaning there is more load on the Web App, you could trigger a new deployment to an additional Azure App Service. As we can't control the response time for Azure lab environments, we decided to revert the logic to guarantee the failure.
 
 1. The FAILED status of the pipeline task, actually reflects a SUCCESS of the Azure Load Testing requirement criteria validation.
-
-    > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-    > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 
