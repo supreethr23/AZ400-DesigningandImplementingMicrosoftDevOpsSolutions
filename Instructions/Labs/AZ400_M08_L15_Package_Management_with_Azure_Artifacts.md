@@ -156,10 +156,8 @@ In this task, you will create and connect to a feed.
     
     ![](images/AZ400_M08_L15_14(1).png)
     
-4.  Back on the **Artifacts** hub, select **odluser-<inject key="DeploymentID" enableCopy="false"/>** **(1)** Organization, click **Connect to feed (2)**.
+4.  Back on the **Artifacts** hub, select **EShopOnWebShared** **(1)** Organization, click **Connect to feed (2)**.
     
-    ![](images/AZ400_M08_L15_015.png)
-
 5.  On the **Connect to feed** pane, in the **NuGet** section, select **Visual Studio (1)** and, on the **Visual Studio** pane, copy the **Source (2)** url.
     
     ![](images/AZ400_M08_L15_(16).png)
@@ -207,10 +205,8 @@ In this task, you will create and publish a NuGet package.
 
     ![](images/AZ400_M08_L15_21.png)
     
-4.  Click Next. Accept **.NET 6.0 (Long Term Support) (1)** as Framework option and click **Create (2)**.
+4.  Click Next. Accept **.NET 8.0 (Long Term Support) (1)** as Framework option and click **Create (2)**.
     
-    ![](images/AZ400_M08_L15_22.png)
-
 5.  Within the Visual Studio interface, in the **Solution Explorer** pane, right-click **Class1.cs (1)**, in the right-click menu, select **Delete (2)**, and, when prompted for confirmation, click **OK**.
     
     ![](images/AZ400_M08_L15_23(1).png)
@@ -239,7 +235,6 @@ In this task, you will create and publish a NuGet package.
 
     ![](images/AZ400_M08_L15_28.png)
 
-
 13. Switch to the **Visual Studio** window. In the **Solution Explorer** pane, right-click the **EShopOnWeb.Shared (1)** project folder and, in the right-click menu, select **Open Folder in File Explorer (2)**.
 
     ![](images/AZ400_M08_L15_29.png)
@@ -265,15 +260,26 @@ In this task, you will create and publish a NuGet package.
      ![](images/AZ400_M08_L15_31.png)
     
 17.  Run the following command.
-
-     >**Note**: Navigate to file explorer and copy the path and replace the [path]  with path which you copied from file explorer.
-     
+   
      ```
-      cd [path]
+      cd C:\Users\azureuser\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared
      ```
+18.  Run the following to create a .nupkg file from the project.
 
-      ![](images/file(1).png)
-      
+     ```
+      dotnet pack .\eShopOnWeb.Shared.csproj
+     ```
+19.  In the PowerShell window, run the following command to open the bin\Release folder:
+
+     ```
+       cd .\bin\Release
+     ```  
+
+19. Run the following to publish the package to the EShopOnWebShared feed:
+
+     ```
+        iex "& { $(irm https://aka.ms/install-artifacts-credprovider.ps1) } -AddNetfx"
+     ```  
 19.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project.
 
      ```
@@ -394,36 +400,6 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     dotnet nuget push --source "EShopOnWebShared" --api-key az C:\eShopOnWeb\eShopOnWeb.Shared\Newtonsoft.Json\newtonsoft.json.13.0.3.nupkg
     ```
 
-    > **Note**:  This results in an error message:
-
-    ```text
-    Response status code does not indicate success: 409 (Conflict - 'Newtonsoft.Json 1.3.0.17' cannot be published to the feed because it exists in at least one of the feed's upstream sources. Publishing this copy would prevent you from using 'Newtonsoft.Json 1.3.0.17' from 'NuGet Gallery'. For more information, see https://go.microsoft.com/fwlink/?linkid=864880 (DevOps Activity ID: AE08BE89-C2FA-4FF7-89B7-90805C88972C)).
-    ```
-
-   >**Note** :When you created the Azure DevOps Artifacts Package Feed, by design, it allows for **upstream sources**, such as nuget.org in the dotnet example. However, nothing blocks your DevOps team to create an **"internal-only"** Package Feed.
-
-1. Navigate to the Azure DevOps Portal, browse to **Artifacts**, and select the **eShopOnWebShared** Feed.
-
-1. Click **Search Upstream Sources**.
-
-1. In the **Go to an Upstream Package** window, select **NuGet** as Package Type, and enter **Newtonsoft.Json** in the search field.
-
-1. Confirm by pressing the **Search** button.
-
-1. This results in a list of all Newtonsoft.Json packages with the different versions available.
-
-1. Click the **left arrow key** to return to the **EShopOnWebShared** Feed.
-
-1. Click the cogwheel to open **Feed Settings**. Within the Feed Settings page, select **Upstream Sources**.
-
-1. Notice the different Upstream Package Managers for different development languages. Select **NuGet Gallery** from the list. Press the **Delete** button, followed by pressing the **Save** button.
-
-1. With these saved changes, it will be possible to upload the **Newtonsoft.Json** package using the NuGet.exe from the PowerShell Window, by relaunching the following command:
-
-    ```text
-     dotnet nuget push --source "EShopOnWebShared" --api-key az C:\EShopOnWeb\EShopOnWeb.Shared\Newtonsoft.Json\newtonsoft.json.13.0.3.nupkg
-    ```
-
     > **Note**: This should now result in a successful upload.
 
     ```text
@@ -432,7 +408,6 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
     Accepted https://pkgs.dev.azure.com/<AZURE_DEVOPS_ORGANIZATION>/_packaging/5faffb6c-018b-4452-a4d6-72c6bffe79db/nuget/v2/ 3160ms
     Your package was pushed.
     ```
-
 1. From the Azure DevOps Portal, **refresh** the Artifacts Package Feed page. The list of packages shows both the **EShopOnWeb.Shared** custom-developed package, as well as the **Newtonsoft.Json** public sourced package.
 1. From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared** Project, and select **Manage NuGet Packages** from the context menu.
 1. From the NuGet Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
