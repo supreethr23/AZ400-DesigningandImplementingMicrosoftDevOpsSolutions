@@ -318,7 +318,7 @@ In this task, you will create and publish a NuGet package.
      - Navigate to the Azure DevOps Portal, browse to **Artifacts**. 
      
      - Select the **odluser** Feed > **Settings** icon.
-        ![](images/img1.png)
+        ![](images/img(1).png)
      
      - Switch to Upstream Sources tab and select **NuGet Gallery** and click on **Delete**.
         ![](images/img2.png)
