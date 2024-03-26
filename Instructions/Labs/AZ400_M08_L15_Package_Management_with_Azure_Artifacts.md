@@ -255,13 +255,13 @@ In this task, you will create and publish a NuGet package.
 
     i. From the start menu search and select **Edit the system environment variable** and on Systems properties select **Environment variable**.
         
-       ![](images/az-400-image2.png)
+    ![](images/az-400-image2.png)
          
     ii. On **Environment variable** page under User variables for azureuser click **New** and on New User Variable, enter **NUGET_ENABLE_LEGACY_CSPROJ_PACK (1)** in **Variable name** field and enter **true (2)** in  **Variable value** field and click on **OK** for all wizards.
          
-       ![](images/az-400-image1.png)
+     ![](images/az-400-image1.png)
          
-       ![](images/AZ400_M08_L15_EV.png)
+     ![](images/AZ400_M08_L15_EV.png)
 
 16.  Navigate to File Explorer in the same File Explorer window, select the **File (1)** menu header, in the dropdown menu, select **Open Windows PowerShell (2)**, and, in the cascading menu, click **Open Windows PowerShell as administrator (3)**. 
    
@@ -288,12 +288,12 @@ In this task, you will create and publish a NuGet package.
       cd C:\Users\azureuser\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared
      ```
 
-20. Run the following to publish the package to the EShopOnWebShared feed:
+21. Run the following to publish the package to the EShopOnWebShared feed:
 
      ```
         iex "& { $(irm https://aka.ms/install-artifacts-credprovider.ps1) } -AddNetfx"
      ```  
-21.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project.
+22.  In the **Administrator: Windows PowerShell** window, run the following to create a **.nupkg** file from the project.
 
      ```
       ./nuget.exe pack ./EShopOnWeb.Shared.csproj
@@ -302,7 +302,7 @@ In this task, you will create and publish a NuGet package.
      > **Note**: Disregard any warnings displayed in the **Administrator: Windows PowerShell** window.
      > **Note**: This is a shortcut to package the NuGet bits for deployment. NuGet is highly customizable. To learn more, refer to the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
 
-22.  NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
+23.  NuGet builds a minimal package based on the information it is able to identify from the project. For example, note that the name is **ESopOnWeb.Shared.1.0.0.nupkg**. That version number was retrieved from the assembly.
 
      ![](images/AZ400_M08_L15_(32).png)
        
@@ -314,7 +314,7 @@ In this task, you will create and publish a NuGet package.
 
      ![](images/AZ400_M08_L15_34.png)
     
-24. Now again run the **PowerShell command** from the **step 21** and it will create package successfully.
+24. Now again run the **PowerShell command** from the **step 22** and it will create package successfully.
     
      ![](images/AZ400_M08_L15_35.png)
 
@@ -348,7 +348,7 @@ In this task, you will create and publish a NuGet package.
         ![](images/img3.png)
        
      - Click on **Save** when **Save your changes?** prompted.
-     - Navigate back to windows powershell and re-run the command.
+     - Navigate back to windows powershell and re-run step 26 command.
                
 26.  Wait for the confirmation of the successful package push operation.      
 27.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
@@ -414,13 +414,14 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
 2. Copy the full path from the address bar of the File Explorer window and paste it in notepad. 
    ![](images/img6.png)
 
-3. Right click on **newtonsoft.json.9.0.1.nupkg**  and select **Properties** then copy the  **newtonsoft.json.9.0.1.nupkg** file name.
-     ![](images/img7.png)
+3. Right click on **newtonsoft.json.X.X.X.nupkg**  and select **Properties** then copy the  **newtonsoft.json.X.X.X.nupkg** file name within the Properties window.
+     ![](images/img(7).png)
    
-5. Navigate back to notepad where you recorded the path and add **\** and paste the **newtonsoft.json.9.0.1.nupkg** file name at the end.
-     ![](images/img8.png)
+     ![](images/img(8).png)
+   
+5. Navigate back to notepad where you recorded the path and add one backslash \ after version X.X.X and paste the **newtonsoft.json.X.X.X.nupkg** file name at the end.
 
-6. From the PowerShell window, execute the following command replacing the [path] with the one you copied:
+7. From the PowerShell window, execute the following command replacing the **[path]** with the one which you recored and modified in notepad:
 
     ```powershell
     dotnet nuget push --source "EShopOnWebShared" --api-key az [path]
