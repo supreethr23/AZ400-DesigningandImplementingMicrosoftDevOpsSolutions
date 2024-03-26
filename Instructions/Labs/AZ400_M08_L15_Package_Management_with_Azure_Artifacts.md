@@ -102,6 +102,12 @@ In this task, you will configure Visual Studio to prepare for the lab.
 10.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
 
       ![](images/AZ400_M08_L15_11(1).png)
+
+      - if prompted to sig-in  with the following credentials.
+    
+           > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+    
+           > **Password**: <inject key="AzureAdUserPassword"></inject>
     
      >**Note**: If **Visual Studio** takes more than 5 minutes to get launched follow the below steps:
    
@@ -177,6 +183,8 @@ In this task, you will create and connect to a feed.
 11.  Close and reopen the other Visual Studio instance you used for cloning the EShopOnWeb repository, to account for the artifact source update and open the **EShopOnWebShared** solution. You will need it in the third task of this exercise.
 
       ![](images/az-400-image8.png)
+
+     >**Note**: If your not able to see **EShopOnWebShared** solution, click on **Open a local folder** and select **EShopOnWebShared** > **Select folder**. 
 
 ## Task 2: Create and publish a NuGet package
 
