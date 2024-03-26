@@ -328,7 +328,7 @@ In this task, you will create and publish a NuGet package.
         
 22.  Wait for the confirmation of the successful package push operation.      
 23.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
-24.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWeb(2)** entry.
+24.  On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **odluser(2)** entry.
 
      > **Note**: The **EShopOnWebShared** feed should include the newly published NuGet package. 
     ![](images/AZ400_M08_L15_(37)png)
