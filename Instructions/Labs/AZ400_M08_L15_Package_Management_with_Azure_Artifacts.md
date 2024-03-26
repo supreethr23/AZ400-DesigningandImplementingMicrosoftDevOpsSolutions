@@ -282,6 +282,11 @@ In this task, you will create and publish a NuGet package.
      ```
        cd .\bin\Release
      ```  
+20.  Run the following command.
+   
+     ```
+      cd C:\Users\azureuser\source\repos\EShopOnWeb.Shared\EShopOnWeb.Shared
+     ```
 
 20. Run the following to publish the package to the EShopOnWebShared feed:
 
@@ -313,11 +318,13 @@ In this task, you will create and publish a NuGet package.
     
      ![](images/AZ400_M08_L15_35.png)
 
-25. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to sign in window login with the following credentials.
+25. After the successful creation of the package, run the following to publish the package to the **EShopOnWebShared** feed. If it Prompted to sign select **Work or school account** and click on continue in window login with the following credentials.
     
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
+
+26. If prompted click on **OK** and **Done**.     
 
     > **Note**: You need to provide an **API Key**, which can be any non-empty string. We're using **AzDO** here. When prompted, sign in to your Azure DevOps organization.
 
@@ -339,7 +346,8 @@ In this task, you will create and publish a NuGet package.
      
      - Click on the ellipse button and select Save to save the changes.
         ![](images/img3.png)
-
+       
+     - Click on **Save** when **Save your changes?** prompted.
      - Navigate back to windows powershell and re-run the command.
                
 26.  Wait for the confirmation of the successful package push operation.      
