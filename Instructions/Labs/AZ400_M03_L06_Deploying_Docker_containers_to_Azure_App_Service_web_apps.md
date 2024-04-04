@@ -137,7 +137,7 @@ In this exercise, you will import and run the CI pipeline.
 
 1. Go to **Pipelines>Pipelines**
 
-1. Click on **New pipeline** button
+1. Click on **New pipeline** button (or **Create Pipeline** if you don't have other pipelines previously created)
 
 1. Select **Azure Repos Git (Yaml)**
 
