@@ -88,6 +88,7 @@ Each new project is configured with a default team, which name matches the proje
     ![In the "interations" tab, click on "Select Iteration"](images/m1/az-400_m01_13.png)
 
 1. Select **EShopOnWeb\Sprint 1** and click **Save and close**. Note that this first sprint will show up in the list of iterations, but the Dates are not set yet. 
+
 1. Select **Sprint 1** and click the **ellipsis (...)**. From the context menu, select **Edit**.
 
     ![In the "interations" tab, click on "Edit"](images/m1/az-400_m01_14.png)
@@ -99,6 +100,7 @@ Each new project is configured with a default team, which name matches the proje
     ![Do the same for Sprint 2 and 3, make sure they are created for "EShop-Web" team](images/m1/az-400_m01_iterations.png)
 
 1. Back on the **Boards** pane, at the top of the pane, select the **Areas** tab. You will find there an automatically generated area with the name matching the name of the team.
+
 1. Click the ellipsis symbol (...) next to the **default area** entry and, in the dropdown list, select **Include sub areas**.
 
     ![In the "Areas" tab, clik on the ellipsis icon (...) for "EShop-WEB" area and select "Include sub areas"](images/m1/az-400_m01_includesubareas.png)
@@ -128,9 +130,13 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
     ![In the "Boards">"Work Items" window, click on "New work item" >Epic](images/m1/az-400_m01_t2_s2.png)
 
 1. In the **Enter title** textbox, type **Product training**.
-1. In the upper left corner, select the **Unassigned** entry and, in the dropdown list, select your user account in order to assign the new work item to yourself.
+
+1. In the upper left corner, select the **Unassigned** entry and, in the dropdown list, select your user account in order to assign the new work item to yourself. If your name doesn't appear to start with, begin typing your name and click **Search**.
+
 1. Next to the **Area** entry, select the **eShopOnWeb** entry and, in the dropdown list, select **EShop-WEB**. This will set the **Area** to **eShopOnWeb\EShop-WEB**.
+
 1. Next to the **Iteration** entry, select the **eShopOnWeb** entry and, in the dropdown list, select **Sprint 2**. This will set the **Iteration** to **eShopOnWeb\Sprint 2**.
+
 1. Click **Save** to finalize your changes. **Do not close it**.
 
     ![Enter previously shown information and click "Save" in Epic window](images/m1/az-400_m01_t2_s7.png)
@@ -140,6 +146,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
     > **Note**: The work item form includes all of the relevant work item settings. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. We will explore one of the ways to add a feature to this epic.
 
 1. In the **Related work** section on the lower right-side, select the **Add link** entry and, in the dropdown list, select **New item**.
+
 1. On the **Add link** panel, in the **Link Type** dropdown list, select **Child**. Next, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **Add link**.
 
     ![Include Title "Training Dashboard" and click "OK"](images/addlink.png)
@@ -151,6 +158,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
     ![Save and close training dashboard](images/m1/az-400_m01_t2_s10.png)
 
 1. In the vertical navigation pane of the Azure DevOps portal, in the list of the **Boards** items, select **Boards**.
+
 1. On the **Boards** panel, select the **EShop-WEB boards** entry. This will open the board for that particular team.
 
     ![ In "Boards>Boards" window, select "EShop-WEB boards"](images/m1/az-400_m01_t2_s12.png)
@@ -162,6 +170,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
     > **Note**: This will make it easy to add tasks and other work items to the features.
 
 1. Hover with the mouse pointer over the rectangle representing the **Training dashboard** feature. This will reveal the ellipsis symbol (...) in its upper right corner.
+
 1. Click the ellipsis (...) icon and, in the dropdown list, select **Add Product Backlog Item**.
 
     ![Click on the ellipis for "Training dashboard" feature and click "Add Product Backlog Item"](images/m1/az-400_m01_t2_s15.png)
@@ -178,7 +187,6 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
      ![View Backlog Items" ](images/m1/az-400_m01_t2_s18.png)
 
-
     > **Note**: Backlog items have a state that defines where they are relative to being completed. While you could open and edit the work item using the form, it's easier to just drag cards on the board.
 
 1. On the **Board** tab of the **EShop-WEB** panel, drag the first work item named **As a customer, I want to view new tutorials** from the **New** to **Approved** stage.
@@ -188,8 +196,11 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
     > **Note**: You can also expand work item cards to get to conveniently editable details.
 
 1. Hover with the mouse pointer over the rectangle representing the work item you moved to the **Approved** stage. This will reveal the down facing caret symbol.
+
 1. Click the down facing caret symbol to expand the work item card, select the **Unassigned** entry, and in the list of user accounts, select your account to assign the moved PBI to yourself.
+
 1. On the **Board** tab of the **EShop-WEB** panel, drag the second work item named **As a customer, I want to see tutorials I recently viewed** from the **New** to the **Committed** stage.
+
 1. On the **Board** tab of the **EShop-WEB** panel, drag the third work item named **As a customer,  I want to request new tutorials** from the **New** to the **Done** stage.
 
     ![WITs moved to the specified columns from previous steps](images/m1/az-400_m01_t2_s23.png)
@@ -209,8 +220,11 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
     ![Click on "+" to create Task](images/m1/az-400_m01_t2_s25.png)
 
 1. At the top of the **NEW TASK** panel, in the **Enter title** textbox, type **Add page for most recent tutorials**.
+
 1. On the **NEW TASK** panel, in the **Remaining Work** textbox, type **5**.
+
 1. On the **NEW TASK** panel, in the **Activity** dropdown list, select **Development**.
+
 1. On the **NEW TASK** panel, click **Save & Close**.
 
     ![Fill in "New task" fields and click "Save and Close"](images/m1/az-400_m01_t2_s29.png)
@@ -234,34 +248,37 @@ Planning meetings typically consist of two parts. In the first part, the team an
 The sprint backlog should contain all the information the team needs to successfully plan and complete work within the time allotted without having to rush at the end. Before planning the sprint, you'd want to have created, prioritized, and estimated the backlog and defined the sprints.
 
 1. In the vertical navigational pane of the Azure DevOps portal, select the **Boards** icon and, in the list of the **Boards** items, select **Sprints**.
+
 1. On the **Taskboard** tab of the **Sprints** view, in the toolbar, on the right hand side, select the **View options** symbol (directly to the left of the funnel icon) and, in the **View options** dropdown list, select the **Work details** entry.
 
     ![In the "Boards">"Sprints" window, "EShop-WEB" team, select "View options" icon and click on "Work details"](images/m1/az-400_m01_t3_s2.png)
 
     > **Note**: The current sprint has a pretty limited scope. There are two tasks in the **To do** stage. At this point, neither task has been assigned. Both show a numeric value to the right of **Unassigned** entry representing the remaining work estimate.
 
-1.  In the rectangle representing the **Add page for most recent tutorials**, click the **Unassigned** entry and, in the list of user accounts, select your account to assign the task to yourself.
+1. Within the **ToDo** Column, notice the Task Item **Add page for most recent tutorials**, click the **Unassigned** entry and, in the list of user accounts, select your account to assign the task to yourself.
 
 1. Select the **Capacity** tab of the **Sprints** view.
 
     > **Note**: This view enables you to define what activities a user can take on and at what level of capacity.
 
-1. On the **Capacity** tab of the **Sprints** view, directly under the **Activity** label, in the **Unassigned** dropdown list, select **Development** and, in the **Capacity per day** textbox, type **1**.
+1. On the **Capacity** tab of the **Sprints** view, set the **Activity** field to **Development** and, in the **Capacity per day** textbox, type **1**. Then click **Save**
 
     > **Note**: This represents 1 hour of development work per day. Note that you can add additional activities per user in the case they do more than just development.
 
-    > **Note**: Let's assume you're going to take some vacation.
+    > **Note**: Let's assume you're also going to take some vacation. Which should be added to the capacity view too.
 
 1. On the **Capacity** tab of the **Sprints** view, click on ellipsis icon next to **Revert** and select **Add all team members**
 
    ![](images/team-member-(1).png)
   
 3. Directly next to the entry representing your user account, in the **Days off** column, click the **0 days** entry. This will display a panel where you can set your days off.
+
 4. In the displayed panel, use the calendar view to set your vacation to span five work days during the current sprint (within the next three weeks) and, once completed, click **OK**.
 
     ![Enter "Start", "End" and "Days Off" as mentioned](images/m1/az-400_m01_t3_s07.png)
 
 1. Back on the **Capacity** tab of the **Sprints** view, click **Save**.
+
 1. Select the **Taskboard** tab of the **Sprints** view.
 
     ![Review the "Work details" section information, all timing bars should be green. ](images/m1/az-400_m01_t3_s09.png)
@@ -285,6 +302,7 @@ The sprint backlog should contain all the information the team needs to successf
     > **Note**: There is also a lot of customization available.
 
 1. Click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
+
 1. On the **Settings** panel, select the **Styles** tab, click **+ Styling rule**, under the **Rule name** label, in the **Name** textbox, type **Development**, and, in the **Card color** dropdown list, select the green rectangle.
 
     > **Note**: This will color all cards green if they meet the rule criteria set directly below, in the **Rule criteria** section.
@@ -318,6 +336,7 @@ In this task, you will step through the process of customizing Kanban boards.
 To maximize a team's ability to consistently deliver high quality software, Kanban emphasizes two main practices. The first, visualizing the flow of work, requires that you map your team's workflow stages and configure a Kanban board to match. The second, constraining the amount of work in progress, requires that you set work-in-progress (WIP) limits. You're then ready to track progress on your Kanban board and monitor key metrics to reduce lead or cycle time. Your Kanban board turns your backlog into an interactive signboard, providing a visual flow of work. As work progresses from idea to completion, you update the items on the board. Each column represents a work stage, and each card represents a user story (blue cards) or a bug (red cards) at that stage of work. However, every team develops its own process over time, so the ability to customize the Kanban board to match the way your team works is critical for the successful delivery.
 
 1. In the vertical navigational pane of the Azure DevOps portal, in the list of the **Boards** items, select **Boards**.
+
 1. On the **Boards** panel, click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
 
     > **Note**: The team is emphasizing work done with data, so there is special attention paid to any task associated with accessing or storing data.
@@ -328,7 +347,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     > **Note**: Whenever a backlog item or bug is tagged with **data**, that tag will be highlighted.
 
-1. On the **Settings** panel, select the **Annotations** tab.
+1. From the  **Configure board Settings** (cogwheel) On the **Settings** panel, select the **Annotations** tab.
 
     > **Note**: You can specify which **Annotations** you would like included on cards to make them easier to read and navigate. When an annotation is enabled, the child work items of that type are easily accessible by clicking the visualization on each card.
 
@@ -337,10 +356,15 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
     > **Note**: The **Tests** tab enables you to configure how tests appear and behave on the cards.
 
 1. On the **Settings** panel, click **Save and close** to save the styling rule.
+
 1. On the **Board** tab of the **EShop-WEB** panel, right-click the Work Item representing the **As a customer, I want to view new tutorials** backlog item and select **Open**.
+
 1. On the **As a customer, I want to view new tutorials** panel, at the top of the panel, to the right of the **0 comments** entry, click **Add tag**.
+
 1. In the resulting textbox, type **data** and press the **Enter** key.
+
 1. Repeat the previous step to add the **ux** tag.
+
 1. On the **As a customer, I want to view new tutorials** panel, click **Save & Close**.
 
     ![On the ""As a customer, I want to view new tutorials" panel, click "Save & Close"](images/m1/az-400_m01_t4_s11.png)
@@ -348,6 +372,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
     > **Note**: The two tags are now visible on the card, with the **data** tag highlighted in yellow as configured.
 
 1. On the **Boards** panel, click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
+
 1. On the **Settings** panel, select the **Columns** tab.
 
     > **Note**: This section allows you to add new stages to the workflow.
@@ -358,7 +383,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
 1. On the **Settings** panel, on the **Columns** tab.
    
-1. click column option menu near **QA Approved** tab and select **> move right** untill the newly created tab is between **Committed** and **Done**.
+1. Notice the ellipsis next to thes **QA Approved** tab and select **> move right** untill the newly created tab is between **Committed** and **Done**.
     
     ![](images/approved-1.png)
    
@@ -369,7 +394,9 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
     > **Note**: Verify that you now see the new stage in the workflow.
 
 1. **Refresh** the **Boards portal**, so the **QA Approved**4 column is visible in the Kanban board view now.
+
 1. Drag the **As a customer, I want to see tutorials I recently viewed** work item from the **Committed** stage into the **QA Approved** stage.
+
 1. Drag the **As a customer, I want to view new tutorials** work item from the **Approved** stage into the **QA Approved** stage.
 
     ![The stage now exceeds its **WIP** limit and is colored red as a warning next to "QA Approved" column](images/m1/az-400_m01_t4_s19.png)
@@ -377,7 +404,9 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
     > **Note**: The stage now exceeds its **WIP** limit and is colored red as a warning.
 
 1. Move the **As a customer, I want to see tutorials I recently viewed** backlog item back to **Committed**.
+
 1. On the **Boards** panel, click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
+
 1. On the **Settings** panel, return to the **Columns** tab and select the **QA Approved** tab.
 
     > **Note**: A lag often exists between when work gets moved into a column and when work starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns. When split, each column contains two sub-columns: **Doing** and **Done**. Split columns let your team implement a pull model. Without split columns, teams push work forward, to signal that they've completed their stage of work. However, pushing it to the next stage doesn't necessarily mean that a team member immediately starts work on that item.
@@ -387,6 +416,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
     > **Note**: As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what **done** means. By specifying the **Definition of done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage.
 
 1. On the **QA Approved** tab, at the bottom of the panel, in the **Definition of done** textbox, type **Passes \*\*all\*\* tests**.
+
 1. On the **Settings** panel, click **Save and close**.
 
     ![On the "Settings" panel, review information and click "Save and close"](images/m1/az-400_m01_t4_s25.png)
@@ -398,7 +428,9 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
     > **Note**: Your Kanban board supports your ability to visualize the flow of work as it moves from new to done. When you add **swimlanes**, you can also visualize the status of work that supports different service-level classes. You can create a swimlane to represent any other dimension that supports your tracking needs.
 
 1. On the **Settings** panel, select the **Swimlanes** tab.
+
 1. On the **Swimlanes** tab, click **+ Swimlane**, directly under the **Swimlane name** label, in the **Name** textbox, type **Expedite**.
+
 1. On the **Settings** panel, click **Save and close**.
 
     ![On the "Settings" panel, review information and click "Save and close"](images/m1/az-400_m01_t4_s29.png)
@@ -422,13 +454,17 @@ In Azure DevOps, you customize your work tracking experience through a process. 
 All processes are shared within the same organization. That is, one or more team projects can reference a single process. Instead of customizing a single team project, you customize a process. Changes made to the process automatically update all team projects that reference that process. Once you've created an inherited process, you can customize it, create team projects based on it, and migrate existing team projects to reference it. The Git team project can't be customized until it's migrated to an inherited process.
 
 1. On the Azure DevOps page, click the **Azure DevOps** logo in the top left corner to navigate to the account root page.
+
 1. In the left bottom corner of the page, click **Organization settings**.
+
 1. In the **Organization Settings** vertical menu, in the **Boards** section, select **Process**.
+
 1. On the **All processes** pane, to the right of the **Scrum** entry, select the ellipsis symbol (...) and, in the dropdown menu, select **Create inherited process**.
 
     ![In the "Organization settings" window, "Process" option, look for "Scrum" process and click on ellipsis (...) and "Create inherited process"](images/m1/az-400_m01_t5_s04.png)
 
 1. In the **Create inherited process from Scrum** panel, in the **Process name (required)** textbox, type **Customized Scrum** and click **Create process**.
+
 1. Back on the **All processes** pane, click the **Customized Scrum** entry.
 
     > **Note**: You may need to refresh the browser for the new process to become visible.
@@ -438,11 +474,13 @@ All processes are shared within the same organization. That is, one or more team
     ![On the "All processes > Customized Scrum" pane, select "Product Backlog Item"](images/m1/az-400_m01_t5_s07.png)
 
 1. On the **All processes > Customized Scrum > Product Backlog Item** pane, click **New field**.
+
 1. On the **Add a field to Product Backlog Item** panel, on the **Definition** tab, in the **Create a field** section, in the **Name** textbox, type **EShop Ticket ID**.
 
     ![On the "Add a field to Product Backlog Item" panel, on the "Definition" tab, in the "Create a field" section, in the "Name" textbox, type "EShop Ticket ID"](images/m1/az-400_m01_t5_s09.png)
 
 1. On the **Add a field to Product Backlog Item** panel, click **Layout**.
+
 1. On the **Add a field to Product Backlog Item** panel, on the **Layout** tab, in the **Label** textbox, type **Ticket ID**, select the **Create a new group** option, in the **Group** textbox, type **EShopOnWeb**, and click **Add field**.
 
     ![On the "Add a field to Product Backlog Item" panel, on the "Layout" tab make sure the information has been included and click "Add Field"](images/m1/az-400_m01_t5_s11.png)
@@ -450,20 +488,27 @@ All processes are shared within the same organization. That is, one or more team
     > **Note**: Now that the customized process has been configured, let's switch to the eShopOnWeb project to use it.
 
 1. Return to the **All processes** root using the breadcrumb path at the top of the **All processes > Customized Scrum > Product Backlog Item** pane.
+
 1. On the **All processes** pane, select the **Scrum** entry.
 
     > **Note**: Our current project uses **Scrum**.
 
 1. On the **All processes > Scrum** pane, select the **Projects** tab.
+
 1. In the list of projects, in the row containing the **eShopOnWeb** entry, select the ellipsis symbol (...) and then select **Change process**.
+
 1. On the **Change the project process** pane, in the **Select a target process** dropdown list, select the **Customized Scrum** process, click **Save** and then click **Close**.
 
     ![On the "Change the project process" pane, in the "Select a target process" dropdown list, select the "Customized Scrum" process, click "Save" and then click "Close"](images/m1/az-400_m01_t5_s16.png)
 
 1. Click the **Azure DevOps** logo in the top left corner to return to the account root page.
+
 1. On the **Projects** tab, select the entry representing the **eShopOnWeb** project.
+
 1. In the vertical menu on the left side of the **eShopOnWeb** page, select **Boards** and ensure that the **Work Items** pane is displayed.
+
 1. In the list of work items, click the first backlog item.
+
 1. Verify that you now have the **Ticket ID** field under the **PartsUnlimited** group, which was defined during the process customization. You can treat this like any other text field.
 
     ![Verify that you now have the "Ticket ID" field under the "PartsUnlimited" group, which was defined during the process customization. You can treat this like any other text field.](images/m1/az-400_m01_t5_s21.png)
@@ -483,6 +528,7 @@ In this task, you will step through the process of creating dashboards and their
 Dashboards allow teams to visualize status and monitor progress across the project. At a glance, you can make informed decisions without having to drill down into other parts of your team project site. The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles. Each tile corresponds to a widget that provides access to one or more features or functions.
 
 1. In the vertical navigational pane of the Azure DevOps portal, select the **Overview** icon and, in the list of the **Overview** items, select **Dashboards**.
+
 1. If necessary, on the **Dashboards** pane, in the upper left corner, in the **eShopOnWeb Team** section, select **eShopOnWeb Team - Overview** and review the existing dashboard.
 
     ![If necessary, on the "Dashboards" pane, in the upper left corner, in the "eShopOnWeb Team" section, select "eShopOnWeb Team - Overview"](images/m1/az-400_m01_ex2_s02.png)
@@ -496,13 +542,17 @@ Dashboards allow teams to visualize status and monitor progress across the proje
     ![On the "Create a dashboard" pane, in the "Name" textbox, type "Product training", in the "Team" dropdown list, select the "EShop-WEB" team, and click "Create"](images/m1/az-400_m01_ex2_s04.png)
 
 1. On the new dashboard pane, click **Add a widget**.
-1. On the **Add Widget** panel, in the **Search** textbox, type **sprint** to find existing widgets that focus on sprints. In the list of results, select **Sprint Overview** and click **Add**.
+
+1. On the **Add Widget** panel, in the **Search widgets** textbox, type **sprint** to find existing widgets that focus on sprints. In the list of results, select **Sprint Overview** and click **Add**.
+
 1. In the rectangle representing the newly added widget, click the **Settings** cogwheel icon and review the **Configuration** pane.
 
     > **Note**: The customization level will vary by widget.
 
 1. On the **Configuration** pane, click **Close** without making any changes.
+
 1. Back on the **Add Widget** pane, in the **Search** textbox, type **sprint** again to find existing widgets that focus on sprints. In the list of results, select **Sprint Capacity** and click **Add**.
+
 1. In the **Dashboard** view, at the top of the pane, click **Done Editing**.
 
     > **Note**: You can now review two important aspects of your current sprint on your custom dashboard.
@@ -510,20 +560,38 @@ Dashboards allow teams to visualize status and monitor progress across the proje
     > **Note**: Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard.
 
 1. In the vertical navigational pane of the Azure DevOps portal, select the **Boards** icon and, in the list of the **Boards** items, select **Queries**.
+
 1. On the **Queries** pane, click **+ New query**.
+
 1. On the **Editor** tab of **Queries > My Queries** pane, in the **Value** dropdown list of the **Work Item Type** row, select **Task**.
+
 1. On the **Editor** tab of **Queries > My Queries** pane, in the second row, in the **Field** column, select **Area Path** and, in the corresponding **Value** dropdown list, select **eShopOnWeb\\EShop-WEB**.
+
 1. Click **Save query**.
 
     ![On the "Editor" tab of "Queries > My Queries" pane, in the second row, in the "Field" column, select "Area Path" and, in the corresponding "Value" dropdown list, select "eShopOnWeb\\EShop-WEB"](images/m1/az-400_m01_ex2_s15.png)
 
 1. In the **New query** panel, in the **Enter name** textbox, type **Web tasks**, in the **Folder** dropdown list, select **Shared Queries**, and click **OK**.
-1. Select the **Charts** tab and click **+ New chart**.
+
+1. From the **Queries>Shared Queries** view, select the **Charts** tab and click **+ New chart**.
+
 1. On the **Configure Chart** panel, in the **Name** textbox, type **Web tasks - By assignment**, in the **Group by** dropdown list, select **Assigned To**, and click **OK** to save the changes.
 
     ![On the "Configure Chart" panel, in the "Name" textbox, type "Web tasks - By assignment", in the "Group by" dropdown list, select "Assigned To", and click "OK" to save the changes](images/m1/az-400_m01_ex2_s18.png)
 
     > **Note**: You can now add this chart to a dashboard.
+
+1. Return to the **Dashboards** section in the **Overview** Menu. From the EShop-Web section, select the **Product Training** dashboard you used earlier, to open it.
+
+1. Click **Edit** from the top menu. From the **Add Widget** list, search for Chart , and select **Chart for Work Items**. Click **Add** to add this widget to the EShop-Web dashboard.
+
+1. Click the **configure** (cogwheel) within the Chart for Work Items to open the widget settings.
+
+1. Accept the title as is. Under **Query**, select **Shared Queries / Web Tasks**. Keep **Pie** for Chart Type. Under **Group By**, select Assigned To. Keep the Aggregation (Count) and Sort (Value / Ascending) defaults.
+
+1. Confirm the configuration by clicking **Save**.
+
+1. Notice the query results pie chart is shown on the dashboard. Save the changes by pressing the **Done Editing** button on top.
 
 ## Review
 
