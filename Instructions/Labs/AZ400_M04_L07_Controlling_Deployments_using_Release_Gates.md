@@ -245,8 +245,6 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
 1. In the Azure portal, use the **Search resources, services, and docs** text box at the top of the page to search for **resource group(1)** and, in the list of results, select **Resouce groups(2)**.
 
-    ![portal](images/rg.png)
-
 1. In the Azure portal, navigate to the resource group **az400m04l09-RG(1)** you created in the previous task, In the list of resources, click the **Canary(2)** web app.
 
     ![portal](images/canaryaap1.png)
@@ -256,8 +254,6 @@ In this task, you will create two Azure web apps representing the **Canary** and
    ![portal](images/image004.png)
   
 1. On the **Application Insights(1)** blade, click **Turn on Application Insights(2)**.
-
-     ![portal](images/turnon.png)
    
 1. In the **Change your resource** section, scroll down and click on **Select existing resource(1)** option, in the list of existing resources, select the newly created **Application Insight resource(2)**, click **Apply(3)**.
 
@@ -320,13 +316,14 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
     
      ![Azure devops](images/re.png)
    
-   > **Note** - If you are unable to see the **Releases** under pipelines,Azure DevOps page, from the bottom left, click on **Organization settings**, Go to the Pipelines (1) section, and click Settings (2). Turn off the Disable creation of classic release pipelines.
+   > **Note** - If you are unable to see the **Releases** under pipelines, Navigate to Azure DevOps page, from the bottom left, click on **Organization settings**, Go to the Pipelines (1) section, and click Settings (2). Turn off(3) the Disable creation of classic release pipelines.
    
    ![Azure devops](images/lab2releaseenable.png)
    
-1. Navigate back to eShopOnWeb and now you will be able to see the releases under pipelines   
+1. Navigate back to your project and now you will be able to see the releases under pipelines   
   
 1. From the **Select a template** window, **choose** **Azure App Service Deployment** (Deploy your application to Azure App Service. Choose from Web App on Windows, Linux, containers, Function Apps, or WebJobs) under the **Featured** list of templates.    
+
 1. Click **Apply**.
 
     ![Azure devops](images/tem.png)
