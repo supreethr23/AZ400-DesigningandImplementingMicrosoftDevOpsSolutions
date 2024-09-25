@@ -55,13 +55,13 @@ The repository is organized the following way:
 
 In this task, you will create an empty public GitHub repository and import the existing [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb) repository.
 
-1. From the lab computer, start a web browser, navigate to the [GitHub website](https://github.com/), sign in using your account and click on **New** to create new repository.
+1. From the lab computer, start a web browser, navigate to the [GitHub website](https://github.com/), sign in using your account, and click on **New** to create a new repository.
 
     ![Create Repository](images/github-new.png)
  
 1. On the **Create a new repository** page, click on **Import a repository** link (below the page title).
 
-    > NOTE: you can also open the import website directly at https://github.com/new/import
+    > NOTE: you can also open the import website directly at <https://github.com/new/import>
 
 1. On the **Import your project to GitHub** page:
     
@@ -77,7 +77,6 @@ In this task, you will create an empty public GitHub repository and import the e
 1. On the repository page, go to **Settings**, click on **Actions > General** and choose the option **Allow all actions and reusable workflows**. Click on **Save**.
 
     ![Enable GitHub Actions](images/enable-actions.png)
-
 
 # Exercise 1: Setup your GitHub Repository and Azure access
 
@@ -103,6 +102,7 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
 
     `az ad sp create-for-rbac --name GH-Action-eshoponweb --role contributor --scopes /subscriptions/SUBSCRIPTION-ID/resourceGroups/RESOURCE-GROUP --sdk-auth`
 
+    >**Note:** Make sure this is typed or pasted as a single line!
     >**Note:** this command will create a Service Principal with Contributor access to the Resource Group created before. This way we make sure GitHub Actions will only have the permissions needed to interact only with this Resource Group (not the rest of the subscription).
 
     >**Note:** If the error message states, **Please run 'az login'**, then follow these steps:-
@@ -111,11 +111,11 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
     az login
     ```
     
-2. Navigate to the **https://microsoft.com/devicelogin** page, and enter the device code which is mentioned in the Bash session, and follow the instructions which is mentioned in the page.
+2. Navigate to the **https://microsoft.com/devicelogin** page, and enter the **device code** which is mentioned in the Bash session, and follow the instructions which is mentioned in the page.
     
 3. Navigate back to the **Azure Portal**, as you can see the Service Principal with Contributor access to the Resource Group created.
 
-1. The command will output a JSON object, you will later keep it as a GitHub secret for the workflow, copy it. The JSON contains the identifiers used to authenticate against Azure in the name of an Azure AD application identity (service principal).
+1. The command will output a JSON object, you will later keep it as a GitHub secret for the workflow, Copy the JSON. The JSON contains the identifiers used to authenticate against Azure in the name of an Azure AD application identity (service principal).
 
     ```JSON
     {
@@ -161,7 +161,7 @@ In this task, you will modify the given GitHub workflow and execute it to deploy
 
 1. Read the workflow carefully, comments are provided to help understand.
 
-1. Click on **Commit changes...** and **Commit changes** again leaving defaults (changing the main branch). The workflow will get automatically executed.
+1. Click on **Start Commit** and **Commit changes** again leaving defaults (changing the main branch). The workflow will get automatically executed.
 
 ## Task 3: Review GitHub Workflow execution
  
@@ -196,11 +196,14 @@ In this task, you will review the GitHub workflow execution:
 In this task, you will use GitHub environments to ask for manual approval before executing the actions defined on the deploy job of your workflow.
 
 1. On the repository page, go to **Code** and open the following file: **eShopOnWeb/.github/workflows/eshoponweb-cicd.yml**.
+
 1. In the **deploy** job section, you can find a reference to an **enviroment** called **Development**. GitHub used [environments](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment) add protection rules (and secrets) for your targets.
 
 1. On the repository page, go to **Settings**, open **Environments** and click **New environment**.
 
 1. Give it **Development** name and click on **Configure Environment**.
+
+    > NOTE: If an environment called **Development** already exists in the **Environments** list, open its configuration by clicking on the environment name. 
 
 1. In the **Configure Development** tab, check the option **Required Reviewers** and your GitHub account as a reviewer. Click on **Save protection rules**.
 
@@ -216,12 +219,12 @@ In this task, you will use GitHub environments to ask for manual approval before
 
 1. Workflow will follow the **deploy** job execution and finish.
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="e7a8d213-83cf-4279-a7fe-1cf6a3255cb6" />
 
 ## Review
 
