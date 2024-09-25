@@ -161,7 +161,7 @@ In this task, you will modify the given GitHub workflow and execute it to deploy
 
 1. Read the workflow carefully, comments are provided to help understand.
 
-1. Click on **Start Commit** and **Commit changes** again leaving defaults (changing the main branch). The workflow will get automatically executed.
+1. Click on **Commit changes...** and **Commit changes** again leaving defaults (changing the main branch). The workflow will get automatically executed.
 
 ## Task 3: Review GitHub Workflow execution
  
