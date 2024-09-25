@@ -66,7 +66,6 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
   
-
 ## Task 3: Set main branch as default branch
 
 1. Go to **Repos>Branches (1)**.

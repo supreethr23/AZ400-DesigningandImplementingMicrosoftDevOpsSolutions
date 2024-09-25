@@ -71,9 +71,13 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **+ Create Project**.
+1. On your lab computer, in a browser window open your Azure DevOps organization.
 
-    ![Create Project](images/6-10.png)
+   ![Create Project](images/az4.2.png)
+
+1. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **+ Create Project**.
+
+   ![Create Project](images/6-10.png)
 
 ### Task 2: Import eShopOnWeb Git Repository
 
@@ -89,6 +93,14 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **infra** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 8 website used on the lab scenarios.
+
+
+### Task 3: Set main branch as default branch
+
+1. Go to **Repos>Branches**.
+1. Hover on the **main** branch then click the ellipsis on the right of the column. Click on **Set as default branch**.
+
+   ![Import Repository](images/az-4.1.png)
 
 ## Exercise 1: Understand an Azure Bicep template and simplify it using a reusable module
 
@@ -133,7 +145,7 @@ In this task, you will create a storage template module **storage.bicep** which 
    }
    ```
 
-1. Commit the file, however, we're not done with it yet.
+1. Click on Commit twice to commit the changes, however, we're not done with it yet.
 
 1. Next, hover your mouse over the bicep folder and click the ellipsis icon, then select **New**, and **File**. Enter **storage.bicep** for the name and click **Create**.
 
@@ -216,11 +228,15 @@ You will need a Service Principal to deploy  Azure resources from Azure Pipeline
 
 A Service Principal is automatically created by Azure Pipelines, when you connect to an Azure subscription from inside a pipeline definition or when you create a new Service Connection from the project settings page (automatic option). You can also manually create the Service Principal from the portal or using Azure CLI and re-use it across projects.
 
-1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Microsoft Entra tenant associated with this subscription.
+1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), if prompted to sign in sign in using the following credentials:
+
+    Username:  <inject key="AzureAdUserEmail"></inject>
+    Password:  <inject key="AzureAdUserPassword"></inject>
+      
 1. In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
-   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
+   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **Getting Started** pop-up, click on **No storage account required** and select the subscription you are using in this lab, and click on **Apply**.
 
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID and subscription name attributes:
 
@@ -243,9 +259,11 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
     ![New Service Connection](images/6-5.png)
 
-1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **New Service Connection**.
+1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **Create Service Connection**.
 
-    ![New Service Connection](images/6-6.png)
+   ![New Service Connection](images/az-4.3.png)
+
+   ![New Service Connection](images/6-6.png)
 
 1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
 
@@ -279,7 +297,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
 1. In the variables section, replace name with **az400m06l15-RG** resource group, set the desired **location** and replace the value of the service connection with one of your existing service connections you created earlier.
 
-1. Click the **Save and run** button from the top right corder and when the commit dialog appeared, click **Save and run** again.
+1. Click the **Verify and run** button from the top right corner and in the commit dialog, click **Save and run** again.
 
    ![Save and running the YAML pipeline after making changes](./images/6-2.png)
 
@@ -305,10 +323,11 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
   
   **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+  <validation step="e4c21de8-402e-4ffc-aa10-61fe90dc9884" />
 
 ## Review
 
