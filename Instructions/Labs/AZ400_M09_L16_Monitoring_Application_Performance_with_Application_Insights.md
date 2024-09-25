@@ -46,25 +46,27 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Azure DevOps](images/agent1.png)
 
-6. In the **Organization Setting** window on the left menu click on **Billing**.
+6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing**
 
     ![Azure DevOps](images/agent3.png)
     
-7. Select **Setup Billing** then click on save.
+7. On the **Setup Billing**,click on save.
 
     ![Azure DevOps](images/agent4.png)    
 
-8. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+8. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and scroll down to the end of the page then click on **Save**.
 
     ![Azure DevOps](images/agent2.png)    
 
-9. In the **Organization Setting** window on the left menu click on **Policies** and enable **Third-party application access via OAuth**.
+9. In the **Organization Setting** window on the left menu click on **Policies** under Security and enable **Third-party application access via OAuth**.
 
     ![Azure DevOps](images/policies-enable-3rd.png)    
 
-10. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
+10. Navigate back to your Azure DevOps organization, by clicking on **Azure DevOps.** Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
 
     ![Create Project](images/create-project.png)
+
+11.     
 
 ### Task 2: Import eShopOnWeb Git Repository
 
