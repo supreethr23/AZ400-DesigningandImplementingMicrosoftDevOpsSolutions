@@ -66,7 +66,11 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Create Project](images/create-project.png)
 
-11.     
+11. On the **Create aproject to get started** page, Enter the following details.
+      - Project name: **eShopOnWeb (1)**
+      - Under the **Advanced** section, choose **Scrum (2)** on the **Work Item process** dropdown and then click on **+ Create project (3)**.
+     
+    ![Create Project](images/az-400-3.png)    
 
 ### Task 2: Import eShopOnWeb Git Repository
 
