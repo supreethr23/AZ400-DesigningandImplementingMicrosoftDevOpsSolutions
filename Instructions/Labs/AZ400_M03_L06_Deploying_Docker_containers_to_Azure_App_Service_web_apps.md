@@ -244,7 +244,7 @@ In this task, you will import and run the CI pipeline.
 
 Congratulations! In this exercise, you deployed a website using custom docker image.
 
-# Exercise 3: Remove the Azure DevOps billing
+# Exercise 4: Remove the Azure DevOps billing
 
 In this exercise, you will remove the Azure DevOps billing enabled in this lab to eliminate unexpected charges.
 
