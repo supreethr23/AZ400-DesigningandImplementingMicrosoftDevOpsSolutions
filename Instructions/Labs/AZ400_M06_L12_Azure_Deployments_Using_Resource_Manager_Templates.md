@@ -259,9 +259,11 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
     ![New Service Connection](images/6-5.png)
 
-1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **New Service Connection**.
+1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **Create Service Connection**.
 
-    ![New Service Connection](images/6-6.png)
+   ![New Service Connection](images/az-4.3.png)
+
+   ![New Service Connection](images/6-6.png)
 
 1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
 
@@ -295,7 +297,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
 1. In the variables section, replace name with **az400m06l15-RG** resource group, set the desired **location** and replace the value of the service connection with one of your existing service connections you created earlier.
 
-1. Click the **Save and run** button from the top right corder and when the commit dialog appeared, click **Save and run** again.
+1. Click the **Verify and run** button from the top right corner and in the commit dialog, click **Save and run** again.
 
    ![Save and running the YAML pipeline after making changes](./images/6-2.png)
 
