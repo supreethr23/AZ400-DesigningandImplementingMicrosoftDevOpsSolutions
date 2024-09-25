@@ -35,7 +35,7 @@ After you complete this lab, you will be able to:
 
 3. On the next page accept defaults, accept the captcha and click on continue.
 
-    ![Azure DevOps](images/az400_02-01.png)
+    ![Azure DevOps](images/az-400-2.png)
     
 # Exercise 0: Configure the lab prerequisites
 
@@ -45,19 +45,19 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and under the **Advanced** section, choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
-
-    ![Create Project](images/az400_02-02.png)
-    
-    ![Create Project](images/az400_02-03.png)
+1.  On your lab computer, in a browser window open your Azure DevOps organization. On the **Create aproject to get started** page, Enter the following details.
+      - Project name: **eShopOnWeb (1)**
+      - Under the **Advanced** section, choose **Scrum (2)** on the **Work Item process** dropdown and then click on **+ Create project (3)**.
+     
+    ![Create Project](images/az-400-3.png)
 
 ## Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Navigate to **Repos>Files** and then click on **Import** within the **Import a repository** card. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Navigate to **Repos (1)>Files (2)** and then click on **Import (3)** within the **Import a repository** card. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git **(4)** and click on **Import (5)**:
 
-    ![Import Repository](images/az400_02-04.png)
+    ![Import Repository](images/az-400-4.png)
 
 1.  The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines
@@ -69,17 +69,23 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 
 ## Task 3: Set main branch as default branch
 
-1. Go to **Repos>Branches**.
-1. Hover on the **main** branch then click the ellipsis on the right of the column.
-1. Click on **Set as default branch**.
-
+1. Go to **Repos>Branches (1)**.
+1. Hover on the **main** branch then click the ellipsis on the right of the column **(2)**.
+1. Click on **Set as default branch (3)**.
+   
+    ![Import Repository](images/az-400-5.png)
+   
 ## Task 4: Configure Git and Visual Studio Code
 
 In this task, you will configure Git and Visual Studio Code, including configuring the Git credential helper to securely store the Git credentials used to communicate with Azure DevOps.
 
 1.  On the lab VM, open **Visual Studio Code**. 
 
-1.  In the Visual Studio Code interface, from the main menu, select **Terminal \| New Terminal** to open the **TERMINAL** pane.
+    ![Import Repository](images/az-400-6.png)
+    
+1.  In the Visual Studio Code interface, from the main menu, select **Terminal (1)| New Terminal (2)** to open the **TERMINAL** pane.
+
+     ![Import Repository](images/az-400-7.png)
 
 1.  Make sure that the current Terminal is running **PowerShell** by checking if the drop-down list at the top right corner of the **TERMINAL** pane shows **powershell**.
 
@@ -96,6 +102,7 @@ In this task, you will configure Git and Visual Studio Code, including configuri
     git config --global user.name "<John Doe>"
     git config --global user.email <johndoe@example.com>
     ```
+    ![Import Repository](images/az-400-9.png)
 
 # Exercise 1: Clone an existing repository
 
@@ -113,26 +120,33 @@ In this task, you will step through the process of cloning a Git repository by u
     
     > **Note**: Getting a local copy of a Git repo is called *cloning*. Every mainstream development tool supports this and will be able to connect to Azure Repos to pull down the latest source to work with.
 
-2.  On the **Clone Repository** panel, with the **HTTPS** Command line option selected, click the **Copy to clipboard** button next to the repo clone URL. 
+1.  On the **Clone Repository** panel, with the **HTTPS** Command line option selected, click the **Copy to clipboard** button next to the repo clone URL. 
 
     > **Note**: You can use this URL with any Git-compatible tool to get a copy of the codebase.
 
-3.  Close the **Clone Repository** panel.
-4.  Switch to **Visual Studio Code** running on your lab computer. 
-5.  Click the **View** menu header and, in the drop-down menu, click **Command Palette**. 
+    ![Import Repository](images/az-400-10.png)    
 
+1.  Close the **Clone Repository** panel.
+1.  Switch to **Visual Studio Code** running on your lab computer. 
+1.  Click the **View (1)** menu header and, in the drop-down menu, click **Command Palette (2)**.
+
+    ![Import Repository](images/az-400-11.png)
+    
     > **Note**: The Command Palette provides an easy and convenient way to access a wide variety of tasks, including those implemented as 3rd party extensions. You can use the keyboard shortcut **Ctrl+Shift+P** or **F1** to open it.
 
-6.  At the Command Palette prompt, run the **Git: Clone** command.
+1.  At the Command Palette prompt, run the **Git: Clone** command.
 
     ![VS Code command palette](images/ss2.png)
 
     > **Note**: To see all relevant commands, you can start by typing **Git**.
 
-7.  In the **Provide repository URL or pick a repository source** text box, paste the repo clone URL you copied earlier in this task and press the **Enter** key.
-8.  Within the **Select Folder** dialog box, navigate to the C: drive, create a new folder named **Git**, select it, and then click **Select Repository Destination**. 
-9.  When prompted, log in to your Azure DevOps account with the credentials provided in the environment details tab.
-10. After the cloning process completes, once prompted, in the Visual Studio Code, click **Open** to open the cloned repository. If **Do you trust the authors of the files in this folder?** warning prompted click on **Yes**.
+1.  In the **Provide repository URL or pick a repository source** text box, paste the repo clone URL you copied earlier in this task and press the **Enter** key.
+1.  Within the **Select Folder** dialog box, navigate to the C: drive **(1)**, create a **new folder (2)** named **Git (3)**, select it, and then click **Select Repository Destination (4)**.
+
+    ![Import Repository](images/az-400-12.png)
+    
+1.  When prompted, log in to your Azure DevOps account with the credentials provided in the environment details tab.
+1. After the cloning process completes, once prompted, in the Visual Studio Code, click **Open** to open the cloned repository. If **Do you trust the authors of the files in this folder?** warning prompted click on **Yes**.
 
     > **Note**: You can ignore warnings you might receive regarding problems with loading of the project. The solution may not be in the state suitable for a build, but we're going to focus on working with Git, so building the project is not required.
 
@@ -154,6 +168,8 @@ In this task, you will use Visual Studio Code to commit changes.
 
 1.  In the Visual Studio Code window, at the top of the vertical toolbar, select the **EXPLORER** tab, navigate to the **/eShopOnWeb/src/Web/Program.cs** file and select it. This will automatically display its content in the details pane.
 
+    ![Import Repository](images/az-400-13.png)
+
 1.  On the first line add the following comment: 
 
     ```csharp
@@ -165,7 +181,7 @@ In this task, you will use Visual Studio Code to commit changes.
 1.  Press **Ctrl+S** to save the change.
 1.  In the Visual Studio Code window, select the **SOURCE CONTROL** tab to verify that Git recognized the latest change to the file residing in the local clone of the Git repository.
 
-    ![Azure DevOps](images/m2-2.png)
+    ![Azure DevOps](images/az-400-15.png)
 
 1.  With the **SOURCE CONTROL** tab selected, at the top of the pane, in the textbox, type **My commit** as the commit message and press **Ctrl+Enter** to commit it locally.
 
@@ -175,8 +191,11 @@ In this task, you will use Visual Studio Code to commit changes.
 
     > **Note**: We will discuss **staging** later in the lab.
     > **Note**: Ignore the failed pipelines and it will not impact the remaining tasks.
-
-1.  In the lower left corner of the Visual Studio Code window, to the right of the **main** label, note the **Synchronize Changes** icon of a circle with two vertical arrows pointing in the opposite directions and the number **1** next to the arrow pointing up. Click the icon and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/main**. 
+1. Click on Sync Changes 1.
+   
+    ![Import Repository](images/az-400-17.png)
+   
+1. If prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/main**. 
 
 ## Task 2: Review commits
 
@@ -206,6 +225,8 @@ In this task, you will explore the use of staging changes by using Visual Studio
     ```
 
 1. In the Visual Studio Code window, switch to the **SOURCE CONTROL** tab, hover the mouse pointer over the **Program.cs** entry, and click the plus sign on the right side of that entry.
+   
+    ![Import Repository](images/az-400-20.png)   
 
     > **Note**: This stages the change to the **Program.cs** file only, preparing it for commit without **Constants.cs**.
 
@@ -213,8 +234,15 @@ In this task, you will explore the use of staging changes by using Visual Studio
 
     ![Staged changes](images/staged-changes.png)
 
-1. At the top of the **SOURCE CONTROL** tab, click the ellipsis symbol, in the drop-down menu, select **Commit** and, in the cascading menu, select **Commit Staged**.
-1. In the lower left corner of the Visual Studio Code window, click the **Synchronize Changes** button to synchronize the committed changes with the server and, if prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/main**.
+1. At the top of the **SOURCE CONTROL** tab, click the ellipsis symbol looks like **(...) (1)**, in the drop-down menu, select **Commit (2)** and, in the cascading menu, select **Commit Staged (3)**.
+
+    ![Import Repository](images/az-400-22.png)
+   
+1. Click on **Sync Changes 2**
+
+     ![Import Repository](images/az-400-23.png)
+   
+1. If prompted, whether to proceed, click **OK** to push and pull commits to and from **origin/main**.
 
     > **Note**: Note that since only the staged change was committed, the other change is still pending to be synchronized.
 
@@ -263,6 +291,9 @@ In this task, you will create a branch by using Visual Studio Code.
     ![Create branch](images/az400_02-13.png)
 
 1.  In the **Select a ref to create the branch from** textbox, select **main** as the reference branch.
+
+    ![Import Repository](images/az-400-24.png)
+    
 1.  In the **Branch name** textbox, type **dev** to specify the new branch and press **Enter**.
 
     > **Note**: At this point, you are automatically switched to the **dev** branch.
@@ -275,6 +306,8 @@ Git keeps track of which branch you are working on and makes sure that, when you
 
 1.  In the **Visual Studio Code** window, with the **SOURCE CONTROL** tab selected, in the lower left corner of the Visual Studio Code window, click the **Publish changes** icon (directly to the right of the **dev** label representing your newly created branch).
 
+    ![Import Repository](images/az-400-25.png)
+
 1.  Switch to the web browser window displaying the **Commits** pane of the **Azure DevOps** portal in the **Repos** section and select **Branches**.
 
 1.  On the **Mine** tab of the **Branches** pane, verify that the list of branches includes **dev**.
@@ -285,27 +318,37 @@ Git keeps track of which branch you are working on and makes sure that, when you
 
     ![Delete branch](images/az400_02-14.png)
 
-1.  Switch back to the **Visual Studio Code** window and, with the **SOURCE CONTROL** tab selected, in the lower left corner of the Visual Studio Code window, click the **dev** entry. This will display the existing branches in the upper portion of the Visual Studio Code window.
+1.  Switch back to the **Visual Studio Code** window and, with the **SOURCE CONTROL** tab selected, in the lower left corner of the Visual Studio Code window, click the **dev (1)** entry. This will display the existing branches in the upper portion of the Visual Studio Code window.
 
-1.  Verify that now there are two **dev** branches listed. 
+1.  Verify that now there are two **dev (2)** branches listed. 
 
+    ![Import Repository](images/az-400-26.png)
+    
     > **Note**: The local (**dev**) branch is listed because it's existence is not affected by the deletion of the branch in the remote repository. The server (**origin/dev**) is listed because it hasn't been pruned. 
 
 1.  In the list of branches select the **main** branch to check it out.
 
+    ![Import Repository](images/az-400-27.png)
+    
 1.  Press **Ctrl+Shift+P** to open the **Command Palette**.
 
 1.  At the **Command Palette** prompt, start typing **Git: Delete** and select **Git: Delete Branch** when it becomes visible.
+
+    ![Import Repository](images/az-400-28.png)
 
 1.  Select the **dev** entry in the list of branches to delete.
 
 1.  In the lower left corner of the Visual Studio Code window, click the **main** entry again. This will display the existing branches in the upper portion of the Visual Studio Code window.
 
 1.  Verify that the local **dev** branch no longer appears in the list, but the remote **origin/dev** is still there.
+2.  
+    ![Import Repository](images/az-400-29.png)
 
 1.  Press **Ctrl+Shift+P** to open the **Command Palette**.
 
-1.  At the **Command Palette** prompt, start typing **Git: Fetch** and select **Git: Fetch (Prune)** when it becomes visible. 
+1.  At the **Command Palette** prompt, start typing **Git: Fetch** and select **Git: Fetch (Prune)** when it becomes visible.
+
+    ![Import Repository](images/az-400-30.png)
 
     > **Note**: This command will update the origin branches in the local snapshot and delete those that are no longer there.
 
@@ -353,7 +396,10 @@ For simplicity we will work directly on the web browser repo editor (working dir
 In this task, you will use the Azure DevOps portal to test the policy and create your first Pull Request.
 
 1. In the vertical navigational pane of the of the Azure DevOps portal, in the **Repos>Files**, make sure the **main** branch is selected (dropdown above shown content).
-1. To make sure policies are working, try making a change and committing it on the **main** branch, navigate to the **/eShopOnWeb/src/Web/Program.cs** file and select it and click on **Edit**. This will automatically display its content in the details pane.
+1. To make sure policies are working, try making a change and committing it on the **main** branch, navigate to the **/eShopOnWeb/src/Web/Program.cs (1)** file and select it and click on **Edit (2)**. This will automatically display its content in the details pane.
+
+    ![Import Repository](images/az-400-31.png)
+   
 1. On the first line add the following comment:
 
     ```csharp
@@ -370,20 +416,32 @@ In this task, you will use the Azure DevOps portal to test the policy and create
 
 In this task, you will use the Azure DevOps portal to create a Pull Request, using the **dev** branch to merge a change into the protected **main** branch. An Azure DevOps work item with be linked to the changes to be able to trace pending work with code activity.
 
-1. In the vertical navigational pane of the of the Azure DevOps portal, in the **Boards** section, select **Work Items**.
-1. Click on **+ New Work Item > Product Backlog Item**. In title field, write **Testing my first PR** and click on **Save**.
+1. In the vertical navigational pane of the of the Azure DevOps portal, in the **Boards** section, select **Work Items (1)**.
+1. Click on **+ New Work Item > Product Backlog Item (2)**.
+   
+    ![Import Repository](images/az-400-32.png)
+   
+1. In title field, write **Testing my first PR (1)** and click on **Save (2)**.
+   
+    ![Import Repository](images/az-400-33.png)
+   
 1. Now go back to the vertical navigational pane of the of the Azure DevOps portal, in the **Repos>Files**, make sure the **dev** branch is selected.
-1. Navigate to the **/eShopOnWeb/src/Web/Program.cs** file, click on **Edit** and make the following change on the first line:
+1. Navigate to the **/eShopOnWeb/src/Web/Program.cs (1)** file, click on **Edit (2)** and make the following change on the first line:
 
     ```csharp
     // Testing my first PR
     ```
+    ![Import Repository](images/az-400-34.png)
+   
 1. Click on **Commit > Commit** (leave default commit message). This time the commit works, **dev** branch has no policies.
 1. A message will pop-up, proposing to create a Pull Request (as you **dev** branch is now ahead in changes, compared to **main**). Click on **Create a Pull Request**.
 
     ![Create a Pull Request](images/az400_02-19.png)
 
 1. In the **New pull request** tab, leave defaults and click on **Create**.
+   
+    ![Import Repository](images/az-400-35.png)
+
 1. The Pull Request will show some failed/pending requirements, based on the policies applied to our target **main** branch.
     - Proposed changes should have a work item linked
     - At least 1 user should review and approve the changes.
@@ -405,9 +463,11 @@ In this task, you will use the Azure DevOps portal to create a Pull Request, usi
 
 The product team has decided that the current version of the site should be released as v1.1.0-beta.
 
-1. In the vertical navigational pane of the of the Azure DevOps portal, in the **Repos** section, select **Tags**.
-1. In the **Tags** pane, click **New tag**.
-1. In the **Create a tag** panel, in the **Name** text box, type **v1.1.0-beta**, in the **Based on** drop-down list leave the **main** entry selected, in the **Description** text box, type **Beta release v1.1.0** and click **Create**.
+1. In the vertical navigational pane of the of the Azure DevOps portal, in the **Repos** section, select **Tags (1)**.
+1. In the **Tags** pane, click **New tag (2)**.
+1. In the **Create a tag** panel, in the **Name** text box, type **v1.1.0-beta (3)**, in the **Based on** drop-down list leave the **main (4)** entry selected, in the **Description** text box, type **Beta release v1.1.0 (5)** and click **Create (6)**.
+   
+    ![Import Repository](images/az-400-36.png)
 
     > **Note**: You have now tagged the repository at this release (the latest commit gets linked to the tag). You could tag commits for a variety of reasons and Azure DevOps offers the flexibility to edit and delete them, as well as manage their permissions.
 
@@ -423,16 +483,16 @@ The product team has decided that the current version of the site should be rele
 
 When going through the different course labs in the order they are presented, the branch policy configured during this lab will block exercises in future labs. Therefore, we want you to remove the configured branch policies.
 
-1. From the Azure DevOps **eShopOnWeb** Project view, navigate to **Repos** and select **Branches**. Select the **Mine** tab of the **Branches** pane.
-1. On the **Mine** tab of the **Branches** pane, hover the mouse pointer over the **main** branch entry to reveal the ellipsis symbol (the ...) on the right side.
-1. Click the ellipsis and, in the pop-up menu, select **Branch Policies**.
+1. From the Azure DevOps **eShopOnWeb** Project view, navigate to **Repos** and select **Branches (1)**. Select the **Mine (2)** tab of the **Branches** pane.
+1. On the **Mine** tab of the **Branches** pane, hover the mouse pointer over the **main** branch entry to reveal the ellipsis symbol (the ...) **(3)** on the right side.
+1. Click the ellipsis and, in the pop-up menu, select **Branch Policies (4)**.
 
-    ![Policy Settings](images/policy-settings.png)
+    ![Policy Settings](images/az-400-37.png)
 
-1. On the **main** tab of the repository settings, disable the option for **Require minimum number of reviewers**.
-1. On the **main** tab of the repository settings, disable the option for **Check for linked work items**.
+1. On the **main** tab of the repository settings, disable the option for **Require minimum number of reviewers (1)**.
+1. On the **main** tab of the repository settings, disable the option for **Check for linked work items (2)**.
 
-    ![Branch Policies](images/branch-policies.png)
+    ![Branch Policies](images/az-400-38.png)
 
 1. You have now disabled/removed the branch policies for the main branch.
 
