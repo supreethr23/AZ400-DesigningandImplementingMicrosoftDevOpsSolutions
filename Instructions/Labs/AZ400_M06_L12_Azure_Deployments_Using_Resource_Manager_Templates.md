@@ -145,7 +145,7 @@ In this task, you will create a storage template module **storage.bicep** which 
    }
    ```
 
-1. Commit the file, however, we're not done with it yet.
+1. Click on Commit twice to commit the changes, however, we're not done with it yet.
 
 1. Next, hover your mouse over the bicep folder and click the ellipsis icon, then select **New**, and **File**. Enter **storage.bicep** for the name and click **Create**.
 
