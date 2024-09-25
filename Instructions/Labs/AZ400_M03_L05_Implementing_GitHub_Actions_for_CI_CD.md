@@ -219,7 +219,7 @@ In this task, you will use GitHub environments to ask for manual approval before
 
 1. Workflow will follow the **deploy** job execution and finish.
 
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
