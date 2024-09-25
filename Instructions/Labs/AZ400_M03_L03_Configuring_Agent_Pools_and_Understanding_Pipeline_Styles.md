@@ -183,15 +183,15 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
     | Setting | Value |
     | ------- | ----- |
     | Enter server URL | the URL of your Azure DevOps organization, in the format **https://dev.azure.com/<organization_name>**, where `<organization_name>` represents the name of your Azure DevOps organization |
-    | Enter authentication type (press enter for PAT) | **Enter** |
+    | Enter authentication type (press enter for PAT) | **Hit Enter** |
     | Enter personal access token | The access token you recorded earlier in this task |
     | Enter agent pool (press enter for default) | enter **az400m05l05a-pool** |
-    | Enter agent name (press enter for labvm-<inject key="DeploymentID" enableCopy="false"/>) | **Enter** |
-    | Enter work folder (press enter for _work) | **Enter** |
+    | Enter agent name (press enter for labvm-<inject key="DeploymentID" enableCopy="false"/>) | **Hit Enter** |
+    | Enter work folder (press enter for _work) | **Hit Enter** |
     | **(Only if shown)** Enter Perform an unzip for tasks for each step. (press enter for N) | **WARNING**: only press **Enter** if the message is shown|
     | Enter run agent as service? (Y/N) (press enter for N) | **Y** |
     | enter enable SERVICE_SID_TYPE_UNRESTRICTED (Y/N) (press enter for N) | **Y** |
-    | Enter User account to use for the service (press enter for NT AUTHORITY\NETWORK SERVICE) | **Enter** |
+    | Enter User account to use for the service (press enter for NT AUTHORITY\NETWORK SERVICE) | **Hit Enter** |
     | Enter whether to prevent service starting immediately after configuration is finished? (Y/N) (press enter for N) | **Enter** |
 
     > **Note**: You can run self-hosted agent as either a service or an interactive process. You might want to start with the interactive mode, since this simplifies verifying agent functionality. For production use, you should consider either running the agent as a service or as an interactive process with auto-logon enabled, since both persist their running state and ensure that the agent starts automatically if the operating system is restarted.
@@ -206,9 +206,9 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 
 1.  In the web browser window displaying the Azure DevOps portal, in the upper left corner, click the **Azure DevOps** label.
 
-1.  In the browser window displaying the list of projects, click the tile representing your **Configuring Agent Pools and Understanding Pipeline Styles** project.
+1.  In the browser window displaying the list of projects, click the tile representing your **eShopOnWeb** project.
  
-1.  On the **Configuring Agent Pools and Understanding Pipeline Styles** pane, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**. 
+1.  On the **eShopOnWeb** pane, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**. 
 
 1.  On the **Recent** tab of the **Pipelines** pane, select **eShopOnWeb** and, on the **eShopOnWeb** pane, select **Edit**.
 
