@@ -2,15 +2,18 @@
 
 ## Lab overview
 
-In this lab, you will learn how to configure continuous integration (CI) and continuous deployment (CD) for your applications using Build and Release in Azure Pipelines. This scriptable CI/CD system is both web-based and cross-platform, while also providing a modern interface for visualizing sophisticated workflows. Although we won’t demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle) and Linux.
+In this lab, you will learn how to define build pipelines in Azure DevOps using YAML.
+The pipelines will be used in two scenarios:
+
+- As part of Pull Request validation process.
+- As part of the Continuous Integration implementation.
 
 ## Objectives
 
 After you complete this lab, you will be able to:
 
--   Create a basic build pipeline from a template
--   Track and review a build
--   Invoke a continuous integration build
+- Include build validation as part of a Pull Request.
+- Configure CI pipeline as code with YAML.
 
 ## Estimated timing: 45 minutes
 
@@ -71,7 +74,13 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
          o. **src** folder contains the .NET 6 website used in the lab scenarios.
          
        ![](images/az400-m3-L4-06.png)
-         
+
+#### Task 3: Set main branch as default branch
+
+1. Go to **Repos>Branches**.
+1. Hover on the **main** branch then click the ellipsis on the right of the column.
+1. Click on **Set as default branch**.
+
  # Exercise 1: Include build validation as part of a Pull Request
  
  In this exercise, you will include build validation to validate a Pull Request.
@@ -195,7 +204,7 @@ In this task, you will add policies to the main branch and only allow changes us
      
      ![](images/az400-m3-L4-30.png)    
       
-8. After all validations are successful, on the top-right click on **Approve (1)**,  click on **Complete (3)**.  
+8. After all validations are successful, on the top-right click on **Approve**,  Now from the **Set auto-complete** dropdown you can click on **Complete**. 
 
 9. On the **Complete Pull Request** tab, select only **Complete associated work items after merging** checkbox  and Click on **Complete Merge**
 
@@ -274,7 +283,7 @@ In this task, you will add policies to the main branch and only allow changes us
 
      ![](images/AZ-400-save.png)
 
-  4. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to                          **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis (1)** and **Rename/move** option. Name it **eshoponweb-ci (2)**  and click on **Save (3)**.
+  4. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to  **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis (1)** and **Rename/move** option. Name it **eshoponweb-ci (2)**  and click on **Save (3)**.
 
      ![](images/az400-m3-L4-42.png)
 
@@ -341,11 +350,12 @@ In this task, you will add policies to the main branch and only allow changes us
      
      ![](images/az400-m3-L4-57.png)
      
-     > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-     > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-     > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="94a8cfc0-766b-4257-b420-265113433302" />
           
  ## Review
   
