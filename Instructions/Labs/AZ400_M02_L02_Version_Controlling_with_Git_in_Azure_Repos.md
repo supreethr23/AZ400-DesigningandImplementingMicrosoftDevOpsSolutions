@@ -65,8 +65,15 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.azure** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
+  
 
-## Task 3: Configure Git and Visual Studio Code
+## Task 3: Set main branch as default branch
+
+1. Go to **Repos>Branches**.
+1. Hover on the **main** branch then click the ellipsis on the right of the column.
+1. Click on **Set as default branch**.
+
+## Task 4: Configure Git and Visual Studio Code
 
 In this task, you will configure Git and Visual Studio Code, including configuring the Git credential helper to securely store the Git credentials used to communicate with Azure DevOps.
 
