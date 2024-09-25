@@ -328,6 +328,8 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
+  <validation step="e4c21de8-402e-4ffc-aa10-61fe90dc9884" />
+
 ## Review
 
 In this lab, you learned how to create an Azure Bicep template, modularize it by using a template module, modify the main deployment template to use the module and updated dependencies, and finally deploy the templates to Azure using YAML pipelines.
