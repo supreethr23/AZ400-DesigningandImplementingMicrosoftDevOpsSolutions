@@ -65,8 +65,15 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.azure** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
+  
 
-## Task 3: Configure Git and Visual Studio Code
+## Task 3: Set main branch as default branch
+
+1. Go to **Repos>Branches**.
+1. Hover on the **main** branch then click the ellipsis on the right of the column.
+1. Click on **Set as default branch**.
+
+## Task 4: Configure Git and Visual Studio Code
 
 In this task, you will configure Git and Visual Studio Code, including configuring the Git credential helper to securely store the Git credentials used to communicate with Azure DevOps.
 
@@ -405,12 +412,31 @@ The product team has decided that the current version of the site should be rele
 
     > **Note**: You have now tagged the repository at this release (the latest commit gets linked to the tag). You could tag commits for a variety of reasons and Azure DevOps offers the flexibility to edit and delete them, as well as manage their permissions.
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="f9ef46d5-c3ef-4c09-8c01-ef3bf6d0a05f" />
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### Exercise 5: Remove Branch Policies
+
+When going through the different course labs in the order they are presented, the branch policy configured during this lab will block exercises in future labs. Therefore, we want you to remove the configured branch policies.
+
+1. From the Azure DevOps **eShopOnWeb** Project view, navigate to **Repos** and select **Branches**. Select the **Mine** tab of the **Branches** pane.
+1. On the **Mine** tab of the **Branches** pane, hover the mouse pointer over the **main** branch entry to reveal the ellipsis symbol (the ...) on the right side.
+1. Click the ellipsis and, in the pop-up menu, select **Branch Policies**.
+
+    ![Policy Settings](images/policy-settings.png)
+
+1. On the **main** tab of the repository settings, disable the option for **Require minimum number of reviewers**.
+1. On the **main** tab of the repository settings, disable the option for **Check for linked work items**.
+
+    ![Branch Policies](images/branch-policies.png)
+
+1. You have now disabled/removed the branch policies for the main branch.
+
 
 ## Review
 
