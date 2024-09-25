@@ -412,6 +412,25 @@ The product team has decided that the current version of the site should be rele
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
+
+### Exercise 5: Remove Branch Policies
+
+When going through the different course labs in the order they are presented, the branch policy configured during this lab will block exercises in future labs. Therefore, we want you to remove the configured branch policies.
+
+1. From the Azure DevOps **eShopOnWeb** Project view, navigate to **Repos** and select **Branches**. Select the **Mine** tab of the **Branches** pane.
+1. On the **Mine** tab of the **Branches** pane, hover the mouse pointer over the **main** branch entry to reveal the ellipsis symbol (the ...) on the right side.
+1. Click the ellipsis and, in the pop-up menu, select **Branch Policies**.
+
+    ![Policy Settings](images/policy-settings.png)
+
+1. On the **main** tab of the repository settings, disable the option for **Require minimum number of reviewers**.
+1. On the **main** tab of the repository settings, disable the option for **Check for linked work items**.
+
+    ![Branch Policies](images/branch-policies.png)
+
+1. You have now disabled/removed the branch policies for the main branch.
+
+
 ## Review
 
 In this lab, you used Visual Studio Code to clone an existing repository, save work with commits, review history of changes, and work with branches.
