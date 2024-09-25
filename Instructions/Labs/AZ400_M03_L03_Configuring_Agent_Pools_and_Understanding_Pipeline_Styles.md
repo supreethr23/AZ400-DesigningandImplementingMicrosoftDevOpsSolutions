@@ -60,7 +60,7 @@ In this exercise, you will set up the prerequisite for the lab, which consists o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **Create**.
+1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on ***+ Create project**.
 
 ## Task 2: Configuring Components for Visual Studio
 
@@ -121,10 +121,6 @@ In this exercise, you will implement self-hosted Azure DevOps agent.
 
 In this task, you will configure your lab Virtual Machine as an Azure DevOps self-hosting agent and use it to run a build pipeline.
 
-1. Within the Lab Virtual machine (Lab VM) or your own computer, start a web browser, navigate to [the Azure DevOps portal](https://dev.azure.com) and sign in by using the Microsoft account associated with your Azure DevOps organization.
-
-  > **Note**: The Lab Virtual machine should have all necessary prerequisite software installed. If you are installing on your own computer, you will need to install .NET 8 SDKs or higher necessary to build the demo project. See [Download .NET](https://dotnet.microsoft.com/download/dotnet).
-
 1.  In the Azure DevOps portal, in the upper right corner of the Azure DevOps page, click the **User settings** icon, in the dropdown menu, click **Personal access tokens**.
 
      ![Azure DevOps](images/az-400-lab3-4.png)
@@ -139,7 +135,7 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
     | Scope (custom defined) | **Agent Pools** click Show all scopes (at the bottom of the window)|
     | Agent Pools | **Read and manage** |
     
-     ![Azure DevOps](images/lab4-2.png)
+    ![Azure DevOps](images/lab4-2.png)
 
 1. On the **Success** pane, copy the value of the personal access token to Clipboard.
 
