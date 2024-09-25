@@ -230,13 +230,13 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
 1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), if prompted to sign in sign in using the following credentials:
 
-  Username: 
-  Password:
+    Username:  <inject key="AzureAdUserEmail"></inject>
+    Password:  <inject key="AzureAdUserPassword"></inject>
       
 1. In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
-   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
+   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **Getting Started** pop-up, click on **No storage account required** and select the subscription you are using in this lab, and click on **Apply**.
 
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID and subscription name attributes:
 
