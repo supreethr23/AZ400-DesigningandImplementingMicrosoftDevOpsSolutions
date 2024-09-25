@@ -176,11 +176,14 @@ In this task, you will create two Azure web apps representing the **Canary** and
   
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
-     ![Clouldshell](images/bash.png)
+     ![Clouldshell](images/image001.png)
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
+    >**Note**: If this is the first time you are starting **Cloud Shell** , On Getting started pop up select **Mount Storage Account**, select the subscription you are using in this lab, and select **Apply**.
    
-   ![Clouldshell](images/creatstr.png)
+   ![Clouldshell](images/image002.png)
+
+    >**Note**: On Mount Storage Account pop up ,select **We will create a storage account for you** and click on **Next**. 
+   
     
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a resource group. 
 
@@ -248,7 +251,9 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
     ![portal](images/canaryaap1.png)
   
-1. On the **Canary** web app page, in the vertical menu on the left, in the **Settings** section, click **Application Insights**.
+1. On the **Canary** web app page, in the properties tab, click **Application Insights**.
+
+   ![portal](images/image004.png)
   
 1. On the **Application Insights(1)** blade, click **Turn on Application Insights(2)**.
 
@@ -314,6 +319,12 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 1. Click **New Pipeline(2)**.
     
      ![Azure devops](images/re.png)
+   
+   > **Note** - If you are unable to see the **Releases** under pipelines,Azure DevOps page, from the bottom left, click on **Organization settings**, Go to the Pipelines (1) section, and click Settings (2). Turn off the Disable creation of classic release pipelines.
+   
+   ![Azure devops](images/lab2releaseenable.png)
+   
+1. Navigate back to eShopOnWeb and now you will be able to see the releases under pipelines   
   
 1. From the **Select a template** window, **choose** **Azure App Service Deployment** (Deploy your application to Azure App Service. Choose from Web App on Windows, Linux, containers, Function Apps, or WebJobs) under the **Featured** list of templates.    
 1. Click **Apply**.
@@ -342,7 +353,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
 1. From the **Artifact** rectangle, notice the **Continuous Integration Trigger** (lightning bolt) appearing. 
 
-     ![Azure devops](images/contin.png)
+     ![Azure devops](images/image005.png)
     
 1. Click it to open the **Continuous deployment trigger** settings. Click the continuous deployment trigger to toggle the switch to enable it. Leave all other settings at default and close the **Continuous deployment trigger** pane, by clicking the **x** mark in its upper right corner.
 
@@ -420,12 +431,12 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
     > **Note**: Now you have the application with CI/CD configured. In the next exercise we will set up Quality Gates as part of a more advanced  Release pipeline.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
+   <validation step="65659ba7-275b-4c5f-8608-92fb9a964c42" />
 
 # Exercise 4: Configure release gates
 
