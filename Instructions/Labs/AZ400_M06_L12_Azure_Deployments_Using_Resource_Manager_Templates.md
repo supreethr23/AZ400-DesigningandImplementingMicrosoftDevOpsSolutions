@@ -95,12 +95,12 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **src** folder contains the .NET 8 website used on the lab scenarios.
 
 
-#### Task 3: Set main branch as default branch
+### Task 3: Set main branch as default branch
 
 1. Go to **Repos>Branches**.
 1. Hover on the **main** branch then click the ellipsis on the right of the column. Click on **Set as default branch**.
 
-   ![Import Repository](images/az4.1.png)
+   ![Import Repository](images/az-4.1.png)
 
 ## Exercise 1: Understand an Azure Bicep template and simplify it using a reusable module
 
