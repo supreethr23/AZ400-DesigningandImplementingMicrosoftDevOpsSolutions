@@ -103,7 +103,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
       ![](images/AZ400_M08_L15_11(1).png)
 
-      - if prompted to sig-in  with the following credentials.
+      - if prompted to sign-in  with the following credentials.
     
            > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
