@@ -76,9 +76,9 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Navigate to **Repos (1)>Files (2)** and then click on **Import (3)** within the **Import a repository** card. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git **(4)** and click on **Import (5)**:
 
-    ![Import Repository](images/import-repo.png)
+    ![Import Repository](images/az-400-4.png)
 
 1. The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines
@@ -86,6 +86,10 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **infra** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 8 website used on the lab scenarios.
+  
+1. Go to **Repos>Branches**.
+1. Hover on the **main** branch then click the ellipsis on the right of the column.
+1. Click on **Set as default branch**.
 
 ### Task 3: Create Azure resources
 
