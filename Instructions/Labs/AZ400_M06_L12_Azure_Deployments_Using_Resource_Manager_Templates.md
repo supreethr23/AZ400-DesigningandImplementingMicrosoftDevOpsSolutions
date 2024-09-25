@@ -295,9 +295,9 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
    ![Save and running the YAML pipeline after making changes](./images/6-3.png)
 
-1. In the variables section, replace name with **az400m06l15-RG** resource group, set the desired **location** and replace the value of the service connection with one of your existing service connections you created earlier.
+1. In the variables section, replace name with **az400m06l15-RG** resource group, set the desired **location** to **<inject key="Region" enableCopy="false"/>** replace the value of the service connection with one of your existing service connections you created earlier.
 
-1. Click the **Verify and run** button from the top right corner and in the commit dialog, click **Save and run** again.
+1. Click the **Verify and save** button from the top right corner and in the commit dialog, click **Save and run** again.
 
    ![Save and running the YAML pipeline after making changes](./images/6-2.png)
 
