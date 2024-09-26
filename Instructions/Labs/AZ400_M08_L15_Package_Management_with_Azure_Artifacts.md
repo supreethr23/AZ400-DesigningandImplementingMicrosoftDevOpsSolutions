@@ -1,4 +1,4 @@
-# Lab 15: Package Management with Azure Artifacts
+# Lab 1: Package Management with Azure Artifacts
 
 
 ## Lab overview
@@ -103,7 +103,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
       ![](images/AZ400_M08_L15_11(1).png)
 
-      - if prompted to sig-in  with the following credentials.
+      - if prompted to sign-in  with the following credentials.
     
            > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
@@ -163,7 +163,9 @@ In this task, you will create and connect to a feed.
     ![](images/AZ400_M08_L15_14(1).png)
     
 4.  Back on the **Artifacts** hub, select **EShopOnWebShared** **(1)** Organization, click **Connect to feed (2)**.
-    
+
+      ![](images/new-image5.png)
+           
 5.  On the **Connect to feed** pane, in the **NuGet** section, select **Visual Studio (1)** and, on the **Visual Studio** pane, copy the **Source (2)** url.
     
     ![](images/AZ400_M08_L15_(16).png)
@@ -241,7 +243,7 @@ In this task, you will create and publish a NuGet package.
 
 12. On the **Available NuGet Distribution Versions** page, select the latest version and download the executable to the local **Downloads** folder.
 
-    ![](images/img4.png)
+    ![](images/new-image4.png)
 
 13. Switch to the **Visual Studio** window. In the **Solution Explorer** pane, right-click the **EShopOnWeb.Shared (1)** project folder and, in the right-click menu, select **Open Folder in File Explorer (2)**.
 
@@ -406,6 +408,8 @@ In this task, we will use a generic "Newtonsoft.Json" sample package, but you ca
 
 1. The Newtonsoft.Json package got installed in the Packages as **Newtonsoft.Json**. From the Visual Studio **Solution Explorer**, navigate to the **EShopOnWeb.Shared** Project, expand Dependencies, and notice the **Newtonsoft.Json** under the Packages. Click on the little arrow to the left of the Packages, to open the folder and file list.
 
+   ![](images/new-image2.png)
+
 ## Task 4: Upload the Open-Source NuGet package to Azure Artifacts
 
 Let's consider this package an "approved" package for our DevOps team to reuse, by uploading it to the Azure Artifacts Package feed created earlier.
@@ -442,18 +446,23 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
    ![](images/img10.png)
    
 1. From the Visual Studio **EShopOnWeb.Shared** Solution, right-click the **EShopOnWeb.Shared** Project, and select **Manage NuGet Packages** from the context menu.
+
 1. From the NuGet Package Manager window, validate the **Package Source** is set to **EShopOnWebShared**.
+
+     ![](images/new-image1.png)
+
 1. Click **Browse**, and wait for the list of NuGet Packages to load.
+
 1. This list will also show both the **EShopOnWeb.Shared** custom-developed package, as well as the **Newtonsoft.Json** public sourced package.
 
     ![](images/img11.png)
 
     > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-    > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+    
+    <validation step="24e21234-c893-4493-9184-a1cfa01e826c" />
 ## Review
 
 In this lab, you learned how to work with Azure Artifacts by using the following steps:

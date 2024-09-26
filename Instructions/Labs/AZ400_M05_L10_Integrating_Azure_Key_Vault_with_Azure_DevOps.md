@@ -1,4 +1,4 @@
-# Lab 10: Integrating Azure Key Vault with Azure DevOps
+# Lab 3: Integrating Azure Key Vault with Azure DevOps
 
 ## Lab overview
 
@@ -59,12 +59,18 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 
     ![Import Repository](images/lab-400-2.png)
 
-1.  The repository is organized the following way:
-    - **.ado** folder contains Azure DevOps YAML pipelines
-    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
-    - **.azure** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
+1. The repository is organized the following way:
+    - **.ado** folder contains Azure DevOps YAML pipelines.
+    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces).
+    - **infra** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
     - **.github** folder container YAML GitHub workflow definitions.
-    - **src** folder contains the .NET 6 website used on the lab scenarios.
+    - **src** folder contains the .NET 8 website used on the lab scenarios.
+
+#### Task 3: Set main branch as default branch
+
+1. Go to **Repos>Branches**.
+1. Hover on the **main** branch then click the ellipsis on the right of the column.
+1. Click on **Set as default branch**.
 
 # Exercise 1: Setup CI pipeline to build eShopOnWeb container
 
@@ -262,12 +268,12 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
 
 1. Your pipeline will take a name based on the project name. Lets **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/move** option. Name it **eshoponweb-cd-aci** and click on **Save**.
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
+    <validation step="3b8a38e3-4b54-4e83-9e58-3eea4ead17b7" />
 
 ## Review
 

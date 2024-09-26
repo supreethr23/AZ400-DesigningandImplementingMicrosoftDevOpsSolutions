@@ -1,4 +1,4 @@
-# Lab 17: Sharing Team Knowledge using Azure Project Wikis
+# Lab 1: Sharing Team Knowledge using Azure Project Wikis
 
 ## Lab overview
 
@@ -163,11 +163,12 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
       
      ![](images/AZ400_M09_L17_16.png)
     
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Select the **Lab Validation** tab located at the upper right corner of the lab guide section.
-     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
+   <validation step="71f00530-53c1-46ab-8ec4-40b2e8f4e351" />
 
 
 ## Task 2: Manage content of a published wiki
@@ -292,12 +293,12 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
      
       ![](images/AZ400_M09_L17_39.png)
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+   > - **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
+   <validation step="3bb5a4b0-5517-4fba-99eb-ad2674919d0f" />
 
 ## Task 2: Manage a project wiki
 

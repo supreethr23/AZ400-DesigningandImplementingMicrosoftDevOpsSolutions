@@ -1,4 +1,4 @@
-# Lab 03: Configuring Agent Pools and Understanding Pipeline Styles
+# Lab 01: Configuring Agent Pools and Understanding Pipeline Styles
 
 ## Lab overview
 
@@ -60,20 +60,33 @@ In this exercise, you will set up the prerequisite for the lab, which consists o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **Create**.
+   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name  **eShopOnWeb (1)**, select visibility as **Private(2)**  and leave the other fields with defaults. Click on **Create project (3)**.
+
+      ![](images/az400-m3-L4-03.png)
 
 ## Task 2: Configuring Components for Visual Studio
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL <https://github.com/MicrosoftLearning/eShopOnWeb.git> and click **Import**:
+1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created eShopOnWeb project. Click on             **Repos (1)>Files (2) , Import a Repository**. Select **Import (3)**. On the **Import a Git Repository (4)** window, paste the following URL                     https://github.com/MicrosoftLearning/eShopOnWeb.git (5) and click **Import (6)**.
 
-1. The repository is organized the following way:
-    - **.ado** folder contains Azure DevOps YAML pipelines.
-    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces).
-    - **infra** folder contains Bicep & ARM infrastructure as code templates used in some lab scenarios.
-    - **.github** folder contains YAML GitHub workflow definitions.
-    - **src** folder contains the .NET 8 website used in the lab scenarios.
+      ![](images/AZ-400-import.png)
+      
+      ![](images/AZ-400-git.png)
+
+   2. The repository is organized the following way:
+
+         o. **.ado** folder contains Azure DevOps YAML pipelines
+         
+         o **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
+         
+         o **.azure** folder contains Bicep & ARM infrastructure as code templates used in some lab scenarios.
+         
+         o **.github** folder contains YAML GitHub workflow definitions.
+         
+         o. **src** folder contains the .NET 6 website used in the lab scenarios.
+         
+       ![](images/az400-m3-L4-06.png)
 
 #### Task 3: Set main branch as default branch
 
@@ -89,17 +102,26 @@ In this exercise, you will create an application lifecycle build pipeline, using
 
 In this task, you will create a template-based Azure DevOps YAML pipeline.
 
-1. From the web browser displaying the Azure DevOps portal with the **eShopOnWeb** project open, in the vertical navigational pane on the left side, click **Pipelines**.
+1. Go to **Pipelines (1)>Pipelines (2)**. Click on **Create Pipeline (3)** or **New Pipeline** button.
 
-1. Click the **Create Pipeline** button - if you don't have any other pipelines created yet or click **New pipeline** to create an additional new one.
+      ![](images/AZ-400-create.png)  
 
-1. On the **Where is your code?** pane, click **Azure Repos Git**. 
+   2. Select **Azure Repos Git (YAML)**
 
-1. On the **Select a repository** pane, click **eShopOnWeb**.
+      ![](images/AZ-400-code.png)
 
-1. On the **Configure your pipeline** pane, click **Existing Azure Pipelines YAML File**.
-1. On the **Select an existing YAML file**, select **main** for the Branch, and **/.ado/eshoponweb-ci-pr.yml** for the Path.
-1. Click **Continue**.
+   3. Select the **eShopOnWeb** repository.
+
+      ![](images/az400-m3-L4-09.png)
+
+   4. Select **Existing Azure Pipelines YAML File**
+
+      ![](images/az400-m3-L4-10.png)
+
+   5. Select the path **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**.
+
+      ![](images/AZ-400-yaml.1.png)
+ 
 1. On the **Review your pipeline YAML** pane, review the sample pipeline. This is a rather straight-forward .NET application Build pipeline, which does the following:
 
    - A single Stage: Build
@@ -111,6 +133,8 @@ In this task, you will create a template-based Azure DevOps YAML pipeline.
 
 1. On the **Review your pipeline YAML** pane, click the down-facing caret symbol next to the **Run** button, click **Save**.
 
+    ![](images/az400-m3-L4-13.png)
+
     > Note: we are just creating the pipeline definition for now, without running it. You will first set up an Azure DevOps agent pool and run the pipeline in a later exercise. 
 
 # Exercise 2: Manage Azure DevOps agent pools
@@ -120,10 +144,6 @@ In this exercise, you will implement self-hosted Azure DevOps agent.
 ## Task 1: Configure an Azure DevOps self-hosting agent
 
 In this task, you will configure your lab Virtual Machine as an Azure DevOps self-hosting agent and use it to run a build pipeline.
-
-1. Within the Lab Virtual machine (Lab VM) or your own computer, start a web browser, navigate to [the Azure DevOps portal](https://dev.azure.com) and sign in by using the Microsoft account associated with your Azure DevOps organization.
-
-  > **Note**: The Lab Virtual machine should have all necessary prerequisite software installed. If you are installing on your own computer, you will need to install .NET 8 SDKs or higher necessary to build the demo project. See [Download .NET](https://dotnet.microsoft.com/download/dotnet).
 
 1.  In the Azure DevOps portal, in the upper right corner of the Azure DevOps page, click the **User settings** icon, in the dropdown menu, click **Personal access tokens**.
 
@@ -139,11 +159,13 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
     | Scope (custom defined) | **Agent Pools** click Show all scopes (at the bottom of the window)|
     | Agent Pools | **Read and manage** |
     
-     ![Azure DevOps](images/lab4-2.png)
+    ![Azure DevOps](images/lab4-2.png)
 
 1. On the **Success** pane, copy the value of the personal access token to Clipboard.
 
     > **Note**: Make sure you copy the token. You will not be able to retrieve it once you close this pane. 
+
+    ![Azure DevOps](images/token.png)
 
 1. On the **Success** pane, click **Close**.
 
@@ -163,8 +185,9 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 
 1. On the **Get the agent** pane, ensure that the **Windows** and **x64** tabs are selected, and click **Download** to download the zip archive containing the agent binaries to download it into the local **Downloads** folder within your user profile.
 
-   > **Note**: If you receive an error message at this point indicating that the current system settings prevent you from downloading the file, in the Browser window, in the upper right corner, click the gearwheel symbol designating the **Settings** menu header, in the dropdown menu, select **Internet Options**, in the **Internet Options** dialog box, click **Advanced**, on the **Advanced** tab, click **Reset**, in the **Reset Browser Settings** dialog box, click **Reset** again, click **Close**, and try the download again.
+   ![Azure DevOps](images/down.png)
 
+   > **Note**: If you receive an error message at this point indicating that the current system settings prevent you from downloading the file, in the Browser window, in the upper right corner, click the gearwheel symbol designating the **Settings** menu header, in the dropdown menu, select **Internet Options**, in the **Internet Options** dialog box, click **Advanced**, on the **Advanced** tab, click **Reset**, in the **Reset Browser Settings** dialog box, click **Reset** again, click **Close**, and try the download again.
 
 1.  Start Windows PowerShell as administrator and in the **Administrator: Windows PowerShell** console run the following lines to create the **C:\\agent** directory and extract the content of the downloaded archive into it.
 
@@ -187,22 +210,22 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
     | Setting | Value |
     | ------- | ----- |
     | Enter server URL | the URL of your Azure DevOps organization, in the format **https://dev.azure.com/<organization_name>**, where `<organization_name>` represents the name of your Azure DevOps organization |
-    | Enter authentication type (press enter for PAT) | **Enter** |
+    | Enter authentication type (press enter for PAT) | **Hit Enter** |
     | Enter personal access token | The access token you recorded earlier in this task |
     | Enter agent pool (press enter for default) | enter **az400m05l05a-pool** |
-    | Enter agent name (press enter for labvm-<inject key="DeploymentID" enableCopy="false"/>) | **Enter** |
-    | Enter work folder (press enter for _work) | **Enter** |
+    | Enter agent name (press enter for labvm-<inject key="DeploymentID" enableCopy="false"/>) | **Hit Enter** |
+    | Enter work folder (press enter for _work) | **Hit Enter** |
     | **(Only if shown)** Enter Perform an unzip for tasks for each step. (press enter for N) | **WARNING**: only press **Enter** if the message is shown|
     | Enter run agent as service? (Y/N) (press enter for N) | **Y** |
     | enter enable SERVICE_SID_TYPE_UNRESTRICTED (Y/N) (press enter for N) | **Y** |
-    | Enter User account to use for the service (press enter for NT AUTHORITY\NETWORK SERVICE) | **Enter** |
+    | Enter User account to use for the service (press enter for NT AUTHORITY\NETWORK SERVICE) | **Hit Enter** |
     | Enter whether to prevent service starting immediately after configuration is finished? (Y/N) (press enter for N) | **Enter** |
 
     > **Note**: You can run self-hosted agent as either a service or an interactive process. You might want to start with the interactive mode, since this simplifies verifying agent functionality. For production use, you should consider either running the agent as a service or as an interactive process with auto-logon enabled, since both persist their running state and ensure that the agent starts automatically if the operating system is restarted.
 
     > **Note**: Verify that the agent is reporting the **Listening for Jobs** status.
 
-      ![Azure DevOps](images/AZ-400-3.png)
+      ![Azure DevOps](images/pow.png)
 
 1.  Switch to the browser window displaying the Azure DevOps portal and close the **Get the agent** pane.
 
@@ -210,13 +233,13 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 
 1.  In the web browser window displaying the Azure DevOps portal, in the upper left corner, click the **Azure DevOps** label.
 
-1.  In the browser window displaying the list of projects, click the tile representing your **Configuring Agent Pools and Understanding Pipeline Styles** project.
+1.  In the browser window displaying the list of projects, click the tile representing your **eShopOnWeb** project.
  
-1.  On the **Configuring Agent Pools and Understanding Pipeline Styles** pane, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**. 
+1.  On the **eShopOnWeb** pane, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**. 
 
 1.  On the **Recent** tab of the **Pipelines** pane, select **eShopOnWeb** and, on the **eShopOnWeb** pane, select **Edit**.
 
-1.  On the **eShopOnWeb** edit pane, in the existing YAML-based pipeline, replace line  `vmImage: windows-2019` designating the target agent pool the following content, designating the newly created self-hosted agent pool:
+1. On the **eShopOnWeb** edit pane, in the existing YAML-based pipeline, replace line 13 which says  `vmImage: ubuntu-latest` designating the target agent pool the following content, designating the newly created self-hosted agent pool:
 
     ```yaml
     name: az400m05l05a-pool
@@ -224,8 +247,7 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
     - agent.name -equals Agentname
     ```
     > **Note**: Replace Agentname with **labvm-<inject key="DeploymentID" enableCopy="false"/>**
-    
-1.  Change `Task: NugetToolInstaller@0` to  `Task: NugetToolInstaller@1` . 
+
  
     ![Azure DevOps](images/az-400-lab3-6.png)
     
