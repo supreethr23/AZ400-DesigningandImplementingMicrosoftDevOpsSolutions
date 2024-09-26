@@ -1,4 +1,4 @@
-# Lab 15: Package Management with Azure Artifacts
+# Lab 1: Package Management with Azure Artifacts
 
 
 ## Lab overview

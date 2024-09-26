@@ -1,4 +1,4 @@
-# Lab 16: Monitoring Application Performance with Application Insights
+# Lab 1: Monitoring Application Performance with Application Insights
 
 ## Lab overview
 

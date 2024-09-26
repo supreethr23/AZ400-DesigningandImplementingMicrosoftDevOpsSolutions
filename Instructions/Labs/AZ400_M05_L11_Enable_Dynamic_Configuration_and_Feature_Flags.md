@@ -1,4 +1,4 @@
-# Lab 11: Enable Dynamic Configuration and Feature Flags
+# Lab 4: Enable Dynamic Configuration and Feature Flags
 
 ## Lab requirements
 

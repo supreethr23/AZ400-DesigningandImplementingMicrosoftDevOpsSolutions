@@ -1,4 +1,4 @@
-# Lab 07: Controlling Deployments using Release Gates
+# Lab 01: Controlling Deployments using Release Gates
 
 ## Lab overview
 

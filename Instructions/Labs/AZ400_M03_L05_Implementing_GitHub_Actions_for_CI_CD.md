@@ -1,4 +1,4 @@
-# Lab 05: Implementing GitHub Actions for CI/CD
+# Lab 01: Implementing GitHub Actions for CI/CD
 
 ## Lab overview
 
