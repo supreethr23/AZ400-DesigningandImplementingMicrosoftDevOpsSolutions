@@ -181,22 +181,27 @@ In this task, you will create a Service Principal by using the Azure CLI, which 
 
     ![New Service Connection](images/az-400-9a22.png)    
 
-1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **New Service Connection**.
+1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings (1) >Service Connections (2) (under Pipelines)** and **New Service Connection (3)**.
 
-    ![New Service Connection](images/new-service-connection.png)
+    ![New Service Connection](images/anew-service-connection.png)
 
 1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
 
 1. The choose **Service Principal (manual)** and click on **Next**.
 
 1. Fill in the empty fields using the information gathered during previous steps:
-    - Subscription Id and Name.
-    - Service Principal Id (appId), Service principal key (password) and Tenant ID (tenant).
-    - In **Service connection name** type **azure subs**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
+    - Subscription Id **(1)**
+    - Subscription Name **(2)**
+    - Service Principal Id (appId) **(3)**
+    - Service principal key (password) **(4)** and Tenant ID (tenant **(5)**
+    - In **Service connection name** type **azure subs (6)**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
+    - Click on **Verify and Save (7)**.
 
-    ![Azure Service Connection](images/azure-service-connection.png)
+    ![Azure Service Connection](images/az-400-9a24.png)
 
-1. Click on **Verify and Save**.
+    ![Azure Service Connection](images/az-400-9a25.png)   
+
+
 
 ### Task 2: Add a YAML build and deploy definition
 
@@ -373,7 +378,7 @@ In this task, you will add a YAML build definition to the existing project.
 1. Switch back to web browser window displaying the Azure portal and navigate to the blade displaying the properties of the Azure web app.
 1. On the Azure web app blade, click **Overview** and, on the overview blade, click **Browse** to open your site in a new web browser tab.
 
-   ![](images/9-13.png)
+   ![](images/az-400-9a12.png)
 
 1. Verify that the deployed site loads as expected in the new browser tab, showing the eShopOnWeb E-commerce website.
 
@@ -395,25 +400,30 @@ In this exercise, you will deploy an Azure Load Testing Resource in Azure, and c
 
 In this task, you will deploy an Azure Load Testing Resource into your Azure subscription.
 
-1. From the Azure Portal (<https://portal.azure.com>), navigate to **Create Azure Resource**.
-1. In the 'Search Services and marketplace' search field, enter **Azure Load Testing**.
-1. Select **Azure Load Testing** (published by Microsoft), from the search results.
+1. From the Azure Portal (<https://portal.azure.com>), navigate to **Create Resource**.
+   
+    ![](images/az-400-9a13.png)
+
+1. In the 'Search Services and marketplace' search field, enter **Azure Load Testing (1)**.
+   
+1. Select **Azure Load Testing (2)** (published by Microsoft), from the search results.
+   
+    ![](images/az-400-9a14.png)
+   
 1. From the Azure Load Testing Page, click **Create** to start the deployment process.
 1. From the 'Create a Load Testing Resource' page, provide the necessary details for the resource deployment:
-   - **Subscription**: select your Azure Subscription
-   - **Resource Group**: select **az400m09l16-RG**
-   - **Name**: eShopOnWebLoadTesting<inject key="DeploymentID" enableCopy="false"/>
-   - **Region**: Select a region that is close to your region
+   - **Subscription**: select your Azure Subscription **(1)**
+   - **Resource Group**: select **az400m09l16-RG (2)**
+   - **Name**: **eShopOnWebLoadTesting<inject key="DeploymentID" enableCopy="false"/> (3)**
+   - **Region**: Select a region that is close to your region **(4)**
 
     > **Note**: Azure Load Testing service is not available in all Azure Regions.
 
-1. Click **Review and Create**, to have your settings validated.
+1. Click **Review and Create (5)**, to have your settings validated.
 
-    ![](images/9-11.png)
+    ![](images/az-400-9a15.png)
 
 1. Click **Create** to confirm, and get the Azure Load Testing resource deployed.
-
-   ![](images/9-10.png)
 
 1. You are switched to the 'Deployment is in progress' page. Wait for a few minutes, until the deployment completes successfully.
 1. Click **Go to Resource** from the deployment progress page, to navigate to the **eShopOnWebLoadTesting** Azure Load Testing resource.
@@ -424,35 +434,37 @@ In this task, you will deploy an Azure Load Testing Resource into your Azure sub
 
 In this task, you will create different Azure Load Testing tests, using different load configuration settings.
 
-1. From within the **eShopOnWebLoadTesting** Azure Load Testing Resource blade, navigate to **Tests**. Click the **+Create** menu option, and select **Create a URL-based test**.
+1. From within the **eShopOnWebLoadTesting** Azure Load Testing Resource blade, navigate to **Tests (1)**. Click the **+Create (2)** menu option, and select **Create a URL-based test (3)**.
 
-   ![](images/9-9.png)
+   ![](images/az-400-9a16.png)
 
 1. Complete the following parameters and settings to create a load test:
-   - **Test URL**: Enter the URL from the Azure App Service you deployed in the previous exercise which looks similar to (**https://az400eshoponweb...azurewebsites.net/**),
-   - **Specify Load**: Virtual Users
-   - **Number of Virtual Users**: 50
-   - **Test Duration (minutes)**: 5
-   - **Ramp-up time (minutes)**:  1
+   - Make sure to disable **Enable Advanced settings (1)**
+   - **Test URL**: Enter the URL from the Azure App Service you deployed in the previous exercise which looks similar to (**https://az400eshoponweb...azurewebsites.net/**) **(2)**
+   - **Specify Load**: Virtual Users **(3)**
+   - **Number of Virtual Users**: 50 **(4)**
+   - **Test Duration (minutes)**: 5 **(5)**
+   - **Ramp-up time (minutes)**:  1 **(6)**
 
-1. Confirm the configuration of the test, by clicking **Review and Create**,  (Don't make any changes in the other tabs). Click **Create** once more.
+1. Confirm the configuration of the test, by clicking **Review and Create (7)**,  (Don't make any changes in the other tabs). Click **Create** once more.
 
-   ![](images/9-8.png)
+   ![](images/az-400-9a17.png)
 
 1. This kicks off the Load Testing tests, which will run The test will run for 5 minutes.
 1. With the test running, navigate back to the **eShopOnWebLoadTesting** Azure Load Testing Resource page, and navigate to **Tests**, select **Tests** and see a test **Get_eshoponweb...**
 1. From the top menu, click **Create**, **Create a URL-based test**, to create a 2nd Load test.
 1. Complete the following parameters and settings to create another load test:
-   - **Test URL**: Enter the URL from the Azure App Service you deployed in the previous exercise (eShopOnWeb...azurewebsites.net), **including https://**
-   - **Specify Load**: Requests per Second (RPS)
-   - **Requests per second (RPS)**: 100
-   - **Response time (milliseconds)**: 500
-   - **Test Duration (minutes)**: 5
-   - **Ramp-up time (minutes)**:  1
+   - Make sure to disable **Enable Advanced settings (1)**
+   - **Test URL**: Enter the URL from the Azure App Service you deployed in the previous exercise (eShopOnWeb...azurewebsites.net), **including https://** **(2)**
+   - **Specify Load**: Requests per Second (RPS) **(3)**
+   - **Requests per second (RPS)**: 100 **(4)**
+   - **Response time (milliseconds)**: 500 **(5)**
+   - **Test Duration (minutes)**: 5 **(6)**
+   - **Ramp-up time (minutes)**:  1 **(7)**
 
-1. Confirm the configuration of the test, by clicking **Review + create**, and **Create** once more.
+1. Confirm the configuration of the test, by clicking **Review + create (8)**, and **Create** once more.
 
-    ![](images/9-7.png)
+    ![](images/az-400-9a18.png)
 
 1. The test will run for about 5 minutes.
 
@@ -468,6 +480,8 @@ With both quick tests complete, let's make a few changes to them, and validate t
    - Duration
    - Response Time (shows the outcome in seconds, reflecting the 90th percentile response time - this means that, for 90% of the requests, the response time will be within the given results)
    - Throughput in requests per second
+     
+    ![](images/az-400-9a19.png)
 
 1. More below, several of these values are represented using dashboard graph line and chart views.
 1. Take a few minutes to **compare the results** of both simulated tests with each other, and **identify the impact** of more users on the App Service performance.
