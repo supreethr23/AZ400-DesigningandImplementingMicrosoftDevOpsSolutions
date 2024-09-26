@@ -143,7 +143,62 @@ In this task, you will create an Azure web app by using the cloud shell in Azure
 
 In this exercise, you will configure CI/CD Pipelines as code with YAML in Azure DevOps.
 
-### Task 1: Add a YAML build and deploy definition
+## Task 1: Create a Service Connection for deployment
+
+In this task, you will create a Service Principal by using the Azure CLI, which will allow Azure DevOps to:
+
+- Deploy resources on your Azure subscription.
+- Have read access on the later created Key Vault secrets.
+
+1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Microsoft Entra tenant associated with this subscription.
+1. In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
+
+     ![](images/az-400-9a2.png)
+   
+1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
+
+   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
+
+1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID and subscription name attributes:
+
+    ```bash
+    az account show --query id --output tsv
+    az account show --query name --output tsv
+    ```
+
+    > **Note**: Copy both values to a text file. You will need them later in this lab.
+
+1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a Service Principal (replace the **myServicePrincipalName** with any unique string of characters consisting of letters and digits like **mySP123**) and **mySubscriptionID** with your Azure subscriptionId :
+
+    ```bash
+    az ad sp create-for-rbac --name myServicePrincipalName \
+                         --role contributor \
+                         --scopes /subscriptions/mySubscriptionID
+    ```
+
+    > **Note**: The command will generate a JSON output. Copy the output to text file. You will need it later in this lab.
+
+
+    ![New Service Connection](images/az-400-9a22.png)    
+
+1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **New Service Connection**.
+
+    ![New Service Connection](images/new-service-connection.png)
+
+1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
+
+1. The choose **Service Principal (manual)** and click on **Next**.
+
+1. Fill in the empty fields using the information gathered during previous steps:
+    - Subscription Id and Name.
+    - Service Principal Id (appId), Service principal key (password) and Tenant ID (tenant).
+    - In **Service connection name** type **azure subs**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
+
+    ![Azure Service Connection](images/azure-service-connection.png)
+
+1. Click on **Verify and Save**.
+
+### Task 2: Add a YAML build and deploy definition
 
 In this task, you will add a YAML build definition to the existing project.
 
