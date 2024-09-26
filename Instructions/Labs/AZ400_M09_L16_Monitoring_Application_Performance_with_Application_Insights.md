@@ -374,7 +374,7 @@ In this task, you will create different Azure Load Testing tests, using differen
    ![](images/9-9.png)
 
 1. Complete the following parameters and settings to create a load test:
-   - **Test URL**: Enter the URL from the Azure App Service you deployed in the previous exercise (az400eshoponweb...azurewebsites.net), **including https://**
+   - **Test URL**: Enter the URL from the Azure App Service you deployed in the previous exercise which looks similar to (**https://az400eshoponweb...azurewebsites.net/**),
    - **Specify Load**: Virtual Users
    - **Number of Virtual Users**: 50
    - **Test Duration (minutes)**: 5
