@@ -168,6 +168,7 @@ In this task, you will add a YAML build definition to the existing project.
 1. **Copy** the full template pipeline from below, knowing you will need to make parameter modifications **before saving** the changes:
 
     ```yml
+    
     #Template Pipeline for CI/CD
     # trigger:
     # - main
@@ -224,8 +225,9 @@ In this task, you will add a YAML build definition to the existing project.
             downloadType: 'single'
             artifactName: 'Website'
             downloadPath: '$(Build.ArtifactStagingDirectory)'
-    ```
 
+    ```
+    
 1. Set the cursor on a new line at the end of the YAML definition. **Make sure you position the cursor at the indentation of the previous task level**.
 
     ![Import Repository](images/az-400-9a6.png)
