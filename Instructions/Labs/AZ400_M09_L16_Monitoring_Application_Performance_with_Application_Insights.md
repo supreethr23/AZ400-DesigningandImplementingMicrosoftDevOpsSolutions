@@ -32,41 +32,41 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+1. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
-3. On the next page accept defaults and click on continue.
+1. On the next page accept defaults and click on continue.
 
     ![Azure DevOps](images/400-3.png)
 
-4. On the **Almost Done...** page fill the captcha and click on continue. 
+1. On the **Almost Done...** page fill the captcha and click on continue. 
 
     ![Azure DevOps](images/m1-2.png)
 
-5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
+1. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
     ![Azure DevOps](images/agent1.png)
 
-6. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing**
+1. In the **Organization Setting** window on the left menu click on **Billing** and select **Setup Billing**
 
     ![Azure DevOps](images/agent3.png)
     
-7. On the **Setup Billing**,click on save.
+1. On the **Setup Billing**,click on save.
 
     ![Azure DevOps](images/agent4.png)    
 
-8. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and scroll down to the end of the page then click on **Save**.
+1. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and scroll down to the end of the page then click on **Save**.
 
     ![Azure DevOps](images/agent2.png)    
 
-9. In the **Organization Setting** window on the left menu click on **Policies** under Security and enable **Third-party application access via OAuth**.
+1. In the **Organization Setting** window on the left menu click on **Policies** under Security and enable **Third-party application access via OAuth**.
 
     ![Azure DevOps](images/policies-enable-3rd.png)    
 
-10. Navigate back to your Azure DevOps organization, by clicking on **Azure DevOps.** Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
+1. Navigate back to your Azure DevOps organization, by clicking on **Azure DevOps.** 
 
-    ![Create Project](images/create-project.png)
+    ![Create Project](images/az-400-9a1.png)
 
-11. On the **Create aproject to get started** page, Enter the following details.
+1. On the **Create aproject to get started** page, Enter the following details.
       - Project name: **eShopOnWeb (1)**
       - Under the **Advanced** section, choose **Scrum (2)** on the **Work Item process** dropdown and then click on **+ Create project (3)**.
      
@@ -88,16 +88,21 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 8 website used on the lab scenarios.
   
-1. Go to **Repos>Branches**.
-1. Hover on the **main** branch then click the ellipsis on the right of the column.
-1. Click on **Set as default branch**.
-
+1. Go to **Repos>Branches (1)**.
+1. Hover on the **main** branch then click the ellipsis on the right of the column **(2)**.
+1. Click on **Set as default branch (3)**.
+   
+    ![Import Repository](images/az-400-5.png)
+   
 ### Task 3: Create Azure resources
 
 In this task, you will create an Azure web app by using the cloud shell in Azure portal.
 
 1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Microsoft Entra tenant associated with this subscription.
 1. In the Azure portal, in the toolbar, click the **Cloud Shell** icon located directly to the right of the search text box.
+
+    ![Import Repository](images/az-400-9a2.png)
+   
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
 
@@ -144,13 +149,15 @@ In this task, you will add a YAML build definition to the existing project.
 
 1. In the vertical menu bar at the far left of the Azure DevOps portal, click **Repos** and, in the **Repos** section, click **Branches**.
 
-1. Navigate to the **Branches** pane and locate the **main** branch entry. Hover your mouse pointer over the right edge of the branch entry to reveal the vertical ellipsis character, indicating the presence of the **More options** menu. Ensure that **Set as default branch** is chosen. If it is not already selected, proceed to set it as the default branch by selecting **Set as default branch**.
+1. Navigate to the **Branches** pane and locate the **main** branch entry. Hover your mouse pointer over the right edge of the branch entry to reveal the vertical ellipsis character **(1)**, indicating the presence of the **More options** menu. Ensure that **Set as default branch (2)** is chosen. If it is not already selected, proceed to set it as the default branch by selecting **Set as default branch**.
 
     ![Sonarcloud PR settings](images/5.png)
 
-1. Navigate back to the **Pipelines** pane in of the **Pipelines** hub.
+1. Navigate back to the **Pipelines (1)** pane in of the **Pipelines** hub.
 
-1. Click **Create pipeline** .
+1. Click **Create pipeline (2)** .
+
+    ![Import Repository](images/az-400-9a3.png)
 
     > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
 
@@ -221,9 +228,18 @@ In this task, you will add a YAML build definition to the existing project.
 
 1. Set the cursor on a new line at the end of the YAML definition. **Make sure you position the cursor at the indentation of the previous task level**.
 
+    ![Import Repository](images/az-400-9a6.png)
+
     > **Note**: This will be the location where new tasks are added.
 
-1. Click **Show Assistant** from the right hand side of the portal. In the list of tasks, search for and select the **Azure App Service Deploy** task.
+1. Click **Show Assistant** from the right hand side of the portal.
+   
+    ![Import Repository](images/az-400-9a4.png)
+
+1. In the list of tasks, search for and select the **Azure App Service Deploy** task.
+   
+    ![Import Repository](images/az-400-9a5.png)
+   
 1. In the **Azure App Service deploy** pane, specify the following settings and click **Add**:
 
     - in the **Azure subscription** drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, - if needed (only when this is your first pipeline you create) click **Authorize**, and, when prompted, authenticate by using the same user account you used during the Azure resource deployment.
@@ -253,9 +269,13 @@ In this task, you will add a YAML build definition to the existing project.
 
 1. Before saving the updates to the yml-file, give it a more clear name. On top of the yaml-editor window, it shows **EShopOnweb/azure-pipelines-#.yml**. (where # is a number, typically 1 but could be different in your setup.) Select **that filename**, and rename it to **m09l16-pipeline.yml**
 
-1. Click **Validate + Save**, on the **Save** pane, click **Run** again to commit the change directly into the main branch.
+1. Click **Save and run.**  
 
      ![](images/9-14.png)
+
+1. Again click on **Save and tun** to commit the change directly into the main branch.
+
+     ![](images/az-400-9a7.png)
 
     > **Note**: Since our original CI-YAML was not configured to automatically trigger a new build, we have to initiate this one manually.
 
@@ -263,9 +283,15 @@ In this task, you will add a YAML build definition to the existing project.
 
     > **Note**: if you kept all previous pipelines from previous lab exercises, this new pipeline might have reused a default **eShopOnWeb (#)** sequence name for the pipeline as shown in below screenshot. Select a pipeline (most probably the one with the highest sequence number, select Edit and validate it points to the m09l16-pipeline.yml code file).
 
+     ![](images/az-400-9a8.png)    
+
 1. Confirm to run this pipeline by clicking **Run** from the appearing pane and confirm by clicking **Run** once more.
 
+     ![](images/az-400-9a9.png)
+
 1. Notice the 2 different Stages, **Build .Net Core Solution** and **Deploy to Azure Web App** appearing.
+
+     ![](images/az-400-9a10.png)
 
 1. Wait for the pipeline to kick off.
 
@@ -278,6 +304,9 @@ In this task, you will add a YAML build definition to the existing project.
     ```
 
 1. Click on **View**
+   
+     ![](images/az-400-9a11.png)
+
 1. From the **Waiting for Review** pane, click **Permit**.
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
 1. This sets off the Deploy Stage. Wait for this to complete successfully.
