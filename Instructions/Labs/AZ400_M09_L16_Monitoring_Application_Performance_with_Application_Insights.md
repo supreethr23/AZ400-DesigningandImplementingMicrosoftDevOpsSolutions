@@ -179,7 +179,7 @@ In this task, you will create a Service Principal by using the Azure CLI, which 
     > **Note**: The command will generate a JSON output. Copy the output to text file. You will need it later in this lab.
 
 
-    ![New Service Connection](images/az-400-9a22.png)    
+   ![New Service Connection](images/az-400-9a22.png)    
 
 1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings (1) >Service Connections (2) (under Pipelines)** and **New Service Connection (3)**.
 
@@ -568,13 +568,14 @@ Perform the following steps to download the input files for an existing load tes
 1. Commit all extracted input files to your source control repository. To do this, navigate to the **Azure DevOps Portal**(<https://dev.azure.com>), and navigate to the **eShopOnWeb** DevOps Project.
 1. Select **Repos**. In the source code folder structure, notice the **tests** subfolder. Notice the ellipsis (...) **(1)**, and select **New (2) > Folder (3)**.
 
-   ![](images/AZ-400-9a33.png)
-
+    ![](images/az-400-9a33.png)
+   
 1. Specify **jmeter** as folder name, and **placeholder.txt** for the file name (Note: a Folder cannot be created as empty)
 
    ![](images/9-4.png)
 
 1. Click **Commit** to confirm the creation of the placeholder file and jmeter folder.
+   
 1. From the **Folder structure**, navigate to the new created **jmeter** subfolder. Click the **ellipsis(...) (1)** and select **Upload File(s) (2)**.
    
     ![](images/az-400-9a34.png)
