@@ -212,7 +212,7 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 
 1.  On the **Recent** tab of the **Pipelines** pane, select **eShopOnWeb** and, on the **eShopOnWeb** pane, select **Edit**.
 
-1.  On the **eShopOnWeb** edit pane, in the existing YAML-based pipeline, replace line  `vmImage: windows-2019` designating the target agent pool the following content, designating the newly created self-hosted agent pool:
+1. On the **eShopOnWeb** edit pane, in the existing YAML-based pipeline, replace line 13 which says  `vmImage: ubuntu-latest` designating the target agent pool the following content, designating the newly created self-hosted agent pool:
 
     ```yaml
     name: az400m05l05a-pool
