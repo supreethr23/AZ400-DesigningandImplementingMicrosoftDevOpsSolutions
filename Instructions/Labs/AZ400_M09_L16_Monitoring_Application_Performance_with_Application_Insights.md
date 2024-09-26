@@ -511,23 +511,35 @@ In this task, you will grant the required permissions to the Azure DevOps Servic
 1. Notice the Service Connection, having the name of your Azure Subscription you used to deploy Azure Resources at the start of the lab exercise.
 1. **Select the Service Connection** named **azure subs**. From the **Overview** tab, navigate to **Details** and select **Manage app registration**.
 1. This redirects you to the Azure Portal, from where it opens the **Service Principal** details for the identity object.
-1. Copy the **Display Name** value (formatted like Name_of_ADO_Organization_eShopOnWeb_-b86d9ae1-7552-4b75-a1e0-27fb2ea7f9f4) aside, as you will need this in the next steps.
+1. Copy the **Display Name** value, as you will need this in the next steps.
 
-    ![](images/9-6.png)
+    ![](images/az-400-9a39.png)
 
 ### Task 2: Grant Service Principal Permissions
 
 Azure Load Testing uses Azure RBAC to grant permissions for performing specific activities on your load testing resource. To run a load test from your CI/CD pipeline, you grant the **Load Test Contributor** role to the service principal.
 
 1. In the **Azure portal**, go to your **Azure Load Testing** resource.
-1. Select **Access control (IAM)** > Add > Add role assignment.
-1. In the **Role tab**, select **Load Test Contributor** in the list of job function roles.
-1. In the **Members tab**, select **Select members**, and then use the **display name** you copied previously to search the service principal.
+1. Select **Access control (IAM) (1)** > Add > Add role assignment **(2)**.
+   
+    ![](images/az-400-9a26.png)
+
+1. In the **Role tab**, select **Load Test Contributor** in the list of job function roles and then slick on **Next.**
+   
+    ![](images/az-400-9a27.png)
+
+1. In the **Members tab**, select **Select members**
+   
+    ![](images/az-400-9a28.png)
+   
+1. Then use the **display name** you copied previously to search the service principal.
 1. Select the **service principal**, and then select **Select**.
+   
+    ![](images/az-400-9a29.png)
+
 1. In the **Review + assign tab**, select **Review + assign** to add the role assignment.
 
-   ![Screenshot of Azure Pipelines showing eShopOnWeb runs](images/9.png)
-
+   
 You can now use the service connection in your Azure Pipelines workflow definition to access your Azure load testing resource.
 
 ### Task 3: Export load test input files and Import to Azure Repos
@@ -538,25 +550,37 @@ Perform the following steps to download the input files for an existing load tes
 
 1. In the **Azure portal**, go to your **Azure Load Testing** resource.
 1. On the left pane, select **Tests** to view the list of load tests, and then select **your test**.
-1. Selecting the **ellipsis (...)** next to the test run you're working with, and then select **Download input file**.
+   
+    ![](images/az-400-9a30.png)
+   
+1. Selecting the **ellipsis (...) (1)** next to the test run you're working with, and then select **Download input file (2)**.
+   
+    ![](images/az-400-9a31.png)
+   
 1. The browser downloads a zipped folder that contains the load test input files.
 1. Use any zip tool to extract the input files. The folder contains the following files:
 
    - *config.yaml*: the load test YAML configuration file. You reference this file in the CI/CD workflow definition.
    - *quick_test.jmx*: the JMeter test script
+     
+    ![](images/az-400-9a32.png)
 
 1. Commit all extracted input files to your source control repository. To do this, navigate to the **Azure DevOps Portal**(<https://dev.azure.com>), and navigate to the **eShopOnWeb** DevOps Project.
-1. Select **Repos**. In the source code folder structure, notice the **tests** subfolder. Notice the ellipsis (...), and select **New > Folder**.
+1. Select **Repos**. In the source code folder structure, notice the **tests** subfolder. Notice the ellipsis (...) **(1)**, and select **New (2) > Folder (3)**.
 
-   ![](images/9-5.png)
+   ![](images/AZ-400-9a33.png)
 
 1. Specify **jmeter** as folder name, and **placeholder.txt** for the file name (Note: a Folder cannot be created as empty)
 
    ![](images/9-4.png)
 
 1. Click **Commit** to confirm the creation of the placeholder file and jmeter folder.
-1. From the **Folder structure**, navigate to the new created **jmeter** subfolder. Click the **ellipsis(...)** and select **Upload File(s)**.
+1. From the **Folder structure**, navigate to the new created **jmeter** subfolder. Click the **ellipsis(...) (1)** and select **Upload File(s) (2)**.
+   
+    ![](images/az-400-9a34.png)
+   
 1. Using the **Browse** option, navigate to the location of the extracted zip-file, and select both **config.yaml** and **quick_test.jmx**.
+   
 1. Click **Commit** to confirm the file upload into source control.
 
 ### Task 4: Update the CI/CD workflow YAML definition file
@@ -572,8 +596,8 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
    ![](images/9-2.png)
 
 1. From within the Azure DevOps Portal and Project, navigate to **Pipelines** and select the pipeline created at the start of this exercise. Click **Edit**.
-1. In the YAML script, navigate to **line 56** and press ENTER/RETURN, to add a new empty line. (this is right before the Deploy Stage of the YAML file).
-1. At line 57, select the Tasks Assistant to the right-hand side, and search for **Azure Load Testing**.
+1. In the YAML script, navigate to **line 43** and press ENTER/RETURN, to add a new empty line. (this is right before the Deploy Stage of the YAML file).
+1. At line 44, select the Tasks Assistant to the right-hand side, and search for **Azure Load Testing**.
 1. Complete the graphical pane with the correct settings of your scenario:
    - Azure Subscription: Select the subscription which runs your Azure Resources
    - Load Test File: **'$(Build.SourcesDirectory)/tests/jmeter/config.yaml'**
@@ -606,14 +630,22 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
         - publish: $(System.DefaultWorkingDirectory)/loadTest
           artifact: loadTestResults
     ```
-
+    
+    ![](images/az-400-9a35.png)
+   
 1. If the indentation of the YAML snippet is giving errors (red squiggly lines), fix them by adding 2 spaces or tab to position the snippet correctly.  
 1. With both snippets added to the CI/CD pipeline, **Validate + Save** the changes.
 1. Once saved, click **Run** to trigger the pipeline.
 1. Confirm the branch (main) and click the **Run** button to start the pipeline run.
 1. From the pipeline status page, click the **Build** stage to open the verbose logging details of the different tasks in the pipeline.
+   
+    ![](images/az-400-9a36.png)
+
 1. Wait for the pipeline to kick off the Build Stage, and arrive at the **AzureLoadTest** task in the flow of the pipeline.
 1. While the task is running, browse to the **Azure Load Testing** in the Azure Portal, and see how the pipeline creates a new RunTest, named **ado_run**. You can select it to show the outcome values of the TestRun job.
+   
+    ![](images/az-400-9a37.png)
+
 1. Navigate back to the Azure DevOps CI/CD Pipeline Run view, where the **AzureLoadTest task** completed successfully. From the verbose logging output, the resulting values of the load test will be visible as well:
 
     ```text
@@ -654,9 +686,12 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
 
 In this task, You'll use load test fail criteria to get alerted (have a failed pipeline run as result) when the application doesn't meet your quality requirements.
 
-1. From Azure DevOps, navigate to the eShopOnWeb Project, and open **Repos**.
+1. From Azure DevOps, navigate to the eShopOnWeb Project, and open **Repos (1)**.
 1. Within Repos, browse to the **/tests/jmeter** subfolder created and used earlier.
-1. Open the Load Testing *config.yaml** file. Click **Edit** to allow editing of the file.
+1. Open the Load Testing *config.yaml (2)** file. Click **Edit (3)** to allow editing of the file.
+   
+    ![](images/az-400-9a38.png)
+
 1. Replace `failureCriteria: []` with the following snippet of code:
 
     ```text
