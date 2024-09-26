@@ -634,7 +634,7 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
     ![](images/az-400-9a35.png)
    
 1. If the indentation of the YAML snippet is giving errors (red squiggly lines), fix them by adding 2 spaces or tab to position the snippet correctly.  
-1. With both snippets added to the CI/CD pipeline, **Validate + Save** the changes.
+1. With both snippets added to the CI/CD pipeline, **Validate + Save** the changes and click on save again.
 1. Once saved, click **Run** to trigger the pipeline.
 1. Confirm the branch (main) and click the **Run** button to start the pipeline run.
 1. From the pipeline status page, click the **Build** stage to open the verbose logging details of the different tasks in the pipeline.
