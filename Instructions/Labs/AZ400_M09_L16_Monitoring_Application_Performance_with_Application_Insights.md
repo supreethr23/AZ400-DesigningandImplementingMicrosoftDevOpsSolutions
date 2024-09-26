@@ -568,7 +568,7 @@ Perform the following steps to download the input files for an existing load tes
 1. Commit all extracted input files to your source control repository. To do this, navigate to the **Azure DevOps Portal**(<https://dev.azure.com>), and navigate to the **eShopOnWeb** DevOps Project.
 1. Select **Repos**. In the source code folder structure, notice the **tests** subfolder. Notice the ellipsis (...) **(1)**, and select **New (2) > Folder (3)**.
 
-   ![](images/AZ-400-9a33.png)
+    ![](images/AZ-400-9a33.png)
 
 1. Specify **jmeter** as folder name, and **placeholder.txt** for the file name (Note: a Folder cannot be created as empty)
 
