@@ -31,9 +31,14 @@ After you complete this lab, you will be able to:
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials provided in environment details tab.
 
-2. If the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+1. If the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
-3. On the next page accept defaults, accept the captcha and click on continue.
+
+1. On the next page accept defaults and click on continue.
+
+    ![Azure DevOps](images/400-3.png)
+   
+1. On the next page accept defaults, enter the captcha and click on continue.
 
     ![Azure DevOps](images/az-400-2.png)
     
