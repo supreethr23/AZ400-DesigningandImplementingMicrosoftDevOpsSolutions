@@ -48,7 +48,7 @@ After you complete this lab, you will be able to:
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the **eShopOnWeb**
 
-**Task 1: (skip if done) Create and configure the team project**
+#### Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -56,7 +56,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
       
       ![](images/3.createproject-1.png)
       
- **Task 2: (skip if done) Import eShopOnWeb Git Repository**
+ #### Task 2: (skip if done) Import eShopOnWeb Git Repository**
  
  In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -68,23 +68,22 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
       
       ![](images/5.Importarepo-2.png)
       
-   3. The repository is organized the following way:
+1. The repository is organized the following way:
+    - **.ado** folder contains Azure DevOps YAML pipelines.
+    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces).
+    - **infra** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
+    - **.github** folder container YAML GitHub workflow definitions.
+    - **src** folder contains the .NET 8 website used on the lab scenarios.
 
-        O **.ado** folder contains Azure DevOps YAML pipelines
-        
-        O **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
-        
-        O **.github** folder container YAML GitHub workflow definitions.
-        
-        O **.src** folder contains the .NET 6 website used on the lab scenarios.
-        
-        ![](images/6.repositoryview.png)
-        
-   **Task 3: (skip if done) Set main branch as default branch**
-   
-   1. Go to **Repos(1)>Branches(2)**. Hover on the **main(3)** branch then click the **ellipsis(4)** on the right of the column and Click on **Set as default branch(5)**
-      
-      ![](images/7.maindefaultbranch.png)
+      ![](images/6.repositoryview.png)
+
+#### Task 3: Set main branch as default branch
+
+1. Go to **Repos>Branches**.
+1. Hover on the **main** branch then click the ellipsis on the right of the column.
+1. Click on **Set as default branch**.
+
+   ![](images/7.maindefaultbranch.png)
       
 ### Exercise 1: Import and run CI/CD Pipelines
 
@@ -405,12 +404,12 @@ Let's continue to test the Feature manager.
 
    **Congratulations!!** In this task, you tested the **Feature manager** in Azure App Configuration.
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
+    <validation step="4335f5ab-842b-4822-8163-3fd01e57ac2d" />
 
 ## Review
 
