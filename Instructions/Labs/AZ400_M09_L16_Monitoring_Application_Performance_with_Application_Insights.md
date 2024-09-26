@@ -509,7 +509,7 @@ In this task, you will grant the required permissions to the Azure DevOps Servic
 1. From the down left corner, select **Project Settings**.
 1. Under the **Pipelines** section, select **Service Connections**.
 1. Notice the Service Connection, having the name of your Azure Subscription you used to deploy Azure Resources at the start of the lab exercise.
-1. **Select the Service Connection**. From the **Overview** tab, navigate to **Details** and select **Manage Service Principal**.
+1. **Select the Service Connection** named **azure subs**. From the **Overview** tab, navigate to **Details** and select **Manage app registration**.
 1. This redirects you to the Azure Portal, from where it opens the **Service Principal** details for the identity object.
 1. Copy the **Display Name** value (formatted like Name_of_ADO_Organization_eShopOnWeb_-b86d9ae1-7552-4b75-a1e0-27fb2ea7f9f4) aside, as you will need this in the next steps.
 
