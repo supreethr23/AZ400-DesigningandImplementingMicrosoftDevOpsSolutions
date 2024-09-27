@@ -138,7 +138,6 @@ In this task, you will create an Azure web app by using the cloud shell in Azure
  
    <validation step="a9a71552-429c-49fe-b249-1c8265a90fd0" />
 
-
 ## Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
 
 In this exercise, you will configure CI/CD Pipelines as code with YAML in Azure DevOps.
@@ -189,8 +188,7 @@ In this task, you will create a Service Principal by using the Azure CLI, which 
 
     > **Note**: The command will generate a JSON output. Copy the output to text file. You will need it later in this lab.
 
-
-   ![New Service Connection](images/az-400-9a22.png)    
+    ![New Service Connection](images/az-400-9a22.png)    
 
 1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings (1) >Service Connections (2) (under Pipelines)** and **New Service Connection (3)**.
 
@@ -211,7 +209,6 @@ In this task, you will create a Service Principal by using the Azure CLI, which 
     ![Azure Service Connection](images/az-400-9a24.png)
 
     ![Azure Service Connection](images/az-400-9a25.png)   
-
 
 
 ### Task 2: Add a YAML build and deploy definition
