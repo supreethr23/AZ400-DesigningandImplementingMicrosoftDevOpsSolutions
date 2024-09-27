@@ -273,7 +273,7 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="3b8a38e3-4b54-4e83-9e58-3eea4ead17b7" />
+   <validation step="10127a4a-453b-48da-b290-fea76e5a1dfe" />
 
 
 ## Review
