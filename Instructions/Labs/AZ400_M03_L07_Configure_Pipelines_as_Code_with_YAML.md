@@ -60,9 +60,9 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb (1)** and leave the other fields with defaults. Click on **Create (2) **.
+1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb_MultiStageYAML** and leave the other fields with defaults. Click on **Create**..
 
-    ![Azure DevOps](images/eshop.png)
+    ![Azure DevOps](images/AZ-400-5a1.png)
 
 ## Task 2: Import eShopOnWeb Git Repository
 
@@ -99,9 +99,11 @@ In this task, you will create an Azure web app by using the Azure portal.
    
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
    
+   
 1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
    
      ![](images/lab15-storage-acc-1.png)
+   
    
 1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
    
@@ -163,8 +165,12 @@ In this exercise, you will configure CI/CD Pipelines as code with YAML in Azure 
 
 In this task, you will add a YAML build definition to the existing project.
 
-1. Navigate back to the **Pipelines** pane in of the **Pipelines** hub.
-1. In the **Create your first Pipeline** window, click **Create pipeline**.
+
+1. Navigate back to the **Pipelines (1)** pane in of the **Pipelines** hub.
+
+1. Click **Create pipeline (2)** .
+
+    ![Import Repository](images/az-400-9a3.png)
 
     > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
 
@@ -209,24 +215,28 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 1. In the list of tasks on the right side of the code pane, search for and select the **Azure App Service Deploy** task.
 1. In the **Azure App Service deploy** pane, specify the following settings and click **Add**:
 
-    - in the **Azure subscription** drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click **Authorize**, and, when prompted, authenticate by using the same user account you used during the Azure resource deployment.
-    - in the **App Service name** dropdown list, select the name of the web app you deployed earlier in the lab.
-    - in the **Package or folder** text box, **update** the Default Value to `$(Build.ArtifactStagingDirectory)/**/Web.zip`.
+    - In the **Azure subscription** drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click **Authorize**, and, when prompted, authenticate by using the same user account you used during the Azure resource deployment.
+    - In the **App Service name** dropdown list, select the name of the web app you deployed earlier in the lab.
+    - In the **Package or folder** text box, **update** the Default Value to `$(Build.ArtifactStagingDirectory)/**/Web.zip`
+    - In the **Application and Configuration Settings** add `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development`
+      
 1. Confirm the settings from the Assistant pane by clicking the **Add** button.
 
     > **Note**: This will automatically add the deployment task to the YAML pipeline definition.
 
 1. The snippet of code added to the editor should look similar to below, reflecting your name for the azureSubscription and WebappName parameters:
 
-    ```yaml
-        - task: AzureRmWebAppDeployment@4
-          inputs:
-            ConnectionType: 'AzureRM'
-            azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
-            appType: 'webApp'
-            WebAppName: 'eshoponWebYAML369825031'
-            packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
-    ```
+   ```yaml
+   - task: AzureRmWebAppDeployment@4
+     inputs:
+       ConnectionType: "AzureRM"
+       azureSubscription: "AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)"
+       appType: "webApp"
+       WebAppName: "eshoponWebYAML369825031"
+       packageForLinux: "$(Build.ArtifactStagingDirectory)/**/Web.zip"
+       AppSettings: "-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development"
+   ```
+
 
 1. Validate the task is listed as a child of the **steps** task. If not, select all lines from the added task, press the **Tab** key twice to indent it four spaces, so that it listed as a child of the **steps** task.
 
@@ -356,7 +366,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 
     ```
 
-## Task 4: Review the deployed site
+## Task 3: Review the deployed site
 
 1. Switch back to web browser window displaying the Azure portal and navigate to the blade displaying the properties of the Azure web app.
 1. On the Azure web app blade, click **Overview** and, on the overview blade, click **Browse** to open your site in a new web browser tab.
@@ -423,32 +433,35 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
 
    The resulting YAML snippet should look like this now, reflecting the **Deploy Stage**:
 
-```yaml
-- stage: Deploy
-  displayName: Deploy to an Azure Web App
-  jobs:
-  - deployment: Deploy
-    environment: approvals
-    pool:
-      vmImage: 'windows-2019'
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - task: DownloadBuildArtifacts@0
-            inputs:
-              buildType: 'current'
-              downloadType: 'single'
-              artifactName: 'Website'
-              downloadPath: '$(Build.ArtifactStagingDirectory)'
-          - task: AzureRmWebAppDeployment@4
-            inputs:
-              ConnectionType: 'AzureRM'
-              azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
-              appType: 'webApp'
-              WebAppName: 'eshoponWebYAML369825031'
-              packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
-```
+
+   ```yaml
+   - stage: Deploy
+     displayName: Deploy to an Azure Web App
+     jobs:
+       - deployment: Deploy
+         environment: approvals
+         pool:
+           vmImage: "windows-2019"
+         strategy:
+           runOnce:
+             deploy:
+               steps:
+                 - task: DownloadBuildArtifacts@1
+                   inputs:
+                     buildType: "current"
+                     downloadType: "single"
+                     artifactName: "Website"
+                     downloadPath: "$(Build.ArtifactStagingDirectory)"
+                 - task: AzureRmWebAppDeployment@4
+                   inputs:
+                     ConnectionType: "AzureRM"
+                     azureSubscription: "AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)"
+                     appType: "webApp"
+                     WebAppName: "eshoponWebYAML369825031"
+                     packageForLinux: "$(Build.ArtifactStagingDirectory)/**/Web.zip"
+                     AppSettings: "-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development"
+   ```
+
 
 21. Confirm the changes to the code YAML file by clicking **Commit** and clicking **Commit** again in the appearing Commit pane.
 22. Navigate to the Azure DevOps Project menu to the left, select **Pipelines**, select **Pipelines** and notice the **EshopOnWeb_MultiStageYAML** Pipeline used earlier.
@@ -462,6 +475,31 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
 30. This allows the Deploy Stage to kick off and successfully deploying the Azure Web App source code.
    > **Note:** While this example only used the approvals, know the other checks such as Azure Monitor, REST API, etc... can be used in a similar way
 
+### Exercise 3: Remove the Azure lab resources
+
+In this exercise, you will remove the Azure resources provisioned in this lab to eliminate unexpected charges.
+
+> **Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+
+#### Task 1: Remove the Azure lab resources
+
+In this task, you will use Azure Cloud Shell to remove the Azure resources provisioned in this lab to eliminate unnecessary charges.
+
+1. In the Azure portal, open the **Bash** shell session within the **Cloud Shell** pane.
+1. List all resource groups created throughout the labs of this module by running the following command:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az400m05l11-RG')].name" --output tsv
+   ```
+
+1. Delete all resource groups you created throughout the labs of this module by running the following command:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az400m05l11-RG')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+   > **Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
+   
 ## Review
 
 In this lab, you configured CI/CD pipelines as code with YAML in Azure DevOps.
