@@ -1,4 +1,4 @@
-# Lab 02: Setting Up and Running Functional Tests
+# Lab 03: Setting Up and Running Functional Tests
 
 ## Lab overview
 
