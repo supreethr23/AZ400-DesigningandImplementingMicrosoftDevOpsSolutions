@@ -1,5 +1,6 @@
+[
   {
-    "Name": "Module 06: Manage infrastructure as code using Azure and DSC",
+    "Name": "AZ-400: Module 06: Design and implement a dependency management strategy",
     "Language": "English",
     "BaseURL": "https://github.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/tree/stage",
     "Files": [
@@ -8,9 +9,9 @@
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/stage-legacy/Instructions/AZ400_M07_L13_Package_Management_with_Azure_Artifacts.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/refs/heads/stage-legacy/Instructions/Labs/AZ400_M07_L13_Package_Management_with_Azure_Artifacts.md",
         "Order": 2
       }
     ]
   }
-
+]

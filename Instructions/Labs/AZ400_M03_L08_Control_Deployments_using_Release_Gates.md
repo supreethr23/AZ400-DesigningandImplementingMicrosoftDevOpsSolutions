@@ -1,4 +1,4 @@
-# Lab 01: Controlling Deployments using Release Gates
+# Lab 02: Controlling Deployments using Release Gates
 
 ## Lab overview
 
@@ -155,6 +155,13 @@ In this task, you will add a YAML build definition to the existing project.
 
     > **Note**: Each task from the YAML file is available for review, including any warnings and errors.
 
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
+    <validation step="6b9d31be-724d-4d12-ace3-7e2e42292c7a" />
+
 # Exercise 2: Creating the necessary Azure Resources for the Release Pipeline
 
 ## Task 1: Create two Azure web apps
@@ -296,12 +303,6 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
 1. Confirm the creation of the Alert rule by clicking **Review + create (5)**, and confirm once more by clicking **Create**. Wait for the alert rule to get created successfully.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   
-    <validation step="6b9d31be-724d-4d12-ace3-7e2e42292c7a" />
 
 # Exercise 3: Configure the release pipeline
 
@@ -356,7 +357,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
      ![Azure devops](images/contin1.png)  
    
-1. Within the **Canary Environments** stage, click the **1 job, 2 tasks** label and review the tasks within this stage.
+1. Within the **Canary Environments** stage, click the **1 job, 1 tasks** label and review the tasks within this stage.
      
       ![Azure devops](images/1job1task.png)
 
@@ -379,6 +380,8 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 1. Under **All pipelines > New Release Pipeline** pane, Click on **Tasks**,From the drop-down selct Select **Production**.
 
       ![Azure devops](images/selectpro.png)
+
+1. Open the **Application and Configuration Settings** pane and enter `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development` in the **App settings** box.
       
 3. In **Production(1)** stage Similar to the Canary stage earlier, complete the pipeline settings. Under the Tasks tab / Production Deployment process, in the **Azure subscription(2)** dropdown list, select the Azure subscription you used for the **Canary Environment** stage, shown under **Available Azure Service connections**, as we already created the service connection before when authorizing the subscription use. In the **App type** from the dropdown list select **Web App on Windows(3)**, In the **App Service name(4)** from the dropdown list, select the name of the **Prod** web app.
 
@@ -388,6 +391,8 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
      ![Azure devops](images/prodre.png)
 
+1. Open the **Application and Configuration Settings** pane and enter `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development` in the **App settings** box.
+   
 1. On the **All pipelines > New Release Pipeline** pane, click **Save** and, in the **Save** dialog box, click **OK**.
 
       ![Azure devops](images/saverepip.png)

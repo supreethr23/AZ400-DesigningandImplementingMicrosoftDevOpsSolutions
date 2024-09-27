@@ -234,9 +234,23 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
     Password:  <inject key="AzureAdUserPassword"></inject>
       
 1. In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
-1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
-   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **Getting Started** pop-up, click on **No storage account required** and select the subscription you are using in this lab, and click on **Apply**.
+     ![](images/az-400-9a2.png)
+   
+1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
+   
+1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
+   
+     ![](images/lab15-storage-acc-1.png)
+   
+1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
+   
+     ![](images/lab15-storage-acc-2.png)
+
+
+1. Use the existing **Subscription (1)** and **Resource group** as **AZ400-JumpVM (2)** and **Region** as **westus(3)** and specify new names for **Storage account** as **az400storage<inject key="DeploymentID" enableCopy="false" /> (4)** and **File share** as **az400fileshare<inject key="DeploymentID" enableCopy="false" /> (5)**, as shown in the dialog below. Then select **Create**.
+   
+     ![](images/az-400-storage.png)
 
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID and subscription name attributes:
 
@@ -320,14 +334,12 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
    ![Successful resource deployment to Azure using YAML pipelines](./images/6-1.png)
 
-  
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
-  <validation step="e4c21de8-402e-4ffc-aa10-61fe90dc9884" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="24e21234-c893-4493-9184-a1cfa01e826c" />
 
 ## Review
 
