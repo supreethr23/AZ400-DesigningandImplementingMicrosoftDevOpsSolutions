@@ -155,6 +155,13 @@ In this task, you will add a YAML build definition to the existing project.
 
     > **Note**: Each task from the YAML file is available for review, including any warnings and errors.
 
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
+    <validation step="6b9d31be-724d-4d12-ace3-7e2e42292c7a" />
+
 # Exercise 2: Creating the necessary Azure Resources for the Release Pipeline
 
 ## Task 1: Create two Azure web apps
