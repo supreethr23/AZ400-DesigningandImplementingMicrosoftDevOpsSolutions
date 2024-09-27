@@ -261,6 +261,8 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 
 1.  On the **Recent** tab of the **Pipelines** pane, click the **eShopOnWeb** entry, on the **Runs** tab of the **eShopOnWeb** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
 
+<validation step="E1C4127A-1F01-475B-8420-5B0F62E3C77D" />
+
 ## Review
 
 In this lab, you learned how to convert classic pipelines into YAML-based ones and how to implement and use self-hosted agents.
