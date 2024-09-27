@@ -62,7 +62,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb_MultiStageYAML** and leave the other fields with defaults. Click on **Create**..
 
-
+    ![Azure DevOps](images/AZ-400-5a1.png)
 
 ## Task 2: Import eShopOnWeb Git Repository
 
