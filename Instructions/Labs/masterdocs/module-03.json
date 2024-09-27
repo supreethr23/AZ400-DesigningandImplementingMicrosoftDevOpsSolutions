@@ -1,6 +1,6 @@
 [
     {
-      "Name": "Module 03A: Implement CI with Azure Pipelines and GitHub Actions",
+      "Name": "AZ-400: Module 03",
       "Language": "English",
       "BaseURL": "https://github.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/tree/stage",
       "Files": [
@@ -9,12 +9,16 @@
           "Order": 1
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/stage-legacy/Instructions/Labs/AZ400_M03_L03_Configuring_Agent_Pools_and_Understanding_Pipeline_Styles.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/refs/heads/stage-legacy/Instructions/Labs/AZ400_M03_L07_Configure_Pipelines_as_Code_with_YAML.md",
           "Order": 2
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/stage-legacy/Instructions/Labs/AZ400_M03_L04_Enabling_Continuous_Integration_with_Azure_Pipelines.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/refs/heads/stage-legacy/Instructions/Labs/AZ400_M03_L08_Control_Deployments_using_Release_Gates.md",
           "Order": 3
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/refs/heads/stage-legacy/Instructions/Labs/AZ400_M03_L09_Set_Up_and_Run_Functional_Tests.md",
+          "Order": 4
         }
       ]
     }

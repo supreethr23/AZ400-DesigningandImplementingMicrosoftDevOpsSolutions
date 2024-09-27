@@ -9,8 +9,12 @@
           "Order": 1
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/stage-legacy/Instructions/Labs/AZ400_M04_L07_Controlling_Deployments_using_Release_Gates.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/refs/heads/stage-legacy/Instructions/Labs/AZ400_M04_L10_Integrate_Azure_Key_Vault_with_Azure_DevOps.md",
           "Order": 2
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/refs/heads/stage-legacy/Instructions/Labs/AZ400_M04_L11_Enable_Dynamic_Configuration_and_Feature_Flags.md",
+          "Order": 3
         }
       ]
     }
