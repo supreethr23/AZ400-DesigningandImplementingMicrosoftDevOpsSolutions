@@ -31,13 +31,9 @@ After you complete this lab, you will be able to:
 
 2. In the pop-up for *Action Required*, select **Ask later**. 
 
-3. On the next page accept defaults and click on continue.
+3. On the next page accept defaults, fill the captcha and click on continue.
 
-    ![Azure DevOps](images/lab1-image1.png)
-    
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/lab1-image2.png)
+    ![Azure DevOps](images/400112.png)
     
 5. On the Azure DevOps page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
@@ -60,9 +56,9 @@ In this exercise, you will set up the prerequisite for the lab, which consists o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name  **eShopOnWeb (1)**, select visibility as **Private(2)**  and leave the other fields with defaults. Click on **Create project (3)**.
+   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name  **eShopOnWeb (1)**, select visibility as **Private(2)**  and leave the other fields with defaults. Click on **Create(3)**.
 
-      ![](images/az400-m3-L4-03.png)
+      ![](images/400113.png)
 
 ## Task 2: Configuring Components for Visual Studio
 
