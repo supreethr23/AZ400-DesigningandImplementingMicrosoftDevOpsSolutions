@@ -155,11 +155,11 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 
     | Setting | Value |
     | --- | --- |
-    | Name | **eShopOnWe** |
+    | Name | **eShopOnWeb** |
     | Scope (custom defined) | **Agent Pools** click Show all scopes (at the bottom of the window)|
     | Agent Pools | **Read and manage** |
     
-    ![Azure DevOps](images/lab4-2.png)
+    ![Azure DevOps](images/lab4-10.png)
 
 1. On the **Success** pane, copy the value of the personal access token to Clipboard.
 
@@ -175,9 +175,9 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 
 1. On the **Agent pools** pane, in the upper right corner, click **Add pool**. 
 
-1. On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name** text box, type **az400m05l05a-pool**, under **Pipeline permissions** select both checkboxes and then click **Create**.
+1. On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name** text box, type **az400m05l05a-pool**, under **Pipeline permissions** select the checkboxes and then click **Create**.
 
-    ![Azure DevOps](images/az-400-lab3-5.png)    
+    ![Azure DevOps](images/az-400-lab3-10.png)    
     
 1.  Back on the **Agent pools** pane, click the entry representing the newly created **az400m05l05a-pool**. 
 
@@ -209,7 +209,7 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 
     | Setting | Value |
     | ------- | ----- |
-    | Enter server URL | the URL of your Azure DevOps organization, in the format **https://dev.azure.com/<organization_name>**, where `<organization_name>` represents the name of your Azure DevOps organization |
+    | Enter server URL | Enter https://dev.azure.com/<organization_name>, where <organization_name> is your Azure DevOps organization name (after updating the url it look similar to https://dev.azure.com/odluser<inject key="DeploymentID" enableCopy="false"/>/) |
     | Enter authentication type (press enter for PAT) | **Hit Enter** |
     | Enter personal access token | The access token you recorded earlier in this task |
     | Enter agent pool (press enter for default) | enter **az400m05l05a-pool** |
@@ -258,13 +258,6 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 1. In the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**. Depending on your lab setup, the pipeline might prompt you for permissions. Click **Permit** to allow the pipeline to run. 
 
 1.  On the **Recent** tab of the **Pipelines** pane, click the **eShopOnWeb** entry, on the **Runs** tab of the **eShopOnWeb** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
- 
-   <validation step="9dd24edb-e361-4d58-81da-b73e4da3ea99" />
 
 ## Review
 
