@@ -211,7 +211,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
     - In the **Azure subscription** drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click **Authorize**, and, when prompted, authenticate by using the same user account you used during the Azure resource deployment.
     - In the **App Service name** dropdown list, select the name of the web app you deployed earlier in the lab.
     - In the **Package or folder** text box, **update** the Default Value to `$(Build.ArtifactStagingDirectory)/**/Web.zip`
-    - In the **Application and Configuration Settings** add `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development`
+    - In the **Application and Configuration Settings** at **App Settings** add `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development`
       
 1. Confirm the settings from the Assistant pane by clicking the **Add** button.
 
@@ -222,14 +222,15 @@ In this task, you will add continuous delivery to the YAML-based definition of t
    ```yaml
    - task: AzureRmWebAppDeployment@4
      inputs:
-       ConnectionType: "AzureRM"
-       azureSubscription: "AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)"
-       appType: "webApp"
-       WebAppName: "eshoponWebYAML369825031"
-       packageForLinux: "$(Build.ArtifactStagingDirectory)/**/Web.zip"
-       AppSettings: "-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development"
+       ConnectionType: 'AzureRM'
+       azureSubscription: 'MOC HOL 200196(c465113c-01ba-446f-943c-0f249c752a39)'
+       appType: 'webApp'
+       WebAppName: 'eshoponWebYAML533415268'
+       packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
+       AppSettings: |
+         -UseOnlyInMemoryDatabase true 
+         -ASPNETCORE_ENVIRONMENT Development
    ```
-
 
 1. Validate the task is listed as a child of the **steps** task. If not, select all lines from the added task, press the **Tab** key twice to indent it four spaces, so that it listed as a child of the **steps** task.
 
@@ -248,7 +249,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 1. The snippet of added code should look similar to below:
 
     ```yaml
-        - task: DownloadBuildArtifacts@0
+        - task: DownloadBuildArtifacts@1
           inputs:
             buildType: 'current'
             downloadType: 'single'
@@ -259,13 +260,13 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 
     > **Note**: Here as well you may also want to add an empty line before and after to make it easier to read.
 
-1. Click **Save**, on the **Save** pane, click **Save** again to commit the change directly into the master branch.
+1. Click **Validate and Save**, on the **Save** pane, click **Save** again to commit the change directly into the master branch.
 
     > **Note**: Since our original CI-YAML was not configured to automatically trigger a new build, we have to initiate this one manually.
 
-1. From the Azure DevOps left menu, navigate to **Pipelines** and select **Pipelines** again. 
-1. Open the **EShopOnWeb_MultiStageYAML** Pipeline and click **Run Pipeline**.
-1. Confirm the **Run** from the appearing pane.
+1. From the Azure DevOps left menu, navigate to **Pipelines** and select **EShopOnWeb_MultiStageYAML Pipelines** in recent tab. 
+1. On the **EShopOnWeb_MultiStageYAML** Pipeline and click **Run Pipeline**.
+1. Click on the **Run** from the appearing pane.
 1. Notice the 2 different Stages, **Build .Net Core Solution** and **Deploy to Azure Web App** appearing.
 1. Wait for the pipeline to kick off and wait until it completes the Build Stage successfully.
 1. Once the Deploy Stage wants to start, you are prompted with **Permissions Needed**, as well as an orange bar saying 
@@ -378,9 +379,8 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
 1. Click **Create Environment**.
 1. In the **New Environment** pane, add a Name for the Environment, called **approvals**.
 1. Under **Resources**, select **None**.
-1. Confirm the settings by pressing the **Create** button.
-1. Once the environment got created, click on the "ellipsis" (...) next to the button "Add Resource".
-1. Select **Approvals and Checks**.
+1. Confirm the settings by pressing the **Create** button. Once the environment got created.
+1. Select **Approvals and Checks** tab.
 1. From the **Add your first check**, select **Approvals**.
 1. Add your Azure DevOps User Account Name to the **approvers** field.
 
