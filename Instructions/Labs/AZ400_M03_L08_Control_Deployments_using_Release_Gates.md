@@ -530,6 +530,14 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
 
    [Azure devops](images/saverea.png)
 
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="29f6bfe8-0b16-4145-92f9-30e77d26ab03" />
+
 # Exercise 5: Test release gates
 
 In this exercise, you will test the release gates by updating the application, which will trigger a deployment.
