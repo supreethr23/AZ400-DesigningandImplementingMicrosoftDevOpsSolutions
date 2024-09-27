@@ -90,6 +90,9 @@ In this task, you will create an Azure web app by using the Azure portal.
 
 1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
 1. In the Azure portal, in the toolbar, click the **Cloud Shell** icon located directly to the right of the search text box.
+   
+    ![Import Repository](images/az-400-9a2.png)
+   
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
    
 1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
