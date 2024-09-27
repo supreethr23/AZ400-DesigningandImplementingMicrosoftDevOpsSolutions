@@ -151,7 +151,7 @@ You can notice that the Unit Tests task is already part of the pipeline.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="c1d57f7e-dc1d-4aa3-a6b6-830ee3880cd5" />
+   <validation step="484f548c-70cc-481c-a388-0d4b26788b99" />
 
 
 ## Review
