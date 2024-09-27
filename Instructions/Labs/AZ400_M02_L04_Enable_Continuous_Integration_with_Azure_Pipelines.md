@@ -355,7 +355,7 @@ In this task, you will add policies to the main branch and only allow changes us
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="94a8cfc0-766b-4257-b420-265113433302" />
+   <validation step="acd984e3-6678-4326-9460-21caeb9889c7" />
           
  ## Review
   
