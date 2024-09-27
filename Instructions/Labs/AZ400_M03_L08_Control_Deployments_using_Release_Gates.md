@@ -90,17 +90,6 @@ In this task, you will create two Azure web apps representing the **Canary** and
 1. In the Azure portal, click the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
 
    ![Clouldshell](images/cloudshell.png)
-  
-1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
-
-     ![Clouldshell](images/image001.png)
-
-    >**Note**: If this is the first time you are starting **Cloud Shell** , On Getting started pop up select **Mount Storage Account**, select the subscription you are using in this lab, and select **Apply**.
-   
-   ![Clouldshell](images/image002.png)
-
-    >**Note**: On Mount Storage Account pop up ,select **We will create a storage account for you** and click on **Next**. 
-   
     
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a resource group. 
 
