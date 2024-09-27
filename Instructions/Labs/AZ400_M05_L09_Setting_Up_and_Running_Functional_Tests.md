@@ -44,13 +44,13 @@ Identify the applications that you'll use in this lab:
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
 
-#### Task 1:  (skip if done) Create and configure the team project
+#### Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
 1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **Create**.
 
-#### Task 2:  (skip if done) Import the eShopOnWeb Git Repository
+#### Task 2: Import the eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -63,7 +63,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder contains YAML GitHub workflow definitions.
     - **src** folder contains the .NET website used in the lab scenarios.
 
-#### Task 3: (skip if done) Set main branch as default branch
+#### Task 3: Set main branch as default branch
 
 1. Go to **Repos>Branches**.
 1. Hover on the **main** branch then click the ellipsis on the right of the column.
@@ -131,20 +131,21 @@ You can notice that the Unit Tests task is already part of the pipeline.
 
 #### Task 4: Check the tests summary
 
+
 1. Click on the **Run**, then from the **Run pipeline** tab, click on **Run** again.
 
 1. Wait for the pipeline to start and until it completes the Build Stage successfully.
 
 1. Once completed, the **Test** tab will show as part of the pipeline run. Click on it to check the summary. It looks like shown below:
 
-   ![Tests Summary](images/AZ400_M05_L09_Tests_Summary.png)
+    ![Tests Summary](images/AZ400_M05_TEST.png)
 
 1. For more details, at the bottom of the page, the table shows a list of the different run tests.
 
     >**Note**: If the table is empty, you need to reset the filters to have all the details about the tests run.
 
-     ![Tests Table](images/AZ400_M05_L09_Tests_Table.png)
-
+    ![Tests Table](images/AZ400_M05_TEST1.png)
+   
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
