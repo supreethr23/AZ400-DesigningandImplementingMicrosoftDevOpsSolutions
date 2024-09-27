@@ -58,11 +58,11 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 ## Task 1: Create and configure the team project
 
-In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps project to be used by several labs.
+In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb_MultiStageYAML** and leave the other fields with defaults. Click on **Create**.
+1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb (1)** and leave the other fields with defaults. Click on **Create (2) **.
 
-    ![Create Project](images/az-400-5a1.png)
+    ![Azure DevOps](images/eshop.png)
 
 ## Task 2: Import eShopOnWeb Git Repository
 
