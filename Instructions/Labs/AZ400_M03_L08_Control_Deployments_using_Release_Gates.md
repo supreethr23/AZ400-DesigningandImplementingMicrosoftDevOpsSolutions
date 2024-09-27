@@ -45,7 +45,7 @@ After you complete this lab, you will be able to:
 In this task, you will add a YAML build definition to the existing project.
 
 1. Navigate back to the **Pipelines** pane in of the **Pipelines** hub.
-1. In the **Create your first Pipeline** window, click **Create pipeline**.
+1. In the **Create your Pipeline** window, click **New pipeline**.
 
     > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
 
@@ -53,7 +53,7 @@ In this task, you will add a YAML build definition to the existing project.
 
     ![Import Repository](images/newpip1.png)
       
-1. On the **Select a repository** pane, click **eShopOnWeb**.
+1. On the **Select a repository** pane, click **eShopOnWeb_MultiStageYAML**.
 
     ![Import Repository](images/newpip2.png)
 
