@@ -60,9 +60,9 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization. Click on New Project. Give your project the name **eShopOnWeb (1)**, select visibility as **Private(2)** and leave the other fields with defaults. Click on Create **project (3)**.
+1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb_MultiStageYAML** and leave the other fields with defaults. Click on **Create**..
 
-    ![Azure DevOps](images/az400-m3-L4-03.png)
+
 
 ## Task 2: Import eShopOnWeb Git Repository
 
@@ -99,9 +99,11 @@ In this task, you will create an Azure web app by using the Azure portal.
    
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
    
+   
 1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
    
      ![](images/lab15-storage-acc-1.png)
+   
    
 1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
    
