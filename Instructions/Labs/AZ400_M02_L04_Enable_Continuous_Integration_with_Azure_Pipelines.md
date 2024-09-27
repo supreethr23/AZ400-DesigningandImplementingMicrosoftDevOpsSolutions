@@ -157,7 +157,7 @@ In this task, you will add policies to the main branch and only allow changes us
           - src/web/*
       ``` 
 
-      ![](images/az-400-lab3-7.png)
+      ![](images/400s22.png)
 
       This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
     
