@@ -9,12 +9,8 @@
           "Order": 1
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/stage-legacy/Instructions/Labs/AZ400_M06_L12_Azure_Deployments_Using_Resource_Manager_Templates.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/refs/heads/stage-legacy/Instructions/Labs/AZ400_M07_L13_Package_Management_with_Azure_Artifacts.md.md",
           "Order": 2
-        },
-        {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/refs/heads/stage-legacy/Instructions/Labs/AZ400_M06_L13_Package_Management_with_Azure_Artifacts.md.md",
-          "Order": 3
         }
       ]
     }
