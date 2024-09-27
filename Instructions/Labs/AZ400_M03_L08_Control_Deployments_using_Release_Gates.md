@@ -177,7 +177,7 @@ In this exercise, you will configure a release pipeline.
 
 In this task, you will set up the release tasks as part of the Release Pipeline.
 
-1. From the **eShopOnWeb** project in the Azure DevOps portal, in the vertical navigational pane, select **Pipelines** and then, within the **Pipelines** section, click **Releases(1)**.
+1. From the **eShopOnWeb_MultiStageYAML** project in the Azure DevOps portal, in the vertical navigational pane, select **Pipelines** and then, within the **Pipelines** section, click **Releases(1)**.
 1. Click **New Pipeline(2)**.
     
      ![Azure devops](images/re.png)
@@ -196,7 +196,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
    
 1. From the **Stage** window appearing, update the default "Stage 1" Stage Name to **Canary**. Close the popup window by using the **X** button. You are now in the graphical editor of the Release Pipeline, showing the Canary Stage.
 
-    ![Azure devops](images/canary.png)
+    ![Azure devops](images/DevOpspage2.png)
    
 1. Hover the mouse over the Canary Stage, and click the **Clone** button, to copy the Canary Stage to an additional Stage. Name this Stage **Production**.
 
@@ -210,9 +210,9 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
      ![Azure devops](images/artifact.png)
      
-1. Select the **eShopOnWeb** in the **Source (build pipeline)** field. Click **Add** to confirm the selection of the artifact.
+1. Select the **eShopOnWeb_MultiStageYAML** in the **Source (build pipeline)** field. Click **Add** to confirm the selection of the artifact.
     
-     ![Azure devops](images/addartifact.png)
+     ![Azure devops](images/DevOpspage3.png)
 
 1. From the **Artifact** rectangle, notice the **Continuous Integration Trigger** (lightning bolt) appearing. 
 
