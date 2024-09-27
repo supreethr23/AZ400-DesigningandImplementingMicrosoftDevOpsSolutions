@@ -104,23 +104,23 @@ In this task, you will create a template-based Azure DevOps YAML pipeline.
 
 1. Go to **Pipelines (1)>Pipelines (2)**. Click on **Create Pipeline (3)** or **New Pipeline** button.
 
-      ![](images/AZ-400-create.png)  
+    ![](images/AZ-400-create.png)  
 
-   2. Select **Azure Repos Git (YAML)**
+2. Select **Azure Repos Git (YAML)**
 
-      ![](images/AZ-400-code.png)
+    ![](images/AZ-400-code.png)
 
-   3. Select the **eShopOnWeb** repository.
+3. Select the **eShopOnWeb** repository.
 
-      ![](images/az400-m3-L4-09.png)
+    ![](images/az400-m3-L4-09.png)
 
-   4. Select **Existing Azure Pipelines YAML File**
+4. Select **Existing Azure Pipelines YAML File**
 
-      ![](images/az400-m3-L4-10.png)
+    ![](images/az400-m3-L4-10.png)
 
-   5. Select the path **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**.
+5. Select the path **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**.
 
-      ![](images/AZ-400-yaml.1.png)
+    ![](images/AZ-400-yaml.1.png)
  
 1. On the **Review your pipeline YAML** pane, review the sample pipeline. This is a rather straight-forward .NET application Build pipeline, which does the following:
 
@@ -260,13 +260,6 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 1. In the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**. Depending on your lab setup, the pipeline might prompt you for permissions. Click **Permit** to allow the pipeline to run. 
 
 1.  On the **Recent** tab of the **Pipelines** pane, click the **eShopOnWeb** entry, on the **Runs** tab of the **eShopOnWeb** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
- 
-   <validation step="9dd24edb-e361-4d58-81da-b73e4da3ea99" />
 
 ## Review
 
