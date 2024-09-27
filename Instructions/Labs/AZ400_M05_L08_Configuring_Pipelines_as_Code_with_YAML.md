@@ -91,8 +91,19 @@ In this task, you will create an Azure web app by using the Azure portal.
 1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
 1. In the Azure portal, in the toolbar, click the **Cloud Shell** icon located directly to the right of the search text box.
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
+   
+1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
+   
+     ![](images/lab15-storage-acc-1.png)
+   
+1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
+   
+     ![](images/lab15-storage-acc-2.png)
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
+
+1. Use the existing **Subscription (1)** and **Resource group** as **AZ400-JumpVM (2)** and **Region** as **westus(3)** and specify new names for **Storage account** as **az400storage<inject key="DeploymentID" enableCopy="false" /> (4)** and **File share** as **az400fileshare<inject key="DeploymentID" enableCopy="false" /> (5)**, as shown in the dialog below. Then select **Create**.
+   
+     ![](images/az-400-storage.png)
 
     > **Note:** for a list of regions and their alias, run the following command from the Azure Cloud Shell - Bash:
 
