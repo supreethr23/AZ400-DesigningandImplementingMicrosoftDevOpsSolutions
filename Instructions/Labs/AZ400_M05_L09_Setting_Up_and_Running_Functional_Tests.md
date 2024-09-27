@@ -137,13 +137,21 @@ You can notice that the Unit Tests task is already part of the pipeline.
 
 1. Once completed, the **Test** tab will show as part of the pipeline run. Click on it to check the summary. It looks like shown below:
 
-    ![Tests Summary](images/AZ400_M05_L09_Tests_Summary.png)
+   ![Tests Summary](images/AZ400_M05_L09_Tests_Summary.png)
 
 1. For more details, at the bottom of the page, the table shows a list of the different run tests.
 
     >**Note**: If the table is empty, you need to reset the filters to have all the details about the tests run.
 
-    ![Tests Table](images/AZ400_M05_L09_Tests_Table.png)
+     ![Tests Table](images/AZ400_M05_L09_Tests_Table.png)
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="c1d57f7e-dc1d-4aa3-a6b6-830ee3880cd5" />
+
 
 ## Review
 
