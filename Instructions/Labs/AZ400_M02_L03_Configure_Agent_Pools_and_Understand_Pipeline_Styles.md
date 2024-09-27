@@ -261,7 +261,7 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 
 1.  On the **Recent** tab of the **Pipelines** pane, click the **eShopOnWeb** entry, on the **Runs** tab of the **eShopOnWeb** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
 
-<validation step="E1C4127A-1F01-475B-8420-5B0F62E3C77D" />
+<validation step="38dc84d9-2b4f-44c8-bf6f-1da2f5a9cde7" />
 
 ## Review
 
