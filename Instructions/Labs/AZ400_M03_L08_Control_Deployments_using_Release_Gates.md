@@ -475,7 +475,7 @@ In this task, you will configure pre-deployment gates.
      ![Azure devops](images/createnewre.png)
 1. Notice the green confirmation message, saying "Release-2" has been created. Click the link of "Release-2" to navigate to its details.
 
-1. Notice the **Canary** Stage is in a **Pending Approval** state. Click the **Approve** button and  click **Approve** button again. This sets off the Canary Stage again.
+1. Notice the **Canary** Stage is in a **Pending Approval** state. Click the **Approve** button. This sets off the Canary Stage again.
 
      ![Azure devops](images/approve.png) 
 
