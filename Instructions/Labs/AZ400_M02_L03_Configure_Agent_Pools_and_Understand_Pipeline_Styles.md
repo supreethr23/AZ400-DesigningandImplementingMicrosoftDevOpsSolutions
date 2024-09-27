@@ -257,9 +257,20 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
  
 1.  On the **eShopOnWeb** edit pane, in the upper right corner of the pane, click **Validate + Save** and, on the **Save** pane, click **Save** again. This will automatically trigger the build based on this pipeline. 
 
-1. In the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**. Depending on your lab setup, the pipeline might prompt you for permissions. Click **Permit** to allow the pipeline to run. 
+1. On the **Recent** tab of the **Pipelines** pane, click the **eShopOnWeb** entry,click on **Run** to run the pipeline
 
-1.  On the **Recent** tab of the **Pipelines** pane, click the **eShopOnWeb** entry, on the **Runs** tab of the **eShopOnWeb** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
+1. Depending on your lab setup, the pipeline might prompt you for permissions. Click **Permit** to allow the pipeline to run. 
+
+1. Wait until the build got succeeded.
+
+1. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis (1)** and **Rename/move (2)** option.
+   
+      ![](images/AZ-400-eshop.png)
+
+1. Name it **eshoponweb-ci-pr (1)** and click on **Save (2)**.
+
+      ![](images/AZ-400-rename.png)  
+
 
 <validation step="38dc84d9-2b4f-44c8-bf6f-1da2f5a9cde7" />
 
