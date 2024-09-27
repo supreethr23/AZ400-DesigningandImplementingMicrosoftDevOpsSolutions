@@ -471,6 +471,31 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
 30. This allows the Deploy Stage to kick off and successfully deploying the Azure Web App source code.
    > **Note:** While this example only used the approvals, know the other checks such as Azure Monitor, REST API, etc... can be used in a similar way
 
+### Exercise 3: Remove the Azure lab resources
+
+In this exercise, you will remove the Azure resources provisioned in this lab to eliminate unexpected charges.
+
+> **Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+
+#### Task 1: Remove the Azure lab resources
+
+In this task, you will use Azure Cloud Shell to remove the Azure resources provisioned in this lab to eliminate unnecessary charges.
+
+1. In the Azure portal, open the **Bash** shell session within the **Cloud Shell** pane.
+1. List all resource groups created throughout the labs of this module by running the following command:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az400m05l11-RG')].name" --output tsv
+   ```
+
+1. Delete all resource groups you created throughout the labs of this module by running the following command:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az400m05l11-RG')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+   > **Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
+   
 ## Review
 
 In this lab, you configured CI/CD pipelines as code with YAML in Azure DevOps.
