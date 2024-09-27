@@ -38,48 +38,7 @@ After you complete this lab, you will be able to:
 
 ## Estimated timing: 75 minutes
 
-# Exercise 1: Configure the lab prerequisites
-
-## Task 1: Configure CI Pipeline as Code with YAML in Azure DevOps
-
-In this task, you will add a YAML build definition to the existing project.
-
-1. Navigate back to the **Pipelines** pane in of the **Pipelines** hub.
-1. In the **Create your Pipeline** window, click **New pipeline**.
-
-    > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
-
-1. On the **Where is your code?** pane, click **Azure Repos Git (YAML)** option.
-
-    ![Import Repository](images/newpip1.png)
-      
-1. On the **Select a repository** pane, click **eShopOnWeb_MultiStageYAML**.
-
-    ![Import Repository](images/newpip2.png)
-
-1. On the **Configure your pipeline** pane, scroll down and select **Existing Azure Pipelines YAML File**.
-
-    ![Import Repository](images/newpip3.png)
-
-1. In the **Selecting an existing YAML File** blade, specify the following parameters:
-   
-    - Branch: **main**
-    - Path: Select **/.ado/eshoponweb-ci.yml** from the drop-down.
-
-        ![Import Repository](images/newpip4.png)
-  
-1. Click **Continue** to save these settings.
-1. From the **Review your Pipeline YAML** screen, click **Run** to start the Build Pipeline process.
-
-     ![Import Repository](images/newpip5.png)
-   
-1. Wait for the Build Pipeline to complete successfully. Ignore any warnings regarding the source code itself, as they are not relevant for this lab exercise.
-
-    ![Import Repository](images/newpip6.png)
-
-    > **Note**: Each task from the YAML file is available for review, including any warnings and errors.
-
-# Exercise 2: Creating the necessary Azure Resources for the Release Pipeline
+# Exercise 1: Creating the necessary Azure Resources for the Release Pipeline
 
 ## Task 1: Create two Azure web apps
 
@@ -210,7 +169,7 @@ In this task, you will create two Azure web apps representing the **Canary** and
 1. Confirm the creation of the Alert rule by clicking **Review + create (5)**, and confirm once more by clicking **Create**. Wait for the alert rule to get created successfully.
 
 
-# Exercise 3: Configure the release pipeline
+# Exercise 2: Configure the release pipeline
 
 In this exercise, you will configure a release pipeline.
 
@@ -339,7 +298,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
     > **Note**: Now you have the application with CI/CD configured. In the next exercise we will set up Quality Gates as part of a more advanced  Release pipeline.
 
-# Exercise 4: Configure release gates
+# Exercise 3: Configure release gates
 
 In this exercise, you will set up Quality Gates in the release pipeline.
 
@@ -437,7 +396,7 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
  
    <validation step="29f6bfe8-0b16-4145-92f9-30e77d26ab03" />
 
-# Exercise 5: Test release gates
+# Exercise 4: Test release gates
 
 In this exercise, you will test the release gates by updating the application, which will trigger a deployment.
 
