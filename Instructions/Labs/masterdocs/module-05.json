@@ -1,6 +1,6 @@
 [
     {
-      "Name": "Module 05: Implement a secure continuous deployment using Azure Pipelines",
+      "Name": "Module 05: Manage infrastructure as code using Azure and DSC",
       "Language": "English",
       "BaseURL": "https://github.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/tree/stage",
       "Files": [

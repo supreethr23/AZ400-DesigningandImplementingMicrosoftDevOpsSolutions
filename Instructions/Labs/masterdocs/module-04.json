@@ -1,6 +1,6 @@
 [
     {
-      "Name": "Module 04: Design and implement a release strategy",
+      "Name": "Module 04: Implement a secure continuous deployment using Azure Pipelines",
       "Language": "English",
       "BaseURL": "https://github.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/tree/stage",
       "Files": [
