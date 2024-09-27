@@ -42,7 +42,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
   
-## Task 4: Set main branch as default branch
+## Task 2: Set main branch as default branch
 
 1. Go to **Repos>Branches (1)**.
 1. Hover on the **main** branch then click the ellipsis on the right of the column **(2)**.
@@ -50,7 +50,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
    
     ![Import Repository](images/az-400-5.png)
    
-## Task 5: Configure Git and Visual Studio Code
+## Task 3: Configure Git and Visual Studio Code
 
 In this task, you will configure Git and Visual Studio Code, including configuring the Git credential helper to securely store the Git credentials used to communicate with Azure DevOps.
 
@@ -82,6 +82,8 @@ In this task, you will configure Git and Visual Studio Code, including configuri
 # Exercise 1: Clone an existing repository
 
 In this exercise, you use Visual Studio Code to clone the Git repository you provisioned as part of the previous exercise.
+
+## Exercise 0: Configure the lab prerequisites
 
 ## Task 1: Clone an existing repository
 
