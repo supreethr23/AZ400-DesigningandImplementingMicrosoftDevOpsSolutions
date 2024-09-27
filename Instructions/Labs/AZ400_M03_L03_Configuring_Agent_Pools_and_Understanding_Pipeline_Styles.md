@@ -199,6 +199,8 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
     [System.IO.Compression.ZipFile]::ExtractToDirectory($TARGET, "$PWD")
     ```
 
+    >**Note**: If you encounter an error indicating that the item already exists, please disregard it and proceed with the next steps.
+
 1.  In the same **Administrator: Windows PowerShell** console, run the following to configure the agent:
 
     ```powershell
