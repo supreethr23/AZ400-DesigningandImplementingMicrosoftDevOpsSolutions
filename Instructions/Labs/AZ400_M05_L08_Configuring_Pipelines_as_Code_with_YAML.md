@@ -165,8 +165,12 @@ In this exercise, you will configure CI/CD Pipelines as code with YAML in Azure 
 
 In this task, you will add a YAML build definition to the existing project.
 
-1. Navigate back to the **Pipelines** pane in of the **Pipelines** hub.
-1. In the **Create your first Pipeline** window, click **Create pipeline**.
+
+1. Navigate back to the **Pipelines (1)** pane in of the **Pipelines** hub.
+
+1. Click **Create pipeline (2)** .
+
+    ![Import Repository](images/az-400-9a3.png)
 
     > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
 
