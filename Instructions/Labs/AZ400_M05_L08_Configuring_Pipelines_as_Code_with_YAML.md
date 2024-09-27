@@ -211,24 +211,28 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 1. In the list of tasks on the right side of the code pane, search for and select the **Azure App Service Deploy** task.
 1. In the **Azure App Service deploy** pane, specify the following settings and click **Add**:
 
-    - in the **Azure subscription** drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click **Authorize**, and, when prompted, authenticate by using the same user account you used during the Azure resource deployment.
-    - in the **App Service name** dropdown list, select the name of the web app you deployed earlier in the lab.
-    - in the **Package or folder** text box, **update** the Default Value to `$(Build.ArtifactStagingDirectory)/**/Web.zip`.
+    - In the **Azure subscription** drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click **Authorize**, and, when prompted, authenticate by using the same user account you used during the Azure resource deployment.
+    - In the **App Service name** dropdown list, select the name of the web app you deployed earlier in the lab.
+    - In the **Package or folder** text box, **update** the Default Value to `$(Build.ArtifactStagingDirectory)/**/Web.zip`
+    - In the **Application and Configuration Settings** add `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development`
+      
 1. Confirm the settings from the Assistant pane by clicking the **Add** button.
 
     > **Note**: This will automatically add the deployment task to the YAML pipeline definition.
 
 1. The snippet of code added to the editor should look similar to below, reflecting your name for the azureSubscription and WebappName parameters:
 
-    ```yaml
-        - task: AzureRmWebAppDeployment@4
-          inputs:
-            ConnectionType: 'AzureRM'
-            azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
-            appType: 'webApp'
-            WebAppName: 'eshoponWebYAML369825031'
-            packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
-    ```
+   ```yaml
+   - task: AzureRmWebAppDeployment@4
+     inputs:
+       ConnectionType: "AzureRM"
+       azureSubscription: "AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)"
+       appType: "webApp"
+       WebAppName: "eshoponWebYAML369825031"
+       packageForLinux: "$(Build.ArtifactStagingDirectory)/**/Web.zip"
+       AppSettings: "-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development"
+   ```
+
 
 1. Validate the task is listed as a child of the **steps** task. If not, select all lines from the added task, press the **Tab** key twice to indent it four spaces, so that it listed as a child of the **steps** task.
 
