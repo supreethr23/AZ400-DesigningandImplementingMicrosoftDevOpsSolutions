@@ -149,13 +149,6 @@ In this task, you will create an Azure web app by using the Azure portal.
 
 1. Close the Azure Cloud Shell, but leave the Azure Portal open in the browser.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
- 
-   <validation step="9b51081b-6d2a-4280-8549-296f067e3156" />
-
 
 # Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
 
@@ -377,7 +370,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="69d21df0-0bae-4d36-8a5b-6e5dd3d2107e" />
+   <validation step="9dd24edb-e361-4d58-81da-b73e4da3ea99" />
 
 # Exercise 2: Configure Environment settings for CI/CD Pipelines as Code with YAML in Azure DevOps
 
