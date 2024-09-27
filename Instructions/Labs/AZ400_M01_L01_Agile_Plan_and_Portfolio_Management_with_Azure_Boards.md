@@ -43,9 +43,9 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 ## Task 1: Configure the team project
 
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
+In this task, you will create an **EShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization. Select your **Organization (1)** and give your project name **eShopOnWeb (2)**, select visibility as **Private(3)** and under the **Advanced (4)** section, choose **Scrum (5)** on the **Work Item process** dropdown. Click on **+ Create project (6)**.
+1. On your lab computer, in a browser window open your Azure DevOps organization. Select your **Organization (1)** and give your project name **EShopOnWeb (2)**, select visibility as **Private(3)** and under the **Advanced (4)** section, choose **Scrum (5)** on the **Work Item process** dropdown. Click on **+ Create project (6)**.
 
    ![Create Project](images/lab01-image-01.png)
     
@@ -59,9 +59,7 @@ In this task, you will create a new team and configure its area and iterations.
 
 Each new project is configured with a default team, which name matches the project name. You have the option of creating additional teams. Each team can be granted access to a suite of Agile tools and team assets. The ability to create multiple teams gives you the flexibility to choose the proper balance between autonomy and collaboration across the enterprise. 
 
-1. Verify that the web browser displays your Azure DevOps organization with the **EShopOnWeb** project you generated in the previous exercise. 
-
-   > **Note**: Alternatively, you can access the project page directly by navigating to the [https://dev.azure.com/`<your-Azure-DevOps-account-name>`/Agile%20Planning%20and%20Portfolio%20Management%20with%20Azure%20Boards) URL, where the `<your-Azure-DevOps-account-name>` placeholder, represents your account name. 
+1. Verify that the web browser displays your Azure DevOps organization with the **EShopOnWeb** project you generated in the previous exercise.
 
 1. Click the cogwheel icon labeled **Project settings** located in the lower left corner of the page to open the **Project settings** page.
 
@@ -601,4 +599,4 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 
 In this lab you used Azure Boards to perform a number of common agile planning and portfolio management tasks, including management of teams, areas, iterations, work items, sprints and capacity, customizing Kanban boards, defining dashboards, and customizing team processes.
 
-### You have successfully completed the lab.
+### You have successfully completed the lab >> Click on Next
