@@ -365,13 +365,6 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 1. On the Azure web app blade, click **Overview** and, on the overview blade, click **Browse** to open your site in a new web browser tab.
 1. Verify that the deployed site loads as expected in the new browser tab, showing the EShopOnWeb E-commerce website.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
- 
-   <validation step="9dd24edb-e361-4d58-81da-b73e4da3ea99" />
-
 # Exercise 2: Configure Environment settings for CI/CD Pipelines as Code with YAML in Azure DevOps
 
 In this exercise, you will add approvals to a YAML-based Pipeline in Azure DevOps.
@@ -467,6 +460,14 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
 29. This is visible from the Pipeline view, where it says **Waiting (0/1 checks passed)**. A notification message is also displayed saying **approval needs review before this run can continue to Deploy to an Azure Web App**. 
 30. This allows the Deploy Stage to kick off and successfully deploying the Azure Web App source code.
    > **Note:** While this example only used the approvals, know the other checks such as Azure Monitor, REST API, etc... can be used in a similar way
+
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="a03ccb27-424c-486e-9b76-b75cd7f250e7" />
 
 ### Exercise 3: Remove the Azure lab resources
 
