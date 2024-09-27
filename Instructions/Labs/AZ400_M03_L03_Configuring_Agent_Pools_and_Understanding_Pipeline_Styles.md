@@ -104,23 +104,23 @@ In this task, you will create a template-based Azure DevOps YAML pipeline.
 
 1. Go to **Pipelines (1)>Pipelines (2)**. Click on **Create Pipeline (3)** or **New Pipeline** button.
 
-      ![](images/AZ-400-create.png)  
+    ![](images/AZ-400-create.png)  
 
-   2. Select **Azure Repos Git (YAML)**
+2. Select **Azure Repos Git (YAML)**
 
-      ![](images/AZ-400-code.png)
+    ![](images/AZ-400-code.png)
 
-   3. Select the **eShopOnWeb** repository.
+3. Select the **eShopOnWeb** repository.
 
-      ![](images/az400-m3-L4-09.png)
+    ![](images/az400-m3-L4-09.png)
 
-   4. Select **Existing Azure Pipelines YAML File**
+4. Select **Existing Azure Pipelines YAML File**
 
-      ![](images/az400-m3-L4-10.png)
+    ![](images/az400-m3-L4-10.png)
 
-   5. Select the path **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**.
+5. Select the path **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**.
 
-      ![](images/AZ-400-yaml.1.png)
+    ![](images/AZ-400-yaml.1.png)
  
 1. On the **Review your pipeline YAML** pane, review the sample pipeline. This is a rather straight-forward .NET application Build pipeline, which does the following:
 
@@ -198,6 +198,8 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
     Add-Type -AssemblyName System.IO.Compression.FileSystem
     [System.IO.Compression.ZipFile]::ExtractToDirectory($TARGET, "$PWD")
     ```
+
+    >**Note**: If you encounter an error indicating that the item already exists, please disregard it and proceed with the next steps.
 
 1.  In the same **Administrator: Windows PowerShell** console, run the following to configure the agent:
 
