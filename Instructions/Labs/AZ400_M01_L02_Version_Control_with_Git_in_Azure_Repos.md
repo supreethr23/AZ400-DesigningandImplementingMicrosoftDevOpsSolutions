@@ -83,8 +83,6 @@ In this task, you will configure Git and Visual Studio Code, including configuri
 
 In this exercise, you use Visual Studio Code to clone the Git repository you provisioned as part of the previous exercise.
 
-## Exercise 0: Configure the lab prerequisites
-
 ## Task 1: Clone an existing repository
 
 In this task, you will step through the process of cloning a Git repository by using Visual Studio Code.
