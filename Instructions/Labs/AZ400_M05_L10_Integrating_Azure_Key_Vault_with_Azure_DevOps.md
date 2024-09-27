@@ -15,7 +15,7 @@ In this lab, you will see how you can integrate Azure Key Vault with an Azure De
 
 After you complete this lab, you will be able to:
 
--   Create an Azure Active Directory (Azure AD) service principal.
+- Create a Microsoft Entra service principal.
 -   Create an Azure key vault. 
 -   Track pull requests through the Azure DevOps pipeline.
 
@@ -268,12 +268,13 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
 
 1. Your pipeline will take a name based on the project name. Lets **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/move** option. Name it **eshoponweb-cd-aci** and click on **Save**.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   
-    <validation step="3b8a38e3-4b54-4e83-9e58-3eea4ead17b7" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="3b8a38e3-4b54-4e83-9e58-3eea4ead17b7" />
+
 
 ## Review
 
