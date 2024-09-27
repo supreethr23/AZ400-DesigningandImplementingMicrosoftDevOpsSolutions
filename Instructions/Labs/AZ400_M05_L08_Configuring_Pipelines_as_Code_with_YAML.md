@@ -58,19 +58,20 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 ## Task 1: Create and configure the team project
 
-In this task, you will create an **eShopOnWeb_MultiStageYAML** Azure DevOps project to be used by several labs.
+In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb_MultiStageYAML** and leave the other fields with defaults. Click on **Create**.
+1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb (1)** and leave the other fields with defaults. Click on **Create (2) **.
 
-    ![Create Project](images/az-400-5-7.png)
+    ![Azure DevOps](images/eshop.png)
 
 ## Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb_MultiStageYAML** project. Click on **Repos>Files** , **Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click **Import**:
+1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Navigate to **Repos (1)>Files (2)** and then click on **Import (3)** within the **Import a repository** card. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git **(4)** and click on **Import (5)**:
 
-    ![Import Repository](images/az-400-5-8.png)
+    ![Import Repository](images/az-400-4.png)
+
 
 1.  The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines
@@ -78,11 +79,14 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **infra** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 6 website used on the lab scenarios.
+  
 
-1. Go to **Repos>Branches**.
-1. Hover on the **main** branch then click the ellipsis on the right of the column.
-1. Click on **Set as default branch**.
-
+1. Go to **Repos>Branches (1)**.
+1. Hover on the **main** branch then click the ellipsis on the right of the column **(2)**.
+1. Click on **Set as default branch (3)**.
+   
+    ![Import Repository](images/az-400-5.png)
+   
 
 ## Task 2: Create Azure resources
 
@@ -90,9 +94,23 @@ In this task, you will create an Azure web app by using the Azure portal.
 
 1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has the Owner role in the Azure subscription you will be using in this lab and has the role of the Global Administrator in the Azure AD tenant associated with this subscription.
 1. In the Azure portal, in the toolbar, click the **Cloud Shell** icon located directly to the right of the search text box.
+   
+    ![Import Repository](images/az-400-9a2.png)
+   
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
+   
+1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
+   
+     ![](images/lab15-storage-acc-1.png)
+   
+1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
+   
+     ![](images/lab15-storage-acc-2.png)
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
+
+1. Use the existing **Subscription (1)** and **Resource group** as **AZ400-JumpVM (2)** and **Region** as **westus(3)** and specify new names for **Storage account** as **az400storage<inject key="DeploymentID" enableCopy="false" /> (4)** and **File share** as **az400fileshare<inject key="DeploymentID" enableCopy="false" /> (5)**, as shown in the dialog below. Then select **Create**.
+   
+     ![](images/az-400-storage.png)
 
     > **Note:** for a list of regions and their alias, run the following command from the Azure Cloud Shell - Bash:
 
@@ -129,12 +147,13 @@ In this task, you will create an Azure web app by using the Azure portal.
 
 1. Close the Azure Cloud Shell, but leave the Azure Portal open in the browser.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   
-    <validation step="9b51081b-6d2a-4280-8549-296f067e3156" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="9b51081b-6d2a-4280-8549-296f067e3156" />
+
 
 # Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
 
@@ -343,12 +362,12 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 1. On the Azure web app blade, click **Overview** and, on the overview blade, click **Browse** to open your site in a new web browser tab.
 1. Verify that the deployed site loads as expected in the new browser tab, showing the EShopOnWeb E-commerce website.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   
-    <validation step="69d21df0-0bae-4d36-8a5b-6e5dd3d2107e" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="69d21df0-0bae-4d36-8a5b-6e5dd3d2107e" />
 
 # Exercise 2: Configure Environment settings for CI/CD Pipelines as Code with YAML in Azure DevOps
 
