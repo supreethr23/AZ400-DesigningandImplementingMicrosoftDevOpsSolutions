@@ -27,35 +27,7 @@ After you complete this lab, you will be able to:
 
    ![Architecture Diagram](images/lab2-architecture-new.png)
 
-# Exercise 0: Configure the lab prerequisites
-
-## Task 1: Set up an Azure DevOps organization
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials provided in environment details tab.
-
-1. If the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-1. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/400-3.png)
-   
-1. On the next page accept defaults, enter the captcha and click on continue.
-
-    ![Azure DevOps](images/az-400-2.png)
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb)
-    
-## Task 2: Create and configure the team project
-
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
-
-1.  On your lab computer, in a browser window open your Azure DevOps organization. On the **Create aproject to get started** page, Enter the following details.
-      - Project name: **eShopOnWeb (1)**
-      - Under the **Advanced** section, choose **Scrum (2)** on the **Work Item process** dropdown and then click on **+ Create project (3)**.
-     
-    ![Create Project](images/az-400-3.png)
-
-## Task 3: Import eShopOnWeb Git Repository
+## Task 1: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -479,7 +451,7 @@ The product team has decided that the current version of the site should be rele
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="f9ef46d5-c3ef-4c09-8c01-ef3bf6d0a05f" />
+   <validation step="1e561da0-92ec-4ecc-88b1-b3a5cefee594" />
 
 
 ### Exercise 5: Remove Branch Policies
