@@ -1,4 +1,4 @@
-# Lab 02: Deploying Docker containers to Azure App Service web apps
+# Lab 04: Deploying Docker containers to Azure App Service web apps
 
 ## Lab overview
 
