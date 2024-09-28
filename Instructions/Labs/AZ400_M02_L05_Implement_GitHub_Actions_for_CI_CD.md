@@ -219,13 +219,6 @@ In this task, you will use GitHub environments to ask for manual approval before
 
 1. Workflow will follow the **deploy** job execution and finish.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
- 
-   <validation step="cbfebada-ce11-4e5c-9b80-7e8f5f91c69d" />
-
 ## Review
 
 In this lab, you implemented a GitHub Action workflow that deploys an Azure web app by using DevOps Starter.
