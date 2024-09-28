@@ -210,7 +210,7 @@ In this task, you will remove pipeline billing to eliminate unnecessary charges.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="65f0caab-1994-44a0-830a-e3ee79ead668" />
+   <validation step="87a02bd6-fc07-4d97-9993-757399fc846f" />
 
 ## Review
 
