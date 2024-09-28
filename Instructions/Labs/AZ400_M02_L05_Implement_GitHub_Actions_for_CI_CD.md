@@ -1,4 +1,4 @@
-# Lab 01: Implementing GitHub Actions for CI/CD
+# Lab 03: Implementing GitHub Actions for CI/CD
 
 ## Lab overview
 
@@ -86,7 +86,7 @@ In this exercise, you will create an Azure Service Principal to authorize GitHub
 
 In this task, you will create the Azure Service Principal used by GitHub to deploy the desired resources. As an alternative, you could also use [OpenID connect in Azure](https://docs.github.com/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure), as a secretless authentication mechanism.
 
-1. On your lab computer, in a browser window, open the  [Azure Portal](https://portal.azure.com).
+1. On your lab VM, in a browser window, open the  [Azure Portal](https://portal.azure.com).
 
 1. In the portal, look for **Resource Groups** and click on it.
 
@@ -224,7 +224,7 @@ In this task, you will use GitHub environments to ask for manual approval before
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="e7a8d213-83cf-4279-a7fe-1cf6a3255cb6" />
+   <validation step="cbfebada-ce11-4e5c-9b80-7e8f5f91c69d" />
 
 ## Review
 
