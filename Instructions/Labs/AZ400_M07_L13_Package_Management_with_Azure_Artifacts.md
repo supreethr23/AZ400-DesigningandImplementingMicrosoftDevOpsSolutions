@@ -458,12 +458,13 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
 
     ![](images/img11.png)
 
-    > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+> **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+- Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com.
     
-    <validation step="24e21234-c893-4493-9184-a1cfa01e826c" />
+<validation step="24e21234-c893-4493-9184-a1cfa01e826c" />
+
 ## Review
 
 In this lab, you learned how to work with Azure Artifacts by using the following steps:
