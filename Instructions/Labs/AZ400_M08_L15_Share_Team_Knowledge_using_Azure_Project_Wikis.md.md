@@ -18,33 +18,14 @@ After you complete this lab, you will be able to:
  
   ![Architecture Diagram](images/lab17-architecture-new.png)
 
-
-## Set up an Azure DevOps organization. 
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
-
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-    * Password: <inject key="AzureAdUserPassword"></inject>
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-
-    ![](images/lab1-image1.png)
-
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![](images/lab1-image2.png)
-
 # Exercise 0: Configure the lab prerequisites
 
-In this exercise, you will set up the prerequisites for the lab, which consist of the pre-configured **EShopOnWeb** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
+In this exercise, you will set up the prerequisites for the lab, which consist of the pre-configured **EShopOnWeb-<inject key="DeploymentID"> </inject>** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
 
 
 ## Task 1: Configure the EShopOnWeb project
 
-In this task, you will create a new project named **EShopOnWeb** in Azure DevOps Organization.
+In this task, you will create a new project named **EShopOnWeb-<inject key="DeploymentID"> </inject>** in Azure DevOps Organization.
 
 1.  Click **Sign in** and sign in with the credentials provided in environment details tab.
     
@@ -52,9 +33,9 @@ In this task, you will create a new project named **EShopOnWeb** in Azure DevOps
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb (1)**, select visibility as **Private (2)** and then click **Create Project (3)**
+2.  On the **Create New Project** page, in the **New Project Name** textbox, type **EShopOnWeb-<inject key="DeploymentID"> </inject> (1)**, select visibility as **Private (2)** and then click **Create Project (3)**
 
-     ![](images/AZ400_M09_L17_03.png)
+     ![](images/E0T1S2.png)
     
 # Exercise 1: Publish code as wiki
 
@@ -67,58 +48,52 @@ In this exercise, you will step through publishing an Azure DevOps repository as
 In this task, you will create Azure Repository and publish a branch of an Azure DevOps repo as wiki.
 
 > **Note**: If your published wiki corresponds to a product version, you can publish new branches as you release new versions of your product. 
-
-1.  Ensure that you are viewing the **EShopOnWeb** team project on the Azure DevOps portal. 
-
-     > **Note**: You can access the project page directly by navigating to the [https://dev.azure.com/<inject key="DeploymentID" enableCopy="false"/>/EShopOnWeb]URL.
-
-     ![](images/AZ400_M09_L17_04.png)
     
-2.  In the vertical menu on the left side of the **EShopOnWeb** pane, click **Repos**.
+1.  In the vertical menu on the left side of the **EShopOnWeb-<inject key="DeploymentID"> </inject>** pane, click **Repos**.
 
-     ![](images/AZ400_M09_L17_05.png)
+     ![](images/E1T1S1.png)
 
-3.  Click on the **Files (1)** pane, we can see that **EShopOnWeb is empty. Add some code!**. So click **Initialize (2)** to initialize the repository for the first time.
+2.  Click on the **Files (1)** pane, we can see that **EShopOnWeb-<inject key="DeploymentID"> </inject> is empty. Add some code!**. So click **Initialize (2)** to initialize the repository for the first time.
 
-     ![](images/AZ400_M09_L17_06.png)
+     ![](images/E1T1S2.png)
     
-4.  Click the **Files (1)** pane. In the branch dropdown list , select **main (2)** branch, and review the content of the main branch.
+3.  Click the **Files (1)** pane. In the branch dropdown list , select **main (2)** branch, and review the content of the main branch.
 
-     ![](images/AZ400_M09_L17_07.png)
+     ![](images/E1T1S3.png)
 
-5.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb (1)** Repo title on top of the folder structure. Select the **ellipsis (2)**. 
+4.  We will store the Wiki source files in a separate folder within the Repos current folder structure. From within Repos, select **Files**. Notice the **EShopOnWeb-<inject key="DeploymentID"> </inject> (1)** Repo title on top of the folder structure. Select the **ellipsis (2)**. 
 
-     ![](images/AZ400_M09_L17_08.png)
+     ![](images/E1T1S4.png)
 
-6.  Choose **+New(1) / Folder (2)**, and provide **Documents (3)** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME (4)** as New file name. Click to **Create (5)** folder.
+5.  Choose **+New(1) / Folder (2)**, and provide **Documents (3)** as title for the New Folder name. As a repo doesn't allow you to create an empty folder, provide **READ.ME (4)** as New file name. Click to **Create (5)** folder.
 
-     ![](images/AZ400_M09_L17_09.png)
+     ![](images/E1T1S5.png)
 
-     ![](images/AZ400_M09_L17_10.png)
+     ![](images/E1T1S5-2.png)
     
 7.  The **READ.ME (1)** file will open in the built-in view mode. Since this is stored **'as code' (2)**, you need to **Commit** the changes by clicking the **Commit (3)** button.
 
-     ![](images/AZ400_M09_L17_11.png)
+     ![](images/E1T1S6.png)
 
 8.  In the Azure DevOps vertical menu on the left side, click **Overview (1)**, in the Overview section, select **Wiki (2)**, select **Publish code as wiki (3)**.
     
-     ![](images/AZ400_M09_L17_12.png)
+     ![](images/E1T1S7.png)
 
 9.  On the **Publish code as wiki** pane, specify the following **settings** and click **Publish (5)**.
      | Setting | Value |
      | ------- | ----- |
-     | Repository | **EShopOnWeb (1)** |
+     | Repository | **EShopOnWeb-<inject key="DeploymentID"> </inject> (1)** |
      | Branch | **main (2)** |
      | Folder | **/Documents (3)** |
-     | Wiki name | **EShopOnWeb (Documents) (4)** |
+     | Wiki name | **EShopOnWeb-<inject key="DeploymentID"> </inject> (Documents) (4)** |
 
      > **Note**: This will automatically open the Wiki section, and publish the editor, where you can provide a Wiki page title, as well as adding the actual content. Notice you are encouraged to use MarkDown format, but make use of the ribbon to help you with some of the MarkDown layout syntax.
     
-     ![](images/AZ400_M09_L17_13.png)
+     ![](images/E1T1S8.png)
 
 10.  In the Wiki Page **Title** field, enter **Welcome to our Online Retail Store!**
     
-      ![](images/AZ400_M09_L17_14.png)
+      ![](images/E1T1S9.png)
 
 11.  In the **body (1)** of the Wiki Page, paste in the following text and **Save (2)** it:
     
@@ -159,7 +134,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
       
 12.  This sample text gives you an overview of several of the common MarkDown syntax features, ranging from Title and subtitles (##), bold            (**), italic (*), how to create tables, and more.
 
-13.  **Refresh** your browser, or select any other DevOps portal option and return to the **Overview(1)** and **Wiki(2)** section. Notice you are now presented with the **EshopOnWeb (Documents)** Wiki, as well as having the **Welcome to our Online Retail Store(3)** as **HomePage** of the Wiki.
+13.  **Refresh** your browser, or select any other DevOps portal option and return to the **Overview(1)** and **Wiki(2)** section. Notice you are now presented with the **EshopOnWeb-<inject key="DeploymentID"> </inject> (Documents)** Wiki, as well as having the **Welcome to our Online Retail Store(3)** as **HomePage** of the Wiki.
       
      ![](images/AZ400_M09_L17_16.png)
     
@@ -174,7 +149,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
 ## Task 2: Manage content of a published wiki
 In this task, you will manage content of the wiki you published in the previous task.
 
-1. In the vertical menu on the left side, click **Repos (1)**, ensure that the dropdown menu in the upper section of the **Files (2)** pane displays the **EShopOnWeb (3)** repo and **main (4)** branch, in the repo folder hierarchy, select the **Documents (5)** folder, and select the **Welcome-to-our-Online-Retail-Store!.md (6)** file.
+1. In the vertical menu on the left side, click **Repos (1)**, ensure that the dropdown menu in the upper section of the **Files (2)** pane displays the **EShopOnWeb-<inject key="DeploymentID"> </inject> (3)** repo and **main (4)** branch, in the repo folder hierarchy, select the **Documents (5)** folder, and select the **Welcome-to-our-Online-Retail-Store!.md (6)** file.
 
     ![](images/AZ400_M09_L17_17.png)
 
@@ -193,7 +168,7 @@ In this exercise, you will step through creating and managing a project wiki.
 
 In this task, you will create a project wiki and add to it a Mermaid diagram and an image.
 
-1.  On your lab VM, in the Azure DevOps portal displaying the **Overview (1)** and **Wiki (2)** pane of the **EShopOnweb** project, with the content of the **EShopOnWeb (Documents) (3)** wiki selected, at the top of the pane, click the **EShopOnWeb (Documents)** dropdown list header, and, in the drop down list, select **Create new project wiki (4)**. 
+1.  On your lab VM, in the Azure DevOps portal displaying the **Overview (1)** and **Wiki (2)** pane of the **EShopOnweb-<inject key="DeploymentID"> </inject>** project, with the content of the **EShopOnWeb (Documents) (3)** wiki selected, at the top of the pane, click the **EShopOnWeb-<inject key="DeploymentID"> </inject> (Documents)** dropdown list header, and, in the drop down list, select **Create new project wiki (4)**. 
 
      ![](images/AZ400_M09_L17_18.png)
 
