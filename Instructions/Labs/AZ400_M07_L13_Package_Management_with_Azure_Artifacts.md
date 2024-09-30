@@ -1,6 +1,5 @@
 # Lab 1: Package Management with Azure Artifacts
 
-
 ## Lab overview
 
 Azure Artifacts facilitate discovery, installation, and publishing NuGet, npm, and Maven packages in Azure DevOps. It's deeply integrated with other Azure DevOps features such as Build, making package management a seamless part of your existing workflows.
@@ -14,7 +13,7 @@ After you complete this lab, you will be able to:
 -  Import a NuGet package.
 -  Update a NuGet package.
 
-## Estimated timing: 60 minutes
+## Estimated timing: 40 minutes
 
 ## Architecture Diagram
 
@@ -81,27 +80,27 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
     ![](images/AZ400_M08_L15_(08).png)
 
-6.  If **This site is trying to open Microsoft visua---ndler Selector** prompted , click on **Open**.
+6. If **This site is trying to open Microsoft visua---ndler Selector** prompted , click on **Open**.
 
     ![](images/AZ400_M08_L15_(09).png)
 
-7.  On **Sign in to Visual Studio** page click **Sign in**.
+7. On **Sign in to Visual Studio** page click **Sign in**.
 
     ![](images/AZ400_M08_L15_10.png)
     
-8.  If prompted, sign in with following Username and password.
+8. If prompted, sign in with following Username and password.
   
     > **Email/Username**: <inject key="AzureAdUserEmail"></inject>
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
     
-9.  On **Personalize your Visual Studio experience** page click **Start Visual Studio**.
+9. On **Personalize your Visual Studio experience** page click **Start Visual Studio**.
 
-     ![](images/az400-vs.png)            
+    ![](images/az400-vs.png)            
      
-10.  Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
+10. Within the Visual Studio interface, in the **Azure DevOps** pop-up window, accept the default local path and click **Clone**. This will automatically import the project into Visual Studio. Make a note of local path you will need it in further tasks.
 
-      ![](images/AZ400_M08_L15_11(1).png)
+     ![](images/AZ400_M08_L15_11(1).png)
 
       - if prompted to sign-in  with the following credentials.
     
@@ -171,11 +170,13 @@ In this task, you will create and connect to a feed.
     ![](images/AZ400_M08_L15_(16).png)
 
 6.  Switch back to the **Visual Studio** window and wait for the installation to be get completed. 
+
 7.  In the Visual Studio window, click **Tools (1)** menu header, in the dropdown menu, select **NuGet Package Manager (2)** and, in the cascading menu, select **Package Manager Settings (3)**.
     
     ![](images/AZ400_M08_L15_17.png)
     
 8.  In the **Options** dialog box, click **Package Sources** and click the plus sign to add a new package source.
+
 9.  At the bottom of the dialog box, in the **Name** textbox, replace **Package Sources (1)** with **EShopOnWebShared (2)** and, in the **Source** textbox, paste the **Source URL (3)** you copied in the Azure DevOps portal and click **Update (4)** and then click **OK (5)** to finalize the addition. 
     
      ![](images/AZ400_M08_L15_(18)(1).png)
@@ -220,10 +221,6 @@ In this task, you will create and publish a NuGet package.
 5.  Within the Visual Studio interface, in the **Solution Explorer** pane, right-click **Class1.cs (1)**, in the right-click menu, select **Delete (2)**, and, when prompted for confirmation, click **OK**.
     
     ![](images/AZ400_M08_L15_23(1).png)
-   
-6.  Within the Visual Studio interface, in the **Solution Explorer** pane, right-click the **EShopOnWeb.Shared (1)** project node and select **Properties (2)**.
-    
-    ![](images/AZ400_M08_L15_24.png)
 
 7.  Press **Ctrl+Shift+B** or **Right-click** on the **EShopOnWeb.Shared Project (1)** and select **Build (2)** to build the project.. 
 
@@ -233,8 +230,26 @@ In this task, you will create and publish a NuGet package.
     
     ![](images/AZ400_M08_L15_26.png)
    
+1. From your lab workstation, open the Start menu, and search for **Windows PowerShell**. Next, in the cascading menu, click **Open Windows PowerShell as administrator**.
+
+1. In the **Administrator: Windows PowerShell** window, navigate to the eShopOnWeb.Shared folder, by executing the following command:
+
+    ```text
+    cd c:\eShopOnWeb\eShopOnWeb.Shared
+    ```
+
+     > **Note**: The **eShopOnWeb.Shared** folder is the location of the **eShopOnWeb.Shared.csproj** file. If you chose a different location, navigate to that location instead.
+
+1. Run the following to create a **.nupkg** file from the project.
+
+    ```powershell
+    dotnet pack .\eShopOnWeb.Shared.csproj
+    ```
+
 8.  Switch to the web browser displaying the Azure DevOps portal. 
+
 9.  Navigate to the **Connect to feed** pane, in the **NuGet** section and select **NuGet.exe**. This will display the **NuGet.exe** pane.
+
 10. On the **NuGet.exe (2)** pane, click **Get the tools (3)**.
 
      ![](images/AZ400_M08_L15_(27).png)
@@ -326,31 +341,17 @@ In this task, you will create and publish a NuGet package.
     
     > **Password**: <inject key="AzureAdUserPassword"></inject>
 
-26. If prompted click on **OK** and **Done**.     
+26. Run the following to publish the package to the **eShopOnWebShared** feed:
 
-    > **Note**: You need to provide an **API Key**, which can be any non-empty string. We're using **AzDO** here. When prompted, sign in to your Azure DevOps organization.
+    > **Important**: You need to install the credential provider for your operating system to be able to authenticate with Azure DevOps. You can find the installation instructions at [Azure Artifacts Credential Provider](https://go.microsoft.com/fwlink/?linkid=2099625). You can install by running the following command in the PowerShell window: `iex "& { $(irm https://aka.ms/install-artifacts-credprovider.ps1) } -AddNetfx"`
+
+    > **Note**: You need to provide an **API Key**, which can be any non-empty string. We're using **az** here. When prompted, sign in to your Azure DevOps organization.
 
     ```
-    ./nuget.exe push -source "EShopOnWebShared" -ApiKey AzDO EShopOnWeb.Shared.1.0.0.nupkg
+     dotnet nuget push --source "eShopOnWebShared" --api-key az eShopOnWeb.Shared.1.0.0.nupkg
     ```
     
     ![](images/AZ400_M08_L15_36.png)
-
-    >**Note**: If you encounter following error **Response status code does not indicate success: 409 (Conflict - 'EShopOnWeb.Shared 1.0.0' cannot be published to the feed because it exists in at least one of the feed's upstream sources. Publishing this copy would prevent you from using 'EShopOnWeb.Shared 1.0.0' from 'NuGet Gallery'. For more information, see https://go.microsoft.com/fwlink/?linkid=864880 (DevOps Activity ID: 439FD43A-8013-498D-A85E-5D95C93668B8)).** Please follow the following steps.
-
-     - Navigate to the Azure DevOps Portal, browse to **Artifacts**. 
-     
-     - Select the **EShopOnWebShared** Feed > **Settings** icon.
-        ![](images/img5.png)
-     
-     - Switch to Upstream Sources tab and select **NuGet Gallery** and click on **Delete**.
-        ![](images/img(2).png)
-     
-     - Click on the ellipse button and select Save to save the changes.
-        ![](images/img3.png)
-       
-     - Click on **Save** when **Save your changes?** prompted.
-     - Navigate back to windows powershell and re-run step 26 command.
                
 26.  Wait for the confirmation of the successful package push operation.      
 27.  Switch to the web browser window displaying the Azure DevOps portal and, in the vertical navigational pane, select **Artifacts**.
