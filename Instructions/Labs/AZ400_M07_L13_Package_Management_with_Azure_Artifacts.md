@@ -359,13 +359,13 @@ In this task, you will create and publish a NuGet package.
 
 1. On the **Artifacts(1)** hub pane, click the dropdown list in the upper left corner and, in the list of feeds, select the **EShopOnWebShared(2)** entry.
 
-    > **Note**: The **EShopOnWebShared** feed should include the newly published NuGet package.
+   > **Note**: The **EShopOnWebShared** feed should include the newly published NuGet package.
 
-    ![](images/AZ400_M08_L15_(37).png)
+   ![](images/AZ400_M08_L15_(37).png)
     
 1. Click the NuGet package to display its details.
 
-    ![](images/AZ400_M08_L15_(38).png)
+   ![](images/AZ400_M08_L15_(38).png)
 
 ## Task 3: Import an Open-Source NuGet package to the Azure DevOps Package Feed
 
