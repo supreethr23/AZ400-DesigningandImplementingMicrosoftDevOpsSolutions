@@ -296,15 +296,19 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
 
 1. The choose **Service Principal (manual)** and click on **Next**.
-
+   
 1. Fill in the empty fields using the information gathered during previous steps:
-    - Subscription Id and Name.
-    - Service Principal Id (appId), Service principal key (password) and Tenant ID (tenant).
-    - In **Service connection name** type **azure subs**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
+    - Subscription Id **(1)**
+    - Subscription Name **(2)**
+    - Service Principal Id (appId) **(3)**
+    - Service principal key (password) **(4)** and Tenant ID (tenant **(5))**
+    - In **Service connection name** type **azure subs (6)**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
+    - Click on **Verify and Save (7)**.
 
-      ![Azure Service Connection](images/azure-service-connection.png)
+      ![Azure Service Connection](images/az-400-9a24.png)
+  
+      ![Azure Service Connection](images/az-400-9a25.png)   
 
-1. Click on **Verify and Save**.
 
 ### Task 2: Deploy resources to Azure by YAML pipelines
 
@@ -329,9 +333,9 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
 1. In the variables section, replace name with **az400m06l15-RG** resource group, set the desired **location** to **<inject key="Region" enableCopy="false"/>** replace the value of the service connection with one of your existing service connections you created earlier.
 
-1. Click the **Verify and save** button from the top right corner and in the commit dialog, click **Save and run** again.
+1. Click the **Save and run (1)** button from the top right corner and in the commit dialog, click **Save and run** again.
 
-   ![Save and running the YAML pipeline after making changes](./images/6-2.png)
+   ![Save and running the YAML pipeline after making changes](./images/az-400-5a23.png)
 
 1. Wait for the pipeline to kick off.
 
@@ -343,6 +347,8 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
     This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
     ```
 1. Click on **View**.
+
+   ![Successful resource deployment to Azure using YAML pipelines](./images/az-400-5a25.png)
 
 1. From the **Waiting for Review** pane, click **Permit**.
 
