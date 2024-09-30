@@ -43,21 +43,18 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/m1-2.png)
 
-5. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
+5. On the Azure DevOps page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
-    ![Azure DevOps](images/agent1.png)
-
-6. In the **Organization Setting** window on the left menu,select **Billing** and click on **Set up billing**.
-
-    ![Azure DevOps](images/agent3.png)
+    ![Azure DevOps](images/az-400-lab3-(1).png)
     
-7. On the **Setup Billing** click on save.
+6. In the **Organization Setting** window on the left menu click on **Billing (1)** and select **Setup Billing (2)** then click on **save (3)**.
 
-    ![Azure DevOps](images/agent4.png)    
+    ![Azure DevOps](images/az-400-lab3-1.png)
+    ![Azure DevOps](images/az-400-lab3-2.png)    
 
-8. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+7. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
 
-    ![Azure DevOps](images/agent2.png)    
+    ![Azure DevOps](images/az-400-lab3-3.png)   
 
 9. In the **Organization Setting** window on the left menu click on **Policies** and enable **Third-party application access via OAuth**.
 
