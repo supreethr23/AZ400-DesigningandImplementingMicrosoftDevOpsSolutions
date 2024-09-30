@@ -18,7 +18,6 @@ After you complete this lab, you will be able to:
  
   ![Architecture Diagram](images/lab17-architecture-new.png)
 
-
 ## Set up an Azure DevOps organization. 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
@@ -169,7 +168,6 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    
    <validation step="71f00530-53c1-46ab-8ec4-40b2e8f4e351" />
-
 
 ## Task 2: Manage content of a published wiki
 In this task, you will manage content of the wiki you published in the previous task.

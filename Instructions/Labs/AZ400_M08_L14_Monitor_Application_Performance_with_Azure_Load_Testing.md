@@ -502,7 +502,6 @@ With both quick tests complete, let's make a few changes to them, and validate t
  
    <validation step="cdc3c287-2862-4b69-a670-73ff4f4335b7" />
 
-
 ### Exercise 3: Automate a Load Test with CI/CD in Azure Pipelines
 
 Get started with automating load tests in Azure Load Testing by adding it to a CI/CD pipeline. After running a load test in the Azure portal, you export the configuration files, and configure a CI/CD pipeline in Azure Pipelines (similar capability exists for GitHub Actions).
