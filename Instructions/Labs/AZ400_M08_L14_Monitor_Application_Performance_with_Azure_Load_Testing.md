@@ -72,7 +72,6 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
      
     ![Create Project](images/az-400-3.png)    
 
-
 ### Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
@@ -136,7 +135,7 @@ In this task, you will create an Azure web app by using the cloud shell in Azure
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="a9a71552-429c-49fe-b249-1c8265a90fd0" />
+   <validation step="d89774b8-074c-45b0-8043-731aa5587b30" />
 
 ## Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
 
@@ -397,8 +396,7 @@ In this task, you will add a YAML build definition to the existing project.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="dbe61700-749e-4ca1-b089-8dea982eaa81" />
-
+   <validation step="47dd122a-716f-4209-b52a-e4a4a910d5b1" />
 
 ## Exercise 2: Deploy and Setup Azure Load Testing
 
@@ -494,13 +492,12 @@ With both quick tests complete, let's make a few changes to them, and validate t
 1. More below, several of these values are represented using dashboard graph line and chart views.
 1. Take a few minutes to **compare the results** of both simulated tests with each other, and **identify the impact** of more users on the App Service performance.
 
-
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="cdc3c287-2862-4b69-a670-73ff4f4335b7" />
+   <validation step="24b6b8cf-eedf-45e9-9838-11e108958357" />
 
 ### Exercise 3: Automate a Load Test with CI/CD in Azure Pipelines
 
