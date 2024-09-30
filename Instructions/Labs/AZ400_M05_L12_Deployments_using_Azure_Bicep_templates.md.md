@@ -247,7 +247,6 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
    
      ![](images/lab15-storage-acc-2.png)
 
-
 1. Use the existing **Subscription (1)** and **Resource group** as **AZ400-JumpVM (2)** and **Region** as **westus(3)** and specify new names for **Storage account** as **az400storage<inject key="DeploymentID" enableCopy="false" /> (4)** and **File share** as **az400fileshare<inject key="DeploymentID" enableCopy="false" /> (5)**, as shown in the dialog below. Then select **Create**.
    
      ![](images/az-400-storage.png)
@@ -300,11 +299,15 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
     > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
 
 1. On the **Where is your code?** pane, click **Azure Repos Git (YAML)** option.
+
 1. On the **Select a repository** pane, click **eShopOnWeb**.
+
 1. On the **Configure your pipeline** pane, scroll down and select **Existing Azure Pipelines YAML File**.
+
 1. In the **Selecting an existing YAML File** blade, specify the following parameters:
    - Branch: **main**
    - Path: **.ado/eshoponweb-cd-windows-cm.yml**
+   
 1. Click **Continue** to save these settings.
 
    ![Save and running the YAML pipeline after making changes](./images/6-3.png)
@@ -324,10 +327,12 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
     ```text
     This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
     ```
+1. Click on **View**.
 
-1. Click on **View**
 1. From the **Waiting for Review** pane, click **Permit**.
+
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
+
 1. This sets off the Deploy Stage. Wait for this to complete successfully.
 
 1. Wait for the deployment to finish and review the results.
@@ -339,7 +344,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="24e21234-c893-4493-9184-a1cfa01e826c" />
+   <validation step="9cd20f12-9e2f-4fb2-b764-6790b73ade56" />
 
 ## Review
 
