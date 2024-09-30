@@ -467,7 +467,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="24e21234-c893-4493-9184-a1cfa01e826c" />
+   <validation step="e4c21de8-402e-4ffc-aa10-61fe90dc9884" />
 
 ## Review
 
