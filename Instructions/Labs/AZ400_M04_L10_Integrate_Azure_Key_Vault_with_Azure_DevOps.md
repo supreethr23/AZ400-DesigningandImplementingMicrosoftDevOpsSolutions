@@ -2,7 +2,7 @@
 
 ## Lab overview
 
-Azure Key Vault provides secure storage and management of sensitive data, such as keys, passwords, and certificates. Azure Key Vault includes supports for hardware security modules, as well as a range of encryption algorithms and key lengths. By using Azure Key Vault, you can minimize the possibility of disclosing sensitive data through source code, which is a common mistake made by developers. Access to Azure Key Vault requires proper authentication and authorization, supporting fine grained permissions to its content.
+Azure Key Vault provides secure storage and management of sensitive data, such as keys, passwords, and certificates. Azure Key Vault includes supports for hardware security modules, as well as a range of encryption algorithms and key lengths. By using Azure Key Vault, you can minimize the possibility of disclosing sensitive data through source code, which is a common mistake made by developers. Access to Azure Key Vault requires proper authentication and authorization, supportxing fine grained permissions to its content.
 
 In this lab, you will see how you can integrate Azure Key Vault with an Azure DevOps pipeline by using the following steps:
 
@@ -38,6 +38,18 @@ After you complete this lab, you will be able to:
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
     ![Azure DevOps](images/az-400-5-2.png)
+
+1. On the Azure Devops page click on **Azure DevOps(1)** located at top left corner and then click on **Organization Settings (2)** at the left down corner.
+
+    ![Azure DevOps](images/agent1updated.png)
+    
+1. In the **Organization Settings** window on the left menu click on **Billing (1)** and select **Setup Billing (2)**, It will automatically select your **azure subscription (3)** then click on **Save(4)**.
+
+    ![Azure DevOps](images/bill.png)    
+
+1. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+
+    ![Azure DevOps](images/billingsetup1.png)
 
 # Exercise 0: Configure the lab prerequisites
 
@@ -255,9 +267,8 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
 
 1. Click on **Save and Run**.
 1. Once the Deploy Stage wants to start, you are prompted with **Permissions Needed**, as well as an orange bar saying 
-    ```
-    This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
-    ```
+    **"This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App"**
+    
 1. Click on **View**
 1. From the **Waiting for Review** pane, click **Permit**.
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
