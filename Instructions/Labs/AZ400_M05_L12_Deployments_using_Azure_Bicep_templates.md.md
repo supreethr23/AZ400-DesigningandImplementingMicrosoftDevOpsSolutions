@@ -146,13 +146,20 @@ In this task, you will create a storage template module **storage.bicep** which 
      kind: 'Storage'
    }
    ```
-
+   
+   ![Simple-windows-vm.bicep file](./images/az-400-5a28.png)
+   
 1. Click on Commit twice to commit the changes, however, we're not done with it yet.
 
-1. Next, hover your mouse over the bicep folder and click the ellipsis icon, then select **New**, and **File**. Enter **storage.bicep** for the name and click **Create**.
+1. Next, hover your mouse over the bicep folder and click the ellipsis icon **(1)**, then select **New>File (2)**. 
 
-   ![New file menu](./images/6-7.png)
-
+   
+   ![Simple-windows-vm.bicep file](./images/az-400-5a26.png)
+   
+1. Enter **storage.bicep (1)** for the name and click **Create (2)**.
+   
+   ![Simple-windows-vm.bicep file](./images/az-400-5a29.png)
+   
 1. Now copy the following code snippet into the file and commit your changes:
 
    ```bicep
