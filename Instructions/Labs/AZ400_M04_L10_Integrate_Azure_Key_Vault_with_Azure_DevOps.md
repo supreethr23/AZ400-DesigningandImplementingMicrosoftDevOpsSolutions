@@ -39,6 +39,18 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/az-400-5-2.png)
 
+1. On the Azure Devops page click on **Azure DevOps(1)** located at top left corner and then click on **Organization Settings (2)** at the left down corner.
+
+    ![Azure DevOps](images/agent1updated.png)
+    
+1. In the **Organization Settings** window on the left menu click on **Billing (1)** and select **Setup Billing (2)**, It will automatically select your **azure subscription (3)** then click on **Save(4)**.
+
+    ![Azure DevOps](images/bill.png)    
+
+1. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+
+    ![Azure DevOps](images/billingsetup1.png)
+
 # Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
