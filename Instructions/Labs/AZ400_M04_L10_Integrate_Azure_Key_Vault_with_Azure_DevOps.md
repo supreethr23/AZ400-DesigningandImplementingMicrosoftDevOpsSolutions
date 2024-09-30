@@ -2,7 +2,7 @@
 
 ## Lab overview
 
-Azure Key Vault provides secure storage and management of sensitive data, such as keys, passwords, and certificates. Azure Key Vault includes supports for hardware security modules, as well as a range of encryption algorithms and key lengths. By using Azure Key Vault, you can minimize the possibility of disclosing sensitive data through source code, which is a common mistake made by developers. Access to Azure Key Vault requires proper authentication and authorization, supporting fine grained permissions to its content.
+Azure Key Vault provides secure storage and management of sensitive data, such as keys, passwords, and certificates. Azure Key Vault includes supports for hardware security modules, as well as a range of encryption algorithms and key lengths. By using Azure Key Vault, you can minimize the possibility of disclosing sensitive data through source code, which is a common mistake made by developers. Access to Azure Key Vault requires proper authentication and authorization, supportxing fine grained permissions to its content.
 
 In this lab, you will see how you can integrate Azure Key Vault with an Azure DevOps pipeline by using the following steps:
 
@@ -265,7 +265,7 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
 
 1. Click on **Save and Run**.
 1. Once the Deploy Stage wants to start, you are prompted with **Permissions Needed**, as well as an orange bar saying 
-    **This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App**
+    **"This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App"**
     
 1. Click on **View**
 1. From the **Waiting for Review** pane, click **Permit**.
