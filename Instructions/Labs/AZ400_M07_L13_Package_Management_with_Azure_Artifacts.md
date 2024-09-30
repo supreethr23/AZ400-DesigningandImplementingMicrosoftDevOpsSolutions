@@ -361,7 +361,7 @@ In this task, you will create and publish a NuGet package.
 
     > **Note**: The **EShopOnWebShared** feed should include the newly published NuGet package.
 
-    ![](images/AZ400_M08_L15_(37)png)
+    ![](images/AZ400_M08_L15_(37).png)
     
 1. Click the NuGet package to display its details.
 
