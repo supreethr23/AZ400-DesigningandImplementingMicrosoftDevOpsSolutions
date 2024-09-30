@@ -18,57 +18,6 @@ After you complete this lab, you will be able to configure a CI pipeline for a .
 
 ## Estimated timing: 60 minutes
 
-### Before you start
-
-## Review applications required for this lab
-
-Identify the applications that you'll use in this lab:
-    
--   Microsoft Edge
-
-## Set up an Azure DevOps organization (Skip if already done) 
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/az-400-5-1.png)
-
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/az-400-5-2.png)
-
-### Exercise 0: Configure the lab prerequisites
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
-
-#### Task 1: Create and configure the team project
-
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
-
-1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **Create**.
-
-#### Task 2: Import the eShopOnWeb Git Repository
-
-In this task you will import the eShopOnWeb Git repository that will be used by several labs.
-
-1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL <https://github.com/MicrosoftLearning/eShopOnWeb.git> and click **Import**:
-
-1. The repository is organized the following way:
-    - **.ado** folder contains Azure DevOps YAML pipelines.
-    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces).
-    - **infra** folder contains Bicep & ARM infrastructure as code templates used in some lab scenarios.
-    - **.github** folder contains YAML GitHub workflow definitions.
-    - **src** folder contains the .NET website used in the lab scenarios.
-
-#### Task 3: Set main branch as default branch
-
-1. Go to **Repos>Branches**.
-1. Hover on the **main** branch then click the ellipsis on the right of the column.
-1. Click on **Set as default branch**.
-
 ### Exercise 1: Setup Tests in CI pipeline
 
 In this exercise, you will setup tests in CI pipeline.
@@ -145,13 +94,6 @@ You can notice that the Unit Tests task is already part of the pipeline.
     >**Note**: If the table is empty, you need to reset the filters to have all the details about the tests run.
 
     ![Tests Table](images/AZ400_M05_TEST1.png)
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
- 
-   <validation step="c1d57f7e-dc1d-4aa3-a6b6-830ee3880cd5" />
 
 
 ## Review

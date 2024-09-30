@@ -1,4 +1,4 @@
-# Lab 4: Enable Dynamic Configuration and Feature Flags
+# Lab 02: Enable Dynamic Configuration and Feature Flags
 
 ## Lab requirements
 
@@ -407,7 +407,7 @@ Let's continue to test the Feature manager.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="4335f5ab-842b-4822-8163-3fd01e57ac2d" />
+   <validation step="ec5155c1-0a64-4319-9b84-94137c2a9658" />
 
 
 ## Review

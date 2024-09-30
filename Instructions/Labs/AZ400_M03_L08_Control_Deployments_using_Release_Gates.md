@@ -38,11 +38,9 @@ After you complete this lab, you will be able to:
 
 ## Estimated timing: 75 minutes
 
-
 ## Set up an Azure DevOps organization. 
-
 1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
-
+   
    ![Azure DevOps](images/azureportal-lab7.png)
    
 1. If not Sign-in, then on the **Sign into Microsoft Azure** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
@@ -52,117 +50,117 @@ After you complete this lab, you will be able to:
    * Password: <inject key="AzureAdUserPassword"></inject>
    
 1. If you see the pop-up **Stay Signed in?**, click No.
-
+   
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
-
+   
 1. If **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
-
+   
 1. Now open a **New Tab** navigate to https://go.microsoft.com/fwlink/?LinkId=307137.
-
     >**Note:** If not **login**, use previously used **Username: <inject key="AzureAdUserEmail"></inject> and Password: <inject key="AzureAdUserPassword"></inject>** to login.
     
 1. If you see the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
+   
 1. On the next page accept defaults and click on **continue**.
-
+   
     ![Azure DevOps](images/startdevops.png)
     
-1. On the **Almost Done...** page fill the captcha and click on **continue**. 
-
+1. On the **Almost Done...** page fill the captcha and click on **continue**.
+   
     ![Azure DevOps](images/m1-2updated.png)
-
+   
 1. On the Azure Devops page click on **Azure DevOps(1)** located at top left corner and then click on **Organization Settings (2)** at the left down corner.
-
+   
     ![Azure DevOps](images/agent1updated.png)
     
 1. In the **Organization Settings** window on the left menu click on **Billing (1)** and select **Setup Billing (2)**, It will automatically select your **azure subscription (3)** then click on **Save(4)**.
-
-    ![Azure DevOps](images/bill.png)    
-
+   
+    ![Azure DevOps](images/bill.png)
+   
 1. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
-
+   
     ![Azure DevOps](images/billingsetup1.png)
-
+   
 # Exercise 1: Configure the lab prerequisites
 
 > **Note**: If you already created this project during previous labs, this exercise can be skipped.
 
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb). 
+In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb]
+(https://github.com/MicrosoftLearning/eShopOnWeb). 
 
 ## Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization by selecting **Azure DevOps**. Give your project the name **eShopOnWeb (1)** and leave the other fields with defaults. Click on **+ Create project (3)**.
-
+   
     ![Create Project](images/createprojectupdated.png)
-
+    
 ## Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos (1)>Files (2)** , **Import a Repository**. Select **Import (3)**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git **(4)** and click **Import (5)**:
-
+   
      ![Import Repository](images/import.png)
-
+    
 1.  The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines
     - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
     - **infra** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 8 website used on the lab scenarios.
-
+      
 1. Go to **Repos>Branches**.
+   
 1. Hover on the **main** branch then click the ellipsis on the right of the column.
+   
 1. Click on **Set as default branch**.
 
-## Task 3: Configure CI Pipeline as Code with YAML in Azure DevOps
+# Exercise 2: Configure the lab prerequisites
+
+## Task 1: Configure CI Pipeline as Code with YAML in Azure DevOps
 
 In this task, you will add a YAML build definition to the existing project.
 
 1. Navigate back to the **Pipelines** pane in of the **Pipelines** hub.
-1. In the **Create your first Pipeline** window, click **Create pipeline**.
-
+   
+1. In the **Create your Pipeline** window, click **New pipeline**.
+   
     > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
-
+    
 1. On the **Where is your code?** pane, click **Azure Repos Git (YAML)** option.
-
+   
     ![Import Repository](images/newpip1.png)
       
-1. On the **Select a repository** pane, click **eShopOnWeb**.
-
+1. On the **Select a repository** pane, click **eShopOnWeb_MultiStageYAML**.
+   
     ![Import Repository](images/newpip2.png)
-
+   
 1. On the **Configure your pipeline** pane, scroll down and select **Existing Azure Pipelines YAML File**.
-
+   
     ![Import Repository](images/newpip3.png)
-
+   
 1. In the **Selecting an existing YAML File** blade, specify the following parameters:
    
     - Branch: **main**
     - Path: Select **/.ado/eshoponweb-ci.yml** from the drop-down.
-
+      
         ![Import Repository](images/newpip4.png)
   
 1. Click **Continue** to save these settings.
+   
 1. From the **Review your Pipeline YAML** screen, click **Run** to start the Build Pipeline process.
-
+   
      ![Import Repository](images/newpip5.png)
    
 1. Wait for the Build Pipeline to complete successfully. Ignore any warnings regarding the source code itself, as they are not relevant for this lab exercise.
-
+   
     ![Import Repository](images/newpip6.png)
-
+   
     > **Note**: Each task from the YAML file is available for review, including any warnings and errors.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   
-    <validation step="6b9d31be-724d-4d12-ace3-7e2e42292c7a" />
 
-# Exercise 2: Creating the necessary Azure Resources for the Release Pipeline
+# Exercise 3: Creating the necessary Azure Resources for the Release Pipeline
 
 ## Task 1: Create two Azure web apps
 
@@ -173,17 +171,6 @@ In this task, you will create two Azure web apps representing the **Canary** and
 1. In the Azure portal, click the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
 
    ![Clouldshell](images/cloudshell.png)
-  
-1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
-
-     ![Clouldshell](images/image001.png)
-
-    >**Note**: If this is the first time you are starting **Cloud Shell** , On Getting started pop up select **Mount Storage Account**, select the subscription you are using in this lab, and select **Apply**.
-   
-   ![Clouldshell](images/image002.png)
-
-    >**Note**: On Mount Storage Account pop up ,select **We will create a storage account for you** and click on **Next**. 
-   
     
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a resource group. 
 
@@ -304,7 +291,7 @@ In this task, you will create two Azure web apps representing the **Canary** and
 1. Confirm the creation of the Alert rule by clicking **Review + create (5)**, and confirm once more by clicking **Create**. Wait for the alert rule to get created successfully.
 
 
-# Exercise 3: Configure the release pipeline
+# Exercise 4: Configure the release pipeline
 
 In this exercise, you will configure a release pipeline.
 
@@ -312,7 +299,7 @@ In this exercise, you will configure a release pipeline.
 
 In this task, you will set up the release tasks as part of the Release Pipeline.
 
-1. From the **eShopOnWeb** project in the Azure DevOps portal, in the vertical navigational pane, select **Pipelines** and then, within the **Pipelines** section, click **Releases(1)**.
+1. From the **eShopOnWeb_MultiStageYAML** project in the Azure DevOps portal, in the vertical navigational pane, select **Pipelines** and then, within the **Pipelines** section, click **Releases(1)**.
 1. Click **New Pipeline(2)**.
     
      ![Azure devops](images/re.png)
@@ -331,7 +318,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
    
 1. From the **Stage** window appearing, update the default "Stage 1" Stage Name to **Canary**. Close the popup window by using the **X** button. You are now in the graphical editor of the Release Pipeline, showing the Canary Stage.
 
-    ![Azure devops](images/canary.png)
+    ![Azure devops](images/DevOpspage2.png)
    
 1. Hover the mouse over the Canary Stage, and click the **Clone** button, to copy the Canary Stage to an additional Stage. Name this Stage **Production**.
 
@@ -345,9 +332,9 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
      ![Azure devops](images/artifact.png)
      
-1. Select the **eShopOnWeb** in the **Source (build pipeline)** field. Click **Add** to confirm the selection of the artifact.
+1. Select the **eShopOnWeb_MultiStageYAML** in the **Source (build pipeline)** field. Click **Add** to confirm the selection of the artifact.
     
-     ![Azure devops](images/addartifact.png)
+     ![Azure devops](images/DevOpspage3.png)
 
 1. From the **Artifact** rectangle, notice the **Continuous Integration Trigger** (lightning bolt) appearing. 
 
@@ -377,13 +364,14 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
     
       ![Azure devops](images/canaryre.png)
 
+1. Scroll down and open the **Application and Configuration Settings** pane and enter `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development` in the **App settings** box.
+
 1. Under **All pipelines > New Release Pipeline** pane, Click on **Tasks**,From the drop-down selct Select **Production**.
 
       ![Azure devops](images/selectpro.png)
 
-1. Open the **Application and Configuration Settings** pane and enter `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development` in the **App settings** box.
       
-3. In **Production(1)** stage Similar to the Canary stage earlier, complete the pipeline settings. Under the Tasks tab / Production Deployment process, in the **Azure subscription(2)** dropdown list, select the Azure subscription you used for the **Canary Environment** stage, shown under **Available Azure Service connections**, as we already created the service connection before when authorizing the subscription use. In the **App type** from the dropdown list select **Web App on Windows(3)**, In the **App Service name(4)** from the dropdown list, select the name of the **Prod** web app.
+1. In **Production(1)** stage Similar to the Canary stage earlier, complete the pipeline settings. Under the Tasks tab / Production Deployment process, in the **Azure subscription(2)** dropdown list, select the Azure subscription you used for the **Canary Environment** stage, shown under **Available Azure Service connections**, as we already created the service connection before when authorizing the subscription use. In the **App type** from the dropdown list select **Web App on Windows(3)**, In the **App Service name(4)** from the dropdown list, select the name of the **Prod** web app.
 
       ![Azure devops](images/prodre1.png)
      
@@ -433,14 +421,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
     > **Note**: Now you have the application with CI/CD configured. In the next exercise we will set up Quality Gates as part of a more advanced  Release pipeline.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   
-   <validation step="65659ba7-275b-4c5f-8608-92fb9a964c42" />
-
-# Exercise 4: Configure release gates
+# Exercise 5: Configure release gates
 
 In this exercise, you will set up Quality Gates in the release pipeline.
 
@@ -530,7 +511,15 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
 
    [Azure devops](images/saverea.png)
 
-# Exercise 5: Test release gates
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="29f6bfe8-0b16-4145-92f9-30e77d26ab03" />
+
+# Exercise 6: Test release gates
 
 In this exercise, you will test the release gates by updating the application, which will trigger a deployment.
 

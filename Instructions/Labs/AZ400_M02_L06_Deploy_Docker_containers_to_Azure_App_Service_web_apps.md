@@ -1,4 +1,4 @@
-# Lab 02: Deploying Docker containers to Azure App Service web apps
+# Lab 04: Deploying Docker containers to Azure App Service web apps
 
 ## Lab overview
 
@@ -17,58 +17,6 @@ After you complete this lab, you will be able to:
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab6-architecture-new.png)
-
-## Set up an Azure DevOps organization
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to [**Azure Devops**](https://go.microsoft.com/fwlink/?LinkId=307137). 
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/400-3.png)
-
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/m1-2.png)
-
-5. In the **Organization Settings** window on the left menu click on **Billing** and select **Setup Billing** then click on save, you can find the **Organization Settings** in the left bottom corner of the Azure DevOps home page.
-
-    ![Azure DevOps](images/agent3.png)
-    ![Azure DevOps](images/agent4.png)    
-
-6. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
-
-    ![Azure DevOps](images/agent2.png)
-
-# Exercise 0: Configure the lab prerequisites
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
-
-## Task 1: Create and configure the team project
-
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
-
-1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work Item process** dropdown. Click on **Create**.
-
-## Task 2: Import eShopOnWeb Git Repository
-
-In this task you will import the eShopOnWeb Git repository that will be used by several labs.
-
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previoulsy created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**: 
-
-1.  The repository is organized the following way:
-    - **.ado** folder contains Azure DevOps YAML pipelines
-    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
-    - **.azure** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
-    - **.github** folder container YAML GitHub workflow definitions.
-    - **src** folder contains the .NET 6 website used on the lab scenarios.
-
-## Task 3: Set main branch as default branch
-
-1. Go to **Repos>Branches**
-1. Hover on the **main** branch then click the ellipsis on the right of the column
-1. Click on **Set as default branch**
 
 # Exercise 1: Manage the service connection
 
@@ -110,13 +58,13 @@ A service principal is automatically created by Azure Pipeline when you connect 
 
 1.  From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a service principal:
 
+    > **Note**: Replace `$subscriptionId` with the subscription ID you copied in the previous step. Once the command runs, it will generate a JSON output. Save this output to a text file, as you will need it later in this lab.
+
     ```
     az ad sp create-for-rbac --name sp-az400-azdo --role contributor --scopes /subscriptions/$subscriptionId
     ```
 
-    > **Note**: The command will generate a JSON output. Copy the output to text file. You will need it later in this lab.
-
-1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **Create Service Connection**.
+1. Next, from the lab vm, start a web browser, navigate to the [**Azure Devops**](https://go.microsoft.com/fwlink/?LinkId=307137) **eShopOnWeb** project. Click on **Project Settings>Service Connections (under Pipelines)** and **Create Service Connection**.
 
 1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
 
@@ -124,7 +72,7 @@ A service principal is automatically created by Azure Pipeline when you connect 
 
 1. Fill in the empty fields using the information gathered during previous steps:
     - Subscription Id and Name
-    - Service Principal Id (appId), Service principal key ( Password) and TenantId (tenant).
+    - Service Principal Id **(appId**), Service principal key ( **Password**) and TenantId (**tenant**).
     - In **Service connection name** type **azure-connection**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
 
 1. Click on **Verify and Save**.
@@ -137,7 +85,7 @@ In this exercise, you will import and run the CI pipeline.
 
 1. Go to **Pipelines>Pipelines**.
 
-1. Click on **New pipeline** button (or **Create Pipeline** if you don't have other pipelines previously created).
+1. Click on **New pipeline** button.
 
 1. Select **Azure Repos Git (Yaml)**.
 
@@ -152,6 +100,7 @@ In this exercise, you will import and run the CI pipeline.
     - **rg-az400-container-NAME** with the resource group name defined before in the lab.
 
 1. Click on **Save and Run** and wait for the pipeline to execute succesfully.
+2. Select "Create new brach" and enter the branch name as **master** and submit to run the pipeline.
 
     > **Note**: The deployment may take a few minutes to complete if it is ask for permission click on permit.
 
@@ -163,8 +112,6 @@ In this exercise, you will import and run the CI pipeline.
     - **Docker - Push**: Push the images to Azure Container Registry
 
 1. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the ellipsis and **Rename/Remove** option. Name it **eshoponweb-ci-docker** and click on **Save**.
-
-1. Navigate to the [**Azure Portal**](https://portal.azure.com), search for the Azure Container Registry in the recently created Resource Group (it should be named **rg-az400-container-NAME**). Make sure that the **eshoponweb/web** was created and contains two tags (one of them is **Latest**).
 
 # Exercise 3: Import and run the CD pipeline
 
@@ -191,10 +138,10 @@ In this task, you will add a new role assignment to allow Azure App Service pull
     echo $roleName
     ```
 
-1. After getting the service principal ID and the role name, let's create the role assignment by running this command (replace **rg-az400-container-NAME** with your resource group name)
+1. After getting the service principal ID and the role name, let's create the role assignment by running this command **(replace <rg-az400-container-NAME> with your resource group name)**
 
     ```sh
-    az role assignment create --assignee $spId --role $roleName --scope /subscriptions/$subscriptionId/resourceGroups/rg-az400-eshopeonweb-NAME
+    az role assignment create --assignee $spId --role $roleName --scope /subscriptions/$subscriptionId/resourceGroups/<rg-az400-container-NAME>
     ```
 
 You should now see the JSON output which confirms the success of the command run.
@@ -263,7 +210,7 @@ In this task, you will remove pipeline billing to eliminate unnecessary charges.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="551f6d92-e76e-4714-9d30-87e5c9d18e44" />
+   <validation step="87a02bd6-fc07-4d97-9993-757399fc846f" />
 
 ## Review
 
