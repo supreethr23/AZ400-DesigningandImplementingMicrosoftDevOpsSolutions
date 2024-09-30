@@ -1,4 +1,4 @@
-# Lab 1: Sharing Team Knowledge using Azure Project Wikis
+# Lab 2: Sharing Team Knowledge using Azure Project Wikis
 
 ## Lab overview
 

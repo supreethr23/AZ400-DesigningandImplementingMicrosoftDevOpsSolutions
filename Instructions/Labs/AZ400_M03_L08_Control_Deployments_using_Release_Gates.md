@@ -39,14 +39,17 @@ After you complete this lab, you will be able to:
 ## Estimated timing: 75 minutes
 
 ## Set up an Azure DevOps organization. 
+
 1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
    
    ![Azure DevOps](images/azureportal-lab7.png)
    
 1. If not Sign-in, then on the **Sign into Microsoft Azure** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
+
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
    
 1. Now enter the following **Password** and click on **Sign in**.
+
    * Password: <inject key="AzureAdUserPassword"></inject>
    
 1. If you see the pop-up **Stay Signed in?**, click No.
@@ -56,6 +59,7 @@ After you complete this lab, you will be able to:
 1. If **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
    
 1. Now open a **New Tab** navigate to https://go.microsoft.com/fwlink/?LinkId=307137.
+
     >**Note:** If not **login**, use previously used **Username: <inject key="AzureAdUserEmail"></inject> and Password: <inject key="AzureAdUserPassword"></inject>** to login.
     
 1. If you see the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
@@ -151,14 +155,13 @@ In this task, you will add a YAML build definition to the existing project.
    
 1. From the **Review your Pipeline YAML** screen, click **Run** to start the Build Pipeline process.
    
-     ![Import Repository](images/newpip5.png)
+    ![Import Repository](images/newpip5.png)
    
 1. Wait for the Build Pipeline to complete successfully. Ignore any warnings regarding the source code itself, as they are not relevant for this lab exercise.
    
     ![Import Repository](images/newpip6.png)
    
     > **Note**: Each task from the YAML file is available for review, including any warnings and errors.
-
 
 # Exercise 3: Creating the necessary Azure Resources for the Release Pipeline
 
@@ -176,7 +179,7 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
    >**Important:** Replace the `<region>` variable placeholder with the name of the Azure region that will host the two Azure web apps, for example **westeurope** or **centralus** or **any other available region** of your choice):
 
-    >**Note**: possible locations can be found by running the following command, use the **Name** on `<region>` : `az account list-locations -o table`
+   >**Note**: possible locations can be found by running the following command, use the **Name** on `<region>` : `az account list-locations -o table`
 
     ```bash
     REGION='westeurope'
@@ -221,7 +224,6 @@ In this task, you will create two Azure web apps representing the **Canary** and
     | Name | the name of the Canary web app you recorded in the previous task (3) |
     | Region | the same Azure region to which you deployed the web apps earlier in the previous task (4) |
     
- 
     > **Note**: Disregard the deprecation message. This is required in order to prevent failures of the Enable Continuous Integration DevOps task you will be using later in this lab.
 
 1. Click **Review + create (6)** and then click **Create**.
@@ -255,23 +257,23 @@ In this task, you will create two Azure web apps representing the **Canary** and
     > **Note**: You will create monitor alerts here, which you will use in later part of this lab.
 1. From the same **Settings** / **Application Insights** menu option within the Web App, select **View Application Insights Data**. This redirects you to the Application Insights blade in the Azure Portal.
 
-      ![portal](images/view.png)
+    ![portal](images/view.png)
 
-1.  On the Application Insights resource blade, in the **Monitoring** section, click **Alerts** and then click **Create > Alert rule**.
+1. On the Application Insights resource blade, in the **Monitoring** section, click **Alerts** and then click **Create > Alert rule**.
 
-      ![portal](images/alert.png)
+    ![portal](images/alert.png)
        
 1. On the **Create an alert rule** blade, in the **Select a name** textbox, Select  **Failed Requests(1)** from the drop-down. 
 
-      ![portal](images/failedreupdated.png)
+    ![portal](images/failedreupdated.png)
      
-1.  On the **Create an Alert Rule** blade, in the **Condition** section, leave the **Threshold** set to **Static(1)**, validate the other default settings as follows:
+1. On the **Create an Alert Rule** blade, in the **Condition** section, leave the **Threshold** set to **Static(1)**, validate the other default settings as follows:
     - Aggregation Type: **Count (2)**
     - Operator: **Greater Than (3)**
     - Unit: **Count (4)**
     - Threshold value: type **0** (5)
 
-        ![portal](images/cond.png)
+    ![portal](images/cond.png)
     
 1. Click on **Next: Actions >**. Don't make any changes in the **Actions** settings blade, and define the following parameters under the **Details** section:
 
@@ -289,7 +291,6 @@ In this task, you will create two Azure web apps representing the **Canary** and
     > **Note**: You can create multiple alert rules on different metrics such as availability < 99 percent, server response time > 5 Seconds, or server exceptions > 0
 
 1. Confirm the creation of the Alert rule by clicking **Review + create (5)**, and confirm once more by clicking **Create**. Wait for the alert rule to get created successfully.
-
 
 # Exercise 4: Configure the release pipeline
 
@@ -346,44 +347,43 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
    
 1. Within the **Canary Environments** stage, click the **1 job, 1 tasks** label and review the tasks within this stage.
      
-      ![Azure devops](images/1job1task.png)
+    ![Azure devops](images/1job1task.png)
 
     > **Note**: The canary environment has 1 task which, respectively, publishes the artifact package to Azure Web App.
 
 1. On the **All pipelines > New Release Pipeline** pane, ensure that the **Canary(1)** stage is selected. In the **Azure subscription(2)** dropdown list, Confirm the App Type is set to "Web App on Windows(3)". Next, in the **App Service name** dropdown list, select the name of the **Canary(4)** web app.
 
-      ![Azure devops](images/capro01.png)
+    ![Azure devops](images/capro01.png)
       
-     >**Note:** After Selecting your Azure subscription and click **Authorize**. If prompted, authenticate by using the user account with the Owner role in the Azure subscription
+    >**Note:** After Selecting your Azure subscription and click **Authorize**. If prompted, authenticate by using the user account with the Owner role in the Azure subscription
     
-      ![Azure devops](images/autho.png)
+    ![Azure devops](images/autho.png)
      
 1. Select the Task **Deploy Azure App Service**. In the **Package or Folder** field, update the default value of "$(System.DefaultWorkingDirectory)/\*\*/\*.zip" to **"$(System.DefaultWorkingDirectory)/\*\*/Web.zip"**
 
     > notice an exclamation mark next to the Tasks tab. This is expected, as we need to configure the settings for the Production Stage.
     
-      ![Azure devops](images/canaryre.png)
+    ![Azure devops](images/canaryre.png)
 
 1. Scroll down and open the **Application and Configuration Settings** pane and enter `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development` in the **App settings** box.
 
 1. Under **All pipelines > New Release Pipeline** pane, Click on **Tasks**,From the drop-down selct Select **Production**.
 
-      ![Azure devops](images/selectpro.png)
+    ![Azure devops](images/selectpro.png)
 
-      
 1. In **Production(1)** stage Similar to the Canary stage earlier, complete the pipeline settings. Under the Tasks tab / Production Deployment process, in the **Azure subscription(2)** dropdown list, select the Azure subscription you used for the **Canary Environment** stage, shown under **Available Azure Service connections**, as we already created the service connection before when authorizing the subscription use. In the **App type** from the dropdown list select **Web App on Windows(3)**, In the **App Service name(4)** from the dropdown list, select the name of the **Prod** web app.
 
-      ![Azure devops](images/prodre1.png)
+    ![Azure devops](images/prodre1.png)
      
 1. Select the Task **Deploy Azure App Service**. In the **Package or Folder** field, update the default value of "$(System.DefaultWorkingDirectory)/\*\*/\*.zip" to **"$(System.DefaultWorkingDirectory)/\*\*/Web.zip"**
 
-     ![Azure devops](images/prodre.png)
+    ![Azure devops](images/prodre.png)
 
 1. Open the **Application and Configuration Settings** pane and enter `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development` in the **App settings** box.
    
 1. On the **All pipelines > New Release Pipeline** pane, click **Save** and, in the **Save** dialog box, click **OK**.
 
-      ![Azure devops](images/saverepip.png)
+    ![Azure devops](images/saverepip.png)
 
    You have now successfully configured the Release Pipeline.
 
@@ -431,7 +431,7 @@ In this task, you will configure pre-deployment gates.
 
 1. Switch to the web browser window displaying the Azure DevOps portal, and open the **eShopOnWeb** project. In the vertical navigational pane, in the **Pipelines** section, click **Releases** and, on the **New Release Pipeline** pane, click **Edit**.
 
-      ![Azure devops](images/editre.png)
+    ![Azure devops](images/editre.png)
 
 1. On the **All pipelines > New Release Pipeline** pane, on the left edge of the rectangle representing the **Canary Environment** stage, click the oval shape representing the **Pre-deployment conditions**.
 
@@ -454,12 +454,12 @@ In this task, you will configure pre-deployment gates.
  
 1. On **create a new realease** page, click on **Create**.
 
-     ![Azure devops](images/createnewre.png)
+    ![Azure devops](images/createnewre.png)
 1. Notice the green confirmation message, saying "Release-2" has been created. Click the link of "Release-2" to navigate to its details.
 
 1. Notice the **Canary** Stage is in a **Pending Approval** state. Click the **Approve** button. This sets off the Canary Stage again.
 
-     ![Azure devops](images/approve.png) 
+    ![Azure devops](images/approve.png) 
 
 ## Task 2: Configure post-deployment gates for Azure Monitor
 
@@ -467,7 +467,7 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
 
 1. Again switch to the **New Release Pipeline** pane, click **Edit**.
 
-      ![Azure devops](images/editre.png)
+    ![Azure devops](images/editre.png)
       
 1. On the right edge of the rectangle representing the **Canary Environment** stage, click the oval shape representing the **Post-deployment conditions**.
 
@@ -475,15 +475,15 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
    
 1. On **Post-deployment conditions** pane, set the **Gates** slider to **Enabled**.
     
-     ![Azure devops](images/gatesena.png) 
+    ![Azure devops](images/gatesena.png) 
      
-1. click **+ Add**, and, in the pop-up menu, click **Query Azure Monitor Alerts**.
+1. Click **+ Add**, and, in the pop-up menu, click **Query Azure Monitor Alerts**.
 
-      ![Azure devops](images/qury.png) 
+    ![Azure devops](images/qury.png) 
       
 1. On **Post-deployment conditions** pane, in the **Query Azure Monitor Alerts** section, in the **Azure subscription(1)** dropdown list, select the **service connection** entry representing the connection to your Azure subscription, and, in the **Resource group** dropdown list, select the **az400m04l09-RG(2)** entry.
 
-      ![Azure devops](images/azsubrg.png) 
+    ![Azure devops](images/azsubrg.png) 
 
 1. On the **Post-deployment conditions** pane, expand the **Advanced** section and configure the following options:
 
@@ -493,7 +493,7 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
     - Alert State: **Acknowledged, New(4)**
     - Monitor Condition: **Fired(5)**
     
-        ![Azure devops](images/pre-deployset3.png) 
+    ![Azure devops](images/pre-deployset3.png) 
      
 1. On **Post-deployment conditions** pane, expand the **Evaluation options** and configure the following options:
 
@@ -501,16 +501,15 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
     - Set the value of **Timeout after which gates fail** to **8 Minutes(2)**.
     - Select the **On successful gates, ask for approvals(3)** option.
 
-        ![Azure devops](images/pre-deployset5.png) 
+    ![Azure devops](images/pre-deployset5.png) 
 
-        > **Note**: The sampling interval and timeout work together so that the gates will call their functions at suitable intervals and reject the deployment if they don't succeed during the same sampling interval within the timeout period.
+    > **Note**: The sampling interval and timeout work together so that the gates will call their functions at suitable intervals and reject the deployment if they don't succeed during the same sampling interval within the timeout period.
 
 1. Close the **Post-deployment conditions** pane, by clicking the **x** mark in its upper right corner.
 
 1. Back on the **New Release Pipeline** pane, click **Save**, and in the **Save** dialog box, click **OK**.
 
    [Azure devops](images/saverea.png)
-
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
@@ -530,7 +529,7 @@ In this task, you will first generate some alerts for the Canary Web App, follow
 1. From the Azure Portal, browse to the **Canary Web App** Resource deployed earlier.
 1. From the Overview pane, notice the **URL** field showing the Hyperlink of the web application. Click this link, which redirects you to the EShopOnWeb web application in the browser.
 
-     ![portal](images/websitecan.png)
+    ![portal](images/websitecan.png)
    
 1. To simulate a **Failed Request**, add **/discount** to the URL, which will result in an error message, since that page does not exist. Refresh this page several times to generate multiple events.
 1. From the Azure Portal, in the "Search resources, services and docs" field, enter **resource group(1)** and select the **Resource group(2)** Resource created in the previous exercise.
@@ -550,15 +549,18 @@ In this task, you will first generate some alerts for the Canary Web App, follow
  
 1. On **create a new realease** page, click on **Create**.
 
-     ![Azure devops](images/createnewre.png) 
+    ![Azure devops](images/createnewre.png) 
    
 1. Wait for the Release pipeline to kick off, and **approve** the Canary Stage release action.
+
 1. Wait for the Canary release Stage to complete successfully. Notice how the **Post-deployment Gates** is switching to an **Evaluation Gates** status.  Click the **Evaluation Gates** icon.
 
    ![Azure devops](images/eva.png) 
    
 1. For the **Query Azure Monitor Alerts**, notice an initial failed state.
+
 1. Let the Release pipeline in a pending state for the next 5 minutes. After the 5 minutes did pass, notice the 2nd evaluation failing again.
+
 1. This is expected behavior, since there is an Application Insights Alerts triggered for the Canary Web App.
 
     > **Note**: Since there is an alert triggered by the exception, **Query Azure Monitor** gate will fail. This, in turn, will prevent deployment to the **Production** environment.
