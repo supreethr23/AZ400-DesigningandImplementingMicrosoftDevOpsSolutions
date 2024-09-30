@@ -312,22 +312,27 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
 ### Task 2: Deploy resources to Azure by YAML pipelines
 
-1. Navigate back to the **Pipelines** pane in of the **Pipelines** hub.
-1. In the **Create your first Pipeline** window, click **Create pipeline**.
+In this task, you will create a template-based Azure DevOps YAML pipeline.
 
-    > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
+1. Go to **Pipelines (1)>Pipelines (2)**. Click on **Create Pipeline (3)** or **New Pipeline** button.
 
-1. On the **Where is your code?** pane, click **Azure Repos Git (YAML)** option.
+    ![](images/AZ-400-create.png)  
 
-1. On the **Select a repository** pane, click **eShopOnWeb**.
+2. Select **Azure Repos Git (YAML)**
 
-1. On the **Configure your pipeline** pane, scroll down and select **Existing Azure Pipelines YAML File**.
+    ![](images/AZ-400-code.png)
 
-1. In the **Selecting an existing YAML File** blade, specify the following parameters:
-   - Branch: **main**
-   - Path: **.ado/eshoponweb-cd-windows-cm.yml**
-   
-1. Click **Continue** to save these settings.
+3. Select the **eShopOnWeb** repository.
+
+    ![](images/az400-m3-L4-09.png)
+
+4. Select **Existing Azure Pipelines YAML File**
+
+    ![](images/az400-m3-L4-10.png)
+
+1. In the **Selecting an existing YAML File** blade, specify the following parameters and  click **Continue (3)** to save these settings.
+   - Branch: **main (1)**
+   - Path: **/.ado/eshoponweb-cd-windows-cm.yml (2)**
 
    ![Save and running the YAML pipeline after making changes](./images/6-3.png)
 
