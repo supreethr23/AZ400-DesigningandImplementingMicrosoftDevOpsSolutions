@@ -164,7 +164,6 @@ In this task, you will import an existing CI YAML pipeline definition, modify an
 
     ![ACR password](images/lab-400-7.png)
 
-
 ## Task 3: Create an Azure Key vault
 
 In this task, you will create an Azure Key vault by using the Azure portal.
@@ -172,7 +171,8 @@ In this task, you will create an Azure Key vault by using the Azure portal.
 For this lab scenario, we will have a Azure Container Instance (ACI) that pull and runs a container image stored in Azure Container Registry (ACR). We intend to store the password for the ACR as a secret in the key vault.
 
 1.  In the Azure portal, in the **Search resources, services, and docs** text box, type **Key vault** and press the **Enter** key. 
-1.  Select **Key vault** blade, click on **Create>Key Vault**. 
+1.  Select **Key vault** blade, click on **Create>Key Vault**.
+ 
 1.  On the **Basics** tab of the **Create key vault** blade, specify the following settings and click on **Next**:
 
     | Setting | Value |
