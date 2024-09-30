@@ -21,121 +21,7 @@ After you complete this lab, you will be able to:
 
   ![Architecture Diagram](images/lab4-architecture-new.png)
 
-# Set up an Azure DevOps organization (Skip if already done).
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
-
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-    * Password: <inject key="AzureAdUserPassword"></inject>
-
-2. If prompted click **Ask later** on **Action Required** page.
-
-3. On the next page accept defaults and click on continue.
-   
-   ![](images/AZ-400-odl.png)
-   
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-   ![](images/AZ-400-almost.png)
-
-# Exercise 0: Configure the lab prerequisites
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the **eShopOnWeb**.
-
-## Task 1: Create and configure the team project
-
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
-
-   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name  **eShopOnWeb (1)**, select visibility as **Private(2)**  and leave the other fields with defaults. Click on **Create project (3)**.
-
-      ![](images/az400-m3-L4-03.png)
-
-## Task 2: (skip if done) Import eShopOnWeb Git Repository
-
-  In this task you will import the eShopOnWeb Git repository that will be used by several labs.
-  
-   1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created eShopOnWeb project. Click on             **Repos (1)>Files (2) , Import a Repository**. Select **Import (3)**. On the **Import a Git Repository (4)** window, paste the following URL                     https://github.com/MicrosoftLearning/eShopOnWeb.git (5) and click **Import (6)**.
-
-      ![](images/AZ-400-import.png)
-      
-      ![](images/AZ-400-git.png)
-
-   2. The repository is organized the following way:
-
-         o. **.ado** folder contains Azure DevOps YAML pipelines
-         
-         o **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
-         
-         o **.azure** folder contains Bicep & ARM infrastructure as code templates used in some lab scenarios.
-         
-         o **.github** folder contains YAML GitHub workflow definitions.
-         
-         o. **src** folder contains the .NET 6 website used in the lab scenarios.
-         
-       ![](images/az400-m3-L4-06.png)
-
-#### Task 3: Set main branch as default branch
-
-1. Go to **Repos>Branches**.
-1. Hover on the **main** branch then click the ellipsis on the right of the column.
-1. Click on **Set as default branch**.
-
- # Exercise 1: Include build validation as part of a Pull Request
- 
- In this exercise, you will include build validation to validate a Pull Request.
- 
- ## Task 1: Import the YAML build definition
- 
- In this task, you will import the YAML build definition that will be used as a Branch Policy to validate the pull requests.
- 
- Let's start by importing the build pipeline named **eshoponweb-ci-pr.yml**.
- 
-   1. Go to **Pipelines (1)>Pipelines (2)**. Click on **Create Pipeline (3)** or **New Pipeline** button.
-
-      ![](images/AZ-400-create.png)  
-
-   2. Select **Azure Repos Git (YAML)**
-
-      ![](images/AZ-400-code.png)
-
-   3. Select the **eShopOnWeb** repository.
-
-      ![](images/az400-m3-L4-09.png)
-
-   4. Select **Existing Azure Pipelines YAML File**
-
-      ![](images/az400-m3-L4-10.png)
-
-   5. Select the path **/.ado/eshoponweb-ci-pr.yml(1)** file then click on **Continue(2)**
-
-      ![](images/AZ-400-yaml.1.png)
-
-       The build definition consists of the following tasks:
-      
-         o **DotNet Restore:** With NuGet Package Restore you can install all your project's dependency without having to store them in source                   control. 
-        
-         o **DotNet Build:** Builds a project and all of its dependencies.
-        
-         o **DotNet Test:** .Net test driver used to execute unit tests.
-        
-         o **DotNet Publish:** Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's                 **Build.ArtifactStagingDirectory**.
-        
-        ![](images/AZ-400-pipeline.png)
-
-   6. Click the **Save** button to save the pipeline definition
-
-      ![](images/az400-m3-L4-13.png)
-     
-   7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis (1)** and **Rename/move (2)** option.
-   
-      ![](images/AZ-400-eshop.png)
-
-   8. Name it **eshoponweb-ci-pr (1)** and click on **Save (2)**.
-
-      ![](images/AZ-400-rename.png)    
-
-## Task 2: Branch Policies
+## Task 1: Branch Policies
 
 In this task, you will add policies to the main branch and only allow changes using Pull Requests that comply with the defined policies. You want to ensure that changes in a branch are reviewed before they are merged.
 
@@ -159,7 +45,7 @@ In this task, you will add policies to the main branch and only allow changes us
       
       >**Note**: If you get any error while saving the branch validation refresh the page and try again.
 
- ## Task 3: Working with Pull Requests
+ ## Task 2: Working with Pull Requests
  
  In this task, you will use the Azure DevOps portal to create a Pull Request, using a new branch to merge a change into the protected main branch.
  
@@ -271,7 +157,7 @@ In this task, you will add policies to the main branch and only allow changes us
           - src/web/*
       ``` 
 
-      ![](images/az-400-lab3-7.png)
+      ![](images/400s22.png)
 
       This will automatically trigger the build pipeline if any change is made to the main branch and the web application code (the src/web folder).Since you enabled Branch Policies, you need to pass by a Pull Request in order to update your code. 
     
@@ -355,7 +241,7 @@ In this task, you will add policies to the main branch and only allow changes us
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="94a8cfc0-766b-4257-b420-265113433302" />
+   <validation step="acd984e3-6678-4326-9460-21caeb9889c7" />
           
  ## Review
   

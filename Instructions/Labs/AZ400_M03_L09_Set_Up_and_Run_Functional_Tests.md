@@ -1,4 +1,4 @@
-# Lab 02: Setting Up and Running Functional Tests
+# Lab 03: Setting Up and Running Functional Tests
 
 ## Lab overview
 
@@ -18,57 +18,6 @@ After you complete this lab, you will be able to configure a CI pipeline for a .
 
 ## Estimated timing: 60 minutes
 
-### Before you start
-
-## Review applications required for this lab
-
-Identify the applications that you'll use in this lab:
-    
--   Microsoft Edge
-
-## Set up an Azure DevOps organization (Skip if already done) 
-
-1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
-
-2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-
-3. On the next page accept defaults and click on continue.
-
-    ![Azure DevOps](images/az-400-5-1.png)
-
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/az-400-5-2.png)
-
-### Exercise 0: Configure the lab prerequisites
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
-
-#### Task 1: Create and configure the team project
-
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
-
-1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and leave the other fields with defaults. Click on **Create**.
-
-#### Task 2: Import the eShopOnWeb Git Repository
-
-In this task you will import the eShopOnWeb Git repository that will be used by several labs.
-
-1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import a Repository**. Select **Import**. On the **Import a Git Repository** window, paste the following URL <https://github.com/MicrosoftLearning/eShopOnWeb.git> and click **Import**:
-
-1. The repository is organized the following way:
-    - **.ado** folder contains Azure DevOps YAML pipelines.
-    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces).
-    - **infra** folder contains Bicep & ARM infrastructure as code templates used in some lab scenarios.
-    - **.github** folder contains YAML GitHub workflow definitions.
-    - **src** folder contains the .NET website used in the lab scenarios.
-
-#### Task 3: Set main branch as default branch
-
-1. Go to **Repos>Branches**.
-1. Hover on the **main** branch then click the ellipsis on the right of the column.
-1. Click on **Set as default branch**.
-
 ### Exercise 1: Setup Tests in CI pipeline
 
 In this exercise, you will setup tests in CI pipeline.
@@ -80,10 +29,15 @@ In this task, you will add the YAML build definition that will be used to implem
 Let's start by importing the CI pipeline named [eshoponweb-ci.yml](https://github.com/MicrosoftLearning/eShopOnWeb/blob/main/.ado/eshoponweb-ci.yml).
 
 1. Go to **Pipelines>Pipelines**.
+
 1. Click on **New Pipeline** button.
+
 1. Select **Azure Repos Git (YAML)**.
+
 1. Select the **eShopOnWeb** repository.
+
 1. Select **Existing Azure Pipelines YAML File**.
+
 1. Select the **main** branch and the **/.ado/eshoponweb-ci.yml** file, then click on **Continue**.
 
     The CI definition consists of the following tasks:
@@ -93,6 +47,7 @@ Let's start by importing the CI pipeline named [eshoponweb-ci.yml](https://githu
     - **DotNet Publish**: Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's **Build.ArtifactStagingDirectory**.
     - **Publish Artifact - Website**: Publish the app artifact (created in the previous step) and make it available as a pipeline artifact.
     - **Publish Artifact - Bicep**: Publish the infrastructure artifact (Bicep file) and make it available as a pipeline artifact.
+
 1. Click the **Save** button (not **Save and run**) to save the pipeline definition.
 
 #### Task 2: Add tests to the CI pipeline
@@ -131,7 +86,6 @@ You can notice that the Unit Tests task is already part of the pipeline.
 
 #### Task 4: Check the tests summary
 
-
 1. Click on the **Run**, then from the **Run pipeline** tab, click on **Run** again.
 
 1. Wait for the pipeline to start and until it completes the Build Stage successfully.
@@ -145,13 +99,6 @@ You can notice that the Unit Tests task is already part of the pipeline.
     >**Note**: If the table is empty, you need to reset the filters to have all the details about the tests run.
 
     ![Tests Table](images/AZ400_M05_TEST1.png)
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
- 
-   <validation step="c1d57f7e-dc1d-4aa3-a6b6-830ee3880cd5" />
 
 
 ## Review

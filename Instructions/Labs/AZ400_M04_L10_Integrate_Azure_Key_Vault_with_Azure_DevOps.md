@@ -1,8 +1,8 @@
-# Lab 3: Integrating Azure Key Vault with Azure DevOps
+# Lab 01: Integrating Azure Key Vault with Azure DevOps
 
 ## Lab overview
 
-Azure Key Vault provides secure storage and management of sensitive data, such as keys, passwords, and certificates. Azure Key Vault includes supports for hardware security modules, as well as a range of encryption algorithms and key lengths. By using Azure Key Vault, you can minimize the possibility of disclosing sensitive data through source code, which is a common mistake made by developers. Access to Azure Key Vault requires proper authentication and authorization, supporting fine grained permissions to its content.
+Azure Key Vault provides secure storage and management of sensitive data, such as keys, passwords, and certificates. Azure Key Vault includes supports for hardware security modules, as well as a range of encryption algorithms and key lengths. By using Azure Key Vault, you can minimize the possibility of disclosing sensitive data through source code, which is a common mistake made by developers. Access to Azure Key Vault requires proper authentication and authorization, supportxing fine grained permissions to its content.
 
 In this lab, you will see how you can integrate Azure Key Vault with an Azure DevOps pipeline by using the following steps:
 
@@ -38,6 +38,18 @@ After you complete this lab, you will be able to:
 4. On the **Almost Done...** page fill the captcha and click on continue. 
 
     ![Azure DevOps](images/az-400-5-2.png)
+
+1. On the Azure Devops page click on **Azure DevOps(1)** located at top left corner and then click on **Organization Settings (2)** at the left down corner.
+
+    ![Azure DevOps](images/agent1updated.png)
+    
+1. In the **Organization Settings** window on the left menu click on **Billing (1)** and select **Setup Billing (2)**, It will automatically select your **azure subscription (3)** then click on **Save(4)**.
+
+    ![Azure DevOps](images/bill.png)    
+
+1. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
+
+    ![Azure DevOps](images/billingsetup1.png)
 
 # Exercise 0: Configure the lab prerequisites
 
@@ -128,7 +140,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
     - Service Principal Id (or clientId), Key (or Password) and TenantId.
     - In **Service connection name** type **azure subs**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
 
-    ![Azure Service Connection](images/lab-400-4.1.png)
+      ![Azure Service Connection](images/lab-400-4.1.png)
 
 1. Click on **Verify and Save**.
 
@@ -164,7 +176,6 @@ In this task, you will import an existing CI YAML pipeline definition, modify an
 
     ![ACR password](images/lab-400-7.png)
 
-
 ## Task 3: Create an Azure Key vault
 
 In this task, you will create an Azure Key vault by using the Azure portal.
@@ -172,7 +183,8 @@ In this task, you will create an Azure Key vault by using the Azure portal.
 For this lab scenario, we will have a Azure Container Instance (ACI) that pull and runs a container image stored in Azure Container Registry (ACR). We intend to store the password for the ACR as a secret in the key vault.
 
 1.  In the Azure portal, in the **Search resources, services, and docs** text box, type **Key vault** and press the **Enter** key. 
-1.  Select **Key vault** blade, click on **Create>Key Vault**. 
+1.  Select **Key vault** blade, click on **Create>Key Vault**.
+
 1.  On the **Basics** tab of the **Create key vault** blade, specify the following settings and click on **Next**:
 
     | Setting | Value |
@@ -198,17 +210,19 @@ For this lab scenario, we will have a Azure Container Instance (ACI) that pull a
       
       > **Note**: Wait for the Azure Key vault to be provisioned. This should take less than 1 minute.
 
-1.  On the **Your deployment is complete** blade, click on **Go to resource**.
-1.  On the Azure Key vault blade, in the vertical menu on the left side of the blade, in the **Objects** section, click on **Secrets**.
-1.  On the **Secrets** blade, click on **Generate/Import**.
-1.  On the **Create a secret** blade, specify the following settings and click on **Create** (leave others with their default values):
+1. On the **Your deployment is complete** blade, click on **Go to resource**.
+
+1. On the Azure Key vault blade, in the vertical menu on the left side of the blade, in the **Objects** section, click on **Secrets**.
+
+1. On the **Secrets** blade, click on **Generate/Import**.
+
+1. On the **Create a secret** blade, specify the following settings and click on **Create** (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Upload options | **Manual** |
     | Name | **acr-secret** |
     | Value | ACR access password copied in previous task |
-
 
 ## Task 4: Create a Variable Group connected to Azure Key Vault
 
@@ -253,9 +267,8 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
 
 1. Click on **Save and Run**.
 1. Once the Deploy Stage wants to start, you are prompted with **Permissions Needed**, as well as an orange bar saying 
-    ```
-    This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
-    ```
+    **"This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App"**
+    
 1. Click on **View**
 1. From the **Waiting for Review** pane, click **Permit**.
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
@@ -273,8 +286,7 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="3b8a38e3-4b54-4e83-9e58-3eea4ead17b7" />
-
+   <validation step="10127a4a-453b-48da-b290-fea76e5a1dfe" />
 
 ## Review
 

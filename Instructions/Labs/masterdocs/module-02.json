@@ -1,6 +1,6 @@
 [
     {
-      "Name": "AZ-400: Module 02",
+      "Name": "AZ-400: Module 02: Implement CI with Azure Pipelines and GitHub Actions",
       "Language": "English",
       "BaseURL": "https://github.com/CloudLabs-MOC/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/tree/stage",
       "Files": [

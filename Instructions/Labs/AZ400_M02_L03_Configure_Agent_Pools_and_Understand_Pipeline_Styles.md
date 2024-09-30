@@ -31,13 +31,9 @@ After you complete this lab, you will be able to:
 
 2. In the pop-up for *Action Required*, select **Ask later**. 
 
-3. On the next page accept defaults and click on continue.
+3. On the next page accept defaults, fill the captcha and click on continue.
 
-    ![Azure DevOps](images/lab1-image1.png)
-    
-4. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/lab1-image2.png)
+    ![Azure DevOps](images/400112.png)
     
 5. On the Azure DevOps page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
@@ -60,9 +56,9 @@ In this exercise, you will set up the prerequisite for the lab, which consists o
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
-   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name  **eShopOnWeb (1)**, select visibility as **Private(2)**  and leave the other fields with defaults. Click on **Create project (3)**.
+   1. On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name  **eShopOnWeb (1)**, select visibility as **Private(2)**  and leave the other fields with defaults. Click on **Create(3)**.
 
-      ![](images/az400-m3-L4-03.png)
+      ![](images/400113.png)
 
 ## Task 2: Configuring Components for Visual Studio
 
@@ -126,10 +122,13 @@ In this task, you will create a template-based Azure DevOps YAML pipeline.
 
    - A single Stage: Build
    - A single Job: Build
-   - 3 tasks within the Build Job:
-   - Dotnet Restore
-   - Dotnet Build
-   - Dotnet Publish
+   - 4 tasks within the Build Job:
+   - **DotNet Restore:** With NuGet Package Restore you can install all your project's dependency without having to store them in source control.      
+   - **DotNet Build:** Builds a project and all of its dependencies.     
+   - **DotNet Test:** .Net test driver used to execute unit tests.    
+   - **DotNet Publish:** Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's                 **Build.ArtifactStagingDirectory**.
+        
+        ![](images/AZ-400-pipeline.png)
 
 1. On the **Review your pipeline YAML** pane, click the down-facing caret symbol next to the **Run** button, click **Save**.
 
@@ -257,9 +256,22 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
  
 1.  On the **eShopOnWeb** edit pane, in the upper right corner of the pane, click **Validate + Save** and, on the **Save** pane, click **Save** again. This will automatically trigger the build based on this pipeline. 
 
-1. In the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Pipelines**. Depending on your lab setup, the pipeline might prompt you for permissions. Click **Permit** to allow the pipeline to run. 
+1. On the **Recent** tab of the **Pipelines** pane, click the **eShopOnWeb** entry,click on **Run** to run the pipeline
 
-1.  On the **Recent** tab of the **Pipelines** pane, click the **eShopOnWeb** entry, on the **Runs** tab of the **eShopOnWeb** pane, select the most recent run, on the **Summary** pane of the run, scroll down to the bottom, in the **Jobs** section, click **Phase 1** and monitor the job until its successful completion. 
+1. Depending on your lab setup, the pipeline might prompt you for permissions. Click **Permit** to allow the pipeline to run. 
+
+1. Wait until the build got succeeded.
+
+1. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis (1)** and **Rename/move (2)** option.
+   
+      ![](images/AZ-400-eshop.png)
+
+1. Name it **eshoponweb-ci-pr (1)** and click on **Save (2)**.
+
+      ![](images/AZ-400-rename.png)  
+
+
+<validation step="38dc84d9-2b4f-44c8-bf6f-1da2f5a9cde7" />
 
 ## Review
 

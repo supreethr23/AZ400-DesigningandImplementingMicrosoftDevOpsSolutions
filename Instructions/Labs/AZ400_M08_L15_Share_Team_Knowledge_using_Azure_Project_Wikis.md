@@ -1,4 +1,4 @@
-# Lab 1: Sharing Team Knowledge using Azure Project Wikis
+# Lab 2: Sharing Team Knowledge using Azure Project Wikis
 
 ## Lab overview
 
@@ -21,6 +21,24 @@ After you complete this lab, you will be able to:
 # Exercise 0: Configure the lab prerequisites
 
 In this exercise, you will set up the prerequisites for the lab, which consist of the pre-configured **EShopOnWeb-<inject key="DeploymentID"> </inject>** team project based on an Azure DevOps Demo Generator template and a team created in Microsoft Teams.
+=======
+## Set up an Azure DevOps organization. 
+
+1. On your lab VM open **Edge Browser** on desktop and navigate to [Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), and if prompted sign with the credentials.
+
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    * Password: <inject key="AzureAdUserPassword"></inject>
+
+2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+
+3. On the next page accept defaults and click on continue.
+
+    ![](images/lab1-image1.png)
+
+4. On the **Almost Done...** page fill the captcha and click on continue. 
+
+    ![](images/lab1-image2.png)
 
 
 ## Task 1: Configure the EShopOnWeb project
@@ -144,7 +162,6 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    
    <validation step="71f00530-53c1-46ab-8ec4-40b2e8f4e351" />
-
 
 ## Task 2: Manage content of a published wiki
 In this task, you will manage content of the wiki you published in the previous task.

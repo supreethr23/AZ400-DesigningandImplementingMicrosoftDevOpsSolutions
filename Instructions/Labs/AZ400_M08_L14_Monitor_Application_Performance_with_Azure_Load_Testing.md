@@ -67,11 +67,11 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
     ![Create Project](images/az-400-9a1.png)
 
 1. On the **Create aproject to get started** page, Enter the following details.
-      - Project name: **eShopOnWeb (1)**
-      - Under the **Advanced** section, choose **Scrum (2)** on the **Work Item process** dropdown and then click on **+ Create project (3)**.
-     
-    ![Create Project](images/az-400-3.png)    
 
+    - Project name: **eShopOnWeb (1)**
+    - Under the **Advanced** section, choose **Scrum (2)** on the **Work Item process** dropdown and then click on **+ Create project (3)**.
+     
+      ![Create Project](images/100.png)    
 
 ### Task 2: Import eShopOnWeb Git Repository
 
@@ -102,9 +102,22 @@ In this task, you will create an Azure web app by using the cloud shell in Azure
 1. In the Azure portal, in the toolbar, click the **Cloud Shell** icon located directly to the right of the search text box.
 
     ![Import Repository](images/az-400-9a2.png)
-   
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
+   
+1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
+   
+     ![](images/lab15-storage-acc-1.png)
+   
+1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
+   
+     ![](images/lab15-storage-acc-2.png)
+
+1. Use the existing **Subscription (1)** and **Resource group** as **AZ400-JumpVM (2)** and **Region** as **westus(3)** and specify new names for **Storage account** as **az400storage<inject key="DeploymentID" enableCopy="false" /> (4)** and **File share** as **az400fileshare<inject key="DeploymentID" enableCopy="false" /> (5)**, as shown in the dialog below. Then select **Create**.
+   
+     ![](images/az-400-storage.png)
+   
+
+1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a resource group (replace the `<region>` placeholder with the name of the Azure region closest to you such as 'eastus').
 
@@ -136,7 +149,7 @@ In this task, you will create an Azure web app by using the cloud shell in Azure
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="a9a71552-429c-49fe-b249-1c8265a90fd0" />
+   <validation step="d89774b8-074c-45b0-8043-731aa5587b30" />
 
 ## Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
 
@@ -155,19 +168,6 @@ In this task, you will create a Service Principal by using the Azure CLI, which 
      ![](images/az-400-9a2.png)
    
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
-   
-1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
-   
-     ![](images/lab15-storage-acc-1.png)
-   
-1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
-   
-     ![](images/lab15-storage-acc-2.png)
-
-
-1. Use the existing **Subscription (1)** and **Resource group** as **AZ400-JumpVM (2)** and **Region** as **westus(3)** and specify new names for **Storage account** as **az400storage<inject key="DeploymentID" enableCopy="false" /> (4)** and **File share** as **az400fileshare<inject key="DeploymentID" enableCopy="false" /> (5)**, as shown in the dialog below. Then select **Create**.
-   
-     ![](images/az-400-storage.png)
    
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID and subscription name attributes:
 
@@ -206,10 +206,9 @@ In this task, you will create a Service Principal by using the Azure CLI, which 
     - In **Service connection name** type **azure subs (6)**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
     - Click on **Verify and Save (7)**.
 
-    ![Azure Service Connection](images/az-400-9a24.png)
-
-    ![Azure Service Connection](images/az-400-9a25.png)   
-
+      ![Azure Service Connection](images/az-400-9a24.png)
+  
+      ![Azure Service Connection](images/az-400-9a25.png)   
 
 ### Task 2: Add a YAML build and deploy definition
 
@@ -397,8 +396,7 @@ In this task, you will add a YAML build definition to the existing project.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="dbe61700-749e-4ca1-b089-8dea982eaa81" />
-
+   <validation step="47dd122a-716f-4209-b52a-e4a4a910d5b1" />
 
 ## Exercise 2: Deploy and Setup Azure Load Testing
 
@@ -494,14 +492,12 @@ With both quick tests complete, let's make a few changes to them, and validate t
 1. More below, several of these values are represented using dashboard graph line and chart views.
 1. Take a few minutes to **compare the results** of both simulated tests with each other, and **identify the impact** of more users on the App Service performance.
 
-
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="cdc3c287-2862-4b69-a670-73ff4f4335b7" />
-
+   <validation step="24b6b8cf-eedf-45e9-9838-11e108958357" />
 
 ### Exercise 3: Automate a Load Test with CI/CD in Azure Pipelines
 
@@ -571,7 +567,7 @@ Perform the following steps to download the input files for an existing load tes
    - *config.yaml*: the load test YAML configuration file. You reference this file in the CI/CD workflow definition.
    - *quick_test.jmx*: the JMeter test script
      
-    ![](images/az-400-9a32.png)
+     ![](images/az-400-9a32.png)
 
 1. Commit all extracted input files to your source control repository. To do this, navigate to the **Azure DevOps Portal**(<https://dev.azure.com>), and navigate to the **eShopOnWeb** DevOps Project.
 1. Select **Repos**. In the source code folder structure, notice the **tests** subfolder. Notice the ellipsis (...) **(1)**, and select **New (2) > Folder (3)**.
@@ -615,7 +611,7 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
    - Load Test Run Name: **ado_run**
    - Load Test Run Description: **load testing from ADO**
 
-    ![](images/9-1.png)
+     ![](images/9-1.png)
 
 1. Confirm the injection of the parameters as a snippet of YAML by clicking **Add**
 1. If the indentation of the YAML snippet is giving errors (red squiggly lines), fix them by adding 2 spaces or tab to position the snippet correctly.  

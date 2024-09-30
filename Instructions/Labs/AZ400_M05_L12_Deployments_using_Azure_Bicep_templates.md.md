@@ -234,9 +234,22 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
     Password:  <inject key="AzureAdUserPassword"></inject>
       
 1. In the Azure portal, click on the **Cloud Shell** icon, located directly to the right of the search textbox at the top of the page.
-1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
-   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **Getting Started** pop-up, click on **No storage account required** and select the subscription you are using in this lab, and click on **Apply**.
+     ![](images/az-400-9a2.png)
+   
+1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
+   
+1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
+   
+     ![](images/lab15-storage-acc-1.png)
+   
+1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
+   
+     ![](images/lab15-storage-acc-2.png)
+
+1. Use the existing **Subscription (1)** and **Resource group** as **AZ400-JumpVM (2)** and **Region** as **westus(3)** and specify new names for **Storage account** as **az400storage<inject key="DeploymentID" enableCopy="false" /> (4)** and **File share** as **az400fileshare<inject key="DeploymentID" enableCopy="false" /> (5)**, as shown in the dialog below. Then select **Create**.
+   
+     ![](images/az-400-storage.png)
 
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID and subscription name attributes:
 
@@ -286,11 +299,15 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
     > **Note**: We will use the wizard to create a new YAML Pipeline definition based on our project.
 
 1. On the **Where is your code?** pane, click **Azure Repos Git (YAML)** option.
+
 1. On the **Select a repository** pane, click **eShopOnWeb**.
+
 1. On the **Configure your pipeline** pane, scroll down and select **Existing Azure Pipelines YAML File**.
+
 1. In the **Selecting an existing YAML File** blade, specify the following parameters:
    - Branch: **main**
    - Path: **.ado/eshoponweb-cd-windows-cm.yml**
+   
 1. Click **Continue** to save these settings.
 
    ![Save and running the YAML pipeline after making changes](./images/6-3.png)
@@ -310,24 +327,24 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
     ```text
     This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
     ```
+1. Click on **View**.
 
-1. Click on **View**
 1. From the **Waiting for Review** pane, click **Permit**.
+
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
+
 1. This sets off the Deploy Stage. Wait for this to complete successfully.
 
 1. Wait for the deployment to finish and review the results.
 
    ![Successful resource deployment to Azure using YAML pipelines](./images/6-1.png)
 
-  
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
-  <validation step="e4c21de8-402e-4ffc-aa10-61fe90dc9884" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="9cd20f12-9e2f-4fb2-b764-6790b73ade56" />
 
 ## Review
 
