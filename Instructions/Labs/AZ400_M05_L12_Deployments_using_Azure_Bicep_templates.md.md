@@ -160,7 +160,7 @@ In this task, you will create a storage template module **storage.bicep** which 
    
    ![Simple-windows-vm.bicep file](./images/az-400-5a29.png)
    
-1. Now copy the following code snippet into the file and commit your changes:
+1. Now copy the following code snippet into the file and **commit (1)** your changes:
 
    ```bicep
    @description('Location for all resources.')
@@ -180,7 +180,9 @@ In this task, you will create a storage template module **storage.bicep** which 
 
    output storageURI string = storageAccount.properties.primaryEndpoints.blob
    ```
-
+   
+   ![Simple-windows-vm.bicep file](./images/az-400-5a30.png)
+   
 ### Task 3: Modify the main template to use the template module
 
 In this task, you will modify the main template to reference the template module you created in the previous task.
@@ -198,7 +200,9 @@ In this task, you will modify the main template to reference the template module
      }
    }
    ```
-
+   
+   ![Simple-windows-vm.bicep file](./images/az-400-5a23.png)
+   
 1. We also need to modify the reference to the storage account blob URI in our virtual machine resource to use the output of the module instead. Find the virtual machine resource and replace the diagnosticsProfile section with the following:
 
    ```bicep
@@ -209,7 +213,9 @@ In this task, you will modify the main template to reference the template module
      }
    }
    ```
-
+   
+   ![Simple-windows-vm.bicep file](./images/az-400-5a31.png)
+   
 1. Review the following details in the main template:
 
    - A module in the main template is used to link to another template.
