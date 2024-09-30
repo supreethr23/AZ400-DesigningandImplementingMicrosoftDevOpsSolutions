@@ -67,10 +67,11 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
     ![Create Project](images/az-400-9a1.png)
 
 1. On the **Create aproject to get started** page, Enter the following details.
-      - Project name: **eShopOnWeb (1)**
-      - Under the **Advanced** section, choose **Scrum (2)** on the **Work Item process** dropdown and then click on **+ Create project (3)**.
+
+    - Project name: **eShopOnWeb (1)**
+    - Under the **Advanced** section, choose **Scrum (2)** on the **Work Item process** dropdown and then click on **+ Create project (3)**.
      
-    ![Create Project](images/az-400-3.png)    
+      ![Create Project](images/100.png)    
 
 ### Task 2: Import eShopOnWeb Git Repository
 
@@ -205,10 +206,9 @@ In this task, you will create a Service Principal by using the Azure CLI, which 
     - In **Service connection name** type **azure subs (6)**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
     - Click on **Verify and Save (7)**.
 
-    ![Azure Service Connection](images/az-400-9a24.png)
-
-    ![Azure Service Connection](images/az-400-9a25.png)   
-
+      ![Azure Service Connection](images/az-400-9a24.png)
+  
+      ![Azure Service Connection](images/az-400-9a25.png)   
 
 ### Task 2: Add a YAML build and deploy definition
 
