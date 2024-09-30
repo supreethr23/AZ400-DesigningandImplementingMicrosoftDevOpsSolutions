@@ -128,7 +128,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
     - Service Principal Id (or clientId), Key (or Password) and TenantId.
     - In **Service connection name** type **azure subs**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
 
-    ![Azure Service Connection](images/lab-400-4.1.png)
+      ![Azure Service Connection](images/lab-400-4.1.png)
 
 1. Click on **Verify and Save**.
 
@@ -172,7 +172,7 @@ For this lab scenario, we will have a Azure Container Instance (ACI) that pull a
 
 1.  In the Azure portal, in the **Search resources, services, and docs** text box, type **Key vault** and press the **Enter** key. 
 1.  Select **Key vault** blade, click on **Create>Key Vault**.
- 
+
 1.  On the **Basics** tab of the **Create key vault** blade, specify the following settings and click on **Next**:
 
     | Setting | Value |
@@ -198,17 +198,19 @@ For this lab scenario, we will have a Azure Container Instance (ACI) that pull a
       
       > **Note**: Wait for the Azure Key vault to be provisioned. This should take less than 1 minute.
 
-1.  On the **Your deployment is complete** blade, click on **Go to resource**.
-1.  On the Azure Key vault blade, in the vertical menu on the left side of the blade, in the **Objects** section, click on **Secrets**.
-1.  On the **Secrets** blade, click on **Generate/Import**.
-1.  On the **Create a secret** blade, specify the following settings and click on **Create** (leave others with their default values):
+1. On the **Your deployment is complete** blade, click on **Go to resource**.
+
+1. On the Azure Key vault blade, in the vertical menu on the left side of the blade, in the **Objects** section, click on **Secrets**.
+
+1. On the **Secrets** blade, click on **Generate/Import**.
+
+1. On the **Create a secret** blade, specify the following settings and click on **Create** (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Upload options | **Manual** |
     | Name | **acr-secret** |
     | Value | ACR access password copied in previous task |
-
 
 ## Task 4: Create a Variable Group connected to Azure Key Vault
 
@@ -274,7 +276,6 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="10127a4a-453b-48da-b290-fea76e5a1dfe" />
-
 
 ## Review
 

@@ -180,7 +180,6 @@ In this task, you will manage content of the wiki you published in the previous 
 
    > **Note**: Since the Wiki source files are handled as source code, remember all practices from traditional source control (Clone, Pull Requests, Approvals and more), can now also be applied to Wiki pages.
 
-
 # Exercise 2: Create and manage a project wiki
 
 In this exercise, you will step through creating and managing a project wiki.
@@ -241,7 +240,6 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
     >**Note**: For details regarding the Mermaid syntax, refer to [About Mermaid](https://mermaid-js.github.io/mermaid/#/)
 
     ![](images/AZ400_M09_L17_26.png)
-
 
 8.  To the right of the editor pane, in the preview pane, click **Load diagram** and review the outcome. 
 

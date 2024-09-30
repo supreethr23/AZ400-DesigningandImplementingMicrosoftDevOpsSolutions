@@ -102,9 +102,22 @@ In this task, you will create an Azure web app by using the cloud shell in Azure
 1. In the Azure portal, in the toolbar, click the **Cloud Shell** icon located directly to the right of the search text box.
 
     ![Import Repository](images/az-400-9a2.png)
-   
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
+   
+1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
+   
+     ![](images/lab15-storage-acc-1.png)
+   
+1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
+   
+     ![](images/lab15-storage-acc-2.png)
+
+1. Use the existing **Subscription (1)** and **Resource group** as **AZ400-JumpVM (2)** and **Region** as **westus(3)** and specify new names for **Storage account** as **az400storage<inject key="DeploymentID" enableCopy="false" /> (4)** and **File share** as **az400fileshare<inject key="DeploymentID" enableCopy="false" /> (5)**, as shown in the dialog below. Then select **Create**.
+   
+     ![](images/az-400-storage.png)
+   
+
+1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following command to create a resource group (replace the `<region>` placeholder with the name of the Azure region closest to you such as 'eastus').
 
@@ -155,19 +168,6 @@ In this task, you will create a Service Principal by using the Azure CLI, which 
      ![](images/az-400-9a2.png)
    
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
-   
-1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
-   
-     ![](images/lab15-storage-acc-1.png)
-   
-1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
-   
-     ![](images/lab15-storage-acc-2.png)
-
-
-1. Use the existing **Subscription (1)** and **Resource group** as **AZ400-JumpVM (2)** and **Region** as **westus(3)** and specify new names for **Storage account** as **az400storage<inject key="DeploymentID" enableCopy="false" /> (4)** and **File share** as **az400fileshare<inject key="DeploymentID" enableCopy="false" /> (5)**, as shown in the dialog below. Then select **Create**.
-   
-     ![](images/az-400-storage.png)
    
 1. From the **Bash** prompt, in the **Cloud Shell** pane, run the following commands to retrieve the values of the Azure subscription ID and subscription name attributes:
 
@@ -567,7 +567,7 @@ Perform the following steps to download the input files for an existing load tes
    - *config.yaml*: the load test YAML configuration file. You reference this file in the CI/CD workflow definition.
    - *quick_test.jmx*: the JMeter test script
      
-    ![](images/az-400-9a32.png)
+     ![](images/az-400-9a32.png)
 
 1. Commit all extracted input files to your source control repository. To do this, navigate to the **Azure DevOps Portal**(<https://dev.azure.com>), and navigate to the **eShopOnWeb** DevOps Project.
 1. Select **Repos**. In the source code folder structure, notice the **tests** subfolder. Notice the ellipsis (...) **(1)**, and select **New (2) > Folder (3)**.
@@ -611,7 +611,7 @@ In this task, you will import the Azure Load Testing - Azure DevOps Marketplace 
    - Load Test Run Name: **ado_run**
    - Load Test Run Description: **load testing from ADO**
 
-    ![](images/9-1.png)
+     ![](images/9-1.png)
 
 1. Confirm the injection of the parameters as a snippet of YAML by clicking **Add**
 1. If the indentation of the YAML snippet is giving errors (red squiggly lines), fix them by adding 2 spaces or tab to position the snippet correctly.  
