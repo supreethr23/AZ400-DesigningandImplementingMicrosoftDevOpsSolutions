@@ -265,9 +265,8 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
 
 1. Click on **Save and Run**.
 1. Once the Deploy Stage wants to start, you are prompted with **Permissions Needed**, as well as an orange bar saying 
-    ```
-    This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App
-    ```
+    **This pipeline needs permission to access a resource before this run can continue to Deploy to an Azure Web App**
+    
 1. Click on **View**
 1. From the **Waiting for Review** pane, click **Permit**.
 1. Validate the message in the **Permit popup** window, and confirm by clicking **Permit**.
