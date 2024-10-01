@@ -149,7 +149,7 @@ In this task, you will create an Azure web app by using the cloud shell in Azure
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="d89774b8-074c-45b0-8043-731aa5587b30" />
+   <validation step="9d87d07a-94ef-41a7-ad3a-be755cabf1af" />
 
 ## Exercise 1: Configure CI/CD Pipelines as Code with YAML in Azure DevOps
 
@@ -396,7 +396,7 @@ In this task, you will add a YAML build definition to the existing project.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="47dd122a-716f-4209-b52a-e4a4a910d5b1" />
+   <validation step="3bf353b8-c587-49e1-8c24-9d18d6515ca1" />
 
 ## Exercise 2: Deploy and Setup Azure Load Testing
 
@@ -497,7 +497,7 @@ With both quick tests complete, let's make a few changes to them, and validate t
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="24b6b8cf-eedf-45e9-9838-11e108958357" />
+   <validation step="bd548940-a663-43d2-888b-8d06b0c4c4da" />
 
 ### Exercise 3: Automate a Load Test with CI/CD in Azure Pipelines
 
