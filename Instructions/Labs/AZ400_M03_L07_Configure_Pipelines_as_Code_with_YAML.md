@@ -16,7 +16,8 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 After you complete this lab, you will be able to:
 
--   configure CI/CD pipelines as code with YAML in Azure DevOps
+-  Configure CI/CD pipelines as code with YAML in Azure DevOps
+-  Configure  Environment settings for CI/CD pipelines
 
 ## Estimated timing: 60 minutes
 

@@ -21,6 +21,8 @@ After you complete this lab, you will be able to:
 
   ![Architecture Diagram](images/lab4-architecture-new.png)
 
+# Exercise 1: Include build validation as part of a Pull Request 
+
 ## Task 1: Branch Policies
 
 In this task, you will add policies to the main branch and only allow changes using Pull Requests that comply with the defined policies. You want to ensure that changes in a branch are reviewed before they are merged.

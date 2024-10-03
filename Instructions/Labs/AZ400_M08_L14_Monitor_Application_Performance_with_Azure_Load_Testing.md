@@ -115,7 +115,6 @@ In this task, you will create an Azure web app by using the cloud shell in Azure
 1. Use the existing **Subscription (1)** and **Resource group** as **AZ400-JumpVM (2)** and **Region** as **westus(3)** and specify new names for **Storage account** as **az400storage<inject key="DeploymentID" enableCopy="false" /> (4)** and **File share** as **az400fileshare<inject key="DeploymentID" enableCopy="false" /> (5)**, as shown in the dialog below. Then select **Create**.
    
      ![](images/az-400-storage.png)
-   
 
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**.
 

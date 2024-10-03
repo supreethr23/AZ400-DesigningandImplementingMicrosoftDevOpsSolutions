@@ -27,13 +27,13 @@ After you complete this lab, you will be able to:
 
   ![Architecture Diagram](images/lab11-architecture-new.png)
       
-### Exercise 1: Import and run CI/CD Pipelines
+### Exercise 1: Run CI/CD Pipelines
 
 In this exercise, you will import and run the CI pipeline, configure the service connection with your Azure Subscription and then import and run the CD pipeline.
 
 In this task, you will create an eShopOnWeb Azure DevOps project to be used by several labs.
 
-#### Task 1: Import and run the CI pipeline
+#### Task 1: Run the CI pipeline
 
 Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
