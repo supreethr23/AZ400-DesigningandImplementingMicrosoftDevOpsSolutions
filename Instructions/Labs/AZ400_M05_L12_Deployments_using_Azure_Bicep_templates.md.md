@@ -64,7 +64,7 @@ After you complete this lab, you will be able to:
 
 In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://dev.azure.com/unhueteb/_git/eshopweb-az400).
 
-### Task 1: Create and configure the team project
+## Task 1: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -76,7 +76,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Create Project](images/6-10.png)
 
-### Task 2: Import eShopOnWeb Git Repository
+## Task 2: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -93,7 +93,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **src** folder contains the .NET 8 website used on the lab scenarios.
 
 
-### Task 3: Set main branch as default branch
+## Task 3: Set main branch as default branch
   
 1. Go to **Repos>Branches (1)**.
 1. Hover on the **main** branch then click the ellipsis on the right of the column **(2)**.
@@ -101,11 +101,11 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
    
     ![Import Repository](images/az-400-5.png)
 
-## Exercise 1: Understand an Azure Bicep template and simplify it using a reusable module
+# Exercise 1: Understand an Azure Bicep template and simplify it using a reusable module
 
 In this lab, you will review an Azure Bicep template and simplify it using a reusable module.
 
-### Task 1: Create Azure Bicep template
+## Task 1: Create Azure Bicep template
 
 In this task, you will use Visual Studio Code to create an Azure Bicep template
 
@@ -123,7 +123,7 @@ In this task, you will use Visual Studio Code to create an Azure Bicep template
 
 1. Pay attention to how simple the resource definitions are and the ability to implicitly reference symbolic names instead of explicit `dependsOn` throughout the template.
 
-### Task 2: Create a bicep module for storage resources
+## Task 2: Create a bicep module for storage resources
 
 In this task, you will create a storage template module **storage.bicep** which will create a storage account only and will be imported by the main template. The storage template module needs to pass a value back to the main template, **main.bicep**, and this value will be defined in the outputs element of the storage template module.
 
@@ -180,7 +180,7 @@ In this task, you will create a storage template module **storage.bicep** which 
    
    ![Simple-windows-vm.bicep file](./images/az-400-5a30.png)
    
-### Task 3: Modify the main template to use the template module
+## Task 3: Modify the main template to use the template module
 
 In this task, you will modify the main template to reference the template module you created in the previous task.
 
@@ -223,11 +223,11 @@ In this task, you will modify the main template to reference the template module
 
 1. Commit the template.
 
-## Exercise 2: Deploying the templates to Azure using YAML pipelines
+# Exercise 2: Deploying the templates to Azure using YAML pipelines
 
 In this lab, you will create a service connection and use it in an Azure DevOps YAML pipeline to deploy your template to your Azure environment.
 
-### Task 1: Create a Service Connection for deployment
+## Task 1: Create a Service Connection for deployment
 
 In this task, you will create a Service Principal by using the Azure CLI, which will allow Azure DevOps to:
 
@@ -307,7 +307,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
       ![Azure Service Connection](images/az-400-9a25.png)   
 
 
-### Task 2: Deploy resources to Azure by YAML pipelines
+## Task 2: Deploy resources to Azure by YAML pipelines
 
 In this task, you will create a template-based Azure DevOps YAML pipeline.
 
@@ -373,4 +373,4 @@ In this task, you will create a template-based Azure DevOps YAML pipeline.
 
 In this lab, you learned how to create an Azure Bicep template, modularize it by using a template module, modify the main deployment template to use the module and updated dependencies, and finally deploy the templates to Azure using YAML pipelines.
 
-### You have successfully completed the lab.
+## You have successfully completed the lab.
