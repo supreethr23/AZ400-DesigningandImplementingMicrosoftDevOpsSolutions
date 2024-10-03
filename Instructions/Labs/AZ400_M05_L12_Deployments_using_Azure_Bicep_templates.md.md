@@ -20,16 +20,19 @@ In this lab, you'll create an Azure Bicep template and modularize it using the A
 
 After you complete this lab, you will be able to:
 
-- Understand an Azure Bicep template's structure.
-- Create a reusable Bicep module.
-- Modify the main template to use the module
-- Deploy all the resources to Azure using Azure YAML pipelines.
+- Exercise 0: Configure the lab prerequisites
+- Exercise 1: Understand an Azure Bicep template and simplify it using a reusable module
+- Exercise 2: Deploying the templates to Azure using YAML pipelines
 
 ## Estimated timing: 45 minutes
 
 ## Instructions
 
-## Set up an Azure DevOps organization. 
+# Exercise 0: Configure the lab prerequisites
+
+In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://dev.azure.com/unhueteb/_git/eshopweb-az400).
+
+## Task 1: Set up an Azure DevOps organization. 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
@@ -60,11 +63,7 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/policies-enable-3rd.png)    
 
-# Exercise 0: Configure the lab prerequisites
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://dev.azure.com/unhueteb/_git/eshopweb-az400).
-
-## Task 1: Create and configure the team project
+## Task 2: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -76,7 +75,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Create Project](images/6-10.png)
 
-## Task 2: Import eShopOnWeb Git Repository
+## Task 3: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
@@ -93,7 +92,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **src** folder contains the .NET 8 website used on the lab scenarios.
 
 
-## Task 3: Set main branch as default branch
+## Task 4: Set main branch as default branch
   
 1. Go to **Repos>Branches (1)**.
 1. Hover on the **main** branch then click the ellipsis on the right of the column **(2)**.
