@@ -262,7 +262,6 @@ Let's continue to test the Feature manager.
  
    <validation step="ec5155c1-0a64-4319-9b84-94137c2a9658" />
 
-
 ## Review
 
 In this lab, you learned how to dynamically enable configuration and manage feature flags.

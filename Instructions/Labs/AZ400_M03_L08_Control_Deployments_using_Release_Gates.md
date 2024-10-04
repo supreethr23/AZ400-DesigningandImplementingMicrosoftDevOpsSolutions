@@ -36,91 +36,7 @@ After you complete this lab, you will be able to:
 
   ![Architecture Diagram](images/lab7-architecture-new.png) 
 
-## Estimated timing: 75 minutes
-
-## Set up an Azure DevOps organization. 
-
-1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
-   
-   ![Azure DevOps](images/azureportal-lab7.png)
-   
-1. If not Sign-in, then on the **Sign into Microsoft Azure** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
-
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
-   
-1. Now enter the following **Password** and click on **Sign in**.
-
-   * Password: <inject key="AzureAdUserPassword"></inject>
-   
-1. If you see the pop-up **Stay Signed in?**, click No.
-   
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
-   
-1. If **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
-   
-1. Now open a **New Tab** navigate to https://go.microsoft.com/fwlink/?LinkId=307137.
-
-    >**Note:** If not **login**, use previously used **Username: <inject key="AzureAdUserEmail"></inject> and Password: <inject key="AzureAdUserPassword"></inject>** to login.
-    
-1. If you see the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
-   
-1. On the next page accept defaults and click on **continue**.
-   
-    ![Azure DevOps](images/startdevops.png)
-    
-1. On the **Almost Done...** page fill the captcha and click on **continue**.
-   
-    ![Azure DevOps](images/m1-2updated.png)
-   
-1. On the Azure Devops page click on **Azure DevOps(1)** located at top left corner and then click on **Organization Settings (2)** at the left down corner.
-   
-    ![Azure DevOps](images/agent1updated.png)
-    
-1. In the **Organization Settings** window on the left menu click on **Billing (1)** and select **Setup Billing (2)**, It will automatically select your **azure subscription (3)** then click on **Save(4)**.
-   
-    ![Azure DevOps](images/bill.png)
-   
-1. On the **MS Hosted CI/CD** section under **Paid parallel jobs** enter value **1** and at the end of the page click on **Save**.
-   
-    ![Azure DevOps](images/billingsetup1.png)
-   
-# Exercise 1: Configure the lab prerequisites
-
-> **Note**: If you already created this project during previous labs, this exercise can be skipped.
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb]
-(https://github.com/MicrosoftLearning/eShopOnWeb). 
-
-## Task 1: Create and configure the team project
-
-In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
-
-1.  On your lab computer, in a browser window open your Azure DevOps organization by selecting **Azure DevOps**. Give your project the name **eShopOnWeb (1)** and leave the other fields with defaults. Click on **+ Create project (3)**.
-   
-    ![Create Project](images/createprojectupdated.png)
-    
-## Task 2: Import eShopOnWeb Git Repository
-
-In this task you will import the eShopOnWeb Git repository that will be used by several labs.
-
-1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos (1)>Files (2)** , **Import a Repository**. Select **Import (3)**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git **(4)** and click **Import (5)**:
-   
-     ![Import Repository](images/import.png)
-    
-1.  The repository is organized the following way:
-    - **.ado** folder contains Azure DevOps YAML pipelines
-    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
-    - **infra** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
-    - **.github** folder container YAML GitHub workflow definitions.
-    - **src** folder contains the .NET 8 website used on the lab scenarios.
-      
-1. Go to **Repos>Branches**.
-   
-1. Hover on the **main** branch then click the ellipsis on the right of the column.
-   
-1. Click on **Set as default branch**.
-
-# Exercise 2: Configure the lab prerequisites
+# Exercise 0: Configure the lab prerequisites
 
 ## Task 1: Configure CI Pipeline as Code with YAML in Azure DevOps
 
@@ -163,7 +79,7 @@ In this task, you will add a YAML build definition to the existing project.
    
     > **Note**: Each task from the YAML file is available for review, including any warnings and errors.
 
-# Exercise 3: Creating the necessary Azure Resources for the Release Pipeline
+# Exercise 1: Creating the necessary Azure Resources for the Release Pipeline
 
 ## Task 1: Create two Azure web apps
 
@@ -292,7 +208,7 @@ In this task, you will create two Azure web apps representing the **Canary** and
 
 1. Confirm the creation of the Alert rule by clicking **Review + create (5)**, and confirm once more by clicking **Create**. Wait for the alert rule to get created successfully.
 
-# Exercise 4: Configure the release pipeline
+# Exercise 2: Configure the release pipeline
 
 In this exercise, you will configure a release pipeline.
 
@@ -421,7 +337,7 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
     > **Note**: Now you have the application with CI/CD configured. In the next exercise we will set up Quality Gates as part of a more advanced  Release pipeline.
 
-# Exercise 5: Configure release gates
+# Exercise 3: Configure release gates
 
 In this exercise, you will set up Quality Gates in the release pipeline.
 
@@ -518,7 +434,7 @@ In this task, you will enable the post-deployment gate for the Canary Environmen
  
    <validation step="29f6bfe8-0b16-4145-92f9-30e77d26ab03" />
 
-# Exercise 6: Test release gates
+# Exercise 4: Test release gates
 
 In this exercise, you will test the release gates by updating the application, which will trigger a deployment.
 
