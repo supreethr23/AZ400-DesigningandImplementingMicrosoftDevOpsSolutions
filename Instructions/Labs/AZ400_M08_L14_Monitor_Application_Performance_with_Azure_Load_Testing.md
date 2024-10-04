@@ -20,6 +20,10 @@ After you complete this lab, you will be able to:
 
 ## Estimated timing: 60 minutes
 
+## Architecture Diagram
+
+  ![Architecture Diagram](images/lab14arch.png)
+
 ## Instructions
 
 ### Exercise 0: Configure the lab prerequisites
