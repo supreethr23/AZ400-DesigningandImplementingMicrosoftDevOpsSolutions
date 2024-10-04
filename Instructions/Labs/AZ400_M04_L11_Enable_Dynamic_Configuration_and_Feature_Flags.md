@@ -18,8 +18,8 @@
 
 After you complete this lab, you will be able to:
 
-- Enable dynamic configuration
-- Manage feature flags
+- Exercise 1: Run CI/CD Pipelines
+- Exercise 2: Manage Azure App Configuration
 
 ## Estimated timing: 60 minutes
 
@@ -27,13 +27,13 @@ After you complete this lab, you will be able to:
 
   ![Architecture Diagram](images/lab11-architecture-new.png)
       
-### Exercise 1: Import and run CI/CD Pipelines
+# Exercise 1: Run CI/CD Pipelines
 
 In this exercise, you will import and run the CI pipeline, configure the service connection with your Azure Subscription and then import and run the CD pipeline.
 
 In this task, you will create an eShopOnWeb Azure DevOps project to be used by several labs.
 
-#### Task 1: Import and run the CI pipeline
+## Task 1: Run the CI pipeline
 
 Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
@@ -65,7 +65,7 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
    
    ![](images/lab-11-1.png)
 
- **Task 2: Import and run the CD pipeline**
+ ## Task 2: Import and run the CD pipeline
  
  Let's import the CD pipeline named **eshoponweb-cd-webapp-code.yml*.
  
@@ -258,10 +258,9 @@ Let's continue to test the Feature manager.
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="ec5155c1-0a64-4319-9b84-94137c2a9658" />
-
 
 ## Review
 
