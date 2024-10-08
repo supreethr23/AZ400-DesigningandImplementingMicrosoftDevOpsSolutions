@@ -82,7 +82,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos (1) >Files (2)** , **Import a Repository**. Select **Import (3)**. On the **Import a Git Repository** window, paste the following URL <https://github.com/MicrosoftLearning/eShopOnWeb.git> **(4)** and click **Import (5)**:
 
 
-    ![Import Repository](images/az-400-4.png)
+   ![Import Repository](images/az-400-4.png)
 
 1. The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines.
@@ -98,7 +98,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 1. Hover on the **main** branch then click the ellipsis on the right of the column **(2)**.
 1. Click on **Set as default branch (3)**.
    
-    ![Import Repository](images/az-400-5.png)
+   ![Import Repository](images/az-400-5.png)
 
 # Exercise 1: Understand an Azure Bicep template and simplify it using a reusable module
 
