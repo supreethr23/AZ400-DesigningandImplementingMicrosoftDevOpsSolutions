@@ -81,8 +81,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 
 1. On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos (1) >Files (2)** , **Import a Repository**. Select **Import (3)**. On the **Import a Git Repository** window, paste the following URL <https://github.com/MicrosoftLearning/eShopOnWeb.git> **(4)** and click **Import (5)**:
 
-
-   ![Import Repository](images/az-400-4.png)
+     ![Import Repository](images/az-400-4.png)
 
 1. The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines.
@@ -147,7 +146,7 @@ In this task, you will create a storage template module **storage.bicep** which 
    
 1. Click on Commit twice to commit the changes, however, we're not done with it yet.
 
-1. Next, hover your mouse over the bicep folder and click the ellipsis icon **(1)**, then select **New>File (2)**. 
+1. Next, hover your mouse over the **infra** folder and click the ellipsis icon **(1)**, then select **New>File (2)**. 
 
    
    ![Simple-windows-vm.bicep file](./images/az-400-5a26.png)
@@ -156,7 +155,7 @@ In this task, you will create a storage template module **storage.bicep** which 
    
    ![Simple-windows-vm.bicep file](./images/az-400-5a29.png)
    
-1. Now copy the following code snippet into the file and **commit (1)** your changes:
+1. Now copy the following code snippet into the file and select **commit (1)** twice to commit your changes.:
 
    ```bicep
    @description('Location for all resources.')
@@ -290,27 +289,21 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
    ![New Service Connection](images/6-6.png)
 
 1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
-
-1. The choose **Service Principal (manual)** and click on **Next**.
    
 1. Fill in the empty fields using the information gathered during previous steps:
-    - Subscription Id **(1)**
-    - Subscription Name **(2)**
-    - Service Principal Id (appId) **(3)**
-    - Service principal key (password) **(4)** and Tenant ID (tenant **(5))**
-    - In **Service connection name** type **azure subs (6)**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
-    - Click on **Verify and Save (7)**.
+    - Subscription Id: Select the default **(1)**
+    - Resource group: Select **AZ400-JumpVM (2)**
+    - In **Service connection name** type **azure subs (3)**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
+    - Click on **Save (4)**.
 
-      ![Azure Service Connection](images/az-400-9a24.png)
-  
-      ![Azure Service Connection](images/az-400-9a25.png)   
+      ![Azure Service Connection](images/az-400-subs.png)  
 
 
 ## Task 2: Deploy resources to Azure by YAML pipelines
 
 In this task, you will create a template-based Azure DevOps YAML pipeline.
 
-1. Go to **Pipelines (1)>Pipelines (2)**. Click on **Create Pipeline (3)** or **New Pipeline** button.
+1. Go to **Pipelines (1)>Pipelines (2)**. Click on **Create Pipeline (3)** button.
 
     ![](images/AZ-400-create.png)  
 
@@ -335,8 +328,6 @@ In this task, you will create a template-based Azure DevOps YAML pipeline.
 1. In the variables section, replace name with **az400m06l15-RG** resource group, set the desired **location** to **<inject key="Region" enableCopy="false"/>** replace the value of the service connection with one of your existing service connections you created earlier.
 
 1. Click the **Save and run (1)** button from the top right corner and in the commit dialog, click **Save and run** again.
-
-   ![Save and running the YAML pipeline after making changes](./images/az-400-5a23.png)
 
 1. Wait for the pipeline to kick off.
 
