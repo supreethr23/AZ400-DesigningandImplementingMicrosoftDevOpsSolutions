@@ -303,8 +303,11 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
    You have now successfully configured the Release Pipeline.
 
-1. In the browser window displaying the **eShopOnWeb** project, in the vertical navigational pane, in the **Pipelines** section, click **Pipelines**.
-1. On the **Pipelines** pane, click the entry representing **eShopOnWeb** build pipeline and then, on the **eShopOnWeb** pane, click on **Run Pipeline**.
+1. In the browser window displaying the **eShopOnWeb_MultiStageYAML** project, in the vertical navigational pane, in the **Pipelines** section, click **Pipelines**.
+
+    ![](images/selectpipline.png)
+
+1. On the **Pipelines** pane, click the entry representing **eShopOnWeb_MultiStageYAML** build pipeline and then, on the **eShopOnWeb_MultiStageYAML** pane, click on **Run Pipeline**.
 
     ![Azure devops](images/runpipafterrel.png)
 
@@ -312,8 +315,8 @@ In this task, you will set up the release tasks as part of the Release Pipeline.
 
     > **Note**: After the build succeeds, the release will be triggered automatically and the application will be deployed to both the environments. Validate the release actions, once the build pipeline completed successfully.
 
-1. In the vertical navigational pane, in the **Pipelines** section, click **Releases** and, on the **eShopOnWeb** pane, click the entry representing the most recent release.
-1. On the **eShopOnWeb > Release-1** blade, track the progress of the release and verify that the deployment to both web apps completed successfully.
+1. In the vertical navigational pane, in the **Pipelines** section, click **Releases** and, on the **eShopOnWeb_MultiStageYAML** pane, click the entry representing the most recent release.
+1. On the **eShopOnWeb_MultiStageYAML > Release-1** blade, track the progress of the release and verify that the deployment to both web apps completed successfully.
 
    ![Azure devops](images/realeas1.png)
 
@@ -345,7 +348,7 @@ In this exercise, you will set up Quality Gates in the release pipeline.
 
 In this task, you will configure pre-deployment gates.
 
-1. Switch to the web browser window displaying the Azure DevOps portal, and open the **eShopOnWeb** project. In the vertical navigational pane, in the **Pipelines** section, click **Releases** and, on the **New Release Pipeline** pane, click **Edit**.
+1. Switch to the web browser window displaying the Azure DevOps portal, and open the **eShopOnWeb_MultiStageYAML** project. In the vertical navigational pane, in the **Pipelines** section, click **Releases** and, on the **New Release Pipeline** pane, click **Edit**.
 
     ![Azure devops](images/editre.png)
 
@@ -353,18 +356,19 @@ In this task, you will configure pre-deployment gates.
 
     ![Azure devops](images/pre-deploy.png)
     
-1. On **Pre-deployment conditions** pane, set the **Pre-deployment approvals** slider to **Enabled** and, in the **Approvers** text box, type and select your Azure DevOps account name.
+1. On **Pre-deployment conditions** pane, set the **Pre-deployment approvals** slider to **Enabled** and, in the **Approvers** text box, type and select your Azure DevOps account name <inject key="AzureAdUserEmail"></inject>.
 
     ![Azure devops](images/predeploy.png)
 
     > **Note**: In a real-life scenario, this should be a DevOps Team name alias instead of your own name.  
+
 1. Click on **x** mark in its upper right corner to **Save** the pre-approval settings and close the popup window.
 
 1. Back on the **New Release Pipeline** pane, click **Save**, and in the **Save** dialog box, click **OK**.
 
     ![Azure devops](images/saverea.png)
 
-1. Return back to the Azure DevOps Portal, open the **eShopOnWeb*** Project. Navigate to **Pipelines**, select **Releases** and select the **New Release Pipeline**. Click the **Create Release** button.
+1. Return back to the Azure DevOps Portal, open the **eShopOnWeb_MultiStageYAML*** Project. Navigate to **Pipelines**, select **Releases** and select the **New Release Pipeline**. Click the **Create Release** button.
 
     ![Azure devops](images/crtrealeas.png) 
  
@@ -451,15 +455,18 @@ In this task, you will first generate some alerts for the Canary Web App, follow
 1. From the Azure Portal, in the "Search resources, services and docs" field, enter **resource group(1)** and select the **Resource group(2)** Resource created in the previous exercise.
 
     ![portal](images/rg.png)
-    
+
+1. In the Azure portal, navigate to the resource group **az400m04l09-RG(1)** from the resource group select **RGATESCanary_FailedRequests** Metric alert rule.
+
 1. There should be at least **1** new alert in the list of results, having a **Severity 2** enter **Alerts** to open the Alerts Service of Azure Monitor.
+
 1. Notice there should be at least **1** Failed_Alert** with **Severity 2 - Warning** showing up in the list. This got trigger when you validated the non-existing website URL address in the previous exercise.
 
     > **Note:** If no Alert shows up yet, wait another few minutes. 
     
     ![Azure devops](images/alertfailed.png) 
 
-1. Return back to the Azure DevOps Portal, open the **eShopOnWeb*** Project. Navigate to **Pipelines**, select **Releases** and select the **New Release Pipeline**. Click the **Create Release** button.
+1. Return back to the Azure DevOps Portal, open the **eShopOnWeb_MultiStageYAML*** Project. Navigate to **Pipelines**, select **Releases** and select the **New Release Pipeline**. Click the **Create Release** button.
 
     ![Azure devops](images/crtrealeas.png) 
  

@@ -188,6 +188,8 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 
 1. On the pipeline run pane, click the ellipsis symbol in the upper right corner and, in the dropdown menu, click **Edit pipeline**.
 
+   ![](./images/edit-pipeline.png)
+
 1. On the pane displaying the content of the **eShopOnWeb_MultiStageYAML/.ado/eshoponweb-ci.yml** file, navigate to the end of the file (line 56), and hit **Enter/Return** to add a new empty line.
 
 1. Being on line **57**, add the following content to define the **Release** stage in the YAML pipeline.
@@ -200,7 +202,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
       jobs:
       - job: Deploy
         pool:
-          vmImage: 'windows-2019'
+          vmImage: 'windows-latest'
         steps:
     ```
 
@@ -214,6 +216,8 @@ In this task, you will add continuous delivery to the YAML-based definition of t
     - In the **Azure subscription** drop-down list, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click **Authorize**, and, when prompted, authenticate by using the same user account you used during the Azure resource deployment.
 
     - In the **App Service name** dropdown list, select the name of the web app you deployed earlier in the lab.
+
+      > **Note**: If you faced fallowing issue `Failed to obtain the Json Web Token(JWT) using service principal client ID` from the **Azure subscription**, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click **Authorize**, once the authication has been completed make sure to select latest generated **Service connection** 
 
     - In the **Package or folder** text box, **update** the Default Value to `$(Build.ArtifactStagingDirectory)/**/Web.zip`
 
@@ -360,7 +364,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
       jobs:
       - job: Deploy
         pool:
-          vmImage: 'windows-2019'
+          vmImage: 'windows-latest'
         steps:
         - task: DownloadBuildArtifacts@0
           inputs:
@@ -410,9 +414,13 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
 
 1. From the **Add your first check**, select **Approvals**.
 
+   ![](./images/select-approvals.png)
+
 1. Add your Azure DevOps User Account Name to the **approvers** field.
 
-  > **Note:** In a real-life scenario, this would reflect the name of your DevOps team working on this project.
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   > **Note:** In a real-life scenario, this would reflect the name of your DevOps team working on this project.
 
 1. Confirm the approval settings defined, by pressing the **Create** button.
 
@@ -435,53 +443,53 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
       - job: Deploy
         environment: approvals
         pool:
-          vmImage: 'windows-2019'
+          vmImage: 'windows-latest'
     ```
 1. As the environment is a specific setting of a deployment stage, it cannot be used by "jobs". Therefore, we have to make some additional changes to the current job definition.
 
 1. On Line **60**, rename "- job: Deploy" to **- deployment: Deploy** .
 
-1. Next, under Line **63** (vmImage: Windows-2019), add a new empty line.
+1. Next, under Line **63** (vmImage: Windows-latest), add a new empty line.
 
 1. Paste in the following Yaml Snippet:
 
-```yaml
-    strategy:
-      runOnce:
-        deploy:
-```
+    ```yaml
+        strategy:
+          runOnce:
+            deploy:
+    ```
 20. Select the remaining snippet (Line **67** all the way to the end), and use the **Tab** key to fix the YAML indentation. 
 
-   The resulting YAML snippet should look like this now, reflecting the **Deploy Stage**:
+    The resulting YAML snippet should look like this now, reflecting the **Deploy Stage**:
 
 
-   ```yaml
-   - stage: Deploy
-     displayName: Deploy to an Azure Web App
-     jobs:
-       - deployment: Deploy
-         environment: approvals
-         pool:
-           vmImage: "windows-2019"
-         strategy:
-           runOnce:
-             deploy:
-               steps:
-                 - task: DownloadBuildArtifacts@1
-                   inputs:
-                     buildType: "current"
-                     downloadType: "single"
-                     artifactName: "Website"
-                     downloadPath: "$(Build.ArtifactStagingDirectory)"
-                 - task: AzureRmWebAppDeployment@4
-                   inputs:
-                     ConnectionType: "AzureRM"
-                     azureSubscription: "AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)"
-                     appType: "webApp"
-                     WebAppName: "eshoponWebYAML369825031"
-                     packageForLinux: "$(Build.ArtifactStagingDirectory)/**/Web.zip"
-                     AppSettings: "-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development"
-   ```
+    ```yaml
+    - stage: Deploy
+      displayName: Deploy to an Azure Web App
+      jobs:
+        - deployment: Deploy
+          environment: approvals
+          pool:
+            vmImage: "windows-latest"
+          strategy:
+            runOnce:
+              deploy:
+                steps:
+                  - task: DownloadBuildArtifacts@1
+                    inputs:
+                      buildType: "current"
+                      downloadType: "single"
+                      artifactName: "Website"
+                      downloadPath: "$(Build.ArtifactStagingDirectory)"
+                  - task: AzureRmWebAppDeployment@4
+                    inputs:
+                      ConnectionType: "AzureRM"
+                      azureSubscription: "AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)"
+                      appType: "webApp"
+                      WebAppName: "eshoponWebYAML369825031"
+                      packageForLinux: "$(Build.ArtifactStagingDirectory)/**/Web.zip"
+                      AppSettings: "-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development"
+    ```
 
 
 21. Confirm the changes to the code YAML file by clicking **Commit** and clicking **Commit** again in the appearing Commit pane.
