@@ -176,7 +176,7 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
 
 1. On the **Add agent pool** pane, in the **Pool type** dropdown list, select **Self-hosted**, in the **Name** text box, type **az400m05l05a-pool**, under **Pipeline permissions** select the checkboxes and then click **Create**.
 
-    ![Azure DevOps](images/az-400-lab3-10.png)    
+    ![Azure DevOps](images/E1T1S9.png)    
     
 1.  Back on the **Agent pools** pane, click the entry representing the newly created **az400m05l05a-pool**. 
 
@@ -256,7 +256,7 @@ In this task, you will configure your lab Virtual Machine as an Azure DevOps sel
  
 1.  On the **eShopOnWeb** edit pane, in the upper right corner of the pane, click **Validate + Save** and, on the **Save** pane, click **Save** again. This will automatically trigger the build based on this pipeline. 
 
-1. On the **Recent** tab of the **Pipelines** pane, click the **eShopOnWeb** entry,click on **Run** to run the pipeline
+1. On the **Recent** tab of the **Pipelines** pane, click the **eShopOnWeb** entry, click on **Run** to run the pipeline
 
 1. Depending on your lab setup, the pipeline might prompt you for permissions. Click **Permit** to allow the pipeline to run. 
 
