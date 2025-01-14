@@ -154,7 +154,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 1. On the **Add link** panel, in the **Link Type** dropdown list, select **Child**. Next, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **Add Link**.
 
-    ![Include Title "Training Dashboard" and click "OK"](images/az-400p3.png)
+    ![Include Title "Training Dashboard" and click "OK"](images/az-400p3a.png)
 
     > **Note**: On the **Training dashboard** panel, note that the assignment, **Area**, and **Iteration** are already set to the same values as the epic that the feature is based on. In addition, the feature is automatically linked to the parent item it was created from.
 
