@@ -34,6 +34,12 @@ You can notice that the Unit Tests task is already part of the pipeline.
 
 - **Unit Tests** test a single part of your application's logic. One can further describe it by listing some of the things that it isn't. A unit test doesn't test how your code works with dependencies or infrastructure – that's what integration tests are for.
 
+1. From the **eShopOnWeb_MultiStageYAML** project in the Azure DevOps portal, in the vertical navigational pane, select **Pipelines** and then, within the **Pipelines** section, click **Releases(1)**.
+
+1. On the pipeline run pane, click the ellipsis symbol in the upper right corner and, in the dropdown menu, click **Edit pipeline**.
+
+1. At the end of the scipt add new line and add below code with and use the **Tab** key to fix the YAML indentation. 
+
 1. Now you need to add the Integration Tests task after the Unit Tests task:
 
     ```YAML

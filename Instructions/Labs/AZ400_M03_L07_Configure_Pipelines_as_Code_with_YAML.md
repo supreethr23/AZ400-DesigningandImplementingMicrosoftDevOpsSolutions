@@ -202,7 +202,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
       jobs:
       - job: Deploy
         pool:
-          vmImage: 'windows-2019'
+          vmImage: 'windows-latest'
         steps:
     ```
 
@@ -364,7 +364,7 @@ In this task, you will add continuous delivery to the YAML-based definition of t
       jobs:
       - job: Deploy
         pool:
-          vmImage: 'windows-2019'
+          vmImage: 'windows-latest'
         steps:
         - task: DownloadBuildArtifacts@0
           inputs:
@@ -443,13 +443,13 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
       - job: Deploy
         environment: approvals
         pool:
-          vmImage: 'windows-2019'
+          vmImage: 'windows-latest'
     ```
 1. As the environment is a specific setting of a deployment stage, it cannot be used by "jobs". Therefore, we have to make some additional changes to the current job definition.
 
 1. On Line **60**, rename "- job: Deploy" to **- deployment: Deploy** .
 
-1. Next, under Line **63** (vmImage: Windows-2019), add a new empty line.
+1. Next, under Line **63** (vmImage: Windows-latest), add a new empty line.
 
 1. Paste in the following Yaml Snippet:
 
@@ -470,7 +470,7 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
         - deployment: Deploy
           environment: approvals
           pool:
-            vmImage: "windows-2019"
+            vmImage: "windows-latest"
           strategy:
             runOnce:
               deploy:
