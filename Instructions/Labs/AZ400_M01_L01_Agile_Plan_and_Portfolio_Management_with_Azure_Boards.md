@@ -33,7 +33,7 @@ After you complete this lab, you will be able to:
 
    ![Azure DevOps](images/lab1-image1.png)
 
-1. On the Almost Done... page fill the captcha and click on continue.
+1. On the Almost Done... page fill in the captcha and click on continue.
 
     ![Azure DevOps](images/lab1-image2.png)
 
@@ -45,9 +45,13 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 In this task, you will create an **EShopOnWeb** Azure DevOps project to be used by several labs.
 
-1. On your lab computer, in a browser window open your Azure DevOps organization. Select your **Organization (1)** and give your project name **EShopOnWeb (2)**, select visibility as **Private(3)** and under the **Advanced (4)** section, choose **Scrum (5)** on the **Work Item process** dropdown. Click on **+ Create project (6)**.
+1. Click on the **Azure Devops** icon and click on **New Project** option.
 
-   ![Create Project](images/lab01-image-01.png)
+   ![Create Project](images/az-400p1.png)
+
+1. Give your project name as **EShopOnWeb (1)**, select visibility as **Private(2)** and under the **Advanced (3)** section, choose **Scrum (4)** on the **Work Item process** dropdown. Click on **Create (5)**.
+
+   ![Create Project](images/az-400p2.png)
     
 # Exercise 1: Manage Agile project
 
@@ -128,27 +132,29 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
     ![In the "Boards">"Work Items" window, click on "New work item" >Epic](images/m1/az-400_m01_t2_s2.png)
 
-1. In the **Enter title** textbox, type **Product training**.
+1. Follow the below steps in the **Work Items** window:
 
-1. In the upper left corner, select the **Unassigned** entry and, in the dropdown list, select your user account in order to assign the new work item to yourself. If your name doesn't appear to start with, begin typing your name and click **Search**.
+    - In the **Enter title** textbox, type **Product training**(1).
 
-1. Next to the **Area** entry, select the **eShopOnWeb** entry and, in the dropdown list, select **EShop-WEB**. This will set the **Area** to **eShopOnWeb\EShop-WEB**.
+    - In the upper left corner, select the **Unassigned** entry and, in the dropdown list, select your user account in order to assign the new work item to yourself. If your name doesn't appear to start with, begin typing your name and click **Search** (2).
 
-1. Next to the **Iteration** entry, select the **eShopOnWeb** entry and, in the dropdown list, select **Sprint 2**. This will set the **Iteration** to **eShopOnWeb\Sprint 2**.
+     - Next to the **Area** entry, select the **eShopOnWeb** entry and, in the dropdown list, select **EShop-WEB**. This will set the **Area** to **eShopOnWeb\EShop-WEB** (3).
+
+     - Next to the **Iteration** entry, select the **eShopOnWeb** entry and, in the dropdown list, select **Sprint 2**. This will set the **Iteration** to **eShopOnWeb\Sprint 2** (4).
+
+       ![Enter previously shown information and click "Save" in Epic window](images/m1/az-400_m01_t2_s7.png)
 
 1. Click **Save** to finalize your changes. **Do not close it**.
 
-    ![Enter previously shown information and click "Save" in Epic window](images/m1/az-400_m01_t2_s7.png)
-
-    > **Note**: Ordinarily you would want to fill out as much information as possible, but this is sufficient for the purposes of this lab.
+    > **Note**: Ordinarily you would want to fill out as much information as possible, but this is sufficient for the purpose of this lab.
 
     > **Note**: The work item form includes all of the relevant work item settings. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. We will explore one of the ways to add a feature to this epic.
 
 1. In the **Related work** section on the lower right-side, select the **Add link** entry and, in the dropdown list, select **New item**.
 
-1. On the **Add link** panel, in the **Link Type** dropdown list, select **Child**. Next, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **Ok**.
+1. On the **Add link** panel, in the **Link Type** dropdown list, select **Child**. Next, in the **Work item type** dropdown list, select **Feature**, in the **Title** textbox, type **Training dashboard** and click **Add Link**.
 
-    ![Include Title "Training Dashboard" and click "OK"](images/addlink.png)
+    ![Include Title "Training Dashboard" and click "OK"](images/az-400p3.png)
 
     > **Note**: On the **Training dashboard** panel, note that the assignment, **Area**, and **Iteration** are already set to the same values as the epic that the feature is based on. In addition, the feature is automatically linked to the parent item it was created from.
 
@@ -208,7 +214,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 1. On the **Board** tab of the **EShop-WEB** pane, at the top of the pane, click **View as Backlog** to display the tabular form.
 
-    ![In the "EShop-WEB" board, click "View as Backlog"](images/m1/az-400_m01_t2_s24.png)
+    ![In the "EShop-WEB" board, click "View as Backlog"](images/m1/az-400p4.png)
 
     > **Note**: You can use the plus sign directly under the **Backlog** tab label of the **EShop-WEB** panel to view nested tasks under these work items.
 
@@ -249,9 +255,11 @@ The sprint backlog should contain all the information the team needs to successf
 
 1. In the vertical navigational pane of the Azure DevOps portal, select the **Boards** icon and, in the list of the **Boards** items, select **Sprints**.
 
-1. On the **Taskboard** tab of the **Sprints** view, in the toolbar, on the right hand side, select the **View options** symbol (directly to the left of the funnel icon) and, in the **View options** dropdown list, select the **Work details** entry.
 
-    ![In the "Boards">"Sprints" window, "EShop-WEB" team, select "View options" icon and click on "Work details"](images/m1/az-400_m01_t3_s2.png)
+
+1. Make sure to select **Sprint 2** from the dropdown. On the **Taskboard** tab of the **Sprints** view, in the toolbar, on the right hand side, select the **View options** symbol (directly to the left of the funnel icon) and, in the **View options** dropdown list, select the **Work details** entry.
+
+    ![In the "Boards">"Sprints" window, "EShop-WEB" team, select "View options" icon and click on "Work details"](images/m1/az-400p5.png)
 
     > **Note**: The current sprint has a pretty limited scope. There are two tasks in the **To do** stage. At this point, neither task has been assigned. Both show a numeric value to the right of **Unassigned** entry representing the remaining work estimate.
 
@@ -269,11 +277,13 @@ The sprint backlog should contain all the information the team needs to successf
 
 1. On the **Capacity** tab of the **Sprints** view, click on ellipsis icon next to **Revert** and select **Add all team members**
 
-   ![](images/team-member-(1).png)
-  
-3. Directly next to the entry representing your user account, in the **Days off** column, click the **0 days** entry. This will display a panel where you can set your days off.
+   ![](images/az-400p6.png)
 
-4. In the displayed panel, use the calendar view to set your vacation to span five work days during the current sprint (within the next three weeks) and, once completed, click **OK**.
+   >**Note:** As there are no team members you will get a notification stating that no team members to add.
+
+1. Directly next to the entry representing your user account, in the **Days off** column, click the **0 days** entry. This will display a panel where you can set your days off.
+
+1. In the displayed panel, click on **Add additional days off**and use the calendar view to set your vacation to span five work days during the current sprint (within the next three weeks) and, once completed, click **OK**.
 
     ![Enter "Start", "End" and "Days Off" as mentioned](images/m1/az-400_m01_t3_s07.png)
 
@@ -295,7 +305,7 @@ The sprint backlog should contain all the information the team needs to successf
 
     > **Note**: One way to resolve this capacity issue would be to move the task to a future iteration. There are a few ways this could be done. You could, for example, open the task here and edit it within the panel providing access to the task details. Another approach would be to use the **Backlog** view, which provides an in-line menu option to move it. At this point though, don't move the task yet.
 
-1. On the **Taskboard** tab of the **Sprints** view, in the toolbar, on the right hand side, select the **View options** symbol (directly to the left of the funnel icon) and, in the **View options** dropdown list, select the **People** entry.
+1. On the **Taskboard** tab of the **Sprints** view, in the toolbar, on the right hand side, select the **View options** symbol (directly to the left of the funnel icon) and, in the **View options** dropdown list, select the **Assigned To** entry.
 
     > **Note**: This adjusts your view such that you can review the progress of tasks by person instead of by backlog item.
 
@@ -303,29 +313,29 @@ The sprint backlog should contain all the information the team needs to successf
 
 1. Click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
 
-1. On the **Settings** panel, select the **Styles** tab, click **+ Styling rule**, under the **Rule name** label, in the **Name** textbox, type **Development**, and, in the **Card color** dropdown list, select the green rectangle.
+1. On the **Settings** panel, select the **Styles** tab, click **+ Add Styling rule**, under the **Rule name** label, in the **Name** textbox, type **Development**, and, in the **Card color** dropdown list, select the green rectangle.
 
     > **Note**: This will color all cards green if they meet the rule criteria set directly below, in the **Rule criteria** section.
 
-1. Click on **+ Add criteria**, and on the **Rule criteria** section, in the **Field** dropdown list, select **Activity**, in the **Operator** dropdown list, select **=**, and, in the **Value** dropdown list, select **Development**.
+1. Click on **+ Add criteria**, and on the **Rule criteria** section, in the **Field** dropdown list, select **Activity**, in the **Operator** dropdown list, select **=**, and, in the **Value** dropdown list, select **Development**.Click on **Save**
 
     !["Settings" window, make sure all fields have mentioned information](images/m1/az-400_m01_t3_s14.png)
 
     > **Note**: This will set all cards assigned to **Development** activities green.
 
-1. On the **Settings** panel, select the **Backlogs** tab.
+1. On the **Settings** panel, select the **Backlogs** dropdown.
 
     > **Note**: Entries on this tab allow you to set the levels available for navigation. Epics are not included by default, but you could change that.
 
-1. On the **Settings** panel, select the **Working days** tab.
+1. On the **Settings** panel, select the **Working days** dropdown.
 
     > **Note**: Entries on this tab allow you to specify the **Working days** the team follows. This applies to capacity and burndown calculations.
 
-1. On the **Settings** panel, select the **Working with bugs** tab.
+1. On the **Settings** panel, select the **Working with bugs** dropdown.
 
     > **Note**: Entries on this tab allow you to specify how bugs are presented on the board.
 
-1. On the **Settings** panel, click **Save and close** to save the styling rule.
+1. On the **Settings** panel, click **close** .
 
     > **Note**: The task associated with **Development** is now green and very easy to identify.
 
@@ -337,7 +347,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
 1. In the vertical navigational pane of the Azure DevOps portal, in the list of the **Boards** items, select **Boards**.
 
-1. On the **Boards** panel, click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
+1. On the **Boards** panel, click the **Configure board settings** cogwheel icon (directly to the right of the funnel icon).
 
     > **Note**: The team is emphasizing work done with data, so there is special attention paid to any task associated with accessing or storing data.
 
@@ -347,7 +357,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     > **Note**: Whenever a backlog item or bug is tagged with **data**, that tag will be highlighted.
 
-1. From the  **Configure board Settings** (cogwheel) On the **Settings** panel, select the **Annotations** tab.
+1. From the  **Configure board Settings** (cogwheel) On the **Settings** panel, select the **Annotations** tab from the left pane of the Settings page.
 
     > **Note**: You can specify which **Annotations** you would like included on cards to make them easier to read and navigate. When an annotation is enabled, the child work items of that type are easily accessible by clicking the visualization on each card.
 
@@ -355,9 +365,9 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     > **Note**: The **Tests** tab enables you to configure how tests appear and behave on the cards.
 
-1. On the **Settings** panel, click **Save and close** to save the styling rule.
+1. On the **Settings** panel, click **cancel**.
 
-1. On the **Board** tab of the **EShop-WEB** panel, right-click the Work Item representing the **As a customer, I want to view new tutorials** backlog item and select **Open**.
+1. On the **Board** tab of the **EShop-WEB** panel, click on the elipsis next to the Work Item representing the **As a customer, I want to view new tutorials** backlog item and select **Open**.
 
 1. On the **As a customer, I want to view new tutorials** panel, at the top of the panel, to the right of the **0 comments** entry, click **Add tag**.
 
@@ -371,29 +381,27 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     > **Note**: The two tags are now visible on the card, with the **data** tag highlighted in yellow as configured.
 
-1. On the **Boards** panel, click the **Configure team settings** cogwheel icon (directly to the right of the funnel icon).
+1. On the **Boards** panel, click the **Configure board settings** cogwheel icon (directly to the right of the funnel icon).
 
 1. On the **Settings** panel, select the **Columns** tab.
 
     > **Note**: This section allows you to add new stages to the workflow.
 
-1. Click **+ Column**, under the **Column name** label, in the **Name** textbox, type **QA Approved** and, in the **WIP limit** textbox, type **1**
+1. Click **+ Add  Column**, under the **Column name** label, in the **Name** textbox, type **QA Approved** and, in the **WIP limit** textbox, type **1**.
 
     > **Note**: The Work in progress limit of 1 indicates that only one work item should be in this stage at a time. You would ordinarily set this higher, but there are only two work items to demonstrate the feature.
 
-1. On the **Settings** panel, on the **Columns** tab.
+1. On the **Settings** panel from the left pane, click on the **Columns** tab.
    
 1. Notice the ellipsis next to thes **QA Approved** tab and select **> move right** untill the newly created tab is between **Committed** and **Done**.
     
     ![](images/approved-1.png)
    
-3. On the **Settings** panel, click **Save and close**.
-
-    ![On the "Settings" panel, clikc "Save & Close"](images/m1/az-400_m01_t4_s16.png)
+3. On the **Settings** panel, click **Save**.
 
     > **Note**: Verify that you now see the new stage in the workflow.
 
-1. **Refresh** the **Boards portal**, so the **QA Approved**4 column is visible in the Kanban board view now.
+1. **Refresh** the **Boards portal**, so the **QA Approved** column is visible in the Kanban board view now.
 
 1. Drag the **As a customer, I want to see tutorials I recently viewed** work item from the **Committed** stage into the **QA Approved** stage.
 
@@ -417,9 +425,9 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
 1. On the **QA Approved** tab, at the bottom of the panel, in the **Definition of done** textbox, type **Passes \*\*all\*\* tests**.
 
-1. On the **Settings** panel, click **Save and close**.
+1. On the **Settings** panel, click **Save**.
 
-    ![On the "Settings" panel, review information and click "Save and close"](images/m1/az-400_m01_t4_s25.png)
+    ![On the "Settings" panel, review information and click "Save and close"](images/m1/az-400p7.png)
 
     > **Note**: The **QA Approved** stage now has **Doing** and **Done** columns. You can also click the informational symbol (with letter **i** in a circle) next to the column header to read the **Definition of done**.
 
@@ -431,11 +439,13 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
 1. On the **Swimlanes** tab, click **+ Swimlane**, directly under the **Swimlane name** label, in the **Name** textbox, type **Expedite**.
 
-1. On the **Settings** panel, click **Save and close**.
+1. On the **Settings** panel, click **Save**.
 
-    ![On the "Settings" panel, review information and click "Save and close"](images/m1/az-400_m01_t4_s29.png)
+    ![On the "Settings" panel, review information and click "Save and close"](images/m1/az-400p8.png)
 
 1. Back on the **Board** tab of the **Boards** panel, drag and drop the **Committed** work item onto the **QA Approved \| Doing** stage of the **Expedite** swimlane so that it gets recognized as having priority when QA bandwidth becomes available.
+
+   ![On the "Settings" panel, review information and click "Save and close"](images/m1/az-400p9.png)
 
     > **Note**: If you would like to review a more sophisticated board with many more work items, on the **Board** tab of the **Boards** panel, in the upper left corner, select **EShop-WEB** and, in the dropdown list of teams, select the **eShopOnWeb Team**. This board provides a playground for you to experiment with and review the results.
 
@@ -569,7 +579,7 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 
 1. On the **Editor** tab of **Queries > My Queries** pane, in the second row, in the **Field** column, select **Area Path** and, in the corresponding **Value** dropdown list, select **eShopOnWeb\\EShop-WEB**.
 
-1. Click **Save query**.
+1. Click **Save**.
 
     ![On the "Editor" tab of "Queries > My Queries" pane, in the second row, in the "Field" column, select "Area Path" and, in the corresponding "Value" dropdown list, select "eShopOnWeb\\EShop-WEB"](images/m1/az-400_m01_ex2_s15.png)
 
@@ -577,9 +587,9 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 
 1. From the **Queries>Shared Queries** view, select the **Charts** tab and click **+ New chart**.
 
-1. On the **Configure Chart** panel, in the **Name** textbox, type **Web tasks - By assignment**, in the **Group by** dropdown list, select **Assigned To**, and click **OK** to save the changes.
+1. On the **Configure Chart** panel, in the **Name** textbox, type **Web tasks - By assignment**, in the **Group by** dropdown list, select **Assigned To**, and click **Save Chart** to save the changes.
 
-    ![On the "Configure Chart" panel, in the "Name" textbox, type "Web tasks - By assignment", in the "Group by" dropdown list, select "Assigned To", and click "OK" to save the changes](images/m1/az-400_m01_ex2_s18.png)
+    ![On the "Configure Chart" panel, in the "Name" textbox, type "Web tasks - By assignment", in the "Group by" dropdown list, select "Assigned To", and click "OK" to save the changes](images/m1/az-400p10.png)
 
     > **Note**: You can now add this chart to a dashboard.
 
