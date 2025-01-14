@@ -188,6 +188,8 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 
 1. On the pipeline run pane, click the ellipsis symbol in the upper right corner and, in the dropdown menu, click **Edit pipeline**.
 
+   ![](./images/edit-pipeline.png)
+
 1. On the pane displaying the content of the **eShopOnWeb_MultiStageYAML/.ado/eshoponweb-ci.yml** file, navigate to the end of the file (line 56), and hit **Enter/Return** to add a new empty line.
 
 1. Being on line **57**, add the following content to define the **Release** stage in the YAML pipeline.
