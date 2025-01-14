@@ -217,6 +217,8 @@ In this task, you will add continuous delivery to the YAML-based definition of t
 
     - In the **App Service name** dropdown list, select the name of the web app you deployed earlier in the lab.
 
+      > **Note**: If you faced fallowing issue `Failed to obtain the Json Web Token(JWT) using service principal client ID` from the **Azure subscription**, select the Azure subscription into which you deployed the Azure resources earlier in the lab, click **Authorize**, once the authication has been completed make sure to select latest generated **Service connection** 
+
     - In the **Package or folder** text box, **update** the Default Value to `$(Build.ArtifactStagingDirectory)/**/Web.zip`
 
     - In the **Application and Configuration Settings** at **App Settings** add `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development`
@@ -412,9 +414,13 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
 
 1. From the **Add your first check**, select **Approvals**.
 
+   ![](./images/select-approvals.png)
+
 1. Add your Azure DevOps User Account Name to the **approvers** field.
 
-  > **Note:** In a real-life scenario, this would reflect the name of your DevOps team working on this project.
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   > **Note:** In a real-life scenario, this would reflect the name of your DevOps team working on this project.
 
 1. Confirm the approval settings defined, by pressing the **Create** button.
 
@@ -447,43 +453,43 @@ YAML Pipelines as Code don't have Release/Quality Gates as we have with Azure De
 
 1. Paste in the following Yaml Snippet:
 
-```yaml
-    strategy:
-      runOnce:
-        deploy:
-```
+    ```yaml
+        strategy:
+          runOnce:
+            deploy:
+    ```
 20. Select the remaining snippet (Line **67** all the way to the end), and use the **Tab** key to fix the YAML indentation. 
 
-   The resulting YAML snippet should look like this now, reflecting the **Deploy Stage**:
+    The resulting YAML snippet should look like this now, reflecting the **Deploy Stage**:
 
 
-   ```yaml
-   - stage: Deploy
-     displayName: Deploy to an Azure Web App
-     jobs:
-       - deployment: Deploy
-         environment: approvals
-         pool:
-           vmImage: "windows-2019"
-         strategy:
-           runOnce:
-             deploy:
-               steps:
-                 - task: DownloadBuildArtifacts@1
-                   inputs:
-                     buildType: "current"
-                     downloadType: "single"
-                     artifactName: "Website"
-                     downloadPath: "$(Build.ArtifactStagingDirectory)"
-                 - task: AzureRmWebAppDeployment@4
-                   inputs:
-                     ConnectionType: "AzureRM"
-                     azureSubscription: "AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)"
-                     appType: "webApp"
-                     WebAppName: "eshoponWebYAML369825031"
-                     packageForLinux: "$(Build.ArtifactStagingDirectory)/**/Web.zip"
-                     AppSettings: "-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development"
-   ```
+    ```yaml
+    - stage: Deploy
+      displayName: Deploy to an Azure Web App
+      jobs:
+        - deployment: Deploy
+          environment: approvals
+          pool:
+            vmImage: "windows-2019"
+          strategy:
+            runOnce:
+              deploy:
+                steps:
+                  - task: DownloadBuildArtifacts@1
+                    inputs:
+                      buildType: "current"
+                      downloadType: "single"
+                      artifactName: "Website"
+                      downloadPath: "$(Build.ArtifactStagingDirectory)"
+                  - task: AzureRmWebAppDeployment@4
+                    inputs:
+                      ConnectionType: "AzureRM"
+                      azureSubscription: "AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)"
+                      appType: "webApp"
+                      WebAppName: "eshoponWebYAML369825031"
+                      packageForLinux: "$(Build.ArtifactStagingDirectory)/**/Web.zip"
+                      AppSettings: "-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development"
+    ```
 
 
 21. Confirm the changes to the code YAML file by clicking **Commit** and clicking **Commit** again in the appearing Commit pane.
