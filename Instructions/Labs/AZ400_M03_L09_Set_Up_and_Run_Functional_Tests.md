@@ -18,45 +18,27 @@ After you complete this lab, you will be able to configure a CI pipeline for a .
 
 ## Estimated timing: 60 minutes
 
+## Architecture Diagram
+
+  ![Architecture Diagram](images/lab09-architecture-new.png) 
+
 ### Exercise 1: Setup Tests in CI pipeline
 
 In this exercise, you will setup tests in CI pipeline.
 
-#### Task 1: (Skip if done) Import the YAML build definition for CI
-
-In this task, you will add the YAML build definition that will be used to implement the Continuous Integration.
-
-Let's start by importing the CI pipeline named [eshoponweb-ci.yml](https://github.com/MicrosoftLearning/eShopOnWeb/blob/main/.ado/eshoponweb-ci.yml).
-
-1. Go to **Pipelines>Pipelines**.
-
-1. Click on **New Pipeline** button.
-
-1. Select **Azure Repos Git (YAML)**.
-
-1. Select the **eShopOnWeb** repository.
-
-1. Select **Existing Azure Pipelines YAML File**.
-
-1. Select the **main** branch and the **/.ado/eshoponweb-ci.yml** file, then click on **Continue**.
-
-    The CI definition consists of the following tasks:
-    - **DotNet Restore**: With NuGet Package Restore you can install all your project's dependency without having to store them in source control.
-    - **DotNet Build**: Builds a project and all of its dependencies.
-    - **DotNet Test**: .Net test driver used to execute unit tests.
-    - **DotNet Publish**: Publishes the application and its dependencies to a folder for deployment to a hosting system. In this case, it's **Build.ArtifactStagingDirectory**.
-    - **Publish Artifact - Website**: Publish the app artifact (created in the previous step) and make it available as a pipeline artifact.
-    - **Publish Artifact - Bicep**: Publish the infrastructure artifact (Bicep file) and make it available as a pipeline artifact.
-
-1. Click the **Save** button (not **Save and run**) to save the pipeline definition.
-
-#### Task 2: Add tests to the CI pipeline
+#### Task 1: Add tests to the CI pipeline
 
 In this task, you will add the integration and functional tests to the CI Pipeline.
 
 You can notice that the Unit Tests task is already part of the pipeline.
 
 - **Unit Tests** test a single part of your application's logic. One can further describe it by listing some of the things that it isn't. A unit test doesn't test how your code works with dependencies or infrastructure – that's what integration tests are for.
+
+1. From the **eShopOnWeb_MultiStageYAML** project in the Azure DevOps portal, in the vertical navigational pane, select **Pipelines** and then, within the **Pipelines** section, click **Releases(1)**.
+
+1. On the pipeline run pane, click the ellipsis symbol in the upper right corner and, in the dropdown menu, click **Edit pipeline**.
+
+1. At the end of the scipt add new line and add below code with and use the **Tab** key to fix the YAML indentation. 
 
 1. Now you need to add the Integration Tests task after the Unit Tests task:
 
@@ -84,7 +66,7 @@ You can notice that the Unit Tests task is already part of the pipeline.
 
 1. Click **Save**, on the **Save** pane, click **Save** again to commit the changes directly into the main branch.
 
-#### Task 4: Check the tests summary
+#### Task 2: Check the tests summary
 
 1. Click on the **Run**, then from the **Run pipeline** tab, click on **Run** again.
 

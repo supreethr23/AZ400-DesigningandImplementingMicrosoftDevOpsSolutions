@@ -40,7 +40,6 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
     ![](images/lab1-image2.png)
 
-
 ## Task 1: Configure the EShopOnWeb project
 
 In this task, you will create a new project named **EShopOnWeb-<inject key="DeploymentID"> </inject>** in Azure DevOps Organization.
@@ -161,7 +160,7 @@ In this task, you will create Azure Repository and publish a branch of an Azure 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-   <validation step="71f00530-53c1-46ab-8ec4-40b2e8f4e351" />
+   <validation step="27c2ac30-3be6-4f7f-889e-214781b039da" />
 
 ## Task 2: Manage content of a published wiki
 In this task, you will manage content of the wiki you published in the previous task.
@@ -290,7 +289,7 @@ In this task, you will create a project wiki and add to it a Mermaid diagram and
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-   <validation step="3bb5a4b0-5517-4fba-99eb-ad2674919d0f" />
+   <validation step="d5c34a98-999e-48a2-930a-4074ff99a0e2" />
 
 ## Task 2: Manage a project wiki
 

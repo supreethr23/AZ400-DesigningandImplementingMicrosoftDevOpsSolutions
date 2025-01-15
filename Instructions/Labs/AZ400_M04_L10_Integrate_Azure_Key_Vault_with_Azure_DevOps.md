@@ -6,27 +6,28 @@ Azure Key Vault provides secure storage and management of sensitive data, such a
 
 In this lab, you will see how you can integrate Azure Key Vault with an Azure DevOps pipeline by using the following steps:
 
-- create an Azure Key vault to store a MySQL server password as a secret.
-- create an Azure service principal to provide access to secrets in the Azure Key vault.
-- configure permissions to allow the service principal to read the secret.
-- configure pipeline to retrieve the password from the Azure Key vault and pass it on to subsequent tasks.
+- Create an Azure Key vault to store a MySQL server password as a secret.
+- Create an Azure service principal to provide access to secrets in the Azure Key vault.
+- Configure permissions to allow the service principal to read the secret.
+- Configure pipeline to retrieve the password from the Azure Key vault and pass it on to subsequent tasks.
 
 ## Objectives
 
 After you complete this lab, you will be able to:
 
-- Create a Microsoft Entra service principal.
--   Create an Azure key vault. 
--   Track pull requests through the Azure DevOps pipeline.
-
+- Exercise 0: Configure the lab prerequisites.
+- Exercise 1: Setup CI pipeline to build eShopOnWeb container.
+- 
 ## Estimated timing: 45 minutes
 
 ## Architecture Diagram
 
    ![Architecture Diagram](images/lab10-architecture-new.png)
 
-## Set up an Azure DevOps organization (Skip if already done)
+# Exercise 0: Configure the lab prerequisites
 
+In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
+## Task 1: Set up an Azure DevOps organization
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
 2. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
@@ -51,11 +52,7 @@ After you complete this lab, you will be able to:
 
     ![Azure DevOps](images/billingsetup1.png)
 
-# Exercise 0: Configure the lab prerequisites
-
-In this exercise, you will set up the prerequisites for the lab, which consist of a new Azure DevOps project with a repository based on the [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb).
-
-## Task 1: Create and configure the team project
+## Task 2: Create and configure the team project
 
 In this task, you will create an **eShopOnWeb** Azure DevOps project to be used by several labs.
 
@@ -63,13 +60,13 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Create Project](images/lab-400-1.png)
 
-## Task 2: Import eShopOnWeb Git Repository
+## Task 3: Import eShopOnWeb Git Repository
 
 In this task you will import the eShopOnWeb Git repository that will be used by several labs.
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Git Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
 
-    ![Import Repository](images/lab-400-2.png)
+    ![Import Repository](images/lab-400-21.png)
 
 1. The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines.
@@ -78,7 +75,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
     - **.github** folder container YAML GitHub workflow definitions.
     - **src** folder contains the .NET 8 website used on the lab scenarios.
 
-#### Task 3: Set main branch as default branch
+## Task 4: Set main branch as default branch
 
 1. Go to **Repos>Branches**.
 1. Hover on the **main** branch then click the ellipsis on the right of the column.
@@ -292,7 +289,7 @@ In this task, you will import a CD pipeline, customize it and run it for deployi
 
 In this lab, you integrated Azure Key Vault with an Azure DevOps pipeline by using the following steps:
 
-- created an Azure Key vault to store a MySQL server password as a secret.
-- created an Azure service principal to provide access to secrets in the Azure Key vault.
-- configured permissions to allow the service principal to read the secret.
-- configured pipeline to retrieve the password from the Azure Key vault and pass it on to subsequent tasks.
+- Created an Azure Key vault to store a MySQL server password as a secret.
+- Created an Azure service principal to provide access to secrets in the Azure Key vault.
+- Configured permissions to allow the service principal to read the secret.
+- Configured pipeline to retrieve the password from the Azure Key vault and pass it on to subsequent tasks.

@@ -103,25 +103,17 @@ In this task, you will step through the process of cloning a Git repository by u
 
 1.  Close the **Clone Repository** panel.
 1.  Switch to **Visual Studio Code** running on your lab computer. 
-1.  Click the **View (1)** menu header and, in the drop-down menu, click **Command Palette (2)**.
 
-    ![Import Repository](images/az-400-11.png)
-    
-    > **Note**: The Command Palette provides an easy and convenient way to access a wide variety of tasks, including those implemented as 3rd party extensions. You can use the keyboard shortcut **Ctrl+Shift+P** or **F1** to open it.
+1. In the terminal, enter the following commands to clone the git repository to the Git folder in the C drive.
 
-1.  At the Command Palette prompt, run the **Git: Clone** command.
-
-    ![VS Code command palette](images/ss2.png)
-
-    > **Note**: To see all relevant commands, you can start by typing **Git**.
-
-1.  In the **Provide repository URL or pick a repository source** text box, paste the repo clone URL you copied earlier in this task and press the **Enter** key.
-1.  Within the **Select Folder** dialog box, navigate to the C: drive **(1)**, create a **new folder (2)** named **Git (3)**, select it, and then click **Select Repository Destination (4)**.
-
-    ![Import Repository](images/az-400-12.png)
-    
-1.  When prompted, log in to your Azure DevOps account with the credentials provided in the environment details tab.
-1. After the cloning process completes, once prompted, in the Visual Studio Code, click **Open** to open the cloned repository. If **Do you trust the authors of the files in this folder?** warning prompted click on **Yes**.
+    ```git
+   cd C:\
+   mkdir Git
+   cd C:\Git\
+   git clone https://odluser1565376@dev.azure.com/odluser1565376/EShopOnWeb/_git/EShopOnWeb
+   ```
+   
+1. After the cloning process completes,  in the Visual Studio Code, from the File menu, click **Open Folder** and navigate to the **C:\Git** folder and select the folder to open the cloned repository. If **Do you trust the authors of the files in this folder?** warning prompted click on **Yes**.
 
     > **Note**: You can ignore warnings you might receive regarding problems with loading of the project. The solution may not be in the state suitable for a build, but we're going to focus on working with Git, so building the project is not required.
 
