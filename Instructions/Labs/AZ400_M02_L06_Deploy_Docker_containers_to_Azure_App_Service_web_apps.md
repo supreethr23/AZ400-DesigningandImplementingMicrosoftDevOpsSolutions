@@ -96,6 +96,7 @@ In this exercise, you will import and run the CI pipeline.
 1. Select the **/.ado/eshoponweb-ci-docker.yml** file then click on **Continue**.
 
 1. In the YAML pipeline definition, customize:
+    - **Azure-service-connection-name** with **azure-connection**.
     - **YOUR-SUBSCRIPTION-ID** with your Azure subscription id.
     - **rg-az400-container-NAME** with the resource group name defined before in the lab.
 
