@@ -216,7 +216,7 @@ In this task, you will explore the use of staging changes by using Visual Studio
 
     ![Import Repository](images/az-400-22.png)
    
-1. 1. In the lower left corner of the Visual Studio Code window, click the **Synchronize Changes** button to synchronize the committed changes with the server.
+1. In the lower-left corner of the Visual Studio Code window, click the **Synchronize Changes** button to synchronize the committed changes with the server.
 
     ![Import Repository](images/az-400px2.png)
 
@@ -318,11 +318,11 @@ Git keeps track of which branch you are working on and makes sure that, when you
 
 1.  Select the **dev** entry in the list of branches to delete.
 
-1.  In the lower left corner of the Visual Studio Code window, click the **main** entry again. This will display the existing branches in the upper portion of the Visual Studio Code window.
+1.  In the lower-left corner of the Visual Studio Code window, click the **main** entry again. This will display the existing branches in the upper portion of the Visual Studio Code window.
 
 1.  Verify that the local **dev** branch no longer appears in the list, but the remote **origin/dev** is still there.
-2.  
-    ![Import Repository](images/az-400-29.png)
+  
+    ![Import Repository](images/az-400px11.png)
 
 1.  Press **Ctrl+Shift+P** to open the **Command Palette**.
 
