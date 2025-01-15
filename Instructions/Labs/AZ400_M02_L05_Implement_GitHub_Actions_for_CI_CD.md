@@ -28,28 +28,24 @@ After you complete this lab, you will be able to:
 
 1. Navigate to the https://github.com/ Click on Signup.
    
-1. Provide the email address and click on continue.
+1. Provide the **Email address (1)**, **Password (2)**, **Username (3)** and click on **Continue (4)**.
 
-   ![Github](images/mod6_22.png)
- 
-1. Provide the password and enter the valid username and click on continue.
+   ![Github](images/create-github-account.png)
 
-   ![Github](images/mod6_26.png)
+1. If prompted, complete the the visual puzzle.
 
 1. Provide the confirmation and verify your account and click on create account. This would take 2 minutes to create.
-
-   ![Github](images/mod6_25.png)
 
 # Exercise 0: Import eShopOnWeb to your GitHub Repository
 
 In this exercise, you will import the existing [eShopOnWeb](https://github.com/MicrosoftLearning/eShopOnWeb) repository code to your own GitHub private repo.
 
 The repository is organized the following way:
-    - **.ado** folder contains Azure DevOps YAML pipelines
-    - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
-    - **.azure** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
-    - **.github** folder container YAML GitHub workflow definitions.
-    - **src** folder contains the .NET 6 website used on the lab scenarios.
+   - **.ado** folder contains Azure DevOps YAML pipelines
+   - **.devcontainer** folder container setup to develop using containers (either locally in VS Code or GitHub Codespaces)
+   - **.azure** folder contains Bicep&ARM infrastructure as code templates used in some lab scenarios.
+   - **.github** folder container YAML GitHub workflow definitions.
+   - **src** folder contains the .NET 6 website used on the lab scenarios.
 
 ## Task 1: Create a public repository in GitHub and import eShopOnWeb
 
@@ -72,7 +68,7 @@ In this task, you will create an empty public GitHub repository and import the e
     | Repository Name | eShopOnWeb |
     | Privacy | **Public** | 
 
-1. Click on **Begin Import** and wait for your repository to be ready.
+1. Click on **Begin Import** and wait for your repository to be ready (this may take few minutes).
 
 1. On the repository page, go to **Settings**, click on **Actions > General** and choose the option **Allow all actions and reusable workflows**. Click on **Save**.
 
@@ -103,7 +99,8 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
     `az ad sp create-for-rbac --name GH-Action-eshoponweb --role contributor --scopes /subscriptions/SUBSCRIPTION-ID/resourceGroups/RESOURCE-GROUP --sdk-auth`
 
     >**Note:** Make sure this is typed or pasted as a single line!
-    >**Note:** this command will create a Service Principal with Contributor access to the Resource Group created before. This way we make sure GitHub Actions will only have the permissions needed to interact only with this Resource Group (not the rest of the subscription).
+    
+    >**Note:** This command will create a Service Principal with Contributor access to the Resource Group created before. This way we make sure GitHub Actions will only have the permissions needed to interact only with this Resource Group (not the rest of the subscription).
 
     >**Note:** If the error message states, **Please run 'az login'**, then follow these steps:-
 
@@ -111,9 +108,7 @@ In this task, you will create the Azure Service Principal used by GitHub to depl
     az login
     ```
     
-2. Navigate to the **https://microsoft.com/devicelogin** page, and enter the **device code** which is mentioned in the Bash session, and follow the instructions which is mentioned in the page.
-    
-3. Navigate back to the **Azure Portal**, as you can see the Service Principal with Contributor access to the Resource Group created.
+   > Navigate to the **https://microsoft.com/devicelogin** page, and enter the **device code** which is mentioned in the Bash session, and follow the instructions which is mentioned in the page.
 
 1. The command will output a JSON object, you will later keep it as a GitHub secret for the workflow, Copy the JSON. The JSON contains the identifiers used to authenticate against Azure in the name of an Azure AD application identity (service principal).
 
@@ -153,6 +148,8 @@ In this task, you will modify the given GitHub workflow and execute it to deploy
 
 1. Select the **Edit** (pencil icon). Uncomment the **on** section (delete "#"). The workflow triggers with every push to the main branch and also offers manual triggering ("workflow_dispatch").
 
+    ![](images/uncomment-on.png)
+
 1. In the **env** section, make the following changes:
     - Replace **NAME** in **RESOURCE-GROUP** variable. It should be the same resource group created in previous steps.
     - (Optional) You can choose your closest [azure region](https://azure.microsoft.com/en-gb/explore/global-infrastructure/geographies/#geographies) for **LOCATION**. For example, "eastus", "eastasia", "westus", etc.
@@ -175,9 +172,9 @@ In this task, you will review the GitHub workflow execution:
 
     >**Note:** If it shows you the **Workflows aren’t being run on this repository**, select **Enable Actions on this repository**.
 
-1. On the select workflow that is **eShopOnWeb Build and Test (1)** page, select **Run workflow (2)** drop-down, and select **Run workflow (3)**.
+   > And then on the select workflow that is **eShopOnWeb Build and Test (1)** page, select **Run workflow (2)** drop-down, and select **Run workflow (3)**.
 
-    ![GitHub workflow in progress](images/runworkflow.png)
+   > ![GitHub workflow in progress](images/runworkflow.png)
 
 1. Wait for the workflow to finish. From the **Summary** you can see the two workflow jobs, the status and Artifacts retained from the execution. You can click in each job to review logs.
 
@@ -205,7 +202,7 @@ In this task, you will use GitHub environments to ask for manual approval before
 
     > NOTE: If an environment called **Development** already exists in the **Environments** list, open its configuration by clicking on the environment name. 
 
-1. In the **Configure Development** tab, check the option **Required Reviewers** and your GitHub account as a reviewer. Click on **Save protection rules**.
+1. In the **Configure Development** tab, check the option **Required Reviewers** and add your GitHub account as a reviewer. Click on **Save protection rules**.
 
 1. Now lets test the protection rule. On the repository page, go to **Actions**, click on **eShopOnWeb Build and Test** workflow and click on **Run workflow>Run workflow** to execute manually.
 
