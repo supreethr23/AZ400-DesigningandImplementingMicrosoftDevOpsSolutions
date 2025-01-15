@@ -32,6 +32,8 @@ After you complete this lab, you will be able to:
 1. On the next page accept defaults and click on continue.
 
    ![Azure DevOps](images/lab1-image1.png)
+
+   >**Note:** If it asks you to enter the project name, enter **EShopOnWeb**, complete the captcha, and click **Continue**.
     
 1. On the **Almost Done...** page fill the captcha and click on continue. 
 
@@ -160,7 +162,7 @@ In this task, you will create and connect to a feed.
 
     > **Note**: Any user who wants to connect to this NuGet feed must configure their environment. 
     
-    ![](images/AZ400_M08_L15_14(1).png)
+    ![](images/createnewfeed.png)
     
 1. Back on the **Artifacts** hub, select **EShopOnWebShared** **(1)** Organization, click **Connect to feed (2)**.
 
@@ -184,11 +186,11 @@ In this task, you will create and connect to a feed.
      
     > **Note**: Visual Studio is now connected to the new feed.
 
-1. Close and reopen the other Visual Studio instance you used for cloning the EShopOnWeb repository, to account for the artifact source update and open the **EShopOnWebShared** solution. You will need it in the third task of this exercise.
+1. Close and reopen the other Visual Studio instance you used for cloning the EShopOnWeb repository, to account for the artifact source update and open the **EShopOnWeb** solution. You will need it in the third task of this exercise.
 
     ![](images/az-400-image8.png)
 
-    >**Note**: If your not able to see **EShopOnWebShared** solution, click on **Open a local folder** and select **EShopOnWebShared** > **Select folder**. 
+    >**Note**: If your not able to see **EShopOnWeb** solution, click on **Open a local folder** and select **EShopOnWeb** > **Select folder**. 
 
 ## Task 2: Create and publish a NuGet package
 
@@ -350,8 +352,6 @@ In this task, you will create and publish a NuGet package.
     ```
     dotnet nuget push --source "eShopOnWebShared" --api-key az eShopOnWeb.Shared.1.0.0.nupkg
     ```
-    
-    ![](images/AZ400_M08_L15_36.png)
                
 1. Wait for the confirmation of the successful package push operation.   
 
@@ -465,7 +465,7 @@ Let's consider this package an "approved" package for our DevOps team to reuse, 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="e4c21de8-402e-4ffc-aa10-61fe90dc9884" />
 
