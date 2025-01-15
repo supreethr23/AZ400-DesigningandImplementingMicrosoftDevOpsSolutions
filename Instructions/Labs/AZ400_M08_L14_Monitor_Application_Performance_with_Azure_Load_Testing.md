@@ -36,15 +36,13 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 1. On your lab VM open **Edge Browser** on desktop and navigate to https://go.microsoft.com/fwlink/?LinkId=307137. 
 
+1. Sign in to Microsoft login if you are not already sign in using the credentials provided in the environment. 
+
 1. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
 
-1. On the next page accept defaults and click on continue.
+1. On the Get started with Azure DevOps page, fill the captcha and click on continue.
 
-    ![Azure DevOps](images/400-3.png)
-
-1. On the **Almost Done...** page fill the captcha and click on continue. 
-
-    ![Azure DevOps](images/m1-2.png)
+    ![Azure DevOps](images/E0T1S3-1501.png)
 
 1. On the Azure Devops page click on **Azure DevOps** located at top left corner and then click on **Organization Setting** at the left down corner
 
@@ -66,16 +64,16 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
     ![Azure DevOps](images/policies-enable-3rd.png)    
 
-1. Navigate back to your Azure DevOps organization, by clicking on **Azure DevOps.** 
+1. Navigate back to your Azure DevOps organization, by clicking on **Azure DevOps** and click on **+ New project**. 
 
     ![Create Project](images/az-400-9a1.png)
 
-1. On the **Create aproject to get started** page, Enter the following details.
+1. On the **Create new project** page, Enter the following details.
 
     - Project name: **eShopOnWeb (1)**
     - Under the **Advanced** section, choose **Scrum (2)** on the **Work Item process** dropdown and then click on **+ Create project (3)**.
      
-      ![Create Project](images/100.png)    
+      ![Create Project](images/create-new-devops-project.png)    
 
 ### Task 2: Import eShopOnWeb Git Repository
 
@@ -193,35 +191,21 @@ In this task, you will create a Service Principal by using the Azure CLI, which 
 
     ![New Service Connection](images/az-400-9a22.png)    
 
-1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings (1) >Service Connections (2) (under Pipelines)** and **New Service Connection (3)**.
+1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings (1) >Service Connections (2) (under Pipelines)** and **Create Service Connection (3)**.
 
-    ![New Service Connection](images/anew-service-connection.png)
+    ![New Service Connection](images/create-service-connection.png)
 
 1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
 
-1. The choose **Service Principal (manual)** and click on **Next**.
+1. Fill in the empty fields and click on **Save**
+    - Resource group - **az400m09l16-RG (1)**
+    - Service connection name - **azure subs (2)**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
 
-1. Fill in the empty fields using the information gathered during previous steps:
-    - Subscription Id **(1)**
-    - Subscription Name **(2)**
-    - Service Principal Id (appId) **(3)**
-    - Service principal key (password) **(4)** and Tenant ID (tenant **(5)**
-    - In **Service connection name** type **azure subs (6)**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
-    - Click on **Verify and Save (7)**.
-
-      ![Azure Service Connection](images/az-400-9a24.png)
-  
-      ![Azure Service Connection](images/az-400-9a25.png)   
+      ![Azure Service Connection](images/new-service-connection1.png)
 
 ### Task 2: Add a YAML build and deploy definition
 
 In this task, you will add a YAML build definition to the existing project.
-
-1. In the vertical menu bar at the far left of the Azure DevOps portal, click **Repos** and, in the **Repos** section, click **Branches**.
-
-1. Navigate to the **Branches** pane and locate the **main** branch entry. Hover your mouse pointer over the right edge of the branch entry to reveal the vertical ellipsis character **(1)**, indicating the presence of the **More options** menu. Ensure that **Set as default branch (2)** is chosen. If it is not already selected, proceed to set it as the default branch by selecting **Set as default branch**.
-
-    ![Sonarcloud PR settings](images/5.png)
 
 1. Navigate back to the **Pipelines (1)** pane in of the **Pipelines** hub.
 
@@ -318,7 +302,7 @@ In this task, you will add a YAML build definition to the existing project.
     - Validate **App Service Type** points to Web App on Windows.
     - in the **App Service name** dropdown list, select the name of the web app you deployed earlier in the lab (**az400eshoponweb...).
     - in the **Package or folder** text box, **update** the Default Value to `$(Build.ArtifactStagingDirectory)/**/Web.zip`.
-    - Expand **Application and Configuration Settings** and add the value `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development`
+    - Expand **Application and Configuration Settings** and in the **App settings** text box add the value `-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development`
 
 1. Confirm the settings from the Assistant pane by clicking the **Add** button.
 
@@ -351,9 +335,7 @@ In this task, you will add a YAML build definition to the existing project.
 
     > **Note**: Since our original CI-YAML was not configured to automatically trigger a new build, we have to initiate this one manually.
 
-1. From the Azure DevOps left menu, navigate to **Pipelines** and select **Pipelines** again. Next, select **All** to open all pipeline definitions, not just the Recent ones.
-
-    > **Note**: if you kept all previous pipelines from previous lab exercises, this new pipeline might have reused a default **eShopOnWeb (#)** sequence name for the pipeline as shown in below screenshot. Select a pipeline (most probably the one with the highest sequence number, select Edit and validate it points to the m09l16-pipeline.yml code file).
+1. From the Azure DevOps left menu, navigate to **Pipelines** and select **Pipelines** again. Next, select **All** to open all pipeline definitions.
 
      ![](images/az-400-9a8.png)    
 
@@ -437,8 +419,6 @@ In this task, you will deploy an Azure Load Testing Resource into your Azure sub
 1. You are switched to the 'Deployment is in progress' page. Wait for a few minutes, until the deployment completes successfully.
 1. Click **Go to Resource** from the deployment progress page, to navigate to the **eShopOnWebLoadTesting** Azure Load Testing resource.
 
-    > **Note**: If you closed the blade or closed the Azure Portal during the deployment of the Azure Load Testing Resource, you can find it again from the Azure Portal Search field, or from the Resources / Recent list of resources.
-
 ### Task 2: Create Azure Load Testing tests
 
 In this task, you will create different Azure Load Testing tests, using different load configuration settings.
@@ -460,7 +440,7 @@ In this task, you will create different Azure Load Testing tests, using differen
    ![](images/az-400-9a17.png)
 
 1. This kicks off the Load Testing tests, which will run The test will run for 5 minutes.
-1. With the test running, navigate back to the **eShopOnWebLoadTesting** Azure Load Testing Resource page, and navigate to **Tests**, select **Tests** and see a test **Get_eshoponweb...**
+1. With the test running, navigate back to the **eShopOnWebLoadTesting** Azure Load Testing Resource page, and navigate to **Tests**, select **Tests** and see a test created.
 1. From the top menu, click **Create**, **Create a URL-based test**, to create a 2nd Load test.
 1. Complete the following parameters and settings to create another load test:
    - Make sure to disable **Enable Advanced settings (1)**
