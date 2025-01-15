@@ -352,8 +352,6 @@ In this task, you will create and publish a NuGet package.
     ```
     dotnet nuget push --source "eShopOnWebShared" --api-key az eShopOnWeb.Shared.1.0.0.nupkg
     ```
-    
-    ![](images/AZ400_M08_L15_36.png)
                
 1. Wait for the confirmation of the successful package push operation.   
 

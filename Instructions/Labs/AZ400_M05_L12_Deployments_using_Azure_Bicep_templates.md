@@ -289,14 +289,20 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
    ![New Service Connection](images/6-6.png)
 
 1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
+
+1. The choose **Service Principal (manual)** and click on **Next**.
    
 1. Fill in the empty fields using the information gathered during previous steps:
-    - Subscription Id: Select the default **(1)**
-    - Resource group: Select **AZ400-JumpVM (2)**
-    - In **Service connection name** type **azure subs (3)**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
-    - Click on **Save (4)**.
+    - Subscription Id **(1)**
+    - Subscription Name **(2)**
+    - Service Principal Id (appId) **(3)**
+    - Service principal key (password) **(4)** and Tenant ID (tenant **(5))**
+    - In **Service connection name** type **azure subs (6)**. This name will be referenced in YAML pipelines when needing an Azure DevOps Service Connection to communicate with your Azure subscription.
+    - Click on **Verify and Save (7)**.
 
-      ![Azure Service Connection](images/az-400-subs.png)  
+      ![Azure Service Connection](images/az-400-9a24.png)
+
+      ![Azure Service Connection](images/az-400-9a25.png)   
 
 
 ## Task 2: Deploy resources to Azure by YAML pipelines
