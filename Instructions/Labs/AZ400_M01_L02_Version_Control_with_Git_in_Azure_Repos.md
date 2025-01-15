@@ -110,9 +110,9 @@ In this task, you will step through the process of cloning a Git repository by u
    cd C:\
    mkdir Git
    cd C:\Git\
-   git clone <Enter the repo URL>
+   git clone [Enter the repo URL]
    ```
-   >**Note:** Make sure to replace  the <Enter the repo URL> with the  repo URL you had copied in the previous step.
+   >**Note:** Make sure to replace  the [Enter the repo URL] with the  repo URL you had copied in the previous step.
 
 1. When prompted to sign-in, use the following credentials:
 
